@@ -1,0 +1,45 @@
+/* ----------------------------------------------- header ----------------------------------------------------------- */
+
+.header {
+  height: 110px;
+  width: 100%;
+  color: #3c3c3c;
+  border-bottom: 2px solid #efefef;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.header .title {
+  position: relative;
+  font-size: 40px;
+}
+
+.header .title .sub {
+  font-size: 42px;
+}
+
+.header .menu {
+  margin-left: 10px;
+}
+
+.header .menu ul li {
+  display: inline-block;
+  font-size: 21px;
+  padding-left: 30px;
+  color: #6b6b6b;
+}
+
+/* ----------------------------------------------- contents ----------------------------------------------------------- */
+
+.contents {
+  height: 300px;
+  width: 100%;
+}
+
+.contents .contents_items .introduce {
+  position: relative;
+  top: 60px;
+  left: 60px;
+}
