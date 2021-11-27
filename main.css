@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   padding-left: 40px;
-  background-color: black;
+  background-color: rgb(35, 35, 35);
 }
 
 .header .title {
@@ -46,12 +46,43 @@
 }
 
 .contents .contents_items .introduce {
-  height: 300px;
+  height: 500px;
   margin-left: 12%;
+  background-color: white;
+  box-shadow: 16px 12px 16px 3px rgb(151, 151, 151);
+  position: relative;
+}
+
+.contents .contents_items .introduce:hover {
+  transition: 0.5s;
+  box-shadow: 0 0 0 0;
 }
 
 .contents .contents_items .introduce .i_title {
-  font-size: 20px;
+  font-size: 21px;
   line-height: 30px;
   font-weight: 500;
+}
+
+.contents .contents_items .introduce .i_info {
+  position: absolute;
+  bottom: 10%;
+  left: 13%;
+  font-size: 60px;
+  color: #555555;
+}
+
+.contents .contents_items .introduce .i_deco {
+  position: absolute;
+  font-size: 300px;
+  font-weight: 800;
+  bottom: -8%;
+  right: 10%;
+  color: #dddddd;
+}
+
+.contents .contents_items .tech {
+  margin-top: 12%;
+  background-color: aquamarine;
+  height: 500px;
 }
