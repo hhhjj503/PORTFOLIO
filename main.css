@@ -128,8 +128,8 @@
 }
 
 .contents .contents_items .tech .t_desc .t_list li:hover {
-  font-size: 110px;
-  transition: 0.1s;
+  font-size: 120px;
+  transition: 0.2s;
 }
 
 .contents .contents_items .tech .t_desc .t_list li:not(:hover) {
