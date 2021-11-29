@@ -12,8 +12,9 @@ window.onload = function () {
   function changeColor(li) {
     const colorValue = makingcolor();
     li.style.color = colorValue;
-    if (colorValue === "white") {
-      li.style.border = "1px solid #000000";
+    if (li.style.color === "white") {
+      li.style.textShadow =
+        "-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000";
     }
   }
 
@@ -24,6 +25,6 @@ window.onload = function () {
 
   function originalColor(li) {
     li.style.color = "white";
-    li.style.border = "none";
+    li.style.textShadow = "none";
   }
 };
