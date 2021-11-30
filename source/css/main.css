@@ -11,21 +11,21 @@
   background-color: rgb(35, 35, 35);
 }
 
-.header .title {
+.header .h_title {
   position: relative;
   font-size: 40px;
 }
 
-.header .title .sub {
+.header .h_title .h_sub {
   font-size: 42px;
   color: white;
 }
 
-.header .menu {
+.header .h_menu {
   margin-left: 10px;
 }
 
-.header .menu ul li {
+.header .h_menu ul li {
   display: inline-block;
   font-size: 21px;
   padding-left: 30px;
@@ -33,7 +33,7 @@
   cursor: pointer;
 }
 
-.header .menu ul li:hover {
+.header .h_menu ul li:hover {
   font-size: 24px;
   color: white;
 }
@@ -42,7 +42,7 @@
 
 .contents {
   width: 100%;
-  margin-top: 6%;
+  margin-top: 7%;
 }
 
 .contents .contents_items .introduce {
@@ -84,10 +84,15 @@
   bottom: -8%;
   right: 10%;
   color: #dddddd;
+  transition-duration: 0.4s;
+}
+
+.contents .contents_items .introduce:hover .i_deco {
+  bottom: -4.6%;
 }
 
 .contents .contents_items .tech {
-  margin-top: 20%;
+  margin-top: 19%;
   height: 800px;
   background-color: #555555;
   position: relative;
@@ -139,7 +144,6 @@
 .contents .contents_items .portfolio {
   margin-top: 10%;
   background-color: white;
-  border-top: 1px solid black;
   padding-bottom: 30px;
 }
 
@@ -183,4 +187,46 @@
   right: 0px;
   bottom: 0px;
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.contents .contents_items .portfolio .items .item .item_img .hover_button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -70px;
+  margin-top: -15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  line-height: 35px;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 600;
+  width: 130px;
+  height: 40px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  opacity: 0;
+  transition-duration: 0.2s;
+  z-index: 1;
+}
+
+.contents
+  .contents_items
+  .portfolio
+  .items
+  .item:hover
+  .item_img
+  .hover_button {
+  opacity: 1;
+}
+
+/* ----------------------------------------------- footer ----------------------------------------------------------- */
+
+.footer {
+  margin-top: 160px;
+  height: 100px;
+  width: 100%;
+  background-color: rgb(35, 35, 35);
 }
