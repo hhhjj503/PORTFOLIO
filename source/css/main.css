@@ -43,6 +43,10 @@
   display: none;
 }
 
+.header .h_menu ul li.drop_down_menu:hover ul {
+  display: block;
+}
+
 .header .h_menu ul li.drop_down_menu ul li.drop_down {
   width: 110px;
   height: 30px;
@@ -55,10 +59,6 @@
   position: absolute;
   top: 28px;
   right: -25px;
-}
-
-.header .h_menu ul li.drop_down_menu:hover ul {
-  display: block;
 }
 
 .header .h_menu ul li.drop_down_menu:hover ul li:hover {
@@ -117,6 +117,7 @@
 
 .contents .contents_items .introduce:hover .i_deco {
   bottom: -4.6%;
+  cursor: default;
 }
 
 .contents .contents_items .tech {
@@ -146,6 +147,10 @@
   background-color: white;
   transition: 0.2s;
   border-radius: 20px;
+}
+
+.contents .contents_items .tech:hover .t_title {
+  cursor: default;
 }
 
 .contents .contents_items .tech:not(:hover) {
@@ -267,4 +272,5 @@
   text-align: center;
   margin-top: -10px;
   opacity: 0.3;
+  cursor: default;
 }
