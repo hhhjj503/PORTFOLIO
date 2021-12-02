@@ -31,22 +31,22 @@ window.onload = function () {
     } else if (text.value == "") {
       alert("소개를 입력해 주세요.");
       text.focus();
+    } else {
+      title.innerText = "안녕하세요 " + name.value + "님!";
+      contents[0].innerText = gender.value;
+      gender.remove();
+      contents[1].innerText = name.value;
+      name.remove();
+      contents[2].innerText = nickname.value;
+      nickname.remove();
+      contents[3].innerText = age.value;
+      age.remove();
+      contents[4].innerText = birthday.value;
+      birthday.remove();
+      contents[5].innerText = text.value;
+      text.remove();
+      button.classList.add("submitted");
+      sContents.classList.add("submitted");
     }
-
-    title.innerText = "안녕하세요 " + name.value + "님!";
-    contents[0].innerText = gender.value;
-    gender.remove();
-    contents[1].innerText = name.value;
-    name.remove();
-    contents[2].innerText = nickname.value;
-    nickname.remove();
-    contents[3].innerText = age.value;
-    age.remove();
-    contents[4].innerText = birthday.value;
-    birthday.remove();
-    contents[5].innerText = text.value;
-    text.remove();
-    button.classList.add("submitted");
-    sContents.classList.add("submitted");
   }
 };
