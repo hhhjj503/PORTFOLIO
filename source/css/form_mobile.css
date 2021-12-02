@@ -24,7 +24,8 @@
 
   .page .contents .form_items .title {
     font-size: 15px;
-    padding: 20px;
+    padding-top: 22px;
+    padding-bottom: 17px;
   }
 
   .page .contents .form_items .form_item {
