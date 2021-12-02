@@ -17,15 +17,9 @@
   }
 
   .page {
-    width: 100%;
+    width: 90%;
     height: 100%;
     margin-top: 25px;
-  }
-
-  .page .contents {
-    margin-left: 10px;
-    margin-right: 10px;
-    height: 100%;
   }
 
   .page .contents .form_items .title {
