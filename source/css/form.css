@@ -24,6 +24,14 @@ textarea {
   font-size: 18px;
 }
 
+button.submitted {
+  display: none;
+}
+
+.page .contents .submit_item div.submitted {
+  padding-bottom: 15px;
+}
+
 .page {
   width: 1000px;
   height: auto;
