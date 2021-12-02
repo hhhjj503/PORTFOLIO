@@ -85,3 +85,9 @@ textarea {
   background-color: #2f2f2f;
   cursor: pointer;
 }
+
+@media (hover: hover) {
+  .page .contents .submit_item .s_btn:hover {
+    background-color: #4a4a4a;
+  }
+}
