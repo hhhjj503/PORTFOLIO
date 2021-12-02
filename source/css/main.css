@@ -180,11 +180,17 @@ a {
   background-size: 100%;
   cursor: default;
   background-position: center center;
-  transition-duration: 0.3s;
+  transition-duration: 0.4s;
   position: relative;
+  border: 0.3px solid #dddddd;
 }
 
 @media (hover: hover) {
+  a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
   .contents .contents_items .introduce:hover {
     transition: 0.5s;
     box-shadow: 0 0 0 0;
@@ -261,16 +267,6 @@ a {
     .item_img
     .hover_button {
     opacity: 1;
-  }
-
-  .contents
-    .contents_items
-    .portfolio
-    .items
-    .item:hover
-    .item_img
-    .hover_button:hover {
-    cursor: pointer;
   }
 }
 
