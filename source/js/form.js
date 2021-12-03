@@ -1,6 +1,5 @@
 window.onload = function () {
   const title = document.querySelector(".title");
-  const gender = document.querySelector("input[name='gender']:checked");
   const name = document.querySelector("input[name='name']");
   const nickname = document.querySelector("input[name='nickname']");
   const age = document.querySelector("input[name='age']");
@@ -32,6 +31,7 @@ window.onload = function () {
       alert("소개를 입력해 주세요.");
       text.focus();
     } else {
+      const gender = document.querySelector("input[name='gender']:checked");
       title.innerText = "안녕하세요 " + name.value + "님!";
       contents[0].innerText = gender.value;
       gender.remove();
