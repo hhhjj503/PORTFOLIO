@@ -238,7 +238,6 @@ a {
 
   .contents .contents_items .portfolio .items .item .item_img .hover_button {
     position: absolute;
-    display: inline;
     left: 50%;
     top: 50%;
     margin-left: -70px;
