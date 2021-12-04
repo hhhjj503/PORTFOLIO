@@ -1,6 +1,7 @@
 window.onload = function () {
   const lis = document.querySelectorAll(".random");
-  for (let i = 0; lis.length; i++) {
+
+  for (let i = 0; i < lis.length; i++) {
     lis[i].addEventListener("mouseover", function () {
       changeColor(lis[i]);
     });
