@@ -1,7 +1,5 @@
 window.onload = function () {
   const lis = document.querySelectorAll(".random");
-  const mobileChange = document.querySelector(".mobile_change");
-  const scrollCheck = false;
   const scrollDefaultValue = document.querySelector("html").scrollTop;
 
   for (let i = 0; i < lis.length; i++) {
