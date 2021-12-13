@@ -23,6 +23,10 @@
 
   /* ----------------------------------------------- contents ----------------------------------------------------------- */
 
+  .contents .top_btn {
+    display: none;
+  }
+
   .contents .contents_items .introduce {
     width: 100%;
     padding-top: 10px;
