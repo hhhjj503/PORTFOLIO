@@ -7,6 +7,20 @@ body {
   overflow-x: hidden;
 }
 
+::selection {
+  background: rgba(255, 255, 255, 0.5);
+  color: #031720;
+}
+
+.btn {
+  width: 100%;
+  height: 65px;
+  font-size: 25px;
+  font-weight: 400;
+  background: rgb(52, 52, 65);
+  color: white;
+}
+
 /* ------------------------------------------------ header ------------------------------------------------------ */
 .header {
   width: 100%;
@@ -92,4 +106,49 @@ body {
   background-image: url("https://picsum.photos/1000/500");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.contents .contents_items .introduce {
+  width: 100%;
+  background-color: white;
+  height: 200px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500;
+  display: flex;
+}
+
+.contents .contents_items .introduce .i_title {
+  width: 80%;
+  padding-top: 23px;
+  background: black;
+  color: rgb(194, 194, 194);
+  font-size: 140px;
+  font-weight: 600;
+  letter-spacing: 10px;
+}
+
+.contents .contents_items .introduce .login_box {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  background: #031720;
+}
+
+.contents .contents_items .introduce .login_sns ul li {
+  display: inline-block;
+  width: 31%;
+  margin: 0px;
+  padding: 0px;
+
+  background: none;
+  height: 70px;
+}
+
+.contents .contents_items .introduce .login_sns ul li a {
+  vertical-align: middle;
+  color: rgb(207, 206, 206);
+  text-decoration: none;
+  font-size: 70px;
+  font-weight: 600;
 }
