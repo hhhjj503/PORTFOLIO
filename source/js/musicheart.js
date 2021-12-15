@@ -15,4 +15,8 @@ window.onload = function () {
       prevEl: ".swiper-button-prev",
     },
   });
+  const signupBtn = document.querySelector(".sign_up_btn");
+  signupBtn.addEventListener("click", function () {
+    window.location.href = "../../pages/musicheart_join.html";
+  });
 };
