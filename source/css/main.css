@@ -252,6 +252,7 @@ a {
   transition-duration: 0.4s;
   position: relative;
   border: 0.3px solid #dddddd;
+  background-repeat: no-repeat;
 }
 
 @media (hover: hover) {
