@@ -5,6 +5,7 @@ html {
 body {
   overflow: scroll;
   overflow-x: hidden;
+  background-color: black;
 }
 
 ::selection {
@@ -153,7 +154,7 @@ body {
   padding-left: 5px;
   background: black;
   color: rgb(194, 194, 194);
-  font-size: 140px;
+  font-size: 150px;
   font-weight: 600;
   letter-spacing: 10px;
   cursor: default;
