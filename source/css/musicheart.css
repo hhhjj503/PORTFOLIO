@@ -192,11 +192,12 @@ body {
   margin-top: 105px;
   width: 100%;
   display: flex;
+  justify-content: center;
 }
 
 .contents .contents_items .description .d_desc {
   flex-direction: column;
-  margin-left: 7%;
+  margin-left: 6%;
 }
 
 .contents .contents_items .description .d_img img {
