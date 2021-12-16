@@ -18,10 +18,10 @@ window.onload = function () {
   const signupBtn = document.querySelector(".sign_up_btn");
   const subBtn = document.querySelector(".sub_btn");
   signupBtn.addEventListener("click", function () {
-    location.href = "../../../pages/musicheart_join.html";
+    location.href = "../../PORTFOLIO/pages/musicheart_join.html";
   });
   subBtn.addEventListener("click", function () {
-    location.href = "../../../pages/musicheart_join.html";
+    location.href = "../../PORTFOLIO/pages/musicheart_join.html";
     alert(location.href);
   });
 };
