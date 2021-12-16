@@ -220,6 +220,7 @@ body {
 .contents .contents_items .description .d_title {
   margin-top: 80px;
   font-size: 21px;
+  line-height: 27px;
   text-align: left;
 }
 
