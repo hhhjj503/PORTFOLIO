@@ -18,9 +18,9 @@ window.onload = function () {
   const signupBtn = document.querySelector(".sign_up_btn");
   const subBtn = document.querySelector(".sub_btn");
   signupBtn.addEventListener("click", function () {
-    location.href = "../../PORTFOLIO/pages/musicheart_join.html";
+    window.location.assign("../../pages/musicheart_join.html");
   });
   subBtn.addEventListener("click", function () {
-    location.href = "../../PORTFOLIO/pages/musicheart_join.html";
+    window.location.assign("../../pages/musicheart_join.html");
   });
 };
