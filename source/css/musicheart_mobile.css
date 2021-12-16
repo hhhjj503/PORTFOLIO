@@ -1,0 +1,163 @@
+@media only screen and (max-width: 550px) {
+  body {
+    background-color: black;
+  }
+
+  .header {
+    position: relative;
+  }
+
+  .header .mobile_h_menu_btn {
+    position: absolute;
+    display: block;
+    width: 30px;
+    top: 28px;
+    left: 20px;
+  }
+
+  .header .mobile_h_menu_btn .m_h_menu_btn1 {
+    height: 2px;
+    background-color: white;
+  }
+
+  .header .mobile_h_menu_btn .m_h_menu_btn2 {
+    margin-top: 6px;
+    height: 2px;
+    background-color: white;
+  }
+
+  .header .mobile_h_menu_btn .m_h_menu_btn3 {
+    margin-top: 6px;
+    height: 2px;
+    background-color: white;
+  }
+
+  .header .h_title h1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .header .h_title h1 a {
+    font-size: 30px;
+  }
+
+  .header .h_menu {
+    display: none;
+  }
+
+  .header .m_h_menu {
+    display: block;
+    position: absolute;
+    background-color: white;
+  }
+
+  .header .h_search input {
+    width: 200px;
+  }
+
+  .contents .contents_items .swiper_section {
+    display: none;
+  }
+
+  .contents .contents_items .description .d_img {
+    display: none;
+  }
+
+  .contents .contents_items .description .d_img img {
+    width: 100%;
+  }
+
+  .contents .contents_items .introduce .i_deco {
+    font-size: 30px;
+    padding-left: 0px;
+    padding-bottom: 40px;
+  }
+
+  .contents .contents_items .description .d_desc .d_deco {
+    font-size: 30px;
+  }
+
+  .contents .contents_items .introduce {
+    display: block;
+  }
+
+  .contents .contents_items .introduce .i_deco {
+    width: 100%;
+    line-height: 40px;
+    padding-bottom: 50px;
+  }
+
+  .contents .contents_items .introduce .login_box {
+    font-size: 12px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .contents .contents_items .introduce .login_box .login_sns {
+    display: none;
+  }
+
+  .contents .contents_items .introduce .login_box .login_btn {
+    width: 50%;
+    height: 50px;
+    font-size: 17px;
+  }
+
+  .contents .contents_items .introduce .login_box .sign_up_btn {
+    width: 50%;
+    height: 50px;
+    font-size: 17px;
+  }
+
+  .contents .contents_items .introduce .login_sns ul li a {
+    font-size: 30px;
+  }
+
+  .contents .contents_items .description {
+    display: block;
+    margin-top: 0px;
+    text-align: center;
+    background-image: url("../images/musichearDescription.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .contents .contents_items .description .d_desc {
+    margin-left: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .contents .contents_items .description .d_desc .d_deco {
+    margin-top: 50px;
+    letter-spacing: 8px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .contents .contents_items .description .d_desc .d_title {
+    font-size: 15px;
+    text-align: left;
+    margin-top: 60px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    word-break: keep-all;
+    color: white;
+  }
+
+  .contents .contents_items .description .d_desc .d_btn {
+    margin-top: 60px;
+    margin-bottom: 50px;
+  }
+
+  .contents .contents_items .description .d_desc .d_btn .sub_btn {
+    height: 40px;
+    width: 170px;
+    font-size: 17px;
+  }
+
+  .contents .contents_items .footer {
+    height: 30px;
+    margin-top: 30px;
+  }
+}

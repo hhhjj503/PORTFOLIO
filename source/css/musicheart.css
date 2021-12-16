@@ -29,6 +29,10 @@ body {
   position: relative;
 }
 
+.header .mobile_h_menu_btn {
+  display: none;
+}
+
 .header .h_title h1 {
   text-align: center;
   padding-top: 10px;
@@ -43,6 +47,10 @@ body {
 
 .header .h_title .h_deco {
   color: red;
+}
+
+.header .mobile_h_menu {
+  display: none;
 }
 
 .header .h_menu {
