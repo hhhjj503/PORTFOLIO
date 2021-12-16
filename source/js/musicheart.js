@@ -22,5 +22,6 @@ window.onload = function () {
   });
   subBtn.addEventListener("click", function () {
     location.href = "../../../pages/musicheart_join.html";
+    alert(location.href);
   });
 };
