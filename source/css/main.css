@@ -273,10 +273,6 @@ a {
 
   .contents .contents_items .introduce:hover .i_title {
     display: inline;
-    background: rgba(60, 60, 60, 0.8);
-    color: rgba(255, 255, 255, 1);
-    text-shadow: 0.5px 0.5px #3c3c3c, 0.5px 0.5px #3c3c3c, 0.5px 0.5px #3c3c3c,
-      0.5px 0.5px #3c3c3c;
     transition: 0.3s;
   }
 
