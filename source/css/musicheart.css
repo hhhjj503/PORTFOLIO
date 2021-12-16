@@ -209,7 +209,7 @@ body {
   margin-left: 130px;
 }
 
-.contents .contents_items .description .d_deco {
+.contents .contents_items .description .d_desc .d_deco {
   color: rgb(155, 155, 155);
   margin-top: 70px;
   font-size: 90px;
@@ -218,19 +218,19 @@ body {
   cursor: default;
 }
 
-.contents .contents_items .description .d_title {
+.contents .contents_items .description .d_desc .d_title {
   margin-top: 80px;
   font-size: 21px;
   line-height: 27px;
   text-align: left;
 }
 
-.contents .contents_items .description .d_btn {
+.contents .contents_items .description .d_desc .d_btn {
   margin-top: 80px;
   text-align: center;
 }
 
-.contents .contents_items .description .sub_btn {
+.contents .contents_items .description .d_desc .sub_btn {
   border-radius: 30px;
   width: 60%;
 }
