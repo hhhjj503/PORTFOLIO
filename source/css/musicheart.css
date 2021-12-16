@@ -230,8 +230,9 @@ body {
   text-align: center;
 }
 
-.contents .contents_items .description .d_desc .sub_btn {
+.contents .contents_items .description .d_desc .d_btn .sub_btn {
   border-radius: 30px;
+  height: 60px;
   width: 60%;
 }
 
