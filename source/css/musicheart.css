@@ -22,15 +22,20 @@ body {
   cursor: pointer;
 }
 
+/* ------------------------mobile------------- */
+
+.mobile_h_menu {
+  display: none;
+}
+.header .mobile_h_menu_btn {
+  display: none;
+}
+
 /* ------------------------------------------------ header ------------------------------------------------------ */
 .header {
   width: 100%;
   background: #031720;
   position: relative;
-}
-
-.header .mobile_h_menu_btn {
-  display: none;
 }
 
 .header .h_title h1 {
@@ -47,10 +52,6 @@ body {
 
 .header .h_title .h_deco {
   color: red;
-}
-
-.header .mobile_h_menu {
-  display: none;
 }
 
 .header .h_menu {

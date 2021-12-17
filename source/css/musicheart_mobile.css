@@ -7,6 +7,45 @@
     position: relative;
   }
 
+  /* ----------------------------------------- mobile header--------------------------------------------------------- */
+
+  .mobile_h_menu {
+    position: absolute;
+    display: block;
+    top: 0px;
+    z-index: 1;
+    width: 60%;
+    height: 200%;
+    left: -300px;
+    background-color: white;
+    transition: 0.3s;
+  }
+
+  .mobile_h_menu.clicked {
+    left: 0px;
+  }
+
+  .mobile_h_menu .search {
+    text-align: center;
+  }
+
+  .mobile_h_menu .search input {
+    display: block;
+    height: 25px;
+    width: 150px;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    border-radius: 50px;
+    outline: none;
+  }
+
+  .mobile_h_menu ul li {
+    margin-top: 30px;
+    text-align: center;
+  }
+
   .header .mobile_h_menu_btn {
     position: absolute;
     display: block;
@@ -15,22 +54,42 @@
     left: 20px;
   }
 
-  .header .mobile_h_menu_btn .m_h_menu_btn1 {
+  .header .mobile_h_menu_btn .btn1 {
     height: 2px;
     background-color: white;
   }
 
-  .header .mobile_h_menu_btn .m_h_menu_btn2 {
+  .header .mobile_h_menu_btn .btn2 {
     margin-top: 6px;
     height: 2px;
     background-color: white;
   }
 
-  .header .mobile_h_menu_btn .m_h_menu_btn3 {
+  .header .mobile_h_menu_btn .btn3 {
     margin-top: 6px;
     height: 2px;
     background-color: white;
   }
+
+  .header .mobile_h_menu_btn.clicked {
+    z-index: 2;
+  }
+
+  .header .clicked .btn1 {
+    background-color: black;
+    transform: translateY(4px) rotate(45deg);
+  }
+
+  .header .clicked .btn2 {
+    display: none;
+  }
+
+  .header .clicked .btn3 {
+    background-color: black;
+    transform: translateY(-4px) rotate(-45deg);
+  }
+
+  /* ------------------------------------------------- header ------------------------------------------- */
 
   .header .h_title h1 {
     padding-top: 20px;
