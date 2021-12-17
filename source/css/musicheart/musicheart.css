@@ -211,7 +211,7 @@ body {
 }
 
 .contents .contents_items .description .d_img img {
-  background-image: url("../images/musichearDescription.png");
+  background-image: url("../../images/musicheart/musichearDescription.png");
   opacity: 0.8;
   width: 900px;
   height: 600px;

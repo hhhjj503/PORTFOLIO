@@ -21,10 +21,10 @@ window.onload = function () {
   const mobileHMenuBtn = document.querySelector(".mobile_h_menu_btn");
 
   signupBtn.addEventListener("click", function () {
-    location.href = "../pages/musicheart_join.html";
+    location.href = "../../pages/musicheart/musicheart_join.html";
   });
   subBtn.addEventListener("click", function () {
-    location.href = "../pages/musicheart_join.html";
+    location.href = "../../pages/musicheart/musicheart_join.html";
   });
 
   mobileHMenuBtn.addEventListener("click", function () {
