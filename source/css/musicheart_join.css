@@ -14,7 +14,7 @@ input::-webkit-inner-spin-button {
   border-radius: 10px;
   background-color: #031720;
   color: white;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 600;
 }
 
@@ -40,7 +40,7 @@ input::-webkit-inner-spin-button {
 
 .join .join_header a {
   text-decoration: none;
-  font-size: 40px;
+  font-size: 4rem;
   font-weight: 600;
   color: white;
   margin-left: 20px;
@@ -51,7 +51,7 @@ input::-webkit-inner-spin-button {
 }
 
 .join .join_header .title {
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 600;
   color: white;
   margin-left: 20px;
@@ -66,7 +66,7 @@ input::-webkit-inner-spin-button {
   height: 60px;
   width: 100%;
   border-radius: 10px;
-  font-size: 21px;
+  font-size: 2.1rem;
   padding-left: 20px;
   margin-top: 15px;
   border: 1px solid #6e6e6e;
@@ -81,7 +81,7 @@ input::-webkit-inner-spin-button {
 
 .join .join_input_items .input_item .join_btn {
   width: 100%;
-  font-size: 20px;
+  font-size: 2rem;
   background-color: #031720;
   cursor: pointer;
 }
@@ -89,7 +89,7 @@ input::-webkit-inner-spin-button {
 .join .join_input_items .join_description {
   margin-top: 15px;
   margin-bottom: 30px;
-  font-size: 19px;
+  font-size: 1.9rem;
   line-height: 25px;
 }
 
@@ -102,7 +102,7 @@ input::-webkit-inner-spin-button {
 
 .join .join_bottom {
   border-top: 1px solid #bdbdbd;
-  font-size: 18px;
+  font-size: 1.8rem;
   padding-top: 20px;
 }
 .join .join_bottom a {
