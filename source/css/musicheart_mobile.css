@@ -57,18 +57,21 @@
   .header .mobile_h_menu_btn .btn1 {
     height: 2px;
     background-color: white;
+    transition: 0.3s;
   }
 
   .header .mobile_h_menu_btn .btn2 {
     margin-top: 6px;
     height: 2px;
     background-color: white;
+    transition: 0.3s;
   }
 
   .header .mobile_h_menu_btn .btn3 {
     margin-top: 6px;
     height: 2px;
     background-color: white;
+    transition: 0.3s;
   }
 
   .header .mobile_h_menu_btn.clicked {
@@ -78,15 +81,18 @@
   .header .clicked .btn1 {
     background-color: black;
     transform: translateY(4px) rotate(45deg);
+    transition: 0.3s;
   }
 
   .header .clicked .btn2 {
     display: none;
+    transition: 0.3s;
   }
 
   .header .clicked .btn3 {
     background-color: black;
     transform: translateY(-4px) rotate(-45deg);
+    transition: 0.3s;
   }
 
   /* ------------------------------------------------- header ------------------------------------------- */
