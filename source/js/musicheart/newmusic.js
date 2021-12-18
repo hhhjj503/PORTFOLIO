@@ -1,21 +1,24 @@
 window.onload = function () {
   const imgItems = document.querySelectorAll(".img_item");
   const biggerImg = document.querySelector(".bigger_img");
+  const imgTitles = document.querySelectorAll(".img_title");
 
   imgItems[0].classList.add("clicked");
   slicedPath(imgItems[0]);
+  imgTitles[0].classList.add("title_clicked");
 
   for (let i = 0; i < imgItems.length; i++) {
     imgItems[i].addEventListener("click", function () {
-      clicked(imgItems, imgItems[i]);
+      imgClicked(imgItems, imgItems[i]);
+      titleClicked(imgTitles, imgTitles[i]);
     });
   }
 
-  function clicked(imgItems, imgItem) {
+  function imgClicked(imgItems, imgItem) {
     for (let i = 0; i < imgItems.length; i++) {
       imgItems[i].classList.remove("clicked");
     }
-    slicedPath(slicedPath(imgItem));
+    slicedPath(imgItem);
   }
 
   function slicedPath(imgItem) {
@@ -26,5 +29,12 @@ window.onload = function () {
     const slicedPath = imgPath.slice(startIndex, lastIndex);
     const path = "../.." + slicedPath;
     biggerImg.style.backgroundImage = "url('" + path + "'";
+  }
+
+  function titleClicked(imgTitles, imgTitle) {
+    for (let i = 0; i < imgTitles.length; i++) {
+      imgTitles[i].classList.remove("title_clicked");
+    }
+    imgTitle.classList.add("title_clicked");
   }
 };
