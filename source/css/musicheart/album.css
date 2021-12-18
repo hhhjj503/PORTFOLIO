@@ -122,70 +122,63 @@ a {
 
 /* -------------------------------------------------contents--------------------------------------------- */
 
-.contents .img_items {
-  width: 80%;
-  height: 200px;
+.contents .album_items .album_item {
   margin-left: auto;
   margin-right: auto;
-  background-color: #031720;
-  border-radius: 10px;
   margin-top: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 70%;
+  background-color: burlywood;
 }
 
-.contents .img_items .img_item {
-  width: 15%;
-  height: 180px;
-  background-color: #031720;
-  margin-left: 10px;
-  margin-right: 10px;
-  border-radius: 10px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.5;
-  cursor: pointer;
-}
-
-.contents .img_items .clicked {
-  border: 1px solid white;
-  opacity: 1;
-}
-
-.contents .biggerimg_box {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 70px;
-  width: 60%;
-  border-radius: 25px;
-  height: 600px;
-  background-color: #031720;
-  transition: 0.3s ease-in-out;
-}
-
-.contents .biggerimg_box .bigger_img {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  border-radius: 25px;
-  transition: 0.3s ease-in-out;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.contents .img_title_box .img_title {
-  font-size: 8rem;
+.contents .album_items .album_item .a_title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  height: 70px;
   text-align: center;
-  margin-top: 40px;
-  font-weight: 700;
-  display: none;
+  line-height: 70px;
+  background-color: #031720;
+  color: rgba(255, 255, 255, 0.9);
 }
 
-.contents .img_title_box .title_clicked {
-  display: block;
-  transition: 0.3s ease-in-out;
+.contents .album_items .album_item .a_desc {
+  display: flex;
+  transition: 0.4s ease-in-out;
+}
+
+.contents .album_items .album_item .a_desc .a_img {
+  width: 50%;
+  height: 550px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contents .album_items .album_item .a_desc .a_description {
+  background-color: crimson;
+  width: 50%;
+  height: 550px;
+}
+
+.contents .album_items .album_item .a_desc .a_description .d_title {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.contents .album_items .album_item .a_desc .a_description .tracklist {
+  margin-top: 40px;
+  height: 410px;
+  text-align: center;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  line-height: 50px;
+  overflow: auto;
+  background-color: #031720;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /* -------------------------------------------------footer--------------------------------------------- */
@@ -203,7 +196,9 @@ a {
     transition: 0.3s;
   }
 
-  .contents .img_items .img_item:hover {
+  .contents .album_items .album_item:hover .a_desc {
+    display: flex;
     opacity: 1;
+    transition: 0.4s ease-in-out;
   }
 }
