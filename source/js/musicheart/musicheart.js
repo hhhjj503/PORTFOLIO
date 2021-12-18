@@ -16,15 +16,20 @@ window.onload = function () {
     },
   });
   const signupBtn = document.querySelector(".sign_up_btn");
+  const loginBtn = document.querySelector(".login_btn");
   const subBtn = document.querySelector(".sub_btn");
   const mobileHMenu = document.querySelector(".mobile_h_menu");
   const mobileHMenuBtn = document.querySelector(".mobile_h_menu_btn");
 
   signupBtn.addEventListener("click", function () {
-    location.href = "../../pages/musicheart/musicheart_join.html";
+    location.href = "../../pages/musicheart/join.html";
   });
   subBtn.addEventListener("click", function () {
-    location.href = "../../pages/musicheart/musicheart_join.html";
+    location.href = "../../pages/musicheart/join.html";
+  });
+
+  loginBtn.addEventListener("click", function () {
+    location.href = "../../pages/musicheart/login.html";
   });
 
   mobileHMenuBtn.addEventListener("click", function () {
