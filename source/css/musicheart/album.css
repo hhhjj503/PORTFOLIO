@@ -98,7 +98,7 @@ a {
 }
 
 .header .h_menu ul li a {
-  font-size: 2.1rem;
+  font-size: 2rem;
   text-decoration: none;
   cursor: pointer;
 }
@@ -126,16 +126,16 @@ a {
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
-  width: 70%;
+  width: 60%;
   background-color: white;
 }
 
 .contents .album_items .album_item .a_title {
-  font-size: 3.5rem;
+  font-size: 2.9rem;
   font-weight: 600;
-  height: 70px;
+  height: 60px;
   text-align: center;
-  line-height: 70px;
+  line-height: 60px;
   background-color: #031720;
   color: rgba(255, 255, 255, 0.9);
 }
@@ -147,30 +147,31 @@ a {
 
 .contents .album_items .album_item .a_desc .a_img {
   width: 50%;
-  height: 550px;
+  height: 500px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .contents .album_items .album_item .a_desc .a_description {
   background-color: crimson;
   width: 50%;
-  height: 550px;
+  height: 500px;
 }
 
 .contents .album_items .album_item .a_desc .a_description .d_title {
   margin-top: 40px;
   text-align: center;
-  font-size: 4rem;
-  font-weight: 600;
+  font-size: 2.9rem;
+  font-weight: 700;
 }
 
 .contents .album_items .album_item .a_desc .a_description .tracklist {
   margin-top: 40px;
-  height: 410px;
+  height: 371px;
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   letter-spacing: 1px;
   font-weight: 500;
   line-height: 50px;

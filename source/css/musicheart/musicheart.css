@@ -16,7 +16,7 @@ body {
 .btn {
   width: 100%;
   height: 65px;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 400;
   background: rgb(52, 52, 65);
   color: white;
@@ -108,7 +108,7 @@ a {
 }
 
 .header .h_menu ul li a {
-  font-size: 2.1rem;
+  font-size: 2rem;
   text-decoration: none;
   cursor: pointer;
 }
@@ -137,11 +137,11 @@ a {
 }
 
 .contents .contents_items .swiper_section .swiper {
-  width: 75%;
+  width: 80%;
 }
 .contents .contents_items .swiper_section .swiper-wrapper {
-  width: 70%;
-  height: 550px;
+  width: 100%;
+  height: 450px;
   box-shadow: 3px 12px 12px rgba(255, 255, 255, 1),
     3px 12px 12px rgba(255, 255, 255, 1), 3px 12px 12px rgba(255, 255, 255, 1),
     3px 12px 12px rgba(255, 255, 255, 1);
@@ -154,29 +154,29 @@ a {
 
 .contents .contents_items .introduce {
   width: 100%;
-  background-color: white;
-  height: 200px;
+  background-color: black;
+  height: 150px;
   text-align: center;
-  font-size: 2.5rem;
   font-weight: 500;
   display: flex;
 }
 
 .contents .contents_items .introduce .i_deco {
-  width: 80%;
-  padding-top: 40px;
-  padding-left: 10px;
+  width: 54%;
   background: black;
+  margin-left: auto;
   color: rgb(194, 194, 194);
-  font-size: 11rem;
+  font-size: 8rem;
   font-weight: 600;
+  line-height: 140px;
   letter-spacing: 10px;
   cursor: default;
 }
 
 .contents .contents_items .introduce .login_box {
-  width: 20%;
+  width: 16%;
   display: flex;
+  margin-right: auto;
   flex-direction: column;
   background: #031720;
 }
@@ -195,11 +195,11 @@ a {
 }
 
 .contents .contents_items .introduce .login_sns ul li a {
-  vertical-align: middle;
   color: rgb(207, 206, 206);
   text-decoration: none;
-  font-size: 6.8rem;
+  font-size: 5rem;
   font-weight: 600;
+  line-height: 65px;
 }
 
 .contents .contents_items .description {
@@ -217,16 +217,16 @@ a {
 .contents .contents_items .description .d_img img {
   background-image: url("../../images/musicheart/musichearDescription.png");
   opacity: 0.8;
-  width: 900px;
-  height: 600px;
+  width: 600px;
+  height: 450px;
   border-radius: 20px;
   margin-left: 130px;
 }
 
 .contents .contents_items .description .d_desc .d_deco {
   color: rgb(155, 155, 155);
-  margin-top: 70px;
-  font-size: 9rem;
+  margin-top: 10px;
+  font-size: 7.5rem;
   font-weight: 600;
   letter-spacing: 15px;
   cursor: default;
@@ -234,7 +234,7 @@ a {
 
 .contents .contents_items .description .d_desc .d_title {
   margin-top: 80px;
-  font-size: 2.1rem;
+  font-size: 1.9rem;
   line-height: 27px;
   text-align: left;
 }
@@ -246,8 +246,9 @@ a {
 
 .contents .contents_items .description .d_desc .d_btn .sub_btn {
   border-radius: 30px;
-  height: 60px;
-  width: 60%;
+  height: 50px;
+  width: 40%;
+  font-size: 2rem;
 }
 
 /* -------------------------------------------------footer--------------------------------------------- */

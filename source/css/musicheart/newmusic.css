@@ -98,7 +98,7 @@ a {
 }
 
 .header .h_menu ul li a {
-  font-size: 2.1rem;
+  font-size: 2rem;
   text-decoration: none;
   cursor: pointer;
 }
@@ -123,8 +123,8 @@ a {
 /* -------------------------------------------------contents--------------------------------------------- */
 
 .contents .img_items {
-  width: 80%;
-  height: 200px;
+  width: 60%;
+  height: 190px;
   margin-left: auto;
   margin-right: auto;
   background-color: #031720;
@@ -137,13 +137,14 @@ a {
 
 .contents .img_items .img_item {
   width: 15%;
-  height: 180px;
+  height: 170px;
   background-color: #031720;
   margin-left: 10px;
   margin-right: 10px;
   border-radius: 10px;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   opacity: 0.5;
   cursor: pointer;
 }
@@ -158,9 +159,9 @@ a {
   margin-left: auto;
   margin-right: auto;
   margin-top: 70px;
-  width: 60%;
+  width: 40%;
   border-radius: 25px;
-  height: 600px;
+  height: 500px;
   background-color: #031720;
   transition: 0.3s ease-in-out;
 }
@@ -176,7 +177,7 @@ a {
 }
 
 .contents .img_title_box .img_title {
-  font-size: 8rem;
+  font-size: 4rem;
   text-align: center;
   margin-top: 40px;
   font-weight: 700;
