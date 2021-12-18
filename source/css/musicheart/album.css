@@ -127,7 +127,7 @@ a {
   margin-right: auto;
   margin-top: 100px;
   width: 70%;
-  background-color: burlywood;
+  background-color: white;
 }
 
 .contents .album_items .album_item .a_title {
@@ -154,7 +154,7 @@ a {
 }
 
 .contents .album_items .album_item .a_desc .a_description {
-  background-color: white;
+  background-color: crimson;
   width: 50%;
   height: 550px;
 }
