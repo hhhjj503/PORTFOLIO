@@ -154,7 +154,7 @@ a {
 }
 
 .contents .album_items .album_item .a_desc .a_description {
-  background-color: crimson;
+  background-color: white;
   width: 50%;
   height: 550px;
 }
@@ -194,11 +194,5 @@ a {
   .header .h_menu ul li:hover::after {
     width: 70%;
     transition: 0.3s;
-  }
-
-  .contents .album_items .album_item:hover .a_desc {
-    display: flex;
-    opacity: 1;
-    transition: 0.4s ease-in-out;
   }
 }
