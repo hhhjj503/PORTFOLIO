@@ -182,7 +182,7 @@ a {
 }
 
 .contents .contents_items .introduce .login_box .login_btn {
-  cursor: default;
+  cursor: pointer;
 }
 
 .contents .contents_items .introduce .login_sns ul li {
