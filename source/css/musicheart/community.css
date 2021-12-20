@@ -123,7 +123,7 @@ a {
 /* -------------------------------------------------contents--------------------------------------------- */
 
 .contents {
-  width: 55%;
+  width: 57%;
   margin-left: auto;
   margin-right: auto;
   background-color: transparent;
@@ -133,7 +133,7 @@ a {
 .contents .post_search {
   margin-left: auto;
   margin-right: auto;
-  width: 53%;
+  width: 51%;
   height: 60px;
   background-color: #102731;
   border-radius: 11px;
