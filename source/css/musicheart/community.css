@@ -133,7 +133,7 @@ a {
 .contents .post_search {
   margin-left: auto;
   margin-right: auto;
-  width: 55%;
+  width: 53%;
   height: 60px;
   background-color: #102731;
   border-radius: 11px;
@@ -150,8 +150,7 @@ a {
 }
 
 .contents .post_search .post_type {
-  outline: none;
-  border-radius: 10px;
+  border-radius: 5px;
   width: 130px;
   height: 35px;
   font-size: 1.5rem;
@@ -170,7 +169,6 @@ a {
   padding-right: 20px;
   border: 1px solid white;
   background-color: white;
-  outline: none;
   margin-right: 10px;
 }
 
