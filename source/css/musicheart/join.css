@@ -111,6 +111,7 @@ input::-webkit-inner-spin-button {
 }
 .join .join_bottom a {
   margin-top: 15px;
+  color: black;
 }
 
 @media (hover: hover) {
