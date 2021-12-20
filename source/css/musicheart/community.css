@@ -123,7 +123,7 @@ a {
 /* -------------------------------------------------contents--------------------------------------------- */
 
 .contents {
-  width: 57%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
   background-color: transparent;
@@ -133,10 +133,10 @@ a {
 .contents .post_search {
   margin-left: auto;
   margin-right: auto;
-  width: 51%;
-  height: 60px;
+  width: 48%;
+  height: 55px;
   background-color: #102731;
-  border-radius: 11px;
+  border-radius: 9px;
   margin-bottom: 50px;
   text-align: center;
   display: flex;
@@ -189,7 +189,7 @@ a {
 
 .contents .sections .section {
   width: 49%;
-  height: 277px;
+  height: 273px;
   position: relative;
   margin-left: 3px;
   margin-right: 3px;
@@ -200,7 +200,7 @@ a {
 
 .contents .sections .section .s_title {
   display: flex;
-  height: 45px;
+  height: 42px;
   width: 100%;
   background-color: #031720;
   align-items: center;
