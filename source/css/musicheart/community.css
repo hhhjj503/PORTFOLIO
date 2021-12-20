@@ -189,7 +189,7 @@ a {
 
 .contents .sections .section {
   width: 49%;
-  height: 273px;
+  height: 276px;
   position: relative;
   margin-left: 3px;
   margin-right: 3px;
@@ -230,7 +230,7 @@ a {
 }
 
 .contents .sections .section .list .post {
-  height: 35px;
+  height: 35.5px;
   justify-content: center;
   background-color: rgb(240, 240, 240);
   margin-top: 3px;
