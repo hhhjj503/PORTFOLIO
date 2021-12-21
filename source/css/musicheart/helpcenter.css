@@ -181,6 +181,7 @@ a {
   transition: max-height 0.7s;
   max-height: 0;
   overflow: hidden;
+  font-weight: 600;
 }
 
 .help_contents .items .qna .list ul li .answer::before {
