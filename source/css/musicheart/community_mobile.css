@@ -11,22 +11,27 @@
     height: 35px;
   }
 
+  .contents .post_search form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .contents .post_search .post_type {
-    width: 80px;
+    width: 24%;
     height: 20px;
-    display: block;
     font-weight: 500;
     font-size: 1rem;
   }
 
   .contents .post_search input {
-    width: 100px;
+    width: 35%;
     height: 15px;
     font-size: 1.2rem;
   }
 
   .contents .post_search .search_btn {
-    width: 40px;
+    width: 17%;
     height: 20px;
     font-size: 1.2rem;
     border: none;
