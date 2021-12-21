@@ -1,0 +1,47 @@
+@media only screen and (max-width: 550px) {
+  .login {
+    width: 90%;
+  }
+
+  .login .login_header {
+    height: 40px;
+  }
+
+  .login .login_header a {
+    font-size: 2.4rem;
+    line-height: 13px;
+  }
+
+  .login .login_header .title {
+    font-size: 1.5rem;
+    margin: 0px;
+    line-height: 47px;
+    margin-left: 10px;
+  }
+
+  .login .login_input_items .input_item input {
+    height: 30px;
+    font-size: 1.5rem;
+    border-radius: 7px;
+    padding-left: 10px;
+  }
+
+  .login .login_input_items .input_item .login_btn {
+    font-size: 1.5rem;
+    height: 40px;
+  }
+
+  .login .login_bottom {
+    font-size: 1.5rem;
+  }
+
+  .login .login_bottom a {
+    font-size: 1.4rem;
+  }
+
+  .login .login_bottom .find_box .id_btn,
+  .login .login_bottom .find_box .pwd_btn {
+    font-size: 1.5rem;
+    height: 30px;
+  }
+}
