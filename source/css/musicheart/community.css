@@ -156,6 +156,7 @@ a {
   font-size: 1.5rem;
   padding-left: 5px;
   margin-right: 10px;
+  font-weight: 700;
 }
 
 .contents .post_search input {
@@ -165,7 +166,7 @@ a {
   height: 30px;
   padding-top: 2px;
   padding-bottom: 2px;
-  padding-left: 20px;
+  padding-left: 10px;
   padding-right: 20px;
   border: 1px solid white;
   background-color: white;
@@ -195,7 +196,7 @@ a {
   margin-right: 3px;
   margin-bottom: 50px;
   overflow: hidden;
-  border-bottom: 1px solid #5c5c5c;
+  border-bottom: 1.5px solid #5c5c5c;
 }
 
 .contents .sections .section .s_title {
@@ -208,7 +209,9 @@ a {
 
 .contents .sections .section .s_title .sub_title {
   font-size: 1.7rem;
-  margin-left: 20px;
+  font-weight: 500;
+  color: rgb(224, 224, 224);
+  margin-left: 15px;
   flex: 1;
 }
 
@@ -243,7 +246,7 @@ a {
 }
 
 .contents .sections .section .list .post .post_title {
-  line-height: 32px;
+  line-height: 35.5px;
   font-size: 1.6rem;
   cursor: pointer;
   font-weight: 500;
