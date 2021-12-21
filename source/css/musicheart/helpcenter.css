@@ -159,6 +159,7 @@ a {
   margin-top: 2px;
   border: 10px;
   cursor: pointer;
+  margin-top: 1px;
 }
 
 .help_contents .items .qna .list ul li .question::before {

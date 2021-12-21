@@ -1,0 +1,31 @@
+@import url(./mobile_header.css);
+
+@media only screen and (max-width: 550px) {
+  .contents .img_items {
+    width: 86%;
+    height: 210px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+    margin-top: 50px;
+  }
+
+  .contents .img_items .img_item {
+    width: 40%;
+    height: 53px;
+  }
+
+  .contents .biggerimg_box {
+    width: 88%;
+    height: 250px;
+    margin-top: 50px;
+  }
+
+  .contents .img_title_box .img_title {
+    font-size: 1.8rem;
+  }
+
+  .footer {
+    margin-top: 50px;
+  }
+}
