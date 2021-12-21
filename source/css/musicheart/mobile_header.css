@@ -2,7 +2,6 @@
   .header {
     position: relative;
   }
-
   /* ----------------------------------------- mobile header--------------------------------------------------------- */
 
   .mobile_h_menu {
@@ -90,5 +89,30 @@
     background-color: black;
     transform: translateY(-4px) rotate(-45deg);
     transition: 0.3s;
+  }
+
+  /* ------------------------------------------------- header ------------------------------------------- */
+
+  .header .h_title h1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .header .h_title h1 a {
+    font-size: 3rem;
+  }
+
+  .header .h_menu {
+    display: none;
+  }
+
+  .header .m_h_menu {
+    display: block;
+    position: absolute;
+    background-color: white;
+  }
+
+  .header .h_search input {
+    width: 200px;
   }
 }

@@ -1,125 +1,11 @@
+@import url(./mobile_header.css);
+
 @media only screen and (max-width: 550px) {
   body {
     background-color: black;
   }
 
-  .header {
-    position: relative;
-  }
-
-  /* ----------------------------------------- mobile header--------------------------------------------------------- */
-
-  .mobile_h_menu {
-    position: absolute;
-    display: block;
-    top: 0px;
-    z-index: 1;
-    width: 60%;
-    height: 200%;
-    left: -551px;
-    background-color: white;
-    transition: 0.3s;
-  }
-
-  .mobile_h_menu.clicked {
-    left: 0px;
-  }
-
-  .mobile_h_menu .search {
-    text-align: center;
-  }
-
-  .mobile_h_menu .search input {
-    display: block;
-    height: 25px;
-    width: 150px;
-    margin-top: 70px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 10px;
-    border-radius: 50px;
-    outline: none;
-  }
-
-  .mobile_h_menu ul li {
-    margin-top: 30px;
-    text-align: center;
-    font-size: 1.4rem;
-  }
-
-  .header .mobile_h_menu_btn {
-    position: absolute;
-    display: block;
-    width: 30px;
-    top: 28px;
-    left: 20px;
-  }
-
-  .header .mobile_h_menu_btn .btn1 {
-    height: 2px;
-    background-color: white;
-    transition: 0.3s;
-  }
-
-  .header .mobile_h_menu_btn .btn2 {
-    margin-top: 6px;
-    height: 2px;
-    background-color: white;
-    transition: 0.3s;
-  }
-
-  .header .mobile_h_menu_btn .btn3 {
-    margin-top: 6px;
-    height: 2px;
-    background-color: white;
-    transition: 0.3s;
-  }
-
-  .header .mobile_h_menu_btn.clicked {
-    z-index: 2;
-  }
-
-  .header .clicked .btn1 {
-    background-color: black;
-    transform: translateY(4px) rotate(45deg);
-    transition: 0.3s;
-  }
-
-  .header .clicked .btn2 {
-    display: none;
-    transition: 0.3s;
-  }
-
-  .header .clicked .btn3 {
-    background-color: black;
-    transform: translateY(-4px) rotate(-45deg);
-    transition: 0.3s;
-  }
-
-  /* ------------------------------------------------- header ------------------------------------------- */
-
-  .header .h_title h1 {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-
-  .header .h_title h1 a {
-    font-size: 3rem;
-  }
-
-  .header .h_menu {
-    display: none;
-  }
-
-  .header .m_h_menu {
-    display: block;
-    position: absolute;
-    background-color: white;
-  }
-
-  .header .h_search input {
-    width: 200px;
-  }
+  /* -----------------------------------------------------contents-------------------------------------- */
 
   .contents .contents_items .swiper_section {
     display: none;
@@ -137,6 +23,7 @@
     font-size: 3rem;
     padding-left: 0px;
     padding-bottom: 40px;
+    margin-top: 40px;
   }
 
   .contents .contents_items .description .d_desc .d_deco {
