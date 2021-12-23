@@ -1,5 +1,5 @@
 window.onload = function () {
-  const title = document.querySelector(".title");
+  const t = document.querySelector(".t");
   const name = document.querySelector("input[name='name']");
   const nickname = document.querySelector("input[name='nickname']");
   const age = document.querySelector("input[name='age']");
@@ -32,7 +32,7 @@ window.onload = function () {
       text.focus();
     } else {
       const gender = document.querySelector("input[name='gender']:checked");
-      title.innerText = "안녕하세요 " + name.value + "님!";
+      t.innerText = "안녕하세요 " + name.value + "님!";
       contents[0].innerText = gender.value;
       gender.remove();
       contents[1].innerText = name.value;

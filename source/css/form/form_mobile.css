@@ -24,8 +24,16 @@
 
   .page .contents .form_items .title {
     font-size: 1.5rem;
-    padding-top: 22px;
-    padding-bottom: 17px;
+    border-top: 50px solid #2f2f2f;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+  }
+
+  .page .contents .form_items .title .t {
+    font-size: 1.4rem;
+    left: 20%;
+    right: 20%;
+    top: 8%;
   }
 
   .page .contents .form_items .form_item {
@@ -34,6 +42,9 @@
 
   .page .contents .form_items .form_item .f_title {
     font-size: 1.3rem;
+    width: 70px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .page .contents .form_items .form_item .f_contents {
