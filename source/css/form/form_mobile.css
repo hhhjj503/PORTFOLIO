@@ -33,7 +33,7 @@
     font-size: 1.4rem;
     left: 20%;
     right: 20%;
-    top: 8%;
+    top: 6.8%;
   }
 
   .page .contents .form_items .form_item {
@@ -43,7 +43,7 @@
   .page .contents .form_items .form_item .f_title {
     font-size: 1.3rem;
     width: 70px;
-    margin-left: 10px;
+    margin-left: 20px;
     margin-right: 10px;
   }
 
