@@ -18,7 +18,7 @@
     z-index: 998;
     height: auto;
     top: -999px;
-    transition: 0.7s ease-in-out;
+    transition: 0.5s ease-in-out;
   }
 
   .mobile_left_side.mobile_clicked {
@@ -35,13 +35,13 @@
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 10px;
-    transition: 0.9s ease-in-out;
   }
 
   .menu_btn .deco1 {
     width: 40px;
     height: 2px;
     background-color: white;
+    transition: 0.5s ease-in-out;
   }
 
   .menu_btn .deco2 {
@@ -49,6 +49,7 @@
     height: 2px;
     margin-top: 7px;
     background-color: white;
+    transition: 0.5s ease-in-out;
   }
 
   .menu_btn .deco3 {
@@ -56,20 +57,21 @@
     height: 2px;
     margin-top: 7px;
     background-color: white;
+    transition: 0.5s ease-in-out;
   }
 
   .menu_btn .deco1.btn_clicked {
-    width: 30px;
-    transform: translateY(4px) rotate(45deg);
+    width: 40px;
+    transform: translateY(8px) rotate(45deg);
   }
 
   .menu_btn .deco2.btn_clicked {
-    display: none;
+    opacity: 0;
   }
 
   .menu_btn .deco3.btn_clicked {
-    width: 30px;
-    transform: translateY(-5px) rotate(-45deg);
+    width: 40px;
+    transform: translateY(-8px) rotate(-45deg);
   }
 
   .mobile_left_side .left_side {
