@@ -8,6 +8,14 @@ body {
   overflow-x: hidden;
 }
 
+.menu_btn {
+  display: none;
+}
+
+.mobile_left_side {
+  display: none;
+}
+
 /* ---------------------------------------------- contens, left_side, right_side, footer ---------------------------------------------- */
 
 .contents {

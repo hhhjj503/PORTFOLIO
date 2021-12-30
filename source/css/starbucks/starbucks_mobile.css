@@ -11,6 +11,7 @@
   /* --------------------------------------- mobile_left_side----------------------------------- */
 
   .mobile_left_side {
+    display: block;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -26,6 +27,7 @@
   }
 
   .menu_btn {
+    display: block;
     position: absolute;
     z-index: 999;
     top: 20px;
