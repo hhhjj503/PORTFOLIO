@@ -285,6 +285,10 @@
     background-size: cover;
   }
 
+  .contents .right_side .event .e_box .ad.bigger {
+    height: 130px;
+  }
+
   .footer {
     width: 100%;
   }
