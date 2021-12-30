@@ -1,0 +1,308 @@
+@media only screen and (max-width: 550px) {
+  .contents {
+    width: 100%;
+    display: block;
+  }
+
+  .contents .left_side {
+    display: none;
+  }
+
+  /* --------------------------------------- mobile_left_side----------------------------------- */
+
+  .mobile_left_side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 998;
+    height: auto;
+    top: -999px;
+    transition: 0.7s ease-in-out;
+  }
+
+  .mobile_left_side.mobile_clicked {
+    top: 0px;
+  }
+
+  .menu_btn {
+    position: absolute;
+    z-index: 999;
+    top: 20px;
+    left: 20px;
+    background-color: rgb(3, 30, 23);
+    padding: 7px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    transition: 0.9s ease-in-out;
+  }
+
+  .menu_btn .deco1 {
+    width: 40px;
+    height: 2px;
+    background-color: white;
+  }
+
+  .menu_btn .deco2 {
+    width: 40px;
+    height: 2px;
+    margin-top: 7px;
+    background-color: white;
+  }
+
+  .menu_btn .deco3 {
+    width: 40px;
+    height: 2px;
+    margin-top: 7px;
+    background-color: white;
+  }
+
+  .menu_btn .deco1.btn_clicked {
+    width: 30px;
+    transform: translateY(4px) rotate(45deg);
+  }
+
+  .menu_btn .deco2.btn_clicked {
+    display: none;
+  }
+
+  .menu_btn .deco3.btn_clicked {
+    width: 30px;
+    transform: translateY(-5px) rotate(-45deg);
+  }
+
+  .mobile_left_side .left_side {
+    margin-top: 75px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .mobile_left_side .left_side .header .h_logo {
+    width: 100%;
+    height: 120px;
+    background-color: rgb(3, 30, 23);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobile_left_side .left_side .header .h_logo .logo_image {
+    width: 40%;
+    height: 89px;
+    background-image: url(../../images/starbucks/starbucks_logo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: white;
+    margin-right: 5px;
+  }
+
+  .mobile_left_side .left_side .header .h_logo .logo_text {
+    width: 40%;
+    height: 56px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-top: 30px;
+    text-align: center;
+    border: 2px solid white;
+    color: white;
+    text-transform: uppercase;
+    margin-left: 3px;
+    margin-left: 5px;
+  }
+
+  .mobile_left_side .left_side .header .h_menu ul {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mobile_left_side .left_side .header .h_menu ul li {
+    font-size: 1.3rem;
+    color: black;
+    font-weight: 700;
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+
+  .mobile_left_side .left_side .left_menu {
+    width: 100%;
+    background-color: rgb(3, 30, 23);
+  }
+
+  .mobile_left_side .left_side .left_menu ul li {
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .mobile_left_side .left_side .left_menu ul li a {
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 500;
+  }
+
+  .mobile_left_side .left_side .left_menu ul li a.color_changed {
+    color: rgb(255, 200, 242);
+  }
+
+  .mobile_left_side .left_side .left_menu ul li .sub_menu {
+    border: 1px solid white;
+    margin-top: 10px;
+    max-height: 0px;
+    width: 90%;
+    color: white;
+    opacity: 0;
+    font-size: 1.7rem;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+  }
+
+  .mobile_left_side .left_side .left_menu ul li .sub_menu.clicked {
+    opacity: 1;
+    max-height: 300px;
+  }
+
+  /* --------------------------------------- main ------------------------------------------- */
+
+  .contents .main {
+    width: 100%;
+    height: auto;
+  }
+
+  .contents .main .m_titles {
+    height: 40px;
+    padding-left: 0px;
+    color: white;
+    background-color: rgb(2, 79, 63);
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+
+  .contents .main .m_titles .title {
+    font-size: 1.7rem;
+    line-height: 20px;
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: rgb(3, 30, 23);
+  }
+
+  .contents .main .m_titles .sub_title {
+    font-size: 1.2rem;
+    margin-top: 3px;
+  }
+
+  .contents .main .m_images {
+    height: 350px;
+    width: 100%;
+  }
+
+  .contents .main .m_images .upper .upper_sub {
+    margin-top: 14px;
+    width: 100%;
+  }
+
+  .contents .main .m_images .lower {
+    height: 60px;
+    width: 100%;
+  }
+
+  .contents .main .m_images .lower::after {
+    width: 90%;
+    left: 4%;
+  }
+
+  .contents .right_side {
+    width: 100%;
+    height: 770px;
+  }
+
+  .contents .right_side .recommendation {
+    width: 90%;
+    height: 270px;
+  }
+
+  .contents .right_side .recommendation .r_title {
+    font-size: 1.4rem;
+  }
+
+  .contents .right_side .recommendation .r_images {
+    margin-top: 15px;
+  }
+
+  .contents .right_side .recommendation .r_images .r_image .img {
+    height: 160px;
+  }
+
+  .contents .right_side .recommendation .r_images .r_image .description {
+    height: 20px;
+    font-size: 1.3rem;
+  }
+
+  .contents .right_side .news {
+    margin-top: 0px;
+  }
+
+  .contents .right_side .news .n_title_box {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .contents .right_side .news .n_title_box .title {
+    font-size: 1.4rem;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .contents .right_side .news .n_title_box .plus_btn {
+    font-size: 1.7rem;
+    margin-left: 50%;
+  }
+
+  .contents .right_side .news .n_list .title {
+    font-size: 1.3rem;
+  }
+
+  .contents .right_side .event .e_title {
+    font-size: 1.4rem;
+  }
+
+  .contents .right_side .event .e_box .ad {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer {
+    width: 100%;
+  }
+
+  .footer .brands {
+    width: 100%;
+    font-size: 1.2rem;
+    letter-spacing: 0px;
+    height: 55px;
+    padding: 0px;
+    text-align: center;
+  }
+
+  .footer .f_info {
+    padding: 0px;
+    height: auto;
+  }
+
+  .footer .f_info .company_info li {
+    font-size: 0.7rem;
+    margin: 0px;
+    margin-right: 5px;
+  }
+
+  .footer .f_info .company_info li a {
+    font-size: 0.7rem;
+    margin: 0px;
+  }
+}

@@ -1,7 +1,5 @@
 window.onload = function () {
-  //a태그
   const leftMenus = document.querySelectorAll(".left_menu ul li a");
-  //하위메뉴
   const subMenus = document.querySelectorAll(".sub_menu");
 
   for (let i = 0; i < leftMenus.length; i++) {
@@ -32,4 +30,24 @@ window.onload = function () {
       sub.classList.remove("clicked");
     }
   }
+
+  const mobile_left_side = document.querySelector(".mobile_left_side");
+  const menu_btn = document.querySelector(".menu_btn");
+  const deco1 = document.querySelector(".menu_btn .deco1");
+  const deco2 = document.querySelector(".menu_btn .deco2");
+  const deco3 = document.querySelector(".menu_btn .deco3");
+
+  menu_btn.addEventListener("click", function () {
+    if (!mobile_left_side.classList.contains("mobile_clicked")) {
+      mobile_left_side.classList.add("mobile_clicked");
+      deco1.classList.add("btn_clicked");
+      deco2.classList.add("btn_clicked");
+      deco3.classList.add("btn_clicked");
+    } else {
+      mobile_left_side.classList.remove("mobile_clicked");
+      deco1.classList.remove("btn_clicked");
+      deco2.classList.remove("btn_clicked");
+      deco3.classList.remove("btn_clicked");
+    }
+  });
 };
