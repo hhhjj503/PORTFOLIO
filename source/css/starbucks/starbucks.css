@@ -48,7 +48,7 @@
   position: absolute;
   width: 99%;
   height: 85%;
-  margin-top: 35px;
+  margin-top: 37px;
   background-image: url(../../images/starbucks/coffee.JPG);
   background-repeat: no-repeat;
   background-size: cover;
@@ -139,7 +139,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 89%;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 .contents .right_side .news .n_title_box {
@@ -222,7 +222,7 @@
 }
 
 .contents .right_side .event .e_box .ad.bigger {
-  height: 130px;
+  height: 145px;
 }
 
 @media (hover: hover) {
