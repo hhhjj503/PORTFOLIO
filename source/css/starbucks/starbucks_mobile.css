@@ -19,7 +19,7 @@
     z-index: 998;
     height: auto;
     top: -999px;
-    transition: 0.3s ease-in-out;
+    transition: 0.2s ease-in-out;
   }
 
   .mobile_left_side.mobile_clicked {
@@ -43,7 +43,7 @@
     width: 40px;
     height: 2px;
     background-color: white;
-    transition: 0.3s ease-in-out;
+    transition: 0.2s ease-in-out;
   }
 
   .menu_btn .deco2 {
@@ -51,7 +51,7 @@
     height: 2px;
     margin-top: 7px;
     background-color: white;
-    transition: 0.3s ease-in-out;
+    transition: 0.2s ease-in-out;
   }
 
   .menu_btn .deco3 {
@@ -59,7 +59,7 @@
     height: 2px;
     margin-top: 7px;
     background-color: white;
-    transition: 0.3s ease-in-out;
+    transition: 0.2s ease-in-out;
   }
 
   .menu_btn .deco1.btn_clicked {
@@ -162,7 +162,7 @@
     opacity: 0;
     font-size: 1.7rem;
     overflow: hidden;
-    transition: 0.6s ease-in-out;
+    transition: 0.2s ease-in-out;
   }
 
   .mobile_left_side .left_side .left_menu ul li .sub_menu.clicked {
