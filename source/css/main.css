@@ -259,6 +259,27 @@ a {
   background-repeat: no-repeat;
 }
 
+.contents .contents_items .portfolio .items .item .description {
+  font-size: 1.7rem;
+  width: 96%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+  background-color: rgb(226, 226, 226);
+  border-radius: 3px;
+  border-bottom: 0px;
+  opacity: 0;
+  font-weight: 500;
+  line-height: 25px;
+  transition: 0.6s;
+}
+
 @media (hover: hover) {
   a:hover {
     text-decoration: underline;
@@ -360,6 +381,10 @@ a {
     .item:hover
     .item_img
     .hover_button {
+    opacity: 1;
+  }
+
+  .contents .contents_items .portfolio .items .item:hover .description {
     opacity: 1;
   }
 }

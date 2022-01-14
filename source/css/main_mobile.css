@@ -80,12 +80,15 @@
   }
 
   .contents .contents_items .portfolio {
-    height: 295px;
     padding-bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 750px;
   }
 
   .contents .contents_items .portfolio .items .item {
-    height: 100px;
+    height: 170px;
+    margin-bottom: 110px;
   }
 
   .contents .contents_items .portfolio .items .item .item_img:after {
@@ -117,6 +120,12 @@
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
     border-radius: 20px;
     z-index: 1;
+  }
+
+  .contents .contents_items .portfolio .items .item .description {
+    opacity: 1;
+    font-size: 1.3rem;
+    line-height: 15px;
   }
 
   /* ----------------------------------------------- footer ----------------------------------------------------------- */
