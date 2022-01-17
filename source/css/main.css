@@ -1,3 +1,5 @@
+@import url(https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css);
+
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
@@ -6,6 +8,7 @@ html {
 body {
   overflow: scroll;
   overflow-x: hidden;
+  font-family: "Nanum Barun Gothic";
 }
 
 ::selection {
@@ -141,7 +144,7 @@ a {
   height: 500px;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 75%;
   background-color: white;
   box-shadow: 16px 12px 16px 3px rgb(151, 151, 151);
   position: relative;
@@ -149,40 +152,44 @@ a {
 
 .contents .contents_items .introduce .i_title {
   font-size: 1.9rem;
-  line-height: 30px;
-  font-weight: 500;
+  line-height: 27px;
+  font-weight: 00;
+  letter-spacing: 1px;
 }
 
 .contents .contents_items .introduce .i_info {
   position: absolute;
   bottom: 10%;
   left: 13%;
-  font-size: 5.5rem;
+  font-size: 5rem;
   color: #555555;
 }
 
 .contents .contents_items .introduce .i_deco {
   position: absolute;
-  font-size: 27rem;
+  font-size: 24rem;
   font-weight: 800;
-  bottom: -8%;
+  bottom: -6%;
   right: 10%;
   color: #dddddd;
   transition-duration: 0.4s;
 }
 
 .contents .contents_items .tech {
-  margin-top: 19%;
-  height: 800px;
+  margin-top: 14%;
+  height: 750px;
   background-color: #555555;
   position: relative;
-  right: 50px;
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 20px;
+  width: 80%;
+  border-radius: 15px;
 }
 
 .contents .contents_items .tech .t_title {
   font-size: 4rem;
-  line-height: 30px;
+  line-height: 55px;
   font-weight: 500;
   color: white;
   text-align: left;
@@ -191,7 +198,7 @@ a {
 }
 
 .contents .contents_items .tech .t_desc {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .contents .contents_items .tech:hover .t_title {
@@ -199,20 +206,22 @@ a {
 }
 
 .contents .contents_items .tech .t_desc .t_list li {
-  font-size: 10rem;
-  margin-bottom: 30px;
+  font-size: 8rem;
+  margin-bottom: 40px;
   color: white;
   font-weight: 500;
   text-align: center;
   position: relative;
   z-index: 1;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contents .contents_items .tech .t_desc .t_list li::after {
   background-color: rgba(0, 0, 0, 0.8);
   width: 0%;
   position: absolute;
-  top: 0px;
+  top: -12px;
   left: 0px;
   right: 0px;
   bottom: 0px;
@@ -241,10 +250,10 @@ a {
 }
 
 .contents .contents_items .portfolio .items .item {
-  width: 500px;
+  width: 470px;
   height: 300px;
   background-color: black;
-  margin: 20px;
+  margin: 30px;
 }
 
 .contents .contents_items .portfolio .items .item .item_img {
@@ -274,7 +283,6 @@ a {
   background-color: rgb(226, 226, 226);
   border-radius: 3px;
   border-bottom: 0px;
-  opacity: 0;
   font-weight: 500;
   line-height: 25px;
   transition: 0.6s;
@@ -312,7 +320,7 @@ a {
   }
 
   .contents .contents_items .introduce:hover .i_deco {
-    bottom: -4.6%;
+    bottom: -4%;
     cursor: default;
   }
 
@@ -325,7 +333,7 @@ a {
     transition: 0.1s;
   }
   .contents .contents_items .tech .t_desc .t_list li:hover {
-    font-size: 12rem;
+    font-size: 10rem;
     transition: 0.2s;
   }
 
@@ -355,6 +363,7 @@ a {
     position: absolute;
     left: 50%;
     top: 50%;
+    font-family: sans-serif;
     margin-left: -70px;
     margin-top: -15px;
     padding-left: 10px;
@@ -381,10 +390,6 @@ a {
     .item:hover
     .item_img
     .hover_button {
-    opacity: 1;
-  }
-
-  .contents .contents_items .portfolio .items .item:hover .description {
     opacity: 1;
   }
 }
