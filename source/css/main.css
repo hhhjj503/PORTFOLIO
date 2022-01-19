@@ -17,6 +17,7 @@ body {
   height: 1px;
   padding: 0;
   overflow: hidden;
+  display: none;
 }
 
 ::selection {
