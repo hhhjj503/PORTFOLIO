@@ -19,60 +19,68 @@
     <title>Form</title>
   </head>
   <body>
-    <div class="page">
+    <main class="page">
       <div class="contents">
+        <h1 class="skip">폼입력</h1>
         <div class="form_items">
           <div class="title"><div class="t">
             양식을 입력해 보세요!
-          </div>
+          </div> 
         </div>
         <div class="form_item top_border">
-          <div class="f_title">성별</div>
+          <label class="f_title" for="male">성별</label>
           <div class="f_contents">
-            <input type="radio" name="gender" value="남" checked />남
-            <input type="radio" name="gender" value="여" />여
+            <fieldset>
+              <input type="radio" id="male" name="gender" value="남" checked />
+              <label for="male">남</label>
+              <input type="radio" id="female" name="gender" value="여" />
+              <label for="female">여</label>
+            </fieldset>
           </div>
         </div>
         <div class="form_item">
-          <div class="f_title">이름</div>
+          <label class="f_title" for="name">이름</label>
           <div class="f_contents">
             <input
               type="text"
+              id="name"
               name="name"
               placeholder="이름을 입력해 주세요"
             />
           </div>
         </div>
         <div class="form_item">
-          <div class="f_title">닉네임</div>
+          <label class="f_title" for="nickname">닉네임</label>
           <div class="f_contents">
             <input
               type="text"
+              id="nickname"
               name="nickname"
               placeholder="별명을 입력해 주세요"
             />
           </div>
         </div>
         <div class="form_item">
-          <div class="f_title">나이</div>
+          <label class="f_title" for="age">나이</label>
           <div class="f_contents">
             <input
               type="number"
+              id="age"
               name="age"
               placeholder="숫자만 입력해 주세요"
             />
           </div>
         </div>
         <div class="form_item">
-          <div class="f_title">생일</div>
+          <label class="f_title" for="birthday">생일</label>
           <div class="f_contents">
-            <input type="date" name="birthday" />
+            <input type="date" id="birthday" name="birthday" />
           </div>
         </div>
         <div class="form_item">
-          <div class="f_title">소개</div>
+          <label class="f_title" for="contents">소개</label>
           <div class="f_contents">
-            <textarea class="f_textarea"></textarea>
+            <textarea class="f_textarea" id="contents" placeholder="자기소개를 입력해 주세요"></textarea>
           </div>
         </div>
         <div class="submit_item">
@@ -83,6 +91,6 @@
           <button class="s_btn">제출하기</button>
         </div>
       </div>
-    </div>
+    </main>  
   </body>
 </html>

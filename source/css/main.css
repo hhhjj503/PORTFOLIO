@@ -180,8 +180,9 @@ a {
   font-weight: 800;
   bottom: -6%;
   right: 10%;
-  color: #4bc5c5;
+  color: #27c4c4;
   padding: 0;
+  text-decoration: none;
   background-color: transparent;
   transition-duration: 0.4s;
 }
