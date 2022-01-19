@@ -13,10 +13,7 @@ body {
 
 .skip {
   font-size: 30px;
-  width: 1px;
-  height: 1px;
   padding: 0;
-  overflow: hidden;
   display: none;
 }
 
