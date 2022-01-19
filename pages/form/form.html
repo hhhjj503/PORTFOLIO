@@ -24,74 +24,80 @@
         <h1 class="skip">폼입력</h1>
         <div class="form_items">
           <div class="title"><div class="t">양식을 입력해 보세요!</div></div>
-        </div>
-        <div class="form_item top_border">
-          <label class="f_title">성별</label>
-          <div class="f_contents">
-            <fieldset>
-              <legend class="skip">성별선택</legend>
-              <input type="radio" id="male" name="gender" value="남" checked />
-              <label for="male">남</label>
-              <input type="radio" id="female" name="gender" value="여" />
-              <label for="female">여</label>
-            </fieldset>
+          <div class="form_item top_border">
+            <label class="f_title">성별</label>
+            <div class="f_contents">
+              <fieldset>
+                <legend class="skip">성별선택</legend>
+                <input
+                  type="radio"
+                  id="male"
+                  name="gender"
+                  value="남"
+                  checked
+                />
+                <label for="male">남</label>
+                <input type="radio" id="female" name="gender" value="여" />
+                <label for="female">여</label>
+              </fieldset>
+            </div>
           </div>
-        </div>
-        <div class="form_item">
-          <label class="f_title" for="name">이름</label>
-          <div class="f_contents">
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="이름을 입력해 주세요"
-            />
+          <div class="form_item">
+            <label class="f_title" for="name">이름</label>
+            <div class="f_contents">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="이름을 입력해 주세요"
+              />
+            </div>
           </div>
-        </div>
-        <div class="form_item">
-          <label class="f_title" for="nickname">닉네임</label>
-          <div class="f_contents">
-            <input
-              type="text"
-              id="nickname"
-              name="nickname"
-              placeholder="별명을 입력해 주세요"
-            />
+          <div class="form_item">
+            <label class="f_title" for="nickname">닉네임</label>
+            <div class="f_contents">
+              <input
+                type="text"
+                id="nickname"
+                name="nickname"
+                placeholder="별명을 입력해 주세요"
+              />
+            </div>
           </div>
-        </div>
-        <div class="form_item">
-          <label class="f_title" for="age">나이</label>
-          <div class="f_contents">
-            <input
-              type="number"
-              id="age"
-              name="age"
-              placeholder="숫자만 입력해 주세요"
-            />
+          <div class="form_item">
+            <label class="f_title" for="age">나이</label>
+            <div class="f_contents">
+              <input
+                type="number"
+                id="age"
+                name="age"
+                placeholder="숫자만 입력해 주세요"
+              />
+            </div>
           </div>
-        </div>
-        <div class="form_item">
-          <label class="f_title" for="birthday">생일</label>
-          <div class="f_contents">
-            <input type="date" id="birthday" name="birthday" />
+          <div class="form_item">
+            <label class="f_title" for="birthday">생일</label>
+            <div class="f_contents">
+              <input type="date" id="birthday" name="birthday" />
+            </div>
           </div>
-        </div>
-        <div class="form_item">
-          <label class="f_title" for="contents">소개</label>
-          <div class="f_contents">
-            <textarea
-              class="f_textarea"
-              id="contents"
-              placeholder="자기소개를 입력해 주세요"
-            ></textarea>
+          <div class="form_item">
+            <label class="f_title" for="contents">소개</label>
+            <div class="f_contents">
+              <textarea
+                class="f_textarea"
+                id="contents"
+                placeholder="자기소개를 입력해 주세요"
+              ></textarea>
+            </div>
           </div>
-        </div>
-        <div class="submit_item">
-          <div class="s_contents">
-            입력하신 내용은 자바스크립트를 통해 출력되므로 새로고침시 초기화
-            됩니다.
+          <div class="submit_item">
+            <div class="s_contents">
+              입력하신 내용은 자바스크립트를 통해 출력되므로 새로고침시 초기화
+              됩니다.
+            </div>
+            <button class="s_btn">제출하기</button>
           </div>
-          <button class="s_btn">제출하기</button>
         </div>
       </div>
     </main>
