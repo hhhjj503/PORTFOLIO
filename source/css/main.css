@@ -11,6 +11,10 @@ body {
   font-family: "Nanum Barun Gothic";
 }
 
+.skip {
+  font-size: 0;
+}
+
 ::selection {
   background: rgba(60, 60, 60, 1);
   color: rgba(255, 255, 255, 0.9);
@@ -171,7 +175,8 @@ a {
   font-weight: 800;
   bottom: -6%;
   right: 10%;
-  color: #dddddd;
+  color: #b4b4b4;
+  background-color: transparent;
   transition-duration: 0.4s;
 }
 
@@ -335,6 +340,7 @@ a {
   .contents .contents_items .tech .t_desc .t_list li:hover {
     font-size: 10rem;
     transition: 0.2s;
+    cursor: default;
   }
 
   .contents .contents_items .tech .t_desc .t_list li:hover:after {
