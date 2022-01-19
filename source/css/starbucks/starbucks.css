@@ -223,16 +223,16 @@
 }
 
 .contents .right_side .event .e_box .ad img {
-  width: 95%;
+  width: 92%;
   height: inherit;
   margin-left: auto;
   margin-right: auto;
 }
 
 .contents .right_side .event .e_box .ad.bigger {
-  width: 95%;
-  background-color: rgb(3, 30, 23);
+  width: 92%;
   height: 150px;
+  background-color: rgb(3, 30, 23);
 }
 
 .contents .right_side .event .e_box .ad.bigger img {
