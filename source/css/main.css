@@ -1,4 +1,5 @@
 @import url(https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css);
+@import url(./skip.css);
 
 html {
   scroll-behavior: smooth;
@@ -9,15 +10,6 @@ body {
   overflow: scroll;
   overflow-x: hidden;
   font-family: "Nanum Barun Gothic";
-}
-
-.skip {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  clip-path: polygon(0 0, 0 0, 0 0);
 }
 
 ::selection {
