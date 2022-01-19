@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -24,14 +24,16 @@
       <div class="search">
         <input type="text" name="search" placeholder="&#128269;" />
       </div>
-      <ul>
-        <li><a href="./newmusic.html">최신음악</a></li>
-        <li><a href="./album.html">앨범소개</a></li>
-        <li><a href="./community.html">자유광장</a></li>
-        <li><a href="./helpcenter.html">고객센터</a></li>
-      </ul>
+      <nav>
+        <ul>
+          <li><a href="./newmusic.html">최신음악</a></li>
+          <li><a href="./album.html">앨범소개</a></li>
+          <li><a href="./community.html">자유광장</a></li>
+          <li><a href="./helpcenter.html">고객센터</a></li>
+        </ul>
+      </nav>
     </div>
-    <div class="header">
+    <header class="header">
       <div class="h_title">
         <h1>
           <a href="./musicheart.html">Music<span class="h_deco">H</span>eart</a>
@@ -44,17 +46,25 @@
       </div>
       <div class="h_menu">
         <div class="h_search">
-          <input type="text" name="search" placeholder="&#128269;" />
+          <label for="search" class="skip white">검색</label>
+          <input
+            type="text"
+            id="search"
+            name="search"
+            placeholder="&#128269;"
+          />
         </div>
-        <ul>
-          <li><a href="./newmusic.html">최신음악</a></li>
-          <li><a href="./album.html">앨범소개</a></li>
-          <li><a href="./community.html">자유광장</a></li>
-          <li><a href="./helpcenter.html">고객센터</a></li>
-        </ul>
+        <nav>
+          <ul>
+            <li><a href="./newmusic.html">최신음악</a></li>
+            <li><a href="./album.html">앨범소개</a></li>
+            <li><a href="./community.html">자유광장</a></li>
+            <li><a href="./helpcenter.html">고객센터</a></li>
+          </ul>
+        </nav>
       </div>
-    </div>
-    <div class="help_contents">
+    </header>
+    <main class="help_contents">
       <div class="items">
         <div class="item">
           <div class="title">Help Q&A</div>
@@ -97,7 +107,7 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="footer"></div>
+    </main>
+    <footer class="footer"></footer>
   </body>
 </html>
