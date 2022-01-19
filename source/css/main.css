@@ -179,7 +179,8 @@ a {
   font-weight: 800;
   bottom: -6%;
   right: 10%;
-  color: #b4b4b4;
+  color: #4bc5c5;
+  padding: 0;
   background-color: transparent;
   transition-duration: 0.4s;
 }
