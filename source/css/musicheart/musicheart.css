@@ -13,6 +13,15 @@ body {
   color: #031720;
 }
 
+.skip {
+  font-size: 30px;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  display: none;
+}
+
 .btn {
   width: 100%;
   height: 65px;

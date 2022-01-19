@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -28,14 +28,16 @@
       <div class="search">
         <input type="text" name="search" placeholder="&#128269;" />
       </div>
-      <ul>
-        <li><a href="./newmusic.html">최신음악</a></li>
-        <li><a href="./album.html">앨범소개</a></li>
-        <li><a href="./community.html">자유광장</a></li>
-        <li><a href="./helpcenter.html">고객센터</a></li>
-      </ul>
+      <nav>
+        <ul>
+          <li><a href="./newmusic.html">최신음악</a></li>
+          <li><a href="./album.html">앨범소개</a></li>
+          <li><a href="./community.html">자유광장</a></li>
+          <li><a href="./helpcenter.html">고객센터</a></li>
+        </ul>
+      </nav>
     </div>
-    <div class="header">
+    <header class="header">
       <div class="h_title">
         <h1>
           <a href="./musicheart.html">Music<span class="h_deco">H</span>eart</a>
@@ -48,19 +50,28 @@
       </div>
       <div class="h_menu">
         <div class="h_search">
-          <input type="text" name="search" placeholder="&#128269;" />
+          <label for="search"></label>
+          <input
+            type="text"
+            id="search"
+            name="search"
+            placeholder="&#128269;"
+          />
         </div>
-        <ul>
-          <li><a href="./newmusic.html">최신음악</a></li>
-          <li><a href="./album.html">앨범소개</a></li>
-          <li><a href="./community.html">자유광장</a></li>
-          <li><a href="./helpcenter.html">고객센터</a></li>
-        </ul>
+        <nav>
+          <ul>
+            <li><a href="./newmusic.html">최신음악</a></li>
+            <li><a href="./album.html">앨범소개</a></li>
+            <li><a href="./community.html">자유광장</a></li>
+            <li><a href="./helpcenter.html">고객센터</a></li>
+          </ul>
+        </nav>
       </div>
-    </div>
-    <div class="contents">
+    </header>
+    <main class="contents">
       <div class="contents_items">
         <div class="swiper_section">
+          <h2 class="skip">이미지슬라이더</h2>
           <div class="swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide"></div>
@@ -74,20 +85,24 @@
           </div>
         </div>
         <div class="introduce">
+          <h2 class="skip">홈페이지소개와 로그인</h2>
           <div class="i_deco">We Are The Music!</div>
           <div class="login_box">
             <button class="login_btn btn">로그인</button>
             <button class="sign_up_btn btn">회원가입</button>
             <div class="login_sns">
-              <ul>
-                <li><a href="https://www.facebook.com/">f</a></li>
-                <li><a href="https://twitter.com/">T</a></li>
-                <li><a href="https://www.instagram.com/?hl=ko">I</a></li>
-              </ul>
+              <nav>
+                <ul>
+                  <li><a href="https://www.facebook.com/">f</a></li>
+                  <li><a href="https://twitter.com/">T</a></li>
+                  <li><a href="https://www.instagram.com/?hl=ko">I</a></li>
+                </ul>
+              </nav>
             </div>
           </div>
         </div>
         <div class="description">
+          <h2 class="skip">홈페이지설명</h2>
           <div class="d_desc">
             <div class="d_deco">MusicHeart<br />Community</div>
             <div class="d_title">
@@ -102,12 +117,12 @@
           <div class="d_img">
             <img
               src="../../source/images/musicheart/musichearDescription.png"
-              alt="musicheartImage"
+              alt="뮤직하트 이미지"
             />
           </div>
         </div>
       </div>
-    </div>
-    <div class="footer"></div>
+    </main>
+    <footer class="footer"></footer>
   </body>
 </html>
