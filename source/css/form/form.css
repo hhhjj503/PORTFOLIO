@@ -61,19 +61,17 @@ button.submitted {
   font-size: 2.5rem;
   font-weight: 500;
   padding: 0px;
-  border-top: 100px solid #2f2f2f;
+  /* border-top: 100px solid #2f2f2f;
   border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
+  border-right: 50px solid transparent; */
+  height: 105px;
+  text-align: center;
   background-color: #2f2f2f;
 }
 
 .page .contents .title .t {
-  position: absolute;
-  top: 9.8%;
-  left: 40%;
-  right: 40%;
   color: white;
-  text-align: center;
+  line-height: 105px;
 }
 
 .page .contents .form_items .form_item.top_border {
