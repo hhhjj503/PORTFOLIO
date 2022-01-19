@@ -68,8 +68,10 @@
     </header>
     <main class="contents">
       <div class="post_search">
-        <form>
-          <select class="post_type" name="post_type">
+        <label for="post_form" class="skip">게시판검색폼</label>
+        <form id="post_form">
+          <label id="post_type">게시판종류</label>
+          <select id="post_type" class="post_type" name="post_type">
             <label for="new_post">새소식</label>
             <option value="new_post">새소식</option>
             <label for="forum">자유게시판</label>
