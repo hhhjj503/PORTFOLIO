@@ -24,17 +24,13 @@
 
   .page .contents .form_items .title {
     font-size: 1.5rem;
-    border-top: 50px solid #2f2f2f;
-    border-left: 30px solid transparent;
-    border-right: 30px solid transparent;
+    height: 70px;
   }
 
   .page .contents .form_items .title .t {
     font-size: 1.4rem;
-    left: 20%;
-    right: 20%;
-    top: 45px;
-    z-index: 2;
+    line-height: 70px;
+    padding: 0;
   }
 
   .page .contents .form_items .form_item {

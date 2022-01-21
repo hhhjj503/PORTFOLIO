@@ -1,6 +1,7 @@
 window.onload = function () {
   const leftMenus = document.querySelectorAll(".left_menu ul li a");
   const subMenus = document.querySelectorAll(".sub_menu");
+  const body = document.querySelector("body");
 
   for (let i = 0; i < leftMenus.length; i++) {
     leftMenus[i].addEventListener("click", function () {
@@ -43,11 +44,13 @@ window.onload = function () {
       deco1.classList.add("btn_clicked");
       deco2.classList.add("btn_clicked");
       deco3.classList.add("btn_clicked");
+      body.classList.add("modal");
     } else {
       mobile_left_side.classList.remove("mobile_clicked");
       deco1.classList.remove("btn_clicked");
       deco2.classList.remove("btn_clicked");
       deco3.classList.remove("btn_clicked");
+      body.classList.remove("modal");
     }
   });
 };

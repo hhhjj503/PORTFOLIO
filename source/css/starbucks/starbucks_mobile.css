@@ -10,6 +10,22 @@
 
   /* --------------------------------------- mobile_left_side----------------------------------- */
 
+  .modal {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .modal::after {
+    content: "";
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
   .mobile_left_side {
     display: block;
     position: absolute;
@@ -219,11 +235,12 @@
   .contents .main .m_images .lower::after {
     width: 90%;
     left: 4%;
+    border-radius: 8px;
   }
 
   .contents .right_side {
     width: 100%;
-    height: 770px;
+    height: 805px;
   }
 
   .contents .right_side .recommendation {
@@ -277,7 +294,7 @@
   }
 
   .contents .right_side .event .e_box .ad {
-    width: 95%;
+    width: 80%;
     height: 78px;
     margin-left: auto;
     margin-right: auto;
@@ -286,7 +303,8 @@
   }
 
   .contents .right_side .event .e_box .ad.bigger {
-    height: 130px;
+    height: 170px;
+    width: 75%;
   }
 
   .footer {
