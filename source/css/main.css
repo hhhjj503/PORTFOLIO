@@ -147,7 +147,6 @@ a {
   margin-right: auto;
   width: 67%;
   background-color: white;
-  box-shadow: 16px 12px 16px 3px rgb(151, 151, 151);
   position: relative;
 }
 
@@ -363,7 +362,7 @@ a {
 
   .contents .contents_items .introduce:not(:hover) {
     transition: 0.5s;
-    box-shadow: 16px 12px 16px 3px rgb(151, 151, 151);
+    box-shadow: 12px 8px 12px 1px rgb(151, 151, 151);
   }
 
   .contents .contents_items .introduce:hover .i_deco {
