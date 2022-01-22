@@ -297,8 +297,8 @@ a {
 }
 
 .contents .contents_items .portfolio .items .item {
-  width: 450px;
-  height: 280px;
+  width: 430px;
+  height: 260px;
   background-color: black;
   margin: 30px;
 }
@@ -424,7 +424,7 @@ a {
     text-align: center;
     line-height: 40px;
     display: inline-block;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 600;
     width: 130px;
     height: 40px;
