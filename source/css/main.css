@@ -124,10 +124,10 @@ a {
 .contents .top_btn a {
   position: relative;
   text-decoration: none;
-  top: 30%;
-  left: 15%;
+  top: 36%;
+  left: 17%;
   color: white;
-  font-size: 3rem;
+  font-size: 2.7rem;
   display: none;
   cursor: default;
 }
@@ -280,7 +280,7 @@ a {
 }
 
 .contents .contents_items .portfolio {
-  margin-top: 10%;
+  margin-top: 150px;
   background-color: white;
   padding-bottom: 80px;
 }
