@@ -362,7 +362,7 @@ a {
 
   .contents .contents_items .introduce:not(:hover) {
     transition: 0.5s;
-    box-shadow: 12px 8px 12px 1px rgb(151, 151, 151);
+    box-shadow: 10px 6px 10px 1px rgb(151, 151, 151);
   }
 
   .contents .contents_items .introduce:hover .i_deco {
