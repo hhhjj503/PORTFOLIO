@@ -1,5 +1,7 @@
 window.onload = function () {
   const lis = document.querySelectorAll(".random");
+  const dlis = document.querySelectorAll(".detail");
+  const screen = document.querySelector(".dt_screen");
   const scrollDefaultValue = document.querySelector("html").scrollTop;
 
   for (let i = 0; i < lis.length; i++) {
@@ -14,6 +16,14 @@ window.onload = function () {
   window.addEventListener("scroll", function () {
     movedScroll();
   });
+
+  for (let i = 0; i < dlis.length; i++) {
+    dlis[i].addEventListener("click", function () {
+      screenShow(dlis, dlis[i]);
+    });
+  }
+
+  screenShow(dlis, dlis[0]);
 
   function changeColor(li) {
     const colorValue = makingcolor();
@@ -46,6 +56,19 @@ window.onload = function () {
 
     if (currentScrollTop > scrollDefaultValue && currentScrollTop > scrolled) {
       topBtn.classList.add("scrolled");
+    }
+  }
+
+  function screenShow(dlis, li) {
+    for (let i = 0; i < dlis.length; i++) {
+      dlis[i].classList.remove("screen");
+    }
+    const screenText = li.querySelector("div").innerText;
+    if (!li.classList.contains("screen")) {
+      li.classList.add("screen");
+      screen.innerHTML = screenText;
+    } else {
+      li.classList.remove("screen");
     }
   }
 };
