@@ -395,6 +395,10 @@ a {
     color: white;
   }
 
+  .contents .contents_items .tech_detail .td_desc li:hover {
+    cursor: pointer;
+  }
+
   .contents .contents_items .portfolio .items .item:hover .item_img {
     background-size: 115%;
   }
