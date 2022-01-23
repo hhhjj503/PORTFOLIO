@@ -36,8 +36,9 @@
 
   .contents .contents_items .introduce .i_deco {
     width: 100%;
-    line-height: 40px;
-    padding-bottom: 50px;
+    font-size: 3rem;
+    line-height: 50px;
+    padding-bottom: 0;
   }
 
   .contents .contents_items .introduce .login_box {
