@@ -15,20 +15,20 @@ window.onload = function () {
       prevEl: ".swiper-button-prev",
     },
   });
-  const signupBtn = document.querySelector(".sign_up_btn");
-  const loginBtn = document.querySelector(".login_btn");
+  const signup = document.querySelector(".sign_up");
+  const login = document.querySelector(".login");
   const subBtn = document.querySelector(".sub_btn");
   const mobileHMenu = document.querySelector(".mobile_h_menu");
   const mobileHMenuBtn = document.querySelector(".mobile_h_menu_btn");
 
-  signupBtn.addEventListener("click", function () {
+  signup.addEventListener("click", function () {
     location.href = "../../pages/musicheart/join.html";
   });
   subBtn.addEventListener("click", function () {
     location.href = "../../pages/musicheart/join.html";
   });
 
-  loginBtn.addEventListener("click", function () {
+  login.addEventListener("click", function () {
     location.href = "../../pages/musicheart/login.html";
   });
 
