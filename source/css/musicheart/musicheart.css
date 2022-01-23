@@ -79,41 +79,13 @@ a {
   width: 54%;
   background: black;
   margin-left: auto;
+  margin-right: auto;
   color: rgb(194, 194, 194);
   font-size: 8rem;
   font-weight: 600;
   line-height: 140px;
   letter-spacing: 10px;
   cursor: default;
-}
-
-.contents .contents_items .introduce .login_box {
-  width: 16%;
-  display: flex;
-  margin-right: auto;
-  flex-direction: column;
-  background: #031720;
-}
-
-.contents .contents_items .introduce .login_box .login_btn {
-  cursor: pointer;
-}
-
-.contents .contents_items .introduce .login_sns ul li {
-  display: inline-block;
-  width: 31%;
-  margin: 0px;
-  padding: 0px;
-  background: none;
-  height: 70px;
-}
-
-.contents .contents_items .introduce .login_sns ul li a {
-  color: rgb(207, 206, 206);
-  text-decoration: none;
-  font-size: 5rem;
-  font-weight: 600;
-  line-height: 65px;
 }
 
 .contents .contents_items .description {

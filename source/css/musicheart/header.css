@@ -1,3 +1,5 @@
+@import url(../skip.css);
+
 /* ------------------------------------------------ header ------------------------------------------------------ */
 .header {
   width: 100%;
@@ -16,6 +18,51 @@
   font-weight: 600;
   color: white;
 }
+
+.header .login_box {
+  position: absolute;
+  top: 20%;
+  right: 2%;
+  display: flex;
+  margin-right: auto;
+  background: #031720;
+  cursor: pointer;
+}
+
+.header .login_box ul {
+  display: flex;
+}
+
+.header .login_box ul li a {
+  font-size: 1.5rem;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.header .login_box ul li a:hover {
+  text-decoration: underline;
+}
+
+/* .header .login_sns ul {
+  position: absolute;
+}
+
+.header .login_sns ul li {
+  margin: 0px;
+  padding: 0px;
+  background: none;
+  height: 20px;
+}
+
+.header .login_sns ul li a {
+  color: rgb(207, 206, 206);
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 65px;
+} */
 
 .header .h_title .h_deco {
   color: red;
