@@ -179,7 +179,7 @@ a {
 
 .contents .contents_items .tech {
   margin-top: 250px;
-  height: 700px;
+  height: 560px;
   background-color: #555555;
   position: relative;
   margin-left: auto;
@@ -190,8 +190,8 @@ a {
 }
 
 .contents .contents_items .tech .t_title {
-  font-size: 4rem;
-  line-height: 55px;
+  font-size: 3rem;
+  line-height: 45px;
   font-weight: 500;
   color: white;
   text-align: left;
@@ -208,8 +208,8 @@ a {
 }
 
 .contents .contents_items .tech .t_desc .t_list li {
-  font-size: 6rem;
-  margin-bottom: 50px;
+  font-size: 5rem;
+  margin-bottom: 40px;
   color: white;
   font-weight: 500;
   text-align: center;
@@ -379,7 +379,7 @@ a {
     transition: 0.1s;
   }
   .contents .contents_items .tech .t_desc .t_list li:hover {
-    font-size: 7rem;
+    font-size: 6rem;
     transition: 0.2s;
     cursor: default;
   }
