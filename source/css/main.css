@@ -280,8 +280,11 @@ a {
 
 .contents .contents_items .portfolio {
   margin-top: 150px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
   background-color: white;
-  padding-bottom: 80px;
+  padding-bottom: 100px;
 }
 
 .contents .contents_items .portfolio .p_title {
@@ -296,7 +299,7 @@ a {
 }
 
 .contents .contents_items .portfolio .items .item {
-  width: 410px;
+  width: 380px;
   height: 240px;
   background-color: black;
   margin: 30px;
