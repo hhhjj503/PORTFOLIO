@@ -145,7 +145,7 @@ a {
   height: 500px;
   margin-left: auto;
   margin-right: auto;
-  width: 67%;
+  width: 60%;
   background-color: white;
   position: relative;
 }
@@ -185,7 +185,7 @@ a {
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 20px;
-  width: 67%;
+  width: 60%;
   border-radius: 15px;
 }
 
@@ -245,10 +245,10 @@ a {
 }
 
 .contents .contents_items .tech_detail .td_desc li {
-  font-size: 2.3rem;
+  font-size: 2.1rem;
   margin-left: 20px;
   margin-right: 20px;
-  width: 7%;
+  width: 5%;
   background-color: white;
   border-top: 4px solid rgb(55, 96, 134);
   border-bottom: 4px solid rgb(55, 96, 134);
