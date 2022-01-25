@@ -19,7 +19,7 @@ body {
 /* ---------------------------------------------- contens, left_side, right_side, footer ---------------------------------------------- */
 
 .contents {
-  width: 75%;
+  width: 72%;
   background-color: aqua;
   margin-left: auto;
   margin-right: auto;
@@ -44,7 +44,7 @@ body {
 }
 
 .footer {
-  width: 75%;
+  width: 72%;
   background-color: #a8a8a8;
   margin-left: auto;
   margin-right: auto;
@@ -96,7 +96,7 @@ body {
 
 .contents .left_side .header .h_menu ul li a {
   margin-left: 9px;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: white;
   cursor: pointer;
@@ -152,7 +152,7 @@ body {
 }
 
 .contents .left_side .left_menu ul li a {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   color: white;
   font-weight: 500;
 }
@@ -163,6 +163,7 @@ body {
 
 .contents .left_side .left_menu ul li .sub_menu {
   border: 1px solid white;
+  font-size: 2.1rem;
   margin-top: 10px;
   width: 90%;
   margin-bottom: -40px;
