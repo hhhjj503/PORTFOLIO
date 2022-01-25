@@ -37,7 +37,7 @@ a {
 
 .header .h_title {
   position: relative;
-  font-size: 4rem;
+  font-size: 3.2rem;
 }
 
 .header .h_title .h_sub {
@@ -151,8 +151,8 @@ a {
 }
 
 .contents .contents_items .introduce .i_title {
-  font-size: 1.9rem;
-  line-height: 27px;
+  font-size: 1.8rem;
+  line-height: 25px;
   letter-spacing: 1px;
 }
 
