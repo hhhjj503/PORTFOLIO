@@ -142,7 +142,7 @@ a {
 }
 
 .contents .contents_items .introduce {
-  height: 500px;
+  height: 430px;
   margin-left: auto;
   margin-right: auto;
   width: 60%;
@@ -166,7 +166,7 @@ a {
 
 .contents .contents_items .introduce .i_deco {
   position: absolute;
-  font-size: 18rem;
+  font-size: 17rem;
   font-weight: 800;
   bottom: -4%;
   right: 10%;
