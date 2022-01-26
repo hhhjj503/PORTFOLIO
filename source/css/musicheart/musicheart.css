@@ -51,7 +51,7 @@ a {
 }
 
 .contents .contents_items .swiper_section .swiper {
-  width: 80%;
+  width: 70%;
 }
 .contents .contents_items .swiper_section .swiper-wrapper {
   width: 100%;
@@ -81,7 +81,7 @@ a {
   margin-left: auto;
   margin-right: auto;
   color: rgb(194, 194, 194);
-  font-size: 8rem;
+  font-size: 7rem;
   font-weight: 600;
   line-height: 140px;
   letter-spacing: 10px;
@@ -90,14 +90,16 @@ a {
 
 .contents .contents_items .description {
   margin-top: 105px;
-  width: 100%;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .contents .contents_items .description .d_desc {
   flex-direction: column;
-  margin-left: 6%;
 }
 
 .contents .contents_items .description .d_img img {
@@ -106,21 +108,20 @@ a {
   width: 600px;
   height: 450px;
   border-radius: 20px;
-  margin-left: 130px;
 }
 
 .contents .contents_items .description .d_desc .d_deco {
   color: rgb(155, 155, 155);
-  margin-top: 10px;
-  font-size: 7.5rem;
+  font-size: 7rem;
   font-weight: 600;
   letter-spacing: 15px;
   cursor: default;
 }
 
 .contents .contents_items .description .d_desc .d_title {
-  margin-top: 80px;
-  font-size: 1.9rem;
+  margin-top: 70px;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
   line-height: 27px;
   text-align: left;
 }
@@ -147,11 +148,6 @@ a {
 }
 
 @media (hover: hover) {
-  .header .h_menu ul li:hover::after {
-    width: 70%;
-    transition: 0.3s;
-  }
-
   .contents .contents_items .introduce .login_sns ul li a:hover {
     color: rgb(255, 255, 255);
   }

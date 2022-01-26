@@ -98,8 +98,8 @@ a {
 }
 
 .contents .sections .section {
-  width: 49%;
-  height: 276px;
+  width: 47%;
+  height: 222px;
   position: relative;
   margin-left: 3px;
   margin-right: 3px;
@@ -110,14 +110,14 @@ a {
 
 .contents .sections .section .s_title {
   display: flex;
-  height: 42px;
+  height: 34px;
   width: 100%;
   background-color: #031720;
   align-items: center;
 }
 
 .contents .sections .section .s_title .sub_title {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: rgb(224, 224, 224);
   margin-left: 15px;
@@ -125,7 +125,7 @@ a {
 }
 
 .contents .sections .section .s_title .more {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   text-align: right;
   flex: 1;
 }
@@ -142,7 +142,7 @@ a {
 }
 
 .contents .sections .section .list .post {
-  height: 35.5px;
+  height: 28px;
   justify-content: center;
   background-color: rgb(240, 240, 240);
   margin-top: 3px;
@@ -155,8 +155,8 @@ a {
 }
 
 .contents .sections .section .list .post .post_title {
-  line-height: 35.5px;
-  font-size: 1.6rem;
+  line-height: 28px;
+  font-size: 1.5rem;
   cursor: pointer;
   font-weight: 500;
 }
@@ -171,11 +171,6 @@ a {
 }
 
 @media (hover: hover) {
-  .header .h_menu ul li:hover::after {
-    width: 70%;
-    transition: 0.3s;
-  }
-
   .contents .sections .section .list .post a:hover {
     text-decoration: underline;
   }
