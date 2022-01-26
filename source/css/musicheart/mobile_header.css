@@ -46,7 +46,7 @@
     position: absolute;
     display: block;
     width: 30px;
-    top: 28px;
+    top: 18px;
     left: 20px;
   }
 
@@ -95,6 +95,7 @@
 
   .header {
     width: 100%;
+    height: auto;
   }
 
   .header .h_title {
@@ -102,15 +103,20 @@
     padding-top: 0;
   }
 
-  .header .h_title h1 {
-    padding-top: 20px;
-    padding-bottom: 20px;
+  .header .h_title .h_title_items {
     width: 100%;
   }
 
-  .header .h_title h1 a {
+  .header .h_title .h_title_items h1 {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .header .h_title .h_title_items h1 a {
     font-size: 3rem;
     width: 100%;
+    clear: both;
+    margin: 0 auto;
   }
 
   .header .h_menu {
