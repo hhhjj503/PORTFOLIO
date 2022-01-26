@@ -54,10 +54,10 @@
   margin-top: 37px;
   background-image: url(../../images/starbucks/coffee.JPG);
   background-repeat: no-repeat;
-  background-size: 116%;
+  background-size: 847px;
   background-position: left;
-  background-position-x: -12px;
-  border: 5px solid rgb(3, 30, 23);
+  background-position-x: -8px;
+  border: 4px solid rgb(3, 30, 23);
   opacity: 1;
   z-index: 1;
 }
