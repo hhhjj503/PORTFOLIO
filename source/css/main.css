@@ -36,12 +36,11 @@ a {
 }
 
 .header .h_title {
-  position: relative;
   font-size: 3.2rem;
 }
 
 .header .h_title .h_sub {
-  font-size: 4.2rem;
+  font-size: 3.5rem;
   color: white;
 }
 
@@ -294,7 +293,7 @@ a {
 .contents .contents_items .portfolio .items {
   display: flex;
   flex-flow: wrap;
-  justify-content: center;
+  justify-content: left;
 }
 
 .contents .contents_items .portfolio .items .item {
