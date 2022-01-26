@@ -4,6 +4,7 @@
 
 .contents .main {
   background-color: white;
+  border-top: 1px solid rgb(3, 30, 23);
 }
 
 .contents .main .m_titles {

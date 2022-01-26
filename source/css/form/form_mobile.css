@@ -16,10 +16,8 @@
     font-size: 1.2rem;
   }
 
-  .page {
+  .page .contents {
     width: 90%;
-    height: 100%;
-    margin-top: 25px;
   }
 
   .page .contents .form_items .title {
