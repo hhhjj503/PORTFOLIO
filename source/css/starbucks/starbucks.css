@@ -12,14 +12,14 @@
 }
 
 .contents .main .m_titles .title {
-  font-size: 4.2rem;
+  font-size: 3.8rem;
   font-weight: 700;
   line-height: 80px;
 }
 
 .contents .main .m_titles .sub_title {
-  font-size: 1.8rem;
-  margin-top: -10px;
+  font-size: 1.7rem;
+  margin-top: -15px;
 }
 
 .contents .main .m_images {
@@ -116,7 +116,7 @@
   flex: 1;
   margin-top: 15px;
   width: 32%;
-  height: 130px;
+  height: 120px;
   background-color: rgb(3, 30, 23);
   margin-left: 2px;
   margin-right: 2px;
@@ -178,11 +178,12 @@
 
 .contents .right_side .news .n_list .title {
   width: 98%;
+  height: 20px;
+  margin-bottom: 3px;
+  overflow: hidden;
   font-size: 1.4rem;
   color: white;
-  margin-bottom: 10px;
   text-align: left;
-  overflow: hidden;
   white-space: nowrap;
   text-overflow: clip;
 }
@@ -229,7 +230,7 @@
 
 .contents .right_side .event .e_box .ad.bigger {
   width: 92%;
-  height: 160px;
+  height: 140px;
   background-color: rgb(3, 30, 23);
 }
 
