@@ -12,13 +12,13 @@
 }
 
 .contents .main .m_titles .title {
-  font-size: 4.5rem;
+  font-size: 4.2rem;
   font-weight: 700;
   line-height: 80px;
 }
 
 .contents .main .m_titles .sub_title {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-top: -10px;
 }
 
@@ -94,7 +94,7 @@
 }
 
 .contents .right_side .recommendation .r_title {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 500;
   width: 100%;
   display: inline;
@@ -107,16 +107,16 @@
 
 .contents .right_side .recommendation .r_images {
   display: flex;
-  margin-top: 20px;
+  margin-top: 15px;
   border-top: 2px solid rgb(3, 30, 23);
   justify-content: center;
 }
 
 .contents .right_side .recommendation .r_images .r_image {
   flex: 1;
-  margin-top: 20px;
+  margin-top: 15px;
   width: 32%;
-  height: 150px;
+  height: 130px;
   background-color: rgb(3, 30, 23);
   margin-left: 2px;
   margin-right: 2px;
@@ -141,7 +141,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 89%;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .contents .right_side .news .n_title_box {
@@ -150,7 +150,7 @@
 }
 
 .contents .right_side .news .n_title_box .title {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: white;
   background-color: rgb(3, 30, 23);
@@ -159,11 +159,11 @@
   padding-top: 2px;
   padding-bottom: 2px;
   text-transform: uppercase;
-  margin-bottom: 18px;
+  margin-bottom: 13px;
 }
 
 .contents .right_side .news .n_title_box .plus_btn {
-  font-size: 2.3rem;
+  font-size: 2.1rem;
   font-weight: 500;
   color: white;
   margin-left: 26%;
@@ -178,7 +178,7 @@
 
 .contents .right_side .news .n_list .title {
   width: 98%;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: white;
   margin-bottom: 10px;
   text-align: left;
@@ -191,11 +191,11 @@
   margin-left: auto;
   margin-right: auto;
   width: 89%;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .contents .right_side .event .e_title {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 500;
   width: 100%;
   display: inline;
@@ -207,12 +207,12 @@
 }
 
 .contents .right_side .event .e_box {
-  margin-top: 20px;
+  margin-top: 15px;
   border-top: 2px solid rgb(3, 30, 23);
 }
 
 .contents .right_side .event .e_box .ad {
-  margin-top: 20px;
+  margin-top: 15px;
   width: 100%;
   height: 80px;
   margin-left: auto;
@@ -229,7 +229,7 @@
 
 .contents .right_side .event .e_box .ad.bigger {
   width: 92%;
-  height: 150px;
+  height: 160px;
   background-color: rgb(3, 30, 23);
 }
 
