@@ -7,48 +7,51 @@
 }
 
 .header .h_title {
+  width: 100%;
+}
+
+.header .h_title .h_title_items {
   width: 1250px;
-  padding-top: 10px;
   margin-left: auto;
   margin-right: auto;
-  align-items: center;
+  background-color: #031720;
+  position: relative;
+  overflow: auto;
 }
 
-.header .h_title h1 {
-  text-align: center;
-  width: 1250px;
-  padding-bottom: 10px;
-}
-
-.header .h_title h1 a {
+.header .h_title .h_title_items h1 a {
+  float: left;
   text-decoration: none;
   font-size: 3.5rem;
   font-weight: 600;
+  margin-left: 530px;
   color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-header .h_title .login_box {
+header .h_title .h_title_items .login_box {
   height: 10px;
+  float: right;
 }
 
-.header .h_title .login_box ul {
-  width: 1250px;
+.header .h_title .h_title_items .login_box ul {
   display: flex;
   justify-content: right;
 }
 
-.header .h_title .login_box ul li a {
+.header .h_title .h_title_items .login_box ul li a {
+  float: right;
   font-size: 1.5rem;
   color: white;
-  padding-left: 10px;
-  padding-right: 10px;
-  width: 100px;
+  width: 65px;
+  line-height: 55px;
   background-color: transparent;
   text-decoration: none;
   cursor: pointer;
 }
 
-.header .h_title .login_box ul li a:hover {
+.header .h_title .h_title_items .login_box ul li a:hover {
   text-decoration: underline;
 }
 
@@ -77,16 +80,23 @@ header .h_title .login_box {
 .header .h_menu {
   background-color: white;
   border-bottom: 1px solid gray;
+  width: 100%;
+}
+
+.header .h_menu .h_menu_items {
+  width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  height: 50px;
+  background-color: white;
 }
 
 .header .h_menu ul {
   text-align: center;
-  width: 1250px;
-  background: black;
   cursor: default;
-  margin-left: 350px;
-  background: white;
   float: left;
+  margin-left: 160px;
 }
 
 .header .h_menu ul li {
@@ -109,12 +119,13 @@ header .h_title .login_box {
   height: 50px;
   display: flex;
   align-items: center;
+  float: right;
 }
 
 .header .h_search input {
   width: 25px;
   height: 35px;
-  font-size: 2rem;
+  font-size: 1.7rem;
   border-radius: 30px;
   line-height: 30px;
   padding-left: 20px;
@@ -125,11 +136,11 @@ header .h_title .login_box {
 }
 
 .header .h_search input:focus {
-  width: 150px;
+  width: 100px;
 }
 
 @media (hover: hover) {
-  .header .h_menu ul li a:hover {
+  .header .h_menu .h_menu_items ul li a:hover {
     padding-left: 7px;
     padding-right: 7px;
     border-bottom: 3px solid black;
