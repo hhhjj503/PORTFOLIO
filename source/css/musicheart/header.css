@@ -4,12 +4,20 @@
 .header {
   width: 100%;
   background: #031720;
-  position: relative;
+}
+
+.header .h_title {
+  width: 1250px;
+  padding-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
 }
 
 .header .h_title h1 {
   text-align: center;
-  padding-top: 10px;
+  width: 1250px;
+  padding-bottom: 10px;
 }
 
 .header .h_title h1 a {
@@ -19,30 +27,28 @@
   color: white;
 }
 
-.header .login_box {
-  position: absolute;
-  top: 20%;
-  right: 2%;
+header .h_title .login_box {
+  height: 10px;
+}
+
+.header .h_title .login_box ul {
+  width: 1250px;
   display: flex;
-  margin-right: auto;
-  background: #031720;
+  justify-content: right;
+}
+
+.header .h_title .login_box ul li a {
+  font-size: 1.5rem;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100px;
+  background-color: transparent;
+  text-decoration: none;
   cursor: pointer;
 }
 
-.header .login_box ul {
-  display: flex;
-}
-
-.header .login_box ul li a {
-  font-size: 1.5rem;
-  color: white;
-  margin-left: 10px;
-  margin-right: 10px;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-.header .login_box ul li a:hover {
+.header .h_title .login_box ul li a:hover {
   text-decoration: underline;
 }
 
@@ -69,17 +75,18 @@
 }
 
 .header .h_menu {
-  text-align: center;
+  background-color: white;
+  border-bottom: 1px solid gray;
 }
 
 .header .h_menu ul {
+  text-align: center;
+  width: 1250px;
   background: black;
-  margin-top: 15px;
   cursor: default;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 350px;
   background: white;
-  border-bottom: 1px solid gray;
+  float: left;
 }
 
 .header .h_menu ul li {
@@ -90,20 +97,6 @@
   background: white;
   font-weight: 700;
   line-height: 50px;
-  position: relative;
-}
-
-.header .h_menu ul li::after {
-  content: "";
-  position: absolute;
-  top: 40px;
-  bottom: 0px;
-  left: 48px;
-  right: 0px;
-  height: 3px;
-  width: 0%;
-  background-color: #052635;
-  border-radius: 50px;
 }
 
 .header .h_menu ul li a {
@@ -112,12 +105,14 @@
   cursor: pointer;
 }
 
+.header .h_search form {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
 .header .h_search input {
-  position: absolute;
-  top: 66px;
-  left: 6%;
-  bottom: 17px;
-  width: 250px;
+  width: 25px;
   height: 35px;
   font-size: 2rem;
   border-radius: 30px;
@@ -126,12 +121,17 @@
   padding-right: 20px;
   border: 1px solid black;
   background-color: white;
-  z-index: 1;
+  transition: 0.3s ease-in-out;
+}
+
+.header .h_search input:focus {
+  width: 150px;
 }
 
 @media (hover: hover) {
-  .header .h_menu ul li:hover::after {
-    width: 50%;
-    transition: 0.3s;
+  .header .h_menu ul li a:hover {
+    padding-left: 7px;
+    padding-right: 7px;
+    border-bottom: 3px solid black;
   }
 }

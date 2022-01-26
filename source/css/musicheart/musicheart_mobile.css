@@ -26,6 +26,10 @@
     margin-top: 40px;
   }
 
+  .contents .contents_items .description {
+    width: 100%;
+  }
+
   .contents .contents_items .description .d_desc .d_deco {
     font-size: 3rem;
   }
