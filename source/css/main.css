@@ -36,11 +36,12 @@ a {
 }
 
 .header .h_title {
-  font-size: 3.2rem;
+  font-size: 2.5rem;
+  line-height: 110px;
 }
 
 .header .h_title .h_sub {
-  font-size: 3.5rem;
+  font-size: 2.7rem;
   color: white;
 }
 
@@ -50,8 +51,8 @@ a {
 
 .header .h_menu ul li {
   display: inline-block;
-  font-size: 2.2rem;
-  padding-top: 7px;
+  line-height: 110px;
+  font-size: 2.1rem;
   padding-left: 30px;
   cursor: pointer;
   position: relative;
@@ -67,7 +68,7 @@ a {
 }
 
 .header .h_menu ul li:hover {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   color: white;
 }
 
@@ -144,14 +145,14 @@ a {
   height: 430px;
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
+  width: 1100px;
   background-color: white;
   position: relative;
 }
 
 .contents .contents_items .introduce .i_title {
-  font-size: 1.8rem;
-  line-height: 25px;
+  font-size: 1.7rem;
+  line-height: 24px;
   letter-spacing: 1px;
 }
 
@@ -159,13 +160,13 @@ a {
   position: absolute;
   bottom: 10%;
   left: 13%;
-  font-size: 4rem;
+  font-size: 3.5rem;
   color: #555555;
 }
 
 .contents .contents_items .introduce .i_deco {
   position: absolute;
-  font-size: 17rem;
+  font-size: 15rem;
   font-weight: 800;
   bottom: -4%;
   right: 10%;
@@ -178,18 +179,18 @@ a {
 
 .contents .contents_items .tech {
   margin-top: 250px;
-  height: 510px;
+  height: 500px;
   background-color: #555555;
   position: relative;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 20px;
-  width: 50%;
+  width: 900px;
   border-radius: 15px;
 }
 
 .contents .contents_items .tech .t_title {
-  font-size: 3rem;
+  font-size: 2.8rem;
   line-height: 45px;
   font-weight: 500;
   color: white;
@@ -207,7 +208,7 @@ a {
 }
 
 .contents .contents_items .tech .t_desc .t_list li {
-  font-size: 4rem;
+  font-size: 3.8rem;
   margin-bottom: 42px;
   color: white;
   font-weight: 500;
@@ -235,6 +236,9 @@ a {
 
 .contents .contents_items .tech_detail {
   margin-top: 70px;
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contents .contents_items .tech_detail .td_desc ul {
@@ -244,10 +248,10 @@ a {
 }
 
 .contents .contents_items .tech_detail .td_desc li {
-  font-size: 2rem;
+  font-size: 1.9rem;
   margin-left: 20px;
   margin-right: 20px;
-  width: 4.5%;
+  width: 9%;
   background-color: white;
   border-top: 4px solid rgb(55, 96, 134);
   border-bottom: 4px solid rgb(55, 96, 134);
@@ -269,7 +273,7 @@ a {
 }
 
 .contents .contents_items .tech_detail .dt_screen {
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   line-height: 20px;
   transition: 0.5s ease-in-out;
   text-align: center;
@@ -279,7 +283,7 @@ a {
 
 .contents .contents_items .portfolio {
   margin-top: 150px;
-  width: 70%;
+  width: 1300px;
   margin-left: auto;
   margin-right: auto;
   background-color: white;
@@ -298,8 +302,8 @@ a {
 }
 
 .contents .contents_items .portfolio .items .item {
-  width: 380px;
-  height: 240px;
+  width: 360px;
+  height: 250px;
   background-color: black;
   margin: 30px;
   margin-bottom: 150px;
@@ -382,7 +386,7 @@ a {
     transition: 0.1s;
   }
   .contents .contents_items .tech .t_desc .t_list li:hover {
-    font-size: 5rem;
+    font-size: 4.5rem;
     transition: 0.2s;
     cursor: default;
   }
@@ -460,11 +464,13 @@ a {
 }
 
 .footer .f_title {
+  width: 1135px;
   font-size: 3rem;
   font-weight: 600;
   color: #b2b2b2;
   text-align: center;
   margin-top: -10px;
   opacity: 0.3;
+  margin: 0 auto;
   cursor: default;
 }
