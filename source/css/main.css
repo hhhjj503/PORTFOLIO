@@ -293,7 +293,7 @@ a {
 .contents .contents_items .portfolio .items {
   display: flex;
   flex-flow: wrap;
-  justify-content: left;
+  justify-content: center;
 }
 
 .contents .contents_items .portfolio .items .item {
