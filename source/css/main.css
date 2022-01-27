@@ -40,6 +40,10 @@ a {
   line-height: 110px;
 }
 
+.header .h_title a {
+  color: #b2b2b2;
+}
+
 .header .h_title .h_sub {
   font-size: 2.7rem;
   color: white;
@@ -54,7 +58,7 @@ a {
   line-height: 110px;
   font-size: 2.1rem;
   padding-left: 30px;
-  cursor: pointer;
+  cursor: default;
   position: relative;
 }
 
@@ -67,11 +71,16 @@ a {
   color: white;
 }
 
-.header .h_menu ul li:hover {
+.header .h_menu ul li a:hover {
   font-size: 2.2rem;
   color: white;
 }
 
+.header .h_menu ul li.drop_down_menu:hover {
+  cursor: pointer;
+  color: white;
+  font-size: 2.2rem;
+}
 .header .h_menu ul li.drop_down_menu ul {
   display: none;
 }
@@ -83,20 +92,21 @@ a {
 .header .h_menu ul li.drop_down_menu ul li.drop_down {
   width: 100px;
   height: 30px;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   color: white;
   text-align: center;
   padding: 0px;
   background-color: #b2b2b2;
   line-height: 33px;
   position: absolute;
-  top: 31px;
+  top: 68px;
   right: -25px;
 }
 
 .header .h_menu ul li.drop_down_menu:hover ul li:hover {
   background-color: white;
   color: #555555;
+  cursor: pointer;
 }
 
 /* ----------------------------------------------- contents ----------------------------------------------------------- */
