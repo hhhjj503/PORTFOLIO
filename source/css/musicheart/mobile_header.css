@@ -39,14 +39,14 @@
   .mobile_h_menu ul li {
     margin-top: 30px;
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   .header .mobile_h_menu_btn {
     position: absolute;
     display: block;
     width: 30px;
-    top: 18px;
+    top: 23px;
     left: 20px;
   }
 
@@ -100,23 +100,24 @@
 
   .header .h_title {
     width: 100%;
-    padding-top: 0;
+    padding: 0;
   }
 
   .header .h_title .h_title_items {
-    width: 100%;
+    width: inherit;
   }
 
   .header .h_title .h_title_items h1 {
-    text-align: center;
-    padding-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .header .h_title .h_title_items h1 a {
     font-size: 3rem;
-    width: 100%;
-    clear: both;
-    margin: 0 auto;
+    margin-left: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 
   .header .h_menu {
