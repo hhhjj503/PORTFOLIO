@@ -1,18 +1,24 @@
 @import url(./mobile_header.css);
 
 @media only screen and (max-width: 550px) {
+  .contents {
+    width: 100%;
+  }
+
   .contents .img_items {
-    width: 86%;
+    margin: 0 auto;
+    width: 85%;
     height: 210px;
+    flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
-    justify-items: center;
+    align-content: space-evenly;
+    justify-content: space-evenly;
     margin-top: 50px;
   }
 
   .contents .img_items .img_item {
-    width: 40%;
-    height: 53px;
+    width: 45%;
+    height: 55px;
   }
 
   .contents .biggerimg_box {

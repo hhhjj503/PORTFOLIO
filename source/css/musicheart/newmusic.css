@@ -31,11 +31,14 @@ a {
 
 /* -------------------------------------------------contents--------------------------------------------- */
 
+.contents {
+  width: 1000px;
+  margin: 0 auto;
+}
+
 .contents .img_items {
-  width: 55%;
-  height: 170px;
-  margin-left: auto;
-  margin-right: auto;
+  width: inherit;
+  height: 160px;
   background-color: #031720;
   border-radius: 10px;
   margin-top: 100px;
@@ -46,7 +49,7 @@ a {
 
 .contents .img_items .img_item {
   width: 15%;
-  height: 150px;
+  height: 140px;
   background-color: #031720;
   border-radius: 10px;
   background-repeat: no-repeat;
@@ -66,9 +69,9 @@ a {
   margin-left: auto;
   margin-right: auto;
   margin-top: 70px;
-  width: 35%;
+  width: 60%;
   border-radius: 25px;
-  height: 450px;
+  height: 440px;
   background-color: #031720;
   transition: 0.3s ease-in-out;
 }
