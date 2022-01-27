@@ -108,9 +108,10 @@
   }
 
   .header .h_title .h_title_items h1 {
-    width: 100%;
+    width: auto;
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 
   .header .h_title .h_title_items h1 a {
