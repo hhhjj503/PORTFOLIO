@@ -133,11 +133,7 @@
     padding-bottom: 20px;
     height: 860px;
     margin-top: 10px;
-    width: 100%;
-  }
-
-  .contents .contents_items .portfolio .items {
-    width: 100%;
+    width: 95%;
   }
 
   .contents .contents_items .portfolio .items .item {
@@ -193,6 +189,7 @@
   }
 
   .footer .f_title {
+    width: 100%;
     font-size: 1.7rem;
   }
 }
