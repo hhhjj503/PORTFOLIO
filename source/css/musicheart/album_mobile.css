@@ -1,8 +1,17 @@
 @import url(./mobile_header.css);
 
 @media only screen and (max-width: 550px) {
-  .contents .album_items .album_item {
+  .contents {
     width: 90%;
+    margin: 0 auto;
+  }
+
+  .contents .album_items {
+    margin: 0 auto;
+  }
+
+  .contents .album_items .album_item {
+    width: 100%;
     margin-top: 50px;
   }
 
@@ -18,7 +27,7 @@
 
   .contents .album_items .album_item .a_desc .a_img {
     width: 100%;
-    height: 320px;
+    height: 270px;
   }
 
   .contents .album_items .album_item .a_desc .a_description {
@@ -37,7 +46,7 @@
   .contents .album_items .album_item .a_desc .a_description .tracklist {
     margin-top: 20px;
     height: 150px;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   .footer {

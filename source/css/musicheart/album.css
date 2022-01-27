@@ -31,20 +31,24 @@ a {
 
 /* -------------------------------------------------contents--------------------------------------------- */
 
-.contents .album_items .album_item {
+.contents {
+  width: 1000px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.contents .album_items .album_item {
   margin-top: 100px;
-  width: 55%;
+  width: inherit;
   background-color: white;
 }
 
 .contents .album_items .album_item .a_title {
-  font-size: 2.4rem;
+  font-size: 2.1rem;
   font-weight: 600;
-  height: 60px;
+  height: 50px;
   text-align: center;
-  line-height: 60px;
+  line-height: 50px;
   background-color: #031720;
   color: rgba(255, 255, 255, 0.9);
 }
@@ -73,15 +77,15 @@ a {
   margin-top: 35px;
   padding-top: 3px;
   text-align: center;
-  font-size: 2.7rem;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 
 .contents .album_items .album_item .a_desc .a_description .tracklist {
   margin-top: 40px;
-  height: 325px;
+  height: 327px;
   text-align: center;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   letter-spacing: 1px;
   font-weight: 500;
   line-height: 50px;
