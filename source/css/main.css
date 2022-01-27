@@ -293,7 +293,8 @@ a {
 .contents .contents_items .portfolio .items {
   display: flex;
   flex-flow: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-content: space-evenly;
 }
 
 .contents .contents_items .portfolio .items .item {
