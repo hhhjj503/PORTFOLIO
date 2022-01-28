@@ -178,13 +178,14 @@ main .banner .screen {
   overflow: hidden;
 }
 
-main .banner .screen a div {
+main .banner .screen a .image_screen {
   background-color: white;
   height: 400px;
-  background-image: url(../../images/game/carl-raw-8Gdayy2Lhi0-unsplash.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-color: black;
+  position: relative;
 }
 
 main .banner .screen .promotion {
@@ -193,6 +194,7 @@ main .banner .screen .promotion {
   left: 0;
   bottom: 0;
   width: 100%;
+  background: linear-gradient(to bottom, transparent, rgb(51, 51, 51));
 }
 
 main .banner .screen .promotion .items {
@@ -201,25 +203,37 @@ main .banner .screen .promotion .items {
   margin-left: auto;
   margin-right: auto;
 }
+
+main .banner .screen .promotion .item .image_number {
+  display: none;
+}
+
 main .banner .screen .promotion .item {
   width: 25%;
   height: 90px;
   transition: 0.3s ease-in-out;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+main .banner .screen .promotion .item .desc {
+  margin-top: 30px;
 }
 
 main .banner .screen .promotion .item:hover {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
 }
 
-main .banner .screen .promotion .item .name {
+main .banner .screen .promotion .item .desc .name {
   font-size: 1.5rem;
   color: white;
+  font-weight: 600;
 }
-main .banner .screen .promotion .item .detail {
+main .banner .screen .promotion .item .desc .detail {
   font-size: 1.7rem;
   color: white;
+  font-weight: 700;
 }
