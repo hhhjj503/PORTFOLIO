@@ -186,11 +186,12 @@ main .banner .screen a .image_screen {
   background-position: center;
   background-color: black;
   position: relative;
+  transition: 0.5s ease-in-out;
 }
 
 main .banner .screen .promotion {
   position: absolute;
-  height: 90px;
+  height: 110px;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -211,6 +212,7 @@ main .banner .screen .promotion .item .image_number {
 main .banner .screen .promotion .item {
   width: 25%;
   height: 90px;
+  margin-top: 20px;
   transition: 0.3s ease-in-out;
   background-repeat: no-repeat;
   background-size: cover;
@@ -223,7 +225,7 @@ main .banner .screen .promotion .item .desc {
 }
 
 main .banner .screen .promotion .item:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.6);
   cursor: pointer;
 }
 
@@ -233,7 +235,7 @@ main .banner .screen .promotion .item .desc .name {
   font-weight: 600;
 }
 main .banner .screen .promotion .item .desc .detail {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   color: white;
   font-weight: 700;
 }
