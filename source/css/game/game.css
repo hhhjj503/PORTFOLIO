@@ -84,9 +84,11 @@ main .contents .menu .depth1 {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color: rgb(66, 66, 66);
+  background-color: rgb(62, 163, 153);
   border-radius: 10px;
   color: white;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 
 main .contents .menu .depth1 li {
@@ -97,9 +99,12 @@ main .contents .menu .depth1 li {
   overflow: hidden;
 }
 
-main .contents .menu .depth1.show {
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+main .contents .menu .depth1 li.first {
+  border-top-left-radius: 10px;
+}
+
+main .contents .menu .depth1 li.last {
+  border-top-right-radius: 10px;
 }
 
 main .contents .menu .depth1 li.show {
@@ -115,7 +120,10 @@ main .contents .menu .depth1 li a {
 
 main .contents .menu .depth1 li a:hover {
   cursor: pointer;
-  color: rgb(120, 199, 202);
+}
+
+main .contents .menu .depth1 li:hover {
+  background-color: rgb(32, 138, 127);
 }
 
 main .contents .menu .depth1 li .depth2.first {
@@ -130,7 +138,7 @@ main .contents .menu .depth1 li .depth2 {
   flex-direction: column;
   align-content: center;
   justify-content: center;
-  background-color: rgba(66, 66, 66, 0.8);
+  background-color: rgb(71, 71, 71);
   position: absolute;
   z-index: 1;
   padding-bottom: 0;
@@ -138,12 +146,12 @@ main .contents .menu .depth1 li .depth2 {
 
 main .contents .menu .depth1 li .depth2 li {
   text-align: center;
-  height: 35px;
+  height: 40px;
 }
 
 main .contents .menu .depth1 li .depth2 li a {
   font-size: 1.4rem;
-  line-height: 35px;
+  line-height: 40px;
   cursor: default;
 }
 
@@ -155,3 +163,63 @@ main .contents .menu .depth1 li .depth2 li a:hover {
 }
 
 /* --------------------- banner ---------------------------- */
+
+main .banner {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main .banner .screen {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+main .banner .screen a div {
+  background-color: white;
+  height: 400px;
+  background-image: url(../../images/game/carl-raw-8Gdayy2Lhi0-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+main .banner .screen .promotion {
+  position: absolute;
+  height: 90px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+main .banner .screen .promotion .items {
+  display: flex;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+main .banner .screen .promotion .item {
+  width: 25%;
+  height: 90px;
+  transition: 0.3s ease-in-out;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+main .banner .screen .promotion .item:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
+main .banner .screen .promotion .item .name {
+  font-size: 1.5rem;
+  color: white;
+}
+main .banner .screen .promotion .item .detail {
+  font-size: 1.7rem;
+  color: white;
+}
