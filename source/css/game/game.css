@@ -134,6 +134,14 @@ main .contents .menu .depth1 li .depth2.last {
   border-bottom-right-radius: 10px;
 }
 
+main .contents .menu .depth1 li .depth2.first .left_end {
+  border-bottom-left-radius: 10px;
+}
+
+main .contents .menu .depth1 li .depth2.last .right_end {
+  border-bottom-right-radius: 10px;
+}
+
 main .contents .menu .depth1 li .depth2 {
   flex-direction: column;
   align-content: center;
