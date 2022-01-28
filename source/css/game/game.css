@@ -186,7 +186,6 @@ main .banner .screen a .image_screen {
   background-position: center;
   background-color: black;
   position: relative;
-  transition: 0.5s ease-in-out;
 }
 
 main .banner .screen .promotion {
