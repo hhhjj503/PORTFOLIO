@@ -1,1 +1,157 @@
+@import url(../skip.css);
 @import url(./game_mobile.css);
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+/* ----------------------------------------- header --------------------------------------- */
+
+header {
+  width: 100%;
+  background-color: #dbdbdb;
+  height: 45px;
+}
+
+header .top_wrapper {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header .brand a {
+  float: left;
+  line-height: 45px;
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+  font-size: 1.9rem;
+  font-weight: 700;
+  cursor: default;
+}
+
+header .brand a:hover {
+  cursor: pointer;
+}
+
+header .login {
+  float: right;
+  line-height: 45px;
+}
+
+header .login ul {
+  display: flex;
+}
+
+header .login ul li {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+header .login ul li a {
+  font-size: 1.4rem;
+}
+
+header .login ul li a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ----------------------------------------- main --------------------------------------- */
+
+/* --------------------- menu ---------------------------- */
+
+main .contents {
+  width: 100%;
+}
+
+main .contents .menu {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main .contents .menu .depth1 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgb(66, 66, 66);
+  border-radius: 10px;
+  color: white;
+}
+
+main .contents .menu .depth1 li {
+  text-align: center;
+  position: relative;
+  width: 240px;
+  height: 65px;
+  overflow: hidden;
+}
+
+main .contents .menu .depth1.show {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+main .contents .menu .depth1 li.show {
+  overflow: visible;
+  max-height: 100%;
+}
+
+main .contents .menu .depth1 li a {
+  cursor: default;
+  line-height: 65px;
+  font-size: 1.8rem;
+}
+
+main .contents .menu .depth1 li a:hover {
+  cursor: pointer;
+  color: rgb(120, 199, 202);
+}
+
+main .contents .menu .depth1 li .depth2.first {
+  border-bottom-left-radius: 10px;
+}
+
+main .contents .menu .depth1 li .depth2.last {
+  border-bottom-right-radius: 10px;
+}
+
+main .contents .menu .depth1 li .depth2 {
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  background-color: rgba(66, 66, 66, 0.8);
+  position: absolute;
+  z-index: 1;
+  padding-bottom: 0;
+}
+
+main .contents .menu .depth1 li .depth2 li {
+  text-align: center;
+  height: 35px;
+}
+
+main .contents .menu .depth1 li .depth2 li a {
+  font-size: 1.4rem;
+  line-height: 35px;
+  cursor: default;
+}
+
+main .contents .menu .depth1 li .depth2 li a:hover {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* --------------------- banner ---------------------------- */
