@@ -456,6 +456,8 @@ main .filter .filter_box label:hover {
 
 main .all_games {
   width: 1200px;
+  min-height: 200px;
+  background-color: white;
   margin: 0 auto;
   margin-top: 20px;
 }
@@ -463,10 +465,14 @@ main .all_games {
 main .all_games .all_games_wrapper ul {
   display: flex;
   flex-wrap: wrap;
-  background-color: white;
 }
 
 main .all_games .all_games_wrapper ul li {
+  display: none;
+}
+
+main .all_games .all_games_wrapper ul li.m_show {
+  display: inline;
   width: 380px;
   padding-left: 20px;
   height: 50px;
