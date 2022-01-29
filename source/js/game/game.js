@@ -3,6 +3,7 @@ window.onload = function () {
   const lis = depth1.children;
   const imgScreen = document.querySelector(".image_screen");
   const items = document.querySelectorAll(".promotion .items .item");
+  const games = document.querySelectorAll("main .game_login .games > .game");
 
   for (let i = 0; i < lis.length; i++) {
     lis[i].addEventListener("mouseenter", function () {
@@ -17,6 +18,15 @@ window.onload = function () {
   for (let i = 0; i < items.length; i++) {
     items[i].addEventListener("click", function () {
       imgChange(items[i]);
+    });
+  }
+
+  for (let i = 0; i < games.length; i++) {
+    games[i].addEventListener("mouseenter", function () {
+      biggerAdd(games[i]);
+    });
+    games[i].addEventListener("mouseleave", function () {
+      biggerRemove(games[i]);
     });
   }
 
@@ -47,5 +57,15 @@ window.onload = function () {
     const path = "../.." + slicedPath + number.innerText + ".png";
     imgScreen.style.backgroundImage = "url('" + path + "'";
     imgScreen.classList.remove("black");
+  }
+
+  function biggerAdd(game) {
+    const image = game.querySelector(".g_img");
+    image.classList.add("bigger");
+  }
+
+  function biggerRemove(game) {
+    const image = game.querySelector(".g_img");
+    image.classList.remove("bigger");
   }
 };
