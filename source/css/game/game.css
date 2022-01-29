@@ -511,7 +511,8 @@ footer .f_wrapper {
   align-items: center;
   justify-content: space-evenly;
   height: 200px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 footer .f_wrapper .f_detail ul {
