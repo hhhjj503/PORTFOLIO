@@ -449,6 +449,7 @@ main .filter .filter_box label {
 main .filter .filter_box label:hover {
   cursor: pointer;
   color: orange;
+  border-bottom: 2px solid orange;
 }
 
 /* ---------------------- all_games ------------------------------*/
