@@ -323,11 +323,12 @@ a {
   width: 100%;
   height: 100%;
   background-size: 100%;
+  background-color: whitesmoke;
   cursor: default;
-  background-position: center center;
+  background-position: center;
   transition-duration: 0.4s;
   position: relative;
-  border: 0.3px solid #dddddd;
+  border: 0.5px solid #dddddd;
   background-repeat: no-repeat;
 }
 
