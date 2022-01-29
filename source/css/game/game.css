@@ -251,6 +251,7 @@ main .banner .screen .promotion .item .desc .detail {
 
 main .game_login {
   width: 1200px;
+  margin-top: 20px;
   background-color: rosybrown;
   margin-left: auto;
   margin-right: auto;
@@ -312,9 +313,16 @@ main .game_login .l_wrapper .login2 {
   background-color: thistle;
 }
 
+main .game_login .l_wrapper .login2 .login2_item {
+  height: 40px;
+  margin: 5px 0;
+  background-color: tomato;
+}
+
 main .game_login .l_wrapper .login3 {
   width: 80%;
-
+  height: 40px;
+  margin-bottom: 5px;
   display: flex;
   justify-content: space-evenly;
   background-color: violet;
@@ -322,6 +330,8 @@ main .game_login .l_wrapper .login3 {
 
 main .game_login .l_wrapper .find {
   width: 80%;
+  margin-bottom: 5px;
+  height: 40px;
   background-color: yellowgreen;
   display: flex;
 }
