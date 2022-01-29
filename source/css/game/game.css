@@ -365,6 +365,8 @@ main .game_login .l_wrapper .login2 .login2_item {
   height: 40px;
   margin-bottom: 5px;
   line-height: 40px;
+  color: white;
+  font-weight: 500;
 }
 
 main .game_login .l_wrapper .login2 .login2_item:hover {
@@ -376,7 +378,8 @@ main .game_login .l_wrapper .login2 .login2_item.naver {
 }
 
 main .game_login .l_wrapper .login2 .login2_item.kakao {
-  background-color: #e8f900;
+  background-color: #f7e600;
+  color: #3a1d1d;
 }
 
 main .game_login .l_wrapper .login3 {
