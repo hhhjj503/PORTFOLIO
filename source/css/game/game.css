@@ -367,7 +367,6 @@ main .game_login .l_wrapper .login2 .login2_item {
   height: 40px;
   margin-bottom: 5px;
   line-height: 40px;
-  background-color: tomato;
 }
 
 main .game_login .l_wrapper .login2 .login2_item:hover {
@@ -419,4 +418,81 @@ main .game_login .l_wrapper .find .f_item {
 
 main .game_login .l_wrapper .find .f_item:hover {
   cursor: pointer;
+}
+
+/* ----------------------- filter ---------------------------- */
+
+main .filter {
+  margin-top: 40px;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: yellowgreen;
+  box-shadow: 0 0 6px 0 rgb(0 0 0 / 6%);
+}
+
+main .filter .filter_box {
+  height: 40px;
+  line-height: 40px;
+  background-color: white;
+}
+
+main .filter .filter_box input {
+  display: none;
+}
+
+main .filter .filter_box label {
+  font-size: 1.4rem;
+  margin-left: 70px;
+}
+
+main .filter .filter_box label:hover {
+  cursor: pointer;
+  color: orange;
+}
+
+/* ---------------------- all_games ------------------------------*/
+
+main .all_games {
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+main .all_games .all_games_wrapper ul {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+main .all_games .all_games_wrapper ul li {
+  width: 380px;
+  padding-left: 20px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.5rem;
+}
+
+main .all_games .all_games_wrapper ul li .mini_game a {
+  vertical-align: middle;
+}
+
+main .all_games .all_games_wrapper ul li .mini_game a:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+main .all_games .all_games_wrapper ul li .mini_game img {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+/* ----------------------------------------footer------------------------------------------ */
+
+footer {
+  margin-top: 150px;
+  height: 200px;
+  background-color: black;
+  width: 100%;
 }
