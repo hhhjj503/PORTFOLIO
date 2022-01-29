@@ -24,6 +24,8 @@ header .top_wrapper {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  background-color: inherit;
+  height: inherit;
 }
 
 header .brand a {
@@ -507,6 +509,7 @@ footer .f_wrapper {
   align-items: center;
   justify-content: space-evenly;
   height: 200px;
+  background-color: inherit;
   margin-left: auto;
   margin-right: auto;
 }
