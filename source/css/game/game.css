@@ -34,10 +34,6 @@ header .brand a {
   text-decoration: none;
   font-size: 1.9rem;
   font-weight: 700;
-  cursor: default;
-}
-
-header .brand a:hover {
   cursor: pointer;
 }
 
@@ -543,5 +539,5 @@ footer .brand a {
   text-decoration: none;
   font-size: 1.9rem;
   font-weight: 700;
-  cursor: default;
+  cursor: pointer;
 }
