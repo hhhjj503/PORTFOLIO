@@ -13,6 +13,12 @@
     padding-left: 0px;
   }
 
+  .header .h_wrapper {
+    width: inherit;
+    justify-content: center;
+    align-items: center;
+  }
+
   .header .h_title {
     font-size: 1.9rem;
     line-height: 80px;
