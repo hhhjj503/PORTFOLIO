@@ -15,6 +15,7 @@
   text-align: center;
   font-size: 1.7rem;
   line-height: 20px;
+  cursor: default;
 }
 
 .line:first-child {
