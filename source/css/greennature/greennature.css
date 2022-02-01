@@ -1,4 +1,5 @@
 @import url(../skip.css);
+@import url(./slidingText.css);
 
 html {
   scroll-behavior: smooth;
@@ -8,6 +9,7 @@ html {
 body {
   overflow: scroll;
   overflow-x: hidden;
+  min-width: 1230px;
 }
 
 .tbn {
@@ -134,15 +136,33 @@ header .h_wrapper .h_menu1 li .folded_menu {
   height: 300px;
   top: 63px;
   left: -390px;
-  /* max-height: 0px; */
+  max-height: 0px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 header .h_wrapper .h_menu1 li .folded_menu .f_left {
   width: 35%;
   height: inherit;
-  background-color: royalblue;
+  background-color: rgb(78, 84, 173);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header .h_wrapper .h_menu1 li .folded_menu .f_left .left_title {
+  width: 90%;
+  font-size: 1.9rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+header .h_wrapper .h_menu1 li .folded_menu .f_left .left_desc {
+  width: 90%;
+  font-size: 1.4rem;
+  margin-top: 20px;
+  line-height: 25px;
 }
 
 header .h_wrapper .h_menu1 li .folded_menu .f_right {
@@ -150,7 +170,7 @@ header .h_wrapper .h_menu1 li .folded_menu .f_right {
   display: flex;
   justify-items: center;
   align-content: center;
-  background-color: seagreen;
+  background-color: transparent;
 }
 
 header .h_wrapper .h_menu1 li .folded_menu .f_right ul {
@@ -168,7 +188,21 @@ header .h_wrapper .h_menu1 li .folded_menu .f_right ul li {
   width: 230px;
   height: 50px;
   border-radius: 10px;
-  background-color: lawngreen;
+  background-color: rgb(57, 77, 52);
+  border: 1.5px solid #dddddd;
+  box-shadow: 0 0 4px 0 rgb(0 0 0/4%);
+}
+
+header .h_wrapper .h_menu1 li .folded_menu .f_right ul li:hover {
+  background-color: rgb(36, 48, 117);
+  cursor: pointer;
+}
+
+header .h_wrapper .h_menu1 li .folded_menu .f_right a {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 50px;
+  padding-left: 20px;
 }
 
 header .h_wrapper .h_menu1 > li > a {
@@ -215,7 +249,7 @@ main .main_items {
 }
 
 main .main_items .banner {
-  width: 1500px;
+  width: 100%;
   margin: 0 auto;
   height: auto;
 }
@@ -225,6 +259,22 @@ main .main_items .banner .b_image {
   height: 800px;
   background-image: url(../../images/greennature/sabeer-darr-Upz-tnx2v2s-unsplash.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+main .main_items .banner .b_image .b_title {
+  width: 1400px;
+  margin: auto auto;
+  text-align: center;
+  position: relative;
+}
+
+main .main_items .banner .b_image .b_title p {
+  color: white;
+  font-size: 1.8rem;
+  padding-top: 100px;
 }
