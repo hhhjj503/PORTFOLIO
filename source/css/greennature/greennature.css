@@ -98,14 +98,14 @@ header .h_wrapper .h_menu1 {
   margin: 0 auto;
 }
 
-header .h_wrapper .h_menu1 li {
+header .h_wrapper .h_menu1 > li {
   height: 62px;
   transition: 0.3s ease-in-out;
   position: relative;
   cursor: pointer;
 }
 
-header .h_wrapper .h_menu1 li:after {
+header .h_wrapper .h_menu1 > li:after {
   position: absolute;
   left: 45%;
   bottom: 0px;
@@ -116,32 +116,62 @@ header .h_wrapper .h_menu1 li:after {
   transition: 0.3s ease-in-out;
 }
 
-header .h_wrapper .h_menu1 li:hover a {
-  color: whitesmoke;
-}
-
-header .h_wrapper .h_menu1 li:hover:after {
+header .h_wrapper .h_menu1 > li:hover:after {
   left: 3px;
   width: 90%;
 }
 
-header .h_wrapper .h_menu1 li:hover .folded_menu {
-  max-height: 200px;
+header .h_wrapper .h_menu1 > li:hover .folded_menu {
+  max-height: 300px;
+  cursor: default;
 }
 
 header .h_wrapper .h_menu1 li .folded_menu {
   position: absolute;
+  display: flex;
   transition: 0.7s ease-in-out;
   width: 1400px;
-  height: 200px;
+  height: 300px;
   top: 63px;
   left: -390px;
-  max-height: 0;
+  /* max-height: 0px; */
   overflow: hidden;
-  background: white;
+  background: rgba(255, 255, 255, 0.9);
 }
 
-header .h_wrapper .h_menu1 li a {
+header .h_wrapper .h_menu1 li .folded_menu .f_left {
+  width: 35%;
+  height: inherit;
+  background-color: royalblue;
+}
+
+header .h_wrapper .h_menu1 li .folded_menu .f_right {
+  width: 65%;
+  display: flex;
+  justify-items: center;
+  align-content: center;
+  background-color: seagreen;
+}
+
+header .h_wrapper .h_menu1 li .folded_menu .f_right ul {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-evenly;
+  background-color: transparent;
+}
+
+header .h_wrapper .h_menu1 li .folded_menu .f_right ul li {
+  width: 230px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: lawngreen;
+}
+
+header .h_wrapper .h_menu1 > li > a {
   font-size: 2rem;
   color: inherit;
   font-weight: 700;
