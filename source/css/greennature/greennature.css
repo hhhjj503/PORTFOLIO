@@ -413,38 +413,62 @@ main .main_items .ad {
   margin: 0 auto;
   height: 250px;
   background-color: transparent;
+  position: relative;
+  overflow: hidden;
 }
 
-main .main_items .ad .a_wrapper {
+main .main_items .ad .slider {
+  position: absolute;
   height: 100%;
-  width: 100%;
+  width: auto;
   background-color: inherit;
   margin: 0 auto;
-}
-
-main .main_items .ad .a_wrapper {
+  overflow: hidden;
   background-color: white;
   height: inherit;
   display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  text-align: center;
+  width: auto;
   font-size: 18px;
   overflow: hidden;
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
-main .main_items .ad .a_wrapper .a_item {
-  height: 100%;
-  width: 23%;
-}
-
-main .main_items .ad .a_wrapper .a_item img {
+main .main_items .ad .controller {
+  position: absolute;
+  top: 40%;
+  left: 0;
   width: 100%;
+}
+
+main .main_items .ad .controller .prev {
+  width: 10px;
+  padding: 0 5px;
+  height: 55px;
+  float: left;
+  font-size: 4rem;
+  background-color: yellow;
+  cursor: pointer;
+}
+
+main .main_items .ad .controller .next {
+  width: 10px;
+  padding: 0 5px;
+  height: 55px;
+  float: right;
+  font-size: 4rem;
+  background-color: yellow;
+  cursor: pointer;
+}
+
+main .main_items .ad .slider .a_item {
+  height: 100%;
+  width: 320px;
+  margin: 0 15px;
+}
+
+main .main_items .ad .slider .a_item img {
+  width: 320px;
+  padding: 0;
   height: 100%;
 }
 
