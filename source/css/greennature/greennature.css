@@ -411,11 +411,44 @@ main .main_items .info .i_menu > ul li span {
 main .main_items .ad {
   width: 1400px;
   margin: 0 auto;
-  height: 300px;
-  background-color: aqua;
+  height: 250px;
+  background-color: transparent;
 }
 
-/* ----------------------------------------- footer --------------------------------------- */
+main .main_items .ad .a_wrapper {
+  height: 100%;
+  width: 100%;
+  background-color: inherit;
+  margin: 0 auto;
+}
+
+main .main_items .ad .a_wrapper {
+  background-color: white;
+  height: inherit;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  font-size: 18px;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+}
+
+main .main_items .ad .a_wrapper .a_item {
+  height: 100%;
+  width: 23%;
+}
+
+main .main_items .ad .a_wrapper .a_item img {
+  width: 100%;
+  height: 100%;
+}
+
+/* --------------------------------------- footer --------------------------------------- */
 footer {
   margin-top: 150px;
   height: 200px;
