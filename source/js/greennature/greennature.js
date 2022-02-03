@@ -1,7 +1,6 @@
 window.onload = function () {
   const prev = document.querySelector(".prev");
   const next = document.querySelector(".next");
-  console.log(prev, next);
 
   slideWidth = 2100; //350(320 + 30(마진)) * 6
   next.addEventListener("click", function () {
@@ -25,8 +24,6 @@ window.onload = function () {
 
     slider.style.width = +(slideWidth + 350) + "px"; //길이 연장 +350 7개 노드길이로 변경
     slider.insertBefore(cloneSlide_last, slider.firstElementChild); //복사한 첫번째 노드를 배열의 맨뒤에 갖다붙임
-    console.log(slider);
-    console.log(sliderImg);
 
     slider.style.left = -350 + "px"; //다음 노드로 이동
     slider.style.transition = `${0.5}s ease-in-out`;
