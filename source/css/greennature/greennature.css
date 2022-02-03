@@ -144,7 +144,7 @@ header .h_wrapper .h_menu1 li .folded_menu {
 header .h_wrapper .h_menu1 li .folded_menu .f_left {
   width: 35%;
   height: inherit;
-  background-color: rgb(44, 62, 161);
+  background-color: rgb(49, 62, 179);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -195,11 +195,11 @@ header .h_wrapper .h_menu1 li .folded_menu .f_right ul li {
 header .h_wrapper .h_menu1 li .folded_menu .f_right ul li:hover {
   background: linear-gradient(
     110deg,
-    rgb(36, 48, 117) 8%,
-    rgb(44, 62, 161) 0,
+    rgb(42, 56, 136) 8%,
+    rgb(49, 62, 179) 0,
     rgb(44, 62, 161) 48%,
-    rgb(36, 48, 117) 0,
-    rgb(36, 48, 117) 100%
+    rgb(42, 56, 136) 0,
+    rgb(42, 56, 136) 100%
   );
   cursor: pointer;
 }
@@ -454,7 +454,7 @@ main .main_items .ad .controller .c_btn {
 }
 
 main .main_items .ad .controller .c_btn:hover {
-  background-color: rgb(44, 62, 161);
+  background-color: rgb(53, 74, 194);
 }
 
 main .main_items .ad .controller .c_btn:hover:focus {
