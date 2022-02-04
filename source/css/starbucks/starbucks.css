@@ -119,7 +119,7 @@
   margin-top: 15px;
   width: 32%;
   height: 120px;
-  background-color: rgb(3, 30, 23);
+  background-color: white;
   margin-left: 2px;
   margin-right: 2px;
 }
@@ -127,11 +127,43 @@
 .contents .right_side .recommendation .r_images .r_image .img_wrapper {
   width: 100%;
   height: 100%;
+  text-align: center;
 }
 
-.contents .right_side .recommendation .r_images .r_image .img_wrapper img {
+.contents
+  .right_side
+  .recommendation
+  .r_images
+  .r_image
+  .img_wrapper
+  img.first {
   width: 100%;
-  height: 100%;
+  height: 95px;
+  margin-top: 15px;
+}
+
+.contents
+  .right_side
+  .recommendation
+  .r_images
+  .r_image
+  .img_wrapper
+  img.second {
+  width: 83%;
+  height: 100px;
+  margin-top: 10px;
+}
+
+.contents
+  .right_side
+  .recommendation
+  .r_images
+  .r_image
+  .img_wrapper
+  img.third {
+  width: 100%;
+  height: 100px;
+  margin-top: 12px;
 }
 
 .contents .right_side .recommendation .r_images .description {
