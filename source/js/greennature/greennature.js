@@ -1,6 +1,17 @@
 window.onload = function () {
+  const lis = document.querySelectorAll("header .h_wrapper .h_menu1 > li");
+  const as = document.querySelectorAll("header .h_wrapper .h_menu1 > li > a");
   const prev = document.querySelector(".prev");
   const next = document.querySelector(".next");
+
+  for (let i = 0; i < lis.length; i++) {
+    lis[i].addEventListener("mouseenter", function () {
+      as[i].classList.add("show");
+    });
+    lis[i].addEventListener("mouseleave", function () {
+      as[i].classList.remove("show");
+    });
+  }
 
   slideWidth = 2100; //350(320 + 30(마진)) * 6
   next.addEventListener("click", function () {

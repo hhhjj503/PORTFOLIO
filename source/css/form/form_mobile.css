@@ -1,4 +1,8 @@
 @media only screen and (max-width: 550px) {
+  body {
+    min-width: 0;
+  }
+
   input[type="text"],
   input[type="number"],
   input[type="date"] {

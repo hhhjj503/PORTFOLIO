@@ -7,8 +7,8 @@ html {
 }
 
 body {
-  overflow: scroll;
-  overflow-x: hidden;
+  overflow-x: auto;
+  min-width: 1200px;
   background-color: whitesmoke;
 }
 

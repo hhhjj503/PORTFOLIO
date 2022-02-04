@@ -7,9 +7,12 @@ html {
 }
 
 body {
-  overflow: scroll;
-  overflow-x: hidden;
   min-width: 1400px;
+  overflow-x: auto;
+}
+
+body.scroll {
+  overflow-x: auto;
 }
 
 .tbn {
@@ -103,12 +106,24 @@ header .h_wrapper .h_menu1 {
 header .h_wrapper .h_menu1 > li {
   height: 62px;
   transition: 0.3s ease-in-out;
-  position: relative;
   cursor: pointer;
 }
 
-header .h_wrapper .h_menu1 > li:after {
+header .h_wrapper .h_menu1 > li > a {
+  font-size: 1.9rem;
+  display: block;
+  position: relative;
+  height: 100%;
+  color: inherit;
+  font-weight: 700;
+  line-height: 62px;
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+header .h_wrapper .h_menu1 > li a:after {
   position: absolute;
+  bottom: 0;
   left: 45%;
   bottom: 0px;
   content: "";
@@ -118,27 +133,32 @@ header .h_wrapper .h_menu1 > li:after {
   transition: 0.3s ease-in-out;
 }
 
-header .h_wrapper .h_menu1 > li:hover:after {
-  left: 3px;
-  width: 90%;
+header .h_wrapper .h_menu1 > li a.show:after {
+  left: -10%;
+  width: 120%;
 }
+
+/* ---------------------- folded_menu-------------------------- */
 
 header .h_wrapper .h_menu1 > li:hover .folded_menu {
   max-height: 300px;
+  cursor: default;
+  display: flex;
+  height: auto;
+  transition: 0.7s ease-in-out;
+}
+
+header .h_wrapper .h_menu1 > li:not(:hover) .folded_menu {
   cursor: default;
 }
 
 header .h_wrapper .h_menu1 li .folded_menu {
   position: absolute;
-  display: flex;
-  transition: 0.7s ease-in-out;
   width: 1400px;
-  height: 300px;
   top: 63px;
-  left: -401px;
-  max-height: 0px;
-  overflow: hidden;
-  background: rgb(255, 255, 255);
+  left: 0;
+  display: none;
+  background: transparent;
 }
 
 header .h_wrapper .h_menu1 li .folded_menu .f_left {
@@ -149,20 +169,20 @@ header .h_wrapper .h_menu1 li .folded_menu .f_left {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 50px 0;
 }
 
 header .h_wrapper .h_menu1 li .folded_menu .f_left .left_title {
   width: 90%;
   font-size: 1.9rem;
-  margin-bottom: 20px;
   font-weight: 700;
 }
 
 header .h_wrapper .h_menu1 li .folded_menu .f_left .left_desc {
   width: 90%;
   font-size: 1.4rem;
-  margin-top: 20px;
   line-height: 25px;
+  padding-top: 20px;
 }
 
 header .h_wrapper .h_menu1 li .folded_menu .f_right {
@@ -170,12 +190,13 @@ header .h_wrapper .h_menu1 li .folded_menu .f_right {
   display: flex;
   justify-items: center;
   align-content: center;
+  background-color: white;
 }
 
 header .h_wrapper .h_menu1 li .folded_menu .f_right ul {
-  width: 90%;
+  width: inherit;
   height: 100%;
-  margin: 0 auto;
+  margin: 0 45px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -211,14 +232,7 @@ header .h_wrapper .h_menu1 li .folded_menu .f_right a {
   padding-left: 20px;
 }
 
-header .h_wrapper .h_menu1 > li > a {
-  font-size: 1.9rem;
-  color: inherit;
-  font-weight: 700;
-  line-height: 62px;
-  margin: 0 15px;
-  cursor: pointer;
-}
+/* -------------------------- h_menu2 ----------------------- */
 
 header .h_wrapper .h_menu2 {
   position: absolute;
@@ -231,15 +245,17 @@ header .h_wrapper .h_menu2 li:last-child {
   margin: 0 15px;
 }
 
-header .h_wrapper .h_menu2 li a {
+header .h_wrapper .h_menu2 li > a {
+  display: block;
   color: inherit;
   cursor: pointer;
   font-size: 1.5rem;
-  line-height: 61px;
+  height: 63px;
 }
 
 header .h_wrapper .h_menu2 li a svg {
-  vertical-align: middle;
+  display: inline-block;
+  height: inherit;
 }
 
 /* ----------------------------------------- main --------------------------------------- */
@@ -350,7 +366,7 @@ main .main_items .info .i_menu > ul {
 
 main .main_items .info .i_menu > ul li {
   width: 24%;
-  height: 95%;
+  height: 100%;
   position: relative;
   text-align: center;
   background-color: whitesmoke;
@@ -382,9 +398,11 @@ main .main_items .info .i_menu > ul li:hover:before {
 }
 
 main .main_items .info .i_menu > ul li a {
+  display: block;
+  height: inherit;
   font-size: 1.6rem;
   font-weight: 700;
-  line-height: 234px;
+  line-height: 243px;
   cursor: pointer;
 }
 
@@ -396,10 +414,9 @@ main .main_items .info .i_menu > ul li span {
   display: block;
   position: absolute;
   width: 100%;
-  height: 40%;
-  top: 25%;
+  height: 38%;
+  top: 24%;
   bottom: 0;
-  margin: 0 auto;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -434,9 +451,9 @@ main .main_items .ad .slider {
 
 main .main_items .ad .controller {
   position: absolute;
-  top: 40%;
   left: 0;
   width: 100%;
+  height: 100%;
 }
 
 main .main_items .ad .controller .c_btn {
@@ -450,6 +467,7 @@ main .main_items .ad .controller .c_btn {
   color: white;
   cursor: pointer;
   user-select: none;
+  margin-top: 75px;
   transition: 0.2s ease-in-out;
 }
 

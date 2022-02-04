@@ -6,11 +6,6 @@ html {
   font-size: 62.5%;
 }
 
-body {
-  overflow: scroll;
-  overflow-x: hidden;
-}
-
 ::selection {
   background: rgba(255, 255, 255, 0.5);
   color: #031720;
