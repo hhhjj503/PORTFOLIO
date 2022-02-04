@@ -10,10 +10,6 @@ window.onload = function () {
   const button = document.querySelector(".s_btn");
   const contents = document.querySelectorAll(".f_contents");
 
-  $(window).scroll(function () {
-    $(".page").css({ left: 0 - $(this).scrollLeft() });
-  });
-
   button.addEventListener("click", function () {
     check();
   });
