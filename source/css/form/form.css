@@ -2,6 +2,11 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  min-width: 1000px;
+  overflow-x: auto;
+}
+
 input[type="text"],
 input[type="number"],
 input[type="date"] {
