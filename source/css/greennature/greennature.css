@@ -142,23 +142,18 @@ header .h_wrapper .h_menu1 > li a.show:after {
 
 header .h_wrapper .h_menu1 > li:hover .folded_menu {
   max-height: 300px;
-  cursor: default;
-  display: flex;
-  height: auto;
-  transition: 0.7s ease-in-out;
-}
-
-header .h_wrapper .h_menu1 > li:not(:hover) .folded_menu {
-  cursor: default;
 }
 
 header .h_wrapper .h_menu1 li .folded_menu {
   position: absolute;
   width: 1400px;
   top: 63px;
+  display: flex;
+  max-height: 0;
   left: 0;
-  display: none;
+  overflow: hidden;
   background: transparent;
+  cursor: default;
 }
 
 header .h_wrapper .h_menu1 li .folded_menu .f_left {
@@ -187,6 +182,7 @@ header .h_wrapper .h_menu1 li .folded_menu .f_left .left_desc {
 
 header .h_wrapper .h_menu1 li .folded_menu .f_right {
   width: 65%;
+  height: inherit;
   display: flex;
   justify-items: center;
   align-content: center;
