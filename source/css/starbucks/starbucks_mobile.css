@@ -263,8 +263,8 @@
     margin-top: 15px;
   }
 
-  .contents .right_side .recommendation .r_images .r_image .img {
-    height: 160px;
+  .contents .right_side .recommendation .r_images .r_image .img_wrapper {
+    height: 170px;
   }
 
   .contents .right_side .recommendation .r_images .r_image .description {
@@ -310,7 +310,7 @@
   }
 
   .contents .right_side .event .e_box .ad.bigger {
-    height: 170px;
+    height: 190px;
     width: 75%;
   }
 
