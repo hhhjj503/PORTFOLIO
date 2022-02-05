@@ -82,6 +82,7 @@ header .h_wrapper .title {
   top: 0px;
   left: 0;
   line-height: 63px;
+  z-index: 2;
 }
 
 header .h_wrapper .title a {
@@ -136,6 +137,92 @@ header .h_wrapper .h_menu1 > li a:after {
 header .h_wrapper .h_menu1 > li a.show:after {
   left: -10%;
   width: 120%;
+}
+
+/* ------------------------------ 전체메뉴 --------------------------- */
+
+header .h_wrapper .all_menu {
+  position: absolute;
+  top: 62px;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  background-color: white;
+  color: black;
+  z-index: 1;
+  height: 330px;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.1s ease-out;
+}
+
+header .h_wrapper .all_menu.show_all_menu {
+  display: flex;
+  max-height: 330px;
+  opacity: 1;
+}
+
+header .h_wrapper .all_menu .menu_map {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  margin: auto auto;
+}
+
+header .h_wrapper .all_menu .menu_map > li {
+  width: 120px;
+  margin: 0 30px;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+
+header .h_wrapper .all_menu .menu_map > li > a:after {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  content: "";
+  background-color: #dddddd;
+  height: 3px;
+  width: 100%;
+}
+
+header .h_wrapper .all_menu .menu_map > li > a {
+  font-size: 1.9rem;
+  font-weight: 700;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+  color: inherit;
+  position: relative;
+}
+
+header .h_wrapper .all_menu.show_all_menu .menu_map > li {
+  color: black;
+}
+
+header .h_wrapper .all_menu .menu_map li .menu_map_d2 {
+  background-color: transparent;
+}
+
+header .h_wrapper .all_menu .menu_map li .menu_map_d2 li {
+  margin-top: 15px;
+  line-height: 30px;
+  height: 30px;
+  background-color: transparent;
+}
+
+header .h_wrapper .all_menu .menu_map li .menu_map_d2 a {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+header .h_wrapper .all_menu .menu_map li .menu_map_d2 a:hover {
+  text-decoration: underline;
 }
 
 /* ---------------------- folded_menu-------------------------- */
@@ -235,6 +322,7 @@ header .h_wrapper .h_menu2 {
   display: flex;
   top: 0;
   right: 0px;
+  z-index: 2;
 }
 
 header .h_wrapper .h_menu2 li:last-child {
@@ -247,11 +335,86 @@ header .h_wrapper .h_menu2 li > a {
   cursor: pointer;
   font-size: 1.5rem;
   height: 63px;
+  margin-right: 15px;
 }
 
 header .h_wrapper .h_menu2 li a svg {
   display: inline-block;
   height: inherit;
+}
+
+/*-------------------------- all_menu_color_changed ------------------------ */
+
+.tbn ul.show_all_menu {
+  background-color: white;
+  color: black;
+  border-bottom: 1px solid white;
+}
+
+header .h_wrapper.show_all_menu {
+  background-color: white;
+}
+
+header .h_wrapper .title a.show_all_menu {
+  background-color: green;
+  color: white;
+}
+
+header .h_wrapper .h_menu1.show_all_menu {
+  opacity: 0;
+}
+
+header .h_wrapper .h_menu1 > li.show_all_menu {
+  cursor: default;
+}
+
+header .h_wrapper .h_menu1 > li > a.show_all_menu {
+  cursor: default;
+}
+
+header .h_wrapper .h_menu2 li.home_btn.hide {
+  display: none;
+}
+
+header .h_wrapper .h_menu2 li.all_menu_btn.hide {
+  display: none;
+}
+
+header .h_wrapper .h_menu2 li.all_menu_x {
+  display: none;
+}
+
+header .h_wrapper .h_menu2 li.all_menu_x.show_all_menu {
+  display: block;
+}
+
+header .h_wrapper .h_menu2 li .x_btn_wrapper {
+  position: relative;
+  width: 25px;
+}
+
+header .h_wrapper .h_menu2 li .x_btn_wrapper span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background-color: black;
+  height: 4px;
+  width: 100%;
+}
+
+header .h_wrapper .h_menu2 li .x_btn_wrapper span.x_btn_wrapper2 {
+  top: 22px;
+  background-color: transparent;
+}
+
+header .h_wrapper .h_menu2 li .x_btn_wrapper span.x_btn.up {
+  transform: rotate(45deg);
+  top: 7.5px;
+}
+header .h_wrapper .h_menu2 li .x_btn_wrapper span.x_btn.down {
+  transform: rotate(-45deg);
+  top: 7.5px;
 }
 
 /* ----------------------------------------- main --------------------------------------- */

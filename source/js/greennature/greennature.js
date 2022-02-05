@@ -4,6 +4,70 @@ window.onload = function () {
   const prev = document.querySelector(".prev");
   const next = document.querySelector(".next");
 
+  //all 메뉴버튼 class add show_all_menu
+  const ul = document.querySelector(".tbn ul");
+  const hWrapper = document.querySelector("header .h_wrapper");
+  const allMenu = document.querySelector("header .h_wrapper .all_menu");
+  const allMenuBtn = document.querySelector(".all_menu_btn svg");
+  const hMenu1 = document.querySelector("header .h_wrapper .h_menu1");
+  const hMenu1Lis = document.querySelectorAll(
+    "header .h_wrapper .h_menu1 > li"
+  );
+  const hMenu1As = document.querySelectorAll(
+    "header .h_wrapper .h_menu1 > li > a"
+  );
+  const hMenu1Title = document.querySelector("header .h_wrapper .title a");
+  const hMenu2 = document.querySelector("header .h_wrapper .h_menu2");
+
+  //all 메뉴버튼 class aad hide
+  const homeBtn = document.querySelector(
+    "header .h_wrapper .h_menu2 li.home_btn"
+  );
+  const allMenuBtnLi = document.querySelector(
+    "header .h_wrapper .h_menu2 li.all_menu_btn"
+  );
+  const allMenuBtnX = document.querySelector(
+    "header .h_wrapper .h_menu2 li.all_menu_x"
+  );
+
+  allMenuBtn.addEventListener("click", function () {
+    ul.classList.add("show_all_menu");
+    hWrapper.classList.add("show_all_menu");
+    hMenu1.classList.add("show_all_menu");
+    for (let i = 0; i < hMenu1Lis.length; i++) {
+      hMenu1Lis[i].classList.add("show_all_menu");
+    }
+    for (let i = 0; i < hMenu1As.length; i++) {
+      hMenu1As[i].classList.add("show_all_menu");
+    }
+    hMenu1Title.classList.add("show_all_menu");
+    hMenu2.classList.add("show_all_menu");
+    homeBtn.classList.add("hide");
+    allMenuBtn.classList.add("hide");
+    allMenuBtnLi.classList.add("hide");
+    allMenuBtnX.classList.add("show_all_menu");
+    allMenu.classList.add("show_all_menu");
+  });
+
+  allMenuBtnX.addEventListener("click", function () {
+    allMenu.classList.remove("show_all_menu");
+    ul.classList.remove("show_all_menu");
+    hWrapper.classList.remove("show_all_menu");
+    hMenu1.classList.remove("show_all_menu");
+    hMenu1Title.classList.remove("show_all_menu");
+    for (let i = 0; i < hMenu1Lis.length; i++) {
+      hMenu1Lis[i].classList.remove("show_all_menu");
+    }
+    for (let i = 0; i < hMenu1As.length; i++) {
+      hMenu1As[i].classList.remove("show_all_menu");
+    }
+    hMenu2.classList.remove("show_all_menu");
+    homeBtn.classList.remove("hide");
+    allMenuBtn.classList.remove("hide");
+    allMenuBtnLi.classList.remove("hide");
+    allMenuBtnX.classList.remove("show_all_menu");
+  });
+
   for (let i = 0; i < lis.length; i++) {
     lis[i].addEventListener("mouseenter", function () {
       as[i].classList.add("show");
