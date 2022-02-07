@@ -227,10 +227,6 @@ header .h_wrapper .all_menu .menu_map li .menu_map_d2 a:hover {
 
 /* ---------------------- folded_menu-------------------------- */
 
-header .h_wrapper .h_menu1 > li:hover .folded_menu {
-  max-height: 300px;
-}
-
 header .h_wrapper .h_menu1 li .folded_menu {
   position: absolute;
   width: 1400px;
@@ -238,15 +234,35 @@ header .h_wrapper .h_menu1 li .folded_menu {
   display: flex;
   max-height: 0;
   left: 0;
+  height: auto;
   overflow: hidden;
-  background: transparent;
   cursor: default;
+  background-color: transparent;
+  z-index: 21;
+}
+
+header .h_wrapper .h_menu1 > li.depth2.hovered .folded_menu {
+  max-height: 300px;
+  z-index: 20;
+  transition: 0.3s all;
+}
+
+header .h_wrapper .h_menu1 li.depth2.hovered .folded_menu .f_left {
+  background-color: rgb(49, 84, 179);
+}
+
+header .h_wrapper .h_menu1 li.depth2.hovered .folded_menu .f_right {
+  background-color: white;
+}
+
+header .h_wrapper .h_menu1 li.depth2:hover .folded_menu {
+  max-height: 300px;
 }
 
 header .h_wrapper .h_menu1 li .folded_menu .f_left {
   width: 35%;
-  height: inherit;
-  background-color: rgb(49, 84, 179);
+  height: auto;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -258,6 +274,10 @@ header .h_wrapper .h_menu1 li .folded_menu .f_left .left_title {
   width: 90%;
   font-size: 1.9rem;
   font-weight: 700;
+  visibility: hidden;
+}
+header .h_wrapper .h_menu1 li:hover .folded_menu .f_left .left_title {
+  visibility: visible;
 }
 
 header .h_wrapper .h_menu1 li .folded_menu .f_left .left_desc {
@@ -265,15 +285,21 @@ header .h_wrapper .h_menu1 li .folded_menu .f_left .left_desc {
   font-size: 1.4rem;
   line-height: 25px;
   padding-top: 20px;
+  visibility: hidden;
+}
+
+header .h_wrapper .h_menu1 li:hover .folded_menu .f_left .left_desc {
+  visibility: visible;
 }
 
 header .h_wrapper .h_menu1 li .folded_menu .f_right {
+  position: relative;
   width: 65%;
-  height: inherit;
+  height: auto;
   display: flex;
   justify-items: center;
   align-content: center;
-  background-color: white;
+  background-color: transparent;
 }
 
 header .h_wrapper .h_menu1 li .folded_menu .f_right ul {
@@ -285,6 +311,11 @@ header .h_wrapper .h_menu1 li .folded_menu .f_right ul {
   justify-content: space-between;
   align-content: space-evenly;
   background-color: transparent;
+  visibility: hidden;
+}
+
+header .h_wrapper .h_menu1 li:hover .folded_menu .f_right ul {
+  visibility: visible;
 }
 
 header .h_wrapper .h_menu1 li .folded_menu .f_right ul li {

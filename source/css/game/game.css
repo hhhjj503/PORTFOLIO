@@ -447,10 +447,10 @@ main .filter .filter_box input {
 main .filter .filter_box label {
   font-size: 1.4rem;
   margin-left: 70px;
+  cursor: pointer;
 }
 
-main .filter .filter_box label:hover {
-  cursor: pointer;
+main .filter .filter_box label.clicked {
   color: orange;
   border-bottom: 2px solid orange;
 }

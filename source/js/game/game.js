@@ -5,9 +5,15 @@ window.onload = function () {
   const items = document.querySelectorAll(".promotion .items .item");
   const games = document.querySelectorAll("main .game_login .games > .game");
   const radios = document.querySelectorAll("main .filter .filter_box input");
+  const radiolabels = document.querySelectorAll(
+    "main .filter .filter_box label"
+  );
   const mGameLis = document.querySelectorAll(
     "main .all_games .all_games_wrapper ul > li"
   );
+
+  //필터 label 중 all 은 기본선택
+  radiolabels[0].classList.add("clicked");
 
   //헤더 메뉴
   for (let i = 0; i < lis.length; i++) {
@@ -40,7 +46,7 @@ window.onload = function () {
   // filter 라디오버튼 checked 관리
   for (let i = 0; i < radios.length; i++) {
     radios[i].addEventListener("click", function () {
-      radioChknFilter(radios, radios[i], mGameLis);
+      radioChknFilter(radios, radios[i], mGameLis, radiolabels, radiolabels[i]);
     });
   }
 
@@ -86,12 +92,18 @@ window.onload = function () {
     image.classList.remove("bigger");
   }
 
-  //라디오버튼 누르면 하단 게임목록 필터링
-  function radioChknFilter(radios, radio, mGameLis) {
+  //라디오버튼 누르면 하단 게임목록 필터링, 라벨태그 클래스 추가 제거관리
+  function radioChknFilter(radios, radio, mGameLis, radiolabels, radiolabel) {
     for (let i = 0; i < radios.length; i++) {
       radios[i].checked = false;
     }
     radio.checked = true;
+
+    for (let i = 0; i < radiolabels.length; i++) {
+      radiolabels[i].classList.remove("clicked");
+    }
+    radiolabel.classList.add("clicked");
+
     for (let i = 0; i < mGameLis.length; i++) {
       if (!mGameLis[i].classList.contains("m_show")) {
         mGameLis[i].classList.add("m_show");
@@ -108,4 +120,6 @@ window.onload = function () {
       }
     }
   }
+
+  //라디오버튼 클릭하면 주황색
 };
