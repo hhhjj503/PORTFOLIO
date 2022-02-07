@@ -45,7 +45,7 @@ window.onload = function () {
     return chk;
   }
 
-  //depth2ChkHovered 반환값이 true 이면 hovered class 추가
+  //depth2ChkHovered 반환값이 true 이면(hover 된 li 가 없으면) hovered class 추가
   function depth2AddHovered(depth2li) {
     depth2li.classList.add("hovered");
   }
