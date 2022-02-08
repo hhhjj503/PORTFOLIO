@@ -29,6 +29,9 @@ window.onload = function () {
     });
   }
 
+  screenShow(dlis, dlis[0]);
+
+  //기술란을 누르면 관련된 설명을 화면에 표시
   function screenShow(dlis, li) {
     for (let i = 0; i < dlis.length; i++) {
       dlis[i].classList.remove("screen");
@@ -51,6 +54,7 @@ window.onload = function () {
     bgRoundBar(parseInt(scoreText));
   }
 
+  // 자식태그를 삭제하는 메서드
   function removeAllChild(parent) {
     while (parent.hasChildNodes()) {
       parent.removeChild(bgRound.firstChild);
@@ -58,6 +62,7 @@ window.onload = function () {
     return true;
   }
 
+  //기술란의 score 점수에 따라 자식태그를 생성하는 메서드
   function bgRoundBar(score) {
     const chk = removeAllChild(bgRound);
     if (chk == true) {
@@ -79,8 +84,7 @@ window.onload = function () {
     }
   }
 
-  screenShow(dlis, dlis[0]);
-
+  // 기술란의 글씨 컬러 랜덤 변경
   function changeColor(li) {
     const colorValue = makingcolor();
     li.style.color = colorValue;
@@ -101,6 +105,7 @@ window.onload = function () {
     li.style.textShadow = "none";
   }
 
+  // 특정길이가 아래로 스크롤되면 TOP 버튼표시
   function movedScroll() {
     const currentScrollTop = document.querySelector("html").scrollTop;
     const scrolled = 130;
