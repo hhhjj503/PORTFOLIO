@@ -45,6 +45,10 @@
 
   /* ----------------------------------------------- contents ----------------------------------------------------------- */
 
+  .contents {
+    margin-top: 40px;
+  }
+
   .contents .top_btn {
     display: none;
   }
@@ -169,6 +173,7 @@
     padding-bottom: 0;
     padding-top: 20px;
     background-color: white;
+    padding-top: 0px;
     padding-bottom: 20px;
     height: 1600px;
     margin-top: 50px;

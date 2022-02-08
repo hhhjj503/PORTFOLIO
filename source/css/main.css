@@ -150,7 +150,7 @@ h3.tech_h3 {
 
 .contents {
   width: 100%;
-  margin-top: 7%;
+  margin-top: 150px;
 }
 
 .contents .top_btn {
@@ -503,7 +503,7 @@ h3.tech_h3 {
   .contents .contents_items .tech:hover {
     background-image: linear-gradient(white, white),
       linear-gradient(to bottom, rgb(65, 191, 207) 0%, rgb(55, 96, 134) 100%);
-    transition: 0.2s;
+    transition: 0.5s;
     border-radius: 20px;
   }
   .contents .contents_items .tech:not(:hover) {
