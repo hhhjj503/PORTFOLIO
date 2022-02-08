@@ -22,6 +22,31 @@ a {
   text-decoration: none;
 }
 
+h3 {
+  width: 400px;
+  margin: 20px auto;
+  margin-bottom: 0px;
+  border-radius: 30px;
+  padding: 10px 0;
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 600;
+  color: white;
+  font-family: "Nanum Barun Gothic";
+  letter-spacing: 2px;
+  background-color: rgb(92, 154, 212);
+}
+
+h3.tech_h3 {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  background-color: rgb(51, 150, 163);
+}
+
 /* ----------------------------------------------- header ----------------------------------------------------------- */
 
 .header {
@@ -167,71 +192,80 @@ a {
   height: 430px;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 1100px;
   background-color: white;
   position: relative;
+  box-shadow: 2px 2px 7px 2px rgb(170, 170, 170);
+  margin-bottom: 250px;
 }
 
-.contents .contents_items .introduce .i_title {
-  font-size: 1.7rem;
-  line-height: 24px;
-  letter-spacing: 1px;
-}
-
-.contents .contents_items .introduce .i_info {
-  position: absolute;
-  bottom: 10%;
-  left: 13%;
-  font-size: 3.5rem;
-  color: #555555;
+.contents .contents_items .introduce .i_box1 {
+  width: 50%;
+  text-align: center;
 }
 
 .contents .contents_items .introduce .i_deco {
-  position: absolute;
-  font-size: 15rem;
+  font-size: 12rem;
   font-weight: 800;
-  bottom: -4%;
-  right: 10%;
   color: rgb(65, 191, 207);
-  padding: 0;
+  margin-bottom: 20px;
   text-decoration: none;
   background-color: transparent;
   transition-duration: 0.4s;
 }
 
+.contents .contents_items .introduce .i_info {
+  font-size: 2.4rem;
+  color: #555555;
+  text-align: center;
+}
+
+.contents .contents_items .introduce .i_title {
+  width: 50%;
+  font-size: 1.7rem;
+  line-height: 24px;
+  letter-spacing: 1px;
+}
+
+.contents .contents_items .introduce .i_title .bolded {
+  display: block;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: rgb(51, 150, 163);
+}
+
 .contents .contents_items .tech {
-  margin-top: 250px;
-  height: 500px;
+  height: 470px;
   background-color: #555555;
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 20px;
-  width: 900px;
+  width: 800px;
+  border: 12px solid transparent;
+  background-image: linear-gradient(#555555, #555555),
+    linear-gradient(to bottom, rgb(51, 150, 163) 0%, rgb(55, 96, 134) 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
   border-radius: 15px;
 }
 
-.contents .contents_items .tech .t_title {
-  font-size: 2.8rem;
-  line-height: 45px;
-  font-weight: 500;
-  color: white;
-  text-align: left;
-  position: relative;
-  left: 50px;
+.contents .contents_items .tech .tech_wrapper {
+  height: 100%;
+  width: 100%;
+  display: table;
 }
 
-.contents .contents_items .tech .t_desc {
-  font-size: 2rem;
-}
-
-.contents .contents_items .tech:hover .t_title {
-  cursor: default;
+.contents .contents_items .tech .tech_wrapper .t_desc {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .contents .contents_items .tech .t_desc .t_list li {
   font-size: 3.8rem;
-  margin-bottom: 42px;
+  margin: 32px 0;
   color: white;
   font-weight: 500;
   text-align: center;
@@ -450,11 +484,6 @@ a {
     background-color: rgb(170, 170, 170);
   }
 
-  .contents .contents_items .introduce:hover {
-    transition: 0.5s;
-    box-shadow: 0 0 0 0;
-  }
-
   .contents .contents_items .introduce:hover .i_title {
     display: inline;
     transition: 0.3s;
@@ -465,18 +494,14 @@ a {
     transition: 0.3s;
   }
 
-  .contents .contents_items .introduce:not(:hover) {
-    transition: 0.5s;
-    box-shadow: 10px 6px 10px 1px rgb(151, 151, 151);
-  }
-
   .contents .contents_items .introduce:hover .i_deco {
     bottom: -4%;
     cursor: default;
   }
 
   .contents .contents_items .tech:hover {
-    background-color: white;
+    background-image: linear-gradient(white, white),
+      linear-gradient(to bottom, rgb(51, 150, 163) 0%, rgb(55, 96, 134) 100%);
     transition: 0.2s;
     border-radius: 20px;
   }
