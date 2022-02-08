@@ -357,21 +357,21 @@ header .h_wrapper .h_menu2 {
 }
 
 header .h_wrapper .h_menu2 li:last-child {
-  margin: 0 15px;
+  margin: 0 30px;
 }
 
 header .h_wrapper .h_menu2 li > a {
-  display: block;
   color: inherit;
-  cursor: pointer;
+  cursor: default;
   font-size: 1.5rem;
   height: 63px;
+  line-height: 80px;
   margin-right: 15px;
 }
 
 header .h_wrapper .h_menu2 li a svg {
   display: inline-block;
-  height: inherit;
+  cursor: pointer;
 }
 
 /*-------------------------- all_menu_color_changed ------------------------ */
@@ -416,12 +416,17 @@ header .h_wrapper .h_menu2 li.all_menu_x {
 }
 
 header .h_wrapper .h_menu2 li.all_menu_x.show_all_menu {
+  position: relative;
+  width: 35px;
   display: block;
 }
 
 header .h_wrapper .h_menu2 li .x_btn_wrapper {
-  position: relative;
+  position: absolute;
   width: 25px;
+  height: 25px;
+  top: 22px;
+  cursor: pointer;
 }
 
 header .h_wrapper .h_menu2 li .x_btn_wrapper span {
@@ -432,10 +437,10 @@ header .h_wrapper .h_menu2 li .x_btn_wrapper span {
   background-color: black;
   height: 4px;
   width: 100%;
+  cursor: pointer;
 }
 
 header .h_wrapper .h_menu2 li .x_btn_wrapper span.x_btn_wrapper2 {
-  top: 22px;
   background-color: transparent;
 }
 

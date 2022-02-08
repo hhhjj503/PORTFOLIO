@@ -1,8 +1,14 @@
 window.onload = function () {
   const lis = document.querySelectorAll(".random");
   const dlis = document.querySelectorAll(".detail");
-  const screen = document.querySelector(".dt_screen");
+  const screen = document.querySelector(".dt_screen .dt_text");
   const scrollDefaultValue = document.querySelector("html").scrollTop;
+  const bgRound = document.querySelector(
+    ".contents .contents_items .tech_detail .dt_screen .dt_round .bg_round"
+  );
+  const textRound = document.querySelector(
+    ".contents .contents_items .tech_detail .dt_screen .dt_round .text_round"
+  );
 
   for (let i = 0; i < lis.length; i++) {
     lis[i].addEventListener("mouseover", function () {
@@ -21,6 +27,56 @@ window.onload = function () {
     dlis[i].addEventListener("click", function () {
       screenShow(dlis, dlis[i]);
     });
+  }
+
+  function screenShow(dlis, li) {
+    for (let i = 0; i < dlis.length; i++) {
+      dlis[i].classList.remove("screen");
+    }
+    //div 기술란 내용 가져오기
+    const screenText = li.querySelector("div").innerText;
+
+    // .score 의 점수가져오기
+    const scoreText = li.querySelector(".score").textContent;
+
+    // score 의 점수를 textRound 화면에 표시
+    textRound.innerText = scoreText;
+
+    if (!li.classList.contains("screen")) {
+      li.classList.add("screen");
+      screen.innerHTML = screenText;
+    } else {
+      li.classList.remove("screen");
+    }
+    bgRoundBar(parseInt(scoreText));
+  }
+
+  function removeAllChild(parent) {
+    while (parent.hasChildNodes()) {
+      parent.removeChild(bgRound.firstChild);
+    }
+    return true;
+  }
+
+  function bgRoundBar(score) {
+    const chk = removeAllChild(bgRound);
+    if (chk == true) {
+      //divBar 의 추가할 개수 (score / 10) * 12
+      let degs = (score / 10) * 12; //120 개가 100%
+      let deg = 0; //각을 3도씩 기울임
+      for (let i = 0; i < degs; i++) {
+        setTimeout(() => {
+          let divBar = document.createElement("div");
+          setTimeout(function () {
+            divBar.setAttribute("class", "bar");
+            divBar.style.transition = "0.5s ease-in-out";
+          }, 170);
+          divBar.style.transform = "rotate(" + deg + "deg)";
+          bgRound.appendChild(divBar);
+          deg += 3;
+        });
+      }
+    }
   }
 
   screenShow(dlis, dlis[0]);
@@ -56,19 +112,6 @@ window.onload = function () {
 
     if (currentScrollTop > scrollDefaultValue && currentScrollTop > scrolled) {
       topBtn.classList.add("scrolled");
-    }
-  }
-
-  function screenShow(dlis, li) {
-    for (let i = 0; i < dlis.length; i++) {
-      dlis[i].classList.remove("screen");
-    }
-    const screenText = li.querySelector("div").innerText;
-    if (!li.classList.contains("screen")) {
-      li.classList.add("screen");
-      screen.innerHTML = screenText;
-    } else {
-      li.classList.remove("screen");
     }
   }
 };
