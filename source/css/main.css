@@ -416,8 +416,9 @@ h3.tech_h3 {
   margin-top: 100px;
   width: 1300px;
   margin-left: auto;
+  padding-top: 10px;
   margin-right: auto;
-  background-color: white;
+  background-color: rgb(240, 240, 240);
 }
 
 .contents .contents_items .portfolio .p_title {
@@ -481,7 +482,7 @@ h3.tech_h3 {
 
   .contents .top_btn:hover {
     transition: 0.2s;
-    background-color: rgb(170, 170, 170);
+    background-color: rgb(100, 100, 100);
   }
 
   .contents .contents_items .introduce:hover .i_title {
