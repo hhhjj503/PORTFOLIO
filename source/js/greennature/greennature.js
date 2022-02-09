@@ -193,7 +193,6 @@ window.onload = function () {
     }, 150);
 
     setTimeout(() => {
-      slideWidth = slideWidth - 350; // 다시 원래 너비로 2150
       slider.style.width = slideWidth + "px";
     }, 200);
 
@@ -204,6 +203,7 @@ window.onload = function () {
     setTimeout(() => {
       slider.removeChild(slider.lastElementChild);
       slider.style.left = 0;
+      slideWidth = slideWidth - 350; // 다시 원래 너비로 2150
     }, 400);
   });
 };
