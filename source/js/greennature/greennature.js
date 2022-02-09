@@ -151,7 +151,7 @@ window.onload = function () {
     let cloneSlide_first = sliderImg[0].cloneNode(true); //next가 넘어가면 배열의 첫번째 노드를 복사
 
     let slideWidth = 2100; //350(320 + 30(마진)) * 6
-    const leftWidth = -30 + "px";
+    const leftWidth = -70 + "px";
     slideWidth = slideWidth + 350; // 복사한 첫번째 노드를 붙이기 위한 너비 증가 2400
     setTimeout(() => {
       slider.style.width = slideWidth + "px"; //1400px
@@ -182,7 +182,7 @@ window.onload = function () {
     let cloneSlide_last = sliderImg[sliderImg.length - 1].cloneNode(true); //next가 넘어가면 배열의 첫번째 노드를 복사
 
     let slideWidth = 2100; //350(320 + 30(마진)) * 6
-    const leftWidth = -30 + "px";
+    const leftWidth = +70 + "px";
     slideWidth = slideWidth + 350; // 복사한 첫번째 노드를 붙이기 위한 너비 증가 2400
     setTimeout(() => {
       slider.style.width = slideWidth + "px"; //1400px
