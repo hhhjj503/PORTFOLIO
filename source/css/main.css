@@ -522,11 +522,7 @@ h3.contact_h3 {
 }
 
 .contents .contents_items .contact .contact_wrapper .c_item.focused {
-  background: linear-gradient(
-    to bottom,
-    rgb(16, 3, 134) 0%,
-    rgb(7, 1, 59) 100%
-  );
+  background: linear-gradient(to bottom, rgb(9, 6, 155) 0%, rgb(3, 2, 61) 100%);
 }
 
 .contents .contents_items .contact .contact_wrapper .phone {
