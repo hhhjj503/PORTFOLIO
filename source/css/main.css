@@ -285,7 +285,7 @@ h3.contact_h3 {
   width: 0%;
   position: absolute;
   top: -7px;
-  left: 0px;
+  left: -1px;
   right: 0px;
   bottom: 0px;
   content: "";
