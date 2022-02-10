@@ -524,8 +524,8 @@ h3.contact_h3 {
 .contents .contents_items .contact .contact_wrapper .c_item.focused {
   background: linear-gradient(
     to bottom,
-    rgb(31, 2, 100) 0%,
-    rgb(18, 1, 51) 100%
+    rgb(38, 3, 134) 0%,
+    rgb(18, 1, 65) 100%
   );
 }
 
