@@ -59,10 +59,6 @@ window.onload = function () {
     }
   }
 
-  //하단이미지 이동버튼
-  const prev = document.querySelector(".prev");
-  const next = document.querySelector(".next");
-
   //all 메뉴버튼 class add show_all_menu
   const topUl = document.querySelector(".tbn ul");
   const hWrapper = document.querySelector("header .h_wrapper");
@@ -143,67 +139,4 @@ window.onload = function () {
       as[i].classList.remove("show");
     });
   }
-
-  //하단 슬라이더
-  next.addEventListener("click", function () {
-    let slider = document.querySelector(".slider"); //ul
-    let sliderImg = document.querySelectorAll(".slider .a_item"); //ul li
-    let cloneSlide_first = sliderImg[0].cloneNode(true); //next가 넘어가면 배열의 첫번째 노드를 복사
-
-    let slideWidth = 2100; //350(320 + 30(마진)) * 6
-    const leftWidth = -70 + "px";
-    slideWidth = slideWidth + 350; // 복사한 첫번째 노드를 붙이기 위한 너비 증가 2400
-    setTimeout(() => {
-      slider.style.width = slideWidth + "px"; //1400px
-    }, 100);
-
-    setTimeout(() => {
-      slider.appendChild(cloneSlide_first);
-    }, 150);
-
-    setTimeout(() => {
-      slideWidth = slideWidth - 350; // 다시 원래 너비로 2150
-      slider.style.width = slideWidth + "px";
-    }, 200);
-
-    setTimeout(() => {
-      slider.style.left = leftWidth;
-    }, 300);
-
-    setTimeout(() => {
-      slider.style.left = 0;
-      slider.removeChild(slider.firstElementChild);
-    }, 400);
-  });
-
-  prev.addEventListener("click", function () {
-    let slider = document.querySelector(".slider"); //ul
-    let sliderImg = document.querySelectorAll(".slider .a_item"); //ul li
-    let cloneSlide_last = sliderImg[sliderImg.length - 1].cloneNode(true); //next가 넘어가면 배열의 첫번째 노드를 복사
-
-    let slideWidth = 2100; //350(320 + 30(마진)) * 6
-    const leftWidth = +70 + "px";
-    slideWidth = slideWidth + 350; // 복사한 첫번째 노드를 붙이기 위한 너비 증가 2400
-    setTimeout(() => {
-      slider.style.width = slideWidth + "px"; //1400px
-    }, 100);
-
-    setTimeout(() => {
-      slider.insertBefore(cloneSlide_last, slider.firstElementChild);
-    }, 150);
-
-    setTimeout(() => {
-      slider.style.width = slideWidth + "px";
-    }, 200);
-
-    setTimeout(() => {
-      slider.style.left = leftWidth;
-    }, 300);
-
-    setTimeout(() => {
-      slider.removeChild(slider.lastElementChild);
-      slider.style.left = 0;
-      slideWidth = slideWidth - 350; // 다시 원래 너비로 2150
-    }, 400);
-  });
 };
