@@ -16,6 +16,11 @@
     font-size: 1.5rem;
   }
 
+  h3.contact_h3 {
+    width: 73%;
+    font-size: 1.4rem;
+  }
+
   .header {
     display: flex;
     flex-direction: column;
@@ -226,10 +231,30 @@
     margin-right: auto;
   }
 
+  .contents .contents_items .contact {
+    margin-top: 200px;
+    width: 100%;
+  }
+
+  .contents .contents_items .contact .c_desc {
+    font-size: 1.3rem;
+    width: 90%;
+    word-break: keep-all;
+    box-sizing: border-box;
+    padding: 15px 12px;
+  }
+
+  .contents .contents_items .contact .contact_wrapper .c_item {
+    font-size: 1.2rem;
+    width: 35%;
+    padding: 10px 0;
+  }
+
   /* ----------------------------------------------- footer ----------------------------------------------------------- */
 
   .footer {
     height: 80px;
+    margin-top: 50px;
   }
 
   .footer .f_title {

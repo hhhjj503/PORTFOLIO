@@ -9,6 +9,24 @@ window.onload = function () {
   const textRound = document.querySelector(
     ".contents .contents_items .tech_detail .dt_screen .dt_round .text_round"
   );
+  const contacts = document.querySelectorAll(
+    ".contents .contents_items .contact .contact_wrapper .c_item"
+  );
+
+  for (let i = 0; i < contacts.length; i++) {
+    contacts[i].addEventListener("mouseenter", function () {
+      contactFocused(contacts, contacts[i]);
+    });
+  }
+
+  contacts[0].classList.add("focused");
+
+  function contactFocused(contacts, contact) {
+    for (let i = 0; i < contacts.length; i++) {
+      contacts[i].classList.remove("focused");
+    }
+    contact.classList.add("focused");
+  }
 
   for (let i = 0; i < lis.length; i++) {
     lis[i].addEventListener("mouseover", function () {
