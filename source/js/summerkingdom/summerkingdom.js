@@ -29,7 +29,7 @@ window.onload = function () {
   //banner 에 클래스가 추가된뒤에 스크롤 화면에 표시
   setTimeout(() => {
     body.style.overflowY = "auto";
-  }, 1500);
+  }, 1530);
 
   let imgIndex = 0;
   setTimeout(() => {
@@ -39,7 +39,7 @@ window.onload = function () {
         clearInterval(changeImgByScroll);
         for (let i = 0; i < curtains.length; i++) {
           curtains[i].classList.add("opened");
-          console.log("0이상");
+          //console.log("0이상");
         }
       } else {
         for (let i = 0; i < curtains.length; i++) {
@@ -47,21 +47,21 @@ window.onload = function () {
         }
         changeImgByScroll = setInterval(() => {
           chageImg();
-        }, 800);
+        }, 850);
       }
       if (currentScroll > 90) {
         imgs[imgIndex - 1].classList.add("covered");
-        console.log(imgIndex - 1);
+        //console.log(imgIndex - 1);
       } else {
         imgs[imgIndex - 1].classList.remove("covered");
       }
     });
-  }, 1600);
+  }, 1580);
 
   //이미지를 바꾸는 무한 함수
   let changeImgByScroll = setInterval(() => {
     chageImg();
-  }, 800);
+  }, 850);
 
   //인덱스에 따라 이미지 변경
   function chageImg() {
