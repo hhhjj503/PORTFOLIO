@@ -1,0 +1,173 @@
+@import url(../skip.css);
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-width: 1550px;
+  overflow-y: hidden;
+}
+
+.visible,
+.invisible {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.visible {
+  opacity: 1;
+}
+
+/* --------------------------------------- header ------------------------------------- */
+
+header {
+  height: auto;
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+header .header_wrapper {
+  height: 40px;
+  width: 1200px;
+  margin: 0 auto;
+  background-color: whitesmoke;
+}
+
+header .logo {
+  float: left;
+  font-weight: 700;
+  font-size: 1.8rem;
+  transform: translateY(50%);
+}
+
+header ul {
+  float: right;
+  display: flex;
+  transform: translateY(100%);
+}
+
+header ul li {
+  background-color: inherit;
+}
+
+header ul li:not(:last-child) {
+  padding: 0 10px;
+  border-right: 1px solid gray;
+}
+
+header ul li:last-child {
+  padding-left: 10px;
+}
+
+header ul li a {
+  font-size: 1.3rem;
+  color: gray;
+  cursor: pointer;
+}
+
+/* -------------------------------- main_items -------------------------------- */
+
+main .main_items {
+  width: 100%;
+}
+
+/* --------------------------------banner -------------------------------- */
+
+main .main_items .banner_wrapper {
+  position: relative;
+  width: 100%;
+  background-color: steelblue;
+}
+
+main .main_items .banner_wrapper .banner {
+  position: relative;
+  width: 1550px;
+  height: 700px;
+  background-color: inherit;
+  margin: 0 auto;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: 0.3s ease-in;
+}
+
+main .main_items .banner_wrapper .banner.loaded {
+  opacity: 1;
+}
+
+main .main_items .banner_wrapper .desc {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  font-size: 8rem;
+  font-weight: 700;
+  color: white;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+main .main_items .banner_wrapper .banner .curtain {
+  position: absolute;
+  transition: 0.5s ease-in-out;
+  width: 30%;
+  height: 100%;
+  background-color: inherit;
+  z-index: 1;
+}
+
+main .main_items .banner_wrapper .banner .curtain.opened {
+  width: 0px;
+}
+
+main .main_items .banner_wrapper .banner .curtain_1 {
+  top: 0;
+  left: 0;
+}
+
+main .main_items .banner_wrapper .banner .curtain_r {
+  top: 0;
+  right: 0;
+}
+
+main .main_items .banner_wrapper .banner .img_wrapper {
+  width: 100%;
+  height: 600px;
+  margin: 0 auto;
+  background-color: steelblue;
+  transform: translateY(8.5%);
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main .main_items .banner_wrapper .banner .img_wrapper .img {
+  width: 100%;
+  height: inherit;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: auto;
+  display: none;
+}
+
+main .main_items .banner_wrapper .banner .img_wrapper .img.show {
+  display: inline;
+}
+
+main .main_items .banner_wrapper .banner .img_wrapper:hover {
+  width: 100%;
+  transform-origin: 50% 50%;
+}
+
+main .main_items .banner_wrapper .banner .img_wrapper.cover {
+  height: 100%;
+  transform: translateY(0);
+}
+
+/* -------------------------------- introduce  -------------------------------- */
+
+main .main_items .introduce {
+  width: 100%;
+  background-color: tomato;
+  height: 2000px;
+}
