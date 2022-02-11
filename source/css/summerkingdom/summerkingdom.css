@@ -109,7 +109,7 @@ main .main_items .banner_wrapper .desc {
 
 main .main_items .banner_wrapper .banner .curtain {
   position: absolute;
-  transition: 0.5s ease-in-out;
+  transition: 0.4s ease-in-out;
   width: 30%;
   height: 100%;
   background-color: inherit;
@@ -144,14 +144,20 @@ main .main_items .banner_wrapper .banner .img_wrapper {
 main .main_items .banner_wrapper .banner .img_wrapper .img {
   width: 100%;
   height: inherit;
+  background-position: center;
   background-color: transparent;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: 100%;
   display: none;
+  transition: 0.3s ease-in;
 }
 
 main .main_items .banner_wrapper .banner .img_wrapper .img.show {
   display: inline;
+}
+
+main .main_items .banner_wrapper .banner .img_wrapper .img.show.covered {
+  background-size: 120%;
 }
 
 main .main_items .banner_wrapper .banner .img_wrapper:hover {
