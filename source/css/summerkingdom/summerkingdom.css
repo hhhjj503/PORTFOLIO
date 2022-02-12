@@ -254,12 +254,17 @@ main .main_items .introduce .i_wrapper .intro .line_up ul li {
   line-height: 60px;
   border-radius: 15px;
   background-color: transparent;
-  box-shadow: 1px 1px white, -1px -1px rgb(37, 37, 37);
+  box-shadow: -1px -1px white, 1px 1px rgb(37, 37, 37);
   margin: 10px 0;
   display: flex;
   padding-left: 20px;
   text-align: left;
   box-sizing: border-box;
+  cursor: default;
+}
+
+main .main_items .introduce .i_wrapper .intro .line_up ul li:hover {
+  box-shadow: 1px 1px white, -1px -1px rgb(37, 37, 37);
 }
 
 main .main_items .introduce .i_wrapper .intro .line_up ul .content.date {
@@ -267,15 +272,15 @@ main .main_items .introduce .i_wrapper .intro .line_up ul .content.date {
   font-size: 2.9rem;
   text-shadow: 1px 1px white, -1px -1px rgb(37, 37, 37);
   font-weight: 700;
-  color: rgb(46, 46, 46);
+  color: rgb(26, 26, 26);
 }
 
 main .main_items .introduce .i_wrapper .intro .line_up ul .content.name {
   width: 65%;
-  font-size: 3.2rem;
+  font-size: 3.1rem;
   text-shadow: 1px 1px white, -1px -1px rgb(37, 37, 37);
   font-weight: 700;
-  color: rgb(46, 46, 46);
+  color: rgb(26, 26, 26);
 }
 
 main .main_items .goods_wrapper {
