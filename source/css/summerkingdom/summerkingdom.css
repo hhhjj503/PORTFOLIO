@@ -111,8 +111,9 @@ main .main_items .banner_wrapper .desc {
 main .main_items .banner_wrapper .banner .curtain {
   position: absolute;
   transition: 0.4s ease-in-out;
+  top: -2px;
   width: 30%;
-  height: 100%;
+  height: 101%;
   background-color: inherit;
   z-index: 1;
 }
@@ -122,12 +123,10 @@ main .main_items .banner_wrapper .banner .curtain.opened {
 }
 
 main .main_items .banner_wrapper .banner .curtain_1 {
-  top: 0;
   left: 0;
 }
 
 main .main_items .banner_wrapper .banner .curtain_r {
-  top: 0;
   right: 0;
 }
 
@@ -137,7 +136,6 @@ main .main_items .banner_wrapper .banner .img_wrapper {
   margin: 0 auto;
   background-color: steelblue;
   transform: translateY(8.5%);
-  overflow: hidden;
   display: flex;
   flex-wrap: wrap;
 }
@@ -174,7 +172,114 @@ main .main_items .banner_wrapper .banner .img_wrapper.cover {
 /* -------------------------------- introduce  -------------------------------- */
 
 main .main_items .introduce {
+  position: relative;
   width: 100%;
-  background-color: tomato;
-  height: 2000px;
+  height: 900px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../../images/summerkingdom/beachSand.png);
+  box-sizing: border-box;
+}
+
+main .main_items .introduce:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 2555, 255, 0.8) 0%,
+    rgba(255, 2555, 255, 0.6) 10%,
+    rgba(255, 2555, 255, 0.5) 30%,
+    transparent
+  );
+}
+
+main .main_items .introduce .i_wrapper {
+  width: 1550px;
+  margin: 0 auto;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main .main_items .introduce .i_wrapper .intro {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.4);
+  font-weight: 800;
+  font-size: 5rem;
+  text-align: center;
+  padding: 20px 0;
+  border-radius: 15px;
+}
+
+main .main_items .introduce .i_wrapper .intro .title {
+  color: steelblue;
+  letter-spacing: 8px;
+  text-shadow: 1px 1px rgb(31, 72, 105), 1.5px 1.5px rgb(31, 72, 105),
+    2px 2px rgb(31, 72, 105), 2.5px 2.5px rgb(31, 72, 105),
+    3px 3px rgb(31, 72, 105), 3.5px 3.5px rgb(31, 72, 105),
+    4px 4px rgb(31, 72, 105);
+}
+
+main .main_items .introduce .i_wrapper .intro .desc {
+  margin-top: 50px;
+  color: steelblue;
+  font-size: 3rem;
+  width: 100%;
+  background-color: transparent;
+  text-shadow: 1px 1px 2px white, -1px -1px 2px white;
+}
+
+main .main_items .introduce .i_wrapper .intro .line_up ul {
+  display: flex;
+  height: auto;
+  width: 50%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: transparent;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+main .main_items .introduce .i_wrapper .intro .line_up ul li {
+  width: 40%;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 15px;
+  background-color: transparent;
+  box-shadow: 1px 1px white, -1px -1px rgb(37, 37, 37);
+  margin: 10px 0;
+  display: flex;
+  padding-left: 20px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+main .main_items .introduce .i_wrapper .intro .line_up ul .content.date {
+  width: 35%;
+  font-size: 2.9rem;
+  text-shadow: 1px 1px white, -1px -1px rgb(37, 37, 37);
+  font-weight: 700;
+  color: rgb(46, 46, 46);
+}
+
+main .main_items .introduce .i_wrapper .intro .line_up ul .content.name {
+  width: 65%;
+  font-size: 3.2rem;
+  text-shadow: 1px 1px white, -1px -1px rgb(37, 37, 37);
+  font-weight: 700;
+  color: rgb(46, 46, 46);
+}
+
+main .main_items .goods_wrapper {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(to bottom, white 0, white 20%, steelblue 100%);
 }
