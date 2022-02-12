@@ -384,6 +384,7 @@ main .main_items .event_wrapper .event_list_wrapper ul li .desc {
   width: 80%;
   height: 80%;
   border-radius: 15px;
+  box-sizing: border-box;
   background-color: white;
 }
 
