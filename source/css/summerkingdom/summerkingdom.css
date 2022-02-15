@@ -296,14 +296,14 @@ main .main_items .event_wrapper .event_title {
   width: 1550px;
   margin: 0 auto;
   margin-top: 50px;
-  padding: 20px 0;
-  font-size: 3rem;
-  border-bottom: 1px solid black;
+  padding: 13px 0;
+  font-size: 2.8rem;
   text-align: center;
   font-weight: 700;
+  border-bottom: 1px solid black;
 }
 
-/* ----------------------------- event_list first 행사 섹션 ------------------------------- */
+/* ----------------------------- event_list 행사 섹션 ------------------------------- */
 
 main .main_items .event_wrapper .event_list_wrapper {
   width: 1550px;
@@ -317,8 +317,15 @@ main .main_items .event_wrapper .event_list_wrapper .event_list {
   width: 100%;
   height: 500px;
   overflow: hidden;
-  border-bottom: 1px solid black;
   background-color: transparent;
+}
+
+main
+  .main_items
+  .event_wrapper
+  .event_list_wrapper
+  .event_list:not(:last-child) {
+  border-bottom: 1px solid rgb(192, 192, 192);
 }
 
 main .main_items .event_wrapper .event_list_wrapper ul {
@@ -417,12 +424,13 @@ main
   .desc_wrapper
   .e_title {
   font-size: 2rem;
-  background-color: rgb(211, 211, 211);
+  background-color: rgb(223 72 69);
+  color: white;
   border-radius: 15px;
   width: 100%;
   margin: 40px auto;
   padding: 10px 0;
-  font-weight: 700;
+  font-weight: 900;
   text-align: center;
 }
 
@@ -450,7 +458,119 @@ main
   font-size: 1.8rem;
 }
 
-/* ----------------------------- event_list last 마지막 구간 ------------------------------- */
+/* ----------------------------- event_list 지도 섹션 ------------------------------- */
+
+main
+  .main_items
+  .event_wrapper
+  .event_list_wrapper
+  .event_list.map
+  .map_wrapper {
+  height: 100%;
+  display: flex;
+  width: 100%;
+}
+
+main .main_items .event_wrapper .event_list_wrapper .event_list.map .map {
+  display: flex;
+  width: 70%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+main
+  .main_items
+  .event_wrapper
+  .event_list_wrapper
+  .event_list.map
+  .map
+  .map_img {
+  width: 45%;
+  height: 80%;
+  border-radius: 15px;
+  background-repeat: no-repeat;
+  background-size: cover cover;
+  background-position: center;
+  border: 3px solid #d5dde6;
+}
+
+main
+  .main_items
+  .event_wrapper
+  .event_list_wrapper
+  .event_list.map
+  .transportation_wrapper {
+  width: 30%;
+  background-color: rgb(223, 223, 223);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main
+  .main_items
+  .event_wrapper
+  .event_list_wrapper
+  .event_list.map
+  .transportation_wrapper
+  .t_title {
+  font-size: 1.8rem;
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  padding: 7px 0;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+main
+  .main_items
+  .event_wrapper
+  .event_list_wrapper
+  .event_list.map
+  .transportation_wrapper
+  .way {
+  font-size: 1.8rem;
+  background-color: white;
+  width: 50%;
+  text-align: center;
+  padding: 7px 20px;
+  border-radius: 10px;
+  margin: 10px auto;
+  border: 1px solid rgb(202, 202, 202);
+}
+
+main
+  .main_items
+  .event_wrapper
+  .event_list_wrapper
+  .event_list.map
+  .transportation_wrapper
+  .way_list {
+  flex-wrap: wrap;
+  width: 60%;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+main
+  .main_items
+  .event_wrapper
+  .event_list_wrapper
+  .event_list.map
+  .transportation_wrapper
+  li {
+  width: 40%;
+  height: 20px;
+  font-size: 1.8rem;
+  margin: 10px 0;
+  text-align: center;
+  background-color: white;
+  border-radius: 15px;
+  padding: 5px 0;
+}
+
+/* ----------------------------- event_list 댓글 섹션 ------------------------------- */
 
 main .main_items .event_wrapper .event_list_wrapper .c_wrapper {
   width: 60%;
@@ -526,11 +646,41 @@ main .main_items .event_wrapper .event_list_wrapper .c_wrapper .c_list ul {
   margin-top: 30px;
 }
 
-main .main_items .event_wrapper .event_list_wrapper .c_wrapper .c_list ul li {
-  height: 40px;
-  line-height: 40px;
+main .main_items .event_wrapper .event_list_wrapper .c_wrapper .c_list li {
+  height: 35px;
+  margin: 5px 0;
+  line-height: 35px;
+  width: 100%;
   background-color: transparent;
-  font-size: 1.7rem;
+}
+
+main
+  .main_items
+  .event_wrapper
+  .event_list_wrapper
+  .c_wrapper
+  .c_list
+  .contents_wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  padding: 0 15px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+main
+  .main_items
+  .event_wrapper
+  .event_list_wrapper
+  .c_wrapper
+  .c_list
+  .contents_wrapper
+  .date {
+  font-size: 1.4rem;
 }
 
 /* ----------------------------- 댓글 페이징 ------------------------------- */

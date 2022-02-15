@@ -161,17 +161,49 @@
                   </li>
                 </ul>
               </div>
-              <div class="event_list">
+              <div class="event_list map">
                 <h4 class="skip">진행중인 이벤트</h4>
-                <div class="controller">
-                  <div class="left"></div>
-                  <div class="right"></div>
+                <div class="map_wrapper">
+                  <div class="map">
+                    <div
+                      class="map_img"
+                      style="
+                        background-image: url(../../source/images/summerkingdom/map.png);
+                      "
+                    ></div>
+                    <div
+                      class="map_img"
+                      style="
+                        background-image: url(../../source/images/summerkingdom/subway.png);
+                      "
+                    ></div>
+                  </div>
+                  <div class="transportation_wrapper">
+                    <div class="transportation">
+                      <div class="t_title">교통편</div>
+                      <div class="bus">
+                        <div class="way">버스를 이용하시는 경우</div>
+                        <ul class="way_list bus_list">
+                          <li>11</li>
+                          <li>112</li>
+                          <li>1125-3</li>
+                          <li>17</li>
+                          <li>3215</li>
+                          <li>6514</li>
+                        </ul>
+                      </div>
+                      <div class="subway">
+                        <div class="way">지하철을 이용하시는 경우</div>
+                        <ul class="way_list subway_list">
+                          <li>2호선</li>
+                          <li>7호선</li>
+                          <li>4호선</li>
+                          <li>1호선</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <ul>
-                  <li><lmg /></li>
-                  <li><lmg /></li>
-                  <li><lmg /></li>
-                </ul>
               </div>
               <div class="event_list comment">
                 <h4 class="skip">댓글달기 이벤트</h4>
@@ -182,20 +214,57 @@
                       <label class="skip" for="comment">댓글입력</label>
                       <input type="text" id="comment" />
                       <button type="button" class="btn">댓글입력</button>
-                    </for>
+                    </form>
                   </div>
                   <div class="c_list">
                     <ul>
-                      <li>기대되요!</li>
-                      <li>신나요!</li>
-                      <li>33</li>
-                      <li>444444444</li>
-                      <li>5555</li>
-                      <li>즐거운 행사가 될 것 같습니다!</li>
-                      <li>!!!!!!!!!!!!1</li>
+                      <li>
+                        <div class="contents_wrapper">
+                          <div class="contents">기대되요!</div>
+                          <div class="date">2022.07.31</div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="contents_wrapper">
+                          <div class="contents">신나요!</div>
+                          <div class="date">2022.07.31</div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="contents_wrapper">
+                          <div class="contents">33</div>
+                          <div class="date">2022.07.30</div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="contents_wrapper">
+                          <div class="contents">444444444</div>
+                          <div class="date">2022.07.30</div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="contents_wrapper">
+                          <div class="contents">5555</div>
+                          <div class="date">2022.07.30</div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="contents_wrapper">
+                          <div class="contents">
+                            즐거운 행사가 될 것 같습니다!
+                          </div>
+                          <div class="date">2022.07.30</div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="contents_wrapper">
+                          <div class="contents">!!!!!!!!!!!!1</div>
+                          <div class="date">2022.07.30</div>
+                        </div>
+                      </li>
                     </ul>
                   </div>
-                 <div class="paging">
+                  <div class="paging">
                     <nav>
                       <ul class="page">
                         <li><a>1</a></li>
@@ -203,7 +272,7 @@
                         <li><a>3</a></li>
                       </ul>
                     </nav>
-                 </div>
+                  </div>
                 </div>
               </div>
             </div>
