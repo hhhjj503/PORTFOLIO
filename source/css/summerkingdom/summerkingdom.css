@@ -192,9 +192,9 @@ main .main_items .introduce:before {
   width: 100%;
   background: linear-gradient(
     to bottom,
-    rgba(255, 2555, 255, 0.8) 0%,
-    rgba(255, 2555, 255, 0.6) 10%,
-    rgba(255, 2555, 255, 0.5) 30%,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0.6) 10%,
+    rgba(255, 255, 255, 0.5) 30%,
     transparent
   );
 }
@@ -734,6 +734,6 @@ footer {
   width: 100%;
   height: 100px;
   margin-top: 100px;
-  background-color: teal;
+  background-color: rgb(52 51 59);
   opacity: 1;
 }
