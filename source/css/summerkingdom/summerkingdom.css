@@ -515,9 +515,11 @@ main
   .transportation_wrapper
   .t_title {
   font-size: 1.8rem;
-  background-color: white;
+  background-color: rgb(53 55 59);
+  color: white;
   width: 80%;
   text-align: center;
+  font-weight: 700;
   padding: 7px 0;
   margin: 20px auto;
   border-radius: 10px;
@@ -537,7 +539,7 @@ main
   padding: 7px 20px;
   border-radius: 10px;
   margin: 10px auto;
-  border: 1px solid rgb(202, 202, 202);
+  border: 1px solid rgb(167, 167, 167);
 }
 
 main
@@ -565,9 +567,49 @@ main
   font-size: 1.8rem;
   margin: 10px 0;
   text-align: center;
-  background-color: white;
+  background-color: rgb(82, 82, 82);
+  color: white;
+  font-weight: 700;
   border-radius: 15px;
   padding: 5px 0;
+}
+
+main
+  .main_items
+  .event_wrapper
+  .event_list_wrapper
+  .event_list.map
+  .transportation_wrapper
+  li.line1 {
+  background-color: #0d347f;
+}
+
+main
+  .main_items
+  .event_wrapper
+  .event_list_wrapper
+  .event_list.map
+  .transportation_wrapper
+  li.line2 {
+  background-color: #3b9f37;
+}
+main
+  .main_items
+  .event_wrapper
+  .event_list_wrapper
+  .event_list.map
+  .transportation_wrapper
+  li.line5 {
+  background-color: #703e8c;
+}
+main
+  .main_items
+  .event_wrapper
+  .event_list_wrapper
+  .event_list.map
+  .transportation_wrapper
+  li.line7 {
+  background-color: #5b692e;
 }
 
 /* ----------------------------- event_list 댓글 섹션 ------------------------------- */
