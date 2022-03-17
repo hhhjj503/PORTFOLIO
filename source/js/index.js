@@ -12,6 +12,16 @@ window.onload = function () {
   const contacts = document.querySelectorAll(
     ".contents .contents_items .contact .contact_wrapper .c_item"
   );
+  const contactsAs = document.querySelectorAll(
+    ".contents .contents_items .contact .contact_wrapper a"
+  );
+
+  //마지막 연락처버튼은 PC면 비활성화
+  if (window.outerWidth > 768) {
+    for (let i = 0; i < contactsAs.length; i++) {
+      contactsAs[i].removeAttribute("href");
+    }
+  }
 
   for (let i = 0; i < contacts.length; i++) {
     contacts[i].addEventListener("mouseenter", function () {
@@ -20,13 +30,6 @@ window.onload = function () {
   }
 
   contacts[0].classList.add("focused");
-
-  function contactFocused(contacts, contact) {
-    for (let i = 0; i < contacts.length; i++) {
-      contacts[i].classList.remove("focused");
-    }
-    contact.classList.add("focused");
-  }
 
   for (let i = 0; i < lis.length; i++) {
     lis[i].addEventListener("mouseover", function () {
@@ -136,5 +139,13 @@ window.onload = function () {
     if (currentScrollTop > scrollDefaultValue && currentScrollTop > scrolled) {
       topBtn.classList.add("scrolled");
     }
+  }
+
+  //연락처 마우스 오버시 색상변경
+  function contactFocused(contacts, contact) {
+    for (let i = 0; i < contacts.length; i++) {
+      contacts[i].classList.remove("focused");
+    }
+    contact.classList.add("focused");
   }
 };

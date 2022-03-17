@@ -539,6 +539,11 @@ h3.contact_h3 {
   border-bottom-right-radius: 20px;
 }
 
+.contents .contents_items .contact .contact_wrapper a {
+  color: white;
+  text-decoration: none;
+}
+
 /* ---------------------------------- hover media -------------------------------- */
 
 @media (hover: hover) {
