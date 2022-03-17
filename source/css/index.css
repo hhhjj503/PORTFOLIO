@@ -542,6 +542,7 @@ h3.contact_h3 {
 .contents .contents_items .contact .contact_wrapper a {
   color: white;
   text-decoration: none;
+  cursor: default;
 }
 
 /* ---------------------------------- hover media -------------------------------- */
