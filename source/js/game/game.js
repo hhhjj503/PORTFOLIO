@@ -66,19 +66,29 @@ window.onload = function () {
   }
 
   //배너 이미지 변경
+  let img_changing = false;
   function imgChange(item) {
+    if (img_changing == true) return;
+    const block = document.querySelector("main .banner .screen .block");
     const number = item.querySelector(".image_number");
     const imgPath = imgScreen.style.backgroundImage;
     const numberChk = imgPath.indexOf(number.innerText);
     if (0 < numberChk) return;
-
-    imgScreen.classList.add("black");
-    const startIndex = imgPath.indexOf("/source");
-    const lastIndex = imgPath.lastIndexOf("/") + 1;
-    const slicedPath = imgPath.slice(startIndex, lastIndex);
-    const path = "../.." + slicedPath + number.innerText + ".png";
-    imgScreen.style.backgroundImage = "url('" + path + "'";
-    imgScreen.classList.remove("black");
+    img_changing = true;
+    block.classList.add("locked");
+    setTimeout(() => {
+      const startIndex = imgPath.indexOf("/source");
+      const lastIndex = imgPath.lastIndexOf("/") + 1;
+      const slicedPath = imgPath.slice(startIndex, lastIndex);
+      const path = "../.." + slicedPath + number.innerText + ".png";
+      imgScreen.style.backgroundImage = "url('" + path + "'";
+    }, 1000);
+    setTimeout(() => {
+      block.classList.remove("locked");
+    }, 1500);
+    setTimeout(() => {
+      img_changing = false;
+    }, 2000);
   }
 
   // 배너아래 미니이미지 확대축소

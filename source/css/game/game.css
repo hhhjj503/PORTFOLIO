@@ -195,6 +195,19 @@ main .banner .screen a .image_screen {
   position: relative;
 }
 
+main .banner .screen .block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+
+main .banner .screen .block.locked {
+  background-color: black;
+}
+
 main .banner .screen .promotion {
   position: absolute;
   height: 110px;
