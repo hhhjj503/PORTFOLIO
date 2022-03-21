@@ -18,9 +18,9 @@ window.onload = function () {
 
   pathWrappers[0].classList.add("clicked");
 
+  //배너이미지 무한 변경
   setInterval(() => {
     nextIndex = currentIndex + 1;
-    console.log(currentIndex, clickedIndex, nextIndex);
     if (nextIndex >= wrapperCnt) {
       nextIndex = 0;
       changeImg(
@@ -41,6 +41,7 @@ window.onload = function () {
 
   // 메인배너 이미지 변경
   function changeImg(pathWrappers, pathWrapper, index, path) {
+    //누른인덱스, 누른인덱스값을 저장할 현재인덱스, 현재인덱스에 1을 추가한 다음인덱스
     clickedIndex = parseInt(index.innerHTML);
     currentIndex = clickedIndex;
     for (let i = 0; i < pathWrappers.length; i++) {
