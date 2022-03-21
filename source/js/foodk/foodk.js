@@ -20,7 +20,7 @@ window.onload = function () {
 
   setInterval(() => {
     nextIndex = currentIndex + 1;
-    console.log(currentIndex, nextIndex, clickedIndex);
+    console.log(currentIndex, clickedIndex, nextIndex);
     if (nextIndex >= wrapperCnt) {
       nextIndex = 0;
       changeImg(
@@ -46,15 +46,8 @@ window.onload = function () {
     for (let i = 0; i < pathWrappers.length; i++) {
       pathWrappers[i].classList.remove("clicked");
     }
-    if (currentIndex === clickedIndex) {
-      nextIndex = currentIndex;
-      screen.style.backgroundImage = "url('" + path.innerHTML + "')";
-      pathWrapper.classList.add("clicked");
-    } else {
-      screen.style.backgroundImage = "url('" + path.innerHTML + "')";
-      pathWrapper.classList.add("clicked");
-      currentIndex = nextIndex;
-    }
-    console.log(currentIndex, nextIndex, clickedIndex);
+    nextIndex = currentIndex;
+    screen.style.backgroundImage = "url('" + path.innerHTML + "')";
+    pathWrapper.classList.add("clicked");
   }
 };
