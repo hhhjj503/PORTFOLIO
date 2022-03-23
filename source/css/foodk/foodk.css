@@ -517,4 +517,8 @@ footer .footer_wrapper {
   main .origin td {
     font-size: 0.5vw;
   }
+
+  footer .footer_wrapper {
+    padding-bottom: 5vh;
+  }
 }
