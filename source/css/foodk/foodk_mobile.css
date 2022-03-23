@@ -136,4 +136,9 @@
   main .origin th {
     font-size: 1.9vh;
   }
+
+  footer .footer_wrapper {
+    width: 100%;
+    padding-bottom: 5vh;
+  }
 }
