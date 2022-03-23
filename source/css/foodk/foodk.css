@@ -13,6 +13,7 @@ body {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 /* ---------------------------------- header -------------------------------- */
@@ -131,15 +132,23 @@ aside .side li {
   background-color: white;
   box-sizing: border-box;
   border: 1px solid rgb(185, 185, 185);
+  transition: 0.3s;
 }
 
 aside li > a {
   display: block;
   width: 100%;
+  font-size: 1.3rem;
   text-align: center;
   line-height: 70px;
 }
 
+aside li:hover {
+  background-color: gray;
+}
+aside li:hover a {
+  color: white;
+}
 /* ---------------------------------- main -------------------------------- */
 
 main {
