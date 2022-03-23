@@ -125,6 +125,7 @@
   main .origin_list .origin {
     width: 45%;
     height: 40%;
+    margin: 0;
   }
 
   main .origin caption {
