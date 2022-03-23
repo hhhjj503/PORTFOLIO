@@ -17,9 +17,12 @@
     height: 40px;
   }
 
+  header li {
+    padding: 0 3px;
+  }
+
   header .logo {
-    margin: 0;
-    padding: 2px 5px;
+    margin: 0 5px;
   }
 
   header nav a {
