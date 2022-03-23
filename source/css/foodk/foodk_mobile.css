@@ -45,8 +45,8 @@
     padding-bottom: 40vh;
     background-size: cover;
   }
-  main .screen .screen_title {
-    font-size: 2.6vh;
+  main .banner .screen .screen_title {
+    font-size: 3vh;
   }
 
   main .img_index {
@@ -89,8 +89,15 @@
 
   main .best_menu_wrapper .best_menu .best_menu_desc {
     width: 38%;
-    font-size: 10px;
     left: 10%;
+  }
+
+  main .best_menu_desc .type {
+    font-size: 2vh;
+  }
+
+  main .menu_desc .event {
+    font-size: 2.4vh;
   }
 
   main .origins {
@@ -109,5 +116,14 @@
   main .origin_list .origin {
     width: 40%;
     height: 40%;
+  }
+
+  main .origin caption {
+    font-size: 2vh;
+  }
+
+  main .origin td,
+  main .origin th {
+    font-size: 1.9vh;
   }
 }
