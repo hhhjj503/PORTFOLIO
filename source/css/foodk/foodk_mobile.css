@@ -119,10 +119,11 @@
 
   main .origin_wrapper .origin_list {
     flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 
   main .origin_list .origin {
-    width: 40%;
+    width: 45%;
     height: 40%;
   }
 
