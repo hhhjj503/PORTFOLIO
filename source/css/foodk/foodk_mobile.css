@@ -8,32 +8,8 @@
     display: none;
   }
 
-  aside .side {
-    position: static;
-    top: 0;
-    width: 100%;
-  }
-
-  aside .side ul {
-    display: flex;
-    width: 100%;
-  }
-
-  aside .side li {
-    height: 50px;
-  }
-
-  aside li a {
-    width: 20%;
-    line-height: 0;
-  }
-
   header h1 {
     font-size: 2rem;
-  }
-
-  header li {
-    padding: 0;
   }
 
   header .menu_wrapper {
@@ -46,13 +22,10 @@
     padding: 2px 5px;
   }
 
-  header nav {
-    font-size: 8px;
-  }
-
   header nav a {
     font-size: 1.2rem;
     margin: 0 4px;
+    padding: 0 5px;
   }
 
   header li .sub {
@@ -69,8 +42,11 @@
 
   main .banner .screen {
     width: 100%;
-    padding-bottom: 35vh;
+    padding-bottom: 40vh;
     background-size: cover;
+  }
+  main .screen .screen_title {
+    font-size: 2.6vh;
   }
 
   main .img_index {
@@ -83,16 +59,17 @@
   }
 
   main .lunch_menu .menu_wrapper {
-    padding-bottom: 40vh;
+    padding-bottom: 50vh;
   }
 
   main .menu_wrapper .menus {
     flex-wrap: wrap;
+    align-content: space-evenly;
   }
 
   main .menus .menu {
     width: 40%;
-    height: 40%;
+    height: 45%;
   }
 
   main .best_menu_section {
@@ -100,7 +77,7 @@
   }
 
   main .best_menu_section .best_menu_wrapper {
-    padding-bottom: 32vh;
+    padding-bottom: 40vh;
     flex-wrap: wrap;
   }
 
@@ -121,7 +98,7 @@
   }
 
   main .origins .origin_wrapper {
-    padding-bottom: 40vh;
+    padding-bottom: 50vh;
     background-size: cover;
   }
 
