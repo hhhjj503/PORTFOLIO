@@ -24,8 +24,9 @@
 
   header nav a {
     font-size: 1.2rem;
-    margin: 0 4px;
-    padding: 0 5px;
+    line-height: 40px;
+    margin: 0 2px;
+    padding: 0 2px;
   }
 
   header li .sub {
