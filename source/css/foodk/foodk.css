@@ -505,6 +505,10 @@ footer .footer_wrapper {
     font-size: 0.65vw;
   }
 
+  main .best_menu_img {
+    background-size: cover;
+  }
+
   main .best_menu_desc .type {
     font-size: 0.65vw;
   }
