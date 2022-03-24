@@ -409,7 +409,7 @@ main .origins .origin_wrapper {
   background-image: url(../../images/foodk/cooking.JPG);
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: top;
+  background-position: 50%;
 }
 
 main .origin_wrapper .origin_list {
