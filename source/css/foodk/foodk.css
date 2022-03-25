@@ -337,14 +337,35 @@ main .best_menu_wrapper .best_menus {
   background-color: white;
 }
 
+main .best_menus.scrolled .best_menu {
+  opacity: 1;
+  top: 0;
+}
+
 main .best_menus .best_menu {
   position: relative;
+  top: 3vw;
   width: 40%;
   height: 45%;
   margin: 0 10px;
   background-color: white;
   border-radius: 15px;
   box-shadow: 2px 2px 2px 2px hsl(200 50% 20% / 10%);
+  transition: 1s;
+  opacity: 0;
+}
+
+main .best_menu:nth-child(1) {
+  transition-delay: 0.1s;
+}
+main .best_menu:nth-child(2) {
+  transition-delay: 0.2s;
+}
+main .best_menu:nth-child(3) {
+  transition-delay: 0.3s;
+}
+main .best_menu:nth-child(4) {
+  transition-delay: 0.4s;
 }
 
 main .best_menu:before {

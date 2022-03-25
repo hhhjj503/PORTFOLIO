@@ -5,6 +5,9 @@ window.onload = function () {
   );
   const indexs = document.querySelectorAll(".path_wrapper .index");
   const paths = document.querySelectorAll(".path_wrapper .path");
+  const bestMenus = document.querySelector(
+    "main .best_menu_wrapper .best_menus"
+  );
   let currentIndex = 0;
   let nextIndex = currentIndex + 1;
   let clickedIndex = 0;
@@ -17,6 +20,45 @@ window.onload = function () {
   }
 
   pathWrappers[0].classList.add("clicked");
+
+  //스크롤Y축이 작을경우의 이벤트를 위한 기본스크롤 위치 이동
+  setTimeout(() => {
+    setTimeout(() => {
+      scrollTo(0, 2);
+    }, 100);
+  }, 50);
+
+  // scroll 된 위치를 계산하여 메뉴를 화면에 띄우고 한번실행되면 이벤트제거 true,false
+  let scrolled = false;
+  //스크롤의 총 길이가 1000보다 작으면 바로 클래스 추가 (스크롤이 나타나지 않음)
+  // 1000 이상이면(스크롤이 나타나면) 이벤트를 추가
+  const minScrollHeight = document.querySelector("html").scrollHeight;
+  if (minScrollHeight <= 1000) {
+    bestMenus.classList.add("scrolled");
+  } else {
+    window.addEventListener("scroll", function () {
+      if (scrolled == true) {
+        window.removeEventListener("scroll", function () {});
+      } else {
+        scrolledEvent();
+      }
+    });
+  }
+
+  //스크롤을 감지해 메뉴를 화면에 띄우는 이벤트
+  function scrolledEvent() {
+    const scrollHeight = document.querySelector("html").scrollHeight;
+    if (scrollHeight <= 2000) {
+      bestMenus.classList.add("scrolled");
+      scroll = true;
+      return;
+    }
+    const currentScroll = document.querySelector("html").scrollTop;
+    if (currentScroll > scrollHeight * 0.15) {
+      bestMenus.classList.add("scrolled");
+      scrolled = true;
+    }
+  }
 
   //배너이미지 무한 변경
   setInterval(() => {
