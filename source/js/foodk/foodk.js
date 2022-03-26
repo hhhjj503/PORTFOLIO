@@ -8,6 +8,9 @@ window.onload = function () {
   const bestMenus = document.querySelector(
     "main .best_menu_wrapper .best_menus"
   );
+  const side = document.querySelector(".side ul");
+  const tdeco = document.querySelector("aside .tdeco");
+  const bdeco = document.querySelector("aside .bdeco");
   let currentIndex = 0;
   let nextIndex = currentIndex + 1;
   let clickedIndex = 0;
@@ -44,6 +47,16 @@ window.onload = function () {
       }
     });
   }
+
+  //aside 의 위아래 로고원에 애니메이션추가
+  side.addEventListener("mouseover", function () {
+    tdeco.classList.add("round");
+    bdeco.classList.add("round");
+  });
+  side.addEventListener("mouseleave", function () {
+    tdeco.classList.remove("round");
+    bdeco.classList.remove("round");
+  });
 
   //스크롤을 감지해 메뉴를 화면에 띄우는 이벤트
   function scrolledEvent() {

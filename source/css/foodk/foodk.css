@@ -119,16 +119,61 @@ aside {
   z-index: 4;
 }
 
+aside .tdeco {
+  position: sticky;
+  top: 30px;
+  display: block;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  background-color: yellowgreen;
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+  border-radius: 50%;
+  cursor: default;
+}
+
+aside .bdeco {
+  position: sticky;
+  top: 430px;
+  display: block;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  background-color: yellowgreen;
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+  border-radius: 50%;
+  cursor: default;
+}
+
+aside .tdeco.round,
+aside .bdeco.round {
+  animation: circle 3s linear infinite;
+}
+
+@keyframes circle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 aside .side {
   position: -webkit- sticky;
   position: sticky;
   top: 30px;
   height: 25px;
+  z-index: 100;
 }
 
 aside .side li {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   background-color: white;
   box-sizing: border-box;
   border: 1px solid rgb(185, 185, 185);
@@ -138,9 +183,9 @@ aside .side li {
 aside li > a {
   display: block;
   width: 100%;
-  font-size: 1.3rem;
+  font-size: 1.7rem;
   text-align: center;
-  line-height: 70px;
+  line-height: 80px;
 }
 
 aside li:hover {
