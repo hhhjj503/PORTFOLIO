@@ -121,14 +121,13 @@ input::-webkit-inner-spin-button {
 .login .login_bottom .find_box {
   display: flex;
   width: 100%;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .login .login_bottom .find_box .id_btn,
 .login .login_bottom .find_box .pwd_btn {
   height: 50px;
   width: 49.5%;
-  margin: 2px;
   margin-bottom: 20px;
   border-radius: 10px;
   background-color: #031720;
@@ -136,6 +135,47 @@ input::-webkit-inner-spin-button {
   font-size: 1.6rem;
   font-weight: 600;
   cursor: pointer;
+}
+
+.login label input {
+  position: absolute;
+  left: -999em;
+}
+
+.login label {
+  float: right;
+}
+
+.login label .circle {
+  display: inline-block;
+  background-color: #ccc;
+  width: 40px;
+  height: 20px;
+  border-radius: 8px;
+  top: 2px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.login label .circle:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 3px 3px 3px gray;
+  transition: 0.3s;
+  transition-delay: 0.1s;
+}
+
+.login label input:checked ~ .circle {
+  background-color: #062f42;
+}
+.login label input:checked ~ .circle:after {
+  left: 21px;
 }
 
 @media (hover: hover) {

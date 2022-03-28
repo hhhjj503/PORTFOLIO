@@ -44,4 +44,13 @@
     font-size: 1.5rem;
     height: 30px;
   }
+
+  .login label {
+    float: left;
+    margin-top: 5px;
+  }
+
+  .login label .circle {
+    top: 4px;
+  }
 }
