@@ -1,0 +1,33 @@
+@import url(../setting.css);
+@import url(../board_template.css);
+
+/* ---------------------------------- main --------------------------- */
+
+.contents_wrapper h3 {
+  background-image: url(../../../images/game/g_img1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: white;
+}
+
+h3:before {
+  content: "";
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, black 50%, transparent 100%);
+  border-radius: 15px;
+  z-index: 0;
+}
+h3:after {
+  content: "Square 공략게시판";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  left: 0px;
+  padding-left: 20px;
+}
