@@ -179,6 +179,14 @@ main .game_login .games .game .g_name_box_wrapper .g_name_box .title {
   margin-bottom: 30px;
 }
 
+.g_name_box_wrapper .g_name_box .title a {
+  color: black;
+  text-decoration: none;
+}
+.g_name_box_wrapper .g_name_box .title a:hover {
+  color: orange;
+}
+
 main .game_login .games .game .g_name_box_wrapper .g_name_box .desc {
   font-size: 1.4rem;
 }
@@ -230,6 +238,15 @@ main .game_login .l_wrapper .login2 .login2_item.kakao {
   background-color: #f7e600;
   color: #3a1d1d;
 }
+.login2 .login2_item.naver a,
+.login2 .login2_item.kakao a {
+  color: white;
+  text-decoration: none;
+}
+
+.login2 .login2_item.kakao a {
+  color: #3a1d1d;
+}
 
 main .game_login .l_wrapper .login3 {
   width: 80%;
@@ -245,6 +262,10 @@ main .game_login .l_wrapper .login3 {
 
 main .game_login .l_wrapper .login3 .other {
   cursor: default;
+}
+main .game_login .l_wrapper .login3 a {
+  color: white;
+  text-decoration: none;
 }
 
 main .game_login .l_wrapper .login3 a:hover {
@@ -266,6 +287,11 @@ main .game_login .l_wrapper .find .f_item {
   width: 32%;
   line-height: 40px;
   background-color: whitesmoke;
+}
+
+main .game_login .l_wrapper .find .f_item a {
+  color: black;
+  text-decoration: none;
 }
 
 main .game_login .l_wrapper .find .f_item:hover {
