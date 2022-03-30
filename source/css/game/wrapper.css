@@ -1,0 +1,59 @@
+/* ----------------------------------------- main -------------------------------------- */
+
+/* 새소식메뉴 inner_wrapper 공통 css */
+
+.contents_wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 100px;
+}
+
+.contents_wrapper .inner_wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.contents_wrapper h3 {
+  width: 100%;
+  background-color: rgb(114, 114, 114);
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+.contents_wrapper .path {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.path {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.path li {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.path li:last-child {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.path li:not(:last-child):after {
+  content: ">";
+  font-size: 1.2rem;
+  padding: 0 5px;
+}

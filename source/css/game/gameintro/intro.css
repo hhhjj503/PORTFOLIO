@@ -1,0 +1,74 @@
+@import url(../setting.css);
+
+/* ----------------------------- main ------------------------ */
+
+.intro_list {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.intro_list .list_wrapper {
+  width: 100%;
+}
+
+.list_wrapper > li {
+  width: 100%;
+  height: 300px;
+}
+
+.step {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ccc;
+}
+
+li:first-child .step {
+  border-top: 1px solid #ccc;
+}
+
+.step img {
+  display: inline-block;
+  width: 40%;
+  height: 90%;
+  margin: 15px 0;
+  border-radius: 15px;
+  vertical-align: top;
+}
+
+.step .desc {
+  display: inline-block;
+  width: 59%;
+  height: 100%;
+}
+
+.step .desc li {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 15%;
+  background-color: whitesmoke;
+  line-height: 45px;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.desc .number {
+  display: inline-block;
+  background-color: orange;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 15px;
+  color: white;
+  font-weight: bold;
+}
+
+.desc .orange {
+  color: orange;
+  font-size: 1.6rem;
+  font-weight: bold;
+}

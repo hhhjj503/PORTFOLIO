@@ -1,0 +1,76 @@
+@import url(../setting.css);
+
+/* ----------------------------------------- main -------------------------------------- */
+
+/* -------------------------- inner_wrapper ----------------------------- */
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 10px;
+  position: relative;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+tr:first-child td {
+  font-weight: bold;
+}
+
+th,
+td {
+  font-size: 1.2rem;
+  height: 25px;
+  line-height: 25px;
+}
+
+th {
+  font-weight: bold;
+  position: relative;
+}
+
+th:after {
+  content: "|";
+  font-size: 1rem;
+  position: absolute;
+  right: 0;
+}
+
+td {
+  padding-left: 20px;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.colth {
+  width: 20%;
+}
+
+.detail {
+  padding: 20px 0;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #ccc;
+  line-height: 20px;
+}
+
+button {
+  display: block;
+  margin-left: auto;
+  margin-top: 20px;
+}
+
+/* ----------------------------------------------- */
+
+.event_img {
+  width: 100%;
+  height: 700px;
+  background-image: url(../../../images/game/news/event.JPG);
+  background-size: cover;
+  margin: 20px 0;
+}
+
+.detail {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}

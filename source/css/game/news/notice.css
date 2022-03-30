@@ -1,0 +1,198 @@
+@import url(../setting.css);
+
+/* ----------------------------------------- main -------------------------------------- */
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/*  --------------------------- table ------------------------------ */
+
+.inner_wrapper .board {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.board table {
+  width: 100%;
+}
+
+.board .numcol {
+  width: 19%;
+}
+
+.board .titlecol {
+  width: 60%;
+}
+
+.board thead {
+  border: 1px solid black;
+}
+
+thead th:not(:last-child):after {
+  content: "|";
+  position: relative;
+  top: -1px;
+  left: 45px;
+  font-size: 1.1rem;
+}
+thead th:nth-child(1):after {
+  content: "|";
+  position: relative;
+  top: -1px;
+  left: 80px;
+  font-size: 1.1rem;
+}
+thead th:nth-child(2):after {
+  content: "";
+}
+
+thead th:nth-child(3):before {
+  content: "|";
+  position: relative;
+  top: -1px;
+  left: -45px;
+  font-size: 1.1rem;
+}
+
+tbody {
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  height: 30px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  line-height: 30px;
+  font-size: 1.2rem;
+}
+
+table tr.deco {
+  height: 10px;
+}
+
+table tr td:nth-child(2) {
+  cursor: pointer;
+  position: relative;
+  text-align: left;
+}
+
+table tr:first-child td {
+  cursor: default;
+}
+
+table tr:first-child td:nth-child(2):before {
+  content: "";
+  opacity: 0;
+}
+
+table tr td:nth-child(2):before {
+  position: relative;
+  top: 7.5px;
+  transform: translateY(-50%);
+  content: "안내";
+  display: inline-block;
+  height: 50%;
+  padding: 0 5px;
+  margin-right: 5px;
+  line-height: 15px;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.1rem;
+  background-color: rgb(42, 180, 166);
+  background: linear-gradient(
+    to bottom,
+    rgb(42, 180, 166) 50%,
+    rgb(28, 124, 115) 100%
+  );
+}
+
+table tr td:nth-child(2):hover {
+  text-decoration: underline;
+}
+
+.board .paging {
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.board .paging a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin: 0 2px;
+}
+
+.board .paging a:hover {
+  text-decoration: underline;
+}
+
+.board .paging a.on {
+  text-decoration: underline;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.board .paging .prev,
+.board .paging .next {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.board .prev:before {
+  content: "<";
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 10px;
+  margin-right: 5px;
+  background-color: rgb(65, 65, 65);
+  color: white;
+  font-size: 1.2rem;
+  line-height: 14px;
+}
+.board .next:after {
+  content: ">";
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 10px;
+  margin-left: 5px;
+  background-color: rgb(65, 65, 65);
+  color: white;
+  font-size: 1.2rem;
+  line-height: 14px;
+}
+
+.board form {
+  width: 330px;
+  text-align: center;
+  border-radius: 20px;
+  padding: 5px 0;
+  margin: 10px auto;
+  background-color: rgb(223, 223, 223);
+}
+
+form > * {
+  outline: none;
+}
+
+form select {
+  padding: 2px 0;
+  border-color: rgb(121, 121, 121);
+}
+
+form input {
+  padding: 2px 0;
+  border: none;
+  margin: 0 2px;
+}
+
+form button {
+  padding: 0 10px;
+  height: 23px;
+  vertical-align: top;
+  background-color: rgb(65, 65, 65);
+  color: white;
+  border-radius: 5px;
+}

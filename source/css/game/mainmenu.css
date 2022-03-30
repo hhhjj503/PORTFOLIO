@@ -1,0 +1,108 @@
+/* ----------------------------------------- main --------------------------------------- */
+
+/* --------------------- menu ---------------------------- */
+
+main .contents {
+  width: 100%;
+}
+
+main .contents .menu {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main .contents .menu .depth1 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgb(62, 163, 153);
+  border-radius: 10px;
+  color: white;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+main .contents .menu .depth1 li {
+  text-align: center;
+  position: relative;
+  width: 240px;
+  height: 65px;
+  overflow: hidden;
+}
+
+main .contents .menu .depth1 li.first {
+  border-top-left-radius: 10px;
+}
+
+main .contents .menu .depth1 li.last {
+  border-top-right-radius: 10px;
+}
+
+main .contents .menu .depth1:hover li {
+  overflow: visible;
+  max-height: 100%;
+}
+
+main .contents .menu .depth1 li a {
+  cursor: default;
+  line-height: 65px;
+  font-size: 1.8rem;
+  color: white;
+  text-decoration: none;
+}
+
+main .contents .menu .depth1 li a:hover {
+  cursor: pointer;
+}
+
+main .contents .menu .depth1 li:hover {
+  background-color: rgb(42, 180, 166);
+}
+
+main .contents .menu .depth1 li .depth2.first {
+  border-bottom-left-radius: 10px;
+}
+
+main .contents .menu .depth1 li .depth2.last {
+  border-bottom-right-radius: 10px;
+}
+
+main .contents .menu .depth1 li .depth2.first .left_end {
+  border-bottom-left-radius: 10px;
+}
+
+main .contents .menu .depth1 li .depth2.last .right_end {
+  border-bottom-right-radius: 10px;
+}
+
+main .contents .menu .depth1 li .depth2 {
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  background-color: rgb(71, 71, 71);
+  position: absolute;
+  z-index: 1;
+  padding-bottom: 0;
+}
+
+main .contents .menu .depth1 li .depth2 li {
+  text-align: center;
+  height: 40px;
+}
+
+main .contents .menu .depth1 li .depth2 li a {
+  font-size: 1.4rem;
+  line-height: 40px;
+  cursor: default;
+}
+
+main .contents .menu .depth1 li .depth2 li a:hover {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
+}

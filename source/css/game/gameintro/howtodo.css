@@ -1,0 +1,27 @@
+@import url(../setting.css);
+
+/* ----------------------------- main ------------------------ */
+
+.how {
+  width: 100%;
+}
+
+.how ul {
+  width: 100%;
+}
+
+.how li {
+  width: 80%;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 10px;
+  margin: 20px auto;
+  background-color: rgb(240, 240, 240);
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.how a {
+  margin-left: 10px;
+  color: red;
+}

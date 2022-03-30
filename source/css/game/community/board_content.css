@@ -1,0 +1,104 @@
+@import url(../setting.css);
+
+/* ----------------------------------------- main -------------------------------------- */
+
+/* -------------------------- inner_wrapper ----------------------------- */
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 10px;
+  position: relative;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+tr:first-child td {
+  font-weight: bold;
+}
+
+th,
+td {
+  font-size: 1.2rem;
+  height: 25px;
+  line-height: 25px;
+}
+
+th {
+  font-weight: bold;
+  position: relative;
+}
+
+th:after {
+  content: "|";
+  font-size: 1rem;
+  position: absolute;
+  right: 0;
+}
+
+td {
+  padding-left: 20px;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.colth {
+  width: 20%;
+}
+
+.detail {
+  padding: 20px 0;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #ccc;
+  line-height: 20px;
+}
+
+.paging {
+  width: 100%;
+}
+
+.paging li {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px solid #ccc;
+}
+
+.paging li .prev,
+.paging li .next {
+  display: inline-block;
+  width: 20%;
+  height: 100%;
+  font-size: 1.2rem;
+  text-align: center;
+  position: relative;
+}
+
+.prev:after,
+.next:after {
+  content: "|";
+  font-size: 1rem;
+  font-weight: bold;
+  position: absolute;
+  right: 0;
+}
+
+.paging li a {
+  display: inline-block;
+  width: 75%;
+  height: 100%;
+  color: black;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-left: 20px;
+}
+
+.paging li a:hover {
+  text-decoration: underline;
+}
+
+button {
+  display: block;
+  margin-left: auto;
+  margin-top: 20px;
+}

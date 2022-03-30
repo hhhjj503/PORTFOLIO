@@ -1,0 +1,61 @@
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  overflow-x: auto;
+  min-width: 1200px;
+  background-color: whitesmoke;
+}
+
+/* ----------------------------------------- header --------------------------------------- */
+
+header {
+  width: 100%;
+  background-color: #dbdbdb;
+  height: 46px;
+}
+
+header .top_wrapper {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: inherit;
+  height: inherit;
+}
+
+header .brand a {
+  float: left;
+  line-height: 45px;
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+  font-size: 1.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+header .login {
+  float: right;
+  line-height: 45px;
+}
+
+header .login ul {
+  display: flex;
+}
+
+header .login ul li {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+header .login ul li a {
+  font-size: 1.4rem;
+  color: black;
+}
+
+header .login ul li a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
