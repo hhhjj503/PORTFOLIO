@@ -57,9 +57,13 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 15px;
+  transition: 0.3s;
 }
 .gname a:hover:before {
   background-color: rgba(0, 0, 0, 0);
+}
+.gname a:hover {
+  animation: bgmove 2s linear infinite alternate;
 }
 
 .gname span {
@@ -69,4 +73,13 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 100;
+}
+
+@keyframes bgmove {
+  from {
+    background-size: 100%;
+  }
+  to {
+    background-size: 105%;
+  }
 }
