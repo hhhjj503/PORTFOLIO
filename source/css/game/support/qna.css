@@ -1,1 +1,94 @@
 @import url(../setting.css);
+
+form {
+  margin-top: 20px;
+  width: 100%;
+  background-color: whitesmoke;
+  padding: 40px 0;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+form label {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  box-sizing: border-box;
+  background-color: whitesmoke;
+  position: relative;
+  vertical-align: bottom;
+}
+
+form label:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 50%;
+  border-radius: 50%;
+  background-color: #ccc;
+  height: 2px;
+}
+
+form span {
+  font-size: 2rem;
+  display: inline-block;
+  position: relative;
+  top: 3px;
+}
+
+form label.area {
+  height: 100%;
+  vertical-align: top;
+}
+
+form select {
+  width: 200px;
+  outline: none;
+  height: 33px;
+  font-size: 1.3rem;
+  box-sizing: border-box;
+  padding: 0 5px;
+  border: 1px solid #ccc;
+  line-height: 50px;
+}
+
+form input {
+  outline: none;
+  height: 30px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+form input[type="file"] {
+  width: 500px;
+  background-color: white;
+  line-height: 35px;
+}
+
+form textarea {
+  outline: none;
+  resize: none;
+  border: 1px solid #ccc;
+  margin-top: 15px;
+}
+
+form button {
+  display: block;
+  width: 200px;
+  height: 50px;
+  outline: none;
+  margin: 0 auto;
+  margin-top: 30px;
+  background-color: rgb(42, 180, 166);
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+}

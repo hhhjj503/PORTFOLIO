@@ -79,7 +79,7 @@
       </div>
       <div class="contents_wrapper">
         <section class="inner_wrapper">
-          <h3>문의사항</h3>
+          <h3>문의하기</h3>
           <div class="path">
             <ul>
               <li>홈</li>
@@ -87,6 +87,47 @@
               <li>문의사항</li>
             </ul>
           </div>
+          <form action="#">
+            <fieldset>
+              <legend class="skip">문의하기</legend>
+              <label for="category">카테고리</label>
+              <select name="category" id="category">
+                <option value="일반">일반</option>
+                <option value="버그">버그</option>
+                <option value="오류">오류</option>
+                <option value="게임">게임</option>
+                <option value="서비스">서비스</option></select
+              ><br />
+              <label for="name">유저아이디</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="아이디를 입력해주세요"
+              /><br />
+              <label for="email">이메일</label>
+              <input type="email" name="email" id="email" /> <span>@</span>
+              <input type="email" name="email" id="email" />
+              <select name="category" id="category">
+                <option value="naver.com">naver.com</option>
+                <option value="daum.net">daum.net</option>
+                <option value="hanmail.com">hanmail.com</option>
+                <option value="nate.com">nate.com</option>
+                <option value="none">직접입력</option>
+              </select>
+              <br /><label for="contents" class="area">문의내용</label>
+              <textarea
+                name="contents"
+                id="contents"
+                cols="100"
+                rows="10"
+                placeholder="문의내용을 입력해주세요"
+              ></textarea
+              ><br />
+              <label for="file">파일첨부</label>
+              <input type="file" name="file" id="file" /><br />
+              <button type="submit">보내기</button>
+            </fieldset>
+          </form>
         </section>
       </div>
     </main>

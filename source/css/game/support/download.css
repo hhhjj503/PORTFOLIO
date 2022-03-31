@@ -1,1 +1,112 @@
 @import url(../setting.css);
+
+.download {
+  width: 80%;
+  height: 130px;
+  margin: 20px auto 0;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 25px 0;
+  background-image: url(../../../images/game/g_img1.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.download span {
+  display: inline-block;
+  width: 300px;
+  height: 80px;
+  line-height: 80px;
+  margin: 0 10px;
+  font-size: 1.8rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.download .downBtn {
+  background-color: #f68600;
+}
+
+.download .reinBtn {
+  background-color: #0ebcaa;
+}
+
+.check {
+  width: 90%;
+  height: 100px;
+  margin: 20px auto;
+  text-align: center;
+  background-color: whitesmoke;
+  border: 1px solid #ccc;
+}
+
+.check .ckmsg {
+  display: inline-block;
+  line-height: 100px;
+  font-size: 1.4rem;
+  margin-right: 10px;
+  color: rgb(39, 39, 39);
+}
+
+.check .checking {
+  display: inline-block;
+  background-color: #455d9d;
+  width: 120px;
+  height: 40px;
+  margin: auto;
+  color: white;
+  font-size: 1.5rem;
+  line-height: 40px;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+table {
+  width: 90%;
+  margin: 0 auto;
+}
+
+table caption {
+  text-align: left;
+  height: 50px;
+  font-size: 1.8rem;
+  line-height: 50px;
+}
+
+table caption:before {
+  display: inline-block;
+  content: "●";
+  position: relative;
+  top: -5px;
+  font-size: 1rem;
+  color: #455d9d;
+}
+
+table thead {
+  background-color: #f0f3fa;
+  color: black;
+  border-top: 1px solid #7f9adf;
+  border-bottom: 1px solid #7f9adf;
+}
+
+table th,
+table td {
+  height: 70px;
+  line-height: 70px;
+  font-size: 1.5rem;
+  box-sizing: border-box;
+  padding: 0 20px 0;
+  color: rgb(68, 68, 68);
+}
+
+table td {
+  border: 1px solid #7f9adf;
+  text-align: center;
+}
+
+.list {
+  width: 30%;
+}
