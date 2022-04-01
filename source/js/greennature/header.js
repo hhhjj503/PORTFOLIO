@@ -2,6 +2,7 @@ window.onload = function () {
   //헤더 메뉴 li , a 태그
   const lis = document.querySelectorAll("header .h_wrapper .h_menu1 > li");
   const as = document.querySelectorAll("header .h_wrapper .h_menu1 > li > a");
+  const header = document.querySelector("header");
   //depth1 클래스가 있는 li 태그만 다시 쿼리
   const depth1Lis = document.querySelectorAll(
     "header .h_wrapper .h_menu1 > li.depth1"
@@ -10,6 +11,11 @@ window.onload = function () {
   const depth2Lis = document.querySelectorAll(
     "header .h_wrapper .h_menu1 > li.depth2"
   );
+
+  //헤더를 화면에 늦게 띄우기 위한 기능
+  setTimeout(() => {
+    header.classList.add("opened");
+  }, 10);
 
   //서브메뉴가 없는 depth1 에 hover 되면 depth2 의 hovered class 제거
   for (let i = 0; i < depth1Lis.length; i++) {

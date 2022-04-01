@@ -12,6 +12,14 @@ body.scroll {
   overflow-x: auto;
 }
 
+header {
+  visibility: hidden;
+}
+
+header.opened {
+  visibility: visible;
+}
+
 .tbn {
   width: 100%;
   position: absolute;
