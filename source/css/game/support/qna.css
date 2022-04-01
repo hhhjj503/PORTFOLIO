@@ -4,7 +4,7 @@ form {
   margin-top: 20px;
   width: 100%;
   background-color: white;
-  padding: 40px 40px;
+  padding: 40px 60px;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   box-sizing: border-box;
@@ -67,18 +67,18 @@ form input {
   outline: none;
   height: 30px;
   border: 1px solid #ccc;
-  width: 395px;
+  width: 400px;
 }
 
 form input[type="file"] {
-  width: 640px;
+  width: 500px;
   background-color: white;
   line-height: 35px;
   vertical-align: -webkit-baseline-middle;
 }
 
 form input[type="email"] {
-  width: 200px;
+  width: 150px;
 }
 form input[type="email"] + select {
   width: 200px;
@@ -89,6 +89,7 @@ form textarea {
   resize: none;
   border: 1px solid #ccc;
   margin-top: 15px;
+  width: 500px;
 }
 
 form button {
