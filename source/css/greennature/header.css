@@ -1,0 +1,468 @@
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  min-width: 1400px;
+  overflow-x: auto;
+}
+
+body.scroll {
+  overflow-x: auto;
+}
+
+.tbn {
+  width: 100%;
+  position: absolute;
+}
+
+.tbn ul {
+  display: flex;
+  width: 1400px;
+  margin: 0 auto;
+  color: white;
+  border-bottom: 1px solid #dddddd;
+}
+
+.tbn ul li {
+  background-color: transparent;
+  padding: 10px 0;
+  position: relative;
+  padding-right: 25px;
+}
+
+.tbn ul li:first-child {
+  padding-left: 20px;
+}
+
+.tbn ul li:not(:last-child):after {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 4px;
+  top: 15px;
+  right: 11px;
+  border-radius: 50%;
+  background-color: #dddddd;
+}
+
+.tbn ul li a {
+  font-size: 1.5rem;
+  color: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+
+.tbn a:hover {
+  text-decoration: underline;
+}
+
+/* ----------------------------------------- header --------------------------------------- */
+
+header {
+  width: 100%;
+  position: absolute;
+  top: 36px;
+  left: 0;
+}
+
+header .h_wrapper {
+  width: 1400px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: transparent;
+  color: white;
+  border-bottom: 1px solid #dddddd;
+  position: relative;
+}
+
+header .h_wrapper .title {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  line-height: 63px;
+  z-index: 2;
+}
+
+header .h_wrapper .title a {
+  font-size: 2.3rem;
+  color: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  color: green;
+  background-color: white;
+  margin-left: 20px;
+  padding: 0 10px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+header .h_wrapper .h_menu1 {
+  display: flex;
+  margin: 0 auto;
+}
+
+header .h_wrapper .h_menu1 > li {
+  height: 62px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+header .h_wrapper .h_menu1 > li > a {
+  font-size: 1.9rem;
+  display: block;
+  position: relative;
+  height: 100%;
+  color: inherit;
+  font-weight: 700;
+  line-height: 62px;
+  margin: 0 15px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header .h_wrapper .h_menu1 > li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  bottom: 0px;
+  content: "";
+  width: 0%;
+  height: 4px;
+  background-color: white;
+  transition: 0.3s ease-in-out;
+}
+
+header .h_wrapper .h_menu1 > li a.show:after {
+  left: -10%;
+  width: 120%;
+}
+
+/* ------------------------------ 전체메뉴 --------------------------- */
+
+header .h_wrapper .all_menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  /*  */
+  max-height: 0;
+  /*  */
+  opacity: 0;
+  overflow: hidden;
+  background-color: white;
+  color: black;
+  z-index: 1;
+  height: 250px;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.1s ease-out;
+}
+
+header .h_wrapper .all_menu.show_all_menu {
+  display: flex;
+  max-height: 250px;
+  opacity: 1;
+}
+
+header .h_wrapper .all_menu .menu_map {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+header .h_wrapper .all_menu .menu_map > li {
+  min-width: 80px;
+  margin: 0 20px;
+  text-align: center;
+  position: relative;
+}
+
+header .h_wrapper .all_menu .menu_map > li > a:after {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  content: "";
+  background-color: #dddddd;
+  height: 3px;
+  width: 100%;
+  transition: 0.3s;
+}
+header .h_wrapper .all_menu .menu_map > li:hover a:after {
+  background-color: rgb(42, 72, 156);
+}
+
+header .h_wrapper .all_menu .menu_map > li > a {
+  font-size: 1.9rem;
+  font-weight: 700;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+  color: inherit;
+  position: relative;
+}
+
+header .h_wrapper .all_menu.show_all_menu .menu_map > li {
+  color: black;
+}
+
+header .h_wrapper .all_menu .menu_map li .menu_map_d2 {
+  background-color: transparent;
+  margin-top: 20px;
+}
+
+header .h_wrapper .all_menu .menu_map li .menu_map_d2 li {
+  margin-top: 15px;
+  line-height: 30px;
+  height: 20px;
+  background-color: transparent;
+}
+
+header .h_wrapper .all_menu .menu_map li .menu_map_d2 a {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+}
+
+header .h_wrapper .all_menu .menu_map li .menu_map_d2 a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------------- folded_menu-------------------------- */
+
+header .h_wrapper .h_menu1 li .folded_menu {
+  position: absolute;
+  width: 1400px;
+  top: 62px;
+  display: flex;
+  max-height: 0;
+  left: 0;
+  height: auto;
+  overflow: hidden;
+  cursor: default;
+  background-color: transparent;
+  z-index: 21;
+}
+
+/* hover 될때 해당 li의 드랍다운 출력 */
+header .h_wrapper .h_menu1 li.depth2:hover .folded_menu {
+  max-height: 230px;
+}
+
+/* 드랍다운메뉴가 있는 li 중 가장 처음 hover 된 li 만 보이도록 배경을 설정하고
+ 다른 li에 hover가 되도 첫li 로서 max-height 를 계속유지(화면에 표시) */
+/* max-height 를 준 이유는 folded 메뉴의 드랍다운이 max-height가 300이 되면서 진행되기 때문에
+ 유지하기 위해 max-height 를 줘야함 */
+header .h_wrapper .h_menu1 > li.depth2.hovered .folded_menu {
+  max-height: 230px;
+  z-index: 20;
+  transition: 0.3s ease-out;
+}
+header .h_wrapper .h_menu1 li.depth2.hovered .folded_menu .f_left {
+  background-color: rgb(49, 84, 179);
+}
+header .h_wrapper .h_menu1 li.depth2.hovered .folded_menu .f_right {
+  background-color: white;
+}
+
+/* 드랍다운메뉴 왼쪽 파란부분 */
+header .h_wrapper .h_menu1 li .folded_menu .f_left {
+  width: 35%;
+  height: 230px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+header .h_wrapper .h_menu1 li .folded_menu .f_left .left_title {
+  width: 90%;
+  font-size: 1.9rem;
+  font-weight: 700;
+  visibility: hidden;
+}
+header .h_wrapper .h_menu1 li:hover .folded_menu .f_left .left_title {
+  visibility: visible;
+}
+header .h_wrapper .h_menu1 li .folded_menu .f_left .left_desc {
+  width: 90%;
+  font-size: 1.4rem;
+  line-height: 25px;
+  padding-top: 21px;
+  visibility: hidden;
+}
+header .h_wrapper .h_menu1 li:hover .folded_menu .f_left .left_desc {
+  visibility: visible;
+}
+
+/* 드랍다운 메뉴 오른쪽 하얀부분 */
+header .h_wrapper .h_menu1 li .folded_menu .f_right {
+  width: 65%;
+  height: auto;
+}
+header .h_wrapper .h_menu1 li .folded_menu .f_right ul {
+  width: inherit;
+  height: 230px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: transparent;
+  visibility: hidden;
+}
+header .h_wrapper .h_menu1 li .folded_menu .f_right.festival ul {
+  justify-content: left;
+  margin-left: 52.7px;
+}
+header .h_wrapper .h_menu1 li:hover .folded_menu .f_right ul {
+  visibility: visible;
+}
+header .h_wrapper .h_menu1 li .folded_menu .f_right ul li {
+  width: 230px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: rgb(57, 77, 52);
+  border: 1.5px solid #dddddd;
+  box-shadow: 0 0 4px 0 rgb(0 0 0/4%);
+}
+
+/* 드랍다운 하위메뉴 배경 줄무늬 꾸미기 */
+header .h_wrapper .h_menu1 li .folded_menu .f_right ul li:hover {
+  background: linear-gradient(
+    110deg,
+    rgb(42, 72, 156) 8%,
+    rgb(49, 84, 179) 0,
+    rgb(49, 84, 179) 48%,
+    rgb(42, 72, 156) 0,
+    rgb(42, 72, 156) 100%
+  );
+  cursor: pointer;
+}
+
+header .h_wrapper .h_menu1 li .folded_menu .f_right a {
+  display: block;
+  color: white;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+  line-height: 50px;
+  padding-left: 20px;
+  text-decoration: none;
+}
+
+/* -------------------------- h_menu2 ----------------------- */
+
+header .h_wrapper .h_menu2 {
+  position: absolute;
+  display: flex;
+  top: 0;
+  right: 0px;
+  z-index: 2;
+}
+
+header .h_wrapper .h_menu2 li:last-child {
+  margin: 0 30px;
+}
+
+header .h_wrapper .h_menu2 li > a {
+  color: inherit;
+  cursor: default;
+  font-size: 1.5rem;
+  height: 63px;
+  line-height: 80px;
+  margin-right: 15px;
+}
+
+header .h_wrapper .h_menu2 li a svg {
+  display: inline-block;
+  cursor: pointer;
+}
+
+/*-------------------------- all_menu_color_changed ------------------------ */
+
+.tbn ul.show_all_menu {
+  background-color: white;
+  color: black;
+  border-bottom: 1px solid white;
+}
+
+header .h_wrapper.show_all_menu {
+  background-color: white;
+}
+
+header .h_wrapper .title a.show_all_menu {
+  background-color: green;
+  color: white;
+}
+
+header .h_wrapper .h_menu1.show_all_menu {
+  opacity: 0;
+}
+
+header .h_wrapper .h_menu1 > li.show_all_menu {
+  cursor: default;
+}
+
+header .h_wrapper .h_menu1 > li > a.show_all_menu {
+  cursor: default;
+}
+
+header .h_wrapper .h_menu2 li.home_btn.hide {
+  display: none;
+}
+
+header .h_wrapper .h_menu2 li.all_menu_btn.hide {
+  display: none;
+}
+
+header .h_wrapper .h_menu2 li.all_menu_x {
+  display: none;
+}
+
+header .h_wrapper .h_menu2 li.all_menu_x.show_all_menu {
+  position: relative;
+  width: 35px;
+  display: block;
+}
+
+header .h_wrapper .h_menu2 li .x_btn_wrapper {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 22px;
+  cursor: pointer;
+}
+
+header .h_wrapper .h_menu2 li .x_btn_wrapper span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background-color: black;
+  height: 4px;
+  width: 100%;
+  cursor: pointer;
+}
+
+header .h_wrapper .h_menu2 li .x_btn_wrapper span.x_btn_wrapper2 {
+  background-color: transparent;
+}
+
+header .h_wrapper .h_menu2 li .x_btn_wrapper span.x_btn.up {
+  transform: rotate(45deg);
+  top: 7.5px;
+}
+header .h_wrapper .h_menu2 li .x_btn_wrapper span.x_btn.down {
+  transform: rotate(-45deg);
+  top: 7.5px;
+}
