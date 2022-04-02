@@ -46,11 +46,10 @@ td {
 }
 
 .detail {
-  padding: 20px 0;
+  padding: 20px 0 150px;
   font-size: 1.2rem;
   border-bottom: 1px solid #ccc;
   line-height: 20px;
-  height: 150px;
 }
 
 .paging {
