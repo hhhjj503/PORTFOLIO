@@ -1,2 +1,8 @@
 @import url(../setting.css);
 @import url(../subbanner.css);
+@import url(attraction_template.css);
+
+/* 관광명소 3가지중 활성화된 페이지만 색상 진하게 */
+.attractions_nav li:nth-child(2) a {
+  background-color: #028585;
+}
