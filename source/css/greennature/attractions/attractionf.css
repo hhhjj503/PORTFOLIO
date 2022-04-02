@@ -1,6 +1,14 @@
 @import url(../setting.css);
 @import url(../subbanner.css);
 
+/* 관광명소 3가지중 활성화된 페이지만 색상 진하게 */
+.attractions_nav li:first-child a {
+  border-top-left-radius: 15px;
+  background-color: #028585;
+}
+
+/* --------------------------- attraction_template ----------------------- */
+
 .attraction {
   width: 1400px;
   margin: 0 auto;
@@ -35,10 +43,6 @@
   font-size: 1.7rem;
 }
 
-.attractions_nav li:first-child a {
-  border-top-left-radius: 15px;
-  background-color: #028585;
-}
 .attractions_nav li:last-child a {
   border-top-right-radius: 15px;
 }
@@ -229,6 +233,7 @@
 
 .attraction_desc_detail li > em {
   color: #242424;
+  font-size: 1.5rem;
 }
 
 /* ------------- 설명 로드뷰 버튼 ---------- */
@@ -271,6 +276,7 @@
   padding: 0 40px;
   cursor: pointer;
   transition: 0.3s;
+  margin-bottom: 30px;
   position: relative;
 }
 
@@ -302,10 +308,31 @@
   height: 15px;
 }
 
+.attraction_details .detail_screen {
+  margin-top: 30px;
+}
+
 .attraction_details .detail_screen > div {
   display: none;
-  padding: 30px 0;
+  color: white;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  border: 1px solid #e0e0e0;
+  background-color: whitesmoke;
+  font-size: 1.7rem;
+  clear: both;
 }
+
+.detail_screen #ntro_screen {
+}
+.detail_screen #info_screen {
+}
+.detail_screen #way_screen {
+}
+.detail_screen #surroundinginfo_screen {
+}
+
+/* ------------------- radio 버튼 과 label 효과 연결-------------- */
 
 .attraction_details input[type="radio"]:checked + label {
   border: 3px solid #27a49f;
@@ -317,20 +344,52 @@
 
 .attraction_details #introBtn:checked ~ .detail_screen #intro_screen {
   display: block;
-  background-color: #293838;
 }
 .attraction_details #infoBtn:checked ~ .detail_screen #info_screen {
   display: block;
-  background-color: #293838;
 }
 .attraction_details #wayBtn:checked ~ .detail_screen #way_screen {
   display: block;
-  background-color: #293838;
 }
 .attraction_details
   #surroundinginfoBtn:checked
   ~ .detail_screen
   #surroundinginfo_screen {
   display: block;
-  background-color: #293838;
+}
+
+/*------------------- etc_info----------------- */
+
+.etc_info {
+  width: 1400px;
+  margin: 50px auto;
+  background-color: whitesmoke;
+  box-sizing: border-box;
+  padding-left: 30px;
+}
+
+.etc_info:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.etc_info ul li {
+  height: 70px;
+  float: left;
+  font-size: 1.7rem;
+  line-height: 70px;
+}
+.etc_info ul li:not(:last-child):after {
+  position: relative;
+  display: inline-block;
+  content: "|";
+  font-size: 1.5rem;
+  top: -2px;
+  margin: 0 10px;
+  color: #a7a7a7;
+}
+
+.etc_info li span b {
+  font-weight: bold;
 }
