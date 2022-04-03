@@ -1,2 +1,73 @@
 @import url(../setting.css);
 @import url(../subbanner.css);
+@import url(../inner_template.css);
+
+/* --------------------- inner_nav li 페이지 색상 변경 ---------------*/
+.inner_nav li:nth-child(2) a {
+  background-color: #028585;
+}
+
+/* ---------------- inner > inner_desc --------------- */
+
+.inners .inner_desc {
+  width: 100%;
+}
+
+p {
+  width: 80%;
+  border: 1px solid #028585;
+  border-radius: 10px;
+  line-height: 21px;
+  margin: 0 auto;
+  margin-top: 30px;
+  font-size: 1.5rem;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.policy {
+  width: 100%;
+  position: relative;
+  margin-top: 50px;
+}
+
+.policy h3 {
+  width: 80%;
+  height: 70px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #293838;
+  line-height: 70px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.policy h3:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 8px;
+  width: 25%;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.policy li {
+  font-size: 1.5rem;
+  line-height: 30px;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.policy li:before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  position: relative;
+  top: -4px;
+  border-radius: 50%;
+  margin-right: 5px;
+  background-color: #028585;
+}

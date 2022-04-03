@@ -1,93 +1,8 @@
-/* --------------------------- attraction_template ----------------------- */
+@import url(../inner_template.css);
 
-.attraction {
-  width: 1400px;
-  margin: 0 auto;
-  position: relative;
-}
+/* ---------------- inner > inner_desc --------------- */
 
-/* -------------- 배너에 겹쳐진 nav ------------------ */
-
-.attraction .attractions_nav {
-  position: absolute;
-  top: -120px;
-}
-
-.attractions_nav li {
-  float: left;
-  width: 135px;
-  height: 70px;
-}
-
-.attractions_nav a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(0, 160, 160);
-  box-sizing: border-box;
-  text-align: center;
-  line-height: 70px;
-  font-size: 1.3rem;
-  color: white;
-  text-decoration: none;
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 1.7rem;
-}
-
-.attractions_nav li:last-child a {
-  border-top-right-radius: 15px;
-}
-
-/* -------------- attraction 상단 h3 ------------------ */
-
-.attraction_header {
-  width: 100%;
-  margin-top: 50px;
-  position: relative;
-}
-
-.attraction_header h3 {
-  width: 100%;
-  height: 70px;
-  font-size: 3.5rem;
-  font-weight: bold;
-  color: #293838;
-  line-height: 70px;
-  border-bottom: 1px solid #ccc;
-  text-indent: 20px;
-}
-
-/* ------------- 상단 path ------------------ */
-
-.attraction_header .path {
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-}
-
-.path li {
-  display: inline;
-  float: left;
-  line-height: 70px;
-  font-size: 1.5rem;
-}
-
-.path li:last-child {
-  font-weight: bold;
-}
-
-.path li:not(:last-child):after {
-  position: relative;
-  top: -2px;
-  content: "▶";
-  margin: 0 5px;
-  font-size: 1.1rem;
-}
-
-/* -------------- attraction  ------------------ */
-
-.attraction_desc {
+.inner_desc {
   width: 100%;
   margin-top: 30px;
   padding: 50px 100px;
@@ -95,7 +10,7 @@
   background-color: #f7f7f7;
 }
 
-.attraction_desc:after {
+.inner_desc:after {
   content: "";
   display: block;
   clear: both;
@@ -103,7 +18,7 @@
 
 /* -------------- attraction 왼쪽 이미지 슬라이더 ------------------ */
 
-.attraction_desc .slider {
+.inner_desc .slider {
   float: left;
   width: 600px;
   height: 400px;
@@ -154,7 +69,7 @@
 
 /* -------------- 슬라이더 컨트롤러 ------------------ */
 
-.attraction_desc .slider .control {
+.inner_desc .slider .control {
   position: absolute;
   width: 200px;
   height: 50px;
@@ -212,7 +127,7 @@
 
 /* ----------------- attraction 오른쪽 설명 ------------- */
 
-.attraction_desc .attraction_desc_detail {
+.inner_desc .inner_desc_detail {
   width: 600px;
   height: 400px;
   float: right;
@@ -222,7 +137,7 @@
 
 /* ---------- 설명 제목 -------------- */
 
-.attraction_desc_detail strong {
+.inner_desc_detail strong {
   display: block;
   width: 100%;
   font-size: 2rem;
@@ -232,7 +147,7 @@
 
 /*------------ 설명 단락 ------------ */
 
-.attraction_desc_detail p {
+.inner_desc_detail p {
   font-size: 1.6rem;
   line-height: 30px;
   color: #242424;
@@ -240,11 +155,11 @@
 
 /*-------- 설명 주소 --------- */
 
-.attraction_desc_detail ul {
+.inner_desc_detail ul {
   width: 100%;
 }
 
-.attraction_desc_detail li {
+.inner_desc_detail li {
   width: 100%;
   height: 30px;
   line-height: 30px;
@@ -254,7 +169,7 @@
   border-top: 1px solid #ccc;
 }
 
-.attraction_desc_detail li > span:after {
+.inner_desc_detail li > span:after {
   position: relative;
   top: -2px;
   content: "|";
@@ -262,14 +177,14 @@
   margin: 0 10px;
 }
 
-.attraction_desc_detail li > em {
+.inner_desc_detail li > em {
   color: #242424;
   font-size: 1.5rem;
 }
 
 /* ------------- 설명 로드뷰 버튼 ---------- */
 
-.attraction_desc_detail button {
+.inner_desc_detail button {
   display: block;
   width: 180px;
   height: 45px;
@@ -281,7 +196,7 @@
   transition: 0.3s;
 }
 
-.attraction_desc_detail button:hover {
+.inner_desc_detail button:hover {
   color: white;
   background-color: #132f5a;
 }

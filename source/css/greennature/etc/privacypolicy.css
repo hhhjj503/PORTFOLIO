@@ -1,2 +1,10 @@
 @import url(../setting.css);
 @import url(../subbanner.css);
+@import url(../inner_template.css);
+
+/* --------------------- inner_nav li 페이지 색상 변경 ---------------*/
+.inner_nav li:nth-child(1) a {
+  background-color: #028585;
+}
+
+/* ---------------- inner > inner_desc --------------- */
