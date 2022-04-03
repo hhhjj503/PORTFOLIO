@@ -12,17 +12,40 @@
 .inners .inner_desc {
   width: 100%;
 }
-
-p {
+.inner_desc .detail {
   width: 80%;
+  height: 150px;
   border: 1px solid #028585;
   border-radius: 10px;
-  line-height: 21px;
-  margin: 0 auto;
-  margin-top: 30px;
-  font-size: 1.5rem;
+  margin: 30px auto 0;
   padding: 20px;
   box-sizing: border-box;
+}
+
+.inner_desc .warning {
+  display: inline-block;
+  width: 10%;
+  height: 100%;
+  background-image: url(../../../images/greennature/etc/warning.JPG);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 20px;
+}
+
+.inner_desc .law {
+  display: inline-block;
+  width: 89%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 26px 0 26px 20px;
+  vertical-align: top;
+}
+
+p {
+  display: block;
+  line-height: 25px;
+  font-size: 1.5rem;
+  margin: auto 0;
 }
 
 .policy {
