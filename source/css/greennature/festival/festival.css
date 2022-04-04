@@ -8,3 +8,420 @@
 }
 
 /* ---------------- inner > inner_desc --------------- */
+
+.inner_desc {
+  width: 100%;
+  margin-top: 30px;
+  padding: 50px 100px;
+  box-sizing: border-box;
+  background-color: #f7f7f7;
+}
+
+.inner_desc:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* -------------- festival 왼쪽 이미지 슬라이더 ------------------ */
+
+.inner_desc .slider {
+  float: left;
+  width: 600px;
+  height: 400px;
+  position: relative;
+}
+
+.slider .img_items_outer {
+  width: 600px;
+  height: 400px;
+  transition: 0.3s;
+  overflow: hidden;
+  border-radius: 15px;
+  position: relative;
+}
+
+.slider .img_items_inner {
+  width: 1800px;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+}
+
+.slider .img_items_inner:hover {
+  left: -600px;
+}
+
+.slider .img_items_inner:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.slider .img_items_inner li {
+  float: left;
+  width: 600px;
+  height: 400px;
+}
+
+.slider .item {
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../source/images/greennature/festivals/festival.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* -------------- 슬라이더 컨트롤러 ------------------ */
+
+.inner_desc .slider .control {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  right: 25px;
+  bottom: -25px;
+  background-color: white;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.slider .control span {
+  columns: #ddd;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 50px;
+  display: inline-block;
+  width: 5%;
+  text-align: center;
+  vertical-align: top;
+}
+
+.control .prevBtn,
+.control .stopBtn,
+.control .nextBtn {
+  padding: 0 8px;
+  cursor: pointer;
+}
+
+.control .slash,
+.control .index_l {
+  color: #a7a7a7;
+}
+
+.control .prevBtn:before {
+  display: inline-block;
+  content: "<";
+  font-size: 2.5rem;
+  color: #a7a7a7;
+}
+
+.control .stopBtn::before {
+  display: inline-block;
+  content: "||";
+  font-size: 1.8rem;
+}
+
+.control .nextBtn:before {
+  display: inline-block;
+  position: relative;
+  left: -5px;
+  content: ">";
+  font-size: 2.5rem;
+  color: #a7a7a7;
+}
+
+/* ----------------- festival 오른쪽 설명 ------------- */
+
+.inner_desc .inner_desc_detail {
+  width: 600px;
+  height: 400px;
+  float: right;
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+/* ---------- 설명 제목 -------------- */
+
+.inner_desc_detail strong {
+  display: block;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+/*------------ 설명 단락 ------------ */
+
+.inner_desc_detail p {
+  font-size: 1.6rem;
+  line-height: 30px;
+  color: #242424;
+  position: relative;
+  margin-bottom: 50px;
+}
+.inner_desc_detail p:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: -25px;
+  background-color: #ccc;
+}
+
+/*-------- 설명 주소,전화번호 --------- */
+
+.inner_desc_detail ul {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.inner_desc_detail li {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 1.4rem;
+}
+
+.inner_desc_detail li > span:after {
+  position: relative;
+  top: -2px;
+  content: "|";
+  font-size: 1.1rem;
+  margin: 0 10px;
+}
+
+.inner_desc_detail li > em {
+  color: #242424;
+  font-size: 1.5rem;
+}
+
+/* ------------- 설명 로드뷰 버튼 ---------- */
+
+.inner_desc_detail button {
+  display: block;
+  width: 180px;
+  height: 45px;
+  border-radius: 5px;
+  border: 1px solid #132f5a;
+  cursor: pointer;
+  background-color: white;
+  font-size: 1.4rem;
+  transition: 0.3s;
+}
+
+.inner_desc_detail button:hover {
+  color: white;
+  background-color: #132f5a;
+}
+
+/* ---------------------- 슬라이더 다음 label 세부정보란 --------------- */
+
+.festival .festival_details {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.festival_details label {
+  float: left;
+  width: 25%;
+  height: 70px;
+  line-height: 70px;
+  background-color: #293838;
+  box-sizing: border-box;
+  background-color: white;
+  font-size: 1.7rem;
+  text-align: left;
+  border: 1px solid #ccc;
+  padding: 0 40px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.festival_details label:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 5px;
+  border-radius: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 40px;
+  background-color: #a7a7a7;
+  transition: 0.3s;
+}
+
+.festival_details:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.festival_details label:hover {
+  border: 3px solid #27a49f;
+}
+.festival_details label:hover:after {
+  background-color: #27a49f;
+  height: 15px;
+}
+
+.festival_details .detail_screen {
+  margin-top: 30px;
+}
+
+.festival_details .detail_screen > div {
+  display: none;
+  color: black;
+  box-sizing: border-box;
+  border: 1px solid #e0e0e0;
+  background-color: whitesmoke;
+  font-size: 1.7rem;
+  clear: both;
+}
+
+#intro_screen {
+  padding: 50px 100px;
+}
+
+#intro_screen h3 {
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+#intro_screen p {
+  font-size: 1.7rem;
+  line-height: 30px;
+  margin-bottom: 50px;
+}
+
+#intro_screen img {
+  width: 80%;
+  height: 80%;
+  margin-bottom: 20px;
+}
+
+#info_screen table {
+  width: 100%;
+  border-top: 1px solid #666;
+}
+
+#info_screen table th {
+  background-color: white;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #ccc;
+}
+
+#info_screen table td {
+  height: 50px;
+  box-sizing: border-box;
+  padding: 0 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+#way_screen {
+  position: relative;
+}
+
+#way_screen img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+#way_screen .mapBtn {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 200px;
+  height: 70px;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+#way_screen .mapBtn:after {
+  display: inline-block;
+  content: ">";
+  width: 25px;
+  height: 25px;
+  line-height: 27px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #27a49f;
+  border-radius: 50%;
+  margin-left: 50px;
+}
+
+#way_screen .mapBtn:hover {
+  background-color: #efefef;
+}
+
+#surroundinginfo_screen ul {
+  width: 100%;
+}
+
+#surroundinginfo_screen li {
+  width: 33%;
+  display: inline-block;
+  height: 170px;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+#surroundinginfo_screen span {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+  font-size: 1.4rem;
+  color: white;
+  text-align: center;
+  background-color: #132f5a;
+  margin-bottom: 20px;
+}
+#surroundinginfo_screen strong {
+  display: block;
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+#surroundinginfo_screen p {
+  font-size: 1.7rem;
+  color: #666;
+}
+
+/* ------------------- radio 버튼 과 label 효과 연결-------------- */
+
+.festival_details input[type="radio"]:checked + label {
+  border: 3px solid #27a49f;
+}
+.festival_details input[type="radio"]:checked + label:after {
+  background-color: #27a49f;
+  height: 15px;
+}
+
+.festival_details #introBtn:checked ~ .detail_screen #intro_screen {
+  display: block;
+}
+.festival_details #infoBtn:checked ~ .detail_screen #info_screen {
+  display: block;
+}
+.festival_details #wayBtn:checked ~ .detail_screen #way_screen {
+  display: block;
+}
+.festival_details
+  #surroundinginfoBtn:checked
+  ~ .detail_screen
+  #surroundinginfo_screen {
+  display: block;
+}

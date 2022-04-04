@@ -8,3 +8,140 @@
 }
 
 /* ---------------- inner > inner_desc --------------- */
+
+.guidemap {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.guidemap h4 {
+  width: 100%;
+  font-size: 1.7rem;
+  font-weight: bold;
+  height: 50px;
+  line-height: 50px;
+  margin-top: 30px;
+}
+
+.guidemap .mapsupport {
+  width: 100%;
+  border: 1px solid #ccc;
+  height: 70px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 27px 30px;
+}
+
+.mapsupport strong {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.mapsupport strong:after {
+  display: inline-block;
+  content: "|";
+  font-size: 1.1rem;
+  margin: 0 10px;
+  position: relative;
+  top: -2px;
+}
+
+.mapsupport p {
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+.guidemap .digitalmapsupport {
+  width: 100%;
+}
+
+.digitalmapsupport li {
+  width: 100%;
+  height: 70px;
+  font-size: 1.5rem;
+  background-color: whitesmoke;
+  box-sizing: border-box;
+  padding: 27px 20px 27px 130px;
+  border-radius: 5px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.digitalmapsupport li span {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #028585;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.digitalmapsupport img {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 70px;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+}
+
+.digitalmapsupport li:first-child:after {
+  position: absolute;
+  content: url(../../../images/greennature/help/angle-down-solid.svg);
+  width: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 20px;
+  bottom: -25px;
+}
+
+.touristmap {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.downloadBtn_wrapper {
+  margin-top: 40px;
+  width: 100%;
+  border: 1px solid #ccc;
+  height: 80px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 33px 30px;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.downloadBtn_wrapper button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+  width: 80px;
+  height: 40px;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  font-size: 1.3rem;
+}
+
+button:hover {
+  background-color: rgb(80, 160, 160);
+  color: white;
+}

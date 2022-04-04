@@ -8,3 +8,116 @@
 }
 
 /* ---------------- inner > inner_desc --------------- */
+
+/* ------------------------- 지도 ---------------------- */
+
+.inner_desc .traffic_screen {
+  position: relative;
+  margin-top: 30px;
+}
+
+.traffic_screen img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.traffic_screen .mapBtn {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 200px;
+  height: 70px;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.traffic_screen .mapBtn:after {
+  display: inline-block;
+  content: ">";
+  width: 25px;
+  height: 25px;
+  line-height: 27px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #27a49f;
+  border-radius: 50%;
+  margin-left: 50px;
+}
+
+.mapBtn:hover {
+  background-color: #efefef;
+}
+
+/* ---------------- 교통편 -------------- */
+
+.inner_desc h4 {
+  margin-top: 50px;
+  font-size: 1.7rem;
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  box-sizing: border-box;
+  padding-left: 20px;
+  border-bottom: 2px solid #27a49f;
+}
+
+.types {
+  width: 100%;
+}
+
+.types .type {
+  padding: 40px 0 40px 300px;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+
+.type img {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  padding: 20px;
+  top: 30px;
+  left: 80px;
+  object-fit: cover;
+  border-radius: 30%;
+  background-color: rgb(229, 229, 229);
+}
+
+.type strong {
+  font-size: 1.5rem;
+  color: #27a49f;
+  font-weight: bold;
+}
+
+.type span {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: bold;
+  width: 60px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  border: 1px solid #333;
+  border-radius: 3px;
+  margin-top: 20px;
+}
+
+.type li {
+  height: 40px;
+  line-height: 40px;
+  font-size: 1.3rem;
+}
+
+.type li:before {
+  display: inline-block;
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: #27a49f;
+  position: relative;
+  top: -2px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
