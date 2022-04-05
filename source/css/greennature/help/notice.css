@@ -1,10 +1,74 @@
 @import url(../setting.css);
 @import url(../subbanner.css);
 @import url(../inner_template.css);
+@import url(../searchform.css);
+@import url(../paging.css);
 
 /* --------------------- inner_nav li 페이지 색상 변경 ---------------*/
 .inner_nav li:nth-child(2) a {
   background-color: #028585;
 }
 
+/* -------------- searchform.css 작은이미지 변경 ------------ */
+
+form .totalcount:before {
+  content: url(../../../images/greennature/help/bullhorn-solid.svg);
+}
+
 /* ---------------- inner > inner_desc --------------- */
+
+table {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
+  border-top: 2px solid black;
+}
+
+table thead th {
+  font-weight: bold;
+}
+
+table th,
+table td {
+  text-align: center;
+  vertical-align: middle;
+  height: 50px;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  box-sizing: border-box;
+}
+
+table td a {
+  color: black;
+  text-decoration: none;
+}
+
+table td a:hover {
+  text-decoration: underline;
+}
+
+table tr:first-child th:nth-child(2) {
+  text-align: left;
+  padding-left: 10px;
+}
+table tr td:nth-child(2) {
+  text-align: left;
+  padding-left: 10px;
+}
+
+table tr:first-child th:not(:last-child):after {
+  position: absolute;
+  content: "|";
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  font-size: 1.4rem;
+  color: #ccc;
+}
+table tr:nth-child(-n + 2) td:nth-child(4):before {
+  content: url(../../../images/greennature/help/file-solid.svg);
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+}

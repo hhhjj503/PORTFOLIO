@@ -1,10 +1,140 @@
 @import url(../setting.css);
 @import url(../subbanner.css);
 @import url(../inner_template.css);
+@import url(../searchform.css);
+@import url(../paging.css);
 
 /* --------------------- inner_nav li 페이지 색상 변경 ---------------*/
 .inner_nav li:nth-child(2) a {
   background-color: #028585;
 }
 
+/* -------------- searchform.css 작은이미지 변경 ------------ */
+
+form .totalcount:before {
+  content: url(../../../images/greennature/history/table-list-solid.svg);
+}
+
+/* ------------- paging ------------- */
+.paging {
+  clear: both;
+}
+
 /* ---------------- inner > inner_desc --------------- */
+
+/* ------------- 설명 로드뷰 버튼 ---------- */
+
+.histories {
+  width: 80%;
+  margin: 30px auto 0;
+}
+
+.histories .history {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 30px;
+}
+
+.history .history_body {
+  width: 100%;
+  height: 100%;
+}
+
+/* a 의 모든자식이 float 지만 history_body 로부터 높이를
+받아서 clear를 안해도 괜찮음 */
+
+.history_body a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  border: 2px solid rgb(223, 223, 223);
+  border-radius: 15px;
+  transition: 0.3s;
+  margin-bottom: 30px;
+}
+
+.history_body a img {
+  width: 23%;
+  height: 100%;
+  float: left;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.history_body h4 {
+  float: right;
+  text-align: left;
+  width: 77%;
+  font-size: 1.8rem;
+  height: 30px;
+  line-height: 30px;
+  box-sizing: border-box;
+  padding-left: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+.history_body p {
+  width: 77%;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  box-sizing: border-box;
+  overflow: hidden;
+  float: right;
+  font-size: 1.4rem;
+  padding-left: 30px;
+  line-height: 20px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.history_body .btn {
+  float: right;
+  width: 180px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 5px;
+  border: 1px solid #132f5a;
+  cursor: pointer;
+  background-color: white;
+  font-size: 1.4rem;
+  transition: 0.3s;
+  box-sizing: border-box;
+  padding: 0 10px;
+  text-align: left;
+  position: relative;
+  margin-left: auto;
+  color: black;
+  text-decoration: none;
+}
+
+.history_body .btn:after {
+  position: absolute;
+  content: ">";
+  font-size: 2rem;
+  top: 0;
+  right: 10px;
+  display: block;
+}
+
+.history_body a:hover {
+  border: 2px solid #132f5a;
+}
+
+.history_body a:hover .btn {
+  color: white;
+  background-color: #132f5a;
+}
+
+.history_body a:hover .btn:after {
+  color: white;
+}
+
+.clear {
+  clear: both;
+}
