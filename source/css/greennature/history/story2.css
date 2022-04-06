@@ -134,7 +134,3 @@ form .totalcount:before {
 .history_body a:hover .btn:after {
   color: white;
 }
-
-.clear {
-  clear: both;
-}

@@ -1,6 +1,8 @@
 @import url(../setting.css);
 @import url(../subbanner.css);
 @import url(../inner_template.css);
+@import url(../searchform.css);
+@import url(../paging.css);
 
 /* --------------------- inner_nav li 페이지 색상 변경 ---------------*/
 .inner_nav li:nth-child(1) a {
@@ -8,3 +10,91 @@
 }
 
 /* ---------------- inner > inner_desc --------------- */
+
+/* -------------- searchform.css 작은이미지 변경 ------------ */
+
+form .totalcount:before {
+  content: url(../../../images/greennature/history/table-list-solid.svg);
+}
+
+/* --------------- table ------------- */
+
+table {
+  width: 80%;
+  margin: 30px auto 0;
+  border-collapse: collapse;
+  border-top: 2px solid #132f5a;
+}
+
+thead {
+  background-color: whitesmoke;
+}
+
+table th,
+table td {
+  height: 70px;
+  line-height: 70px;
+  font-size: 1.5rem;
+  border: 1px solid #ccc;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+table th {
+  border-bottom: 0;
+  font-weight: bold;
+  height: 40px;
+  line-height: 40px;
+}
+
+table tr td:nth-child(2) {
+  text-align: left;
+  padding-left: 30px;
+}
+table tr td:nth-child(3) {
+  text-align: left;
+  padding-left: 30px;
+}
+
+table a {
+  display: block;
+  width: 80%;
+  height: 70%;
+  line-height: 49px;
+  background-color: #132f5a;
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 auto;
+  text-decoration: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+  text-align: left;
+  padding: 0 10px;
+  transition: 0.3s;
+  position: relative;
+}
+
+table a:after {
+  content: url(../../../images/greennature/lodgment/location-dot-solid.svg);
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  padding: 5px;
+  transform: translateY(-50%);
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+table a:hover {
+  background-color: white;
+  border: 1px solid #132f5a;
+  color: #132f5a;
+}
+
+table a:hover:after {
+  background-color: rgb(188, 188, 188);
+}

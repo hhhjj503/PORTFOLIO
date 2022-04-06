@@ -51,7 +51,7 @@ dt {
   position: absolute;
   top: 20px;
   left: 30px;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 dd {
@@ -60,7 +60,7 @@ dd {
 }
 
 dd a {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: #333;
   text-decoration: none;
 }
