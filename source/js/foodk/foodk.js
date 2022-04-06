@@ -67,7 +67,7 @@ window.onload = function () {
       return;
     }
     const currentScroll = document.querySelector("html").scrollTop;
-    if (currentScroll > scrollHeight * 0.15) {
+    if (currentScroll > scrollHeight * 0.25) {
       bestMenus.classList.add("scrolled");
       scrolled = true;
     }
