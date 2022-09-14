@@ -5,6 +5,11 @@ window.addEventListener("load", function () {
   const divLeft = this.document.querySelector("div.left");
   const divRight = this.document.querySelector("div.right");
 
+  for (const link of links) {
+    const img = new Image();
+    img.src = link.dataset.path;
+  }
+
   for (let i = 0; i < links.length; i++) {
     links[i].addEventListener("mouseenter", function (e) {
       changeBG(e, links);
