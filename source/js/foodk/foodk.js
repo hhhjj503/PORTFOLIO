@@ -16,6 +16,11 @@ window.onload = function () {
   let clickedIndex = 0;
   const wrapperCnt = 5;
 
+  for (const path of paths) {
+    const img = new Image();
+    img.src = path.dataset.path;
+  }
+
   for (let i = 0; i < pathWrappers.length; i++) {
     pathWrappers[i].addEventListener("click", function () {
       changeImg(pathWrappers, pathWrappers[i], indexs[i], paths[i]);
