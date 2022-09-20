@@ -16,6 +16,12 @@ window.onload = function () {
     "main .main_items .banner_wrapper .banner"
   );
 
+  //이미지 미리로딩
+  for (const loadedImg of imgs) {
+    const img = new Image();
+    img.src = loadedImg.dataset.path;
+  }
+
   //새로고침시 스크롤 최상단으로 이동
   setTimeout(() => {
     scrollTo(0, 0);
@@ -24,7 +30,7 @@ window.onload = function () {
   //dom 에 banner 가 로딩이 됐을시간일때쯤 클래스추가
   setTimeout(() => {
     banner.classList.add("loaded");
-  }, 1100);
+  }, 500);
 
   //banner 에 클래스가 추가된뒤에 스크롤 화면에 표시
   setTimeout(() => {
