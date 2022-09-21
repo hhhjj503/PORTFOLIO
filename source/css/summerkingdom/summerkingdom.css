@@ -734,6 +734,10 @@ footer {
     font-size: 2rem;
   }
 
+  .event_wrapper .event_list_wrapper .event_list {
+    height: 320px;
+  }
+
   .event_wrapper .event_list_wrapper .event_list.comment {
     width: 100%;
     height: auto;
@@ -749,7 +753,7 @@ footer {
   }
 
   .event_wrapper .event_list_wrapper .event_list.map {
-    height: 300px;
+    height: 320px;
   }
 
   .event_list.map .map {
@@ -884,6 +888,10 @@ footer {
     width: 90%;
     font-size: 1.5rem;
     padding: 8px 0;
+  }
+
+  .event_wrapper .event_list_wrapper .event_list {
+    height: 200px;
   }
 
   .event_wrapper .event_list_wrapper .event_list.comment {
