@@ -203,7 +203,6 @@ h3.contact_h3 {
   width: 1100px;
   background-color: white;
   position: relative;
-  box-shadow: 2px 2px 7px 2px rgb(170, 170, 170);
   margin-bottom: 250px;
 }
 
@@ -233,6 +232,17 @@ h3.contact_h3 {
   font-size: 1.7rem;
   line-height: 24px;
   letter-spacing: 1px;
+  position: relative;
+}
+
+.introduce .i_title:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: -10px;
+  height: 10%;
+  width: 2px;
+  background-color: rgb(167, 167, 167);
 }
 
 .contents .contents_items .introduce .i_title .bolded {
