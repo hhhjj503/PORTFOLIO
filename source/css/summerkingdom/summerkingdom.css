@@ -734,9 +734,9 @@ footer {
     font-size: 2rem;
   }
 
-  .event_wrapper .event_list_wrapper .event_list {
-    height: 260px;
+  .event_wrapper .event_list_wrapper .event_list.comment {
     width: 100%;
+    height: auto;
   }
 
   .event_list_wrapper ul li .desc_wrapper .e_title {
@@ -766,7 +766,7 @@ footer {
 
   /* ------------------------ 댓글란 -------------- */
 
-  .event_list.comment {
+  .event_list.comment .event_list.comment {
     height: auto;
   }
 
@@ -886,8 +886,8 @@ footer {
     padding: 8px 0;
   }
 
-  .event_wrapper .event_list_wrapper .event_list {
-    height: 200px;
+  .event_wrapper .event_list_wrapper .event_list.comment {
+    height: auto;
   }
 
   .event_list_wrapper ul li .desc_wrapper .e_title {
