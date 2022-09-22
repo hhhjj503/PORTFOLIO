@@ -490,11 +490,12 @@ main .origins {
 /* -------------------------------------- footer ----------------------------- */
 footer {
   width: 100%;
+  max-width: 150rem;
+  margin: 0 auto;
 }
 
 footer .footer_wrapper {
   width: 100%;
-  max-width: 150rem;
   padding-bottom: 3rem;
   margin: 0 auto;
   background-color: rgb(0, 0, 0);
