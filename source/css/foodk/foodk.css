@@ -541,7 +541,11 @@ footer .footer_wrapper {
   main .banner .screen {
     background-size: cover;
     background-position: 50%;
-    padding-bottom: 50rem;
+    padding-bottom: 30rem;
+  }
+
+  main .banner .screen .screen_title {
+    font-size: 2rem;
   }
 
   main .menu_wrapper .menus {
