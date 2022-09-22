@@ -9,6 +9,7 @@ html {
 
 body {
   position: relative;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 a {
@@ -20,6 +21,8 @@ a {
 
 header {
   width: 100%;
+  max-width: 150rem;
+  margin: 0 auto;
 }
 
 header a {
@@ -27,8 +30,8 @@ header a {
 }
 
 header .menu_wrapper {
-  width: 150rem;
-  max-width: 100%;
+  width: 100%;
+  max-width: 150rem;
   height: 40px;
   background-color: rgb(58, 58, 58);
   margin: 0 auto;
@@ -203,8 +206,8 @@ main {
 /*------------ section -------------*/
 
 main section {
-  width: 150rem;
-  max-width: 100%;
+  width: 100%;
+  max-width: 150rem;
   margin: 0 auto;
   position: relative;
 }
@@ -212,7 +215,7 @@ main section {
 main .banner .screen {
   background-color: whitesmoke;
   height: 0;
-  padding-bottom: 35vw;
+  padding-bottom: 80rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
@@ -227,13 +230,13 @@ main .banner .screen .screen_title {
   bottom: 0;
   color: white;
   text-shadow: 2px 2px hsl(200 50% 20% / 10%), -2px -2px hsl(200 50% 20% / 10%);
-  font-size: 2.6vw;
+  font-size: 2.6rem;
   font-weight: 700;
 }
 
 main .img_index {
   background-color: yellowgreen;
-  padding-bottom: 3vw;
+  padding-bottom: 40px;
 }
 
 main .img_index .index_paths {
@@ -285,7 +288,7 @@ main .plate:hover .food {
 main .lunch_menu .menu_wrapper {
   width: 100%;
   height: 0;
-  padding-bottom: 19.5vw;
+  padding-bottom: 38rem;
   background-color: whitesmoke;
   background-image: url(../../images/foodk/kitchen.JPG);
   background-repeat: no-repeat;
@@ -311,9 +314,7 @@ main .menu_wrapper .menus {
   bottom: 0;
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 main .menus .menu {
@@ -321,8 +322,8 @@ main .menus .menu {
   height: 80%;
   box-sizing: border-box;
   outline: 3px double gray;
-  margin: 0 3px;
-  cursor: pointer;
+  margin: 40px 5px;
+  display: inline-block;
 }
 
 main .menu .menu_img {
@@ -332,6 +333,7 @@ main .menu .menu_img {
   background-color: white;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   transition: 0.3s;
 }
 
@@ -348,7 +350,8 @@ main .menu_desc .event {
   transform: translate(-50%, -50%);
   white-space: nowrap;
   color: white;
-  font-size: 1.3vw;
+  text-align: center;
+  font-size: 2.5rem;
   font-weight: 500;
   text-shadow: 1px 1px hsl(200 50% 20% / 40%), -1px -1px hsl(200 50% 20% / 40%);
 }
@@ -361,25 +364,21 @@ main .menu:hover .menu_desc {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-main .best_menu_section .best_menu_wrapper {
+main .best_menu_wrapper {
   width: 100%;
-  height: 0;
-  padding-bottom: 22vw;
+  height: 40rem;
+  position: relative;
 }
 
-main .best_menu_wrapper .best_menus {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+.best_menu_wrapper .best_menus {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   background-color: white;
+  text-align: center;
 }
 
 main .best_menus.scrolled .best_menu {
@@ -389,15 +388,15 @@ main .best_menus.scrolled .best_menu {
 
 main .best_menus .best_menu {
   position: relative;
-  top: 3vw;
   width: 40%;
   height: 45%;
-  margin: 0 10px;
+  margin: 8px 10px;
   background-color: white;
   border-radius: 15px;
   box-shadow: 2px 2px 2px 2px hsl(200 50% 20% / 10%);
   transition: 1s;
   opacity: 0;
+  display: inline-block;
 }
 
 main .best_menu:nth-child(1) {
@@ -447,7 +446,7 @@ main .best_menu .best_menu_desc {
   display: table;
   left: 5%;
   bottom: 0;
-  padding: 0 1%;
+  padding: 0 20px;
   text-align: center;
   width: 25%;
   height: 40%;
@@ -457,10 +456,10 @@ main .best_menu .best_menu_desc {
 }
 
 main .best_menu_desc .type {
-  display: table-cell;
-  vertical-align: middle;
   color: white;
-  font-size: 1.3vw;
+  font-size: 2rem;
+  line-height: 63px;
+  vertical-align: middle;
   font-weight: 700;
 }
 
@@ -468,86 +467,24 @@ main .best_menu:hover .best_menu_desc {
   background-color: rgb(46, 46, 46);
 }
 
-main .origins .origin_wrapper {
+main .origins {
   width: 100%;
-  height: 0;
-  padding-bottom: 24vw;
+  height: 25rem;
   background-image: url(../../images/foodk/cooking.JPG);
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: 50%;
+  background-size: cover;
+  background-position-y: top;
 }
 
-main .origin_wrapper .origin_list {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-main .origin_list .origin {
-  position: relative;
-  width: 20%;
-  height: 100%;
-  margin: 0 10px;
-}
-
-main .origin table {
+.origin_wrapper h3 {
+  width: 100%;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 25%;
   transform: translateY(-50%);
-  width: 100%;
-  height: 60%;
-  border-spacing: 0;
-  border-collapse: collapse;
-  color: white;
-}
-
-main .origin caption {
-  font-size: 1.2vw;
-  text-align: left;
-  padding: 0.6vmax 5px;
-  box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-main .origin thead {
-  font-weight: 700;
-  background-color: rgb(23, 92, 49);
-}
-
-main .origin tbody {
-  background-color: rgba(0, 0, 0, 0.5);
-  text-shadow: 1px 1px hsl(200 50% 20% / 40%), -1px -1px hsl(200 50% 20% / 40%);
-}
-
-main .origin th,
-main .origin td {
-  border: 1px solid gray;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 1vw;
-  white-space: nowrap;
-}
-
-main .origin th {
-  padding: 0.4vmax 0;
-}
-
-main .workers_wrapper .worker {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background-color: aquamarine;
 }
 
 /* -------------------------------------- footer ----------------------------- */
@@ -556,39 +493,92 @@ footer {
 }
 
 footer .footer_wrapper {
-  width: 1500px;
-  padding-bottom: 5vw;
+  width: 100%;
+  max-width: 150rem;
+  padding-bottom: 3rem;
   margin: 0 auto;
   background-color: rgb(0, 0, 0);
 }
 
-@media screen and (min-width: 2350px) {
-  main .banner .screen .screen_title {
-    font-size: 1.3vw;
+/* -------------------------------- responsive-------------------------- */
+
+@media screen and (max-width: 960px) {
+  aside {
+    display: none;
+  }
+
+  main .menu_wrapper .menus {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  main .menus .menu {
+    width: 25%;
+    height: 40%;
+    margin: 20px 40px;
   }
 
   main .menu_desc .event {
-    font-size: 0.65vw;
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header .logo {
+    padding: 5px 10px;
   }
 
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header ul li {
+    padding: 0 4px;
+    font-size: 1.2rem;
+  }
+
+  main .banner .screen {
+    background-size: cover;
+    background-position: 50%;
+    padding-bottom: 50rem;
+  }
+
+  main .menu_wrapper .menus {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  main .menus .menu {
+    width: 40%;
+    height: 40%;
+    margin: 20px 15px;
+  }
+
+  main .menu_desc .event {
+    font-size: 1.5rem;
+  }
+
+  main .best_menu_wrapper {
+    height: 30rem;
+  }
+
+  main .best_menus .best_menu {
+    height: 44%;
+    width: 43%;
+    margin: 8px 10px;
+  }
   main .best_menu_img {
     background-size: cover;
   }
 
+  main .best_menu .best_menu_desc {
+    padding: 10px;
+    left: 10%;
+  }
   main .best_menu_desc .type {
-    font-size: 0.65vw;
-  }
-
-  main .origin caption {
-    font-size: 0.6vw;
-  }
-
-  main .origin th,
-  main .origin td {
-    font-size: 0.5vw;
-  }
-
-  footer .footer_wrapper {
-    padding-bottom: 5vh;
+    font-size: 1.5rem;
+    line-height: 30px;
   }
 }
