@@ -4,301 +4,184 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./source/css/reset.css" rel="stylesheet" type="text/css" />
     <link href="./source/css/index.css" rel="stylesheet" type="text/css" />
-    <link
-      href="./source/css/index_mobile.css"
-      rel="stylesheet"
-      type="text/css"
-    />
     <script src="./source/js/index.js"></script>
     <title>HJ's PORTFOLIO</title>
   </head>
   <body>
     <header class="header">
-      <div class="h_wrapper">
-        <h1 class="h_title">
-          <a>Welcome to <span class="h_sub">HJ</span>'s PORTFOLIO</a>
-        </h1>
-        <div class="h_menu">
-          <nav class="nav">
-            <ul>
-              <li><a class="anchor" href="#top">HJ?</a></li>
-              <li><a class="anchor" href="#a_tech">Tech</a></li>
-              <li><a class="anchor" href="#a_port">Portfolio</a></li>
-              <li><a class="anchor" href="#a_contact">Contact</a></li>
-              <li class="drop_down_menu">
-                Career
-                <ul>
-                  <li class="drop_down">준비중</li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
+      <div class="entrance_wrapper">
+        <div
+          class="entrance"
+          data-path="./source/images/index/patrick-tomasso-QMDap1TAu0g-unsplash.jpg"
+        >
+          <div class="board">
+            <div class="description">Welcome to HJ's PORTFOLIO</div>
+          </div>
         </div>
       </div>
     </header>
     <main class="contents">
-      <div class="top_btn">
-        <a id="a_top_btn" href="#top">
-          <span class="skip">위로가는버튼</span>TOP</a
-        >
-      </div>
       <div class="contents_items">
-        <div class="introduce">
-          <h3 class="skip">자기소개</h3>
-          <div class="i_box1">
-            <div class="i_deco">HHJ</div>
-            <div class="i_info">
-              <em>kil3120@naver.com</em><br /><br />010-3793-7843
-            </div>
-          </div>
-          <div class="i_title">
-            <span class="bolded">안녕하세요</span>
-            끊임없이 발전하는 Publisher 허현재 입니다<br />
-            고등학교부터 대학교육까지 디자인을 공부했으며 졸업 후<br />
-            국비지원의 체계적인 교육을 통한 6개월의 개발 교육과<br />
-            교육수료이후 전문적인 IT지식들의 공부를 통해,<br />
-            <em
-              >웹 제작과 관련한 그 어떤 분야와도 협업이 가능한<br />
-              Publisher 허현재 입니다</em
-            >
-          </div>
-        </div>
-        <a id="a_tech"></a>
-        <h3 class="tech_h3">이런 기술을 사용합니다</h3>
-        <div class="tech">
-          <div class="tech_wrapper">
-            <div class="t_desc">
-              <ul class="t_list">
-                <li class="random">HTML</li>
-                <li class="random">CSS</li>
-                <li class="random">AJAX</li>
-                <li class="random">JavaScript</li>
-                <li class="random">JAVA</li>
-                <li class="random">SQL</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="tech_detail">
-          <h3 class="skip">사용할 수 있는 기술</h3>
-          <div class="td_desc">
+        <div class="navbar_wrapper">
+          <nav class="navbar">
             <ul>
-              <li class="detail">
-                HTML
-                <div>
-                  정확한 HTML 시맨틱 마크업과 웹표준, 웹접근성을 고려한
-                  퍼블리싱을 하고자 노력 합니다
-                  <div class="score">80</div>
-                </div>
-              </li>
-              <li class="detail">
-                CSS
-                <div>
-                  직접적인 DOM 객체의 제어가 아닌 클래스를 통해 DOM 요소를
-                  제어합니다
-                  <div class="score">70</div>
-                </div>
-              </li>
-              <li class="detail">
-                AJAX
-                <div>
-                  jQuery 의 $.ajax() 함수를 통해 데이터를 받아오기 위한 비동기
-                  통신을 이해하고 있습니다
-                  <div class="score">50</div>
-                </div>
-              </li>
-              <li class="detail">
-                JS
-                <div>
-                  기본적인 자바스크립트 사용방법과 원리를 이해하고 사용하고
-                  있으며,<br />
-                  프로젝트에 적용하고 검색을 통해 스스로 공부할 수 있습니다<br />
-                  (musicheart 메인 슬라이더를 제외한 모든 포트폴리오
-                  자바스크립트 직접구현)
-                  <div class="score">50</div>
-                </div>
-              </li>
-              <li class="detail">
-                JAVA
-                <div>
-                  Spring MVC 패턴을 이용한 자바 백엔드 프로젝트를 경험한 적이
-                  있습니다
-                  <div class="score">60</div>
-                </div>
-              </li>
-              <li class="detail">
-                SQL
-                <div>
-                  클라이언트가 전송한 데이터를 받아 백엔드와 연결된 DB 에<br />
-                  데이터를 넣기위해 제어하는 SQL 언어를 이해하고 있습니다
-                  <div class="score">50</div>
-                </div>
-              </li>
+              <li><a href="#hj">HJ?</a></li>
+              <li><a href="#skill">Skill</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="dt_screen">
-              <div class="dt_round">
-                <div class="text_round"></div>
-                <div class="bg_round"></div>
-              </div>
-              <div class="dt_text_wrap"><p class="dt_text"></p></div>
-            </div>
-          </div>
+          </nav>
         </div>
-        <div class="portfolio">
-          <a id="a_port"></a>
-          <h3>포트폴리오 입니다</h3>
-          <div class="items">
-            <div class="item">
-              <div
-                class="item_img"
-                style="
-                  background-image: url('./source/images/musicheart/musicheart_secreenshot.png');
-                "
-              >
-                <div class="hover_button">
-                  <a href="./pages/musicheart/index.html" target="_blank"
-                    >MusicHeart</a
-                  >
-                </div>
-              </div>
-              <div class="description">
-                음악커뮤니티를 주제로 퍼블리싱한 사이트 입니다. <br />
-                (모든 페이지 퍼블리싱 및 모바일 구현)
+        <a id="hj"></a>
+        <div class="introduce_wrapper">
+          <div class="introduce">
+            <div class="information">
+              <div class="name">HHJ</div>
+              <div class="email">
+                <em>kil3120@naver.com</em><br />010-3793-7843
               </div>
             </div>
-            <div class="item">
-              <div
-                class="item_img"
-                style="
-                  background-image: url('./source/images/hoveryourcolor/hoveryourcolor.JPG');
-                "
-              >
-                <div class="hover_button">
-                  <a href="./pages/hoveryourcolor/index.html" target="_blank"
-                    >HoverYourColor</a
-                  >
-                </div>
-              </div>
-              <div class="description">
-                자바스크립트 효과 페이지 구현(팝업, CSS, 모바일 구현, 반응형
-                구현)
-              </div>
-            </div>
-            <div class="item">
-              <div
-                class="item_img"
-                style="
-                  background-image: url('./source/images/thecircle/whatsinthecircle.JPG');
-                "
-              >
-                <div class="hover_button">
-                  <a href="./pages/thecircle/index.html" target="_blank"
-                    >The Circle</a
-                  >
-                </div>
-              </div>
-              <div class="description">
-                풀스크린 슬라이드 페이지 구현(모바일 구현, 반응형 구현)
-              </div>
-            </div>
-            <div class="item">
-              <div
-                class="item_img"
-                style="background-image: url('./source/images/game/game.png')"
-              >
-                <div class="hover_button">
-                  <a href="./pages/game/index.html" target="_blank">Gameking</a>
-                </div>
-              </div>
-              <div class="description">
-                게임홈페이지를 주제로 퍼블리싱한 사이트 입니다.<br />
-                (모든 페이지 퍼블리싱)
-              </div>
-            </div>
-            <div class="item">
-              <div
-                class="item_img"
-                style="
-                  background-image: url('./source/images/greennature/greennature.png');
-                "
-              >
-                <div class="hover_button">
-                  <a href="./pages/greennature/index.html" target="_blank"
-                    >Greennature</a
-                  >
-                </div>
-              </div>
-              <div class="description">
-                여행 홈페이지를 주제로 퍼블리싱한 사이트 입니다.<br />
-                (모든 페이지 퍼블리싱)
-              </div>
-            </div>
-            <div class="item">
-              <div
-                class="item_img"
-                style="
-                  background-image: url('./source/images/summerkingdom/summerkingdom.png');
-                "
-              >
-                <div class="hover_button">
-                  <a href="./pages/summerkingdom/index.html" target="_blank"
-                    >SummerKingdom</a
-                  >
-                </div>
-              </div>
-              <div class="description">
-                여름행사 홈페이지를 주제로 퍼블리싱한 사이트 입니다. (모바일
-                구현, 반응형 구현)
-              </div>
-            </div>
-            <div class="item">
-              <div
-                class="item_img"
-                style="
-                  background-image: url('./source/images/foodk/Food.K.png');
-                "
-              >
-                <div class="hover_button">
-                  <a href="./pages/foodk/index.html" target="_blank">Food.K</a>
-                </div>
-              </div>
-              <div class="description">
-                레스토랑을 주제로 퍼블리싱한 사이트 입니다.<br />
-                (메인 페이지 퍼블리싱 및 반응형 구현(작업기간 3일))
+            <div class="desc">
+              <p class="story">
+                <span class="bolded">안녕하세요</span>
+                끊임없이 발전하는 Publisher 허현재 입니다<br />
+                고등학교부터 대학교육까지 디자인을 공부했으며 졸업 후<br />
+                국비지원의 체계적인 교육을 통한 6개월의 개발 교육과<br />
+                교육수료이후 전문적인 IT지식들의 공부를 통해,<br />
+                <em
+                  >웹 제작과 관련한 그 어떤 분야와도 소통 가능한 만능<br />
+                  Publisher 허현재 입니다</em
+                >
+              </p>
+              <br />
+              <div class="certification">
+                <ul>
+                  <li>2020.05 | 컴퓨터활용능력1급</li>
+                  <li>2022.09 | 정보처리기사</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-        <div class="contact">
-          <a id="a_contact"></a>
-          <h3 class="contact_h3">제 포트폴리오를 봐주셔서 감사합니다!</h3>
-          <div class="c_desc">
-            제가 가지고 있는 능력을 통해 맡은 직무를 성실히 수행하며 누구와도
-            소통 할 수 있는 만능 일원이 되겠습니다
-          </div>
-          <div class="contact_wrapper">
-            <div class="c_item phone">
-              <a href="tel:010-3793-7843">010-3793-7843</a>
+        <a id="skill"></a>
+        <div class="tech_wrapper">
+          <h2 class="part"><span>SkILLS</span></h2>
+          <div class="technology">
+            <div class="item" data-path="./source/images/index/html.png">
+              <img src="./source/images/index/html.png" alt="html" />
+              <div class="type">HTML</div>
+              <div class="score" data-score="80">
+                <div class="bar" data-color="#ec6630"></div>
+              </div>
             </div>
-            <div class="c_item email">
-              <a href="mailto:kil3120@naver.com">kil3120@naver.com</a>
+            <div class="item" data-path="./source/images/index/css.png">
+              <img src="./source/images/index/css.png" alt="css" />
+              <div class="type">CSS</div>
+              <div class="score" data-score="80">
+                <div class="bar" data-color="#0096e6"></div>
+              </div>
+            </div>
+            <div class="item" data-path="./source/images/index/javascript.png">
+              <img
+                src="./source/images/index/javascript.png"
+                alt="javascript"
+              />
+              <div class="type">JAVASCRIPT</div>
+              <div class="score" data-score="80">
+                <div class="bar" data-color="#eeaf4b"></div>
+              </div>
+            </div>
+            <div class="item" data-path="./source/images/index/jquery.png">
+              <img src="./source/images/index/jquery.png" alt="jquery" />
+              <div class="type">jQUERY</div>
+              <div class="score" data-score="50">
+                <div class="bar" data-color="#0669ad"></div>
+              </div>
+            </div>
+            <div class="item" data-path="./source/images/index/sql.png">
+              <img src="./source/images/index/sql.png" alt="sql" />
+              <div class="type">SQL</div>
+              <div class="score" data-score="50">
+                <div class="bar" data-color="#000000"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a id="portfolio"></a>
+        <div class="portfolio_wrapper">
+          <h2 class="part"><span>PORTFOLIO</span></h2>
+          <div class="portfolio">
+            <div
+              class="list"
+              data-path="./source/images/musicheart/musicheart_secreenshot.png"
+            >
+              <a href="./pages/musicheart/index.html" target="_blank">
+                <span class="list_desc"
+                  >#음악커뮤니티 홈페이지<br />#PC #모바일제작
+                  <br />#모든페이지퍼블리싱</span
+                >
+              </a>
+            </div>
+            <div
+              class="list"
+              data-path="./source/images/thecircle/whatsinthecircle.JPG"
+            >
+              <a href="./pages/thecircle/index.html" target="_blank"
+                ><span class="list_desc">#반응형 풀스크린 홈페이지</span></a
+              >
+            </div>
+            <div class="list" data-path="./source/images/game/game.png">
+              <a href="./pages/game/index.html" target="_blank"
+                ><span class="list_desc"
+                  >#게임서비스 홈페이지<br />#모든페이지퍼블리싱</span
+                ></a
+              >
+            </div>
+            <div
+              class="list"
+              data-path="./source/images/greennature/greennature.png"
+            >
+              <a href="./pages/greennature/index.html" target="_blank"
+                ><span class="list_desc"
+                  >#여행서비스 홈페이지<br />#모든페이지퍼블리싱</span
+                ></a
+              >
+            </div>
+            <div
+              class="list"
+              data-path="./source/images/summerkingdom/summerkingdom.png"
+            >
+              <a href="./pages/summerkingdom/index.html" target="_blank"
+                ><span class="list_desc"
+                  >#여름축제 홈페이지<br />#반응형 #단일페이지</span
+                ></a
+              >
+            </div>
+            <div class="list" data-path="./source/images/foodk/foodk.JPG">
+              <a href="./pages/foodk/index.html" target="_blank"
+                ><span class="list_desc"
+                  >#식당 홈페이지<br />#반응형 #단일페이지</span
+                ></a
+              >
             </div>
           </div>
         </div>
       </div>
     </main>
     <footer class="footer">
-      <div class="f_title">
-        kil3120@naver.com kil3120@naver.com kil3120@naver.com
-        kil3120@naver.com<br />
-        kil3120@naver.com kil3120@naver.com kil3120@naver.com
-        kil3120@naver.com<br />
-        kil3120@naver.com kil3120@naver.com kil3120@naver.com
-        kil3120@naver.com<br />
-        kil3120@naver.com kil3120@naver.com kil3120@naver.com
-        kil3120@naver.com<br />
+      <a id="contact"></a>
+      <div class="contact_wrapper">
+        <h2 class="part last"><span>CONTACT</span></h2>
+        <div class="contact">
+          <div class="comment">방문해 주셔서 감사합니다</div>
+          <div class="tel">
+            <a href="tel:010-3793-7843">010-3793-7843</a>
+          </div>
+          <div class="mail">
+            <a href="mailto:kil3120@naver.com">kil3120@naver.com</a>
+          </div>
+        </div>
       </div>
     </footer>
   </body>

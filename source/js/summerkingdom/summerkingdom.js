@@ -35,7 +35,7 @@ window.onload = function () {
   //banner 에 클래스가 추가된뒤에 스크롤 화면에 표시
   setTimeout(() => {
     body.style.overflowY = "auto";
-  }, 1530);
+  }, 2530);
 
   let imgIndex = 0;
   setTimeout(() => {
