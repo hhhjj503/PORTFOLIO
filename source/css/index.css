@@ -487,6 +487,10 @@ footer .contact_wrapper {
     margin-top: 0px;
   }
 
+  .portfolio .list:nth-child(n + 1) {
+    margin-bottom: 0px;
+  }
+
   .portfolio .list:nth-child(2),
   .portfolio .list:nth-child(5) {
     margin-left: 0px;
