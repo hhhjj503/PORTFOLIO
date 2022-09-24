@@ -487,10 +487,6 @@ footer .contact_wrapper {
     margin-top: 0px;
   }
 
-  .portfolio .list:nth-child(n + 1) {
-    margin-bottom: 0px;
-  }
-
   .portfolio .list:nth-child(2),
   .portfolio .list:nth-child(5) {
     margin-left: 0px;
@@ -681,6 +677,10 @@ footer .contact_wrapper {
 
   .portfolio_wrapper {
     padding: 80px 0;
+  }
+
+  .portfolio .list:nth-child(n + 1) {
+    margin-bottom: 60px;
   }
 
   .portfolio .list {
