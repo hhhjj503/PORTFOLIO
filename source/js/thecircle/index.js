@@ -4,9 +4,6 @@ window.addEventListener("load", function () {
   const pageLabels = document.querySelector(".pagelabels");
   let left = 0;
 
-  //input 을 만든다(화면에 안보이게)
-  //label 을 만든다(누르면 slide left 이동)
-
   for (let i = 0; i < slides.length; i++) {
     //slides left 초기설정
 
@@ -33,33 +30,53 @@ window.addEventListener("load", function () {
       label.classList.remove("hovered");
     });
     pageLabels.appendChild(label);
-    //slide 마다 left 추거
+    //slide 마다 left 값 추가
     slides[i].style.left = `${left}%`;
     left += 100;
   }
 
-  //생성된 labels 와 inputs 사용
+  //생성된 labels 과 inputs 사용
   let labels = document.querySelectorAll("label");
   let inputs = document.querySelectorAll("input");
-  //첫인덱스에 checked 클래스 추가
+  //첫인덱스에 checked 클래스 추가 (얇은 동그라미 표시)
   inputs[0].classList.add("checked");
   labels[0].classList.add("checked");
 
-  //label 에 클릭이벤트 추가
+  let currentWheelIndex = 0;
+  const maxWheelIndex = labels.length - 1;
+
+  //label 에 클릭이벤트 추가 , wheelIndex 변경
   for (let i = 0; i < labels.length; i++) {
     labels[i].addEventListener("click", function () {
       changeImage(inputs[i], labels[i]);
       const leftValue = inputs[i].dataset.left;
       moveLeft(leftValue);
+      currentWheelIndex = i;
     });
   }
 
+  //마우스 휠 스크롤 슬라이드 만들기
+  window.addEventListener("wheel", function (e) {
+    if (e.deltaY > 0) {
+      ++currentWheelIndex;
+      if (currentWheelIndex > maxWheelIndex) currentWheelIndex = 0;
+      const leftValue = inputs[currentWheelIndex].dataset.left;
+      changeImage(inputs[currentWheelIndex], labels[currentWheelIndex]);
+      moveLeft(leftValue);
+    }
+    if (e.deltaY < 0) {
+      --currentWheelIndex;
+      if (currentWheelIndex < 0) currentWheelIndex = 4;
+      const leftValue = inputs[currentWheelIndex].dataset.left;
+      changeImage(inputs[currentWheelIndex], labels[currentWheelIndex]);
+      moveLeft(leftValue);
+    }
+  });
+
   function changeImage(input, label) {
     for (let i = 0; i < labels.length; i++) {
-      if (inputs[i].checked == true) {
-        inputs[i].classList.remove("checked");
-        labels[i].classList.remove("checked");
-      }
+      inputs[i].classList.remove("checked");
+      labels[i].classList.remove("checked");
     }
     input.classList.add("checked");
     label.classList.add("checked");
