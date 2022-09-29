@@ -66,13 +66,10 @@ window.onload = function () {
   //스크롤을 감지해 메뉴를 화면에 띄우는 이벤트
   function scrolledEvent() {
     const scrollHeight = document.querySelector("html").scrollHeight;
-    if (scrollHeight <= 2000) {
-      bestMenus.classList.add("scrolled");
-      scroll = true;
-      return;
-    }
+    const scrolledValue = scrollHeight * 0.22;
+
     const currentScroll = document.querySelector("html").scrollTop;
-    if (currentScroll > scrollHeight * 0.25) {
+    if (currentScroll > scrolledValue) {
       bestMenus.classList.add("scrolled");
       scrolled = true;
     }
