@@ -880,17 +880,13 @@ footer {
   }
 
   .i_wrapper .intro .line_up ul .content.name {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   /* ------------------------------------------- */
 
   .event_wrapper {
     margin-top: 50px;
-  }
-
-  .event_list_wrapper ul li:last-child {
-    display: none;
   }
 
   .event_list_wrapper ul li {
@@ -904,7 +900,12 @@ footer {
   }
 
   .event_wrapper .event_list_wrapper .event_list {
-    height: 200px;
+    padding: 10px 0;
+    height: auto;
+  }
+
+  .event_list li .img_screen {
+    border-radius: 0;
   }
 
   .event_list_wrapper .event_list.comment {
@@ -916,7 +917,10 @@ footer {
   }
 
   .event_list.festival ul li {
-    margin: 0;
+    margin: 15px 0;
+    display: block;
+    height: 300px;
+    width: 100%;
   }
 
   .event_list ul li .desc_wrapper .e_title {
@@ -930,16 +934,20 @@ footer {
   }
 
   .event_wrapper .event_list_wrapper .event_list.map {
-    height: 200px;
+    padding: 10px 0;
+    height: auto;
   }
 
   .event_list.map .map {
-    width: 100%;
-    line-height: 200px;
+    line-height: initial;
   }
 
   .event_list.map .map .map_img {
-    margin: 0;
+    margin: 15px 0;
+    display: block;
+    box-sizing: border-box;
+    height: 250px;
+    width: 100%;
   }
 
   .event_wrapper .map_img {
