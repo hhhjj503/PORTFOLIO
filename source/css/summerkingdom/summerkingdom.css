@@ -321,6 +321,7 @@ m.banner .img_wrapper.cover {
   position: relative;
   width: 100%;
   height: 500px;
+  text-align: center;
   overflow: hidden;
   background-color: transparent;
 }
@@ -329,23 +330,23 @@ m.banner .img_wrapper.cover {
   border-bottom: 1px solid rgb(192, 192, 192);
 }
 
-.event_list_wrapper ul {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.event_list.festival ul {
   width: 100%;
   height: 100%;
+  line-height: 500px;
 }
 
-.event_list_wrapper ul li {
+.event_list li {
   position: relative;
-  width: 33%;
+  display: inline-block;
+  width: 32%;
   height: 90%;
+  vertical-align: middle;
   background-color: transparent;
   transition: 0.3s ease-in-out;
 }
 
-.event_list_wrapper ul li .img_screen {
+.event_list li .img_screen {
   position: relative;
   width: 100%;
   height: 100%;
@@ -355,7 +356,7 @@ m.banner .img_wrapper.cover {
   background-position: center;
 }
 
-.event_list_wrapper ul li .img_screen:after {
+.event_list li .img_screen:after {
   position: absolute;
   content: "";
   top: 0;
@@ -370,17 +371,17 @@ m.banner .img_wrapper.cover {
   transition: 0.3s ease-in-out;
 }
 
-.event_list_wrapper ul li:hover {
+.event_list li:hover {
   height: 95%;
 }
 
-.event_list_wrapper ul li:hover .img_screen:after {
+.event_list li:hover .img_screen:after {
   opacity: 1;
 }
 
 /* -----------------------------행사섹션 li  hover 시 뜨는 div 창 ------------------------------- */
 
-.event_list_wrapper ul li .desc_wrapper {
+.event_list li .desc_wrapper {
   position: absolute;
   top: 0;
   left: 0;
@@ -401,34 +402,37 @@ m.banner .img_wrapper.cover {
   background-color: white;
 }
 
-.event_list_wrapper ul li:hover .desc_wrapper {
+.event_list li:hover .desc_wrapper {
   opacity: 1;
   max-height: 100%;
 }
 
-.event_list_wrapper ul li .desc {
+.event_list li .desc {
   width: 90%;
 }
 
-.event_list_wrapper ul li .desc_wrapper .e_title {
+.event_list li .desc_wrapper .e_title {
   font-size: 2rem;
   background-color: rgb(223 72 69);
   color: white;
   border-radius: 15px;
   width: 100%;
-  margin: 40px auto;
+  line-height: initial;
+  margin: 20px auto;
   padding: 10px 0;
   font-weight: 900;
   text-align: center;
 }
 
-.event_list_wrapper .e_content {
+.event_list .e_content {
   font-size: 1.8rem;
   width: 100%;
   font-weight: 700;
+  line-height: initial;
+  text-align: left;
 }
 
-.event_list_wrapper .e_content {
+.event_list .e_content {
   font-size: 1.8rem;
 }
 
@@ -436,21 +440,23 @@ m.banner .img_wrapper.cover {
 
 .event_list.map .map_wrapper {
   height: 100%;
-  display: flex;
   width: 100%;
 }
 
 .event_list.map .map {
-  display: flex;
   width: 70%;
-  justify-content: space-evenly;
-  align-items: center;
+  height: 100%;
+  line-height: 500px;
+  float: left;
 }
 
 .event_list.map .map .map_img {
-  width: 45%;
+  width: 43%;
   height: 80%;
+  margin: 15px;
   border-radius: 15px;
+  display: inline-block;
+  vertical-align: middle;
   background-repeat: no-repeat;
   background-position: center;
   border: 3px solid #d5dde6;
@@ -459,9 +465,10 @@ m.banner .img_wrapper.cover {
 .event_list.map .transportation_wrapper {
   width: 30%;
   background-color: rgb(223, 223, 223);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  float: right;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 30px 0;
 }
 
 .event_list.map .transportation_wrapper .t_title {
@@ -488,9 +495,7 @@ m.banner .img_wrapper.cover {
 }
 
 .event_list.map .transportation_wrapper .way_list {
-  flex-wrap: wrap;
   width: 60%;
-  justify-content: space-between;
   margin: 0 auto;
 }
 
@@ -540,7 +545,7 @@ m.banner .img_wrapper.cover {
   font-size: 2.2rem;
   width: 50%;
   margin: 0 auto;
-  padding: 30px 0;
+  padding: 20px 0;
 }
 
 /* ----------------------------- 댓글 입력구간 ------------------------------- */
@@ -612,12 +617,6 @@ m.banner .img_wrapper.cover {
 
 .c_wrapper .paging {
   width: 100%;
-}
-
-.c_wrapper .paging .page {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
 }
 
 .c_wrapper .paging .page li {
@@ -722,12 +721,17 @@ footer {
 
   /* ------------------------------------------- */
 
+  .event_list.festival ul {
+    line-height: 320px;
+  }
+
   .event_list_wrapper ul li:last-child {
     display: none;
   }
 
   .event_list_wrapper ul li {
     width: 45%;
+    margin: 0 10px;
   }
 
   .event_wrapper .event_title {
@@ -758,6 +762,7 @@ footer {
 
   .event_list.map .map {
     width: 100%;
+    line-height: 320px;
   }
 
   .event_wrapper .map_img {
@@ -779,8 +784,16 @@ footer {
   }
 
   .comment .c_title {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     padding: 20px 0;
+  }
+
+  .c_wrapper .paging .page li {
+    padding: 0 5px;
+  }
+
+  .c_wrapper .paging .page a {
+    font-size: 1.7rem;
   }
 
   .comment .c_wrapper form .btn {
@@ -863,11 +876,11 @@ footer {
   }
 
   .i_wrapper .intro .line_up ul .content.date {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   .i_wrapper .intro .line_up ul .content.name {
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
 
   /* ------------------------------------------- */
@@ -894,11 +907,19 @@ footer {
     height: 200px;
   }
 
-  .event_wrapper .event_list_wrapper .event_list.comment {
+  .event_list_wrapper .event_list.comment {
     height: auto;
   }
 
-  .event_list_wrapper ul li .desc_wrapper .e_title {
+  .event_list.festival ul {
+    line-height: 200px;
+  }
+
+  .event_list.festival ul li {
+    margin: 0;
+  }
+
+  .event_list ul li .desc_wrapper .e_title {
     border-radius: 10px;
     margin: 10px 0;
     font-size: 1.2rem;
@@ -914,6 +935,11 @@ footer {
 
   .event_list.map .map {
     width: 100%;
+    line-height: 200px;
+  }
+
+  .event_list.map .map .map_img {
+    margin: 0;
   }
 
   .event_wrapper .map_img {
@@ -936,7 +962,7 @@ footer {
 
   .comment .c_title {
     font-size: 1.5rem;
-    padding: 20px 0;
+    padding: 10px 0;
     width: 100%;
   }
 
@@ -949,6 +975,19 @@ footer {
   }
   .c_wrapper .c_input form .btn {
     width: 20%;
+  }
+
+  .c_wrapper .c_list ul {
+    margin-top: 10px;
+  }
+
+  .c_wrapper .paging .page li {
+    padding: 0 5px;
+    margin: 0;
+  }
+
+  .c_wrapper .paging a {
+    font-size: 1.2rem;
   }
 
   .comment .c_list .contents_wrapper .contents {
