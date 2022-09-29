@@ -768,6 +768,7 @@ footer {
   .event_list.map .map .map_img {
     background-size: cover;
     margin: 10px;
+    border-radius: 0;
   }
 
   .event_list.map .transportation_wrapper {
