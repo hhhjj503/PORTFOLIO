@@ -320,7 +320,7 @@ m.banner .img_wrapper.cover {
 .event_list_wrapper .event_list {
   position: relative;
   width: 100%;
-  height: 500px;
+  padding: 20px 0;
   text-align: center;
   overflow: hidden;
   background-color: transparent;
@@ -332,16 +332,14 @@ m.banner .img_wrapper.cover {
 
 .event_list.festival ul {
   width: 100%;
-  height: 100%;
-  line-height: 500px;
+  height: 450px;
 }
 
 .event_list li {
   position: relative;
   display: inline-block;
   width: 32%;
-  height: 90%;
-  vertical-align: middle;
+  height: 100%;
   background-color: transparent;
   transition: 0.3s ease-in-out;
 }
@@ -372,7 +370,7 @@ m.banner .img_wrapper.cover {
 }
 
 .event_list li:hover {
-  height: 95%;
+  height: 102%;
 }
 
 .event_list li:hover .img_screen:after {
@@ -394,9 +392,6 @@ m.banner .img_wrapper.cover {
   overflow: hidden;
   border-radius: 15px;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   transition: 0.4s ease-in-out;
   opacity: 0;
   background-color: white;
@@ -408,7 +403,8 @@ m.banner .img_wrapper.cover {
 }
 
 .event_list li .desc {
-  width: 90%;
+  width: 100%;
+  text-align: center;
 }
 
 .event_list li .desc_wrapper .e_title {
@@ -416,7 +412,7 @@ m.banner .img_wrapper.cover {
   background-color: rgb(223 72 69);
   color: white;
   border-radius: 15px;
-  width: 100%;
+  width: 90%;
   line-height: initial;
   margin: 20px auto;
   padding: 10px 0;
@@ -426,7 +422,8 @@ m.banner .img_wrapper.cover {
 
 .event_list .e_content {
   font-size: 1.8rem;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   font-weight: 700;
   line-height: initial;
   text-align: left;
@@ -438,21 +435,32 @@ m.banner .img_wrapper.cover {
 
 /* ----------------------------- event_list 지도 섹션 ------------------------------- */
 
-.event_list.map .map_wrapper {
+.event_list.map:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 30%;
   height: 100%;
+  background-color: rgb(223, 223, 223);
+  z-index: 0;
+}
+
+.event_list.map .map_wrapper {
+  height: 480px;
   width: 100%;
+  line-height: 480px;
 }
 
 .event_list.map .map {
   width: 70%;
   height: 100%;
-  line-height: 500px;
   float: left;
 }
 
 .event_list.map .map .map_img {
   width: 43%;
-  height: 80%;
+  height: 90%;
   margin: 15px;
   border-radius: 15px;
   display: inline-block;
@@ -468,7 +476,13 @@ m.banner .img_wrapper.cover {
   float: right;
   height: 100%;
   box-sizing: border-box;
-  padding: 30px 0;
+  line-height: initial;
+  position: relative;
+  z-index: 1;
+}
+
+.event_list.map .transportation_wrapper .transportation {
+  height: 100%;
 }
 
 .event_list.map .transportation_wrapper .t_title {
@@ -476,6 +490,7 @@ m.banner .img_wrapper.cover {
   background-color: rgb(53 55 59);
   color: white;
   width: 80%;
+  height: 5%;
   text-align: center;
   font-weight: 700;
   padding: 7px 0;
@@ -502,6 +517,7 @@ m.banner .img_wrapper.cover {
 .event_list.map .transportation_wrapper li {
   width: 40%;
   height: 20px;
+  line-height: 20px;
   font-size: 1.8rem;
   margin: 10px 0;
   text-align: center;
@@ -510,6 +526,10 @@ m.banner .img_wrapper.cover {
   font-weight: 700;
   border-radius: 15px;
   padding: 5px 0;
+}
+
+.transportation .subway {
+  height: 45%;
 }
 
 .event_list.map .transportation_wrapper li.line1 {
@@ -533,7 +553,6 @@ m.banner .img_wrapper.cover {
 .event_list_wrapper .c_wrapper {
   width: 60%;
   margin: 0 auto;
-  height: 100%;
   box-sizing: border-box;
 }
 
@@ -722,7 +741,7 @@ footer {
   /* ------------------------------------------- */
 
   .event_list.festival ul {
-    line-height: 320px;
+    height: 320px;
   }
 
   .event_list_wrapper ul li:last-child {
@@ -738,17 +757,12 @@ footer {
     font-size: 2rem;
   }
 
-  .event_wrapper .event_list_wrapper .event_list {
-    height: 320px;
-  }
-
   .event_wrapper .event_list_wrapper .event_list.comment {
     width: 100%;
     height: auto;
   }
 
   .event_list_wrapper ul li .desc_wrapper .e_title {
-    margin: 20px 0;
     font-size: 1.3rem;
     padding: 7px 0;
   }
@@ -756,19 +770,23 @@ footer {
     font-size: 1.1rem;
   }
 
-  .event_wrapper .event_list_wrapper .event_list.map {
-    height: 320px;
-  }
-
   .event_list.map .map {
     width: 100%;
+  }
+
+  .event_list.map:before {
+    display: none;
+  }
+
+  .event_list.map .map_wrapper {
+    height: 320px;
     line-height: 320px;
   }
 
   .event_list.map .map .map_img {
     background-size: cover;
+    border-radius: 15px;
     margin: 10px;
-    border-radius: 0;
   }
 
   .event_list.map .transportation_wrapper {
@@ -915,7 +933,7 @@ footer {
   }
 
   .event_list.festival ul {
-    line-height: 200px;
+    height: auto;
   }
 
   .event_list.festival ul li {
@@ -931,7 +949,7 @@ footer {
 
   .event_list ul li .desc_wrapper .e_title {
     border-radius: 10px;
-    margin: 10px 0;
+
     font-size: 1.2rem;
     padding: 4px 0;
   }
@@ -945,7 +963,7 @@ footer {
   }
 
   .event_list.map .map {
-    line-height: initial;
+    height: auto;
   }
 
   .event_list.map .map .map_img {
@@ -954,6 +972,7 @@ footer {
     box-sizing: border-box;
     height: 250px;
     width: 100%;
+    border-radius: 0;
   }
 
   .event_wrapper .map_img {
