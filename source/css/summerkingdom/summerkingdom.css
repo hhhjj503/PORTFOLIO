@@ -900,10 +900,12 @@ footer {
 
   .i_wrapper .intro .line_up ul .content.date {
     font-size: 1.2rem;
+    text-shadow: 0.5px 0.5px white, -0.5px -0.5px rgb(37, 37, 37);
   }
 
   .i_wrapper .intro .line_up ul .content.name {
     font-size: 1.2rem;
+    text-shadow: 0.5px 0.5px white, -0.5px -0.5px rgb(37, 37, 37);
   }
 
   /* ------------------------------------------- */
