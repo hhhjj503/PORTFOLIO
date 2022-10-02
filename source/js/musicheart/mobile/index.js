@@ -1,4 +1,9 @@
 window.onload = function () {
+  const brow = navigator.userAgent;
+  if (brow.match("Windows | Linux")) {
+    window.location.href = "../index.html";
+  }
+
   const swiper = new Swiper(".swiper", {
     spaceBetween: 30,
     centeredSlides: true,
