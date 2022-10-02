@@ -163,71 +163,71 @@ a {
   }
 }
 
-@media only screen and (max-width: 550px) {
-  .contents {
-    width: 90%;
-  }
+/* -----------------------------------------------적응-------------------------------------------------------- */
 
-  .contents .post_search {
-    margin-top: 50px;
-    width: 100%;
-    height: 35px;
-  }
+.contents {
+  width: 90%;
+}
 
-  .contents .post_search form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.contents .post_search {
+  margin-top: 50px;
+  width: 100%;
+  height: 35px;
+}
 
-  .contents .post_search .post_type {
-    width: 24%;
-    height: 20px;
-    font-weight: 500;
-    font-size: 1rem;
-  }
+.contents .post_search form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .contents .post_search input {
-    width: 35%;
-    height: 15px;
-    font-size: 1.2rem;
-  }
+.contents .post_search .post_type {
+  width: 24%;
+  height: 20px;
+  font-weight: 500;
+  font-size: 1rem;
+}
 
-  .contents .post_search .search_btn {
-    width: 17%;
-    height: 20px;
-    font-size: 1.2rem;
-    border: none;
-  }
+.contents .post_search input {
+  width: 35%;
+  height: 15px;
+  font-size: 1.2rem;
+}
 
-  .contents .sections {
-    display: block;
-  }
+.contents .post_search .search_btn {
+  width: 17%;
+  height: 20px;
+  font-size: 1.2rem;
+  border: none;
+}
 
-  .contents .sections .section {
-    width: 100%;
-    height: 177px;
-  }
+.contents .sections {
+  display: block;
+}
 
-  .contents .sections .section .s_title {
-    height: 25px;
-  }
+.contents .sections .section {
+  width: 100%;
+  height: 177px;
+}
 
-  .contents .sections .section .s_title .sub_title a {
-    font-size: 1.3rem;
-  }
+.contents .sections .section .s_title {
+  height: 25px;
+}
 
-  .contents .sections .section .s_title .more a {
-    font-size: 1.1rem;
-  }
+.contents .sections .section .s_title .sub_title a {
+  font-size: 1.3rem;
+}
 
-  .contents .sections .section .list .post {
-    height: 22px;
-    font-size: 1.2rem;
-  }
+.contents .sections .section .s_title .more a {
+  font-size: 1.1rem;
+}
 
-  .contents .sections .section .list .post .post_title {
-    font-size: 1.2rem;
-    line-height: 22px;
-  }
+.contents .sections .section .list .post {
+  height: 22px;
+  font-size: 1.2rem;
+}
+
+.contents .sections .section .list .post .post_title {
+  font-size: 1.2rem;
+  line-height: 22px;
 }
