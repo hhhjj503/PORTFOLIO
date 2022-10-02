@@ -1,13 +1,13 @@
-window.onload = function () {
-  const brow = navigator.userAgent;
-  if (
-    brow.match(
-      "ios | Android | Symbian | Apple | Samsung | LG | Biackberry | iPhone | Gallaxy"
-    )
-  ) {
-    window.location.href = "../../pages/musicheart/mobile/index.html";
-  }
+const brow = navigator.userAgent;
+if (
+  brow.match(
+    "ios | Android | Symbian | Apple | Samsung | LG | Biackberry | iPhone | Gallaxy"
+  )
+) {
+  window.location.href = "../../pages/musicheart/mobile/index.html";
+}
 
+window.onload = function () {
   const swiper = new Swiper(".swiper", {
     spaceBetween: 30,
     centeredSlides: true,

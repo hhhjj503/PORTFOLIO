@@ -1,9 +1,9 @@
-window.onload = function () {
-  const brow = navigator.userAgent;
-  if (brow.match("Windows | Linux")) {
-    window.location.href = "../index.html";
-  }
+const brow = navigator.userAgent;
+if (brow.match("Windows | Linux")) {
+  window.location.href = "../index.html";
+}
 
+window.onload = function () {
   const signup = document.querySelector(".sign_up");
   const login = document.querySelector(".login");
   const subBtn = document.querySelector(".sub_btn");
