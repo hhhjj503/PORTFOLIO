@@ -5,7 +5,7 @@ window.onload = function () {
       "ios | Android | Symbian | Apple | Samsung | LG | Biackberry | iPhone | Gallaxy"
     )
   ) {
-    window.location.href = "../../../pages/musicheart/mobile/index.html";
+    window.location.href = "../../pages/musicheart/mobile/index.html";
   }
 
   const swiper = new Swiper(".swiper", {
