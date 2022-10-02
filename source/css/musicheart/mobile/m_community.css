@@ -1,0 +1,233 @@
+@import url(./m_header.css);
+@import url(../../reset.css);
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+::selection {
+  background: rgba(255, 255, 255, 0.5);
+  color: #031720;
+}
+
+a {
+  color: black;
+}
+
+/* -------------------------------------------------contents--------------------------------------------- */
+
+.contents {
+  width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent;
+  margin-top: 6%;
+}
+
+.contents .post_search {
+  margin-left: auto;
+  margin-right: auto;
+  width: 48%;
+  height: 55px;
+  background-color: #102731;
+  border-radius: 9px;
+  margin-bottom: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contents .post_search form {
+  display: flex;
+  align-items: center;
+}
+
+.contents .post_search .post_type {
+  border-radius: 5px;
+  width: 130px;
+  height: 35px;
+  font-size: 1.5rem;
+  padding-left: 5px;
+  margin-right: 10px;
+  font-weight: 700;
+}
+
+.contents .post_search input {
+  font-size: 1.7rem;
+  border-radius: 5px;
+  width: 270px;
+  height: 30px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+  padding-right: 20px;
+  border: 1px solid white;
+  background-color: white;
+  margin-right: 10px;
+}
+
+.contents .post_search .search_btn {
+  width: 60px;
+  height: 35px;
+  font-size: 1.6rem;
+  border-radius: 3px;
+  border: none;
+}
+
+.contents .sections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: white;
+}
+
+.contents .sections .section {
+  width: 45%;
+  height: 222px;
+  position: relative;
+  margin-left: 3px;
+  margin-right: 3px;
+  margin-bottom: 50px;
+  overflow: hidden;
+  border-bottom: 1.5px solid #5c5c5c;
+}
+
+.contents .sections .section .s_title {
+  display: flex;
+  height: 34px;
+  width: 100%;
+  background-color: #031720;
+  align-items: center;
+}
+
+.contents .sections .section .s_title .sub_title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 34px;
+  color: rgb(224, 224, 224);
+  margin-left: 15px;
+  flex: 1;
+}
+
+.contents .sections .section .s_title .more {
+  font-size: 1.3rem;
+  text-align: right;
+  flex: 1;
+}
+
+.contents .sections .section .s_title .sub_title a {
+  color: white;
+  cursor: pointer;
+}
+.contents .sections .section .s_title .more a {
+  color: rgb(221, 221, 221);
+  text-decoration: underline;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.contents .sections .section .list .post {
+  height: 28px;
+  justify-content: center;
+  background-color: rgb(240, 240, 240);
+  margin-top: 3px;
+  text-align: left;
+  white-space: nowrap;
+  padding-left: 10px;
+  padding-right: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contents .sections .section .list .post .post_title {
+  line-height: 28px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* -------------------------------------------------footer--------------------------------------------- */
+
+.footer {
+  width: 100%;
+  height: 70px;
+  margin-top: 80px;
+  background-color: black;
+}
+
+@media (hover: hover) {
+  .contents .sections .section .list .post a:hover {
+    text-decoration: underline;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .contents {
+    width: 90%;
+  }
+
+  .contents .post_search {
+    margin-top: 50px;
+    width: 100%;
+    height: 35px;
+  }
+
+  .contents .post_search form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contents .post_search .post_type {
+    width: 24%;
+    height: 20px;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  .contents .post_search input {
+    width: 35%;
+    height: 15px;
+    font-size: 1.2rem;
+  }
+
+  .contents .post_search .search_btn {
+    width: 17%;
+    height: 20px;
+    font-size: 1.2rem;
+    border: none;
+  }
+
+  .contents .sections {
+    display: block;
+  }
+
+  .contents .sections .section {
+    width: 100%;
+    height: 177px;
+  }
+
+  .contents .sections .section .s_title {
+    height: 25px;
+  }
+
+  .contents .sections .section .s_title .sub_title a {
+    font-size: 1.3rem;
+  }
+
+  .contents .sections .section .s_title .more a {
+    font-size: 1.1rem;
+  }
+
+  .contents .sections .section .list .post {
+    height: 22px;
+    font-size: 1.2rem;
+  }
+
+  .contents .sections .section .list .post .post_title {
+    font-size: 1.2rem;
+    line-height: 22px;
+  }
+}

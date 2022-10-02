@@ -1,0 +1,250 @@
+@import url(../../skip.css);
+
+html {
+  font-size: 62.5%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+::selection {
+  background: rgba(255, 255, 255, 0.5);
+  color: #031720;
+}
+
+.btn {
+  height: 65px;
+  margin-top: 15px;
+  border-radius: 10px;
+  background-color: #031720;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.login {
+  width: 600px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12%;
+}
+
+.login .login_header {
+  display: flex;
+  border-radius: 10px;
+  width: 100%;
+  height: 70px;
+  background-color: #031720;
+}
+
+.login .login_header .logo {
+  padding-top: 12px;
+}
+
+.login .login_header a {
+  text-decoration: none;
+  font-size: 4rem;
+  font-weight: 600;
+  color: white;
+  margin-left: 20px;
+}
+
+.login .login_header .h_deco {
+  color: red;
+}
+
+.login .login_header .title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  margin-left: 20px;
+  margin-top: 27px;
+}
+
+.login .login_input_items .input_item {
+  display: flex;
+}
+
+.login .login_input_items .input_item input {
+  height: 60px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 2.1rem;
+  padding-left: 20px;
+  margin-top: 15px;
+  border: 1px solid #6e6e6e;
+  outline: none;
+}
+
+.login .login_input_items .input_item .check {
+  margin-left: 10px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.login .login_input_items .input_item .login_btn {
+  width: 100%;
+  font-size: 2rem;
+  background-color: #031720;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.login .login_input_items .login_description {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  font-size: 1.9rem;
+  line-height: 25px;
+}
+
+.login .login_input_items .login_description a,
+.login .login_bottom a {
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.login .login_bottom {
+  margin-top: 15px;
+  border-top: 1px solid #bdbdbd;
+  font-size: 1.8rem;
+  padding-top: 20px;
+}
+.login .login_bottom a {
+  margin-top: 15px;
+  color: black;
+}
+
+.login .login_bottom .find_box {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.login .login_bottom .find_box .id_btn,
+.login .login_bottom .find_box .pwd_btn {
+  height: 50px;
+  width: 49.5%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: #031720;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login label input {
+  position: absolute;
+  left: -999em;
+}
+
+.login label {
+  float: right;
+}
+
+.login label .circle {
+  display: inline-block;
+  background-color: #ccc;
+  width: 40px;
+  height: 20px;
+  border-radius: 8px;
+  top: 2px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.login label .circle:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 3px 3px 3px gray;
+  transition: 0.3s;
+  transition-delay: 0.1s;
+}
+
+.login label input:checked ~ .circle {
+  background-color: #062f42;
+}
+.login label input:checked ~ .circle:after {
+  left: 21px;
+}
+
+@media (hover: hover) {
+  .btn:hover,
+  .login .login_input_items .input_item .login_btn:hover {
+    background-color: #424242;
+  }
+
+  .login .login_bottom .find_box .id_btn:hover,
+  .login .login_bottom .find_box .pwd_btn:hover {
+    background-color: #424242;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .login {
+    width: 90%;
+  }
+
+  .login .login_header {
+    height: 40px;
+  }
+
+  .login .login_header a {
+    font-size: 2.4rem;
+    line-height: 13px;
+  }
+
+  .login .login_header .title {
+    font-size: 1.5rem;
+    margin: 0px;
+    line-height: 47px;
+    margin-left: 10px;
+  }
+
+  .login .login_input_items .input_item input {
+    height: 30px;
+    font-size: 1.5rem;
+    border-radius: 7px;
+    padding-left: 10px;
+  }
+
+  .login .login_input_items .input_item .login_btn {
+    font-size: 1.5rem;
+    height: 40px;
+  }
+
+  .login .login_bottom {
+    font-size: 1.5rem;
+  }
+
+  .login .login_bottom a {
+    font-size: 1.4rem;
+  }
+
+  .login .login_bottom .find_box .id_btn,
+  .login .login_bottom .find_box .pwd_btn {
+    font-size: 1.5rem;
+    height: 30px;
+  }
+
+  .login .login_bottom label {
+    display: block;
+    width: 100%;
+    clear: both;
+    margin-top: 5px;
+  }
+
+  .login .login_bottom label .circle {
+    top: 4px;
+  }
+}

@@ -22,14 +22,14 @@ window.onload = function () {
   const mobileHMenuBtn = document.querySelector(".mobile_h_menu_btn");
 
   signup.addEventListener("click", function () {
-    location.href = "../../pages/musicheart/join.html";
+    location.href = "../../../pages/musicheart/mobile/m_join.html";
   });
   subBtn.addEventListener("click", function () {
-    location.href = "../../pages/musicheart/join.html";
+    location.href = "../../../pages/musicheart/mobile/m_join.html";
   });
 
   login.addEventListener("click", function () {
-    location.href = "../../pages/musicheart/login.html";
+    location.href = "../../../pages/musicheart/mobile/m_login.html";
   });
 
   mobileHMenuBtn.addEventListener("click", function () {

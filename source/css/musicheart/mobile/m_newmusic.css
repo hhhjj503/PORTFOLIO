@@ -1,0 +1,138 @@
+@import url(./m_header.css);
+@import url(../../reset.css);
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+::selection {
+  background: rgba(255, 255, 255, 0.5);
+  color: #031720;
+}
+
+a {
+  color: black;
+}
+
+/* -------------------------------------------------contents--------------------------------------------- */
+
+.contents {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.contents .img_items {
+  width: inherit;
+  height: 160px;
+  background-color: #031720;
+  border-radius: 10px;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contents .img_items .img_item {
+  width: 15%;
+  height: 140px;
+  background-color: #031720;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.contents .img_items .clicked {
+  border: 1px solid white;
+  opacity: 1;
+}
+
+.contents .biggerimg_box {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  width: 60%;
+  border-radius: 25px;
+  height: 440px;
+  background-color: #031720;
+  transition: 0.3s ease-in-out;
+}
+
+.contents .biggerimg_box .bigger_img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+  transition: 0.3s ease-in-out;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.contents .img_title_box .img_title {
+  font-size: 3.2rem;
+  text-align: center;
+  margin-top: 40px;
+  font-weight: 700;
+  display: none;
+}
+
+.contents .img_title_box .title_clicked {
+  display: block;
+  transition: 0.3s ease-in-out;
+}
+
+/* -------------------------------------------------footer--------------------------------------------- */
+
+.footer {
+  width: 100%;
+  height: 70px;
+  margin-top: 100px;
+  background-color: black;
+}
+
+@media (hover: hover) {
+  .contents .img_items .img_item:hover {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .contents {
+    width: 100%;
+  }
+
+  .contents .img_items {
+    margin: 0 auto;
+    width: 85%;
+    height: 210px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+    margin-top: 50px;
+  }
+
+  .contents .img_items .img_item {
+    width: 45%;
+    height: 55px;
+  }
+
+  .contents .biggerimg_box {
+    width: 88%;
+    height: 250px;
+    margin-top: 50px;
+  }
+
+  .contents .img_title_box .img_title {
+    font-size: 1.8rem;
+  }
+
+  .footer {
+    margin-top: 50px;
+  }
+}

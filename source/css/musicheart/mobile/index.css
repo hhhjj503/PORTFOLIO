@@ -1,0 +1,265 @@
+@import url(./m_header.css);
+@import url(../../skip.css);
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+::selection {
+  background: rgba(255, 255, 255, 0.5);
+  color: #031720;
+}
+
+.white {
+  color: white;
+}
+
+.btn {
+  width: 100%;
+  height: 65px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  background: rgb(52, 52, 65);
+  color: white;
+  cursor: pointer;
+}
+
+a {
+  color: black;
+}
+
+/* ------------------------------------------------- contents ------------------------------------------------------ */
+
+.contents .contents_items .swiper_section {
+  width: 100%;
+  background: #031720;
+}
+
+.contents .contents_items .swiper_section .swiper {
+  width: 1250px;
+}
+.contents .contents_items .swiper_section .swiper-wrapper {
+  width: 100%;
+  height: 400px;
+  box-shadow: 3px 12px 12px rgba(255, 255, 255, 1),
+    3px 12px 12px rgba(255, 255, 255, 1), 3px 12px 12px rgba(255, 255, 255, 1),
+    3px 12px 12px rgba(255, 255, 255, 1);
+}
+.swiper-slide {
+  background-image: url("https://picsum.photos/1000/500");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contents .contents_items .introduce {
+  width: 100%;
+  background-color: black;
+  height: 140px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.contents .contents_items .introduce .i_deco {
+  width: 1250px;
+  background: black;
+  color: rgb(194, 194, 194);
+  font-size: 6rem;
+  font-weight: 600;
+  line-height: 140px;
+  letter-spacing: 10px;
+  cursor: default;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contents .contents_items .description {
+  margin-top: 105px;
+  width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contents .contents_items .description .d_desc {
+  flex-direction: column;
+}
+
+.contents .contents_items .description .d_img img {
+  background-image: url("../../images/musicheart/musichearDescription.png");
+  opacity: 0.8;
+  width: 600px;
+  height: 450px;
+  border-radius: 20px;
+}
+
+.contents .contents_items .description .d_desc .d_deco {
+  color: rgb(155, 155, 155);
+  font-size: 7rem;
+  font-weight: 600;
+  letter-spacing: 15px;
+  cursor: default;
+}
+
+.contents .contents_items .description .d_desc .d_title {
+  margin-top: 70px;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  line-height: 27px;
+  text-align: left;
+}
+
+.contents .contents_items .description .d_desc .d_btn {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.contents .contents_items .description .d_desc .d_btn .sub_btn {
+  border-radius: 30px;
+  height: 50px;
+  width: 40%;
+  font-size: 2rem;
+}
+
+/* -------------------------------------------------footer--------------------------------------------- */
+
+.footer {
+  width: 100%;
+  height: 70px;
+  margin-top: 100px;
+  background-color: black;
+}
+
+@media (hover: hover) {
+  .contents .contents_items .introduce .login_sns ul li a:hover {
+    color: rgb(255, 255, 255);
+  }
+
+  .contents .contents_items .description .sub_btn:hover {
+    background-color: rgb(49, 4, 78);
+  }
+}
+
+/* ----------------- 모바일 쿼리 -------------------- */
+
+@media only screen and (max-width: 480px) {
+  body {
+    background-color: black;
+  }
+
+  /* -----------------------------------------------------contents-------------------------------------- */
+
+  .contents .contents_items .swiper_section {
+    display: none;
+  }
+
+  .contents .contents_items .description .d_img {
+    display: none;
+  }
+
+  .contents .contents_items .description .d_img img {
+    width: 100%;
+  }
+
+  .contents .contents_items .introduce .i_deco {
+    font-size: 3rem;
+    padding-left: 0px;
+    padding-bottom: 40px;
+    margin-top: 40px;
+  }
+
+  .contents .contents_items .description {
+    width: 100%;
+  }
+
+  .contents .contents_items .description .d_desc .d_deco {
+    font-size: 3rem;
+  }
+
+  .contents .contents_items .introduce {
+    display: block;
+  }
+
+  .contents .contents_items .introduce .i_deco {
+    width: 100%;
+    font-size: 3rem;
+    line-height: 50px;
+    padding-bottom: 0;
+  }
+
+  .contents .contents_items .introduce .login_box {
+    font-size: 1.2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .contents .contents_items .introduce .login_box .login_sns {
+    display: none;
+  }
+
+  .contents .contents_items .introduce .login_box .login_btn {
+    width: 50%;
+    height: 50px;
+    font-size: 1.7rem;
+  }
+
+  .contents .contents_items .introduce .login_box .sign_up_btn {
+    width: 50%;
+    height: 50px;
+    font-size: 1.7rem;
+  }
+
+  .contents .contents_items .introduce .login_sns ul li a {
+    font-size: 3rem;
+  }
+
+  .contents .contents_items .description {
+    display: block;
+    margin-top: 0px;
+    text-align: center;
+    background-image: url("../../../images/musicheart/musichearDescription.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .contents .contents_items .description .d_desc {
+    margin-left: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .contents .contents_items .description .d_desc .d_deco {
+    margin-top: 50px;
+    letter-spacing: 8px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .contents .contents_items .description .d_desc .d_title {
+    font-size: 1.5rem;
+    text-align: left;
+    margin-top: 60px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    word-break: keep-all;
+    color: white;
+  }
+
+  .contents .contents_items .description .d_desc .d_btn {
+    margin-top: 60px;
+    margin-bottom: 50px;
+  }
+
+  .contents .contents_items .description .d_desc .d_btn .sub_btn {
+    height: 40px;
+    width: 170px;
+    font-size: 1.7rem;
+  }
+
+  .footer {
+    height: 30px;
+    margin-top: 30px;
+  }
+}
