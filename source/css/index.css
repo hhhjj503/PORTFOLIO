@@ -377,13 +377,13 @@ header .entrance_wrapper {
   content: "GO";
   font-size: 1.5rem;
   font-weight: bold;
-  line-height: calc(84px);
+  line-height: calc(70px);
   opacity: 0;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 30%;
-  height: 28%;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   background-color: white;
   transition: 0.3s ease-in-out;
@@ -563,7 +563,7 @@ footer .contact_wrapper {
   }
 
   .list a:hover:after {
-    top: 35%;
+    top: 45%;
     width: 60px;
     height: 60px;
     line-height: 60px;
