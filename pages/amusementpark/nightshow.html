@@ -12,25 +12,25 @@
     <title>Amusement Park | Nightshow</title>
   </head>
   <body>
-    <header>
-      <div class="wrapper">
-        <ul>
-          <li>
-            <a href="./index.html" class="home">
-              <img
-                src="../../source/images/amusementpark/fort-awesome.svg"
-                alt="castle"
-              />
-            </a>
-          </li>
-          <li><a href="./nightshow.html">나이트쇼</a></li>
-          <li><a href="./rollercoaster.html">롤러코스터</a></li>
-          <li><a href="./krustyland.html">크러스티 아일랜드</a></li>
-          <li><a href="./aquarium.html">아쿠아리움</a></li>
-        </ul>
-      </div>
-    </header>
     <main>
+      <nav class="top-nav">
+        <div class="wrapper">
+          <ul>
+            <li>
+              <a href="./index.html" class="home">
+                <img
+                  src="../../source/images/amusementpark/fort-awesome.svg"
+                  alt="castle"
+                />
+              </a>
+            </li>
+            <li><a href="./nightshow.html">나이트쇼</a></li>
+            <li><a href="./nightshow.html">롤러코스터</a></li>
+            <li><a href="./nightshow.html">크러스티 아일랜드</a></li>
+            <li><a href="./nightshow.html">아쿠아리움</a></li>
+          </ul>
+        </div>
+      </nav>
       <div class="banner">
         <div
           class="main_img"
@@ -41,49 +41,205 @@
         ></div>
       </div>
       <div class="info">
-        <span>다양한 불꽃놀이의 밤!</span>
-        <div class="benefits">
-          <div class="slider_wrapper">
+        <a href="#" class="hiding"></a>
+        <div class="desc">신나는 불꽃축제!</div>
+        <a href="#" class="hiding"></a>
+        <div class="contents">
+          <div class="slider-wrapper">
             <div class="slider">
               <div class="slide">
-                1
                 <img
                   src="../../source/images/amusementpark/nightshow/nightshow.PNG"
-                  alt=""
+                  alt="불꽃놀이사진"
                 />
               </div>
               <div class="slide">
-                2
                 <img
                   src="../../source/images/amusementpark/nightshow/nightshow_fireworks.JPG"
-                  alt=""
+                  alt="불꽃놀이사진"
                 />
               </div>
               <div class="slide">
-                3
                 <img
                   src="../../source/images/amusementpark/nightshow/nightshow_lights.JPG"
-                  alt=""
+                  alt="불빛사진"
                 />
               </div>
               <div class="slide">
-                4
                 <img
                   src="../../source/images/amusementpark/nightshow/nightshow4.JPG"
-                  alt=""
+                  alt="관람차사진"
                 />
               </div>
               <div class="slide">
-                5
                 <img
                   src="../../source/images/amusementpark/nightshow/nightshow_lights.JPG"
-                  alt=""
+                  alt="불빛사진"
                 />
               </div>
             </div>
           </div>
+          <div class="overlay">
+            <img src="#" alt="오버레이이미지" />
+          </div>
+        </div>
+      </div>
+      <div class="benefits">
+        <div class="listwrapper">
+          <a href="#" class="hiding"></a>
+          <div class="desc">Amuse Park 의 혜택 네가지!</div>
+          <a href="#" class="hiding"></a>
+          <ul>
+            <li class="benefit">
+              <div>
+                <span class="number">1</span>
+                <p>언제 어디서나 앱을 통해 이벤트 정보를 받아보세요!</p>
+                <button>바로가기</button>
+              </div>
+            </li>
+            <li class="benefit">
+              <div>
+                <span class="number">2</span>
+                <p>다양한 행사를 통한 푸짐한 상품들!</p>
+                <button>바로가기</button>
+              </div>
+            </li>
+            <li class="benefit">
+              <div>
+                <span class="number">3</span>
+                <p>온가족이 함께하면 더욱 커지는 할인혜택!</p>
+                <button>바로가기</button>
+              </div>
+            </li>
+            <li class="benefit">
+              <div>
+                <span class="number">4</span>
+                <p>언제인지 모르는 깜짝 이벤트까지!</p>
+                <button>바로가기</button>
+              </div>
+            </li>
+          </ul>
+          <a href="#" class="hiding"></a>
+          <div class="more">
+            <button>더보기</button>
+          </div>
+        </div>
+      </div>
+      <div class="letter">
+        <a href="#" class="hiding"></a>
+        <div class="desc">여러분의 후기를 들려주세요!</div>
+        <a href="#" class="hiding"></a>
+        <div class="form-wrapper">
+          <form action="#" method="get">
+            <div class="customer-name">
+              <label for="name">이름</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="이름을 입력해주세요"
+              />
+            </div>
+            <div class="customer-number">
+              <label for="number">입장권번호</label>
+              <input
+                type="number"
+                name="number"
+                id="number"
+                placeholder="입장권번호를 입력해주세요"
+              />
+            </div>
+            <div class="customer-address">
+              <label for="address">주소</label>
+              <input
+                type="text"
+                name="address"
+                id="address"
+                placeholder="주소를 입력해주세요"
+              />
+              <input
+                type="text"
+                name="address2"
+                id="address2"
+                placeholder="상세주소를 입력해주세요"
+              />
+            </div>
+            <div class="customer-review">
+              <label for="review">리뷰내용</label>
+              <textarea
+                name="review"
+                id="review"
+                rows="10"
+                placeholder="리뷰를 입력해주세요"
+              ></textarea>
+            </div>
+            <div class="customer-item">
+              <label for="item">선물선택</label>
+              <ul>
+                <li class="item-img">
+                  <img
+                    src="../../source/images/amusementpark/nightshow/present.PNG"
+                    alt=""
+                  />
+                  <input type="radio" name="item" id="item" value="1" checked />
+                </li>
+                <li class="item-img">
+                  <img
+                    src="../../source/images/amusementpark/nightshow/ramen.PNG"
+                    alt=""
+                  />
+                  <input type="radio" name="item" id="item2" value="2" />
+                </li>
+                <li class="item-img">
+                  <img
+                    src="../../source/images/amusementpark/nightshow/phone.PNG"
+                    alt=""
+                  />
+                  <input type="radio" name="item" id="item3" value="3" />
+                </li>
+              </ul>
+            </div>
+            <button type="submit">응모하기</button>
+          </form>
         </div>
       </div>
     </main>
+    <footer>
+      <div class="wrapper">
+        <div class="list">
+          <ul>
+            <li><a href="#">소개</a></li>
+            <li><a href="#">문의</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보관리</a></li>
+            <li><a href="#">이메일무단수집거부</a></li>
+            <li><a href="#">사이트맵</a></li>
+            <li><a href="#">직원채용</a></li>
+          </ul>
+        </div>
+        <div class="sns">
+          <img
+            src="../../source/images/amusementpark/youtubeicon.png"
+            alt="페이스북"
+          />
+          <img
+            src="../../source/images/amusementpark/instaicon.png"
+            alt="인스타그램"
+          />
+          <img
+            src="../../source/images/amusementpark/facebookicon.png"
+            alt="유튜브"
+          />
+        </div>
+        <div class="logo"><div class="name">Amusement Park</div></div>
+        <div class="gotop">
+          <a href="#"
+            ><img
+              src="../../source/images/amusementpark/nightshow/arrow-up-solid.svg"
+              alt=""
+          /></a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

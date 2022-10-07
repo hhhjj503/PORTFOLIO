@@ -3,17 +3,25 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
   width: 100%;
   height: 100vh;
-  font-family: "Nanum Gothic", "돋움", "Dotum", "Apple Gothic", sans-serif;
+  font-family: "NotoSans-Bold", "맑은 고딕", "Malgun Gothic", sans-serif;
   overflow-x: hidden;
 }
 
-header li:nth-child(2) a {
+.top-nav li:nth-child(2) a {
   color: red;
+}
+
+a.hiding + * {
+  position: relative;
+  transition: 1s ease-in-out;
+  top: 100px;
+  opacity: 0;
 }
 
 /* ------------------------------------------------------------------ */
@@ -30,6 +38,7 @@ header li:nth-child(2) a {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -39,16 +48,37 @@ header li:nth-child(2) a {
   width: 100%;
   padding: 250px 0;
   margin: 0 auto;
-  background-color: transparent;
 }
 
-.info .benefits {
+.info .contents {
   width: 100%;
   height: initial;
   position: relative;
+  background-color: #f3bdf3;
 }
 
-.benefits .slider_wrapper {
+.info .desc {
+  font-size: 2.5rem;
+  border-bottom: 1px solid #e1e1e1;
+  font-weight: bold;
+  position: relative;
+  top: -30px;
+  color: #000;
+  padding: 20px;
+}
+
+.info .desc:before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  width: 5px;
+  height: 40%;
+  transform: translateY(-50%);
+  background-color: purple;
+}
+
+.contents .slider-wrapper {
   position: relative;
   left: 30%;
   top: 0;
@@ -56,14 +86,16 @@ header li:nth-child(2) a {
   overflow: hidden;
 }
 
-.slider_wrapper .slider {
+.slider-wrapper .slider {
   width: 100%;
   height: 100%;
   position: relative;
   left: 0;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-.benefits .slide {
+.contents .slide {
   float: left;
   width: 300px;
   height: 300px;
@@ -73,6 +105,13 @@ header li:nth-child(2) a {
   white-space: nowrap;
   margin: 0 10px;
   transition: 0.5s ease-in-out;
+  border: 3px solid purple;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.slide:hover {
+  border: 5px solid rgb(142, 181, 240);
 }
 
 .slider:after {
@@ -86,4 +125,422 @@ header li:nth-child(2) a {
   height: 100%;
   object-fit: cover;
   object-position: center center;
+}
+
+.contents .overlay {
+  position: fixed;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  z-index: 99;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.overlay img {
+  position: absolute;
+  width: 40%;
+  height: 50%;
+  border-radius: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  background-color: aliceblue;
+  object-fit: cover;
+}
+
+.overlay.visible {
+  opacity: 1;
+  pointer-events: all;
+  overflow: hidden;
+}
+
+/* -------------------------------------------------------------------------- */
+
+main .benefits {
+  position: relative;
+  padding: 200px 0;
+  background-image: url(../../images/amusementpark/nightshow/rides.PNG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.benefits:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1c3055;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.benefits .desc {
+  font-size: 3rem;
+  border-bottom: 1px solid #e1e1e1;
+  text-align: center;
+  position: relative;
+  top: -30px;
+  color: white;
+  padding: 20px;
+}
+
+.benefits .listwrapper {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+}
+
+.listwrapper ul {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.listwrapper .benefit {
+  display: inline-block;
+  height: 300px;
+  width: 16%;
+  background-color: white;
+  vertical-align: middle;
+  border-radius: 15px;
+  transition: 0.3s ease-in-out;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.listwrapper .benefit:nth-child(2n) {
+  position: relative;
+  top: 20px;
+}
+
+.benefit::before {
+  position: absolute;
+  content: "";
+  top: -60%;
+  left: 50%;
+  width: 105%;
+  height: 100%;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(112, 149, 194);
+  transition: 0.3s ease-in-out;
+}
+
+.listwrapper .benefit:hover {
+  position: relative;
+  transform: rotate(-5deg);
+  box-shadow: 1px 1px 20px rgb(77, 77, 77);
+  z-index: 1;
+}
+
+.benefit > div {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.benefit .number {
+  font-size: 10rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-shadow: 0.5px 0.5px rgb(113, 113, 113), -0.5px -0.5px rgb(106, 106, 106);
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.benefit .number:before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.benefit p {
+  width: 90%;
+  font-size: 1.4rem;
+  margin: 20px auto;
+  font-weight: bold;
+  color: black;
+  line-height: 20px;
+}
+
+.benefit li:nth-child(2n) {
+  position: relative;
+  top: 20px;
+}
+
+.benefit button {
+  width: 50%;
+  margin: 0 auto;
+  padding: 7px 0;
+  border-radius: 15px;
+  border: 1px solid white;
+  font-size: 1.2rem;
+  transition: 0.3s ease-in-out;
+}
+
+.benefit:hover button {
+  background-color: rgb(136, 0, 0);
+  color: white;
+  font-weight: bold;
+}
+
+.listwrapper .more {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.listwrapper .more button {
+  width: 15%;
+  padding: 15px 0;
+  border-radius: 30px;
+  border: transparent;
+  font-size: 1.5rem;
+  background: #7095c2;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+.listwrapper .more button:hover {
+  background-color: rgb(136, 0, 0);
+  cursor: pointer;
+  box-shadow: 1px 1px 20px rgb(77, 77, 77);
+}
+
+/* -------------------------------letter----------------------------- */
+
+main .letter {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 100px 0;
+  background-image: url(../../images/amusementpark/nightshow/letter_back.PNG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+main .letter:before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background: linear-gradient(to bottom, transparent 0%, black 100%);
+  z-index: 0;
+}
+
+.letter .desc {
+  font-size: 2.5rem;
+  border-bottom: 1px solid white;
+  text-align: center;
+  position: relative;
+  color: black;
+  padding: 20px;
+  font-weight: bold;
+  margin: 0 auto;
+  width: 80%;
+  z-index: 1;
+}
+
+.letter .form-wrapper {
+  padding: 50px 0;
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.letter form label {
+  display: inline-block;
+  background-color: #1c3055;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 30px;
+  font-size: 1.8rem;
+  box-shadow: 1px 1px 10px rgb(77, 77, 77);
+  font-weight: bold;
+
+  margin: 30px 0 10px 0;
+}
+
+.letter form input {
+  width: 100%;
+  padding: 20px 20px;
+  box-sizing: border-box;
+  font-size: 1.8rem;
+  margin: 5px 0;
+  border: none;
+  box-shadow: 1px 1px 10px rgb(166, 166, 166);
+}
+
+.letter form textarea {
+  resize: none;
+  width: 100%;
+  font-size: 1.8rem;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.letter li {
+  width: 30%;
+  height: 200px;
+  margin: 10px;
+  display: inline-block;
+}
+
+.letter li img {
+  width: 100%;
+  height: 90%;
+  border-radius: 15px;
+  border: 3px solid white;
+}
+
+.letter input[type="radio"] {
+  width: 100%;
+  box-shadow: none;
+}
+
+.letter form button {
+  margin: 0 auto;
+  display: block;
+  padding: 10px 30px;
+  font-size: 1.8rem;
+  border-radius: 15px;
+  border: transparent;
+  background-color: #e1e1e1;
+  margin-top: 50px;
+}
+/* ------------------------ footer ---------------------- */
+
+footer {
+  padding: 50px 0;
+  border-top: 1px solid #e1e1e1;
+}
+
+footer > .wrapper {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  white-space: nowrap;
+  position: relative;
+}
+
+footer > .wrapper .list {
+  width: 80%;
+  text-align: center;
+  vertical-align: super;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+footer .list li {
+  display: inline-block;
+  padding: 0 15px;
+}
+
+footer .list a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: gray;
+}
+
+footer .list::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+footer > .wrapper .sns {
+  width: 20%;
+  display: inline-block;
+}
+
+footer .sns img {
+  margin: 0 20px;
+}
+
+footer .logo {
+  text-align: center;
+  width: 100%;
+  padding: 20px 0;
+  border-top: 1px solid #e1e1e1;
+}
+
+footer .logo .name {
+  font-size: 2rem;
+  position: relative;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+}
+
+footer .logo .name:before {
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 30px;
+  height: 30px;
+  background-image: url(../../images/amusementpark/fort-awesome.svg);
+  content: "";
+}
+footer .logo .name:after {
+  position: absolute;
+  top: 0;
+  right: -50px;
+  width: 30px;
+  height: 30px;
+  background-image: url(../../images/amusementpark/fort-awesome.svg);
+  content: "";
+}
+
+footer .gotop {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #1c3055;
+}
+
+footer .gotop a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+footer .gotop > a img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
 }
