@@ -6,6 +6,19 @@ window.addEventListener("load", function () {
   const hidings = document.querySelectorAll("a.hiding + *");
   const html = document.querySelector("html");
 
+  //모바일 메뉴
+  const topNavMobile = document.querySelector(".top-nav-mobile");
+  const subMenu = document.querySelector(".top-nav-mobile .sub-menu");
+  const goup = document.querySelector(".top-nav-mobile .goup");
+
+  topNavMobile.addEventListener("click", function () {
+    subMenu.classList.toggle("opened");
+  });
+
+  goup.addEventListener("mouseenter", function () {
+    subMenu.classList.toggle("opened");
+  });
+
   for (let i = 0; i < hidings.length; i++) {
     hidings[i].dataset.offtop = hidings[i].getBoundingClientRect().top - 800;
   }

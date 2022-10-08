@@ -544,3 +544,129 @@ footer .gotop > a img {
   width: 50%;
   height: 50%;
 }
+
+/* --------------------------------------------------------------------------- */
+
+@media screen and (max-width: 960px) {
+  .info {
+    transition: 0.3s ease-in-out;
+    padding: 150px 0;
+  }
+
+  .info .desc {
+    font-size: 2rem;
+  }
+
+  .info .contents {
+    overflow: hidden;
+  }
+
+  .contents .slider-wrapper {
+    left: 20%;
+    transition: 0.3s ease-in-out;
+  }
+
+  .benefit .desc {
+    font-size: 2.5rem;
+  }
+
+  main .benefits {
+    padding: 150px 0;
+  }
+
+  .listwrapper .benefit {
+    height: 250px;
+    width: 20%;
+  }
+
+  .letter .desc {
+    font-size: 2rem;
+  }
+
+  .letter .form-wrapper {
+    width: 60%;
+  }
+
+  .letter li {
+    box-sizing: border-box;
+    margin: 0 5px;
+  }
+
+  footer .sns img {
+    margin: 0 1%;
+  }
+
+  footer .list li {
+    box-sizing: border-box;
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .info {
+    padding: 50px 0;
+  }
+
+  .info .desc {
+    font-size: 1.8rem;
+  }
+
+  .benefits .desc {
+    font-size: 1.8rem;
+  }
+
+  .listwrapper .benefit {
+    height: 200px;
+    width: 35%;
+  }
+
+  .benefit .number {
+    font-size: 5rem;
+  }
+
+  .benefit p {
+    font-size: 1.1rem;
+  }
+
+  .listwrapper .benefit:nth-child(2n) {
+    top: 0;
+  }
+
+  .listwrapper .more button {
+    width: 35%;
+    padding: 15px 0;
+    font-size: 1.5rem;
+  }
+
+  .letter .form-wrapper {
+    width: 80%;
+  }
+
+  .letter form label {
+    font-size: 1.5rem;
+    padding: 10px;
+    font-weight: normal;
+  }
+
+  .letter li {
+    width: 45%;
+    height: 200px;
+  }
+
+  footer > .wrapper {
+    white-space: normal;
+  }
+
+  footer > .wrapper .list {
+    margin-bottom: 0;
+    width: 100%;
+    display: block;
+  }
+
+  footer > .wrapper .sns {
+    width: 100%;
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+  }
+}
