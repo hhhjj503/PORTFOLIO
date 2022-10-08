@@ -4,30 +4,30 @@
 
 /* -------------------------- 이벤트 이미지 선택하는 페이지 ----------------------------- */
 
-.inner_wrapper .event_list {
+.inner-wrapper .event-list {
   width: 100%;
   overflow: hidden;
   margin-top: 20px;
 }
 
-.event_list li {
+.event-list li {
   float: left;
   width: 300px;
 }
 
-.event_list li {
+.event-list li {
   margin-right: 50px;
 }
 
-.event_list li:nth-child(3n) {
+.event-list li:nth-child(3n) {
   margin-right: 0;
 }
 
-.event_list li:nth-child(-n + 3) {
+.event-list li:nth-child(-n + 3) {
   margin-bottom: 50px;
 }
 
-.event_list li > img {
+.event-list li > img {
   display: block;
   width: 100%;
   height: 200px;
@@ -36,7 +36,7 @@
   border-top-right-radius: 10px;
 }
 
-.event_list li > a {
+.event-list li > a {
   display: block;
   width: 100%;
   height: 30px;
@@ -53,7 +53,7 @@ li > a:hover {
   text-decoration: underline;
 }
 
-.event_list li > span {
+.event-list li > span {
   display: block;
   width: 100%;
   height: 30px;
@@ -63,7 +63,7 @@ li > a:hover {
   background-color: rgb(243, 243, 243);
   color: black;
 }
-.event_list li > p {
+.event-list li > p {
   width: 100%;
   text-align: center;
   height: 30px;

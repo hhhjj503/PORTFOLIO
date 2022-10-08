@@ -2,16 +2,16 @@
 
 /* ----------------------------- main ------------------------ */
 
-.intro_list {
+.intro-list {
   width: 100%;
   margin-top: 20px;
 }
 
-.intro_list .list_wrapper {
+.intro-list .list-wrapper {
   width: 100%;
 }
 
-.list_wrapper > li {
+.list-wrapper > li {
   width: 100%;
   height: 300px;
 }

@@ -21,21 +21,21 @@ body {
   text-decoration: none;
 }
 
-.join_wrapper {
+.join-wrapper {
   width: 50rem;
   margin: 0 auto;
   max-width: 100%;
 }
 
-.join_wrapper ul {
+.join-wrapper ul {
   width: 100%;
 }
 
-.join_wrapper ul li {
+.join-wrapper ul li {
   width: 100%;
 }
 
-.join_wrapper li a {
+.join-wrapper li a {
   display: block;
   width: 100%;
   height: 70px;
@@ -46,7 +46,7 @@ body {
   text-decoration: none;
 }
 
-.join_wrapper a span {
+.join-wrapper a span {
   display: inline-block;
   font-size: 1.7rem;
   line-height: 70px;
@@ -54,7 +54,7 @@ body {
   position: relative;
 }
 
-.join_wrapper a span:not(:last-child):before {
+.join-wrapper a span:not(:last-child):before {
   content: "";
   position: relative;
   display: inline-block;
@@ -64,13 +64,13 @@ body {
   background-color: rgb(42, 180, 166);
 }
 
-.join_wrapper a span.smaller {
+.join-wrapper a span.smaller {
   font-size: 1.6rem;
   color: gray;
   margin-left: 5px;
   font-weight: normal;
 }
 
-.join_wrapper a:hover {
+.join-wrapper a:hover {
   border: 1px solid rgb(101, 200, 233);
 }

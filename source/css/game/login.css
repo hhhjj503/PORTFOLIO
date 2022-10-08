@@ -5,31 +5,31 @@ body {
   overflow: hidden;
 }
 
-.home_login_wrapper {
+.home-login-wrapper {
   width: 100%;
   margin-top: 100px;
 }
 
-.home_login_wrapper .inner_wrapper {
+.home-login-wrapper .inner-wrapper {
   width: 600px;
   margin: 0 auto;
   max-width: 100%;
 }
 
-.home_login_wrapper .inner_wrapper .logo {
+.home-login-wrapper .inner-wrapper .logo {
   text-align: center;
   height: 50px;
   line-height: 50px;
 }
 
-.inner_wrapper .logo a {
+.inner-wrapper .logo a {
   font-size: 2.5rem;
   color: #000;
   font-weight: bold;
   text-decoration: none;
 }
 
-.inner_wrapper form {
+.inner-wrapper form {
   width: 100%;
 }
 

@@ -1,11 +1,11 @@
 @import url(../setting.css);
 
-.card_wrapper {
+.card-wrapper {
   margin-top: 20px;
   width: 100%;
 }
 
-.card_wrapper ol {
+.card-wrapper ol {
   width: 100%;
 }
 
@@ -15,22 +15,22 @@ ol:after {
   clear: both;
 }
 
-.card_wrapper ol li {
+.card-wrapper ol li {
   width: 19%;
   height: 150px;
   float: left;
   position: relative;
 }
 
-.card_wrapper ol li:not(:first-child) {
+.card-wrapper ol li:not(:first-child) {
   margin-left: 12px;
 }
 
-.card_wrapper ol li:nth-child(n + 5) {
+.card-wrapper ol li:nth-child(n + 5) {
   margin-bottom: 30px;
 }
 
-.card_wrapper li a {
+.card-wrapper li a {
   display: block;
   width: 100%;
   height: 100%;
@@ -41,14 +41,14 @@ ol:after {
   text-decoration: none;
 }
 
-.card_wrapper a .order {
+.card-wrapper a .order {
   display: block;
   font-size: 2.5rem;
   color: #ccc;
   font-weight: bold;
 }
 
-.card_wrapper a .question {
+.card-wrapper a .question {
   display: block;
   font-size: 1.5rem;
   color: black;
@@ -57,7 +57,7 @@ ol:after {
   line-height: 20px;
 }
 
-.card_wrapper .triangle {
+.card-wrapper .triangle {
   position: absolute;
   width: 0;
   height: 0;
@@ -70,32 +70,32 @@ ol:after {
   display: none;
 }
 
-.card_wrapper .triangle.clicked {
+.card-wrapper .triangle.clicked {
   display: block;
 }
 
-.card_wrapper a:hover {
+.card-wrapper a:hover {
   background-color: #ff5000;
   box-shadow: 2px 2px 4px #ccc;
   color: white;
 }
 
-.card_wrapper a:hover .order,
-.card_wrapper a:hover .question {
+.card-wrapper a:hover .order,
+.card-wrapper a:hover .question {
   color: white;
 }
 
-.card_wrapper a.clicked {
+.card-wrapper a.clicked {
   background-color: #ff5000;
   box-shadow: 2px 2px 4px #ccc;
 }
 
-.card_wrapper a.clicked .order,
-.card_wrapper a.clicked .question {
+.card-wrapper a.clicked .order,
+.card-wrapper a.clicked .question {
   color: white;
 }
 
-.order_content {
+.order-content {
   display: none;
   width: 100%;
   height: 400px;
@@ -105,15 +105,15 @@ ol:after {
   background-color: #f9f9f9;
   position: relative;
 }
-.order_content.show {
+.order-content.show {
   display: block;
 }
 
-.order_content .order_content_header {
+.order-content .order-content-header {
   width: 100%;
 }
 
-.order_content_header h4 {
+.order-content-header h4 {
   width: 100%;
   height: 50px;
   line-height: 50px;
@@ -124,7 +124,7 @@ ol:after {
   font-weight: bold;
 }
 
-.order_content_main {
+.order-content-main {
   width: 100%;
   height: calc(100% - 100px);
   box-sizing: border-box;
@@ -133,20 +133,20 @@ ol:after {
   overflow: auto;
 }
 
-.order_content_main::-webkit-scrollbar {
+.order-content-main::-webkit-scrollbar {
   width: 10px;
 }
-.order_content_main::-webkit-scrollbar-thumb {
+.order-content-main::-webkit-scrollbar-thumb {
   width: 8px;
   background-color: rgb(160, 160, 160);
   border-radius: 20px;
 }
-.order_content_main::-webkit-scrollbar-track {
+.order-content-main::-webkit-scrollbar-track {
   width: 10px;
   background-color: rgb(212, 212, 212);
 }
 
-.order_content .xBtn {
+.order-content .xBtn {
   position: absolute;
   top: 12.5px;
   right: 20px;
@@ -177,14 +177,14 @@ ol:after {
   transform-origin: 0 100%;
 }
 
-.order_content_main p {
+.order-content-main p {
   width: 100%;
   height: 100%;
   font-size: 1.3rem;
   line-height: 30px;
 }
 
-.order_content_bottom {
+.order-content-bottom {
   width: 100%;
   height: 50px;
   border-top: 1px solid #ccc;
@@ -193,13 +193,13 @@ ol:after {
   position: relative;
 }
 
-.order_content_bottom span {
+.order-content-bottom span {
   font-size: 1.2rem;
   line-height: 50px;
   font-weight: bold;
 }
 
-.order_content_bottom a {
+.order-content-bottom a {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);

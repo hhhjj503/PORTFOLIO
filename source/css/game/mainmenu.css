@@ -71,11 +71,11 @@ main .contents .menu .depth1 li .depth2.last {
   border-bottom-right-radius: 10px;
 }
 
-main .contents .menu .depth1 li .depth2.first .left_end {
+main .contents .menu .depth1 li .depth2.first .left-end {
   border-bottom-left-radius: 10px;
 }
 
-main .contents .menu .depth1 li .depth2.last .right_end {
+main .contents .menu .depth1 li .depth2.last .right-end {
   border-bottom-right-radius: 10px;
 }
 

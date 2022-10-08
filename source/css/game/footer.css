@@ -7,7 +7,7 @@ footer {
   width: 100%;
 }
 
-footer .f_wrapper {
+footer .f-wrapper {
   width: 1200px;
   display: flex;
   flex-direction: column;
@@ -19,22 +19,22 @@ footer .f_wrapper {
   margin-right: auto;
 }
 
-footer .f_wrapper .f_detail ul {
+footer .f-wrapper .f-detail ul {
   display: flex;
   color: white;
   font-size: 1.3rem;
 }
 
-footer .f_wrapper .f_detail ul li {
+footer .f-wrapper .f-detail ul li {
   margin-right: 20px;
 }
 
-footer .f_wrapper .f_detail ul li a:hover {
+footer .f-wrapper .f-detail ul li a:hover {
   cursor: pointer;
   text-decoration: underline;
 }
 
-footer .f_wrapper .f_desc {
+footer .f-wrapper .f-desc {
   font-size: 1.3rem;
   color: white;
   width: 500px;

@@ -1,7 +1,7 @@
 window.onload = function () {
-  const triangles = document.querySelectorAll(".card_wrapper .triangle");
-  const as = document.querySelectorAll(".card_wrapper a");
-  const orderContent = document.querySelectorAll(".order_content");
+  const triangles = document.querySelectorAll(".card-wrapper .triangle");
+  const as = document.querySelectorAll(".card-wrapper a");
+  const orderContent = document.querySelectorAll(".order-content");
   const xBtn = document.querySelectorAll(".xBtn");
 
   for (let i = 0; i < as.length; i++) {

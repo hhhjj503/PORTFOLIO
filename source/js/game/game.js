@@ -1,15 +1,15 @@
 window.onload = function () {
   const depth1 = document.querySelector("main .contents .menu .depth1");
   const lis = depth1.children;
-  const imgScreen = document.querySelector(".image_screen");
+  const imgScreen = document.querySelector(".image-screen");
   const items = document.querySelectorAll(".promotion .items .item");
-  const games = document.querySelectorAll("main .game_login .games > .game");
-  const radios = document.querySelectorAll("main .filter .filter_box input");
+  const games = document.querySelectorAll("main .game-login .games > .game");
+  const radios = document.querySelectorAll("main .filter .filter-box input");
   const radiolabels = document.querySelectorAll(
-    "main .filter .filter_box label"
+    "main .filter .filter-box label"
   );
   const mGameLis = document.querySelectorAll(
-    "main .all_games .all_games_wrapper ul > li"
+    "main .all-games .all-games-wrapper ul > li"
   );
 
   //필터 label 중 all 은 기본선택
@@ -66,15 +66,15 @@ window.onload = function () {
   }
 
   //배너 이미지 변경
-  let img_changing = false;
+  let imgChanging = false;
   function imgChange(item) {
-    if (img_changing == true) return;
+    if (imgChanging == true) return;
     const block = document.querySelector("main .banner .screen .block");
-    const number = item.querySelector(".image_number");
+    const number = item.querySelector(".image-number");
     const imgPath = imgScreen.style.backgroundImage;
     const numberChk = imgPath.indexOf(number.innerText);
     if (0 < numberChk) return;
-    img_changing = true;
+    imgChanging = true;
     block.classList.add("locked");
     setTimeout(() => {
       const startIndex = imgPath.indexOf("/source");
@@ -87,18 +87,18 @@ window.onload = function () {
       block.classList.remove("locked");
     }, 1500);
     setTimeout(() => {
-      img_changing = false;
+      imgChanging = false;
     }, 2000);
   }
 
   // 배너아래 미니이미지 확대축소
   function biggerAdd(game) {
-    const image = game.querySelector(".g_img");
+    const image = game.querySelector(".g-img");
     image.classList.add("bigger");
   }
 
   function biggerRemove(game) {
-    const image = game.querySelector(".g_img");
+    const image = game.querySelector(".g-img");
     image.classList.remove("bigger");
   }
 
@@ -115,8 +115,8 @@ window.onload = function () {
     radiolabel.classList.add("clicked");
 
     for (let i = 0; i < mGameLis.length; i++) {
-      if (!mGameLis[i].classList.contains("m_show")) {
-        mGameLis[i].classList.add("m_show");
+      if (!mGameLis[i].classList.contains("m-show")) {
+        mGameLis[i].classList.add("m-show");
       }
     }
 
@@ -125,7 +125,7 @@ window.onload = function () {
     } else {
       for (let i = 0; i < mGameLis.length; i++) {
         if (!mGameLis[i].classList.contains(radio.value)) {
-          mGameLis[i].classList.remove("m_show");
+          mGameLis[i].classList.remove("m-show");
         }
       }
     }

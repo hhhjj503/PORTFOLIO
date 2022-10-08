@@ -1,8 +1,8 @@
 /* ----------------------------------------- main -------------------------------------- */
 
-/* 새소식메뉴 inner_wrapper 공통 css */
+/* 새소식메뉴 inner-wrapper 공통 css */
 
-.contents_wrapper {
+.contents-wrapper {
   width: 1200px;
   margin: 0 auto;
   background-color: white;
@@ -10,12 +10,12 @@
   padding: 100px;
 }
 
-.contents_wrapper .inner_wrapper {
+.contents-wrapper .inner-wrapper {
   position: relative;
   width: 100%;
 }
 
-.contents_wrapper h3 {
+.contents-wrapper h3 {
   width: 100%;
   background-color: rgb(114, 114, 114);
   width: 100%;
@@ -29,7 +29,7 @@
   padding: 0 20px;
 }
 
-.contents_wrapper .path {
+.contents-wrapper .path {
   position: absolute;
   top: 20px;
   right: 20px;
