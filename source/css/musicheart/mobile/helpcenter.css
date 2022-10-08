@@ -17,22 +17,22 @@ a {
 
 /* -------------------------------------------------contents--------------------------------------------- */
 
-.help_contents {
+.help-contents {
   width: 100%;
   height: 100%;
 }
 
-.help_contents .items {
+.help-contents .items {
   width: 950px;
   margin: 150px auto;
 }
 
-.help_contents .items .item {
+.help-contents .items .item {
   width: inherit;
   margin-top: 2px;
 }
 
-.help_contents .items .item .title {
+.help-contents .items .item .title {
   font-size: 2.3rem;
   font-weight: 500;
   width: inherit;
@@ -45,7 +45,7 @@ a {
   border-top-right-radius: 15px;
 }
 
-.help_contents .items .qna .list ul li .question {
+.help-contents .items .qna .list ul li .question {
   width: 100%;
   font-size: 1.6rem;
   text-align: left;
@@ -59,7 +59,7 @@ a {
   margin-top: 2px;
 }
 
-.help_contents .items .qna .list ul li .question::before {
+.help-contents .items .qna .list ul li .question::before {
   content: "Q";
   font-size: 1.6rem;
   color: orange;
@@ -67,7 +67,7 @@ a {
   font-weight: 700;
 }
 
-.help_contents .items .qna .list ul li .answer {
+.help-contents .items .qna .list ul li .answer {
   width: inherit;
   font-size: 1.6rem;
   text-align: left;
@@ -82,7 +82,7 @@ a {
   font-weight: 600;
 }
 
-.help_contents .items .qna .list ul li .answer::before {
+.help-contents .items .qna .list ul li .answer::before {
   content: "A";
   font-size: 1.6rem;
   color: blue;
@@ -90,11 +90,11 @@ a {
   font-weight: 700;
 }
 
-.help_contents .items .qna .list ul li .show {
+.help-contents .items .qna .list ul li .show {
   max-height: 50px;
 }
 
-.help_contents .items .item .contact {
+.help-contents .items .item .contact {
   border-top: 2px solid #858585;
   display: flex;
   justify-content: center;
@@ -108,18 +108,18 @@ a {
   background-color: #a7a7a7;
 }
 
-.help_contents .items .item .contact .phone {
+.help-contents .items .item .contact .phone {
   flex: 1;
   text-align: center;
 }
 
-.help_contents .items .item .contact .deco {
+.help-contents .items .item .contact .deco {
   background-color: rgb(82, 82, 82);
   width: 2px;
   height: 50px;
 }
 
-.help_contents .items .item .contact .email {
+.help-contents .items .item .contact .email {
   flex: 1;
   text-align: center;
 }
@@ -134,63 +134,63 @@ a {
 
 /* -----------------------------------------------적응-------------------------------------------------------- */
 
-.help_contents {
+.help-contents {
   width: 85%;
   margin: 100px auto;
 }
 
-.help_contents .items {
+.help-contents .items {
   width: 100%;
   margin: 0;
 }
 
-.help_contents .items .item {
+.help-contents .items .item {
   margin-top: 1px;
 }
 
-.help_contents .items .item .title {
+.help-contents .items .item .title {
   font-size: 1.8rem;
   height: 40px;
   line-height: 40px;
 }
 
-.help_contents .items .qna .list ul li .question {
+.help-contents .items .qna .list ul li .question {
   font-size: 1.3rem;
   height: 35px;
   line-height: 35px;
 }
 
-.help_contents .items .qna .list ul li .question::before {
+.help-contents .items .qna .list ul li .question::before {
   font-size: 1.3rem;
 }
 
-.help_contents .items .qna .list ul li .answer {
+.help-contents .items .qna .list ul li .answer {
   font-size: 1.3rem;
   height: 35px;
   line-height: 35px;
   font-weight: 600;
 }
 
-.help_contents .items .qna .list ul li .answer::before {
+.help-contents .items .qna .list ul li .answer::before {
   font-size: 1.4rem;
 }
 
-.help_contents .items .item .contact {
+.help-contents .items .item .contact {
   display: block;
   height: 40px;
   font-size: 1.4rem;
 }
 
-.help_contents .items .item .contact .phone {
+.help-contents .items .item .contact .phone {
   margin-bottom: 5px;
   margin-top: 3px;
 }
 
-.help_contents .items .item .contact .email {
+.help-contents .items .item .contact .email {
   text-align: center;
 }
 
-.help_contents .items .item .contact .deco {
+.help-contents .items .item .contact .deco {
   display: none;
 }
 

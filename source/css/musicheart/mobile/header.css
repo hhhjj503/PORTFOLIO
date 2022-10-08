@@ -11,11 +11,11 @@ body {
   background: #031720;
 }
 
-.header .h_title {
+.header .h-title {
   width: 100%;
 }
 
-.header .h_title .h_title_items {
+.header .h-title .h-title-items {
   width: 1250px;
   margin-left: auto;
   margin-right: auto;
@@ -24,7 +24,7 @@ body {
   overflow: auto;
 }
 
-.header .h_title .h_title_items h1 a {
+.header .h-title .h-title-items h1 a {
   float: left;
   text-decoration: none;
   font-size: 3.5rem;
@@ -35,17 +35,17 @@ body {
   padding-bottom: 10px;
 }
 
-header .h_title .h_title_items .login_box {
+header .h-title .h-title-items .login-box {
   height: 10px;
   float: right;
 }
 
-.header .h_title .h_title_items .login_box ul {
+.header .h-title .h-title-items .login-box ul {
   display: flex;
   justify-content: right;
 }
 
-.header .h_title .h_title_items .login_box ul li a {
+.header .h-title .h-title-items .login-box ul li a {
   float: right;
   font-size: 1.5rem;
   color: white;
@@ -56,39 +56,39 @@ header .h_title .h_title_items .login_box {
   cursor: pointer;
 }
 
-.header .h_title .h_title_items .login_box ul li a:hover {
+.header .h-title .h-title-items .login-box ul li a:hover {
   text-decoration: underline;
 }
 
-/* .header .login_sns ul {
+/* .header .login-sns ul {
   position: absolute;
 }
 
-.header .login_sns ul li {
+.header .login-sns ul li {
   margin: 0px;
   padding: 0px;
   background: none;
   height: 20px;
 }
 
-.header .login_sns ul li a {
+.header .login-sns ul li a {
   color: rgb(207, 206, 206);
   text-decoration: none;
   font-weight: 600;
   line-height: 65px;
 } */
 
-.header .h_title .h_deco {
+.header .h-title .h-deco {
   color: red;
 }
 
-.header .h_menu {
+.header .h-menu {
   background-color: white;
   border-bottom: 1px solid gray;
   width: 100%;
 }
 
-.header .h_menu .h_menu_items {
+.header .h-menu .h-menu-items {
   width: 1250px;
   margin-left: auto;
   margin-right: auto;
@@ -97,14 +97,14 @@ header .h_title .h_title_items .login_box {
   background-color: white;
 }
 
-.header .h_menu ul {
+.header .h-menu ul {
   text-align: center;
   cursor: default;
   float: left;
   margin-left: 160px;
 }
 
-.header .h_menu ul li {
+.header .h-menu ul li {
   display: inline-block;
   margin-right: 30px;
   height: 50px;
@@ -114,20 +114,20 @@ header .h_title .h_title_items .login_box {
   line-height: 50px;
 }
 
-.header .h_menu ul li a {
+.header .h-menu ul li a {
   font-size: 1.8rem;
   text-decoration: none;
   cursor: pointer;
 }
 
-.header .h_search form {
+.header .h-search form {
   height: 50px;
   display: flex;
   align-items: center;
   float: right;
 }
 
-.header .h_search input {
+.header .h-search input {
   width: 25px;
   height: 35px;
   font-size: 1.7rem;
@@ -140,12 +140,12 @@ header .h_title .h_title_items .login_box {
   transition: 0.3s ease-in-out;
 }
 
-.header .h_search input:focus {
+.header .h-search input:focus {
   width: 100px;
 }
 
 @media (hover: hover) {
-  .header .h_menu .h_menu_items ul li a:hover {
+  .header .h-menu .h-menu-items ul li a:hover {
     padding-left: 7px;
     padding-right: 7px;
     border-bottom: 3px solid black;
@@ -162,7 +162,7 @@ body {
 }
 /* ----------------------------------------- mobile header--------------------------------------------------------- */
 
-.mobile_h_menu {
+.mobile-h-menu {
   position: absolute;
   display: block;
   top: 0px;
@@ -174,15 +174,15 @@ body {
   transition: 0.3s;
 }
 
-.mobile_h_menu.clicked {
+.mobile-h-menu.clicked {
   left: 0px;
 }
 
-.mobile_h_menu .search {
+.mobile-h-menu .search {
   text-align: center;
 }
 
-.mobile_h_menu .search input {
+.mobile-h-menu .search input {
   display: block;
   height: 25px;
   width: 150px;
@@ -194,13 +194,13 @@ body {
   outline: none;
 }
 
-.mobile_h_menu ul li {
+.mobile-h-menu ul li {
   margin-top: 30px;
   text-align: center;
   font-size: 1.5rem;
 }
 
-.header .mobile_h_menu_btn {
+.header .mobile-h-menu-btn {
   position: absolute;
   display: block;
   width: 30px;
@@ -208,27 +208,27 @@ body {
   left: 20px;
 }
 
-.header .mobile_h_menu_btn .btn1 {
+.header .mobile-h-menu-btn .btn1 {
   height: 2px;
   background-color: white;
   transition: 0.3s;
 }
 
-.header .mobile_h_menu_btn .btn2 {
+.header .mobile-h-menu-btn .btn2 {
   margin-top: 6px;
   height: 2px;
   background-color: white;
   transition: 0.3s;
 }
 
-.header .mobile_h_menu_btn .btn3 {
+.header .mobile-h-menu-btn .btn3 {
   margin-top: 6px;
   height: 2px;
   background-color: white;
   transition: 0.3s;
 }
 
-.header .mobile_h_menu_btn.clicked {
+.header .mobile-h-menu-btn.clicked {
   z-index: 2;
 }
 
@@ -256,43 +256,43 @@ body {
   height: auto;
 }
 
-.header .h_title {
+.header .h-title {
   width: 100%;
   padding: 0;
 }
 
-.header .h_title .h_title_items {
+.header .h-title .h-title-items {
   width: inherit;
 }
 
-.header .h_title .h_title_items h1 {
+.header .h-title .h-title-items h1 {
   width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.header .h_title .h_title_items h1 a {
+.header .h-title .h-title-items h1 a {
   font-size: 3rem;
   margin-left: 0;
   padding-top: 15px;
   padding-bottom: 15px;
 }
 
-.header .h_menu {
+.header .h-menu {
   display: none;
 }
 
-.header .m_h_menu {
+.header .m-h-menu {
   display: block;
   position: absolute;
   background-color: white;
 }
 
-.header .h_search input {
+.header .h-search input {
   width: 200px;
 }
 
-.header .login_box {
+.header .login-box {
   display: none;
 }
