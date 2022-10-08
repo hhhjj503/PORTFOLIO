@@ -243,6 +243,7 @@ footer {
     -0.2px -0.2px white;
   letter-spacing: 1px;
   transition: 0.7s ease-in-out;
+  z-index: 99;
 }
 
 footer:before {
