@@ -603,6 +603,10 @@ footer .gotop > a img {
 }
 
 @media screen and (max-width: 480px) {
+  .banner {
+    height: 60vh;
+  }
+
   .info {
     padding: 50px 0;
   }
@@ -630,6 +634,7 @@ footer .gotop > a img {
 
   .listwrapper .benefit:nth-child(2n) {
     top: 0;
+    margin: 10px;
   }
 
   .listwrapper .more button {
@@ -648,9 +653,22 @@ footer .gotop > a img {
     font-weight: normal;
   }
 
+  .letter form input {
+    padding: 10px;
+    font-size: 1.5rem;
+  }
+
+  .letter form textarea {
+    font-size: 1.5rem;
+  }
+
   .letter li {
     width: 45%;
     height: 200px;
+  }
+
+  .letter li img {
+    height: 70%;
   }
 
   footer > .wrapper {
