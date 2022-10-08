@@ -293,6 +293,7 @@ footer:after {
 @media screen and (max-width: 550px) {
   footer {
     opacity: 0;
+    display: none;
   }
 
   .type:after {
