@@ -4,8 +4,8 @@
 @import url(../searchform.css);
 @import url(../paging.css);
 
-/* --------------------- inner_nav li 페이지 색상 변경 ---------------*/
-.inner_nav li:nth-child(2) a {
+/* --------------------- inner-nav li 페이지 색상 변경 ---------------*/
+.inner-nav li:nth-child(2) a {
   background-color: #028585;
 }
 
@@ -20,7 +20,7 @@ form .totalcount:before {
   clear: both;
 }
 
-/* ---------------- inner > inner_desc --------------- */
+/* ---------------- inner > inner-desc --------------- */
 
 /* ------------- 설명 로드뷰 버튼 ---------- */
 
@@ -35,15 +35,15 @@ form .totalcount:before {
   margin-bottom: 30px;
 }
 
-.history .history_body {
+.history .history-body {
   width: 100%;
   height: 100%;
 }
 
-/* a 의 모든자식이 float 지만 history_body 로부터 높이를
+/* a 의 모든자식이 float 지만 history-body 로부터 높이를
 받아서 clear를 안해도 괜찮음 */
 
-.history_body a {
+.history-body a {
   display: block;
   width: 100%;
   height: 100%;
@@ -55,7 +55,7 @@ form .totalcount:before {
   margin-bottom: 30px;
 }
 
-.history_body a img {
+.history-body a img {
   width: 23%;
   height: 100%;
   float: left;
@@ -63,7 +63,7 @@ form .totalcount:before {
   object-fit: cover;
 }
 
-.history_body h4 {
+.history-body h4 {
   float: right;
   text-align: left;
   width: 77%;
@@ -78,7 +78,7 @@ form .totalcount:before {
   text-decoration: none;
 }
 
-.history_body p {
+.history-body p {
   width: 77%;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -93,7 +93,7 @@ form .totalcount:before {
   margin-bottom: 20px;
 }
 
-.history_body .btn {
+.history-body .btn {
   float: right;
   width: 180px;
   height: 45px;
@@ -113,7 +113,7 @@ form .totalcount:before {
   text-decoration: none;
 }
 
-.history_body .btn:after {
+.history-body .btn:after {
   position: absolute;
   content: ">";
   font-size: 2rem;
@@ -122,15 +122,15 @@ form .totalcount:before {
   display: block;
 }
 
-.history_body a:hover {
+.history-body a:hover {
   border: 2px solid #132f5a;
 }
 
-.history_body a:hover .btn {
+.history-body a:hover .btn {
   color: white;
   background-color: #132f5a;
 }
 
-.history_body a:hover .btn:after {
+.history-body a:hover .btn:after {
   color: white;
 }

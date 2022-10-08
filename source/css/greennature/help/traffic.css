@@ -2,27 +2,27 @@
 @import url(../subbanner.css);
 @import url(../inner_template.css);
 
-/* --------------------- inner_nav li 페이지 색상 변경 ---------------*/
-.inner_nav li:nth-child(1) a {
+/* --------------------- inner-nav li 페이지 색상 변경 ---------------*/
+.inner-nav li:nth-child(1) a {
   background-color: #028585;
 }
 
-/* ---------------- inner > inner_desc --------------- */
+/* ---------------- inner > inner-desc --------------- */
 
 /* ------------------------- 지도 ---------------------- */
 
-.inner_desc .traffic_screen {
+.inner-desc .traffic-screen {
   position: relative;
   margin-top: 30px;
 }
 
-.traffic_screen img {
+.traffic-screen img {
   width: 100%;
   height: 500px;
   object-fit: cover;
 }
 
-.traffic_screen .mapBtn {
+.traffic-screen .mapBtn {
   position: absolute;
   right: 20px;
   bottom: 20px;
@@ -32,7 +32,7 @@
   font-size: 1.5rem;
 }
 
-.traffic_screen .mapBtn:after {
+.traffic-screen .mapBtn:after {
   display: inline-block;
   content: ">";
   width: 25px;
@@ -52,7 +52,7 @@
 
 /* ---------------- 교통편 -------------- */
 
-.inner_desc h4 {
+.inner-desc h4 {
   margin-top: 50px;
   font-size: 1.7rem;
   height: 50px;

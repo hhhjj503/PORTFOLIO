@@ -32,7 +32,7 @@ input::-webkit-inner-spin-button {
   margin-top: 12%;
 }
 
-.login .login_header {
+.login .login-header {
   display: flex;
   border-radius: 10px;
   width: 100%;
@@ -40,11 +40,11 @@ input::-webkit-inner-spin-button {
   background-color: #031720;
 }
 
-.login .login_header .logo {
+.login .login-header .logo {
   padding-top: 12px;
 }
 
-.login .login_header a {
+.login .login-header a {
   text-decoration: none;
   font-size: 4rem;
   font-weight: 600;
@@ -52,11 +52,11 @@ input::-webkit-inner-spin-button {
   margin-left: 20px;
 }
 
-.login .login_header .h_deco {
+.login .login-header .h-deco {
   color: red;
 }
 
-.login .login_header .title {
+.login .login-header .title {
   font-size: 2rem;
   font-weight: 600;
   color: white;
@@ -64,11 +64,11 @@ input::-webkit-inner-spin-button {
   margin-top: 27px;
 }
 
-.login .login_input_items .input_item {
+.login .login-input-items .input-item {
   display: flex;
 }
 
-.login .login_input_items .input_item input {
+.login .login-input-items .input-item input {
   height: 60px;
   width: 100%;
   border-radius: 10px;
@@ -79,13 +79,13 @@ input::-webkit-inner-spin-button {
   outline: none;
 }
 
-.login .login_input_items .input_item .check {
+.login .login-input-items .input-item .check {
   margin-left: 10px;
   width: 100px;
   cursor: pointer;
 }
 
-.login .login_input_items .input_item .login_btn {
+.login .login-input-items .input-item .login-btn {
   width: 100%;
   font-size: 2rem;
   background-color: #031720;
@@ -93,39 +93,39 @@ input::-webkit-inner-spin-button {
   margin-bottom: 5px;
 }
 
-.login .login_input_items .login_description {
+.login .login-input-items .login-description {
   margin-top: 15px;
   margin-bottom: 30px;
   font-size: 1.9rem;
   line-height: 25px;
 }
 
-.login .login_input_items .login_description a,
-.login .login_bottom a {
+.login .login-input-items .login-description a,
+.login .login-bottom a {
   text-decoration: underline;
   cursor: pointer;
   font-weight: 600;
 }
 
-.login .login_bottom {
+.login .login-bottom {
   margin-top: 15px;
   border-top: 1px solid #bdbdbd;
   font-size: 1.8rem;
   padding-top: 20px;
 }
-.login .login_bottom a {
+.login .login-bottom a {
   margin-top: 15px;
   color: black;
 }
 
-.login .login_bottom .find_box {
+.login .login-bottom .find-box {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
 
-.login .login_bottom .find_box .id_btn,
-.login .login_bottom .find_box .pwd_btn {
+.login .login-bottom .find-box .id-btn,
+.login .login-bottom .find-box .pwd-btn {
   height: 50px;
   width: 49.5%;
   margin-bottom: 20px;
@@ -180,12 +180,12 @@ input::-webkit-inner-spin-button {
 
 @media (hover: hover) {
   .btn:hover,
-  .login .login_input_items .input_item .login_btn:hover {
+  .login .login-input-items .input-item .login-btn:hover {
     background-color: #424242;
   }
 
-  .login .login_bottom .find_box .id_btn:hover,
-  .login .login_bottom .find_box .pwd_btn:hover {
+  .login .login-bottom .find-box .id-btn:hover,
+  .login .login-bottom .find-box .pwd-btn:hover {
     background-color: #424242;
   }
 }
@@ -195,55 +195,55 @@ input::-webkit-inner-spin-button {
   width: 90%;
 }
 
-.login .login_header {
+.login .login-header {
   height: 40px;
 }
 
-.login .login_header a {
+.login .login-header a {
   font-size: 2.4rem;
   line-height: 13px;
 }
 
-.login .login_header .title {
+.login .login-header .title {
   font-size: 1.5rem;
   margin: 0px;
   line-height: 47px;
   margin-left: 10px;
 }
 
-.login .login_input_items .input_item input {
+.login .login-input-items .input-item input {
   height: 30px;
   font-size: 1.5rem;
   border-radius: 7px;
   padding-left: 10px;
 }
 
-.login .login_input_items .input_item .login_btn {
+.login .login-input-items .input-item .login-btn {
   font-size: 1.5rem;
   height: 40px;
 }
 
-.login .login_bottom {
+.login .login-bottom {
   font-size: 1.5rem;
 }
 
-.login .login_bottom a {
+.login .login-bottom a {
   font-size: 1.4rem;
 }
 
-.login .login_bottom .find_box .id_btn,
-.login .login_bottom .find_box .pwd_btn {
+.login .login-bottom .find-box .id-btn,
+.login .login-bottom .find-box .pwd-btn {
   font-size: 1.5rem;
   height: 30px;
 }
 
-.login .login_bottom label {
+.login .login-bottom label {
   display: block;
   width: 100%;
   clear: both;
   margin-top: 5px;
 }
 
-.login .login_bottom label .circle {
+.login .login-bottom label .circle {
   top: 4px;
 }

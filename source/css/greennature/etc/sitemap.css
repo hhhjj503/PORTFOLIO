@@ -2,12 +2,12 @@
 @import url(../subbanner.css);
 @import url(../inner_template.css);
 
-/* --------------------- inner_nav li 페이지 색상 변경 ---------------*/
-.inner_nav li:nth-child(4) a {
+/* --------------------- inner-nav li 페이지 색상 변경 ---------------*/
+.inner-nav li:nth-child(4) a {
   background-color: #028585;
 }
 
-/* ---------------- inner > inner_desc --------------- */
+/* ---------------- inner > inner-desc --------------- */
 
 .sitemap {
   width: 100%;

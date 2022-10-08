@@ -1,16 +1,16 @@
 /* -------------- 배너에 겹쳐진 nav ------------------ */
-.inner_nav {
+.inner-nav {
   position: absolute;
   top: -120px;
 }
 
-.inner_nav li {
+.inner-nav li {
   float: left;
   min-width: 135px;
   height: 70px;
 }
 
-.inner_nav a {
+.inner-nav a {
   display: block;
   width: 100%;
   height: 100%;
@@ -26,6 +26,6 @@
   font-size: 1.7rem;
 }
 
-.inner_nav li:last-child a {
+.inner-nav li:last-child a {
   border-top-right-radius: 15px;
 }

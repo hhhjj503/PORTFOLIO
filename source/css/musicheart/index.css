@@ -31,24 +31,24 @@ a {
 
 /* ------------------------mobile------------- */
 
-.mobile_h_menu {
+.mobile-h-menu {
   display: none;
 }
-.header .mobile_h_menu_btn {
+.header .mobile-h-menu-btn {
   display: none;
 }
 
 /* ------------------------------------------------- contents ------------------------------------------------------ */
 
-.contents .contents_items .swiper_section {
+.contents .contents-items .swiper-section {
   width: 100%;
   background: #031720;
 }
 
-.contents .contents_items .swiper_section .swiper {
+.contents .contents-items .swiper-section .swiper {
   width: 1250px;
 }
-.contents .contents_items .swiper_section .swiper-wrapper {
+.contents .contents-items .swiper-section .swiper-wrapper {
   width: 100%;
   height: 400px;
   box-shadow: 3px 12px 12px rgba(255, 255, 255, 1),
@@ -61,7 +61,7 @@ a {
   background-size: cover;
 }
 
-.contents .contents_items .introduce {
+.contents .contents-items .introduce {
   width: 100%;
   background-color: black;
   height: 140px;
@@ -69,7 +69,7 @@ a {
   font-weight: 500;
 }
 
-.contents .contents_items .introduce .i_deco {
+.contents .contents-items .introduce .i-deco {
   width: 1250px;
   background: black;
   color: rgb(194, 194, 194);
@@ -82,7 +82,7 @@ a {
   margin-right: auto;
 }
 
-.contents .contents_items .description {
+.contents .contents-items .description {
   margin-top: 105px;
   width: 1250px;
   margin-left: auto;
@@ -92,11 +92,11 @@ a {
   align-items: center;
 }
 
-.contents .contents_items .description .d_desc {
+.contents .contents-items .description .d-desc {
   flex-direction: column;
 }
 
-.contents .contents_items .description .d_img img {
+.contents .contents-items .description .d-img img {
   background-image: url("../../images/musicheart/musichearDescription.png");
   opacity: 0.8;
   width: 600px;
@@ -104,7 +104,7 @@ a {
   border-radius: 20px;
 }
 
-.contents .contents_items .description .d_desc .d_deco {
+.contents .contents-items .description .d-desc .d-deco {
   color: rgb(155, 155, 155);
   font-size: 7rem;
   font-weight: 600;
@@ -112,7 +112,7 @@ a {
   cursor: default;
 }
 
-.contents .contents_items .description .d_desc .d_title {
+.contents .contents-items .description .d-desc .d-title {
   margin-top: 70px;
   margin-bottom: 20px;
   font-size: 1.8rem;
@@ -120,12 +120,12 @@ a {
   text-align: left;
 }
 
-.contents .contents_items .description .d_desc .d_btn {
+.contents .contents-items .description .d-desc .d-btn {
   margin-top: 80px;
   text-align: center;
 }
 
-.contents .contents_items .description .d_desc .d_btn .sub_btn {
+.contents .contents-items .description .d-desc .d-btn .sub-btn {
   border-radius: 30px;
   height: 50px;
   width: 40%;
@@ -142,11 +142,11 @@ a {
 }
 
 @media (hover: hover) {
-  .contents .contents_items .introduce .login_sns ul li a:hover {
+  .contents .contents-items .introduce .login-sns ul li a:hover {
     color: rgb(255, 255, 255);
   }
 
-  .contents .contents_items .description .sub_btn:hover {
+  .contents .contents-items .description .sub-btn:hover {
     background-color: rgb(49, 4, 78);
   }
 }

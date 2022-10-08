@@ -1,4 +1,4 @@
-@import url(./m_header.css);
+@import url(./header.css);
 @import url(../../skip.css);
 
 html {
@@ -31,15 +31,15 @@ a {
 
 /* ------------------------------------------------- contents ------------------------------------------------------ */
 
-.contents .contents_items .swiper_section {
+.contents .contents-items .swiper-section {
   width: 100%;
   background: #031720;
 }
 
-.contents .contents_items .swiper_section .swiper {
+.contents .contents-items .swiper-section .swiper {
   width: 1250px;
 }
-.contents .contents_items .swiper_section .swiper-wrapper {
+.contents .contents-items .swiper-section .swiper-wrapper {
   width: 100%;
   height: 400px;
   box-shadow: 3px 12px 12px rgba(255, 255, 255, 1),
@@ -52,7 +52,7 @@ a {
   background-size: cover;
 }
 
-.contents .contents_items .introduce {
+.contents .contents-items .introduce {
   width: 100%;
   background-color: black;
   height: 140px;
@@ -60,7 +60,7 @@ a {
   font-weight: 500;
 }
 
-.contents .contents_items .introduce .i_deco {
+.contents .contents-items .introduce .i-deco {
   width: 1250px;
   background: black;
   color: rgb(194, 194, 194);
@@ -73,7 +73,7 @@ a {
   margin-right: auto;
 }
 
-.contents .contents_items .description {
+.contents .contents-items .description {
   margin-top: 105px;
   width: 1250px;
   margin-left: auto;
@@ -83,11 +83,11 @@ a {
   align-items: center;
 }
 
-.contents .contents_items .description .d_desc {
+.contents .contents-items .description .d-desc {
   flex-direction: column;
 }
 
-.contents .contents_items .description .d_img img {
+.contents .contents-items .description .d-img img {
   background-image: url("../../images/musicheart/musichearDescription.png");
   opacity: 0.8;
   width: 600px;
@@ -95,7 +95,7 @@ a {
   border-radius: 20px;
 }
 
-.contents .contents_items .description .d_desc .d_deco {
+.contents .contents-items .description .d-desc .d-deco {
   color: rgb(155, 155, 155);
   font-size: 7rem;
   font-weight: 600;
@@ -103,7 +103,7 @@ a {
   cursor: default;
 }
 
-.contents .contents_items .description .d_desc .d_title {
+.contents .contents-items .description .d-desc .d-title {
   margin-top: 70px;
   margin-bottom: 20px;
   font-size: 1.8rem;
@@ -111,12 +111,12 @@ a {
   text-align: left;
 }
 
-.contents .contents_items .description .d_desc .d_btn {
+.contents .contents-items .description .d-desc .d-btn {
   margin-top: 80px;
   text-align: center;
 }
 
-.contents .contents_items .description .d_desc .d_btn .sub_btn {
+.contents .contents-items .description .d-desc .d-btn .sub-btn {
   border-radius: 30px;
   height: 50px;
   width: 40%;
@@ -133,11 +133,11 @@ a {
 }
 
 @media (hover: hover) {
-  .contents .contents_items .introduce .login_sns ul li a:hover {
+  .contents .contents-items .introduce .login-sns ul li a:hover {
     color: rgb(255, 255, 255);
   }
 
-  .contents .contents_items .description .sub_btn:hover {
+  .contents .contents-items .description .sub-btn:hover {
     background-color: rgb(49, 4, 78);
   }
 }
@@ -150,72 +150,72 @@ body {
 
 /* -----------------------------------------------------contents-------------------------------------- */
 
-.contents .contents_items .swiper_section {
+.contents .contents-items .swiper-section {
   display: none;
 }
 
-.contents .contents_items .description .d_img {
+.contents .contents-items .description .d-img {
   display: none;
 }
 
-.contents .contents_items .description .d_img img {
+.contents .contents-items .description .d-img img {
   width: 100%;
 }
 
-.contents .contents_items .introduce .i_deco {
+.contents .contents-items .introduce .i-deco {
   font-size: 3rem;
   padding-left: 0px;
   padding-bottom: 40px;
   margin-top: 40px;
 }
 
-.contents .contents_items .description {
+.contents .contents-items .description {
   width: 100%;
 }
 
-.contents .contents_items .description .d_desc .d_deco {
+.contents .contents-items .description .d-desc .d-deco {
   font-size: 3rem;
 }
 
-.contents .contents_items .introduce {
+.contents .contents-items .introduce {
   display: block;
 }
 
-.contents .contents_items .introduce .i_deco {
+.contents .contents-items .introduce .i-deco {
   width: 100%;
   font-size: 3rem;
   line-height: 50px;
   padding-bottom: 0;
 }
 
-.contents .contents_items .introduce .login_box {
+.contents .contents-items .introduce .login-box {
   font-size: 1.2rem;
   width: 100%;
   display: flex;
   flex-direction: row;
 }
 
-.contents .contents_items .introduce .login_box .login_sns {
+.contents .contents-items .introduce .login-box .login-sns {
   display: none;
 }
 
-.contents .contents_items .introduce .login_box .login_btn {
+.contents .contents-items .introduce .login-box .login-btn {
   width: 50%;
   height: 50px;
   font-size: 1.7rem;
 }
 
-.contents .contents_items .introduce .login_box .sign_up_btn {
+.contents .contents-items .introduce .login-box .sign-up-btn {
   width: 50%;
   height: 50px;
   font-size: 1.7rem;
 }
 
-.contents .contents_items .introduce .login_sns ul li a {
+.contents .contents-items .introduce .login-sns ul li a {
   font-size: 3rem;
 }
 
-.contents .contents_items .description {
+.contents .contents-items .description {
   display: block;
   margin-top: 0px;
   text-align: center;
@@ -223,19 +223,19 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.contents .contents_items .description .d_desc {
+.contents .contents-items .description .d-desc {
   margin-left: 0px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-.contents .contents_items .description .d_desc .d_deco {
+.contents .contents-items .description .d-desc .d-deco {
   margin-top: 50px;
   letter-spacing: 8px;
   color: rgba(255, 255, 255, 0.9);
 }
 
-.contents .contents_items .description .d_desc .d_title {
+.contents .contents-items .description .d-desc .d-title {
   font-size: 1.5rem;
   text-align: left;
   margin-top: 60px;
@@ -246,12 +246,12 @@ body {
   color: white;
 }
 
-.contents .contents_items .description .d_desc .d_btn {
+.contents .contents-items .description .d-desc .d-btn {
   margin-top: 60px;
   margin-bottom: 50px;
 }
 
-.contents .contents_items .description .d_desc .d_btn .sub_btn {
+.contents .contents-items .description .d-desc .d-btn .sub-btn {
   height: 40px;
   width: 170px;
   font-size: 1.7rem;

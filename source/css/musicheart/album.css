@@ -17,10 +17,10 @@ a {
 
 /* ------------------------mobile------------- */
 
-.mobile_h_menu {
+.mobile-h-menu {
   display: none;
 }
-.header .mobile_h_menu_btn {
+.header .mobile-h-menu-btn {
   display: none;
 }
 
@@ -32,13 +32,13 @@ a {
   margin-right: auto;
 }
 
-.contents .album_items .album_item {
+.contents .album-items .album-item {
   margin-top: 100px;
   width: inherit;
   background-color: white;
 }
 
-.contents .album_items .album_item .a_title {
+.contents .album-items .album-item .a-title {
   font-size: 2.1rem;
   font-weight: 600;
   height: 50px;
@@ -48,12 +48,12 @@ a {
   color: rgba(255, 255, 255, 0.9);
 }
 
-.contents .album_items .album_item .a_desc {
+.contents .album-items .album-item .a-desc {
   display: flex;
   transition: 0.4s ease-in-out;
 }
 
-.contents .album_items .album_item .a_desc .a_img {
+.contents .album-items .album-item .a-desc .a-img {
   width: 50%;
   height: 450px;
   background-size: cover;
@@ -62,13 +62,13 @@ a {
   background-position: center;
 }
 
-.contents .album_items .album_item .a_desc .a_description {
+.contents .album-items .album-item .a-desc .a-description {
   background-color: crimson;
   width: 50%;
   height: 450px;
 }
 
-.contents .album_items .album_item .a_desc .a_description .d_title {
+.contents .album-items .album-item .a-desc .a-description .d-title {
   margin-top: 35px;
   padding-top: 3px;
   text-align: center;
@@ -76,7 +76,7 @@ a {
   font-weight: 700;
 }
 
-.contents .album_items .album_item .a_desc .a_description .tracklist {
+.contents .album-items .album-item .a-desc .a-description .tracklist {
   margin-top: 40px;
   height: 327px;
   text-align: center;

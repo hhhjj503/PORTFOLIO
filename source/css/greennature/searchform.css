@@ -36,14 +36,14 @@ form .totalcount {
   text-decoration: underline;
 }
 
-form .search_wrapper {
+form .search-wrapper {
   float: right;
   height: 35px;
 }
 
-.search_wrapper select,
-.search_wrapper input,
-.search_wrapper button {
+.search-wrapper select,
+.search-wrapper input,
+.search-wrapper button {
   height: 100%;
   box-sizing: border-box;
   margin: 0;
@@ -51,7 +51,7 @@ form .search_wrapper {
   border: 1px solid #ccc;
 }
 
-.search_wrapper button {
+.search-wrapper button {
   width: 70px;
   background-color: rgb(0, 160, 160);
   color: white;

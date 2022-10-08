@@ -2,14 +2,14 @@
 @import url(../subbanner.css);
 @import url(../inner_template.css);
 
-/* --------------------- inner_nav li 페이지 색상 변경 ---------------*/
-.inner_nav li:nth-child(1) a {
+/* --------------------- inner-nav li 페이지 색상 변경 ---------------*/
+.inner-nav li:nth-child(1) a {
   background-color: #028585;
 }
 
-/* ---------------- inner > inner_desc --------------- */
+/* ---------------- inner > inner-desc --------------- */
 
-.inner_desc p {
+.inner-desc p {
   font-size: 1.5rem;
   line-height: 25px;
   margin-top: 50px;
@@ -60,7 +60,7 @@ img {
   display: block;
 }
 
-.img_deco {
+.img-deco {
   position: absolute;
   border: 2px solid rgb(0, 160, 160);
   top: 873px;

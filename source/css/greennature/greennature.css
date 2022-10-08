@@ -8,20 +8,20 @@ main {
   background-color: transparent;
 }
 
-main .main_items {
+main .main-items {
   width: 100%;
   margin: 0 auto;
 }
 
 /* ----------------------- banner ----------------------------- */
 
-main .main_items .banner {
+main .main-items .banner {
   width: 100%;
   margin: 0 auto;
   height: auto;
 }
 
-main .main_items .banner .b_image {
+main .main-items .banner .b-image {
   width: inherit;
   height: 800px;
   background-image: url(../../images/greennature/sabeer-darr-Upz-tnx2v2s-unsplash.jpg);
@@ -33,14 +33,14 @@ main .main_items .banner .b_image {
   align-items: flex-end;
 }
 
-main .main_items .banner .b_image .b_title {
+main .main-items .banner .b-image .b-title {
   width: 1400px;
   margin: auto auto;
   text-align: center;
   position: relative;
 }
 
-main .main_items .banner .b_image .b_title p {
+main .main-items .banner .b-image .b-title p {
   color: white;
   font-size: 1.8rem;
   padding-top: 100px;
@@ -48,7 +48,7 @@ main .main_items .banner .b_image .b_title p {
 
 /* ----------------------- info ----------------------------- */
 
-main .main_items .info {
+main .main-items .info {
   width: 1400px;
   background-color: transparent;
   height: 170px;
@@ -57,7 +57,7 @@ main .main_items .info {
   justify-content: space-between;
 }
 
-main .main_items .info .i_title {
+main .main-items .info .i-title {
   position: relative;
   width: 27%;
   height: inherit;
@@ -71,7 +71,7 @@ main .main_items .info .i_title {
   overflow: hidden;
 }
 
-main .main_items .info .i_title:before {
+main .main-items .info .i-title:before {
   position: absolute;
   content: "";
   width: 300px;
@@ -82,32 +82,32 @@ main .main_items .info .i_title:before {
   left: 10%;
 }
 
-main .main_items .info .i_title .i_wrapper {
+main .main-items .info .i-title .i-wrapper {
   position: inherit;
   z-index: 1;
   color: #1a1a1a;
   cursor: default;
 }
 
-main .main_items .info .i_title .i_wrapper .deco {
+main .main-items .info .i-title .i-wrapper .deco {
   font-weight: 700;
   font-size: 2.8rem;
 }
 
-main .main_items .info .i_menu {
+main .main-items .info .i-menu {
   width: 73%;
   height: inherit;
   background-color: transparent;
 }
 
-main .main_items .info .i_menu > ul {
+main .main-items .info .i-menu > ul {
   height: inherit;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
-main .main_items .info .i_menu > ul li {
+main .main-items .info .i-menu > ul li {
   width: 24%;
   height: 100%;
   position: relative;
@@ -118,7 +118,7 @@ main .main_items .info .i_menu > ul li {
   user-select: none;
 }
 
-main .main_items .info .i_menu > ul li:before {
+main .main-items .info .i-menu > ul li:before {
   content: "";
   position: absolute;
   width: 0px;
@@ -130,7 +130,7 @@ main .main_items .info .i_menu > ul li:before {
   transition: 0.3s ease-in-out;
 }
 
-main .main_items .info .i_menu > ul li:hover:before {
+main .main-items .info .i-menu > ul li:hover:before {
   content: "";
   position: absolute;
   width: 50px;
@@ -140,7 +140,7 @@ main .main_items .info .i_menu > ul li:hover:before {
   border-radius: 50%;
 }
 
-main .main_items .info .i_menu > ul li a {
+main .main-items .info .i-menu > ul li a {
   display: block;
   height: inherit;
   font-size: 1.6rem;
@@ -151,11 +151,11 @@ main .main_items .info .i_menu > ul li a {
   text-decoration: none;
 }
 
-main .main_items .info .i_menu > ul li a:hover {
+main .main-items .info .i-menu > ul li a:hover {
   text-decoration: underline;
 }
 
-main .main_items .info .i_menu > ul li span {
+main .main-items .info .i-menu > ul li span {
   display: block;
   position: absolute;
   width: 100%;
@@ -169,7 +169,7 @@ main .main_items .info .i_menu > ul li span {
 
 /* ----------------------- ad ----------------------------- */
 
-main .main_items .ad {
+main .main-items .ad {
   width: 1400px;
   margin: 0 auto;
   height: 200px;
@@ -178,7 +178,7 @@ main .main_items .ad {
   overflow: hidden;
 }
 
-main .main_items .ad .slider {
+main .main-items .ad .slider {
   position: absolute;
   top: 0;
   left: 0;
@@ -192,17 +192,17 @@ main .main_items .ad .slider {
   background-color: white;
 }
 
-main .main_items .ad .slider.sliding {
+main .main-items .ad .slider.sliding {
   transition: 0.5s ease-in-out;
 }
 
-main .main_items .ad .slider .a_item {
+main .main-items .ad .slider .a-item {
   height: 200px;
   width: 320px;
   margin: 0 15px;
 }
 
-main .main_items .ad .slider .a_item img {
+main .main-items .ad .slider .a-item img {
   width: 320px;
   padding: 0;
   height: 100%;
@@ -211,11 +211,11 @@ main .main_items .ad .slider .a_item img {
   transition: 0.5s ease-in-out;
 }
 
-main .main_items .ad .slider .a_item img.sliding {
+main .main-items .ad .slider .a-item img.sliding {
   width: 0px;
 }
 
-main .main_items .ad .controller {
+main .main-items .ad .controller {
   position: absolute;
   left: 0;
   top: 0;
@@ -223,7 +223,7 @@ main .main_items .ad .controller {
   height: 100%;
 }
 
-main .main_items .ad .controller .c_btn {
+main .main-items .ad .controller .c-btn {
   width: 10px;
   padding: 0 10px;
   height: 55px;
@@ -238,17 +238,17 @@ main .main_items .ad .controller .c_btn {
   transition: 0.2s ease-in-out;
 }
 
-main .main_items .ad .controller .c_btn:hover {
+main .main-items .ad .controller .c-btn:hover {
   background-color: rgb(49, 84, 179);
 }
 
-main .main_items .ad .controller .c_btn:hover:focus {
+main .main-items .ad .controller .c-btn:hover:focus {
   width: 15px;
 }
 
-main .main_items .ad .controller .c_btn.prev {
+main .main-items .ad .controller .c-btn.prev {
   float: left;
 }
-main .main_items .ad .controller .c_btn.next {
+main .main-items .ad .controller .c-btn.next {
   float: right;
 }

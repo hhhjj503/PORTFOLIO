@@ -4,12 +4,12 @@
 @import url(../searchform.css);
 @import url(../paging.css);
 
-/* --------------------- inner_nav li 페이지 색상 변경 ---------------*/
-.inner_nav li:nth-child(1) a {
+/* --------------------- inner-nav li 페이지 색상 변경 ---------------*/
+.inner-nav li:nth-child(1) a {
   background-color: #028585;
 }
 
-/* ---------------- inner > inner_desc --------------- */
+/* ---------------- inner > inner-desc --------------- */
 
 /* -------------- searchform.css 작은이미지 변경 ------------ */
 

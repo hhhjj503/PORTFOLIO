@@ -1,6 +1,6 @@
 window.addEventListener("load", function () {
-  const mobileHMenu = document.querySelector(".mobile_h_menu");
-  const mobileHMenuBtn = document.querySelector(".mobile_h_menu_btn");
+  const mobileHMenu = document.querySelector(".mobile-h-menu");
+  const mobileHMenuBtn = document.querySelector(".mobile-h-menu-btn");
 
   mobileHMenuBtn.addEventListener("click", function () {
     if (mobileHMenuBtn.classList.contains("clicked")) {

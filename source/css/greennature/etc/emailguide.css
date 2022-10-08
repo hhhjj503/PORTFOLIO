@@ -2,17 +2,17 @@
 @import url(../subbanner.css);
 @import url(../inner_template.css);
 
-/* --------------------- inner_nav li 페이지 색상 변경 ---------------*/
-.inner_nav li:nth-child(2) a {
+/* --------------------- inner-nav li 페이지 색상 변경 ---------------*/
+.inner-nav li:nth-child(2) a {
   background-color: #028585;
 }
 
-/* ---------------- inner > inner_desc --------------- */
+/* ---------------- inner > inner-desc --------------- */
 
-.inners .inner_desc {
+.inners .inner-desc {
   width: 100%;
 }
-.inner_desc .detail {
+.inner-desc .detail {
   width: 80%;
   height: 150px;
   border: 1px solid #028585;
@@ -22,7 +22,7 @@
   box-sizing: border-box;
 }
 
-.inner_desc .warning {
+.inner-desc .warning {
   display: inline-block;
   width: 10%;
   height: 100%;
@@ -32,7 +32,7 @@
   border-radius: 20px;
 }
 
-.inner_desc .law {
+.inner-desc .law {
   display: inline-block;
   width: 89%;
   height: 100%;

@@ -7,13 +7,13 @@ footer {
   border-top: 1px solid #e9e9e9;
 }
 
-footer .f_menus {
+footer .f-menus {
   width: 100%;
   height: 70px;
   border-bottom: 1px solid #e9e9e9;
 }
 
-footer .f_menus ul {
+footer .f-menus ul {
   width: 1400px;
   margin: 0 auto;
   display: flex;
@@ -21,20 +21,20 @@ footer .f_menus ul {
   align-items: center;
 }
 
-footer .f_menus ul li a {
+footer .f-menus ul li a {
   font-size: 1.4rem;
   color: #646464;
   text-decoration: none;
 }
 
-footer .f_menus ul li {
+footer .f-menus ul li {
   position: relative;
   margin-right: 20px;
   padding: 0 10px;
   background-color: white;
 }
 
-footer .f_menus ul li:not(:last-child):after {
+footer .f-menus ul li:not(:last-child):after {
   position: absolute;
   content: "";
   width: 6px;
@@ -45,7 +45,7 @@ footer .f_menus ul li:not(:last-child):after {
   background-color: #646464;
 }
 
-footer .f_desc {
+footer .f-desc {
   position: relative;
   width: 1400px;
   margin: 0 auto;
@@ -56,7 +56,7 @@ footer .f_desc {
   font-size: 1.5rem;
 }
 
-footer .top_btn {
+footer .top-btn {
   position: absolute;
   vertical-align: middle;
   top: 80px;
@@ -69,7 +69,7 @@ footer .top_btn {
   transform: rotate(90deg);
 }
 
-footer .top_btn span {
+footer .top-btn span {
   display: inline-block;
   font-size: 3.5rem;
   color: white;

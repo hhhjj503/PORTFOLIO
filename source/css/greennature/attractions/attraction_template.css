@@ -1,8 +1,8 @@
 @import url(../inner_template.css);
 
-/* ---------------- inner > inner_desc --------------- */
+/* ---------------- inner > inner-desc --------------- */
 
-.inner_desc {
+.inner-desc {
   width: 100%;
   margin-top: 30px;
   padding: 50px 100px;
@@ -10,7 +10,7 @@
   background-color: #f7f7f7;
 }
 
-.inner_desc:after {
+.inner-desc:after {
   content: "";
   display: block;
   clear: both;
@@ -18,14 +18,14 @@
 
 /* -------------- attraction 왼쪽 이미지 슬라이더 ------------------ */
 
-.inner_desc .slider {
+.inner-desc .slider {
   float: left;
   width: 600px;
   height: 400px;
   position: relative;
 }
 
-.slider .img_items_outer {
+.slider .img-items-outer {
   width: 600px;
   height: 400px;
   transition: 0.3s;
@@ -34,7 +34,7 @@
   position: relative;
 }
 
-.slider .img_items_inner {
+.slider .img-items-inner {
   width: 1800px;
   height: 400px;
   position: absolute;
@@ -43,17 +43,17 @@
   transition: 0.3s;
 }
 
-.slider .img_items_inner:hover {
+.slider .img-items-inner:hover {
   left: -600px;
 }
 
-.slider .img_items_inner:after {
+.slider .img-items-inner:after {
   content: "";
   display: block;
   clear: both;
 }
 
-.slider .img_items_inner li {
+.slider .img-items-inner li {
   float: left;
   width: 600px;
   height: 400px;
@@ -69,7 +69,7 @@
 
 /* -------------- 슬라이더 컨트롤러 ------------------ */
 
-.inner_desc .slider .control {
+.inner-desc .slider .control {
   position: absolute;
   width: 200px;
   height: 50px;
@@ -99,7 +99,7 @@
 }
 
 .control .slash,
-.control .index_l {
+.control .index-l {
   color: #a7a7a7;
 }
 
@@ -127,7 +127,7 @@
 
 /* ----------------- attraction 오른쪽 설명 ------------- */
 
-.inner_desc .inner_desc_detail {
+.inner-desc .inner-desc-detail {
   width: 600px;
   height: 400px;
   float: right;
@@ -137,7 +137,7 @@
 
 /* ---------- 설명 제목 -------------- */
 
-.inner_desc_detail strong {
+.inner-desc-detail strong {
   display: block;
   width: 100%;
   font-size: 2rem;
@@ -147,7 +147,7 @@
 
 /*------------ 설명 단락 ------------ */
 
-.inner_desc_detail p {
+.inner-desc-detail p {
   font-size: 1.6rem;
   line-height: 30px;
   color: #242424;
@@ -155,11 +155,11 @@
 
 /*-------- 설명 주소 --------- */
 
-.inner_desc_detail ul {
+.inner-desc-detail ul {
   width: 100%;
 }
 
-.inner_desc_detail li {
+.inner-desc-detail li {
   width: 100%;
   height: 30px;
   line-height: 30px;
@@ -169,7 +169,7 @@
   border-top: 1px solid #ccc;
 }
 
-.inner_desc_detail li > span:after {
+.inner-desc-detail li > span:after {
   position: relative;
   top: -2px;
   content: "|";
@@ -177,14 +177,14 @@
   margin: 0 10px;
 }
 
-.inner_desc_detail li > em {
+.inner-desc-detail li > em {
   color: #242424;
   font-size: 1.5rem;
 }
 
 /* ------------- 설명 로드뷰 버튼 ---------- */
 
-.inner_desc_detail button {
+.inner-desc-detail button {
   display: block;
   width: 180px;
   height: 45px;
@@ -196,19 +196,19 @@
   transition: 0.3s;
 }
 
-.inner_desc_detail button:hover {
+.inner-desc-detail button:hover {
   color: white;
   background-color: #132f5a;
 }
 
 /* ---------------------- 슬라이더 다음 label 세부정보란 --------------- */
 
-.attraction .attraction_details {
+.attraction .attraction-details {
   width: 100%;
   margin-top: 50px;
 }
 
-.attraction_details label {
+.attraction-details label {
   float: left;
   width: 25%;
   height: 70px;
@@ -226,7 +226,7 @@
   position: relative;
 }
 
-.attraction_details label:after {
+.attraction-details label:after {
   content: "";
   position: absolute;
   display: block;
@@ -240,25 +240,25 @@
   transition: 0.3s;
 }
 
-.attraction_details:after {
+.attraction-details:after {
   content: "";
   display: block;
   clear: both;
 }
 
-.attraction_details label:hover {
+.attraction-details label:hover {
   border: 3px solid #27a49f;
 }
-.attraction_details label:hover:after {
+.attraction-details label:hover:after {
   background-color: #27a49f;
   height: 15px;
 }
 
-.attraction_details .detail_screen {
+.attraction-details .detail-screen {
   margin-top: 30px;
 }
 
-.attraction_details .detail_screen > div {
+.attraction-details .detail-screen > div {
   display: none;
   color: black;
   box-sizing: border-box;
@@ -268,57 +268,57 @@
   clear: both;
 }
 
-#intro_screen {
+#intro-screen {
   padding: 50px 100px;
 }
 
-#intro_screen h3 {
+#intro-screen h3 {
   width: 100%;
   height: 70px;
   line-height: 70px;
   font-weight: bold;
   font-size: 2.5rem;
 }
-#intro_screen p {
+#intro-screen p {
   font-size: 1.7rem;
   line-height: 30px;
   margin-bottom: 50px;
 }
 
-#intro_screen img {
+#intro-screen img {
   width: 80%;
   height: 80%;
   margin-bottom: 20px;
 }
 
-#info_screen table {
+#info-screen table {
   width: 100%;
   border-top: 1px solid #666;
 }
 
-#info_screen table th {
+#info-screen table th {
   background-color: white;
   height: 50px;
   line-height: 50px;
 }
 
-#info_screen table td {
+#info-screen table td {
   height: 50px;
   box-sizing: border-box;
   padding: 0 20px;
 }
 
-#way_screen {
+#way-screen {
   position: relative;
 }
 
-#way_screen img {
+#way-screen img {
   width: 100%;
   height: 500px;
   object-fit: cover;
 }
 
-#way_screen .mapBtn {
+#way-screen .mapBtn {
   position: absolute;
   right: 20px;
   bottom: 20px;
@@ -328,7 +328,7 @@
   font-size: 1.5rem;
 }
 
-#way_screen .mapBtn:after {
+#way-screen .mapBtn:after {
   display: inline-block;
   content: ">";
   width: 25px;
@@ -342,15 +342,15 @@
   margin-left: 50px;
 }
 
-#way_screen .mapBtn:hover {
+#way-screen .mapBtn:hover {
   background-color: #efefef;
 }
 
-#surroundinginfo_screen ul {
+#surroundinginfo-screen ul {
   width: 100%;
 }
 
-#surroundinginfo_screen li {
+#surroundinginfo-screen li {
   width: 33%;
   display: inline-block;
   height: 170px;
@@ -359,7 +359,7 @@
   padding: 30px;
 }
 
-#surroundinginfo_screen span {
+#surroundinginfo-screen span {
   display: inline-block;
   width: 50px;
   height: 30px;
@@ -371,46 +371,46 @@
   background-color: #132f5a;
   margin-bottom: 20px;
 }
-#surroundinginfo_screen strong {
+#surroundinginfo-screen strong {
   display: block;
   font-size: 1.7rem;
   font-weight: bold;
   margin-bottom: 20px;
 }
-#surroundinginfo_screen p {
+#surroundinginfo-screen p {
   font-size: 1.7rem;
   color: #666;
 }
 
 /* ------------------- radio 버튼 과 label 효과 연결-------------- */
 
-.attraction_details input[type="radio"]:checked + label {
+.attraction-details input[type="radio"]:checked + label {
   border: 3px solid #27a49f;
 }
-.attraction_details input[type="radio"]:checked + label:after {
+.attraction-details input[type="radio"]:checked + label:after {
   background-color: #27a49f;
   height: 15px;
 }
 
-.attraction_details #introBtn:checked ~ .detail_screen #intro_screen {
+.attraction-details #introBtn:checked ~ .detail-screen #intro-screen {
   display: block;
 }
-.attraction_details #infoBtn:checked ~ .detail_screen #info_screen {
+.attraction-details #infoBtn:checked ~ .detail-screen #info-screen {
   display: block;
 }
-.attraction_details #wayBtn:checked ~ .detail_screen #way_screen {
+.attraction-details #wayBtn:checked ~ .detail-screen #way-screen {
   display: block;
 }
-.attraction_details
+.attraction-details
   #surroundinginfoBtn:checked
-  ~ .detail_screen
-  #surroundinginfo_screen {
+  ~ .detail-screen
+  #surroundinginfo-screen {
   display: block;
 }
 
-/*------------------- etc_info----------------- */
+/*------------------- etc-info----------------- */
 
-.etc_info {
+.etc-info {
   width: 1400px;
   margin: 50px auto;
   background-color: whitesmoke;
@@ -418,19 +418,19 @@
   padding-left: 30px;
 }
 
-.etc_info:after {
+.etc-info:after {
   content: "";
   display: block;
   clear: both;
 }
 
-.etc_info ul li {
+.etc-info ul li {
   height: 70px;
   float: left;
   font-size: 1.7rem;
   line-height: 70px;
 }
-.etc_info ul li:not(:last-child):after {
+.etc-info ul li:not(:last-child):after {
   position: relative;
   display: inline-block;
   content: "|";
@@ -440,6 +440,6 @@
   color: #a7a7a7;
 }
 
-.etc_info li span b {
+.etc-info li span b {
   font-weight: bold;
 }

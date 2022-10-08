@@ -3,17 +3,17 @@ window.onload = function () {
   trigger.add("[data-trigger]");
 
   const imgWrapper = document.querySelector(
-    "main .main_items .banner_wrapper .banner .img_wrapper"
+    "main .main-items .banner-wrapper .banner .img-wrapper"
   );
   const curtains = document.querySelectorAll(
-    "main .main_items .banner_wrapper .banner .curtain"
+    "main .main-items .banner-wrapper .banner .curtain"
   );
   const imgs = document.querySelectorAll(
-    "main .main_items .banner_wrapper .banner .img_wrapper .img"
+    "main .main-items .banner-wrapper .banner .img-wrapper .img"
   );
   const body = document.querySelector("body");
   const banner = document.querySelector(
-    "main .main_items .banner_wrapper .banner"
+    "main .main-items .banner-wrapper .banner"
   );
 
   //이미지 미리로딩

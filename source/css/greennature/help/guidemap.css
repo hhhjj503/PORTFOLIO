@@ -2,12 +2,12 @@
 @import url(../subbanner.css);
 @import url(../inner_template.css);
 
-/* --------------------- inner_nav li 페이지 색상 변경 ---------------*/
-.inner_nav li:nth-child(2) a {
+/* --------------------- inner-nav li 페이지 색상 변경 ---------------*/
+.inner-nav li:nth-child(2) a {
   background-color: #028585;
 }
 
-/* ---------------- inner > inner_desc --------------- */
+/* ---------------- inner > inner-desc --------------- */
 
 .guidemap {
   width: 80%;
@@ -114,7 +114,7 @@
   border: 1px solid #ccc;
 }
 
-.downloadBtn_wrapper {
+.downloadBtn-wrapper {
   margin-top: 40px;
   width: 100%;
   border: 1px solid #ccc;
@@ -126,7 +126,7 @@
   position: relative;
 }
 
-.downloadBtn_wrapper button {
+.downloadBtn-wrapper button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);

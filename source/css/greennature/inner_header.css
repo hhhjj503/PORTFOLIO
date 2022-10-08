@@ -1,9 +1,9 @@
-.inner_header {
+.inner-header {
   width: 100%;
   position: relative;
 }
 
-.inner_header h3 {
+.inner-header h3 {
   width: 100%;
   height: 70px;
   font-size: 2.4rem;
@@ -16,7 +16,7 @@
 
 /* ------------- 상단 path ------------------ */
 
-.inner_header .path {
+.inner-header .path {
   position: absolute;
   top: 50%;
   right: 20px;

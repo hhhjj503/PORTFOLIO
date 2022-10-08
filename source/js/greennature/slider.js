@@ -2,7 +2,7 @@ window.addEventListener("load", () => {
   //하단 슬라이더
   let currentIndex = 0;
   let slider = document.querySelector(".slider"); //ul
-  let sliderImg = document.querySelectorAll(".slider .a_item"); //ul li
+  let sliderImg = document.querySelectorAll(".slider .a-item"); //ul li
   const slidesCnt = sliderImg.length;
 
   //하단이미지 이동버튼
@@ -31,7 +31,7 @@ window.addEventListener("load", () => {
   }, 100);
 
   function updateWidth() {
-    const newSliderImg = document.querySelectorAll(".slider .a_item");
+    const newSliderImg = document.querySelectorAll(".slider .a-item");
     const newSlidesCnt = newSliderImg.length;
 
     const newWidth = 350 * newSlidesCnt + "px";

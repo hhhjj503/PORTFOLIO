@@ -4,12 +4,12 @@
 @import url(../searchform.css);
 @import url(../paging.css);
 
-/* --------------------- inner_nav li 페이지 색상 변경 ---------------*/
-.inner_nav li:nth-child(2) a {
+/* --------------------- inner-nav li 페이지 색상 변경 ---------------*/
+.inner-nav li:nth-child(2) a {
   background-color: #028585;
 }
 
-/* ---------------- inner > inner_desc --------------- */
+/* ---------------- inner > inner-desc --------------- */
 
 /* -------------- searchform.css 작은이미지 변경 ------------ */
 
@@ -30,15 +30,15 @@ form .totalcount:before {
   margin-bottom: 30px;
 }
 
-.review .review_body {
+.review .review-body {
   width: 100%;
   height: 100%;
 }
 
-/* a 의 모든자식이 float 지만 review_body 로부터 높이를
+/* a 의 모든자식이 float 지만 review-body 로부터 높이를
 받아서 clear를 안해도 괜찮음 */
 
-.review_body a {
+.review-body a {
   display: block;
   width: 100%;
   height: 100%;
@@ -50,7 +50,7 @@ form .totalcount:before {
   margin-bottom: 30px;
 }
 
-.review_body a img {
+.review-body a img {
   width: 23%;
   height: 100%;
   float: left;
@@ -58,7 +58,7 @@ form .totalcount:before {
   object-fit: cover;
 }
 
-.review_body h4 {
+.review-body h4 {
   float: right;
   text-align: left;
   width: 77%;
@@ -73,7 +73,7 @@ form .totalcount:before {
   text-decoration: none;
 }
 
-.review_body ul {
+.review-body ul {
   box-sizing: border-box;
   float: right;
   width: 77%;
@@ -81,30 +81,30 @@ form .totalcount:before {
   padding-left: 30px;
 }
 
-.review_body li {
+.review-body li {
   font-size: 1.5rem;
   color: #707070;
 }
 
-.review_body li:first-child {
+.review-body li:first-child {
   height: 50px;
   line-height: 50px;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 }
 
-.review_body li:nth-child(n + 2) {
+.review-body li:nth-child(n + 2) {
   display: inline-block;
   margin: 0 0 5px 0;
   padding-right: 10px;
   position: relative;
   vertical-align: middle;
 }
-.review_body li:not(:last-child) {
+.review-body li:not(:last-child) {
   margin: 0 5px 5px 0;
 }
 
-.review_body li.writer:before {
+.review-body li.writer:before {
   content: url(../../../images/greennature/naturetrip/file-pen-solid.svg);
   display: inline-block;
   position: relative;
@@ -113,7 +113,7 @@ form .totalcount:before {
   margin-right: 5px;
   height: 18px;
 }
-.review_body li.writer:after {
+.review-body li.writer:after {
   content: "|";
   font-size: 1.2rem;
   position: absolute;
@@ -121,7 +121,7 @@ form .totalcount:before {
   right: 0;
 }
 
-.review_body li.calender:before {
+.review-body li.calender:before {
   content: url(../../../images/greennature/naturetrip/calendar-days-solid.svg);
   display: inline-block;
   position: relative;
@@ -130,7 +130,7 @@ form .totalcount:before {
   height: 15px;
   margin-right: 7px;
 }
-.review_body li.views:before {
+.review-body li.views:before {
   content: url(../../../images/greennature/naturetrip/eye-solid.svg);
   display: inline-block;
   position: relative;
@@ -140,6 +140,6 @@ form .totalcount:before {
   margin-right: 5px;
 }
 
-.review_body li.views {
+.review-body li.views {
   float: right;
 }

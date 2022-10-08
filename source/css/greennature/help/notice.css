@@ -4,8 +4,8 @@
 @import url(../searchform.css);
 @import url(../paging.css);
 
-/* --------------------- inner_nav li 페이지 색상 변경 ---------------*/
-.inner_nav li:nth-child(2) a {
+/* --------------------- inner-nav li 페이지 색상 변경 ---------------*/
+.inner-nav li:nth-child(2) a {
   background-color: #028585;
 }
 
@@ -15,7 +15,7 @@ form .totalcount:before {
   content: url(../../../images/greennature/help/bullhorn-solid.svg);
 }
 
-/* ---------------- inner > inner_desc --------------- */
+/* ---------------- inner > inner-desc --------------- */
 
 table {
   width: 80%;

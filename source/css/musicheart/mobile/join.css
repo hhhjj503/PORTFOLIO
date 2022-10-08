@@ -32,7 +32,7 @@ input::-webkit-inner-spin-button {
   margin-top: 8%;
 }
 
-.join .join_header {
+.join .join-header {
   display: flex;
   border-radius: 10px;
   width: 100%;
@@ -40,11 +40,11 @@ input::-webkit-inner-spin-button {
   background-color: #031720;
 }
 
-.join .join_header .logo {
+.join .join-header .logo {
   padding-top: 12px;
 }
 
-.join .join_header a {
+.join .join-header a {
   text-decoration: none;
   font-size: 4rem;
   font-weight: 600;
@@ -52,11 +52,11 @@ input::-webkit-inner-spin-button {
   margin-left: 20px;
 }
 
-.join .join_header .h_deco {
+.join .join-header .h-deco {
   color: red;
 }
 
-.join .join_header .title {
+.join .join-header .title {
   font-size: 2rem;
   font-weight: 600;
   color: white;
@@ -64,11 +64,11 @@ input::-webkit-inner-spin-button {
   margin-top: 27px;
 }
 
-.join .join_input_items .input_item {
+.join .join-input-items .input-item {
   display: flex;
 }
 
-.join .join_input_items .input_item input {
+.join .join-input-items .input-item input {
   height: 60px;
   width: 100%;
   border-radius: 10px;
@@ -79,46 +79,46 @@ input::-webkit-inner-spin-button {
   outline: none;
 }
 
-.join .join_input_items .input_item .check {
+.join .join-input-items .input-item .check {
   margin-left: 10px;
   width: 100px;
   cursor: pointer;
 }
 
-.join .join_input_items .input_item .join_btn {
+.join .join-input-items .input-item .join-btn {
   width: 100%;
   font-size: 2rem;
   background-color: #031720;
   cursor: pointer;
 }
 
-.join .join_input_items .join_description {
+.join .join-input-items .join-description {
   margin-top: 15px;
   margin-bottom: 30px;
   font-size: 1.9rem;
   line-height: 25px;
 }
 
-.join .join_input_items .join_description a,
-.join .join_bottom a {
+.join .join-input-items .join-description a,
+.join .join-bottom a {
   text-decoration: underline;
   cursor: pointer;
   font-weight: 600;
 }
 
-.join .join_bottom {
+.join .join-bottom {
   border-top: 1px solid #bdbdbd;
   font-size: 1.8rem;
   padding-top: 20px;
 }
-.join .join_bottom a {
+.join .join-bottom a {
   margin-top: 15px;
   color: black;
 }
 
 @media (hover: hover) {
   .btn:hover,
-  .join .join_input_items .input_item .join_btn:hover {
+  .join .join-input-items .input-item .join-btn:hover {
     background-color: #424242;
   }
 }
@@ -128,48 +128,48 @@ input::-webkit-inner-spin-button {
   width: 90%;
 }
 
-.join .join_header {
+.join .join-header {
   height: 40px;
 }
 
-.join .join_header a {
+.join .join-header a {
   font-size: 2.4rem;
   line-height: 13px;
 }
 
-.join .join_header .title {
+.join .join-header .title {
   font-size: 1.5rem;
   margin: 0px;
   line-height: 47px;
   margin-left: 10px;
 }
 
-.join .join_input_items .input_item input {
+.join .join-input-items .input-item input {
   height: 30px;
   font-size: 1.5rem;
   border-radius: 7px;
   padding-left: 10px;
 }
 
-.join .join_input_items .input_item .join_btn {
+.join .join-input-items .input-item .join-btn {
   font-size: 1.5rem;
   height: 40px;
 }
 
-.join .join_input_items .input_item .check {
+.join .join-input-items .input-item .check {
   height: 35px;
   font-size: 1.3rem;
 }
 
-.join .join_bottom {
+.join .join-bottom {
   font-size: 1.5rem;
 }
 
-.join .join_input_items .join_description {
+.join .join-input-items .join-description {
   font-size: 1.4rem;
   margin-bottom: 10px;
 }
 
-.join .join_bottom {
+.join .join-bottom {
   font-size: 1.5rem;
 }

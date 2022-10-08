@@ -1,4 +1,4 @@
-@import url(./m_header.css);
+@import url(./header.css);
 @import url(../../reset.css);
 
 html {
@@ -25,7 +25,7 @@ a {
   margin-top: 6%;
 }
 
-.contents .post_search {
+.contents .post-search {
   margin-left: auto;
   margin-right: auto;
   width: 48%;
@@ -39,12 +39,12 @@ a {
   justify-content: center;
 }
 
-.contents .post_search form {
+.contents .post-search form {
   display: flex;
   align-items: center;
 }
 
-.contents .post_search .post_type {
+.contents .post-search .post-type {
   border-radius: 5px;
   width: 130px;
   height: 35px;
@@ -54,7 +54,7 @@ a {
   font-weight: 700;
 }
 
-.contents .post_search input {
+.contents .post-search input {
   font-size: 1.7rem;
   border-radius: 5px;
   width: 270px;
@@ -68,7 +68,7 @@ a {
   margin-right: 10px;
 }
 
-.contents .post_search .search_btn {
+.contents .post-search .search-btn {
   width: 60px;
   height: 35px;
   font-size: 1.6rem;
@@ -94,7 +94,7 @@ a {
   border-bottom: 1.5px solid #5c5c5c;
 }
 
-.contents .sections .section .s_title {
+.contents .sections .section .s-title {
   display: flex;
   height: 34px;
   width: 100%;
@@ -102,7 +102,7 @@ a {
   align-items: center;
 }
 
-.contents .sections .section .s_title .sub_title {
+.contents .sections .section .s-title .sub-title {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 34px;
@@ -111,17 +111,17 @@ a {
   flex: 1;
 }
 
-.contents .sections .section .s_title .more {
+.contents .sections .section .s-title .more {
   font-size: 1.3rem;
   text-align: right;
   flex: 1;
 }
 
-.contents .sections .section .s_title .sub_title a {
+.contents .sections .section .s-title .sub-title a {
   color: white;
   cursor: pointer;
 }
-.contents .sections .section .s_title .more a {
+.contents .sections .section .s-title .more a {
   color: rgb(221, 221, 221);
   text-decoration: underline;
   margin-right: 20px;
@@ -141,7 +141,7 @@ a {
   text-overflow: ellipsis;
 }
 
-.contents .sections .section .list .post .post_title {
+.contents .sections .section .list .post .post-title {
   line-height: 28px;
   font-size: 1.5rem;
   cursor: pointer;
@@ -169,32 +169,32 @@ a {
   width: 90%;
 }
 
-.contents .post_search {
+.contents .post-search {
   margin-top: 50px;
   width: 100%;
   height: 35px;
 }
 
-.contents .post_search form {
+.contents .post-search form {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.contents .post_search .post_type {
+.contents .post-search .post-type {
   width: 24%;
   height: 20px;
   font-weight: 500;
   font-size: 1rem;
 }
 
-.contents .post_search input {
+.contents .post-search input {
   width: 35%;
   height: 15px;
   font-size: 1.2rem;
 }
 
-.contents .post_search .search_btn {
+.contents .post-search .search-btn {
   width: 17%;
   height: 20px;
   font-size: 1.2rem;
@@ -210,15 +210,15 @@ a {
   height: 177px;
 }
 
-.contents .sections .section .s_title {
+.contents .sections .section .s-title {
   height: 25px;
 }
 
-.contents .sections .section .s_title .sub_title a {
+.contents .sections .section .s-title .sub-title a {
   font-size: 1.3rem;
 }
 
-.contents .sections .section .s_title .more a {
+.contents .sections .section .s-title .more a {
   font-size: 1.1rem;
 }
 
@@ -227,7 +227,7 @@ a {
   font-size: 1.2rem;
 }
 
-.contents .sections .section .list .post .post_title {
+.contents .sections .section .list .post .post-title {
   font-size: 1.2rem;
   line-height: 22px;
 }

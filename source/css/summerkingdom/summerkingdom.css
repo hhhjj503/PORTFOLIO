@@ -25,7 +25,7 @@ header {
   background-color: whitesmoke;
 }
 
-header .header_wrapper {
+header .header-wrapper {
   height: 40px;
   max-width: 1200px;
   width: 100%;
@@ -65,21 +65,21 @@ header ul li a {
   cursor: pointer;
 }
 
-/* -------------------------------- main_items -------------------------------- */
+/* -------------------------------- main-items -------------------------------- */
 
-main .main_items {
+main .main-items {
   width: 100%;
 }
 
 /* --------------------------------banner -------------------------------- */
 
-.main_items .banner_wrapper {
+.main-items .banner-wrapper {
   position: relative;
   width: 100%;
   background-color: rgb(74, 148, 207);
 }
 
-.banner_wrapper .banner {
+.banner-wrapper .banner {
   position: relative;
   max-width: 1550px;
   width: 100%;
@@ -91,11 +91,11 @@ main .main_items {
   transition: 0.2s ease-in;
 }
 
-.banner_wrapper .banner.loaded {
+.banner-wrapper .banner.loaded {
   opacity: 1;
 }
 
-.banner_wrapper .b_desc {
+.banner-wrapper .b-desc {
   position: absolute;
   text-align: center;
   top: 50%;
@@ -109,7 +109,7 @@ main .main_items {
   z-index: 5;
 }
 
-.banner_wrapper .banner .curtain {
+.banner-wrapper .banner .curtain {
   position: absolute;
   transition: 0.4s ease-in-out;
   top: -2px;
@@ -123,15 +123,15 @@ main .main_items {
   width: 0px;
 }
 
-.banner .curtain_1 {
+.banner .curtain-1 {
   left: 0;
 }
 
-.banner .curtain_r {
+.banner .curtain-r {
   right: 0;
 }
 
-.banner .img_wrapper {
+.banner .img-wrapper {
   width: 100%;
   height: 600px;
   margin: 0 auto;
@@ -141,7 +141,7 @@ main .main_items {
   flex-wrap: wrap;
 }
 
-.banner .img_wrapper .img {
+.banner .img-wrapper .img {
   width: 100%;
   height: inherit;
   background-position: center;
@@ -152,27 +152,27 @@ main .main_items {
   transition: 0.3s ease-in;
 }
 
-.banner .img_wrapper .img.show {
+.banner .img-wrapper .img.show {
   display: inline;
 }
 
-.banner .img_wrapper .img.show.covered {
+.banner .img-wrapper .img.show.covered {
   background-size: 120%;
 }
 
-.banner .img_wrapper:hover {
+.banner .img-wrapper:hover {
   width: 100%;
   transform-origin: 50% 50%;
 }
 
-m.banner .img_wrapper.cover {
+m.banner .img-wrapper.cover {
   height: 100%;
   transform: translateY(0);
 }
 
 /* -------------------------------- introduce  -------------------------------- */
 
-.main_items .introduce {
+.main-items .introduce {
   position: relative;
   width: 100%;
   height: 900px;
@@ -199,7 +199,7 @@ m.banner .img_wrapper.cover {
   );
 }
 
-.introduce .i_wrapper {
+.introduce .i-wrapper {
   max-width: 1550px;
   width: 100%;
   margin: 0 auto;
@@ -209,7 +209,7 @@ m.banner .img_wrapper.cover {
   justify-content: center;
 }
 
-.i_wrapper .intro {
+.i-wrapper .intro {
   width: 100%;
   overflow: hidden;
   box-sizing: border-box;
@@ -221,7 +221,7 @@ m.banner .img_wrapper.cover {
   border-radius: 15px;
 }
 
-.i_wrapper .intro .i_title {
+.i-wrapper .intro .i-title {
   color: rgb(74, 148, 207);
   letter-spacing: 8px;
   text-shadow: 1px 1px rgb(31, 72, 105), 1.5px 1.5px rgb(31, 72, 105),
@@ -230,7 +230,7 @@ m.banner .img_wrapper.cover {
     4px 4px rgb(31, 72, 105);
 }
 
-.i_wrapper .intro .i_desc {
+.i-wrapper .intro .i-desc {
   margin-top: 50px;
   color: steelblue;
   font-size: 3rem;
@@ -239,7 +239,7 @@ m.banner .img_wrapper.cover {
   text-shadow: 1px 1px 2px white, -1px -1px 2px white;
 }
 
-.i_wrapper .intro .line_up ul {
+.i-wrapper .intro .line-up ul {
   display: flex;
   height: auto;
   width: 50%;
@@ -250,7 +250,7 @@ m.banner .img_wrapper.cover {
   margin-top: 50px;
 }
 
-.i_wrapper .intro .line_up ul li {
+.i-wrapper .intro .line-up ul li {
   width: 40%;
   height: 60px;
   line-height: 60px;
@@ -265,11 +265,11 @@ m.banner .img_wrapper.cover {
   cursor: default;
 }
 
-.i_wrapper .intro .line_up ul li:hover {
+.i-wrapper .intro .line-up ul li:hover {
   box-shadow: 1px 1px white, -1px -1px rgb(37, 37, 37);
 }
 
-.i_wrapper .intro .line_up ul .content.date {
+.i-wrapper .intro .line-up ul .content.date {
   width: 35%;
   font-size: 2.9rem;
   text-shadow: 1px 1px white, -1px -1px rgb(37, 37, 37);
@@ -277,7 +277,7 @@ m.banner .img_wrapper.cover {
   color: rgb(26, 26, 26);
 }
 
-.i_wrapper .intro .line_up ul .content.name {
+.i-wrapper .intro .line-up ul .content.name {
   width: 65%;
   font-size: 3.1rem;
   text-shadow: 1px 1px white, -1px -1px rgb(37, 37, 37);
@@ -290,13 +290,13 @@ m.banner .img_wrapper.cover {
 
 /* ----------------------------------------- event -------------------------------------- */
 
-.event_wrapper {
+.event-wrapper {
   width: 100%;
   height: auto;
   margin-top: 100px;
 }
 
-.event_wrapper .event_title {
+.event-wrapper .event-title {
   max-width: 1550px;
   width: 100%;
   margin: 0 auto;
@@ -310,9 +310,9 @@ m.banner .img_wrapper.cover {
   border-radius: 15px;
 }
 
-/* ----------------------------- event_list 행사 섹션 ------------------------------- */
+/* ----------------------------- event-list 행사 섹션 ------------------------------- */
 
-.event_wrapper .event_list_wrapper {
+.event-wrapper .event-list-wrapper {
   max-width: 1550px;
   width: 100%;
   margin: 0 auto;
@@ -320,7 +320,7 @@ m.banner .img_wrapper.cover {
   border-radius: 15px;
 }
 
-.event_list_wrapper .event_list {
+.event-list-wrapper .event-list {
   position: relative;
   width: 100%;
   padding: 20px 0;
@@ -329,16 +329,16 @@ m.banner .img_wrapper.cover {
   background-color: transparent;
 }
 
-.event_list_wrapper .event_list:not(:last-child) {
+.event-list-wrapper .event-list:not(:last-child) {
   border-bottom: 1px solid rgb(192, 192, 192);
 }
 
-.event_list.festival ul {
+.event-list.festival ul {
   width: 100%;
   height: 450px;
 }
 
-.event_list li {
+.event-list li {
   position: relative;
   display: inline-block;
   width: 32%;
@@ -347,7 +347,7 @@ m.banner .img_wrapper.cover {
   transition: 0.3s ease-in-out;
 }
 
-.event_list li .img_screen {
+.event-list li .img-screen {
   position: relative;
   width: 100%;
   height: 100%;
@@ -357,7 +357,7 @@ m.banner .img_wrapper.cover {
   background-position: center;
 }
 
-.event_list li .img_screen:after {
+.event-list li .img-screen:after {
   position: absolute;
   content: "";
   top: 0;
@@ -372,17 +372,17 @@ m.banner .img_wrapper.cover {
   transition: 0.3s ease-in-out;
 }
 
-.event_list li:hover {
+.event-list li:hover {
   height: 102%;
 }
 
-.event_list li:hover .img_screen:after {
+.event-list li:hover .img-screen:after {
   opacity: 1;
 }
 
 /* -----------------------------행사섹션 li  hover 시 뜨는 div 창 ------------------------------- */
 
-.event_list li .desc_wrapper {
+.event-list li .desc-wrapper {
   position: absolute;
   top: 0;
   left: 0;
@@ -400,17 +400,17 @@ m.banner .img_wrapper.cover {
   background-color: white;
 }
 
-.event_list li:hover .desc_wrapper {
+.event-list li:hover .desc-wrapper {
   opacity: 1;
   max-height: 100%;
 }
 
-.event_list li .desc {
+.event-list li .desc {
   width: 100%;
   text-align: center;
 }
 
-.event_list li .desc_wrapper .e_title {
+.event-list li .desc-wrapper .e-title {
   font-size: 2rem;
   background-color: rgb(223 72 69);
   color: white;
@@ -423,7 +423,7 @@ m.banner .img_wrapper.cover {
   text-align: center;
 }
 
-.event_list .e_content {
+.event-list .e-content {
   font-size: 1.8rem;
   width: 90%;
   margin: 0 auto;
@@ -432,13 +432,13 @@ m.banner .img_wrapper.cover {
   text-align: left;
 }
 
-.event_list .e_content {
+.event-list .e-content {
   font-size: 1.8rem;
 }
 
-/* ----------------------------- event_list 지도 섹션 ------------------------------- */
+/* ----------------------------- event-list 지도 섹션 ------------------------------- */
 
-.event_list.map:before {
+.event-list.map:before {
   position: absolute;
   content: "";
   top: 0;
@@ -449,19 +449,19 @@ m.banner .img_wrapper.cover {
   z-index: 0;
 }
 
-.event_list.map .map_wrapper {
+.event-list.map .map-wrapper {
   height: 480px;
   width: 100%;
   line-height: 480px;
 }
 
-.event_list.map .map {
+.event-list.map .map {
   width: 70%;
   height: 100%;
   float: left;
 }
 
-.event_list.map .map .map_img {
+.event-list.map .map .map-img {
   width: 43%;
   height: 90%;
   margin: 15px;
@@ -473,7 +473,7 @@ m.banner .img_wrapper.cover {
   border: 3px solid #d5dde6;
 }
 
-.event_list.map .transportation_wrapper {
+.event-list.map .transportation-wrapper {
   width: 30%;
   background-color: rgb(223, 223, 223);
   float: right;
@@ -484,11 +484,11 @@ m.banner .img_wrapper.cover {
   z-index: 1;
 }
 
-.event_list.map .transportation_wrapper .transportation {
+.event-list.map .transportation-wrapper .transportation {
   height: 100%;
 }
 
-.event_list.map .transportation_wrapper .t_title {
+.event-list.map .transportation-wrapper .t-title {
   font-size: 1.8rem;
   background-color: rgb(53 55 59);
   color: white;
@@ -501,7 +501,7 @@ m.banner .img_wrapper.cover {
   border-radius: 10px;
 }
 
-.event_list.map .transportation_wrapper .way {
+.event-list.map .transportation-wrapper .way {
   font-size: 1.8rem;
   background-color: white;
   width: 50%;
@@ -512,12 +512,12 @@ m.banner .img_wrapper.cover {
   border: 1px solid rgb(167, 167, 167);
 }
 
-.event_list.map .transportation_wrapper .way_list {
+.event-list.map .transportation-wrapper .way-list {
   width: 60%;
   margin: 0 auto;
 }
 
-.event_list.map .transportation_wrapper li {
+.event-list.map .transportation-wrapper li {
   width: 40%;
   height: 20px;
   line-height: 20px;
@@ -535,25 +535,25 @@ m.banner .img_wrapper.cover {
   height: 45%;
 }
 
-.event_list.map .transportation_wrapper li.line1 {
+.event-list.map .transportation-wrapper li.line1 {
   background-color: #0d347f;
 }
 
-.event_list.map .transportation_wrapper li.line2 {
+.event-list.map .transportation-wrapper li.line2 {
   background-color: #3b9f37;
 }
 
-.event_list.map .transportation_wrapper li.line5 {
+.event-list.map .transportation-wrapper li.line5 {
   background-color: #703e8c;
 }
 
-.event_list.map .transportation_wrapper li.line7 {
+.event-list.map .transportation-wrapper li.line7 {
   background-color: #5b692e;
 }
 
-/* ----------------------------- event_list 댓글 섹션 ------------------------------- */
+/* ----------------------------- event-list 댓글 섹션 ------------------------------- */
 
-.event_list_wrapper .c_wrapper {
+.event-list-wrapper .c-wrapper {
   width: 60%;
   margin: 0 auto;
   box-sizing: border-box;
@@ -561,7 +561,7 @@ m.banner .img_wrapper.cover {
 
 /* ----------------------------- 댓글 섹션 제목 ------------------------------- */
 
-.c_wrapper .c_title {
+.c-wrapper .c-title {
   font-weight: 700;
   text-align: center;
   font-size: 2.2rem;
@@ -571,16 +571,16 @@ m.banner .img_wrapper.cover {
 }
 
 /* ----------------------------- 댓글 입력구간 ------------------------------- */
-.c_wrapper .c_input {
+.c-wrapper .c-input {
   width: 100%;
 }
 
-.c_wrapper .c_input form {
+.c-wrapper .c-input form {
   display: flex;
   justify-content: center;
 }
 
-.c_wrapper .c_input form input {
+.c-wrapper .c-input form input {
   width: 90%;
   height: 30px;
   border-radius: 10px;
@@ -591,7 +591,7 @@ m.banner .img_wrapper.cover {
   padding-left: 10px;
 }
 
-.c_wrapper .c_input form .btn {
+.c-wrapper .c-input form .btn {
   border-radius: 10px;
   width: 10%;
   font-size: 1.5rem;
@@ -601,17 +601,17 @@ m.banner .img_wrapper.cover {
 
 /* ----------------------------- 댓글 리스트 ------------------------------- */
 
-.c_wrapper .c_list {
+.c-wrapper .c-list {
   margin: 0 auto;
   width: 100%;
 }
 
-.c_wrapper .c_list ul {
+.c-wrapper .c-list ul {
   display: block;
   margin-top: 30px;
 }
 
-.c_wrapper .c_list li {
+.c-wrapper .c-list li {
   height: 35px;
   margin: 5px 0;
   line-height: 35px;
@@ -619,7 +619,7 @@ m.banner .img_wrapper.cover {
   background-color: transparent;
 }
 
-.c_wrapper .c_list .contents_wrapper {
+.c-wrapper .c-list .contents-wrapper {
   width: 100%;
   height: 100%;
   display: flex;
@@ -631,17 +631,17 @@ m.banner .img_wrapper.cover {
   border-radius: 10px;
 }
 
-.c_wrapper .c_list .contents_wrapper .date {
+.c-wrapper .c-list .contents-wrapper .date {
   font-size: 1.4rem;
 }
 
 /* ----------------------------- 댓글 페이징 ------------------------------- */
 
-.c_wrapper .paging {
+.c-wrapper .paging {
   width: 100%;
 }
 
-.c_wrapper .paging .page li {
+.c-wrapper .paging .page li {
   display: inline;
   font-size: 1.8rem;
   padding: 0 10px;
@@ -650,12 +650,12 @@ m.banner .img_wrapper.cover {
   line-height: 40px;
 }
 
-.c_wrapper .paging .page a {
+.c-wrapper .paging .page a {
   font-size: 1.7rem;
   cursor: pointer;
 }
 
-.c_wrapper .paging .page li:first-child a {
+.c-wrapper .paging .page li:first-child a {
   text-decoration: underline;
 }
 
@@ -678,155 +678,155 @@ footer {
   }
 
   /* ------------- header ---------------- */
-  .header_wrapper {
+  .header-wrapper {
     box-sizing: border-box;
     padding: 0 10px;
   }
 
-  .header_wrapper .logo {
+  .header-wrapper .logo {
     font-size: 1.6rem;
     line-height: 20px;
   }
-  .header_wrapper ul a {
+  .header-wrapper ul a {
     font-size: 1.2rem;
     line-height: 15px;
   }
 
   /* -------------- banner ---------------- */
 
-  .banner_wrapper .b_desc {
+  .banner-wrapper .b-desc {
     font-size: 3.5rem;
   }
 
-  .banner_wrapper .banner {
+  .banner-wrapper .banner {
     height: 400px;
   }
-  .banner_wrapper .banner .img_wrapper {
+  .banner-wrapper .banner .img-wrapper {
     height: 340px;
   }
 
   /* -------------------------------------------- */
-  .main_items .introduce {
+  .main-items .introduce {
     height: 500px;
   }
 
-  .introduce .i_wrapper .intro {
+  .introduce .i-wrapper .intro {
     font-size: 3rem;
     z-index: 1;
   }
 
-  .introduce .i_wrapper .intro .i_desc {
+  .introduce .i-wrapper .intro .i-desc {
     font-size: 2rem;
     margin: 20px 0;
   }
 
-  .introduce .i_wrapper .intro .line_up ul {
+  .introduce .i-wrapper .intro .line-up ul {
     width: 80%;
     justify-content: space-around;
     margin-top: 0px;
     font-size: 1.5rem;
   }
 
-  .introduce .i_wrapper .line_up ul li {
+  .introduce .i-wrapper .line-up ul li {
     height: 45px;
     line-height: 45px;
     width: 35%;
   }
 
-  .i_wrapper .intro .line_up ul .content.date {
+  .i-wrapper .intro .line-up ul .content.date {
     font-size: 2rem;
   }
 
-  .i_wrapper .intro .line_up ul .content.name {
+  .i-wrapper .intro .line-up ul .content.name {
     font-size: 2rem;
   }
 
   /* ------------------------------------------- */
 
-  .event_list.festival ul {
+  .event-list.festival ul {
     height: 320px;
   }
 
-  .event_list_wrapper ul li:last-child {
+  .event-list-wrapper ul li:last-child {
     display: none;
   }
 
-  .event_list_wrapper ul li {
+  .event-list-wrapper ul li {
     width: 45%;
     margin: 0 10px;
   }
 
-  .event_wrapper .event_title {
+  .event-wrapper .event-title {
     font-size: 2rem;
   }
 
-  .event_wrapper .event_list_wrapper .event_list.comment {
+  .event-wrapper .event-list-wrapper .event-list.comment {
     width: 100%;
     height: auto;
   }
 
-  .event_list_wrapper ul li .desc_wrapper .e_title {
+  .event-list-wrapper ul li .desc-wrapper .e-title {
     font-size: 1.3rem;
     padding: 7px 0;
   }
-  .event_list_wrapper .desc .e_content {
+  .event-list-wrapper .desc .e-content {
     font-size: 1.1rem;
   }
 
-  .event_list.map .map {
+  .event-list.map .map {
     width: 100%;
   }
 
-  .event_list.map:before {
+  .event-list.map:before {
     display: none;
   }
 
-  .event_list.map .map_wrapper {
+  .event-list.map .map-wrapper {
     height: 320px;
     line-height: 320px;
   }
 
-  .event_list.map .map .map_img {
+  .event-list.map .map .map-img {
     background-size: cover;
     border-radius: 15px;
     margin: 10px;
   }
 
-  .event_list.map .transportation_wrapper {
+  .event-list.map .transportation-wrapper {
     display: none;
   }
 
   /* ------------------------ 댓글란 -------------- */
 
-  .event_list.comment .event_list.comment {
+  .event-list.comment .event-list.comment {
     height: auto;
   }
 
-  .comment .c_wrapper {
+  .comment .c-wrapper {
     width: 85%;
   }
 
-  .comment .c_title {
+  .comment .c-title {
     font-size: 1.7rem;
     padding: 20px 0;
   }
 
-  .c_wrapper .paging .page li {
+  .c-wrapper .paging .page li {
     padding: 0 5px;
   }
 
-  .c_wrapper .paging .page a {
+  .c-wrapper .paging .page a {
     font-size: 1.7rem;
   }
 
-  .comment .c_wrapper form .btn {
+  .comment .c-wrapper form .btn {
     font-size: 1.2rem;
   }
 
-  .comment .c_list .contents_wrapper .contents {
+  .comment .c-list .contents-wrapper .contents {
     font-size: 1.4rem;
   }
-  .comment .c_list .contents_wrapper .date {
+  .comment .c-list .contents-wrapper .date {
     font-size: 1.4rem;
   }
 }
@@ -835,62 +835,62 @@ footer {
 
 @media screen and (max-width: 480px) {
   /* ------------- header ---------------- */
-  .header_wrapper {
+  .header-wrapper {
     box-sizing: border-box;
     padding: 0 10px;
   }
 
-  .header_wrapper .logo {
+  .header-wrapper .logo {
     font-size: 1.5rem;
     line-height: 20px;
   }
-  .header_wrapper ul a {
+  .header-wrapper ul a {
     font-size: 1.2rem;
     line-height: 15px;
   }
 
   /* -------------- banner ---------------- */
 
-  .banner_wrapper .b_desc {
+  .banner-wrapper .b-desc {
     font-size: 2rem;
   }
 
-  .banner_wrapper .banner {
+  .banner-wrapper .banner {
     height: 240px;
   }
-  .banner_wrapper .banner .img_wrapper {
+  .banner-wrapper .banner .img-wrapper {
     height: 200px;
   }
 
   /* -------------------------------------------- */
-  .main_items .introduce {
+  .main-items .introduce {
     height: auto;
     padding: 40px 0;
   }
 
-  .introduce .i_wrapper .intro {
+  .introduce .i-wrapper .intro {
     font-size: 1.8rem;
     width: 90%;
     margin: 0 auto;
     z-index: 1;
   }
-  .introduce .i_wrapper .intro .i_title {
+  .introduce .i-wrapper .intro .i-title {
     letter-spacing: 5px;
   }
 
-  .introduce .i_wrapper .intro .i_desc {
+  .introduce .i-wrapper .intro .i-desc {
     font-size: 1.3rem;
     margin: 20px 0;
   }
 
-  .introduce .i_wrapper .intro .line_up ul {
+  .introduce .i-wrapper .intro .line-up ul {
     width: 80%;
     justify-content: space-around;
     margin-top: 0px;
     font-size: 1.5rem;
   }
 
-  .introduce .i_wrapper .line_up ul li {
+  .introduce .i-wrapper .line-up ul li {
     height: 35px;
     line-height: 35px;
     width: 45%;
@@ -898,80 +898,80 @@ footer {
     padding-left: 10px;
   }
 
-  .i_wrapper .intro .line_up ul .content.date {
+  .i-wrapper .intro .line-up ul .content.date {
     font-size: 1.2rem;
     text-shadow: 0.5px 0.5px white, -0.5px -0.5px rgb(37, 37, 37);
   }
 
-  .i_wrapper .intro .line_up ul .content.name {
+  .i-wrapper .intro .line-up ul .content.name {
     font-size: 1.2rem;
     text-shadow: 0.5px 0.5px white, -0.5px -0.5px rgb(37, 37, 37);
   }
 
   /* ------------------------------------------- */
 
-  .event_wrapper {
+  .event-wrapper {
     margin-top: 50px;
   }
 
-  .event_list_wrapper ul li {
+  .event-list-wrapper ul li {
     width: 45%;
   }
 
-  .event_wrapper .event_title {
+  .event-wrapper .event-title {
     width: 90%;
     font-size: 1.5rem;
     padding: 8px 0;
   }
 
-  .event_wrapper .event_list_wrapper .event_list {
+  .event-wrapper .event-list-wrapper .event-list {
     padding: 10px 0;
     height: auto;
   }
 
-  .event_list li .img_screen {
+  .event-list li .img-screen {
     border-radius: 0;
   }
 
-  .event_list_wrapper .event_list.comment {
+  .event-list-wrapper .event-list.comment {
     height: auto;
   }
 
-  .event_list.festival ul {
+  .event-list.festival ul {
     height: auto;
   }
 
-  .event_list.festival ul li {
+  .event-list.festival ul li {
     margin: 15px 0;
     display: block;
     height: 300px;
     width: 100%;
   }
 
-  .event_list li .desc_wrapper {
+  .event-list li .desc-wrapper {
     width: 70%;
   }
 
-  .event_list ul li .desc_wrapper .e_title {
+  .event-list ul li .desc-wrapper .e-title {
     border-radius: 10px;
 
     font-size: 1.2rem;
     padding: 4px 0;
   }
-  .event_list_wrapper .desc .e_content {
+  .event-list-wrapper .desc .e-content {
     font-size: 1.1rem;
   }
 
-  .event_wrapper .event_list_wrapper .event_list.map {
+  .event-wrapper .event-list-wrapper .event-list.map {
     padding: 10px 0;
     height: auto;
   }
 
-  .event_list.map .map {
+  .event-list.map .map {
     height: auto;
   }
 
-  .event_list.map .map .map_img {
+  .event-list.map .map .map-img {
     margin: 15px 0;
     display: block;
     box-sizing: border-box;
@@ -980,58 +980,58 @@ footer {
     border-radius: 0;
   }
 
-  .event_wrapper .map_img {
+  .event-wrapper .map-img {
     background-size: cover;
   }
 
-  .event_list.map .transportation_wrapper {
+  .event-list.map .transportation-wrapper {
     display: none;
   }
 
   /* ------------------------ 댓글란 -------------- */
 
-  .event_list.comment {
+  .event-list.comment {
     height: auto;
   }
 
-  .comment .c_wrapper {
+  .comment .c-wrapper {
     width: 85%;
   }
 
-  .comment .c_title {
+  .comment .c-title {
     font-size: 1.5rem;
     padding: 10px 0;
     width: 100%;
   }
 
-  .comment .c_wrapper form .btn {
+  .comment .c-wrapper form .btn {
     font-size: 1.2rem;
   }
 
-  .c_wrapper .c_input form input {
+  .c-wrapper .c-input form input {
     width: 70%;
   }
-  .c_wrapper .c_input form .btn {
+  .c-wrapper .c-input form .btn {
     width: 20%;
   }
 
-  .c_wrapper .c_list ul {
+  .c-wrapper .c-list ul {
     margin-top: 10px;
   }
 
-  .c_wrapper .paging .page li {
+  .c-wrapper .paging .page li {
     padding: 0 5px;
     margin: 0;
   }
 
-  .c_wrapper .paging a {
+  .c-wrapper .paging a {
     font-size: 1.2rem;
   }
 
-  .comment .c_list .contents_wrapper .contents {
+  .comment .c-list .contents-wrapper .contents {
     font-size: 1.3rem;
   }
-  .comment .c_list .contents_wrapper .date {
+  .comment .c-list .contents-wrapper .date {
     font-size: 1.3rem;
   }
 }

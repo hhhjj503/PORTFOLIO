@@ -24,7 +24,7 @@ a {
 
 /* ----------------------------------------------- header ----------------------------------------------------------- */
 
-header .entrance_wrapper {
+header .entrance-wrapper {
   position: relative;
   top: 0;
   left: 0;
@@ -40,7 +40,7 @@ header .entrance_wrapper {
   z-index: 0;
 }
 
-.entrance_wrapper .entrance {
+.entrance-wrapper .entrance {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -101,7 +101,7 @@ header .entrance_wrapper {
 
 /* -------------- navbar ------------- */
 
-.contents_items .navbar_wrapper {
+.contents-items .navbar-wrapper {
   width: 100%;
   background-color: #22313f;
   position: sticky;
@@ -142,7 +142,7 @@ header .entrance_wrapper {
 
 /* -------------------introduce --------------- */
 
-.contents_items .introduce_wrapper {
+.contents-items .introduce-wrapper {
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;
@@ -160,7 +160,7 @@ header .entrance_wrapper {
   content: "";
 }
 
-.introduce_wrapper .information {
+.introduce-wrapper .information {
   width: 50%;
   text-align: center;
   line-height: 40px;
@@ -220,14 +220,14 @@ header .entrance_wrapper {
 
 /* -------------------technology --------------- */
 
-.tech_wrapper {
+.tech-wrapper {
   width: 100%;
   margin: 0 auto;
   padding: 100px 0;
   background-color: whitesmoke;
 }
 
-.tech_wrapper .technology {
+.tech-wrapper .technology {
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;
@@ -309,14 +309,14 @@ header .entrance_wrapper {
 
 /* ------------------- portfolio --------------- */
 
-.portfolio_wrapper {
+.portfolio-wrapper {
   width: 100%;
   padding: 150px 0;
   margin: 0 auto;
   background-color: white;
 }
 
-.portfolio_wrapper .portfolio {
+.portfolio-wrapper .portfolio {
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;
@@ -407,7 +407,7 @@ header .entrance_wrapper {
   margin-right: 30px;
 }
 
-.list a .list_desc {
+.list a .list-desc {
   position: absolute;
   left: 0;
   bottom: 20px;
@@ -423,18 +423,18 @@ header .entrance_wrapper {
   opacity: 0;
   transition: 0.3s ease-in-out;
 }
-.list a:hover .list_desc {
+.list a:hover .list-desc {
   opacity: 1;
 }
 
 /* ----------------------------------------------- footer ----------------------------------------------------------- */
 
-footer .contact_wrapper {
+footer .contact-wrapper {
   background-color: #22313f;
   padding: 100px 0;
 }
 
-.contact_wrapper .contact {
+.contact-wrapper .contact {
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;
@@ -470,7 +470,7 @@ footer .contact_wrapper {
 /* ------------------------ 반응형 ------------------------- */
 
 @media screen and (max-width: 960px) {
-  header .entrance_wrapper {
+  header .entrance-wrapper {
     height: 630px;
   }
 
@@ -514,7 +514,7 @@ footer .contact_wrapper {
     font-size: 1.8rem;
   }
 
-  .tech_wrapper {
+  .tech-wrapper {
     padding: 70px 0;
   }
 
@@ -536,7 +536,7 @@ footer .contact_wrapper {
     width: 25%;
   }
 
-  .portfolio_wrapper {
+  .portfolio-wrapper {
     padding: 100px 0;
   }
 
@@ -557,7 +557,7 @@ footer .contact_wrapper {
     margin-left: 10px;
   }
 
-  .list a .list_desc {
+  .list a .list-desc {
     font-size: 1.3rem;
     line-height: 15px;
   }
@@ -570,7 +570,7 @@ footer .contact_wrapper {
     font-size: 1.4rem;
   }
 
-  footer .contact_wrapper {
+  footer .contact-wrapper {
     padding: 60px 0;
   }
 
@@ -586,7 +586,7 @@ footer .contact_wrapper {
 }
 
 @media screen and (max-width: 480px) {
-  header .entrance_wrapper {
+  header .entrance-wrapper {
     height: 630px;
   }
 
@@ -598,7 +598,7 @@ footer .contact_wrapper {
     font-size: 1.2rem;
     padding: 25px 0;
   }
-  .contents_items .introduce_wrapper {
+  .contents-items .introduce-wrapper {
     padding: 50px 0;
   }
 
@@ -606,7 +606,7 @@ footer .contact_wrapper {
     font-size: 1.2rem;
   }
 
-  .introduce_wrapper .information,
+  .introduce-wrapper .information,
   .introduce .desc {
     clear: left;
     width: 100%;
@@ -653,7 +653,7 @@ footer .contact_wrapper {
     font-size: 1.3rem;
   }
 
-  .tech_wrapper {
+  .tech-wrapper {
     padding: 50px 0;
   }
 
@@ -675,7 +675,7 @@ footer .contact_wrapper {
     width: 30%;
   }
 
-  .portfolio_wrapper {
+  .portfolio-wrapper {
     padding: 80px 0;
   }
 
@@ -703,7 +703,7 @@ footer .contact_wrapper {
     margin-left: 0px;
   }
 
-  .list a .list_desc {
+  .list a .list-desc {
     font-size: 1.2rem;
     line-height: 15px;
   }
@@ -712,7 +712,7 @@ footer .contact_wrapper {
     border-radius: 0;
   }
 
-  footer .contact_wrapper {
+  footer .contact-wrapper {
     padding: 40px 0;
   }
 
