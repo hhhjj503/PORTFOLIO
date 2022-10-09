@@ -1,11 +1,11 @@
 window.onload = function () {
-  const imgItems = document.querySelectorAll(".img_item");
-  const biggerImg = document.querySelector(".bigger_img");
-  const imgTitles = document.querySelectorAll(".img_title");
+  const imgItems = document.querySelectorAll(".img-item");
+  const biggerImg = document.querySelector(".bigger-img");
+  const imgTitles = document.querySelectorAll(".img-title");
 
   imgItems[0].classList.add("clicked");
   slicedPath(imgItems[0]);
-  imgTitles[0].classList.add("title_clicked");
+  imgTitles[0].classList.add("title-clicked");
 
   for (let i = 0; i < imgItems.length; i++) {
     imgItems[i].addEventListener("click", function () {
@@ -33,8 +33,8 @@ window.onload = function () {
 
   function titleClicked(imgTitles, imgTitle) {
     for (let i = 0; i < imgTitles.length; i++) {
-      imgTitles[i].classList.remove("title_clicked");
+      imgTitles[i].classList.remove("title-clicked");
     }
-    imgTitle.classList.add("title_clicked");
+    imgTitle.classList.add("title-clicked");
   }
 };

@@ -1,8 +1,14 @@
 @import url(setting.css);
 
+header .top-wrapper {
+  max-width: 1200px;
+  width: 100%;
+}
+
 body {
   background-color: white;
-  overflow: hidden;
+  overflow-x: hidden;
+  min-width: 0;
 }
 
 .home-login-wrapper {
@@ -11,9 +17,9 @@ body {
 }
 
 .home-login-wrapper .inner-wrapper {
-  width: 600px;
+  width: 100%;
   margin: 0 auto;
-  max-width: 100%;
+  max-width: 600px;
 }
 
 .home-login-wrapper .inner-wrapper .logo {
