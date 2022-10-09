@@ -1,5 +1,7 @@
 @import url(setting.css);
 
+/* -------------------로그인, 회원가입페이지는 속성조금변경----------------------- */
+
 header .top-wrapper {
   max-width: 1200px;
   width: 100%;
@@ -10,6 +12,8 @@ body {
   overflow-x: hidden;
   min-width: 0;
 }
+
+/* ---------------------------------------------------------- */
 
 .home-login-wrapper {
   width: 100%;

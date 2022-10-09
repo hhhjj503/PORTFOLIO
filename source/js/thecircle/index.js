@@ -1,4 +1,4 @@
-window.addEventListener("load", function () {
+window.addEventListener("load", () => {
   const slider = document.querySelector(".slider");
   let slides = document.querySelectorAll(".slide");
   const pageLabels = document.querySelector(".pagelabels");
@@ -23,10 +23,10 @@ window.addEventListener("load", function () {
     //label 태그 동적생성
     const label = document.createElement("label");
     label.htmlFor = `slide_control${i}`;
-    label.addEventListener("mouseenter", function () {
+    label.addEventListener("mouseenter", () => {
       label.classList.add("hovered");
     });
-    label.addEventListener("mouseleave", function () {
+    label.addEventListener("mouseleave", () => {
       label.classList.remove("hovered");
     });
     pageLabels.appendChild(label);
@@ -47,7 +47,7 @@ window.addEventListener("load", function () {
 
   //label 에 클릭이벤트 추가 , wheelIndex 변경
   for (let i = 0; i < labels.length; i++) {
-    labels[i].addEventListener("click", function () {
+    labels[i].addEventListener("click", () => {
       changeImage(inputs[i], labels[i]);
       const leftValue = inputs[i].dataset.left;
       moveLeft(leftValue);
@@ -56,7 +56,7 @@ window.addEventListener("load", function () {
   }
 
   //마우스 휠 스크롤 슬라이드 만들기
-  window.addEventListener("wheel", function (e) {
+  window.addEventListener("wheel", (e) => {
     if (e.deltaY > 0) {
       ++currentWheelIndex;
       if (currentWheelIndex > maxWheelIndex) currentWheelIndex = 0;

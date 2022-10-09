@@ -1,4 +1,4 @@
-window.addEventListener("load", function () {
+window.addEventListener("load", () => {
   const mainImg = document.querySelector(".main_img");
   const slider = document.querySelector(".contents .slider");
   const overlay = document.querySelector(".overlay");
@@ -11,11 +11,12 @@ window.addEventListener("load", function () {
   const subMenu = document.querySelector(".top-nav-mobile .sub-menu");
   const goup = document.querySelector(".top-nav-mobile .goup");
 
-  topNavMobile.addEventListener("click", function () {
+  topNavMobile.addEventListener("click", () => {
     subMenu.classList.toggle("opened");
   });
 
-  goup.addEventListener("mouseenter", function () {
+  //click 이벤트 작동하지 않음
+  goup.addEventListener("mouseenter", () => {
     subMenu.classList.toggle("opened");
   });
 
@@ -23,7 +24,7 @@ window.addEventListener("load", function () {
     hidings[i].dataset.offtop = hidings[i].getBoundingClientRect().top - 800;
   }
 
-  window.addEventListener("scroll", function () {
+  window.addEventListener("scroll", () => {
     const currentTop = html.scrollTop;
     for (let i = 0; i < hidings.length; i++) {
       if (currentTop >= hidings[i].dataset.offtop) {
@@ -65,7 +66,7 @@ window.addEventListener("load", function () {
 
   //슬라이더이미지 누르면 큰 이미지 보여주기
   function overlayImage(slide) {
-    slide.addEventListener("click", function () {
+    slide.addEventListener("click", () => {
       const img = slide.querySelector("img");
       overlayImg.src = img.getAttribute("src");
       overlay.classList.add("visible");
