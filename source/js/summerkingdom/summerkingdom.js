@@ -1,4 +1,4 @@
-window.onload = function () {
+window.addEventListener("load", () => {
   const trigger = new ScrollTrigger.default();
   trigger.add("[data-trigger]");
 
@@ -80,4 +80,4 @@ window.onload = function () {
     imgs[imgIndex].classList.add("show");
     imgIndex++;
   }
-};
+});
