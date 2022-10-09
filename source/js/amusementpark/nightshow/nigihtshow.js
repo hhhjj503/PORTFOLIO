@@ -44,7 +44,7 @@ window.addEventListener("load", () => {
   intializeSlides();
 
   //무한슬라이더 작동시작
-  setInterval(function () {
+  setInterval(() => {
     infiniteSlider();
   }, 3000);
 
