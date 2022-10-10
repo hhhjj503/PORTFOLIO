@@ -3,7 +3,7 @@
 
 /* ----------------------------------------- main -------------------------------------- */
 
-table tr:first-child td:before {
+table tr:first-child td:last-child:before {
   position: relative;
   top: 7.5px;
   transform: translateY(-50%);

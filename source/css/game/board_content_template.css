@@ -23,12 +23,13 @@ td {
   line-height: 25px;
 }
 
-th {
+td.title {
   font-weight: bold;
   position: relative;
+  text-align: center;
 }
 
-th:after {
+td.title:after {
   content: "|";
   font-size: 1rem;
   position: absolute;
