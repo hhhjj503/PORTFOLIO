@@ -569,7 +569,7 @@ footer {
 
 /* --------------------------------------------------------------------------- */
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (min-width: 480px) and (max-width: 768px) {
   main {
     .info {
       transition: 0.3s ease-in-out;
@@ -622,16 +622,18 @@ footer {
   }
 
   footer {
-    .list {
-      li {
-        box-sizing: border-box;
-        padding: 0 10px;
+    & > .wrapper {
+      .list {
+        li {
+          box-sizing: border-box;
+          padding: 0 5px;
+        }
       }
-    }
 
-    .sns {
-      img {
-        margin: 0 1%;
+      .sns {
+        img {
+          margin: 0 1%;
+        }
       }
     }
   }

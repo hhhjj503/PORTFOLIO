@@ -493,7 +493,7 @@ footer > .wrapper .gotop > a img {
 }
 
 /* --------------------------------------------------------------------------- */
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (min-width: 480px) and (max-width: 768px) {
   main .info {
     transition: 0.3s ease-in-out;
     padding: 150px 0;
@@ -529,11 +529,11 @@ footer > .wrapper .gotop > a img {
     box-sizing: border-box;
     margin: 0 5px;
   }
-  footer .list li {
+  footer > .wrapper .list li {
     box-sizing: border-box;
-    padding: 0 10px;
+    padding: 0 5px;
   }
-  footer .sns img {
+  footer > .wrapper .sns img {
     margin: 0 1%;
   }
 }
