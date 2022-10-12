@@ -512,12 +512,18 @@ footer > .wrapper .gotop > a img {
   main .benefits {
     padding: 150px 0;
   }
-  main .benefits .benefit {
+  main .benefits .desc {
+    font-size: 2.5rem;
+  }
+  main .benefits .listwrapper .benefit {
     height: 250px;
     width: 20%;
   }
-  main .benefits .benefit .desc {
-    font-size: 2.5rem;
+  main .benefits .listwrapper .benefit .number {
+    font-size: 7rem;
+  }
+  main .benefits .listwrapper .benefit p {
+    font-size: 1.3rem;
   }
   main .letter .desc {
     font-size: 2rem;
@@ -525,7 +531,7 @@ footer > .wrapper .gotop > a img {
   main .letter .form-wrapper {
     width: 60%;
   }
-  main .letter .form-wrapper form li {
+  main .letter .form-wrapper form .customer-item li {
     box-sizing: border-box;
     margin: 0 5px;
   }
