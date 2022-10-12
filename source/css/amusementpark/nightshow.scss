@@ -569,50 +569,53 @@ footer {
 
 /* --------------------------------------------------------------------------- */
 
-@media screen and (max-width: 767px) {
-  .info {
-    transition: 0.3s ease-in-out;
-    padding: 150px 0;
-
-    .desc {
-      font-size: 2rem;
-    }
-
-    .contents {
-      overflow: hidden;
-
-      .slider-wrapper {
-        left: 20%;
-        transition: 0.3s ease-in-out;
-      }
-    }
-  }
-
-  .benefits {
-    padding: 150px 0;
-
-    .benefit {
-      height: 250px;
-      width: 20%;
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  main {
+    .info {
+      transition: 0.3s ease-in-out;
+      padding: 150px 0;
 
       .desc {
-        font-size: 2.5rem;
+        font-size: 2rem;
+      }
+
+      .contents {
+        overflow: hidden;
+
+        .slider-wrapper {
+          left: 20%;
+          transition: 0.3s ease-in-out;
+          overflow: hidden;
+        }
       }
     }
-  }
 
-  .letter {
-    .desc {
-      font-size: 2rem;
+    .benefits {
+      padding: 150px 0;
+
+      .benefit {
+        height: 250px;
+        width: 20%;
+
+        .desc {
+          font-size: 2.5rem;
+        }
+      }
     }
 
-    .form-wrapper {
-      width: 60%;
+    .letter {
+      .desc {
+        font-size: 2rem;
+      }
 
-      form {
-        li {
-          box-sizing: border-box;
-          margin: 0 5px;
+      .form-wrapper {
+        width: 60%;
+
+        form {
+          li {
+            box-sizing: border-box;
+            margin: 0 5px;
+          }
         }
       }
     }
@@ -634,16 +637,18 @@ footer {
   }
 }
 
-@media screen and (max-width: 479px) {
-  .banner {
-    height: 60vh;
-  }
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main {
+    .banner {
+      height: 60vh;
+    }
 
-  .info {
-    padding: 50px 0;
+    .info {
+      padding: 50px 0;
 
-    .desc {
-      font-size: 1.8rem;
+      .desc {
+        font-size: 1.8rem;
+      }
     }
 
     .benefits {
@@ -679,36 +684,36 @@ footer {
         }
       }
     }
-  }
 
-  .letter {
-    .form-wrapper {
-      width: 80%;
+    .letter {
+      .form-wrapper {
+        width: 80%;
 
-      form {
-        label {
-          font-size: 1.5rem;
-          padding: 10px;
-          font-weight: normal;
-        }
+        form {
+          label {
+            font-size: 1.5rem;
+            padding: 10px;
+            font-weight: normal;
+          }
 
-        input {
-          padding: 10px;
-          font-size: 1.5rem;
-        }
+          input {
+            padding: 10px;
+            font-size: 1.5rem;
+          }
 
-        textarea {
-          font-size: 1.5rem;
-        }
+          textarea {
+            font-size: 1.5rem;
+          }
 
-        .customer-item {
-          li {
-            width: 45%;
-            height: 200px;
+          .customer-item {
+            li {
+              width: 40%;
+              height: 200px;
 
-            img {
               img {
-                height: 70%;
+                img {
+                  height: 70%;
+                }
               }
             }
           }

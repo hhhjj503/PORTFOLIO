@@ -493,38 +493,39 @@ footer > .wrapper .gotop > a img {
 }
 
 /* --------------------------------------------------------------------------- */
-@media screen and (max-width: 767px) {
-  .info {
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  main .info {
     transition: 0.3s ease-in-out;
     padding: 150px 0;
   }
-  .info .desc {
+  main .info .desc {
     font-size: 2rem;
   }
-  .info .contents {
+  main .info .contents {
     overflow: hidden;
   }
-  .info .contents .slider-wrapper {
+  main .info .contents .slider-wrapper {
     left: 20%;
     transition: 0.3s ease-in-out;
+    overflow: hidden;
   }
-  .benefits {
+  main .benefits {
     padding: 150px 0;
   }
-  .benefits .benefit {
+  main .benefits .benefit {
     height: 250px;
     width: 20%;
   }
-  .benefits .benefit .desc {
+  main .benefits .benefit .desc {
     font-size: 2.5rem;
   }
-  .letter .desc {
+  main .letter .desc {
     font-size: 2rem;
   }
-  .letter .form-wrapper {
+  main .letter .form-wrapper {
     width: 60%;
   }
-  .letter .form-wrapper form li {
+  main .letter .form-wrapper form li {
     box-sizing: border-box;
     margin: 0 5px;
   }
@@ -536,58 +537,58 @@ footer > .wrapper .gotop > a img {
     margin: 0 1%;
   }
 }
-@media screen and (max-width: 479px) {
-  .banner {
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .banner {
     height: 60vh;
   }
-  .info {
+  main .info {
     padding: 50px 0;
   }
-  .info .desc {
+  main .info .desc {
     font-size: 1.8rem;
   }
-  .info .benefits .listwrapper .desc {
+  main .benefits .listwrapper .desc {
     font-size: 1.8rem;
   }
-  .info .benefits .listwrapper .benefit {
+  main .benefits .listwrapper .benefit {
     height: 200px;
     width: 35%;
   }
-  .info .benefits .listwrapper .benefit .number {
+  main .benefits .listwrapper .benefit .number {
     font-size: 5rem;
   }
-  .info .benefits .listwrapper .benefit p {
+  main .benefits .listwrapper .benefit p {
     font-size: 1.1rem;
   }
-  .info .benefits .listwrapper .benefit:nth-child(2n) {
+  main .benefits .listwrapper .benefit:nth-child(2n) {
     top: 0;
     margin: 10px;
   }
-  .info .benefits .listwrapper .more button {
+  main .benefits .listwrapper .more button {
     width: 35%;
     padding: 15px 0;
     font-size: 1.5rem;
   }
-  .letter .form-wrapper {
+  main .letter .form-wrapper {
     width: 80%;
   }
-  .letter .form-wrapper form label {
+  main .letter .form-wrapper form label {
     font-size: 1.5rem;
     padding: 10px;
     font-weight: normal;
   }
-  .letter .form-wrapper form input {
+  main .letter .form-wrapper form input {
     padding: 10px;
     font-size: 1.5rem;
   }
-  .letter .form-wrapper form textarea {
+  main .letter .form-wrapper form textarea {
     font-size: 1.5rem;
   }
-  .letter .form-wrapper form .customer-item li {
-    width: 45%;
+  main .letter .form-wrapper form .customer-item li {
+    width: 40%;
     height: 200px;
   }
-  .letter .form-wrapper form .customer-item li img img {
+  main .letter .form-wrapper form .customer-item li img img {
     height: 70%;
   }
   footer > .wrapper {
