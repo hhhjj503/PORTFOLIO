@@ -547,7 +547,7 @@ footer .gotop > a img {
 
 /* --------------------------------------------------------------------------- */
 
-@media all and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .info {
     transition: 0.3s ease-in-out;
     padding: 150px 0;
@@ -602,7 +602,7 @@ footer .gotop > a img {
   }
 }
 
-@media all and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .banner {
     height: 60vh;
   }

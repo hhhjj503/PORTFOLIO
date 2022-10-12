@@ -293,7 +293,7 @@ footer {
   }
 }
 /* ---------------------------------------------------------------- */
-@media all and (min-width: 480px) and (max-width: 767px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .description {
     .desc {
       width: 60%;
@@ -308,13 +308,13 @@ footer {
 }
 
 /* ---------------------------------------------------------------- */
-@media all and (min-width: 320px) and (max-width: 479px) {
+@media screen and (min-width: 320px) and (max-width: 479px) {
   footer {
     opacity: 0;
     display: none;
   }
 
-  .type:after {
+  .wrapper .type:after {
     z-index: 2;
   }
 
@@ -354,8 +354,17 @@ footer {
       height: 25vh;
     }
 
-    & > *:hover {
-      width: var(--blockwidth);
+    .nightshow:hover {
+      width: 100%;
+    }
+    .rollercoaster:hover {
+      width: 100%;
+    }
+    .krustyland:hover {
+      width: 100%;
+    }
+    .aquarium:hover {
+      width: 100%;
     }
   }
 }
