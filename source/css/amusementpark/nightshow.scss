@@ -1,0 +1,738 @@
+@import url(../reset.css);
+@import url(./header.css);
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "NotoSans-Bold", "맑은 고딕", "Malgun Gothic", sans-serif;
+  overflow-x: hidden;
+}
+
+.top-nav {
+  li {
+    &::nth-child(2) a {
+      color: red;
+    }
+  }
+}
+
+a.hiding {
+  & + * {
+    position: relative;
+    transition: 1s ease-in-out;
+    top: 100px;
+    opacity: 0;
+  }
+}
+
+@mixin content-resoure-path($resource) {
+  background-image: url(../../images/amusementpark/nightshow/#{$resource});
+}
+
+/* ------------------------------------------------------------------ */
+
+.banner {
+  width: 100%;
+  height: 80vh;
+
+  .main_img {
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+
+.info {
+  max-width: 1400px;
+  width: 100%;
+  padding: 250px 0;
+  margin: 0 auto;
+
+  .contents {
+    width: 100%;
+    height: initial;
+    position: relative;
+    background-color: #f3bdf3;
+  }
+
+  .desc {
+    font-size: 2.5rem;
+    border-bottom: 1px solid #e1e1e1;
+    font-weight: bold;
+    position: relative;
+    top: -30px;
+    color: #000;
+    padding: 20px;
+
+    &:before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 0;
+      width: 5px;
+      height: 40%;
+      transform: translateY(-50%);
+      background-color: purple;
+    }
+  }
+}
+
+.contents {
+  .slider-wrapper {
+    position: relative;
+    left: 30%;
+    top: 0;
+    width: 1600px;
+    overflow: hidden;
+
+    .slider {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      left: 0;
+      white-space: nowrap;
+      overflow: hidden;
+
+      .slide {
+        float: left;
+        width: 300px;
+        height: 300px;
+        background-color: black;
+        border-radius: 15px;
+        overflow: hidden;
+        white-space: nowrap;
+        margin: 0 10px;
+        transition: 0.5s ease-in-out;
+        border: 3px solid purple;
+        box-sizing: border-box;
+        cursor: pointer;
+
+        &:hover {
+          border: 5px solid rgb(142, 181, 240);
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+        }
+      }
+      &:after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+    }
+  }
+}
+
+.contents {
+  .overlay {
+    position: fixed;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    z-index: 99;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+
+    &.visible {
+      opacity: 1;
+      pointer-events: all;
+      overflow: hidden;
+    }
+
+    img {
+      position: absolute;
+      width: 40%;
+      height: 50%;
+      border-radius: 15px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      overflow: hidden;
+      background-color: aliceblue;
+      object-fit: cover;
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+
+main {
+  .benefits {
+    position: relative;
+    padding: 200px 0;
+    @include content-resoure-path("rides.PNG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &:after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #1c3055;
+      opacity: 0.6;
+      z-index: 0;
+    }
+
+    .desc {
+      font-size: 3rem;
+      border-bottom: 1px solid #e1e1e1;
+      text-align: center;
+      position: relative;
+      top: -30px;
+      color: white;
+      padding: 20px;
+    }
+
+    .listwrapper {
+      max-width: 1400px;
+      width: 100%;
+      margin: 0 auto;
+      z-index: 1;
+      position: relative;
+
+      ul {
+        width: 100%;
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      .benefit {
+        display: inline-block;
+        height: 300px;
+        width: 16%;
+        background-color: white;
+        vertical-align: middle;
+        border-radius: 15px;
+        transition: 0.3s ease-in-out;
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        overflow: hidden;
+
+        &:nth-child(2n) {
+          position: relative;
+          top: 20px;
+        }
+
+        &:before {
+          position: absolute;
+          content: "";
+          top: -60%;
+          left: 50%;
+          width: 105%;
+          height: 100%;
+          border-radius: 50%;
+          transform: translateX(-50%);
+          background-color: rgb(112, 149, 194);
+          transition: 0.3s ease-in-out;
+        }
+
+        &:hover {
+          position: relative;
+          transform: rotate(-5deg);
+          box-shadow: 1px 1px 20px rgb(77, 77, 77);
+          z-index: 1;
+        }
+
+        & > div {
+          position: absolute;
+          width: 100%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        .number {
+          font-size: 10rem;
+          font-weight: bold;
+          color: rgb(255, 255, 255);
+          text-shadow: 0.5px 0.5px rgb(113, 113, 113),
+            -0.5px -0.5px rgb(106, 106, 106);
+          display: block;
+          width: 100%;
+          position: relative;
+
+          &:before {
+            position: absolute;
+            content: "";
+            width: 50%;
+            height: 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+          }
+        }
+
+        p {
+          width: 90%;
+          font-size: 1.4rem;
+          margin: 20px auto;
+          font-weight: bold;
+          color: black;
+          line-height: 20px;
+        }
+
+        li {
+          &:nth-child(2n) {
+            position: relative;
+            top: 20px;
+          }
+        }
+
+        button {
+          width: 50%;
+          margin: 0 auto;
+          padding: 7px 0;
+          border-radius: 15px;
+          border: 1px solid white;
+          font-size: 1.2rem;
+          transition: 0.3s ease-in-out;
+        }
+
+        &:hover button {
+          background-color: rgb(136, 0, 0);
+          color: white;
+          font-weight: bold;
+        }
+      }
+      .more {
+        text-align: center;
+        margin-top: 80px;
+
+        button {
+          width: 15%;
+          padding: 15px 0;
+          border-radius: 30px;
+          border: transparent;
+          font-size: 1.5rem;
+          background: #7095c2;
+          color: white;
+          font-weight: bold;
+          transition: 0.3s ease-in-out;
+
+          &:hover {
+            background-color: rgb(136, 0, 0);
+            cursor: pointer;
+            box-shadow: 1px 1px 20px rgb(77, 77, 77);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* -------------------------------letter----------------------------- */
+
+main {
+  .letter {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 0;
+    @include content-resoure-path("letter_back.PNG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 70%;
+      background: linear-gradient(to bottom, transparent 0%, black 100%);
+      z-index: 0;
+    }
+
+    .desc {
+      font-size: 2.5rem;
+      border-bottom: 1px solid white;
+      text-align: center;
+      position: relative;
+      color: black;
+      padding: 20px;
+      font-weight: bold;
+      margin: 0 auto;
+      width: 80%;
+      z-index: 1;
+    }
+
+    .form-wrapper {
+      padding: 50px 0;
+      width: 50%;
+      margin: 0 auto;
+      position: relative;
+
+      form {
+        label {
+          display: inline-block;
+          background-color: #1c3055;
+          color: white;
+          padding: 10px 15px;
+          border-radius: 30px;
+          font-size: 1.8rem;
+          box-shadow: 1px 1px 10px rgb(77, 77, 77);
+          font-weight: bold;
+          margin: 30px 0 10px 0;
+        }
+        input {
+          width: 100%;
+          padding: 20px 20px;
+          box-sizing: border-box;
+          font-size: 1.8rem;
+          margin: 5px 0;
+          border: none;
+          box-shadow: 1px 1px 10px rgb(166, 166, 166);
+
+          &[type="radio"] {
+            width: 100%;
+            box-shadow: none;
+          }
+        }
+        textarea {
+          resize: none;
+          width: 100%;
+          font-size: 1.8rem;
+          box-sizing: border-box;
+          padding: 10px;
+        }
+
+        .customer-item {
+          li {
+            width: 30%;
+            height: 200px;
+            margin: 10px;
+            display: inline-block;
+
+            img {
+              width: 100%;
+              height: 90%;
+              border-radius: 15px;
+              border: 3px solid white;
+            }
+          }
+        }
+
+        button {
+          margin: 0 auto;
+          display: block;
+          padding: 10px 30px;
+          font-size: 1.8rem;
+          border-radius: 15px;
+          border: transparent;
+          background-color: #e1e1e1;
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+}
+
+/* ------------------------ footer ---------------------- */
+
+footer {
+  padding: 50px 0;
+  border-top: 1px solid #e1e1e1;
+
+  & > .wrapper {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    white-space: nowrap;
+    position: relative;
+
+    .list {
+      width: 80%;
+      text-align: center;
+      vertical-align: super;
+      display: inline-block;
+      margin-bottom: 30px;
+
+      li {
+        display: inline-block;
+        padding: 0 5px;
+
+        a {
+          text-decoration: none;
+          font-size: 1.5rem;
+          color: gray;
+        }
+      }
+
+      &:after {
+        display: block;
+        content: "";
+        clear: both;
+      }
+    }
+
+    .sns {
+      width: 20%;
+      display: inline-block;
+
+      img {
+        margin: 0 20px;
+      }
+    }
+
+    .logo {
+      text-align: center;
+      width: 100%;
+      padding: 20px 0;
+      border-top: 1px solid #e1e1e1;
+
+      .name {
+        font-size: 2rem;
+        position: relative;
+        display: inline-block;
+        height: 30px;
+        line-height: 30px;
+
+        &:before {
+          position: absolute;
+          top: 0;
+          left: -50px;
+          width: 30px;
+          height: 30px;
+          background-image: url(../../images/amusementpark/fort-awesome.svg);
+          content: "";
+        }
+
+        &:after {
+          position: absolute;
+          top: 0;
+          right: -50px;
+          width: 30px;
+          height: 30px;
+          background-image: url(../../images/amusementpark/fort-awesome.svg);
+          content: "";
+        }
+      }
+    }
+
+    .gotop {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      overflow: hidden;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      background-color: #1c3055;
+
+      & > a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 50%;
+          height: 50%;
+        }
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------------------------------- */
+
+@media screen and (max-width: 767px) {
+  .info {
+    transition: 0.3s ease-in-out;
+    padding: 150px 0;
+
+    .desc {
+      font-size: 2rem;
+    }
+
+    .contents {
+      overflow: hidden;
+
+      .slider-wrapper {
+        left: 20%;
+        transition: 0.3s ease-in-out;
+      }
+    }
+  }
+
+  .benefits {
+    padding: 150px 0;
+
+    .benefit {
+      height: 250px;
+      width: 20%;
+
+      .desc {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  .letter {
+    .desc {
+      font-size: 2rem;
+    }
+
+    .form-wrapper {
+      width: 60%;
+
+      form {
+        li {
+          box-sizing: border-box;
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+
+  footer {
+    .list {
+      li {
+        box-sizing: border-box;
+        padding: 0 10px;
+      }
+    }
+
+    .sns {
+      img {
+        margin: 0 1%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .banner {
+    height: 60vh;
+  }
+
+  .info {
+    padding: 50px 0;
+
+    .desc {
+      font-size: 1.8rem;
+    }
+
+    .benefits {
+      .listwrapper {
+        .desc {
+          font-size: 1.8rem;
+        }
+
+        .benefit {
+          height: 200px;
+          width: 35%;
+
+          .number {
+            font-size: 5rem;
+          }
+
+          p {
+            font-size: 1.1rem;
+          }
+
+          &:nth-child(2n) {
+            top: 0;
+            margin: 10px;
+          }
+        }
+
+        .more {
+          button {
+            width: 35%;
+            padding: 15px 0;
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .letter {
+    .form-wrapper {
+      width: 80%;
+
+      form {
+        label {
+          font-size: 1.5rem;
+          padding: 10px;
+          font-weight: normal;
+        }
+
+        input {
+          padding: 10px;
+          font-size: 1.5rem;
+        }
+
+        textarea {
+          font-size: 1.5rem;
+        }
+
+        .customer-item {
+          li {
+            width: 45%;
+            height: 200px;
+
+            img {
+              img {
+                height: 70%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    & > .wrapper {
+      white-space: normal;
+
+      .list {
+        margin-bottom: 0;
+        width: 100%;
+        display: block;
+      }
+
+      .sns {
+        width: 100%;
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+      }
+    }
+  }
+}

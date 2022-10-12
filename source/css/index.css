@@ -242,6 +242,7 @@ header .entrance-wrapper {
 
 .technology .item {
   width: 20%;
+  margin-bottom: 40px;
   float: left;
   text-align: center;
   position: relative;
@@ -469,7 +470,7 @@ footer .contact-wrapper {
 
 /* ------------------------ 반응형 ------------------------- */
 
-@media all and (min-width: 480px) and (max-width: 767px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
   header .entrance-wrapper {
     height: 630px;
   }
@@ -520,7 +521,7 @@ footer .contact-wrapper {
 
   .technology .item {
     width: 33.3%;
-    margin-bottom: 30px;
+    margin: 20px 0;
   }
 
   .technology img {
@@ -585,7 +586,7 @@ footer .contact-wrapper {
   }
 }
 
-@media all and (min-width: 320px) and (max-width: 479px) {
+@media screen and (min-width: 320px) and (max-width: 479px) {
   header .entrance-wrapper {
     height: 630px;
   }
