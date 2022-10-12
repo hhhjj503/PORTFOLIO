@@ -470,11 +470,10 @@ footer {
     position: relative;
 
     .list {
-      width: 80%;
+      width: 100%;
       text-align: center;
-      vertical-align: super;
-      display: inline-block;
-      margin-bottom: 30px;
+      display: block;
+      margin: 10px 0;
 
       li {
         display: inline-block;
@@ -495,8 +494,9 @@ footer {
     }
 
     .sns {
-      width: 20%;
-      display: inline-block;
+      display: block;
+      text-align: center;
+      margin: 10px 0;
 
       img {
         margin: 0 20px;
