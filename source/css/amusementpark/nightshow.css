@@ -547,6 +547,12 @@ footer > .wrapper .gotop > a img {
   main .info .desc {
     font-size: 1.8rem;
   }
+  main .info .contents {
+    overflow: hidden;
+  }
+  main .benefits {
+    padding: 100px 0;
+  }
   main .benefits .listwrapper .desc {
     font-size: 1.8rem;
   }

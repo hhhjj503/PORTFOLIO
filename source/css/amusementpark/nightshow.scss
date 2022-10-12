@@ -649,9 +649,15 @@ footer {
       .desc {
         font-size: 1.8rem;
       }
+
+      .contents {
+        overflow: hidden;
+      }
     }
 
     .benefits {
+      padding: 100px 0;
+
       .listwrapper {
         .desc {
           font-size: 1.8rem;
