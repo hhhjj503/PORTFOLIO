@@ -469,7 +469,7 @@ footer .contact-wrapper {
 
 /* ------------------------ 반응형 ------------------------- */
 
-@media screen and (max-width: 960px) {
+@media all and (min-width: 480px) and (max-width: 767px) {
   header .entrance-wrapper {
     height: 630px;
   }
@@ -585,7 +585,7 @@ footer .contact-wrapper {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media all and (min-width: 320px) and (max-width: 479px) {
   header .entrance-wrapper {
     height: 630px;
   }
