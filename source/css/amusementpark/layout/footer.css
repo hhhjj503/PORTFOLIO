@@ -1,0 +1,124 @@
+/* ------------------------ footer ---------------------- */
+footer {
+  padding: 50px 0;
+  border-top: 1px solid #e1e1e1;
+}
+footer > .wrapper {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  white-space: nowrap;
+  position: relative;
+}
+footer > .wrapper .list {
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin: 10px 0;
+}
+footer > .wrapper .list li {
+  display: inline-block;
+  padding: 0 5px;
+}
+footer > .wrapper .list li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: gray;
+}
+footer > .wrapper .list:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+footer > .wrapper .sns {
+  display: block;
+  text-align: center;
+  margin: 10px 0;
+}
+footer > .wrapper .sns img {
+  margin: 0 20px;
+}
+footer > .wrapper .logo {
+  text-align: center;
+  width: 100%;
+  padding: 20px 0;
+  border-top: 1px solid #e1e1e1;
+}
+footer > .wrapper .logo .name {
+  font-size: 2rem;
+  position: relative;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+}
+footer > .wrapper .logo .name:before {
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 30px;
+  height: 30px;
+  background-image: url(../../../images/amusementpark/fort-awesome.svg);
+  content: "";
+}
+footer > .wrapper .logo .name:after {
+  position: absolute;
+  top: 0;
+  right: -50px;
+  width: 30px;
+  height: 30px;
+  background-image: url(../../../images/amusementpark/fort-awesome.svg);
+  content: "";
+}
+footer > .wrapper .gotop {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #1c3055;
+}
+footer > .wrapper .gotop > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+footer > .wrapper .gotop > a img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+}
+
+/*----------------------------------------------------------------------*/
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  footer > .wrapper .list li {
+    box-sizing: border-box;
+    padding: 0 5px;
+  }
+  footer > .wrapper .sns img {
+    margin: 0 1%;
+  }
+}
+/*----------------------------------------------------------------------*/
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  footer > .wrapper {
+    white-space: normal;
+  }
+  footer > .wrapper .list {
+    margin-bottom: 0;
+    width: 100%;
+    display: block;
+  }
+  footer > .wrapper .sns {
+    width: 100%;
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+  }
+}/*# sourceMappingURL=footer.css.map */
