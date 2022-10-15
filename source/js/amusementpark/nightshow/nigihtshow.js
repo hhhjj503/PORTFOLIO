@@ -75,12 +75,11 @@ window.addEventListener("load", () => {
 
   //무한 슬라이더
   function infiniteSlider() {
-    const slides = document.querySelectorAll(".slider .slide");
     setTimeout(() => {
       addStyle();
     }, 500);
     setTimeout(() => {
-      cloneSlide(slides);
+      cloneSlide();
     }, 1500);
   }
 
@@ -91,7 +90,8 @@ window.addEventListener("load", () => {
   }
 
   //마지막 슬라이드를 복사
-  function cloneSlide(slides) {
+  function cloneSlide() {
+    const slides = document.querySelectorAll(".slider .slide");
     const firstslide = slides[0].cloneNode(true);
     slides[0].remove();
     overlayImage(firstslide);
