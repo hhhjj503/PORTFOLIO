@@ -81,12 +81,17 @@ window.addEventListener("load", () => {
       slider.style.left = "-320px";
     }, 500);
     setTimeout(() => {
-      const firstslide = slides[0].cloneNode(true);
-      slides[0].remove();
-      overlayImage(firstslide);
-      slider.appendChild(firstslide);
-      slider.style.transition = "none";
-      slider.style.left = "0px";
+      cloneSlide(slides);
     }, 1500);
+  }
+
+  //마지막 슬라이드를 복사하는 메서드
+  function cloneSlide(slides) {
+    const firstslide = slides[0].cloneNode(true);
+    slides[0].remove();
+    overlayImage(firstslide);
+    slider.appendChild(firstslide);
+    slider.style.transition = "none";
+    slider.style.left = "0px";
   }
 });
