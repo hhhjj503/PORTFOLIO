@@ -77,15 +77,20 @@ window.addEventListener("load", () => {
   function infiniteSlider() {
     const slides = document.querySelectorAll(".slider .slide");
     setTimeout(() => {
-      slider.style.transition = "1s ease-in-out";
-      slider.style.left = "-320px";
+      addStyle();
     }, 500);
     setTimeout(() => {
       cloneSlide(slides);
     }, 1500);
   }
 
-  //마지막 슬라이드를 복사하는 메서드
+  //slide 를 담고있는 slider 에 스타일을 추가
+  function addStyle() {
+    slider.style.transition = "1s ease-in-out";
+    slider.style.left = "-320px";
+  }
+
+  //마지막 슬라이드를 복사
   function cloneSlide(slides) {
     const firstslide = slides[0].cloneNode(true);
     slides[0].remove();
