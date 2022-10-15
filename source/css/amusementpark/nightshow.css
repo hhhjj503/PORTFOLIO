@@ -13,7 +13,7 @@ body {
   overflow-x: hidden;
 }
 
-.top-nav li::nth-child(2) a {
+.top-nav > .wrapper li:nth-child(2) a {
   color: red;
 }
 

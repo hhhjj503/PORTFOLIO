@@ -14,9 +14,11 @@ body {
 }
 
 .top-nav {
-  li {
-    &::nth-child(2) a {
-      color: red;
+  & > .wrapper {
+    li {
+      &:nth-child(2) a {
+        color: red;
+      }
     }
   }
 }
