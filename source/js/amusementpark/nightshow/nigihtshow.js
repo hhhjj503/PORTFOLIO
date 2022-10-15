@@ -79,7 +79,7 @@ window.addEventListener("load", () => {
     setTimeout(() => {
       slider.style.transition = "1s ease-in-out";
       slider.style.left = "-320px";
-    }, 1000);
+    }, 1500);
     setTimeout(() => {
       const firstslide = slides[0].cloneNode(true);
       slides[0].remove();
@@ -87,6 +87,6 @@ window.addEventListener("load", () => {
       slider.appendChild(firstslide);
       slider.style.transition = "none";
       slider.style.left = "0px";
-    }, 2000);
+    }, 2800);
   }
 });
