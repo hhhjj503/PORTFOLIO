@@ -128,7 +128,7 @@ main .main-items {
 }
 
 .banner .curtain-r {
-  right: 0;
+  right: -2px;
 }
 
 .banner .img-wrapper {

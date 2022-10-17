@@ -21,7 +21,7 @@ window.addEventListener("load", () => {
   });
 
   for (let i = 0; i < hidings.length; i++) {
-    hidings[i].dataset.offtop = hidings[i].getBoundingClientRect().top - 800;
+    hidings[i].dataset.offtop = hidings[i].getBoundingClientRect().top - 1000;
   }
 
   window.addEventListener("scroll", () => {
