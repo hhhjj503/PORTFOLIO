@@ -56,7 +56,7 @@ window.addEventListener("load", () => {
   }
 
   //마우스 휠 스크롤 슬라이드 만들기
-  /* window.addEventListener("wheel", (e) => {
+  window.addEventListener("wheel", (e) => {
     if (e.deltaY > 0) {
       ++currentWheelIndex;
       if (currentWheelIndex > maxWheelIndex) currentWheelIndex = 0;
@@ -71,7 +71,7 @@ window.addEventListener("load", () => {
       changeImage(inputs[currentWheelIndex], labels[currentWheelIndex]);
       moveLeft(leftValue);
     }
-  });*/
+  });
 
   function changeImage(input, label) {
     for (let i = 0; i < labels.length; i++) {
