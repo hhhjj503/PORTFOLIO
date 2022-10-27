@@ -1,4 +1,5 @@
 window.onload = function () {
+  //변수선언
   const html = document.querySelector("html");
   const entrance = document.querySelector(".entrance");
   const items = document.querySelectorAll(".technology .item");
@@ -7,6 +8,7 @@ window.onload = function () {
   const lists = document.querySelectorAll(".portfolio .list");
   const pagemoves = document.querySelectorAll(".pagemove");
 
+  //이미지 로드
   for (let i = 0; i < 1; i++) {
     const img = new Image();
     img.src = entrance.dataset.path;
