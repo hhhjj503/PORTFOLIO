@@ -312,7 +312,7 @@ header .entrance-wrapper {
 
 .portfolio-wrapper {
   width: 100%;
-  padding: 150px 0;
+  padding-top: 150px;
   margin: 0 auto;
   background-color: white;
 }
@@ -433,6 +433,7 @@ header .entrance-wrapper {
 footer .contact-wrapper {
   background-color: #22313f;
   padding: 100px 0;
+  margin-top: 100px;
 }
 
 .contact-wrapper .contact {
@@ -538,9 +539,8 @@ footer .contact-wrapper {
   }
 
   .portfolio-wrapper {
-    padding: 100px 0;
+    padding-top: 80px;
   }
-
   .portfolio .list {
     width: 35%;
     height: 250px;
@@ -626,6 +626,10 @@ footer .contact-wrapper {
     font-size: 1.2rem;
   }
 
+  .portfolio-wrapper {
+    padding-top: 50px;
+  }
+
   .portfolio .list:nth-child(n + 4) {
     margin-top: 0px;
   }
@@ -676,10 +680,6 @@ footer .contact-wrapper {
     width: 30%;
   }
 
-  .portfolio-wrapper {
-    padding: 80px 0;
-  }
-
   .portfolio .list:nth-child(n + 1) {
     margin-bottom: 60px;
   }
@@ -715,6 +715,7 @@ footer .contact-wrapper {
 
   footer .contact-wrapper {
     padding: 40px 0;
+    margin-top: 50px;
   }
 
   .part.last {
