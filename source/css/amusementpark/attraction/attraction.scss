@@ -69,7 +69,7 @@ main {
     height: auto;
 
     .attraction {
-      max-width: 1400px;
+      max-width: initial;
       width: 100%;
       height: 100vh;
       margin: 0 auto;
@@ -92,18 +92,18 @@ main {
 
       .rollercoaster {
         font-size: 4rem;
-        @include attraction-bg("rollercoaster.PNG", 99%);
+        @include attraction-bg("rollercoaster.PNG", 100%);
       }
 
       .ferris-wheel {
-        @include attraction-bg("ferris_wheel.JPG", 98%);
+        @include attraction-bg("ferris_wheel.JPG", 100%);
       }
 
       .carousel {
-        @include attraction-bg("carousel.JPG", 97%);
+        @include attraction-bg("carousel.JPG", 100%);
       }
       .crystal-jo {
-        @include attraction-bg("crystal_jo.JPG", 96%);
+        @include attraction-bg("crystal_jo.JPG", 100%);
       }
     }
   }

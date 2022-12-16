@@ -51,7 +51,6 @@ a.hiding + * {
   width: 100%;
   height: initial;
   position: relative;
-  background-color: #f3bdf3;
 }
 .info .desc {
   font-size: 2.5rem;
@@ -93,12 +92,11 @@ a.hiding + * {
   width: 300px;
   height: 300px;
   background-color: black;
-  border-radius: 15px;
+  border-radius: 10px;
   overflow: hidden;
   white-space: nowrap;
   margin: 0 10px;
   transition: 0.5s ease-in-out;
-  border: 3px solid purple;
   box-sizing: border-box;
   cursor: pointer;
 }
@@ -304,7 +302,6 @@ main .benefits .listwrapper .more button:hover {
 
 /* -------------------------------letter----------------------------- */
 main .letter {
-  max-width: 1400px;
   width: 100%;
   margin: 0 auto;
   padding: 100px 0;
@@ -333,12 +330,13 @@ main .letter .desc {
   padding: 20px;
   font-weight: bold;
   margin: 0 auto;
+  max-width: 1400px;
   width: 80%;
   z-index: 1;
 }
 main .letter .form-wrapper {
   padding: 50px 0;
-  width: 50%;
+  width: 40%;
   margin: 0 auto;
   position: relative;
 }
@@ -365,6 +363,9 @@ main .letter .form-wrapper form input {
 main .letter .form-wrapper form input[type=radio] {
   width: 100%;
   box-shadow: none;
+  box-sizing: border-box;
+  display: block;
+  margin: 10px;
 }
 main .letter .form-wrapper form textarea {
   resize: none;
@@ -375,7 +376,7 @@ main .letter .form-wrapper form textarea {
 }
 main .letter .form-wrapper form .customer-item li {
   width: 30%;
-  height: 200px;
+  height: 220px;
   margin: 10px;
   display: inline-block;
 }
@@ -384,6 +385,9 @@ main .letter .form-wrapper form .customer-item li img {
   height: 90%;
   border-radius: 15px;
   border: 3px solid white;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main .letter .form-wrapper form button {
   margin: 0 auto;
@@ -481,6 +485,9 @@ main .letter .form-wrapper form button {
     padding: 15px 0;
     font-size: 1.5rem;
   }
+  main .letter .desc {
+    font-size: 1.8rem;
+  }
   main .letter .form-wrapper {
     width: 80%;
   }
@@ -498,7 +505,7 @@ main .letter .form-wrapper form button {
   }
   main .letter .form-wrapper form .customer-item li {
     width: 40%;
-    height: 200px;
+    height: 150px;
   }
   main .letter .form-wrapper form .customer-item li img img {
     height: 70%;
