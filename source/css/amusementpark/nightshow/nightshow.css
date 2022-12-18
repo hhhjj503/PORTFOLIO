@@ -337,6 +337,7 @@ main .letter .desc {
 main .letter .form-wrapper {
   padding: 50px 0;
   width: 40%;
+  max-width: 1400px;
   margin: 0 auto;
   position: relative;
 }
