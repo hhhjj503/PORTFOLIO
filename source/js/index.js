@@ -7,11 +7,26 @@ window.onload = function () {
   const bars = document.querySelectorAll(".technology .score .bar");
   const lists = document.querySelectorAll(".portfolio .list");
   const pagemoves = document.querySelectorAll(".pagemove");
+  let imgCheck = false;
 
   //이미지 로드
   for (let i = 0; i < 1; i++) {
     const img = new Image();
     img.src = entrance.dataset.path;
+    img.addEventListener("load", () => {
+      imgCheck = true;
+      if (imgCheck) {
+        const loadingAnimationWrapper = document.querySelector(
+          ".loading-animation-wrapper"
+        );
+        setTimeout(() => {
+          loadingAnimationWrapper.classList.add("loaded");
+        }, 2000);
+        setTimeout(() => {
+          loadingAnimationWrapper.classList.add("hide");
+        }, 2500);
+      }
+    });
   }
 
   for (const item of items) {
