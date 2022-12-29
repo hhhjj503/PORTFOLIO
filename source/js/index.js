@@ -43,9 +43,12 @@ window.onload = function () {
     lists[i].style.backgroundImage = "url(" + lists[i].dataset.path + ")";
   }
 
-  window.addEventListener("scroll", function () {
-    scrollEvent();
-  });
+  window.addEventListener(
+    "scroll",
+    $.throttle(1000 / 15, function () {
+      scrollEvent();
+    })
+  );
 
   function scrollEvent() {
     const documentHeight = html.scrollHeight;
