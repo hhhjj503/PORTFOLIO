@@ -49,6 +49,34 @@ main > .wrapper {
   width: 100%;
   height: auto;
 }
+main > .wrapper .wheel-down {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 5vh;
+  z-index: 10;
+  opacity: 1;
+  display: block;
+  -webkit-animation: move-up-down 2s infinite;
+          animation: move-up-down 2s infinite;
+  transition: 0.3s ease-in-out;
+  pointer-events: none;
+}
+main > .wrapper .wheel-down.fadeout {
+  opacity: 0;
+}
+main > .wrapper .wheel-down .deco {
+  width: 40px;
+  height: 40px;
+  border-left: 3px solid #c4c4c4;
+  border-bottom: 3px solid #c4c4c4;
+  box-sizing: border-box;
+  transform: rotate(-45deg);
+}
+main > .wrapper .wheel-down .deco:nth-child(2) {
+  position: relative;
+  top: -2vh;
+}
 main > .wrapper .attraction {
   max-width: initial;
   width: 100%;
@@ -108,14 +136,44 @@ main > .wrapper .attraction .crystal-jo {
   height: 100%;
 }
 
-/* --------------------------------------------------------------------------- */
+/* --------------------------- animation -------------------------------- */
+@-webkit-keyframes move-up-down {
+  0% {
+    bottom: 5vh;
+  }
+  50% {
+    bottom: 7vh;
+  }
+  100% {
+    bottom: 5vh;
+  }
+}
+@keyframes move-up-down {
+  0% {
+    bottom: 5vh;
+  }
+  50% {
+    bottom: 7vh;
+  }
+  100% {
+    bottom: 5vh;
+  }
+}
 /* --------------------------------------------------------------------------- */
 @media screen and (min-width: 480px) and (max-width: 768px) {
+  main > .wrapper .wheel-down .deco {
+    width: 35px;
+    height: 35px;
+  }
   main > .wrapper .attraction .info {
     font-size: 2.5rem;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 479px) {
+  main > .wrapper .wheel-down .deco {
+    width: 28px;
+    height: 28px;
+  }
   main > .wrapper .attraction .info {
     font-size: 1.8rem;
   }

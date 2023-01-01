@@ -5,6 +5,7 @@ window.addEventListener("load", () => {
   const subMenu = document.querySelector(".top-nav-mobile .sub-menu");
   const goup = document.querySelector(".top-nav-mobile .goup");
   const hidings = document.querySelectorAll("a.hiding + *");
+  const wheelDown = document.querySelector(".wheel-down");
 
   for (let i = 0; i < hidings.length; i++) {
     hidings[i].dataset.offtop = hidings[i].getBoundingClientRect().top;
@@ -26,9 +27,12 @@ window.addEventListener("load", () => {
 
   window.addEventListener("scroll", () => {
     if (html.scrollTop > 0) {
+      wheelDown.classList.add("fadeout");
       topNav.style.opacity = "0";
       topNavMobile.style.opacity = "0";
     } else {
+      wheelDown.classList.remove("fadeout");
+
       topNav.style.opacity = "1";
       topNavMobile.style.opacity = "1";
     }
