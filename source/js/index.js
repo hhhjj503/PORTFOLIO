@@ -9,7 +9,7 @@ window.onload = function () {
   const pagemoves = document.querySelectorAll(".pagemove");
   let imgCheck = false;
 
-  //이미지 로드
+  /*------------------------------- 이미지로드 ----------------------------*/
   for (let i = 0; i < 1; i++) {
     const img = new Image();
     img.src = entrance.dataset.path;
@@ -43,13 +43,15 @@ window.onload = function () {
     lists[i].style.backgroundImage = "url(" + lists[i].dataset.path + ")";
   }
 
+  /*------------------------------- throttle.js ----------------------------*/
   window.addEventListener(
     "scroll",
     $.throttle(1000 / 15, function () {
       scrollEvent();
     })
-  );
+  ); //$.throttle
 
+  /*------------------------------- 스크롤 내릴시 SKILLS 애니메이션 적용 ----------------------------*/
   function scrollEvent() {
     const documentHeight = html.scrollHeight;
     const showValue = documentHeight * 0.21;
@@ -67,5 +69,5 @@ window.onload = function () {
         }
       }, 1300);
     }
-  }
+  } //scrollEvent
 };
