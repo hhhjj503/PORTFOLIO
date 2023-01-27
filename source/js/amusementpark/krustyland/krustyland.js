@@ -53,7 +53,8 @@ window.addEventListener("load", () => {
   });
 
   //구매창 버튼 클릭시 창닫기
-  purchaseCloseBtn.addEventListener("click", () => {
+  purchaseCloseBtn.addEventListener("click", (e) => {
+    e.preventDefault();
     purchase.classList.remove("open");
     purchase.classList.add("close");
   });
