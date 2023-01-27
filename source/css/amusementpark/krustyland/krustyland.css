@@ -317,11 +317,16 @@ main .purchase .purchase-btn {
     margin-bottom: 50px;
   }
   main .goods-wrapper .list-wrapper {
-    padding: 50px;
+    padding: 0px;
+    padding-bottom: 50px;
   }
   main .goods-wrapper .list-wrapper ul li {
-    width: 80%;
-    margin: 20px;
+    width: 40%;
+    margin: 10px;
+  }
+  main .goods-wrapper .list-wrapper ul li a h5 {
+    font-size: 1.3rem;
+    min-width: 50%;
   }
   main .purchase {
     left: 0;
