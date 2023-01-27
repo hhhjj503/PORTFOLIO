@@ -14,6 +14,8 @@ body {
 
 .top-nav {
   transition: 0.5s ease-in-out;
+  /* 상품구매창의 레이어를 위해 z-index  변경*/
+  z-index: 98;
 
   &.scrolldown {
     opacity: 0;
@@ -53,6 +55,7 @@ main {
   background-position: center center;
   position: relative;
 
+  /*----------------------- 상품목록------------------------ */
   & .goods-wrapper {
     padding: 70px 0;
     max-width: 1400px;
@@ -102,7 +105,10 @@ main {
           margin: 30px;
           transition: 0.3s ease-in-out;
           display: inline-block;
-          animation: fadeOut 0.2s forwards ease-in-out;
+
+          &.loaded {
+            animation: fadeOut 0.2s forwards ease-in-out;
+          }
 
           &:hover {
             box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
@@ -174,6 +180,164 @@ main {
       }
     }
   }
+
+  /*----------------------------------- 상품클릭시 구매창 ------------------------ */
+  & .purchase {
+    position: fixed;
+    bottom: 0;
+    width: 20%;
+    max-width: 450px;
+    height: 100%;
+    background-color: white;
+    z-index: 99;
+
+    &.close {
+      right: -9999em;
+    }
+
+    &.open {
+      right: 0;
+    }
+
+    /* 열려있는 상품창 닫기버튼 */
+    & .purchase-close-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+
+      & span {
+        width: 100%;
+        height: 5px;
+        background-color: #000;
+        position: absolute;
+        display: block;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      & span:nth-child(1) {
+        transform: rotate(45deg);
+      }
+      & span:nth-child(2) {
+        transform: rotate(-45deg);
+      }
+    }
+
+    /* 상품이미지 , 상품명 */
+    & img {
+      width: 100%;
+      height: 60%;
+      object-fit: cover;
+    }
+
+    & .goods-title {
+      font-size: 2.3rem;
+      padding: 10px;
+    }
+
+    & .goods-price {
+      border-bottom: 1px solid #dddfe1;
+      padding: 20px 10px;
+
+      &:after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+
+      & .per-price {
+        font-size: 2.5rem;
+        font-weight: bold;
+        float: left;
+      }
+      & .dib img {
+        width: 20px;
+        height: 20px;
+        float: right;
+        cursor: pointer;
+      }
+    }
+
+    /*----------------------------------- 상품개수 ------------------------ */
+
+    & .goods-quantity {
+      padding: 20px 10px;
+      border-bottom: 1px solid #dddfe1;
+
+      &:after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+
+      & .number-title {
+        font-size: 2.2rem;
+        float: left;
+      }
+
+      & .quantity-box {
+        float: right;
+
+        & button {
+          border-radius: 50%;
+          border: none;
+          width: 25px;
+          height: 25px;
+          font-size: 2.3rem;
+          line-height: 25px;
+          cursor: pointer;
+        }
+      }
+
+      & .quantity {
+        font-size: 2.3rem;
+        margin: 0 20px;
+      }
+    }
+
+    /*----------------------------------- 총합계 ------------------------ */
+
+    & .goods-total-price {
+      padding: 20px 10px;
+
+      &:after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+
+      & .total-title {
+        float: left;
+        font-size: 2.3rem;
+      }
+      & .total-price {
+        float: right;
+        color: red;
+        font-weight: bold;
+        font-size: 2.5rem;
+      }
+    }
+
+    /*----------------------------------- 구매버튼 ------------------------ */
+    & .purchase-btn {
+      width: 90%;
+      display: block;
+      margin-top: 50px;
+      padding: 20px 10px;
+      margin: 50px auto 0 auto;
+      box-sizing: border-box;
+      cursor: pointer;
+      font-size: 2rem;
+      border: none;
+      color: white;
+      background-color: #000;
+    }
+  }
 }
 
 /* --------------------------------------------------------------------------- */
@@ -211,6 +375,113 @@ main {
             margin: 20px;
           }
         }
+      }
+    }
+
+    //상품클릭시 구매창
+    & .purchase {
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      max-width: initial;
+      height: 50%;
+      background-color: white;
+      z-index: 99;
+      box-shadow: -1px -1px 20px rgb(192, 192, 192);
+      overflow: scroll;
+
+      &.close {
+        bottom: -9999em;
+      }
+
+      &.open {
+        bottom: 0;
+      }
+
+      /* 열려있는 상품창 닫기버튼 */
+      & .purchase-close-btn {
+        width: 30px;
+        height: 30px;
+        top: 10px;
+        right: 10px;
+
+        & span {
+          height: 3px;
+        }
+      }
+
+      /* 상품이미지 , 상품명 */
+      & img {
+        width: 70%;
+        height: 50%;
+        margin: 0 auto;
+        display: block;
+        object-fit: contain;
+      }
+
+      & .goods-title {
+        font-size: 1.6rem;
+        padding: 10px 20px;
+      }
+
+      & .goods-price {
+        border-bottom: 1px solid #dddfe1;
+        padding: 10px 20px;
+
+        & .per-price {
+          font-size: 2rem;
+          font-weight: bold;
+          float: left;
+        }
+        & .dib img {
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      /*----------------------------------- 상품개수 ------------------------ */
+
+      & .goods-quantity {
+        padding: 10px 20px;
+
+        & .number-title {
+          font-size: 1.7rem;
+        }
+
+        & .quantity-box {
+          & button {
+            width: 20px;
+            height: 20px;
+            font-size: 1.9rem;
+            line-height: 20px;
+          }
+        }
+
+        & .quantity {
+          font-size: 1.7rem;
+          margin: 0 20px;
+        }
+      }
+
+      /*----------------------------------- 총합계 ------------------------ */
+
+      & .goods-total-price {
+        padding: 10px 20px;
+
+        & .total-title {
+          font-size: 1.7rem;
+        }
+        & .total-price {
+          font-size: 1.9rem;
+        }
+      }
+
+      /*----------------------------------- 구매버튼 ------------------------ */
+      & .purchase-btn {
+        width: 80%;
+        padding: 10px 10px;
+        margin: 30px auto 30px auto;
+        font-size: 1.7rem;
       }
     }
   }

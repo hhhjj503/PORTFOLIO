@@ -7,7 +7,7 @@
   {
     "title": "배트맨 덕",
     "imagePath": "../../source/images/amusementpark/krustyland/batman_duck.JPG",
-    "price": 15000
+    "price": 17000
   },
   {
     "title": "곰 인형",
@@ -22,17 +22,17 @@
   {
     "title": "다이노공룡",
     "imagePath": "../../source/images/amusementpark/krustyland/dinosaur.JPG",
-    "price": 15000
+    "price": 25000
   },
   {
     "title": "호기심 기린",
     "imagePath": "../../source/images/amusementpark/krustyland/green_giraffe.JPG",
-    "price": 15000
+    "price": 17000
   },
   {
     "title": "손들어냥",
     "imagePath": "../../source/images/amusementpark/krustyland/handsupcat.JPG",
-    "price": 15000
+    "price": 10000
   },
 
   {
@@ -43,16 +43,16 @@
   {
     "title": "이상해C",
     "imagePath": "../../source/images/amusementpark/krustyland/pokemon.JPG",
-    "price": 15000
+    "price": 20000
   },
   {
     "title": "레고기차",
     "imagePath": "../../source/images/amusementpark/krustyland/train.JPG",
-    "price": 15000
+    "price": 150000
   },
   {
     "title": "장난감 트럭",
     "imagePath": "../../source/images/amusementpark/krustyland/trucks.JPG",
-    "price": 15000
+    "price": 30000
   }
 ]
