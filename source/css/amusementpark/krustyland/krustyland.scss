@@ -186,6 +186,7 @@ main {
     position: fixed;
     bottom: 0;
     width: 20%;
+    min-width: 380px;
     max-width: 450px;
     height: 100%;
     background-color: white;
@@ -356,6 +357,128 @@ main {
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
   main {
+    & .goods-wrapper {
+      & .title {
+        font-size: 2.5rem;
+      }
+
+      & .list-wrapper {
+        & ul {
+          & li {
+            width: 43%;
+            margin: 10px;
+          }
+        }
+      }
+    }
+
+    //상품클릭시 구매창
+    & .purchase {
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      max-width: initial;
+      min-width: initial;
+      height: 50%;
+      background-color: white;
+      z-index: 99;
+      box-shadow: -1px -1px 20px rgb(192, 192, 192);
+      overflow: scroll;
+
+      &.close {
+        bottom: -9999em;
+      }
+
+      &.open {
+        bottom: 0;
+      }
+
+      /* 열려있는 상품창 닫기버튼 */
+      & .purchase-close-btn {
+        width: 30px;
+        height: 30px;
+        top: 10px;
+        right: 10px;
+
+        & span {
+          height: 3px;
+        }
+      }
+
+      /* 상품이미지 , 상품명 */
+      & img {
+        width: 60%;
+        height: 50%;
+        margin: 0 auto;
+        display: block;
+        object-fit: contain;
+      }
+
+      & .goods-title {
+        font-size: 1.6rem;
+        padding: 10px 40px;
+      }
+
+      & .goods-price {
+        border-bottom: 1px solid #dddfe1;
+        padding: 10px 40px;
+
+        & .per-price {
+          font-size: 2rem;
+          font-weight: bold;
+          float: left;
+        }
+        & .dib img {
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      /*----------------------------------- 상품개수 ------------------------ */
+
+      & .goods-quantity {
+        padding: 10px 40px;
+
+        & .number-title {
+          font-size: 1.7rem;
+        }
+
+        & .quantity-box {
+          & button {
+            width: 20px;
+            height: 20px;
+            font-size: 1.9rem;
+            line-height: 20px;
+          }
+        }
+
+        & .quantity {
+          font-size: 1.7rem;
+          margin: 0 20px;
+        }
+      }
+
+      /*----------------------------------- 총합계 ------------------------ */
+
+      & .goods-total-price {
+        padding: 10px 40px;
+
+        & .total-title {
+          font-size: 1.7rem;
+        }
+        & .total-price {
+          font-size: 1.9rem;
+        }
+      }
+
+      /*----------------------------------- 구매버튼 ------------------------ */
+      & .purchase-btn {
+        width: 60%;
+        padding: 10px 10px;
+        margin: 30px auto 30px auto;
+        font-size: 1.7rem;
+      }
+    }
   }
 }
 
@@ -392,6 +515,7 @@ main {
       bottom: 0;
       width: 100%;
       max-width: initial;
+      min-width: initial;
       height: 50%;
       background-color: white;
       z-index: 99;

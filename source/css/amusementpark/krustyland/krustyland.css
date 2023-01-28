@@ -157,6 +157,7 @@ main .purchase {
   position: fixed;
   bottom: 0;
   width: 20%;
+  min-width: 380px;
   max-width: 450px;
   height: 100%;
   background-color: white;
@@ -309,6 +310,103 @@ main .purchase .purchase-btn {
   }
 }
 /* --------------------------------------------------------------------------- */
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .goods-wrapper .title {
+    font-size: 2.5rem;
+  }
+  main .goods-wrapper .list-wrapper ul li {
+    width: 43%;
+    margin: 10px;
+  }
+  main .purchase {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: initial;
+    min-width: initial;
+    height: 50%;
+    background-color: white;
+    z-index: 99;
+    box-shadow: -1px -1px 20px rgb(192, 192, 192);
+    overflow: scroll;
+    /* 열려있는 상품창 닫기버튼 */
+    /* 상품이미지 , 상품명 */
+    /*----------------------------------- 상품개수 ------------------------ */
+    /*----------------------------------- 총합계 ------------------------ */
+    /*----------------------------------- 구매버튼 ------------------------ */
+  }
+  main .purchase.close {
+    bottom: -9999em;
+  }
+  main .purchase.open {
+    bottom: 0;
+  }
+  main .purchase .purchase-close-btn {
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    right: 10px;
+  }
+  main .purchase .purchase-close-btn span {
+    height: 3px;
+  }
+  main .purchase img {
+    width: 60%;
+    height: 50%;
+    margin: 0 auto;
+    display: block;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  main .purchase .goods-title {
+    font-size: 1.6rem;
+    padding: 10px 40px;
+  }
+  main .purchase .goods-price {
+    border-bottom: 1px solid #dddfe1;
+    padding: 10px 40px;
+  }
+  main .purchase .goods-price .per-price {
+    font-size: 2rem;
+    font-weight: bold;
+    float: left;
+  }
+  main .purchase .goods-price .dib img {
+    width: 18px;
+    height: 18px;
+  }
+  main .purchase .goods-quantity {
+    padding: 10px 40px;
+  }
+  main .purchase .goods-quantity .number-title {
+    font-size: 1.7rem;
+  }
+  main .purchase .goods-quantity .quantity-box button {
+    width: 20px;
+    height: 20px;
+    font-size: 1.9rem;
+    line-height: 20px;
+  }
+  main .purchase .goods-quantity .quantity {
+    font-size: 1.7rem;
+    margin: 0 20px;
+  }
+  main .purchase .goods-total-price {
+    padding: 10px 40px;
+  }
+  main .purchase .goods-total-price .total-title {
+    font-size: 1.7rem;
+  }
+  main .purchase .goods-total-price .total-price {
+    font-size: 1.9rem;
+  }
+  main .purchase .purchase-btn {
+    width: 60%;
+    padding: 10px 10px;
+    margin: 30px auto 30px auto;
+    font-size: 1.7rem;
+  }
+}
 @media screen and (min-width: 320px) and (max-width: 479px) {
   main .goods-wrapper .title {
     font-size: 2rem;
@@ -331,6 +429,7 @@ main .purchase .purchase-btn {
     bottom: 0;
     width: 100%;
     max-width: initial;
+    min-width: initial;
     height: 50%;
     background-color: white;
     z-index: 99;
