@@ -251,7 +251,6 @@ main .event-wrapper .title {
 main .event-wrapper .event-slider {
   width: 100%;
   height: 100%;
-  background-color: #558abb;
 }
 main .event-wrapper .event-slider > div:after {
   content: "";
