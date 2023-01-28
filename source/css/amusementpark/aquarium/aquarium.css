@@ -146,6 +146,11 @@ main .info-wrapper {
   text-align: center;
   /*-- ---------------- 시간 --------------------- */
 }
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .info-wrapper {
+    padding: 120px 0;
+  }
+}
 @media screen and (min-width: 320px) and (max-width: 479px) {
   main .info-wrapper {
     padding: 100px 0;
@@ -170,6 +175,21 @@ main .info-wrapper .time .open-time {
   letter-spacing: 2px;
   margin-left: 30px;
 }
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .info-wrapper .time img {
+    width: 85px;
+    height: 85px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+  main .info-wrapper .time .open-time {
+    display: block;
+    margin-left: 0px;
+    margin-top: 15px;
+    font-size: 2.7rem;
+  }
+}
 @media screen and (min-width: 320px) and (max-width: 479px) {
   main .info-wrapper .time img {
     width: 75px;
@@ -192,14 +212,14 @@ main .event-wrapper {
   position: relative;
   /*------------------- 모바일 ----------------- */
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
-  main .event-wrapper div:after {
-    content: "";
-    display: block;
-    clear: both;
-  }
+@media screen and (min-width: 480px) and (max-width: 768px) {
   main .event-wrapper {
-    height: auto;
+    height: 500px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .event-wrapper {
+    height: 300px;
   }
 }
 main .event-wrapper .title {
@@ -214,6 +234,13 @@ main .event-wrapper .title {
   text-shadow: 1px 1px 10px #123758, -1px -1px 10px #123758;
   /*------------------- 모바일 ----------------- */
 }
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .event-wrapper .title {
+    font-size: 2.5rem;
+    text-align: center;
+    word-break: keep-all;
+  }
+}
 @media screen and (min-width: 320px) and (max-width: 479px) {
   main .event-wrapper .title {
     font-size: 2rem;
@@ -224,34 +251,38 @@ main .event-wrapper .title {
 main .event-wrapper .event-slider {
   width: 100%;
   height: 100%;
+  background-color: #558abb;
 }
-main .event-wrapper .event-slider a {
+main .event-wrapper .event-slider > div:after {
+  content: "";
   display: block;
-  width: 100%;
-  height: 100%;
-  /*------------------- 모바일 ----------------- */
+  clear: both;
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
-  main .event-wrapper .event-slider a {
-    height: auto;
+main .event-wrapper .event-slider div.item {
+  width: 100%;
+  height: 800px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .event-wrapper .event-slider div.item {
+    height: 500px;
   }
 }
-main .event-wrapper .event-slider a img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50%;
-     object-position: 50%;
-  /*------------------- 모바일 ----------------- */
-}
 @media screen and (min-width: 320px) and (max-width: 479px) {
-  main .event-wrapper .event-slider a img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    transform: scaleY(120%);
-    transform-origin: top;
+  main .event-wrapper .event-slider div.item {
+    height: 300px;
   }
+}
+main .event-wrapper .event-slider .item.one {
+  background-image: url(../../../images/amusementpark/aquarium/qauarium_main.JPG);
+}
+main .event-wrapper .event-slider .item.two {
+  background-image: url(../../../images/amusementpark/aquarium/aquarium3.JPG);
+}
+main .event-wrapper .event-slider .item.three {
+  background-image: url(../../../images/amusementpark/aquarium/aquarium4.JPG);
 }
 main .event-wrapper .btn-wrapper {
   max-width: 1400px;

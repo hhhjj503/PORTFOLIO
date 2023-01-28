@@ -161,6 +161,7 @@ main {
     text-align: center;
 
     @media screen and (min-width: 480px) and (max-width: 768px) {
+      padding: 120px 0;
     }
 
     @media screen and (min-width: 320px) and (max-width: 479px) {
@@ -190,6 +191,20 @@ main {
 
       /*------------------- 모바일 ----------------- */
       @media screen and (min-width: 480px) and (max-width: 768px) {
+        & img {
+          width: 85px;
+          height: 85px;
+          display: block;
+          margin: 0 auto;
+          margin-bottom: 15px;
+        }
+
+        & .open-time {
+          display: block;
+          margin-left: 0px;
+          margin-top: 15px;
+          font-size: 2.7rem;
+        }
       }
 
       @media screen and (min-width: 320px) and (max-width: 479px) {
@@ -221,20 +236,11 @@ main {
 
     /*------------------- 모바일 ----------------- */
     @media screen and (min-width: 480px) and (max-width: 768px) {
+      height: 500px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 479px) {
-      & div {
-        &:after {
-          content: "";
-          display: block;
-          clear: both;
-        }
-      }
-
-      & {
-        height: auto;
-      }
+      height: 300px;
     }
 
     & .title {
@@ -250,6 +256,9 @@ main {
 
       /*------------------- 모바일 ----------------- */
       @media screen and (min-width: 480px) and (max-width: 768px) {
+        font-size: 2.5rem;
+        text-align: center;
+        word-break: keep-all;
       }
 
       @media screen and (min-width: 320px) and (max-width: 479px) {
@@ -264,40 +273,38 @@ main {
     & .event-slider {
       width: 100%;
       height: 100%;
+      background-color: #558abb;
 
-      & a {
+      & > div:after {
+        content: "";
         display: block;
-        width: 100%;
-        height: 100%;
+        clear: both;
+      }
 
-        /*------------------- 모바일 ----------------- */
+      & div.item {
+        width: 100%;
+        height: 800px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
         @media screen and (min-width: 480px) and (max-width: 768px) {
+          height: 500px;
         }
 
         @media screen and (min-width: 320px) and (max-width: 479px) {
-          & {
-            height: auto;
-          }
+          height: 300px;
         }
+      }
 
-        & img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: 50%;
-
-          /*------------------- 모바일 ----------------- */
-          @media screen and (min-width: 480px) and (max-width: 768px) {
-          }
-
-          @media screen and (min-width: 320px) and (max-width: 479px) {
-            & {
-              object-fit: cover;
-              transform: scaleY(120%);
-              transform-origin: top;
-            }
-          }
-        }
+      & .item.one {
+        background-image: url(../../../images/amusementpark/aquarium/qauarium_main.JPG);
+      }
+      & .item.two {
+        background-image: url(../../../images/amusementpark/aquarium/aquarium3.JPG);
+      }
+      & .item.three {
+        background-image: url(../../../images/amusementpark/aquarium/aquarium4.JPG);
       }
     }
 
