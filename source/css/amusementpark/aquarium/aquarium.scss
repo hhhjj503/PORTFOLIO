@@ -1,0 +1,397 @@
+@import url(../../reset.css);
+@import url(../layout/header.css);
+@import url(../layout/footer.css);
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "NotoSans-Bold", "맑은 고딕", "Malgun Gothic", sans-serif;
+  overflow-x: hidden;
+}
+
+.top-nav {
+  transition: 0.5s ease-in-out;
+  // aquarium 의 nav 는 포지션 fixed 로 변경
+  position: fixed;
+
+  &.scrolldown {
+    opacity: 0;
+  }
+
+  //헤드메뉴에서 아쿠아리움 글자를 빨갛게
+  & > .wrapper {
+    li {
+      &:nth-child(5) a {
+        color: red;
+      }
+    }
+  }
+}
+
+.top-nav-mobile {
+  transition: 0.5s ease-in-out;
+  // aquarium 의 nav 는 포지션 fixed 로 변경
+  position: fixed;
+
+  &.scrolldown {
+    opacity: 0;
+  }
+}
+
+a.hiding {
+  & + * {
+    position: relative;
+    transition: 0.6s cubic-bezier(0.5, 0, 0.75, 0);
+    top: 50px;
+    opacity: 0;
+  }
+}
+
+$color: rgba(
+  $color: #ffffff,
+  $alpha: 0.7,
+);
+
+/* ----------------------------------- main .banner-wrapper --------------------------------------- */
+
+main {
+  & .banner-wrapper {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: aqua;
+    background: url(../../../images/amusementpark/aquarium/dmitry-bukhantsov-IBrZ-TXYWY8.jpg)
+      no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    & .title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 4rem;
+      color: white;
+      font-weight: bold;
+      text-shadow: 1px 1px 5px #558abb, -1px -1px 5px #558abb;
+
+      @media screen and (min-width: 480px) and (max-width: 768px) {
+        & {
+          font-size: 3rem;
+        }
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 479px) {
+        & {
+          font-size: 2.5rem;
+        }
+      }
+    }
+
+    /* ------------------ 파도효과 -------------------- */
+    & .waves-wrapper {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+
+      & .waves {
+        position: relative;
+        width: 100%;
+        height: 15vh;
+        margin-bottom: -7px; /*Fix for safari gap*/
+        min-height: 100px;
+        max-height: 120px;
+
+        /* Animation */
+
+        & .parallax > use {
+          animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5)
+            infinite;
+        }
+        & .parallax > use:nth-child(1) {
+          animation-delay: -2s;
+          animation-duration: 7s;
+        }
+        & .parallax > use:nth-child(2) {
+          animation-delay: -3s;
+          animation-duration: 10s;
+        }
+
+        @keyframes move-forever {
+          0% {
+            transform: translate3d(-90px, 0, 0);
+          }
+          100% {
+            transform: translate3d(85px, 0, 0);
+          }
+        }
+      }
+      /*---------------------- Shrinking for mobile -----------------------------*/
+      @media screen and (min-width: 480px) and (max-width: 768px) {
+        .waves {
+          height: 80px;
+          min-height: 80px;
+        }
+        .content {
+          height: 30vh;
+        }
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 479px) {
+        .waves {
+          height: 60px;
+          min-height: 60px;
+        }
+        .content {
+          height: 30vh;
+        }
+      }
+    }
+  }
+  /*-- ---------------------------------------- 아쿠아리움 관련정보 ---------------------------------------- */
+  & .info-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+
+    padding: 150px 0;
+    text-align: center;
+
+    @media screen and (min-width: 480px) and (max-width: 768px) {
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+      padding: 100px 0;
+    }
+
+    /*-- ---------------- 시간 --------------------- */
+    & .time {
+      width: 100%;
+      height: 100%;
+
+      & img {
+        width: 95px;
+        height: 95px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 30px;
+      }
+
+      & .open-time {
+        font-size: 3rem;
+        font-weight: bold;
+        display: inline-block;
+        letter-spacing: 2px;
+        margin-left: 30px;
+      }
+
+      /*------------------- 모바일 ----------------- */
+      @media screen and (min-width: 480px) and (max-width: 768px) {
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 479px) {
+        & img {
+          width: 75px;
+          height: 75px;
+          display: block;
+          margin: 0 auto;
+          margin-bottom: 10px;
+        }
+
+        & .open-time {
+          display: block;
+          margin-left: 0px;
+          margin-top: 10px;
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+
+  /*-- ------------------------------------------ 이벤트 -------------------------------------- */
+
+  & .event-wrapper {
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    position: relative;
+
+    /*------------------- 모바일 ----------------- */
+    @media screen and (min-width: 480px) and (max-width: 768px) {
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+      & div {
+        &:after {
+          content: "";
+          display: block;
+          clear: both;
+        }
+      }
+
+      & {
+        height: auto;
+      }
+    }
+
+    & .title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: bold;
+      font-size: 3rem;
+      color: white;
+      z-index: 10;
+      text-shadow: 1px 1px 10px #123758, -1px -1px 10px #123758;
+
+      /*------------------- 모바일 ----------------- */
+      @media screen and (min-width: 480px) and (max-width: 768px) {
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 479px) {
+        & {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    & .event-slider {
+      width: 100%;
+      height: 100%;
+
+      & a {
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        & img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+
+          /*------------------- 모바일 ----------------- */
+          @media screen and (min-width: 480px) and (max-width: 768px) {
+          }
+
+          @media screen and (min-width: 320px) and (max-width: 479px) {
+            & {
+              position: relative;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 479px) {
+        & {
+          width: 100%;
+          height: auto;
+        }
+
+        &:after {
+          display: block;
+          content: "";
+          clear: both;
+        }
+      }
+    }
+
+    & .btn-wrapper {
+      max-width: 1400px;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+
+      & button {
+        transform: translateY(-50%);
+        padding: 10px;
+        border: 0;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        cursor: pointer;
+
+        /*------------------- 모바일 ----------------- */
+        @media screen and (min-width: 480px) and (max-width: 768px) {
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 479px) {
+          & {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+
+      & .prev {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        border-left: 3px solid $color;
+        border-bottom: 3px solid $color;
+        transform: rotate(45deg);
+
+        /*------------------- 모바일 ----------------- */
+        @media screen and (min-width: 480px) and (max-width: 768px) {
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 479px) {
+          & {
+            left: 5vw;
+          }
+        }
+      }
+
+      & .next {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        border-right: 3px solid $color;
+        border-top: 3px solid $color;
+        transform: rotate(45deg);
+
+        /*------------------- 모바일 ----------------- */
+        @media screen and (min-width: 480px) and (max-width: 768px) {
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 479px) {
+          & {
+            right: 5vw;
+          }
+        }
+      }
+
+      & .index-button-wrapper {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10%;
+
+        & .index-button {
+          width: 10px;
+          height: 10px;
+          padding: 0;
+          background-color: $color;
+          border-radius: 50%;
+          margin: 0 10px;
+
+          &.selected {
+            background-color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------------------------------- */

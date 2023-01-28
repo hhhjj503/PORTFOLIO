@@ -107,7 +107,7 @@ main {
           display: inline-block;
 
           &.loaded {
-            animation: fadeOut 0.2s forwards ease-in-out;
+            //animation: fadeOut 1s forwards ease-in-out;
           }
 
           &:hover {
@@ -344,6 +344,7 @@ main {
 
 @keyframes fadeOut {
   0% {
+    display: none;
     opacity: 0;
   }
   100% {

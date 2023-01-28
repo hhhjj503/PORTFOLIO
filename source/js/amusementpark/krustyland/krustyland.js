@@ -29,6 +29,7 @@ window.addEventListener("load", () => {
   let added = 0;
   let allData = [];
 
+  //list 는 라이브러리를 위해 제이쿼리사용
   const list = $(".list-wrapper .list");
 
   //스크롤 내리면 헤드메뉴 투명하게
