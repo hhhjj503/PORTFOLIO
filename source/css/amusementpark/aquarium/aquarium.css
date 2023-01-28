@@ -319,6 +319,11 @@ main .event-wrapper .btn-wrapper .prev {
   transform: rotate(45deg);
   /*------------------- 모바일 ----------------- */
 }
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .event-wrapper .btn-wrapper .prev {
+    left: 5vw;
+  }
+}
 @media screen and (min-width: 320px) and (max-width: 479px) {
   main .event-wrapper .btn-wrapper .prev {
     left: 5vw;
@@ -332,6 +337,11 @@ main .event-wrapper .btn-wrapper .next {
   border-top: 3px solid rgba(255, 255, 255, 0.7);
   transform: rotate(45deg);
   /*------------------- 모바일 ----------------- */
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .event-wrapper .btn-wrapper .next {
+    right: 5vw;
+  }
 }
 @media screen and (min-width: 320px) and (max-width: 479px) {
   main .event-wrapper .btn-wrapper .next {

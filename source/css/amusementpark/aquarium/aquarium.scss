@@ -349,6 +349,9 @@ main {
 
         /*------------------- 모바일 ----------------- */
         @media screen and (min-width: 480px) and (max-width: 768px) {
+          & {
+            left: 5vw;
+          }
         }
 
         @media screen and (min-width: 320px) and (max-width: 479px) {
@@ -368,6 +371,9 @@ main {
 
         /*------------------- 모바일 ----------------- */
         @media screen and (min-width: 480px) and (max-width: 768px) {
+          & {
+            right: 5vw;
+          }
         }
 
         @media screen and (min-width: 320px) and (max-width: 479px) {
