@@ -92,11 +92,10 @@ window.addEventListener("load", function () {
   const timer = setInterval(autoslider, 4000);
 
   function changeIndex(num) {
-    console.log(num);
     if (!(num === undefined)) index = num;
     if (index > indexBtns.length - 1) index = 0;
     if (index < 0) index = indexBtns.length - 1;
-    console.log(index);
+
     for (let i = 0; i < indexBtns.length; i++) {
       indexBtns[i].classList.remove("selected");
     }
