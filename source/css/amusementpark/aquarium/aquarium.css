@@ -223,16 +223,24 @@ main .event-wrapper {
   }
 }
 main .event-wrapper .title {
-  position: absolute;
-  top: 50%;
+  position: relative;
+  top: 55%;
   left: 50%;
+  text-align: center;
   transform: translate(-50%, -50%);
   font-weight: bold;
   font-size: 3rem;
+  opacity: 0;
   color: white;
   z-index: 10;
   text-shadow: 1px 1px 10px #123758, -1px -1px 10px #123758;
+  transition: 0.3s ease-in-out;
   /*------------------- 모바일 ----------------- */
+}
+main .event-wrapper .title.active {
+  top: 50%;
+  opacity: 1;
+  transition-delay: 1s;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
   main .event-wrapper .title {
@@ -316,7 +324,7 @@ main .event-wrapper .btn-wrapper .prev {
   left: 0;
   border-left: 3px solid rgba(255, 255, 255, 0.7);
   border-bottom: 3px solid rgba(255, 255, 255, 0.7);
-  transform: rotate(45deg);
+  transform: rotate(45deg) translateY(-50%);
   /*------------------- 모바일 ----------------- */
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
@@ -335,7 +343,7 @@ main .event-wrapper .btn-wrapper .next {
   right: 0;
   border-right: 3px solid rgba(255, 255, 255, 0.7);
   border-top: 3px solid rgba(255, 255, 255, 0.7);
-  transform: rotate(45deg);
+  transform: rotate(45deg) translateY(-50%);
   /*------------------- 모바일 ----------------- */
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {

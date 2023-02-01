@@ -23,6 +23,8 @@ window.addEventListener("load", function () {
     ".index-button-wrapper .index-button3"
   );
 
+  const sliderItems = $(".event-slider .item");
+
   //스크롤 내리면 헤드메뉴 투명하게
   window.addEventListener("scroll", () => {
     if (html.scrollTop > 0) {
@@ -62,8 +64,12 @@ window.addEventListener("load", function () {
     startIndex: 0,
     threshold: 216,
     loop: true,
+    onChange: function () {
+      sliderItems.find("h3").removeClass("active");
+      sliderItems.eq(this.currentSlide).find("h3").addClass("active");
+    },
   });
-
+  console.log(sliderItems);
   prev.addEventListener("click", () => {
     //changeColor 메서드가 끝날때 index 값을 증가시키기 때문에
     //prev 는 index 에서 -2 를 빼야함

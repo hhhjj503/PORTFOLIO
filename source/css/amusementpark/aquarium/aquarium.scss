@@ -244,15 +244,23 @@ main {
     }
 
     & .title {
-      position: absolute;
-      top: 50%;
+      position: relative;
+      top: 55%;
       left: 50%;
+      text-align: center;
       transform: translate(-50%, -50%);
       font-weight: bold;
       font-size: 3rem;
+      opacity: 0;
       color: white;
       z-index: 10;
       text-shadow: 1px 1px 10px #123758, -1px -1px 10px #123758;
+      transition: 0.3s ease-in-out;
+      &.active {
+        top: 50%;
+        opacity: 1;
+        transition-delay: 1s;
+      }
 
       /*------------------- 모바일 ----------------- */
       @media screen and (min-width: 480px) and (max-width: 768px) {
@@ -345,7 +353,7 @@ main {
         left: 0;
         border-left: 3px solid $color;
         border-bottom: 3px solid $color;
-        transform: rotate(45deg);
+        transform: rotate(45deg) translateY(-50%);
 
         /*------------------- 모바일 ----------------- */
         @media screen and (min-width: 480px) and (max-width: 768px) {
@@ -367,7 +375,7 @@ main {
         right: 0;
         border-right: 3px solid $color;
         border-top: 3px solid $color;
-        transform: rotate(45deg);
+        transform: rotate(45deg) translateY(-50%);
 
         /*------------------- 모바일 ----------------- */
         @media screen and (min-width: 480px) and (max-width: 768px) {
