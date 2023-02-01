@@ -321,7 +321,7 @@ main .event-wrapper .btn-wrapper button {
 main .event-wrapper .btn-wrapper .prev {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 5%;
   border-left: 3px solid rgba(255, 255, 255, 0.7);
   border-bottom: 3px solid rgba(255, 255, 255, 0.7);
   transform: rotate(45deg) translateY(-50%);
@@ -329,18 +329,18 @@ main .event-wrapper .btn-wrapper .prev {
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
   main .event-wrapper .btn-wrapper .prev {
-    left: 5vw;
+    left: 5%;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 479px) {
   main .event-wrapper .btn-wrapper .prev {
-    left: 5vw;
+    left: 5%;
   }
 }
 main .event-wrapper .btn-wrapper .next {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 5%;
   border-right: 3px solid rgba(255, 255, 255, 0.7);
   border-top: 3px solid rgba(255, 255, 255, 0.7);
   transform: rotate(45deg) translateY(-50%);
@@ -348,12 +348,12 @@ main .event-wrapper .btn-wrapper .next {
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
   main .event-wrapper .btn-wrapper .next {
-    right: 5vw;
+    right: 10%;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 479px) {
   main .event-wrapper .btn-wrapper .next {
-    right: 5vw;
+    right: 10%;
   }
 }
 main .event-wrapper .btn-wrapper .index-button-wrapper {

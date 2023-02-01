@@ -350,7 +350,7 @@ main {
       & .prev {
         position: absolute;
         top: 50%;
-        left: 0;
+        left: 5%;
         border-left: 3px solid $color;
         border-bottom: 3px solid $color;
         transform: rotate(45deg) translateY(-50%);
@@ -358,13 +358,13 @@ main {
         /*------------------- 모바일 ----------------- */
         @media screen and (min-width: 480px) and (max-width: 768px) {
           & {
-            left: 5vw;
+            left: 5%;
           }
         }
 
         @media screen and (min-width: 320px) and (max-width: 479px) {
           & {
-            left: 5vw;
+            left: 5%;
           }
         }
       }
@@ -372,7 +372,7 @@ main {
       & .next {
         position: absolute;
         top: 50%;
-        right: 0;
+        right: 5%;
         border-right: 3px solid $color;
         border-top: 3px solid $color;
         transform: rotate(45deg) translateY(-50%);
@@ -380,13 +380,13 @@ main {
         /*------------------- 모바일 ----------------- */
         @media screen and (min-width: 480px) and (max-width: 768px) {
           & {
-            right: 5vw;
+            right: 10%;
           }
         }
 
         @media screen and (min-width: 320px) and (max-width: 479px) {
           & {
-            right: 5vw;
+            right: 10%;
           }
         }
       }
