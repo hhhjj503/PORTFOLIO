@@ -3,7 +3,7 @@
 @import url(../layout/footer.css);
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; /*  setting rem  */
   scroll-behavior: smooth;
 }
 
@@ -13,28 +13,25 @@ body {
 }
 
 .top-nav {
+  position: fixed; /* position : fixed */
   transition: 0.5s ease-in-out;
-  // aquarium 의 nav 는 포지션 fixed 로 변경
-  position: fixed;
 
   &.scrolldown {
     opacity: 0;
   }
 
-  //헤드메뉴에서 아쿠아리움 글자를 빨갛게
   & > .wrapper {
     li {
       &:nth-child(5) a {
-        color: red;
+        color: red; /* nav 의 아쿠아리움 글자 빨갛게 변경 */
       }
     }
   }
 }
 
 .top-nav-mobile {
+  position: fixed; /* position : fixed */
   transition: 0.5s ease-in-out;
-  // aquarium 의 nav 는 포지션 fixed 로 변경
-  position: fixed;
 
   &.scrolldown {
     opacity: 0;
@@ -55,10 +52,9 @@ $color: rgba(
   $alpha: 0.7,
 );
 
-/* ----------------------------------- main .banner-wrapper --------------------------------------- */
-
 main {
   & .banner-wrapper {
+    /* -----------------------------------  main .banner-wrapper  --------------------------------------- */
     width: 100vw;
     min-height: 100vh;
     background-color: aqua;
@@ -91,8 +87,8 @@ main {
       }
     }
 
-    /* ------------------ 파도효과 -------------------- */
     & .waves-wrapper {
+      /* ------------------main .banner-wrapper .waves-wrapper  -------------------- */
       position: absolute;
       width: 100%;
       bottom: 0;
@@ -104,8 +100,6 @@ main {
         margin-bottom: -7px; /*Fix for safari gap*/
         min-height: 100px;
         max-height: 120px;
-
-        /* Animation */
 
         & .parallax > use {
           animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5)
@@ -129,7 +123,6 @@ main {
           }
         }
       }
-      /*---------------------- Shrinking for mobile -----------------------------*/
       @media screen and (min-width: 480px) and (max-width: 768px) {
         .waves {
           height: 80px;
@@ -151,8 +144,8 @@ main {
       }
     }
   }
-  /*-- ---------------------------------------- 아쿠아리움 관련정보 ---------------------------------------- */
   & .info-wrapper {
+    /*-- ------------------------------  main .info-wrapper -------------------------------- */
     max-width: 1400px;
     margin: 0 auto;
     width: 100%;
@@ -168,7 +161,6 @@ main {
       padding: 100px 0;
     }
 
-    /*-- ---------------- 시간 --------------------- */
     & .time {
       width: 100%;
       height: 100%;
@@ -189,7 +181,6 @@ main {
         margin-left: 30px;
       }
 
-      /*------------------- 모바일 ----------------- */
       @media screen and (min-width: 480px) and (max-width: 768px) {
         & img {
           width: 85px;
@@ -226,15 +217,13 @@ main {
     }
   }
 
-  /*-- ------------------------------------------ 이벤트 -------------------------------------- */
-
   & .event-wrapper {
+    /*-- ---------------------  main .event-wrapper ---------------------- */
     width: 100%;
     height: 800px;
     overflow: hidden;
     position: relative;
 
-    /*------------------- 모바일 ----------------- */
     @media screen and (min-width: 480px) and (max-width: 768px) {
       height: 500px;
     }
@@ -262,7 +251,6 @@ main {
         transition-delay: 1s;
       }
 
-      /*------------------- 모바일 ----------------- */
       @media screen and (min-width: 480px) and (max-width: 768px) {
         font-size: 2.5rem;
         text-align: center;
@@ -279,6 +267,7 @@ main {
     }
 
     & .event-slider {
+      /*----------  main .event-wrapper .event-slider (siema.js사용) ----------*/
       width: 100%;
       height: 100%;
 
@@ -316,6 +305,7 @@ main {
     }
 
     & .btn-wrapper {
+      /*------- ..event-wrapper .btn-wrapper -----------*/
       max-width: 1400px;
       width: 100%;
       height: 100%;
@@ -335,7 +325,6 @@ main {
         background-color: transparent;
         cursor: pointer;
 
-        /*------------------- 모바일 ----------------- */
         @media screen and (min-width: 480px) and (max-width: 768px) {
         }
 
@@ -355,7 +344,6 @@ main {
         border-bottom: 3px solid $color;
         transform: rotate(45deg) translateY(-50%);
 
-        /*------------------- 모바일 ----------------- */
         @media screen and (min-width: 480px) and (max-width: 768px) {
           & {
             left: 5%;
@@ -377,7 +365,6 @@ main {
         border-top: 3px solid $color;
         transform: rotate(45deg) translateY(-50%);
 
-        /*------------------- 모바일 ----------------- */
         @media screen and (min-width: 480px) and (max-width: 768px) {
           & {
             right: 10%;
@@ -392,6 +379,7 @@ main {
       }
 
       & .index-button-wrapper {
+        /*-------  .btn-wrapper .index-button-wrapper -----------*/
         position: absolute;
         left: 50%;
         transform: translateX(-50%);

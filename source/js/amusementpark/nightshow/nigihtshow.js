@@ -52,7 +52,9 @@ window.addEventListener("load", () => {
     this.classList.remove("visible");
   });
 
-  //첫슬라이더 초기화
+  /**
+   * 슬라이더를 초기화하는 함수
+   */
   function intializeSlides() {
     const slides = document.querySelectorAll(".slider .slide");
     for (let i = 0; i < slides.length; i++) {
@@ -64,7 +66,10 @@ window.addEventListener("load", () => {
     }
   }
 
-  //슬라이더이미지 누르면 큰 이미지 보여주기
+  /**
+   * 슬라이드에 클릭한 슬라이드 이미지를 전체화면으로 표시하는 이벤트를 추가해주는 함수
+   * @param {element} slide
+   */
   function overlayImage(slide) {
     slide.addEventListener("click", () => {
       const img = slide.querySelector("img");
@@ -73,7 +78,11 @@ window.addEventListener("load", () => {
     });
   }
 
-  //무한 슬라이더
+  /**
+   * addStyle 을 호출해 슬라이더에 -left 값을준뒤
+   * cloneSlide 를 통해 -left 값이 적용되 화면에 보이지않는 슬라이드 하나를 삭제한뒤
+   * 복사해 마지막위치로 이동하는 함수를 계속 반복호출
+   */
   function infiniteSlider() {
     setTimeout(() => {
       addStyle();
@@ -83,13 +92,17 @@ window.addEventListener("load", () => {
     }, 1500);
   }
 
-  //slide 를 담고있는 slider 에 스타일을 추가
+  /**
+   * 슬라이더에 left : -320px css 를 적용하는 함수
+   */
   function addStyle() {
     slider.style.transition = "1s ease-in-out";
     slider.style.left = "-320px";
   }
 
-  //마지막 슬라이드를 복사
+  /**
+   * 현재 슬라이더의 첫번쨰 항목을 복사한뒤 삭제해 마지막 항목으로 추가하는 함수
+   */
   function cloneSlide() {
     const slides = document.querySelectorAll(".slider .slide");
     const firstslide = slides[0].cloneNode(true);

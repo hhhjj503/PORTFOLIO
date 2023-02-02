@@ -3,7 +3,7 @@
 @import url(../layout/header.css);
 @import url(../layout/footer.css);
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; /*  setting rem  */
   scroll-behavior: smooth;
 }
 
@@ -15,7 +15,7 @@ body {
 }
 
 .top-nav > .wrapper li:nth-child(2) a {
-  color: red;
+  color: red; /* nav 의 나이트쇼 글자 빨갛게 변경 */
 }
 
 a.hiding + * {
@@ -25,12 +25,20 @@ a.hiding + * {
   opacity: 0;
 }
 
-/* ------------------------------------------------------------------ */
-.banner {
+main {
+  /* -------------------------------------------- main ------------------------------------------- */
+}
+main .banner {
+  /*----------------------- main .banner ------------------------ */
   width: 100%;
   height: 80vh;
 }
-.banner .main_img {
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .banner {
+    height: 60vh;
+  }
+}
+main .banner .main_img {
   width: 100%;
   margin: 0 auto;
   height: 100%;
@@ -39,20 +47,27 @@ a.hiding + * {
   background-position: center;
   background-attachment: fixed;
 }
-
-/* -------------------------------------------------------------------------- */
-.info {
+main .info {
+  /*----------------------- main .info ------------------------ */
   max-width: 1400px;
   width: 100%;
   padding: 250px 0;
   margin: 0 auto;
 }
-.info .contents {
-  width: 100%;
-  height: initial;
-  position: relative;
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .info {
+    transition: 0.3s ease-in-out;
+    padding: 150px 0;
+    overflow: hidden;
+  }
 }
-.info .desc {
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .info {
+    padding: 50px 0;
+    overflow: hidden;
+  }
+}
+main .info .desc {
   font-size: 2.5rem;
   border-bottom: 1px solid #e1e1e1;
   font-weight: bold;
@@ -61,7 +76,17 @@ a.hiding + * {
   color: #000;
   padding: 20px;
 }
-.info .desc:before {
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .info .desc {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .info .desc {
+    font-size: 1.8rem;
+  }
+}
+main .info .desc:before {
   position: absolute;
   content: "";
   top: 50%;
@@ -71,15 +96,41 @@ a.hiding + * {
   transform: translateY(-50%);
   background-color: purple;
 }
-
-.contents .slider-wrapper {
+main .info .contents {
+  width: 100%;
+  height: initial;
+  position: relative;
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .info .contents {
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .info .contents {
+    overflow: hidden;
+  }
+}
+main .info .contents .slider-wrapper {
   position: relative;
   left: 30%;
   top: 0;
   width: 1600px;
   overflow: hidden;
 }
-.contents .slider-wrapper .slider {
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .info .contents .slider-wrapper {
+    left: 20%;
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .info .contents .slider-wrapper {
+    left: 20%;
+  }
+}
+main .info .contents .slider-wrapper .slider {
   width: 100%;
   height: 100%;
   position: relative;
@@ -87,7 +138,7 @@ a.hiding + * {
   white-space: nowrap;
   overflow: hidden;
 }
-.contents .slider-wrapper .slider .slide {
+main .info .contents .slider-wrapper .slider .slide {
   float: left;
   width: 300px;
   height: 300px;
@@ -100,10 +151,10 @@ a.hiding + * {
   box-sizing: border-box;
   cursor: pointer;
 }
-.contents .slider-wrapper .slider .slide:hover {
+main .info .contents .slider-wrapper .slider .slide:hover {
   border: 5px solid rgb(142, 181, 240);
 }
-.contents .slider-wrapper .slider .slide img {
+main .info .contents .slider-wrapper .slider .slide img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -111,13 +162,12 @@ a.hiding + * {
   -o-object-position: center center;
      object-position: center center;
 }
-.contents .slider-wrapper .slider:after {
+main .info .contents .slider-wrapper .slider:after {
   content: "";
   clear: both;
   display: block;
 }
-
-.contents .overlay {
+main .info .contents .overlay {
   position: fixed;
   pointer-events: none;
   width: 100%;
@@ -130,12 +180,12 @@ a.hiding + * {
   transition: 0.5s ease-in-out;
   opacity: 0;
 }
-.contents .overlay.visible {
+main .info .contents .overlay.visible {
   opacity: 1;
   pointer-events: all;
   overflow: hidden;
 }
-.contents .overlay img {
+main .info .contents .overlay img {
   position: absolute;
   width: 40%;
   height: 50%;
@@ -148,15 +198,24 @@ a.hiding + * {
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-/* -------------------------------------------------------------------------- */
 main .benefits {
+  /*----------------------- main .benefits ------------------------ */
   position: relative;
   padding: 200px 0;
   background-image: url(../../../images/amusementpark/nightshow/rides.PNG);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .benefits {
+    padding: 150px 0;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .benefits {
+    padding: 100px 0;
+  }
 }
 main .benefits:after {
   position: absolute;
@@ -178,12 +237,22 @@ main .benefits .desc {
   color: white;
   padding: 20px;
 }
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .benefits .desc {
+    font-size: 2.5rem;
+  }
+}
 main .benefits .listwrapper {
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
   z-index: 1;
   position: relative;
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .benefits .listwrapper .desc {
+    font-size: 1.8rem;
+  }
 }
 main .benefits .listwrapper ul {
   width: 100%;
@@ -204,6 +273,20 @@ main .benefits .listwrapper .benefit {
   background-position: center;
   position: relative;
   overflow: hidden;
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .benefits .listwrapper .benefit {
+    height: 250px;
+    width: 20%;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .benefits .listwrapper .benefit {
+    margin: 5px 0;
+    height: 190px;
+    width: 35%;
+    padding: 0 10px;
+  }
 }
 main .benefits .listwrapper .benefit:nth-child(2n) {
   position: relative;
@@ -243,6 +326,16 @@ main .benefits .listwrapper .benefit .number {
   width: 100%;
   position: relative;
 }
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .benefits .listwrapper .benefit .number {
+    font-size: 7rem;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .benefits .listwrapper .benefit .number {
+    font-size: 5rem;
+  }
+}
 main .benefits .listwrapper .benefit .number:before {
   position: absolute;
   content: "";
@@ -261,9 +354,26 @@ main .benefits .listwrapper .benefit p {
   color: black;
   line-height: 20px;
 }
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .benefits .listwrapper .benefit p {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .benefits .listwrapper .benefit p {
+    font-size: 1.1rem;
+    word-break: keep-all;
+  }
+}
 main .benefits .listwrapper .benefit li:nth-child(2n) {
   position: relative;
   top: 20px;
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .benefits .listwrapper .benefit li:nth-child(2n) {
+    top: 0;
+    margin: 10px;
+  }
 }
 main .benefits .listwrapper .benefit button {
   width: 50%;
@@ -299,9 +409,15 @@ main .benefits .listwrapper .more button:hover {
   cursor: pointer;
   box-shadow: 1px 1px 20px rgb(77, 77, 77);
 }
-
-/* -------------------------------letter----------------------------- */
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .benefits .listwrapper .more button {
+    width: 35%;
+    padding: 15px 0;
+    font-size: 1.5rem;
+  }
+}
 main .letter {
+  /*----------------------- main .letter ------------------------ */
   width: 100%;
   margin: 0 auto;
   padding: 100px 0;
@@ -334,12 +450,34 @@ main .letter .desc {
   width: 80%;
   z-index: 1;
 }
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .letter .desc {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .letter .desc {
+    font-size: 1.8rem;
+  }
+}
 main .letter .form-wrapper {
   padding: 50px 0;
   width: 40%;
   max-width: 1400px;
+  min-width: 600px;
   margin: 0 auto;
   position: relative;
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .letter .form-wrapper {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .letter .form-wrapper {
+    min-width: initial;
+    width: 80%;
+  }
 }
 main .letter .form-wrapper form label {
   display: inline-block;
@@ -351,6 +489,13 @@ main .letter .form-wrapper form label {
   box-shadow: 1px 1px 10px rgb(77, 77, 77);
   font-weight: bold;
   margin: 30px 0 10px 0;
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .letter .form-wrapper form label {
+    font-size: 1.5rem;
+    padding: 10px;
+    font-weight: normal;
+  }
 }
 main .letter .form-wrapper form input {
   width: 100%;
@@ -368,6 +513,12 @@ main .letter .form-wrapper form input[type=radio] {
   display: block;
   margin: 10px;
 }
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .letter .form-wrapper form input {
+    padding: 10px;
+    font-size: 1.5rem;
+  }
+}
 main .letter .form-wrapper form textarea {
   resize: none;
   width: 100%;
@@ -375,11 +526,28 @@ main .letter .form-wrapper form textarea {
   box-sizing: border-box;
   padding: 10px;
 }
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .letter .form-wrapper form textarea {
+    font-size: 1.5rem;
+  }
+}
 main .letter .form-wrapper form .customer-item li {
   width: 30%;
   height: 220px;
   margin: 10px;
   display: inline-block;
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .letter .form-wrapper form .customer-item li {
+    box-sizing: border-box;
+    margin: 0 5px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .letter .form-wrapper form .customer-item li {
+    width: 40%;
+    height: 150px;
+  }
 }
 main .letter .form-wrapper form .customer-item li img {
   width: 100%;
@@ -390,6 +558,11 @@ main .letter .form-wrapper form .customer-item li img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .letter .form-wrapper form .customer-item li img {
+    height: 70%;
+  }
+}
 main .letter .form-wrapper form button {
   margin: 0 auto;
   display: block;
@@ -399,116 +572,4 @@ main .letter .form-wrapper form button {
   border: transparent;
   background-color: #e1e1e1;
   margin-top: 50px;
-}
-
-/* --------------------------------------------------------------------------- */
-@media screen and (min-width: 480px) and (max-width: 768px) {
-  main .info {
-    transition: 0.3s ease-in-out;
-    padding: 150px 0;
-  }
-  main .info .desc {
-    font-size: 2rem;
-  }
-  main .info .contents {
-    overflow: hidden;
-  }
-  main .info .contents .slider-wrapper {
-    left: 20%;
-    transition: 0.3s ease-in-out;
-    overflow: hidden;
-  }
-  main .benefits {
-    padding: 150px 0;
-  }
-  main .benefits .desc {
-    font-size: 2.5rem;
-  }
-  main .benefits .listwrapper .benefit {
-    height: 250px;
-    width: 20%;
-  }
-  main .benefits .listwrapper .benefit .number {
-    font-size: 7rem;
-  }
-  main .benefits .listwrapper .benefit p {
-    font-size: 1.3rem;
-  }
-  main .letter .desc {
-    font-size: 2rem;
-  }
-  main .letter .form-wrapper {
-    width: 60%;
-  }
-  main .letter .form-wrapper form .customer-item li {
-    box-sizing: border-box;
-    margin: 0 5px;
-  }
-}
-@media screen and (min-width: 320px) and (max-width: 479px) {
-  main .banner {
-    height: 60vh;
-  }
-  main .info {
-    padding: 50px 0;
-  }
-  main .info .desc {
-    font-size: 1.8rem;
-  }
-  main .info .contents {
-    overflow: hidden;
-  }
-  main .info .contents .slider-wrapper {
-    left: 20%;
-  }
-  main .benefits {
-    padding: 100px 0;
-  }
-  main .benefits .listwrapper .desc {
-    font-size: 1.8rem;
-  }
-  main .benefits .listwrapper .benefit {
-    height: 200px;
-    width: 35%;
-  }
-  main .benefits .listwrapper .benefit .number {
-    font-size: 5rem;
-  }
-  main .benefits .listwrapper .benefit p {
-    font-size: 1.1rem;
-  }
-  main .benefits .listwrapper .benefit:nth-child(2n) {
-    top: 0;
-    margin: 10px;
-  }
-  main .benefits .listwrapper .more button {
-    width: 35%;
-    padding: 15px 0;
-    font-size: 1.5rem;
-  }
-  main .letter .desc {
-    font-size: 1.8rem;
-  }
-  main .letter .form-wrapper {
-    width: 80%;
-  }
-  main .letter .form-wrapper form label {
-    font-size: 1.5rem;
-    padding: 10px;
-    font-weight: normal;
-  }
-  main .letter .form-wrapper form input {
-    padding: 10px;
-    font-size: 1.5rem;
-  }
-  main .letter .form-wrapper form textarea {
-    font-size: 1.5rem;
-  }
-  main .letter .form-wrapper form .customer-item li {
-    width: 40%;
-    height: 150px;
-  }
-  main .letter .form-wrapper form .customer-item li img img {
-    height: 70%;
-  }
 }/*# sourceMappingURL=nightshow.css.map */

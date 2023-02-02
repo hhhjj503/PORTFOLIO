@@ -1,10 +1,12 @@
 window.addEventListener("load", function () {
+  //상세페이지별 공통변수
   const html = document.querySelector("html");
   const topNav = document.querySelector(".top-nav");
   const topNavMobile = document.querySelector(".top-nav-mobile");
   const subMenu = document.querySelector(".top-nav-mobile .sub-menu");
   const goup = document.querySelector(".top-nav-mobile .goup");
 
+  //아쿠아리움 페이지 슬라이더 사용을 위한 변수
   const as = document.querySelectorAll(".event-slider a");
   const prev = document.querySelector(".btn-wrapper .prev");
   const next = document.querySelector(".btn-wrapper .next");
@@ -36,7 +38,6 @@ window.addEventListener("load", function () {
     }
   });
 
-  //모바일 메뉴 클릭시 아코디언
   topNavMobile.addEventListener("click", () => {
     subMenu.classList.toggle("opened");
   });
@@ -46,16 +47,15 @@ window.addEventListener("load", function () {
     subMenu.classList.toggle("opened");
   });
 
-  /* ---------------------------------- 배너 슬라이드 ------------------------------------------------ */
+  // ---------------------------------------------------------------------------------
 
-  //슬라이드 a 태그 기본기능 방지
   for (let i = 0; i < as.length; i++) {
     as[i].addEventListener("click", function (e) {
       e.preventDefault();
     });
   }
 
-  //시에마 슬라이드
+  //시에마 슬라이드 생성
   const siemaSlider = new Siema({
     selector: ".event-slider",
     duration: 1000,
@@ -69,13 +69,12 @@ window.addEventListener("load", function () {
       sliderItems.eq(this.currentSlide).find("h3").addClass("active");
     },
   });
-  console.log(sliderItems);
+
   prev.addEventListener("click", () => {
-    //changeColor 메서드가 끝날때 index 값을 증가시키기 때문에
-    //prev 는 index 에서 -2 를 빼야함
     siemaSlider.prev();
     changeIndex(index - 2);
   });
+
   next.addEventListener("click", () => {
     siemaSlider.next();
     changeIndex();
@@ -85,18 +84,27 @@ window.addEventListener("load", function () {
     siemaSlider.goTo(0);
     changeIndex(0);
   });
+
   indexBtn2.addEventListener("click", () => {
     siemaSlider.goTo(1);
     changeIndex(1);
   });
+
   indexBtn3.addEventListener("click", () => {
     siemaSlider.goTo(2);
     changeIndex(2);
   });
+
   changeIndex();
 
   const timer = setInterval(autoslider, 4000);
 
+  /**
+   *슬라이드 인덱스를 다음 슬라이드로 증가시키고 슬라이더 내부의 타이틀 엘리먼트를 표시해주는 함수
+   *(실행시 전역 index 변수의 값이 1씩 증가)
+   * @param {number} num 숫자타입의 인덱스번호
+   * (입력이 안될경우 전역 변수인 index 변수 자동사용)
+   */
   function changeIndex(num) {
     if (!(num === undefined)) index = num;
     if (index > indexBtns.length - 1) index = 0;
@@ -110,6 +118,9 @@ window.addEventListener("load", function () {
     index++;
   }
 
+  /**
+   * changeIndex를 무한 실행해 주는 함수
+   */
   function autoslider() {
     siemaSlider.next();
     changeIndex();

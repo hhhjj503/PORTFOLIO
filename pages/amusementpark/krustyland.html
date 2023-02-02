@@ -17,11 +17,12 @@
     <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
     <script src="../../source/js/amusementpark/krustyland/krustyland.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <title>Amusement Park | Krustyland</title>
+    <title>Amusement Park | 크러스티랜드</title>
   </head>
   <body>
+    <!------------------------------------------ main ------------------------------------>
     <main>
-      <!-- 헤드메뉴(PC) -->
+      <!-- 헤드 nav 메뉴(PC) -->
       <nav class="top-nav">
         <div class="wrapper">
           <ul>
@@ -35,12 +36,12 @@
             </li>
             <li><a href="./nightshow.html">나이트쇼</a></li>
             <li><a href="./attraction.html">어트랙션</a></li>
-            <li><a href="./krustyland.html">크러스티 아일랜드</a></li>
+            <li><a href="./krustyland.html">크러스티랜드</a></li>
             <li><a href="./aquarium.html">아쿠아리움</a></li>
           </ul>
         </div>
       </nav>
-      <!-- 헤드메뉴(Mobile) -->
+      <!-- 헤드 nav 메뉴(Mobile) -->
       <nav class="top-nav-mobile">
         <div class="wrapper">
           <div class="menu-btn">
@@ -60,7 +61,7 @@
                 <a href="./nightshow.html">나이트쇼</a>
               </li>
               <li><a href="./attraction.html">어트랙션</a></li>
-              <li><a href="./krustyland.html">크러스티 아일랜드</a></li>
+              <li><a href="./krustyland.html">크러스티랜드</a></li>
               <li><a href="./aquarium.html">아쿠아리움</a></li>
             </ul>
             <div class="goup">
@@ -72,17 +73,17 @@
           </div>
         </div>
       </nav>
-      <!------------------------------------- 판매상품 ------------------------------------------>
+      <!------------------------------------- goods-wrapper ------------------------------------------>
       <div class="goods-wrapper">
-        <h3 class="title">크러스티 아일랜드 선물샵</h3>
+        <h3 class="title">크러스티 랜드 선물샵</h3>
         <div class="list-wrapper">
           <ul class="list"></ul>
           <button class="more">더보기</button>
         </div>
       </div>
-      <!-------------------------------- 상품클릭시 구매창 ---------------------------->
+      <!-------------------------------- purchase ---------------------------->
       <div class="purchase close">
-        <!-- 열려있는창 닫기버튼 -->
+        <!-- close btn -->
         <a href="#" class="purchase-close-btn">
           <span></span>
           <span></span>
@@ -92,35 +93,38 @@
           src="../../source/images/amusementpark/krustyland/alpaca.JPG"
           alt=""
         />
-        <h5 class="goods-title">알파카 인형</h5>
-        <!-- 상품명, 상품가격 -->
-        <div class="goods-price">
-          <span class="per-price">15,000</span>
-          <span class="dib"
-            ><img
-              src="../../source/images/amusementpark/krustyland/heart-regular.svg"
-              alt=""
-          /></span>
+        <!-- purchase info -->
+        <div class="purchase-info">
+          <h5 class="goods-title">알파카 인형</h5>
+          <!-- goods price -->
+          <div class="goods-price">
+            <span class="per-price">15,000</span>
+            <span class="dib"
+              ><img
+                src="../../source/images/amusementpark/krustyland/heart-regular.svg"
+                alt=""
+            /></span>
+          </div>
+          <!-- quantity -->
+          <div class="goods-quantity">
+            <span class="number-title">수량 </span>
+            <span class="quantity-box">
+              <button class="minus">-</button>
+              <span class="quantity">1</span>
+              <button class="plus">+</button>
+            </span>
+          </div>
+          <!-- total -->
+          <div class="goods-total-price">
+            <span class="total-title">총합계</span>
+            <span class="total-price">15,000</span>
+          </div>
+          <!-- purchase btn -->
+          <button class="purchase-btn">구매하기</button>
         </div>
-        <!-- 상품개수 조절 -->
-        <div class="goods-quantity">
-          <span class="number-title">수량 </span>
-          <span class="quantity-box">
-            <button class="minus">-</button>
-            <span class="quantity">1</span>
-            <button class="plus">+</button>
-          </span>
-        </div>
-        <!-- 상품개수별 총합계 -->
-        <div class="goods-total-price">
-          <span class="total-title">총합계</span>
-          <span class="total-price">15,000</span>
-        </div>
-        <!-- 구매버튼 -->
-        <button class="purchase-btn">구매하기</button>
       </div>
     </main>
-    <!------------------------------------------ 푸터 ------------------------------------>
+    <!------------------------------------------ footer ------------------------------------>
     <footer>
       <div class="wrapper">
         <div class="list">

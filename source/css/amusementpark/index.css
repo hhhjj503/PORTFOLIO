@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url(../reset.css);
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; /*  setting rem  */
 }
 
 body {
@@ -21,8 +21,8 @@ main {
   height: 100%;
 }
 
-/* ------------------- 항목별 공통속성인 type 클래스 --------------- */
-.wrapper {
+main .wrapper {
+  /* -------------------------- main .wrapper ------------------------------ */
   width: 100%;
   height: 100%;
   font-size: 0;
@@ -30,11 +30,12 @@ main {
   word-spacing: 0;
   white-space: nowrap;
 }
-.wrapper .type {
+main .wrapper .type {
+  /* ------------------- .wrapper type 공통속성 --------------- */
   position: relative;
   transition: 0.7s ease-in-out;
 }
-.wrapper .type > a {
+main .wrapper .type > a {
   position: absolute;
   top: 0;
   left: 0;
@@ -42,7 +43,7 @@ main {
   height: 100%;
   z-index: 2;
 }
-.wrapper .type:after {
+main .wrapper .type:after {
   content: "";
   width: 100%;
   height: 100%;
@@ -55,17 +56,21 @@ main {
   z-index: 0;
   pointer-events: none;
 }
-.wrapper .type:hover:after {
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .wrapper .type:after {
+    z-index: 2;
+  }
+}
+main .wrapper .type:hover:after {
   opacity: 0;
 }
-.wrapper .type:hover .desc:before {
+main .wrapper .type:hover .desc:before {
   height: 100%;
 }
-.wrapper .type:hover .desc {
+main .wrapper .type:hover .desc {
   border-bottom: 0px;
 }
-
-.background {
+main .wrapper .type .background {
   width: 100%;
   height: 60%;
   background-size: cover;
@@ -73,7 +78,13 @@ main {
   background-position: center center;
   position: relative;
 }
-.background:after {
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .wrapper .type .background {
+    position: absolute;
+    z-index: 1;
+  }
+}
+main .wrapper .type .background:after {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -81,13 +92,18 @@ main {
   width: 100%;
   height: 20%;
 }
-
-.description {
+main .wrapper .type .description {
   position: absolute;
   width: 100%;
   height: 40%;
 }
-.description .desc {
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .wrapper .type .description {
+    position: absolute;
+    height: 100%;
+  }
+}
+main .wrapper .type .description .desc {
   position: relative;
   width: 40%;
   height: 40%;
@@ -98,7 +114,28 @@ main {
   transition: 0.7s ease-in-out;
   z-index: 1;
 }
-.description .desc:before {
+@media screen and (max-width: 1000px) {
+  main .wrapper .type .description .desc {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  main .wrapper .type .description .desc {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .wrapper .type .description .desc {
+    height: 50%;
+    width: 25%;
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+main .wrapper .type .description .desc:before {
   content: "";
   position: absolute;
   top: 0;
@@ -110,7 +147,7 @@ main {
   transition: 0.5s ease-in-out;
   z-index: 0;
 }
-.description .desc .title {
+main .wrapper .type .description .desc .title {
   position: absolute;
   width: 80%;
   top: 50%;
@@ -126,80 +163,143 @@ main {
   white-space: break-spaces;
   text-align: center;
 }
-.description .desc .title span {
+@media screen and (max-width: 1000px) {
+  main .wrapper .type .description .desc .title {
+    font-size: 1.6rem;
+    width: 90%;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  main .wrapper .type .description .desc .title {
+    font-size: 1.5rem;
+    width: 100%;
+    line-height: 25px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .wrapper .type .description .desc .title {
+    font-size: 1.4rem;
+    width: 100%;
+  }
+}
+main .wrapper .type .description .desc .title span {
   font-weight: bold;
 }
-
-/* ----------------------- nightshow ---------------------- */
-.wrapper .nightshow {
+main .wrapper .nightshow {
+  /* ----------------------- nightshow ---------------------- */
   width: var(--blockwidth);
   height: 100%;
   display: inline-block;
 }
-.wrapper .nightshow:hover {
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .wrapper .nightshow {
+    display: block;
+    width: 100%;
+    height: 25vh;
+  }
+}
+main .wrapper .nightshow:hover {
   width: var(--hoveredwidth);
   cursor: pointer;
 }
-.wrapper .nightshow .background:after {
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .wrapper .nightshow:hover {
+    width: 100%;
+  }
+}
+main .wrapper .nightshow .background:after {
   background: linear-gradient(to bottom, transparent, #ac8bbe);
 }
-.wrapper .nightshow .description {
+main .wrapper .nightshow .description {
   background-color: #ac8bbe;
 }
-
-/* ----------------------- rollercoaster ---------------------- */
-.wrapper .rollercoaster {
+main .wrapper .rollercoaster {
+  /* ----------------------- rollercoaster ---------------------- */
   width: var(--blockwidth);
   height: 100%;
   display: inline-block;
 }
-.wrapper .rollercoaster:hover {
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .wrapper .rollercoaster {
+    display: block;
+    width: 100%;
+    height: 25vh;
+  }
+}
+main .wrapper .rollercoaster:hover {
   width: var(--hoveredwidth);
   cursor: pointer;
 }
-.wrapper .rollercoaster .background:after {
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .wrapper .rollercoaster:hover {
+    width: 100%;
+  }
+}
+main .wrapper .rollercoaster .background:after {
   background: linear-gradient(to bottom, transparent, #b2d2fb);
 }
-.wrapper .rollercoaster .description {
+main .wrapper .rollercoaster .description {
   background-color: #b2d2fb;
 }
-
-/* ----------------------- krustyland ---------------------- */
-.wrapper .krustyland {
+main .wrapper .krustyland {
+  /* ----------------------- krustyland ---------------------- */
   width: var(--blockwidth);
   height: 100%;
   display: inline-block;
 }
-.wrapper .krustyland:hover {
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .wrapper .krustyland {
+    display: block;
+    width: 100%;
+    height: 25vh;
+  }
+}
+main .wrapper .krustyland:hover {
   width: var(--hoveredwidth);
   cursor: pointer;
 }
-.wrapper .krustyland .background:after {
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .wrapper .krustyland:hover {
+    width: 100%;
+  }
+}
+main .wrapper .krustyland .background:after {
   background: linear-gradient(to bottom, transparent, #943940);
 }
-.wrapper .krustyland .description {
+main .wrapper .krustyland .description {
   background-color: #943940;
 }
-
-/* ----------------------- aquarium ---------------------- */
-.wrapper .aquarium {
+main .wrapper .aquarium {
+  /* ----------------------- aquarium ---------------------- */
   width: var(--blockwidth);
   height: 100%;
   display: inline-block;
 }
-.wrapper .aquarium:hover {
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .wrapper .aquarium {
+    display: block;
+    width: 100%;
+    height: 25vh;
+  }
+}
+main .wrapper .aquarium:hover {
   width: var(--hoveredwidth);
   cursor: pointer;
 }
-.wrapper .aquarium .background:after {
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .wrapper .aquarium:hover {
+    width: 100%;
+  }
+}
+main .wrapper .aquarium .background:after {
   background: linear-gradient(to bottom, transparent, #2d8098);
 }
-.wrapper .aquarium .description {
+main .wrapper .aquarium .description {
   background-color: #2d8098;
 }
 
-/* ---------------- footer ------------------- */
 footer {
+  /* ------------------------------- footer --------------------------------- */
   position: fixed;
   bottom: 0;
   height: 40px;
@@ -214,6 +314,12 @@ footer {
   letter-spacing: 1px;
   transition: 0.7s ease-in-out;
   z-index: 99;
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  footer {
+    opacity: 0;
+    display: none;
+  }
 }
 footer:before {
   content: url(../../images/amusementpark/fort-awesome-white.svg);
@@ -232,78 +338,4 @@ footer:after {
   transform: translateY(-50%);
   width: 30px;
   height: 30px;
-}
-
-/* ---------------------------------------------------------------- */
-@media screen and (max-width: 1000px) {
-  .description .desc {
-    width: 60%;
-  }
-  .description .desc .title {
-    font-size: 1.6rem;
-    width: 90%;
-  }
-}
-/* ---------------------------------------------------------------- */
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .description .desc {
-    width: 60%;
-  }
-  .description .desc .title {
-    font-size: 1.5rem;
-    width: 100%;
-    line-height: 25px;
-  }
-}
-/* ---------------------------------------------------------------- */
-@media screen and (min-width: 320px) and (max-width: 479px) {
-  footer {
-    opacity: 0;
-    display: none;
-  }
-  .wrapper .type:after {
-    z-index: 2;
-  }
-  .background {
-    position: absolute;
-    z-index: 1;
-  }
-  .description {
-    position: absolute;
-    height: 100%;
-  }
-  .description .desc {
-    height: 50%;
-    width: 25%;
-    position: absolute;
-    z-index: 3;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .description .desc .title {
-    font-size: 1.4rem;
-    width: 100%;
-  }
-  .wrapper .nightshow,
-.wrapper .rollercoaster,
-.wrapper .krustyland,
-.wrapper .aquarium {
-    display: block;
-    width: 100%;
-    height: 25vh;
-  }
-  .wrapper .nightshow:hover {
-    width: 100%;
-  }
-  .wrapper .rollercoaster:hover {
-    width: 100%;
-  }
-  .wrapper .krustyland:hover {
-    width: 100%;
-  }
-  .wrapper .aquarium:hover {
-    width: 100%;
-  }
 }/*# sourceMappingURL=index.css.map */

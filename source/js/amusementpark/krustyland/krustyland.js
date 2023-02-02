@@ -29,10 +29,8 @@ window.addEventListener("load", () => {
   let added = 0;
   let allData = [];
 
-  //list 는 라이브러리를 위해 제이쿼리사용
   const list = $(".list-wrapper .list");
 
-  //스크롤 내리면 헤드메뉴 투명하게
   window.addEventListener("scroll", () => {
     if (html.scrollTop > 0) {
       topNav.style.opacity = "0";
@@ -60,8 +58,8 @@ window.addEventListener("load", () => {
     purchase.classList.add("close");
   });
 
-  /*-------------------------------제이슨 파일 데이터로 li 만들기-------------------------------------- */
-
+  //
+  //제이슨 파일 데이터로 li 만들기=
   $.getJSON("../../source/data/amusementpark/list.json", initItems);
 
   function initItems(data) {
@@ -71,8 +69,11 @@ window.addEventListener("load", () => {
     moreBtn.onclick = function () {
       addItem();
     };
-  }
+  } //initItems
 
+  /**
+   * 제품리스트에 항목을 추가
+   */
   function addItem() {
     let slicedData;
     let elements = [];
@@ -142,7 +143,7 @@ window.addEventListener("load", () => {
           ).toLocaleString("en");
         });
     });
-  }
+  } //addItem
 
   quantityPlusBtn.addEventListener("click", () => {
     let number = parseInt(quantity.innerText);

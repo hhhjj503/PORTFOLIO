@@ -3,7 +3,7 @@
 @import url(../layout/footer.css);
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; /*  setting rem  */
   scroll-behavior: smooth;
 }
 
@@ -14,8 +14,7 @@ body {
 
 .top-nav {
   transition: 0.5s ease-in-out;
-  /* 상품구매창의 레이어를 위해 z-index  변경*/
-  z-index: 98;
+  z-index: 98; /* 상품구매창의 레이어를 위해 z-index  변경*/
 
   &.scrolldown {
     opacity: 0;
@@ -24,7 +23,7 @@ body {
   & > .wrapper {
     li {
       &:nth-child(4) a {
-        color: red;
+        color: red; /* nav 의 크러스티랜드 글자 빨갛게 변경 */
       }
     }
   }
@@ -47,16 +46,15 @@ a.hiding {
   }
 }
 
-/* ----------------------------------- main .goods-wrapper --------------------------------------- */
-
 main {
+  /* ----------------------------------- main  --------------------------------------- */
   background: url(../../../images/amusementpark/krustyland.PNG) no-repeat;
   background-size: cover;
   background-position: center center;
   position: relative;
 
-  /*----------------------- 상품목록------------------------ */
   & .goods-wrapper {
+    /*----------------------- main .goods-wrapper------------------------ */
     padding: 70px 0;
     max-width: 1400px;
     min-height: 1000px;
@@ -70,13 +68,25 @@ main {
       font-weight: bold;
       color: white;
       margin-bottom: 150px;
+      @media screen and (min-width: 480px) and (max-width: 768px) {
+        & {
+          font-size: 2.5rem;
+        }
+      }
+      @media screen and (min-width: 320px) and (max-width: 479px) {
+        & {
+          font-size: 2rem;
+          margin-bottom: 50px;
+        }
+      }
     }
 
     & .list-wrapper {
-      width: 100%;
+      width: 90%;
       position: relative;
       padding: 70px;
       box-sizing: border-box;
+      margin: 0 auto;
 
       &:before {
         content: "";
@@ -91,117 +101,191 @@ main {
         z-index: 0;
       }
 
-      & ul {
-        width: 100%;
-        min-height: 400px;
-        position: relative;
+      @media screen and (min-width: 320px) and (max-width: 479px) {
+        & {
+          width: 100%;
+          padding: 0px;
+          padding-bottom: 50px;
+        }
+      }
+    }
+
+    & ul {
+      width: 100%;
+      min-height: 400px;
+      position: relative;
+      box-sizing: border-box;
+
+      & li {
+        width: 210px;
+        height: 210px;
+        overflow: hidden;
         box-sizing: border-box;
+        margin: 30px;
+        transition: 0.3s ease-in-out;
+        display: inline-block;
 
-        & li {
-          width: 210px;
-          height: 210px;
-          overflow: hidden;
-          box-sizing: border-box;
-          margin: 30px;
-          transition: 0.3s ease-in-out;
+        @media screen and (min-width: 480px) and (max-width: 768px) {
+          & {
+            width: 43%;
+            margin: 10px;
+          }
+        }
+        @media screen and (min-width: 320px) and (max-width: 479px) {
+          & {
+            width: 40%;
+            margin: 10px;
+          }
+        }
+
+        &.loaded {
+          //animation: fadeOut 1s forwards ease-in-out;
+        }
+
+        &:hover {
+          box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+            0.3em 0.3em 1em rgba(0, 0, 0, 0.1);
+        }
+
+        & a {
           display: inline-block;
+          width: 100%;
+          height: 100%;
+          position: relative;
+          color: black;
+          overflow: hidden;
 
-          &.loaded {
-            //animation: fadeOut 1s forwards ease-in-out;
-          }
-
-          &:hover {
-            box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
-              0.3em 0.3em 1em rgba(0, 0, 0, 0.1);
-          }
-
-          & a {
-            display: inline-block;
+          & img {
             width: 100%;
             height: 100%;
-            position: relative;
-            color: black;
-            overflow: hidden;
+            object-fit: cover;
+            transition: 0.3s ease-in-out;
+          }
 
-            & img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              transition: 0.3s ease-in-out;
-            }
+          //목록에 hover 시 img 크기 키우기
+          &:hover img {
+            transform: scale(110%);
+            transform-origin: center center;
+          }
 
-            //목록에 hover 시 img 크기 키우기
-            &:hover img {
-              transform: scale(110%);
-              transform-origin: center center;
-            }
-
-            & h5 {
-              position: absolute;
-              left: 50%;
-              bottom: 10%;
-              transform: translateX(-50%);
-              padding: 5px 5%;
-              word-break: keep-all;
-              border-radius: 15px;
-              font-size: 1.5rem;
-              line-height: 20px;
-              font-weight: bold;
-              background-color: white;
-              text-align: center;
-              transition: 0.3s ease-in-out;
+          & h5 {
+            position: absolute;
+            left: 50%;
+            bottom: 10%;
+            transform: translateX(-50%);
+            padding: 5px 5%;
+            word-break: keep-all;
+            border-radius: 15px;
+            font-size: 1.5rem;
+            line-height: 20px;
+            font-weight: bold;
+            background-color: white;
+            text-align: center;
+            transition: 0.3s ease-in-out;
+            @media screen and (min-width: 320px) and (max-width: 479px) {
+              & {
+                font-size: 1.3rem;
+                min-width: 50%;
+              }
             }
           }
         }
       }
+    }
 
-      & button {
-        position: relative;
-        z-index: 1;
-        display: block;
-        margin: 50px auto 0 auto;
-        padding: 10px 30px;
-        font-size: 1.5rem;
-        border: none;
-        background-color: red;
-        font-weight: bold;
-        color: white;
-        font-weight: bold;
-        cursor: pointer;
-        transition: 0.3s ease-in-out;
+    & button {
+      position: relative;
+      z-index: 1;
+      display: block;
+      margin: 50px auto 0 auto;
+      padding: 10px 30px;
+      font-size: 1.5rem;
+      border: none;
+      background-color: red;
+      font-weight: bold;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
 
-        &.nomore {
-          display: none;
-        }
+      &.nomore {
+        display: none;
+      }
 
-        &:hover {
-          border: rgb(141, 0, 0);
-        }
+      &:hover {
+        border: rgb(141, 0, 0);
       }
     }
   }
 
-  /*----------------------------------- 상품클릭시 구매창 ------------------------ */
   & .purchase {
+    /*----------------------------------- main .purchase ------------------------ */
     position: fixed;
     bottom: 0;
-    width: 20%;
+    width: 21%;
     min-width: 380px;
     max-width: 450px;
     height: 100%;
     background-color: white;
     z-index: 99;
 
+    @media screen and (min-width: 480px) and (max-width: 768px) {
+      & {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        max-width: initial;
+        min-width: initial;
+        height: 40%;
+        background-color: white;
+        z-index: 99;
+        box-shadow: -1px -1px 20px rgb(192, 192, 192);
+        overflow-y: scroll;
+      }
+    }
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+      & {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        max-width: initial;
+        min-width: initial;
+        height: 50%;
+        background-color: white;
+        z-index: 99;
+        box-shadow: -1px -1px 20px rgb(192, 192, 192);
+        overflow-y: scroll;
+      }
+    }
+
     &.close {
       right: -9999em;
+
+      @media screen and (min-width: 480px) and (max-width: 768px) {
+        & {
+          bottom: -9999em;
+        }
+      }
+      @media screen and (min-width: 320px) and (max-width: 479px) {
+        bottom: -9999em;
+      }
     }
 
     &.open {
       right: 0;
+
+      @media screen and (min-width: 480px) and (max-width: 768px) {
+        & {
+          bottom: 0;
+        }
+      }
+      @media screen and (min-width: 320px) and (max-width: 479px) {
+        bottom: 0;
+      }
     }
 
-    /* 열려있는 상품창 닫기버튼 */
     & .purchase-close-btn {
+      /*----------------------------------- .purchase .purchase-close-btn ------------------------ */
       width: 40px;
       height: 40px;
       border-radius: 50%;
@@ -211,6 +295,31 @@ main {
       right: 20px;
       cursor: pointer;
 
+      @media screen and (min-width: 480px) and (max-width: 768px) {
+        & {
+          top: 30px;
+          right: 30px;
+        }
+      }
+
+      @media screen and (min-width: 480px) and (max-width: 768px) {
+        & {
+          width: 30px;
+          height: 30px;
+          top: 10px;
+          right: 10px;
+          & span {
+            height: 3px;
+          }
+        }
+      }
+      @media screen and (min-width: 320px) and (max-width: 479px) {
+        width: 30px;
+        height: 30px;
+        top: 10px;
+        right: 10px;
+      }
+
       & span {
         width: 100%;
         height: 5px;
@@ -219,6 +328,17 @@ main {
         display: block;
         top: 50%;
         transform: translateY(-50%);
+
+        @media screen and (min-width: 480px) and (max-width: 768px) {
+          & {
+            height: 3px;
+          }
+        }
+        @media screen and (min-width: 320px) and (max-width: 479px) {
+          & {
+            height: 3px;
+          }
+        }
       }
 
       & span:nth-child(1) {
@@ -229,119 +349,303 @@ main {
       }
     }
 
-    /* 상품이미지 , 상품명 */
     & img {
       width: 100%;
       height: 60%;
       object-fit: cover;
-    }
 
-    & .goods-title {
-      font-size: 2.3rem;
-      padding: 10px;
-    }
+      @media screen and (min-width: 480px) and (max-width: 768px) {
+        & {
+          float: left;
+          box-sizing: border-box;
+          width: 50%;
+          height: 100%;
 
-    & .goods-price {
-      border-bottom: 1px solid #dddfe1;
-      padding: 20px 10px;
-
-      &:after {
-        content: "";
-        clear: both;
-        display: block;
+          margin: 0 auto;
+          object-fit: cover;
+        }
       }
-
-      & .per-price {
-        font-size: 2.5rem;
-        font-weight: bold;
-        float: left;
-      }
-      & .dib img {
-        width: 20px;
-        height: 20px;
-        float: right;
-        cursor: pointer;
+      @media screen and (min-width: 320px) and (max-width: 479px) {
+        & {
+          width: 70%;
+          height: 50%;
+          margin: 0 auto;
+          display: block;
+          object-fit: contain;
+        }
       }
     }
-
-    /*----------------------------------- 상품개수 ------------------------ */
-
-    & .goods-quantity {
-      padding: 20px 10px;
-      border-bottom: 1px solid #dddfe1;
-
-      &:after {
-        content: "";
-        clear: both;
-        display: block;
-      }
-
-      & .number-title {
-        font-size: 2.2rem;
-        float: left;
-      }
-
-      & .quantity-box {
-        float: right;
-
-        & button {
-          border-radius: 50%;
-          border: none;
-          width: 25px;
-          height: 25px;
-          font-size: 2.3rem;
-          line-height: 25px;
-          cursor: pointer;
+    & .purchase-info {
+      @media screen and (min-width: 480px) and (max-width: 768px) {
+        & {
+          height: 100%;
+          overflow: auto;
+          float: right;
+          width: 50%;
+          box-sizing: border-box;
+          height: 100%;
+          vertical-align: text-bottom;
         }
       }
 
-      & .quantity {
+      & .goods-title {
         font-size: 2.3rem;
-        margin: 0 20px;
+        padding: 20px;
+
+        @media screen and (min-width: 480px) and (max-width: 768px) {
+          & {
+            box-sizing: border-box;
+            width: 100%;
+            font-size: 2rem;
+            padding: 30px 40px;
+          }
+        }
+        @media screen and (min-width: 320px) and (max-width: 479px) {
+          & {
+            font-size: 1.6rem;
+            padding: 10px 20px;
+          }
+        }
       }
-    }
 
-    /*----------------------------------- 총합계 ------------------------ */
+      & .goods-price {
+        border-bottom: 1px solid #dddfe1;
+        padding: 20px;
 
-    & .goods-total-price {
-      padding: 20px 10px;
+        @media screen and (min-width: 480px) and (max-width: 768px) {
+          & {
+            border-bottom: 1px solid #dddfe1;
+            padding: 15px 40px;
+          }
+        }
+        @media screen and (min-width: 320px) and (max-width: 479px) {
+          & {
+            border-bottom: 1px solid #dddfe1;
+            padding: 10px 20px;
+          }
+        }
 
-      &:after {
-        content: "";
-        clear: both;
+        &:after {
+          content: "";
+          clear: both;
+          display: block;
+        }
+
+        & .per-price {
+          font-size: 2.5rem;
+          font-weight: bold;
+          float: left;
+
+          @media screen and (min-width: 480px) and (max-width: 768px) {
+            & {
+              font-size: 2rem;
+              font-weight: bold;
+              float: left;
+            }
+          }
+          @media screen and (min-width: 320px) and (max-width: 479px) {
+            & {
+              font-size: 2rem;
+              font-weight: bold;
+              float: left;
+            }
+          }
+        }
+        & .dib img {
+          width: 20px;
+          height: 20px;
+          float: right;
+          cursor: pointer;
+
+          @media screen and (min-width: 480px) and (max-width: 768px) {
+            & {
+              width: 18px;
+              height: 18px;
+            }
+          }
+          @media screen and (min-width: 320px) and (max-width: 479px) {
+            & {
+              width: 18px;
+              height: 18px;
+            }
+          }
+        }
+      }
+
+      & .goods-quantity {
+        /*----------------------------------- .purchase .goods-quantity ------------------------ */
+        padding: 20px;
+        border-bottom: 1px solid #dddfe1;
+
+        @media screen and (min-width: 480px) and (max-width: 768px) {
+          & {
+            padding: 15px 40px;
+          }
+        }
+        @media screen and (min-width: 320px) and (max-width: 479px) {
+          & {
+            padding: 10px 20px;
+          }
+        }
+
+        &:after {
+          content: "";
+          clear: both;
+          display: block;
+        }
+
+        & .number-title {
+          font-size: 2.2rem;
+          float: left;
+
+          @media screen and (min-width: 480px) and (max-width: 768px) {
+            & {
+              font-size: 1.7rem;
+            }
+          }
+          @media screen and (min-width: 320px) and (max-width: 479px) {
+            & {
+              font-size: 1.7rem;
+            }
+          }
+        }
+
+        & .quantity-box {
+          float: right;
+
+          & button {
+            border-radius: 50%;
+            border: none;
+            width: 25px;
+            height: 25px;
+            font-size: 2.3rem;
+            line-height: 25px;
+            cursor: pointer;
+
+            @media screen and (min-width: 480px) and (max-width: 768px) {
+              & {
+                width: 20px;
+                height: 20px;
+                font-size: 1.9rem;
+                line-height: 20px;
+              }
+            }
+            @media screen and (min-width: 320px) and (max-width: 479px) {
+              & {
+                width: 20px;
+                height: 20px;
+                font-size: 1.9rem;
+                line-height: 20px;
+              }
+            }
+          }
+        }
+
+        & .quantity {
+          font-size: 2.3rem;
+          margin: 0 20px;
+          @media screen and (min-width: 480px) and (max-width: 768px) {
+            & {
+              font-size: 1.7rem;
+              margin: 0 20px;
+            }
+          }
+          @media screen and (min-width: 320px) and (max-width: 479px) {
+            & {
+              font-size: 1.7rem;
+              margin: 0 20px;
+            }
+          }
+        }
+      }
+
+      & .goods-total-price {
+        /*----------------------------------- .purchase .goods-total-price ------------------------ */
+        padding: 20px;
+
+        @media screen and (min-width: 480px) and (max-width: 768px) {
+          & {
+            padding: 15px 40px;
+          }
+        }
+        @media screen and (min-width: 320px) and (max-width: 479px) {
+          & {
+            padding: 10px 20px;
+          }
+        }
+
+        &:after {
+          content: "";
+          clear: both;
+          display: block;
+        }
+
+        & .total-title {
+          float: left;
+          font-size: 2.3rem;
+          @media screen and (min-width: 480px) and (max-width: 768px) {
+            & {
+              font-size: 1.7rem;
+            }
+          }
+          @media screen and (min-width: 320px) and (max-width: 479px) {
+            & {
+              font-size: 1.7rem;
+            }
+          }
+        }
+        & .total-price {
+          float: right;
+          color: red;
+          font-weight: bold;
+          font-size: 2.5rem;
+          @media screen and (min-width: 480px) and (max-width: 768px) {
+            & {
+              font-size: 1.9rem;
+            }
+          }
+          @media screen and (min-width: 320px) and (max-width: 479px) {
+            & {
+              font-size: 1.9rem;
+            }
+          }
+        }
+      }
+
+      & .purchase-btn {
+        /*----------------------------------- .purchase .purchase-btn ------------------------ */
+        width: 90%;
         display: block;
+        margin-top: 50px;
+        padding: 20px 10px;
+        margin: 50px auto 0 auto;
+        box-sizing: border-box;
+        cursor: pointer;
+        font-size: 2rem;
+        border: none;
+        color: white;
+        background-color: #000;
+        @media screen and (min-width: 480px) and (max-width: 768px) {
+          & {
+            width: 60%;
+            padding: 10px 10px;
+            margin: 30px auto 30px auto;
+            font-size: 1.7rem;
+          }
+        }
+        @media screen and (min-width: 320px) and (max-width: 479px) {
+          & {
+            width: 80%;
+            padding: 10px 10px;
+            margin: 30px auto 30px auto;
+            font-size: 1.7rem;
+          }
+        }
       }
-
-      & .total-title {
-        float: left;
-        font-size: 2.3rem;
-      }
-      & .total-price {
-        float: right;
-        color: red;
-        font-weight: bold;
-        font-size: 2.5rem;
-      }
-    }
-
-    /*----------------------------------- 구매버튼 ------------------------ */
-    & .purchase-btn {
-      width: 90%;
-      display: block;
-      margin-top: 50px;
-      padding: 20px 10px;
-      margin: 50px auto 0 auto;
-      box-sizing: border-box;
-      cursor: pointer;
-      font-size: 2rem;
-      border: none;
-      color: white;
-      background-color: #000;
     }
   }
 }
-
-/* --------------------------------------------------------------------------- */
+/* ------------------------------- animation ------------------------------------- */
 
 @keyframes fadeOut {
   0% {
@@ -350,271 +654,5 @@ main {
   }
   100% {
     opacity: 100%;
-  }
-}
-
-/* --------------------------------------------------------------------------- */
-
-@media screen and (min-width: 480px) and (max-width: 768px) {
-  main {
-    & .goods-wrapper {
-      & .title {
-        font-size: 2.5rem;
-      }
-
-      & .list-wrapper {
-        & ul {
-          & li {
-            width: 43%;
-            margin: 10px;
-          }
-        }
-      }
-    }
-
-    //상품클릭시 구매창
-    & .purchase {
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      max-width: initial;
-      min-width: initial;
-      height: 50%;
-      background-color: white;
-      z-index: 99;
-      box-shadow: -1px -1px 20px rgb(192, 192, 192);
-      overflow: scroll;
-
-      &.close {
-        bottom: -9999em;
-      }
-
-      &.open {
-        bottom: 0;
-      }
-
-      /* 열려있는 상품창 닫기버튼 */
-      & .purchase-close-btn {
-        width: 30px;
-        height: 30px;
-        top: 10px;
-        right: 10px;
-
-        & span {
-          height: 3px;
-        }
-      }
-
-      /* 상품이미지 , 상품명 */
-      & img {
-        width: 60%;
-        height: 50%;
-        margin: 0 auto;
-        display: block;
-        object-fit: contain;
-      }
-
-      & .goods-title {
-        font-size: 1.6rem;
-        padding: 10px 40px;
-      }
-
-      & .goods-price {
-        border-bottom: 1px solid #dddfe1;
-        padding: 10px 40px;
-
-        & .per-price {
-          font-size: 2rem;
-          font-weight: bold;
-          float: left;
-        }
-        & .dib img {
-          width: 18px;
-          height: 18px;
-        }
-      }
-
-      /*----------------------------------- 상품개수 ------------------------ */
-
-      & .goods-quantity {
-        padding: 10px 40px;
-
-        & .number-title {
-          font-size: 1.7rem;
-        }
-
-        & .quantity-box {
-          & button {
-            width: 20px;
-            height: 20px;
-            font-size: 1.9rem;
-            line-height: 20px;
-          }
-        }
-
-        & .quantity {
-          font-size: 1.7rem;
-          margin: 0 20px;
-        }
-      }
-
-      /*----------------------------------- 총합계 ------------------------ */
-
-      & .goods-total-price {
-        padding: 10px 40px;
-
-        & .total-title {
-          font-size: 1.7rem;
-        }
-        & .total-price {
-          font-size: 1.9rem;
-        }
-      }
-
-      /*----------------------------------- 구매버튼 ------------------------ */
-      & .purchase-btn {
-        width: 60%;
-        padding: 10px 10px;
-        margin: 30px auto 30px auto;
-        font-size: 1.7rem;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 479px) {
-  main {
-    & .goods-wrapper {
-      & .title {
-        font-size: 2rem;
-        margin-bottom: 50px;
-      }
-
-      & .list-wrapper {
-        padding: 0px;
-        padding-bottom: 50px;
-
-        & ul {
-          & li {
-            width: 40%;
-            margin: 10px;
-            & a {
-              & h5 {
-                font-size: 1.3rem;
-                min-width: 50%;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    //상품클릭시 구매창
-    & .purchase {
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      max-width: initial;
-      min-width: initial;
-      height: 50%;
-      background-color: white;
-      z-index: 99;
-      box-shadow: -1px -1px 20px rgb(192, 192, 192);
-      overflow: scroll;
-
-      &.close {
-        bottom: -9999em;
-      }
-
-      &.open {
-        bottom: 0;
-      }
-
-      /* 열려있는 상품창 닫기버튼 */
-      & .purchase-close-btn {
-        width: 30px;
-        height: 30px;
-        top: 10px;
-        right: 10px;
-
-        & span {
-          height: 3px;
-        }
-      }
-
-      /* 상품이미지 , 상품명 */
-      & img {
-        width: 70%;
-        height: 50%;
-        margin: 0 auto;
-        display: block;
-        object-fit: contain;
-      }
-
-      & .goods-title {
-        font-size: 1.6rem;
-        padding: 10px 20px;
-      }
-
-      & .goods-price {
-        border-bottom: 1px solid #dddfe1;
-        padding: 10px 20px;
-
-        & .per-price {
-          font-size: 2rem;
-          font-weight: bold;
-          float: left;
-        }
-        & .dib img {
-          width: 18px;
-          height: 18px;
-        }
-      }
-
-      /*----------------------------------- 상품개수 ------------------------ */
-
-      & .goods-quantity {
-        padding: 10px 20px;
-
-        & .number-title {
-          font-size: 1.7rem;
-        }
-
-        & .quantity-box {
-          & button {
-            width: 20px;
-            height: 20px;
-            font-size: 1.9rem;
-            line-height: 20px;
-          }
-        }
-
-        & .quantity {
-          font-size: 1.7rem;
-          margin: 0 20px;
-        }
-      }
-
-      /*----------------------------------- 총합계 ------------------------ */
-
-      & .goods-total-price {
-        padding: 10px 20px;
-
-        & .total-title {
-          font-size: 1.7rem;
-        }
-        & .total-price {
-          font-size: 1.9rem;
-        }
-      }
-
-      /*----------------------------------- 구매버튼 ------------------------ */
-      & .purchase-btn {
-        width: 80%;
-        padding: 10px 10px;
-        margin: 30px auto 30px auto;
-        font-size: 1.7rem;
-      }
-    }
   }
 }

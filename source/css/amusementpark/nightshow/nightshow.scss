@@ -3,7 +3,7 @@
 @import url(../layout/footer.css);
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; /*  setting rem  */
   scroll-behavior: smooth;
 }
 
@@ -18,7 +18,7 @@ body {
   & > .wrapper {
     li {
       &:nth-child(2) a {
-        color: red;
+        color: red; /* nav 의 나이트쇼 글자 빨갛게 변경 */
       }
     }
   }
@@ -37,154 +37,218 @@ a.hiding {
   background-image: url(../../../images/amusementpark/nightshow/#{$resource});
 }
 
-/* ------------------------------------------------------------------ */
-
-.banner {
-  width: 100%;
-  height: 80vh;
-
-  .main_img {
+main {
+  /* -------------------------------------------- main ------------------------------------------- */
+  .banner {
+    /*----------------------- main .banner ------------------------ */
     width: 100%;
-    margin: 0 auto;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-  }
-}
+    height: 80vh;
 
-/* -------------------------------------------------------------------------- */
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+      & {
+        height: 60vh;
+      }
+    }
 
-.info {
-  max-width: 1400px;
-  width: 100%;
-  padding: 250px 0;
-  margin: 0 auto;
-
-  .contents {
-    width: 100%;
-    height: initial;
-    position: relative;
-  }
-
-  .desc {
-    font-size: 2.5rem;
-    border-bottom: 1px solid #e1e1e1;
-    font-weight: bold;
-    position: relative;
-    top: -30px;
-    color: #000;
-    padding: 20px;
-
-    &:before {
-      position: absolute;
-      content: "";
-      top: 50%;
-      left: 0;
-      width: 5px;
-      height: 40%;
-      transform: translateY(-50%);
-      background-color: purple;
+    .main_img {
+      width: 100%;
+      margin: 0 auto;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
     }
   }
-}
 
-.contents {
-  .slider-wrapper {
-    position: relative;
-    left: 30%;
-    top: 0;
-    width: 1600px;
-    overflow: hidden;
-
-    .slider {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      left: 0;
-      white-space: nowrap;
-      overflow: hidden;
-
-      .slide {
-        float: left;
-        width: 300px;
-        height: 300px;
-        background-color: black;
-        border-radius: 10px;
+  .info {
+    /*----------------------- main .info ------------------------ */
+    max-width: 1400px;
+    width: 100%;
+    padding: 250px 0;
+    margin: 0 auto;
+    @media screen and (min-width: 480px) and (max-width: 768px) {
+      & {
+        transition: 0.3s ease-in-out;
+        padding: 150px 0;
         overflow: hidden;
-        white-space: nowrap;
-        margin: 0 10px;
-        transition: 0.5s ease-in-out;
-        //border: 3px solid purple;
-        box-sizing: border-box;
-        cursor: pointer;
+      }
+    }
 
-        &:hover {
-          border: 5px solid rgb(142, 181, 240);
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+      & {
+        padding: 50px 0;
+        overflow: hidden;
+      }
+    }
+
+    .desc {
+      font-size: 2.5rem;
+      border-bottom: 1px solid #e1e1e1;
+      font-weight: bold;
+      position: relative;
+      top: -30px;
+      color: #000;
+      padding: 20px;
+
+      @media screen and (min-width: 480px) and (max-width: 768px) {
+        & {
+          font-size: 2rem;
+        }
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 479px) {
+        & {
+          font-size: 1.8rem;
+        }
+      }
+
+      &:before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 0;
+        width: 5px;
+        height: 40%;
+        transform: translateY(-50%);
+        background-color: purple;
+      }
+    }
+
+    .contents {
+      width: 100%;
+      height: initial;
+      position: relative;
+
+      @media screen and (min-width: 480px) and (max-width: 768px) {
+        & {
+          overflow: hidden;
+        }
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 479px) {
+        & {
+          overflow: hidden;
+        }
+      }
+
+      & .slider-wrapper {
+        position: relative;
+        left: 30%;
+        top: 0;
+        width: 1600px;
+        overflow: hidden;
+
+        @media screen and (min-width: 480px) and (max-width: 768px) {
+          & {
+            left: 20%;
+            transition: 0.3s ease-in-out;
+            overflow: hidden;
+          }
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 479px) {
+          & {
+            left: 20%;
+          }
+        }
+
+        .slider {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          left: 0;
+          white-space: nowrap;
+          overflow: hidden;
+
+          .slide {
+            float: left;
+            width: 300px;
+            height: 300px;
+            background-color: black;
+            border-radius: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 0 10px;
+            transition: 0.5s ease-in-out;
+            //border: 3px solid purple;
+            box-sizing: border-box;
+            cursor: pointer;
+
+            &:hover {
+              border: 5px solid rgb(142, 181, 240);
+            }
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center center;
+            }
+          }
+          &:after {
+            content: "";
+            clear: both;
+            display: block;
+          }
+        }
+      }
+
+      & .overlay {
+        position: fixed;
+        pointer-events: none;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #000;
+        z-index: 99;
+        overflow: hidden;
+        transition: 0.5s ease-in-out;
+        opacity: 0;
+
+        &.visible {
+          opacity: 1;
+          pointer-events: all;
+          overflow: hidden;
         }
 
         img {
-          width: 100%;
-          height: 100%;
+          position: absolute;
+          width: 40%;
+          height: 50%;
+          border-radius: 15px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          overflow: hidden;
+          background-color: aliceblue;
           object-fit: cover;
-          object-position: center center;
         }
       }
-      &:after {
-        content: "";
-        clear: both;
-        display: block;
-      }
     }
   }
-}
 
-.contents {
-  .overlay {
-    position: fixed;
-    pointer-events: none;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: #000;
-    z-index: 99;
-    overflow: hidden;
-    transition: 0.5s ease-in-out;
-    opacity: 0;
-
-    &.visible {
-      opacity: 1;
-      pointer-events: all;
-      overflow: hidden;
-    }
-
-    img {
-      position: absolute;
-      width: 40%;
-      height: 50%;
-      border-radius: 15px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      overflow: hidden;
-      background-color: aliceblue;
-      object-fit: cover;
-    }
-  }
-}
-
-/* -------------------------------------------------------------------------- */
-
-main {
   .benefits {
+    /*----------------------- main .benefits ------------------------ */
     position: relative;
     padding: 200px 0;
     @include content-resoure-path("rides.PNG");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    @media screen and (min-width: 480px) and (max-width: 768px) {
+      & {
+        padding: 150px 0;
+      }
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+      & {
+        padding: 100px 0;
+      }
+    }
 
     &:after {
       position: absolute;
@@ -206,6 +270,12 @@ main {
       top: -30px;
       color: white;
       padding: 20px;
+
+      @media screen and (min-width: 480px) and (max-width: 768px) {
+        & {
+          font-size: 2.5rem;
+        }
+      }
     }
 
     .listwrapper {
@@ -214,6 +284,14 @@ main {
       margin: 0 auto;
       z-index: 1;
       position: relative;
+
+      & .desc {
+        @media screen and (min-width: 320px) and (max-width: 479px) {
+          & {
+            font-size: 1.8rem;
+          }
+        }
+      }
 
       ul {
         width: 100%;
@@ -235,6 +313,22 @@ main {
         background-position: center;
         position: relative;
         overflow: hidden;
+
+        @media screen and (min-width: 480px) and (max-width: 768px) {
+          & {
+            height: 250px;
+            width: 20%;
+          }
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 479px) {
+          & {
+            margin: 5px 0;
+            height: 190px;
+            width: 35%;
+            padding: 0 10px;
+          }
+        }
 
         &:nth-child(2n) {
           position: relative;
@@ -279,6 +373,18 @@ main {
           width: 100%;
           position: relative;
 
+          @media screen and (min-width: 480px) and (max-width: 768px) {
+            & {
+              font-size: 7rem;
+            }
+          }
+
+          @media screen and (min-width: 320px) and (max-width: 479px) {
+            & {
+              font-size: 5rem;
+            }
+          }
+
           &:before {
             position: absolute;
             content: "";
@@ -298,12 +404,32 @@ main {
           font-weight: bold;
           color: black;
           line-height: 20px;
+
+          @media screen and (min-width: 480px) and (max-width: 768px) {
+            & {
+              font-size: 1.3rem;
+            }
+          }
+
+          @media screen and (min-width: 320px) and (max-width: 479px) {
+            & {
+              font-size: 1.1rem;
+              word-break: keep-all;
+            }
+          }
         }
 
         li {
           &:nth-child(2n) {
             position: relative;
             top: 20px;
+
+            @media screen and (min-width: 320px) and (max-width: 479px) {
+              & {
+                top: 0;
+                margin: 10px;
+              }
+            }
           }
         }
 
@@ -343,16 +469,21 @@ main {
             cursor: pointer;
             box-shadow: 1px 1px 20px rgb(77, 77, 77);
           }
+
+          @media screen and (min-width: 320px) and (max-width: 479px) {
+            & {
+              width: 35%;
+              padding: 15px 0;
+              font-size: 1.5rem;
+            }
+          }
         }
       }
     }
   }
-}
 
-/* -------------------------------letter----------------------------- */
-
-main {
   .letter {
+    /*----------------------- main .letter ------------------------ */
     width: 100%;
     margin: 0 auto;
     padding: 100px 0;
@@ -385,14 +516,40 @@ main {
       max-width: 1400px;
       width: 80%;
       z-index: 1;
+
+      @media screen and (min-width: 480px) and (max-width: 768px) {
+        & {
+          font-size: 2rem;
+        }
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 479px) {
+        & {
+          font-size: 1.8rem;
+        }
+      }
     }
 
     .form-wrapper {
       padding: 50px 0;
       width: 40%;
       max-width: 1400px;
+      min-width: 600px;
       margin: 0 auto;
       position: relative;
+
+      @media screen and (min-width: 480px) and (max-width: 768px) {
+        & {
+          width: 80%;
+        }
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 479px) {
+        & {
+          min-width: initial;
+          width: 80%;
+        }
+      }
 
       form {
         label {
@@ -405,6 +562,14 @@ main {
           box-shadow: 1px 1px 10px rgb(77, 77, 77);
           font-weight: bold;
           margin: 30px 0 10px 0;
+
+          @media screen and (min-width: 320px) and (max-width: 479px) {
+            & {
+              font-size: 1.5rem;
+              padding: 10px;
+              font-weight: normal;
+            }
+          }
         }
         input {
           width: 100%;
@@ -422,6 +587,13 @@ main {
             display: block;
             margin: 10px;
           }
+
+          @media screen and (min-width: 320px) and (max-width: 479px) {
+            & {
+              padding: 10px;
+              font-size: 1.5rem;
+            }
+          }
         }
         textarea {
           resize: none;
@@ -429,6 +601,12 @@ main {
           font-size: 1.8rem;
           box-sizing: border-box;
           padding: 10px;
+
+          @media screen and (min-width: 320px) and (max-width: 479px) {
+            & {
+              font-size: 1.5rem;
+            }
+          }
         }
 
         .customer-item {
@@ -438,6 +616,20 @@ main {
             margin: 10px;
             display: inline-block;
 
+            @media screen and (min-width: 480px) and (max-width: 768px) {
+              & {
+                box-sizing: border-box;
+                margin: 0 5px;
+              }
+            }
+
+            @media screen and (min-width: 320px) and (max-width: 479px) {
+              & {
+                width: 40%;
+                height: 150px;
+              }
+            }
+
             img {
               width: 100%;
               height: 90%;
@@ -445,6 +637,12 @@ main {
               border: 3px solid white;
               display: block;
               object-fit: cover;
+
+              @media screen and (min-width: 320px) and (max-width: 479px) {
+                & {
+                  height: 70%;
+                }
+              }
             }
           }
         }
@@ -458,173 +656,6 @@ main {
           border: transparent;
           background-color: #e1e1e1;
           margin-top: 50px;
-        }
-      }
-    }
-  }
-}
-
-/* --------------------------------------------------------------------------- */
-
-@media screen and (min-width: 480px) and (max-width: 768px) {
-  main {
-    .info {
-      transition: 0.3s ease-in-out;
-      padding: 150px 0;
-
-      .desc {
-        font-size: 2rem;
-      }
-
-      .contents {
-        overflow: hidden;
-
-        .slider-wrapper {
-          left: 20%;
-          transition: 0.3s ease-in-out;
-          overflow: hidden;
-        }
-      }
-    }
-
-    .benefits {
-      padding: 150px 0;
-
-      .desc {
-        font-size: 2.5rem;
-      }
-
-      .listwrapper {
-        .benefit {
-          height: 250px;
-          width: 20%;
-
-          .number {
-            font-size: 7rem;
-          }
-
-          p {
-            font-size: 1.3rem;
-          }
-        }
-      }
-    }
-
-    .letter {
-      .desc {
-        font-size: 2rem;
-      }
-
-      .form-wrapper {
-        width: 60%;
-
-        form {
-          .customer-item {
-            li {
-              box-sizing: border-box;
-              margin: 0 5px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 479px) {
-  main {
-    .banner {
-      height: 60vh;
-    }
-
-    .info {
-      padding: 50px 0;
-
-      .desc {
-        font-size: 1.8rem;
-      }
-
-      .contents {
-        overflow: hidden;
-
-        .slider-wrapper {
-          left: 20%;
-        }
-      }
-    }
-
-    .benefits {
-      padding: 100px 0;
-
-      .listwrapper {
-        .desc {
-          font-size: 1.8rem;
-        }
-
-        .benefit {
-          height: 200px;
-          width: 35%;
-
-          .number {
-            font-size: 5rem;
-          }
-
-          p {
-            font-size: 1.1rem;
-          }
-
-          &:nth-child(2n) {
-            top: 0;
-            margin: 10px;
-          }
-        }
-
-        .more {
-          button {
-            width: 35%;
-            padding: 15px 0;
-            font-size: 1.5rem;
-          }
-        }
-      }
-    }
-
-    .letter {
-      .desc {
-        font-size: 1.8rem;
-      }
-
-      .form-wrapper {
-        width: 80%;
-
-        form {
-          label {
-            font-size: 1.5rem;
-            padding: 10px;
-            font-weight: normal;
-          }
-
-          input {
-            padding: 10px;
-            font-size: 1.5rem;
-          }
-
-          textarea {
-            font-size: 1.5rem;
-          }
-
-          .customer-item {
-            li {
-              width: 40%;
-              height: 150px;
-
-              img {
-                img {
-                  height: 70%;
-                }
-              }
-            }
-          }
         }
       }
     }

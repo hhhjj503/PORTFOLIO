@@ -3,7 +3,7 @@
 @import url(../layout/header.css);
 @import url(../layout/footer.css);
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; /*  setting rem  */
   scroll-behavior: smooth;
 }
 
@@ -14,14 +14,13 @@ body {
 
 .top-nav {
   transition: 0.5s ease-in-out;
-  /* 상품구매창의 레이어를 위해 z-index  변경*/
-  z-index: 98;
+  z-index: 98; /* 상품구매창의 레이어를 위해 z-index  변경*/
 }
 .top-nav.scrolldown {
   opacity: 0;
 }
 .top-nav > .wrapper li:nth-child(4) a {
-  color: red;
+  color: red; /* nav 의 크러스티랜드 글자 빨갛게 변경 */
 }
 
 .top-nav-mobile {
@@ -38,16 +37,15 @@ a.hiding + * {
   opacity: 0;
 }
 
-/* ----------------------------------- main .goods-wrapper --------------------------------------- */
 main {
+  /* ----------------------------------- main  --------------------------------------- */
   background: url(../../../images/amusementpark/krustyland.PNG) no-repeat;
   background-size: cover;
   background-position: center center;
   position: relative;
-  /*----------------------- 상품목록------------------------ */
-  /*----------------------------------- 상품클릭시 구매창 ------------------------ */
 }
 main .goods-wrapper {
+  /*----------------------- main .goods-wrapper------------------------ */
   padding: 70px 0;
   max-width: 1400px;
   min-height: 1000px;
@@ -62,11 +60,23 @@ main .goods-wrapper .title {
   color: white;
   margin-bottom: 150px;
 }
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .goods-wrapper .title {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .goods-wrapper .title {
+    font-size: 2rem;
+    margin-bottom: 50px;
+  }
+}
 main .goods-wrapper .list-wrapper {
-  width: 100%;
+  width: 90%;
   position: relative;
   padding: 70px;
   box-sizing: border-box;
+  margin: 0 auto;
 }
 main .goods-wrapper .list-wrapper:before {
   content: "";
@@ -80,13 +90,20 @@ main .goods-wrapper .list-wrapper:before {
   opacity: 0.9;
   z-index: 0;
 }
-main .goods-wrapper .list-wrapper ul {
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .goods-wrapper .list-wrapper {
+    width: 100%;
+    padding: 0px;
+    padding-bottom: 50px;
+  }
+}
+main .goods-wrapper ul {
   width: 100%;
   min-height: 400px;
   position: relative;
   box-sizing: border-box;
 }
-main .goods-wrapper .list-wrapper ul li {
+main .goods-wrapper ul li {
   width: 210px;
   height: 210px;
   overflow: hidden;
@@ -95,10 +112,22 @@ main .goods-wrapper .list-wrapper ul li {
   transition: 0.3s ease-in-out;
   display: inline-block;
 }
-main .goods-wrapper .list-wrapper ul li:hover {
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .goods-wrapper ul li {
+    width: 43%;
+    margin: 10px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .goods-wrapper ul li {
+    width: 40%;
+    margin: 10px;
+  }
+}
+main .goods-wrapper ul li:hover {
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0.3em 0.3em 1em rgba(0, 0, 0, 0.1);
 }
-main .goods-wrapper .list-wrapper ul li a {
+main .goods-wrapper ul li a {
   display: inline-block;
   width: 100%;
   height: 100%;
@@ -106,18 +135,18 @@ main .goods-wrapper .list-wrapper ul li a {
   color: black;
   overflow: hidden;
 }
-main .goods-wrapper .list-wrapper ul li a img {
+main .goods-wrapper ul li a img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   transition: 0.3s ease-in-out;
 }
-main .goods-wrapper .list-wrapper ul li a:hover img {
+main .goods-wrapper ul li a:hover img {
   transform: scale(110%);
   transform-origin: center center;
 }
-main .goods-wrapper .list-wrapper ul li a h5 {
+main .goods-wrapper ul li a h5 {
   position: absolute;
   left: 50%;
   bottom: 10%;
@@ -132,7 +161,13 @@ main .goods-wrapper .list-wrapper ul li a h5 {
   text-align: center;
   transition: 0.3s ease-in-out;
 }
-main .goods-wrapper .list-wrapper button {
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .goods-wrapper ul li a h5 {
+    font-size: 1.3rem;
+    min-width: 50%;
+  }
+}
+main .goods-wrapper button {
   position: relative;
   z-index: 1;
   display: block;
@@ -147,34 +182,79 @@ main .goods-wrapper .list-wrapper button {
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
-main .goods-wrapper .list-wrapper button.nomore {
+main .goods-wrapper button.nomore {
   display: none;
 }
-main .goods-wrapper .list-wrapper button:hover {
+main .goods-wrapper button:hover {
   border: rgb(141, 0, 0);
 }
 main .purchase {
+  /*----------------------------------- main .purchase ------------------------ */
   position: fixed;
   bottom: 0;
-  width: 20%;
+  width: 21%;
   min-width: 380px;
   max-width: 450px;
   height: 100%;
   background-color: white;
   z-index: 99;
-  /* 열려있는 상품창 닫기버튼 */
-  /* 상품이미지 , 상품명 */
-  /*----------------------------------- 상품개수 ------------------------ */
-  /*----------------------------------- 총합계 ------------------------ */
-  /*----------------------------------- 구매버튼 ------------------------ */
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .purchase {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: initial;
+    min-width: initial;
+    height: 40%;
+    background-color: white;
+    z-index: 99;
+    box-shadow: -1px -1px 20px rgb(192, 192, 192);
+    overflow-y: scroll;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .purchase {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: initial;
+    min-width: initial;
+    height: 50%;
+    background-color: white;
+    z-index: 99;
+    box-shadow: -1px -1px 20px rgb(192, 192, 192);
+    overflow-y: scroll;
+  }
 }
 main .purchase.close {
   right: -9999em;
 }
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .purchase.close {
+    bottom: -9999em;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .purchase.close {
+    bottom: -9999em;
+  }
+}
 main .purchase.open {
   right: 0;
 }
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .purchase.open {
+    bottom: 0;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .purchase.open {
+    bottom: 0;
+  }
+}
 main .purchase .purchase-close-btn {
+  /*----------------------------------- .purchase .purchase-close-btn ------------------------ */
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -184,6 +264,31 @@ main .purchase .purchase-close-btn {
   right: 20px;
   cursor: pointer;
 }
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .purchase .purchase-close-btn {
+    top: 30px;
+    right: 30px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .purchase .purchase-close-btn {
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    right: 10px;
+  }
+  main .purchase .purchase-close-btn span {
+    height: 3px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .purchase .purchase-close-btn {
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    right: 10px;
+  }
+}
 main .purchase .purchase-close-btn span {
   width: 100%;
   height: 5px;
@@ -192,6 +297,16 @@ main .purchase .purchase-close-btn span {
   display: block;
   top: 50%;
   transform: translateY(-50%);
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .purchase .purchase-close-btn span {
+    height: 3px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .purchase .purchase-close-btn span {
+    height: 3px;
+  }
 }
 main .purchase .purchase-close-btn span:nth-child(1) {
   transform: rotate(45deg);
@@ -205,47 +320,152 @@ main .purchase img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .purchase .goods-title {
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .purchase img {
+    float: left;
+    box-sizing: border-box;
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .purchase img {
+    width: 70%;
+    height: 50%;
+    margin: 0 auto;
+    display: block;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .purchase .purchase-info {
+    height: 100%;
+    overflow: auto;
+    float: right;
+    width: 50%;
+    box-sizing: border-box;
+    height: 100%;
+    vertical-align: text-bottom;
+  }
+}
+main .purchase .purchase-info .goods-title {
   font-size: 2.3rem;
-  padding: 10px;
+  padding: 20px;
 }
-main .purchase .goods-price {
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .purchase .purchase-info .goods-title {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 2rem;
+    padding: 30px 40px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .purchase .purchase-info .goods-title {
+    font-size: 1.6rem;
+    padding: 10px 20px;
+  }
+}
+main .purchase .purchase-info .goods-price {
   border-bottom: 1px solid #dddfe1;
-  padding: 20px 10px;
+  padding: 20px;
 }
-main .purchase .goods-price:after {
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .purchase .purchase-info .goods-price {
+    border-bottom: 1px solid #dddfe1;
+    padding: 15px 40px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .purchase .purchase-info .goods-price {
+    border-bottom: 1px solid #dddfe1;
+    padding: 10px 20px;
+  }
+}
+main .purchase .purchase-info .goods-price:after {
   content: "";
   clear: both;
   display: block;
 }
-main .purchase .goods-price .per-price {
+main .purchase .purchase-info .goods-price .per-price {
   font-size: 2.5rem;
   font-weight: bold;
   float: left;
 }
-main .purchase .goods-price .dib img {
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .purchase .purchase-info .goods-price .per-price {
+    font-size: 2rem;
+    font-weight: bold;
+    float: left;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .purchase .purchase-info .goods-price .per-price {
+    font-size: 2rem;
+    font-weight: bold;
+    float: left;
+  }
+}
+main .purchase .purchase-info .goods-price .dib img {
   width: 20px;
   height: 20px;
   float: right;
   cursor: pointer;
 }
-main .purchase .goods-quantity {
-  padding: 20px 10px;
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .purchase .purchase-info .goods-price .dib img {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .purchase .purchase-info .goods-price .dib img {
+    width: 18px;
+    height: 18px;
+  }
+}
+main .purchase .purchase-info .goods-quantity {
+  /*----------------------------------- .purchase .goods-quantity ------------------------ */
+  padding: 20px;
   border-bottom: 1px solid #dddfe1;
 }
-main .purchase .goods-quantity:after {
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .purchase .purchase-info .goods-quantity {
+    padding: 15px 40px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .purchase .purchase-info .goods-quantity {
+    padding: 10px 20px;
+  }
+}
+main .purchase .purchase-info .goods-quantity:after {
   content: "";
   clear: both;
   display: block;
 }
-main .purchase .goods-quantity .number-title {
+main .purchase .purchase-info .goods-quantity .number-title {
   font-size: 2.2rem;
   float: left;
 }
-main .purchase .goods-quantity .quantity-box {
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .purchase .purchase-info .goods-quantity .number-title {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .purchase .purchase-info .goods-quantity .number-title {
+    font-size: 1.7rem;
+  }
+}
+main .purchase .purchase-info .goods-quantity .quantity-box {
   float: right;
 }
-main .purchase .goods-quantity .quantity-box button {
+main .purchase .purchase-info .goods-quantity .quantity-box button {
   border-radius: 50%;
   border: none;
   width: 25px;
@@ -254,29 +474,89 @@ main .purchase .goods-quantity .quantity-box button {
   line-height: 25px;
   cursor: pointer;
 }
-main .purchase .goods-quantity .quantity {
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .purchase .purchase-info .goods-quantity .quantity-box button {
+    width: 20px;
+    height: 20px;
+    font-size: 1.9rem;
+    line-height: 20px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .purchase .purchase-info .goods-quantity .quantity-box button {
+    width: 20px;
+    height: 20px;
+    font-size: 1.9rem;
+    line-height: 20px;
+  }
+}
+main .purchase .purchase-info .goods-quantity .quantity {
   font-size: 2.3rem;
   margin: 0 20px;
 }
-main .purchase .goods-total-price {
-  padding: 20px 10px;
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .purchase .purchase-info .goods-quantity .quantity {
+    font-size: 1.7rem;
+    margin: 0 20px;
+  }
 }
-main .purchase .goods-total-price:after {
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .purchase .purchase-info .goods-quantity .quantity {
+    font-size: 1.7rem;
+    margin: 0 20px;
+  }
+}
+main .purchase .purchase-info .goods-total-price {
+  /*----------------------------------- .purchase .goods-total-price ------------------------ */
+  padding: 20px;
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .purchase .purchase-info .goods-total-price {
+    padding: 15px 40px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .purchase .purchase-info .goods-total-price {
+    padding: 10px 20px;
+  }
+}
+main .purchase .purchase-info .goods-total-price:after {
   content: "";
   clear: both;
   display: block;
 }
-main .purchase .goods-total-price .total-title {
+main .purchase .purchase-info .goods-total-price .total-title {
   float: left;
   font-size: 2.3rem;
 }
-main .purchase .goods-total-price .total-price {
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .purchase .purchase-info .goods-total-price .total-title {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .purchase .purchase-info .goods-total-price .total-title {
+    font-size: 1.7rem;
+  }
+}
+main .purchase .purchase-info .goods-total-price .total-price {
   float: right;
   color: red;
   font-weight: bold;
   font-size: 2.5rem;
 }
-main .purchase .purchase-btn {
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .purchase .purchase-info .goods-total-price .total-price {
+    font-size: 1.9rem;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .purchase .purchase-info .goods-total-price .total-price {
+    font-size: 1.9rem;
+  }
+}
+main .purchase .purchase-info .purchase-btn {
+  /*----------------------------------- .purchase .purchase-btn ------------------------ */
   width: 90%;
   display: block;
   margin-top: 50px;
@@ -289,8 +569,24 @@ main .purchase .purchase-btn {
   color: white;
   background-color: #000;
 }
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .purchase .purchase-info .purchase-btn {
+    width: 60%;
+    padding: 10px 10px;
+    margin: 30px auto 30px auto;
+    font-size: 1.7rem;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .purchase .purchase-info .purchase-btn {
+    width: 80%;
+    padding: 10px 10px;
+    margin: 30px auto 30px auto;
+    font-size: 1.7rem;
+  }
+}
 
-/* --------------------------------------------------------------------------- */
+/* ------------------------------- animation ------------------------------------- */
 @-webkit-keyframes fadeOut {
   0% {
     display: none;
@@ -307,209 +603,5 @@ main .purchase .purchase-btn {
   }
   100% {
     opacity: 100%;
-  }
-}
-/* --------------------------------------------------------------------------- */
-@media screen and (min-width: 480px) and (max-width: 768px) {
-  main .goods-wrapper .title {
-    font-size: 2.5rem;
-  }
-  main .goods-wrapper .list-wrapper ul li {
-    width: 43%;
-    margin: 10px;
-  }
-  main .purchase {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    max-width: initial;
-    min-width: initial;
-    height: 50%;
-    background-color: white;
-    z-index: 99;
-    box-shadow: -1px -1px 20px rgb(192, 192, 192);
-    overflow: scroll;
-    /* 열려있는 상품창 닫기버튼 */
-    /* 상품이미지 , 상품명 */
-    /*----------------------------------- 상품개수 ------------------------ */
-    /*----------------------------------- 총합계 ------------------------ */
-    /*----------------------------------- 구매버튼 ------------------------ */
-  }
-  main .purchase.close {
-    bottom: -9999em;
-  }
-  main .purchase.open {
-    bottom: 0;
-  }
-  main .purchase .purchase-close-btn {
-    width: 30px;
-    height: 30px;
-    top: 10px;
-    right: 10px;
-  }
-  main .purchase .purchase-close-btn span {
-    height: 3px;
-  }
-  main .purchase img {
-    width: 60%;
-    height: 50%;
-    margin: 0 auto;
-    display: block;
-    -o-object-fit: contain;
-       object-fit: contain;
-  }
-  main .purchase .goods-title {
-    font-size: 1.6rem;
-    padding: 10px 40px;
-  }
-  main .purchase .goods-price {
-    border-bottom: 1px solid #dddfe1;
-    padding: 10px 40px;
-  }
-  main .purchase .goods-price .per-price {
-    font-size: 2rem;
-    font-weight: bold;
-    float: left;
-  }
-  main .purchase .goods-price .dib img {
-    width: 18px;
-    height: 18px;
-  }
-  main .purchase .goods-quantity {
-    padding: 10px 40px;
-  }
-  main .purchase .goods-quantity .number-title {
-    font-size: 1.7rem;
-  }
-  main .purchase .goods-quantity .quantity-box button {
-    width: 20px;
-    height: 20px;
-    font-size: 1.9rem;
-    line-height: 20px;
-  }
-  main .purchase .goods-quantity .quantity {
-    font-size: 1.7rem;
-    margin: 0 20px;
-  }
-  main .purchase .goods-total-price {
-    padding: 10px 40px;
-  }
-  main .purchase .goods-total-price .total-title {
-    font-size: 1.7rem;
-  }
-  main .purchase .goods-total-price .total-price {
-    font-size: 1.9rem;
-  }
-  main .purchase .purchase-btn {
-    width: 60%;
-    padding: 10px 10px;
-    margin: 30px auto 30px auto;
-    font-size: 1.7rem;
-  }
-}
-@media screen and (min-width: 320px) and (max-width: 479px) {
-  main .goods-wrapper .title {
-    font-size: 2rem;
-    margin-bottom: 50px;
-  }
-  main .goods-wrapper .list-wrapper {
-    padding: 0px;
-    padding-bottom: 50px;
-  }
-  main .goods-wrapper .list-wrapper ul li {
-    width: 40%;
-    margin: 10px;
-  }
-  main .goods-wrapper .list-wrapper ul li a h5 {
-    font-size: 1.3rem;
-    min-width: 50%;
-  }
-  main .purchase {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    max-width: initial;
-    min-width: initial;
-    height: 50%;
-    background-color: white;
-    z-index: 99;
-    box-shadow: -1px -1px 20px rgb(192, 192, 192);
-    overflow: scroll;
-    /* 열려있는 상품창 닫기버튼 */
-    /* 상품이미지 , 상품명 */
-    /*----------------------------------- 상품개수 ------------------------ */
-    /*----------------------------------- 총합계 ------------------------ */
-    /*----------------------------------- 구매버튼 ------------------------ */
-  }
-  main .purchase.close {
-    bottom: -9999em;
-  }
-  main .purchase.open {
-    bottom: 0;
-  }
-  main .purchase .purchase-close-btn {
-    width: 30px;
-    height: 30px;
-    top: 10px;
-    right: 10px;
-  }
-  main .purchase .purchase-close-btn span {
-    height: 3px;
-  }
-  main .purchase img {
-    width: 70%;
-    height: 50%;
-    margin: 0 auto;
-    display: block;
-    -o-object-fit: contain;
-       object-fit: contain;
-  }
-  main .purchase .goods-title {
-    font-size: 1.6rem;
-    padding: 10px 20px;
-  }
-  main .purchase .goods-price {
-    border-bottom: 1px solid #dddfe1;
-    padding: 10px 20px;
-  }
-  main .purchase .goods-price .per-price {
-    font-size: 2rem;
-    font-weight: bold;
-    float: left;
-  }
-  main .purchase .goods-price .dib img {
-    width: 18px;
-    height: 18px;
-  }
-  main .purchase .goods-quantity {
-    padding: 10px 20px;
-  }
-  main .purchase .goods-quantity .number-title {
-    font-size: 1.7rem;
-  }
-  main .purchase .goods-quantity .quantity-box button {
-    width: 20px;
-    height: 20px;
-    font-size: 1.9rem;
-    line-height: 20px;
-  }
-  main .purchase .goods-quantity .quantity {
-    font-size: 1.7rem;
-    margin: 0 20px;
-  }
-  main .purchase .goods-total-price {
-    padding: 10px 20px;
-  }
-  main .purchase .goods-total-price .total-title {
-    font-size: 1.7rem;
-  }
-  main .purchase .goods-total-price .total-price {
-    font-size: 1.9rem;
-  }
-  main .purchase .purchase-btn {
-    width: 80%;
-    padding: 10px 10px;
-    margin: 30px auto 30px auto;
-    font-size: 1.7rem;
   }
 }/*# sourceMappingURL=krustyland.css.map */
