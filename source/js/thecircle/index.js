@@ -102,6 +102,9 @@ window.addEventListener("load", () => {
     }
   }
 
+  /**
+   * 스크롤이 현재 이동중인지를 확인하는 함수
+   */
   function movingCheck() {
     moving = true;
     setTimeout(function () {
