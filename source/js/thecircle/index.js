@@ -15,7 +15,7 @@ window.addEventListener("load", () => {
     input.setAttribute("type", "radio");
     input.setAttribute("id", `slide_control${i}`);
     input.setAttribute("data-left", `${left}`);
-    if (i == 0) {
+    if (i === 0) {
       input.checked = true;
     }
     slider.insertBefore(input, pageLabels);
@@ -44,35 +44,49 @@ window.addEventListener("load", () => {
 
   let currentWheelIndex = 0;
   const maxWheelIndex = labels.length - 1;
+  let moving = false;
 
   //label 에 클릭이벤트 추가 , wheelIndex 변경
   for (let i = 0; i < labels.length; i++) {
     labels[i].addEventListener("click", () => {
-      changeImage(inputs[i], labels[i]);
-      const leftValue = inputs[i].dataset.left;
-      moveLeft(leftValue);
-      currentWheelIndex = i;
+      if (moving === false) {
+        movingCheck();
+        changeImage(inputs[i], labels[i]);
+        const leftValue = inputs[i].dataset.left;
+        moveLeft(leftValue);
+        currentWheelIndex = i;
+      }
     });
   }
 
   //마우스 휠 스크롤 슬라이드 만들기
   window.addEventListener("wheel", (e) => {
-    if (e.deltaY > 0) {
-      ++currentWheelIndex;
-      if (currentWheelIndex > maxWheelIndex) currentWheelIndex = 0;
-      const leftValue = inputs[currentWheelIndex].dataset.left;
-      changeImage(inputs[currentWheelIndex], labels[currentWheelIndex]);
-      moveLeft(leftValue);
-    }
-    if (e.deltaY < 0) {
-      --currentWheelIndex;
-      if (currentWheelIndex < 0) currentWheelIndex = 4;
-      const leftValue = inputs[currentWheelIndex].dataset.left;
-      changeImage(inputs[currentWheelIndex], labels[currentWheelIndex]);
-      moveLeft(leftValue);
+    if (moving === false) {
+      if (e.deltaY > 0) {
+        movingCheck();
+        ++currentWheelIndex;
+        if (currentWheelIndex > maxWheelIndex) currentWheelIndex = 0;
+        const leftValue = inputs[currentWheelIndex].dataset.left;
+        changeImage(inputs[currentWheelIndex], labels[currentWheelIndex]);
+        moveLeft(leftValue);
+      }
+
+      if (e.deltaY < 0) {
+        movingCheck();
+        --currentWheelIndex;
+        if (currentWheelIndex < 0) currentWheelIndex = 4;
+        const leftValue = inputs[currentWheelIndex].dataset.left;
+        changeImage(inputs[currentWheelIndex], labels[currentWheelIndex]);
+        moveLeft(leftValue);
+      }
     }
   });
 
+  /**
+   * input 엘리먼트와 label 엘리먼트의 class 속성을 추가하는 함수
+   * @param {element} input
+   * @param {element} label
+   */
   function changeImage(input, label) {
     for (let i = 0; i < labels.length; i++) {
       inputs[i].classList.remove("checked");
@@ -86,5 +100,12 @@ window.addEventListener("load", () => {
     for (let i = 0; i < slides.length; i++) {
       slides[i].style.transform = `translateX(-${leftValue}%)`;
     }
+  }
+
+  function movingCheck() {
+    moving = true;
+    setTimeout(function () {
+      moving = false;
+    }, 1000);
   }
 });
