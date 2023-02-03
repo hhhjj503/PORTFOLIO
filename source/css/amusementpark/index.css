@@ -119,9 +119,14 @@ main .wrapper .type .description .desc {
     width: 60%;
   }
 }
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (min-width: 480px) and (max-width: 768px) {
   main .wrapper .type .description .desc {
+    height: 60%;
     width: 60%;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 @media screen and (min-width: 320px) and (max-width: 479px) {
@@ -169,11 +174,14 @@ main .wrapper .type .description .desc .title {
     width: 90%;
   }
 }
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (min-width: 480px) and (max-width: 768px) {
   main .wrapper .type .description .desc .title {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     width: 100%;
-    line-height: 25px;
+    line-height: 35px;
+    text-align: center;
+    padding: 0 50px;
+    box-sizing: border-box;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 479px) {
@@ -191,6 +199,13 @@ main .wrapper .nightshow {
   height: 100%;
   display: inline-block;
 }
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .wrapper .nightshow {
+    float: left;
+    width: 50%;
+    height: 50vh;
+  }
+}
 @media screen and (min-width: 320px) and (max-width: 479px) {
   main .wrapper .nightshow {
     display: block;
@@ -201,6 +216,11 @@ main .wrapper .nightshow {
 main .wrapper .nightshow:hover {
   width: var(--hoveredwidth);
   cursor: pointer;
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .wrapper .nightshow:hover {
+    width: 50%;
+  }
 }
 @media screen and (min-width: 320px) and (max-width: 479px) {
   main .wrapper .nightshow:hover {
@@ -219,6 +239,13 @@ main .wrapper .rollercoaster {
   height: 100%;
   display: inline-block;
 }
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .wrapper .rollercoaster {
+    float: left;
+    width: 50%;
+    height: 50vh;
+  }
+}
 @media screen and (min-width: 320px) and (max-width: 479px) {
   main .wrapper .rollercoaster {
     display: block;
@@ -229,6 +256,11 @@ main .wrapper .rollercoaster {
 main .wrapper .rollercoaster:hover {
   width: var(--hoveredwidth);
   cursor: pointer;
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .wrapper .rollercoaster:hover {
+    width: 50%;
+  }
 }
 @media screen and (min-width: 320px) and (max-width: 479px) {
   main .wrapper .rollercoaster:hover {
@@ -247,6 +279,13 @@ main .wrapper .krustyland {
   height: 100%;
   display: inline-block;
 }
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .wrapper .krustyland {
+    float: left;
+    width: 50%;
+    height: 50vh;
+  }
+}
 @media screen and (min-width: 320px) and (max-width: 479px) {
   main .wrapper .krustyland {
     display: block;
@@ -257,6 +296,11 @@ main .wrapper .krustyland {
 main .wrapper .krustyland:hover {
   width: var(--hoveredwidth);
   cursor: pointer;
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .wrapper .krustyland:hover {
+    width: 50%;
+  }
 }
 @media screen and (min-width: 320px) and (max-width: 479px) {
   main .wrapper .krustyland:hover {
@@ -275,6 +319,13 @@ main .wrapper .aquarium {
   height: 100%;
   display: inline-block;
 }
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .wrapper .aquarium {
+    float: left;
+    width: 50%;
+    height: 50vh;
+  }
+}
 @media screen and (min-width: 320px) and (max-width: 479px) {
   main .wrapper .aquarium {
     display: block;
@@ -285,6 +336,11 @@ main .wrapper .aquarium {
 main .wrapper .aquarium:hover {
   width: var(--hoveredwidth);
   cursor: pointer;
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .wrapper .aquarium:hover {
+    width: 50%;
+  }
 }
 @media screen and (min-width: 320px) and (max-width: 479px) {
   main .wrapper .aquarium:hover {
