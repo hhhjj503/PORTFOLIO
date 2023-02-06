@@ -635,6 +635,10 @@ main .purchase .purchase-info .purchase-btn {
   }
 }
 
+footer {
+  background-color: white;
+}
+
 /* ------------------------------- animation ------------------------------------- */
 @-webkit-keyframes fadeOut {
   0% {
