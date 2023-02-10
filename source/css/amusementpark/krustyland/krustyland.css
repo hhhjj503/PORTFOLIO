@@ -247,6 +247,30 @@ main .purchase {
   height: 100%;
   background-color: white;
   z-index: 99;
+  overflow: auto;
+  /* Add a thumb */
+}
+main .purchase::-webkit-scrollbar {
+  width: 10px;
+  height: 8px;
+  background-color: #d5d5d5; /* or add it to the track */
+}
+main .purchase::-webkit-scrollbar-thumb {
+  background: #5e5e5e;
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .purchase::-webkit-scrollbar {
+    width: 8px;
+    height: 6px;
+    background-color: #d5d5d5; /* or add it to the track */
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) and (min-width: 320px) and (max-width: 479px) {
+  main .purchase::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background-color: #d5d5d5; /* or add it to the track */
+  }
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
   main .purchase {
@@ -404,6 +428,29 @@ main .purchase img {
 main .purchase .purchase-info .goods-title {
   font-size: 2.3rem;
   padding: 20px;
+}
+main .purchase .purchase-info .goods-title .review-count {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 5px;
+  display: inline-block;
+  cursor: pointer;
+  color: red;
+  position: relative;
+  vertical-align: top;
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .purchase .purchase-info .goods-title .review-count {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .purchase .purchase-info .goods-title .review-count {
+    font-size: 1.6rem;
+  }
+}
+main .purchase .purchase-info .goods-title .review-count:hover {
+  text-decoration: underline;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
   main .purchase .purchase-info .goods-title {
@@ -617,6 +664,7 @@ main .purchase .purchase-info .purchase-btn {
   border: none;
   color: white;
   background-color: #000;
+  border-bottom: 1px solid #dddfe1;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
   main .purchase .purchase-info .purchase-btn {
@@ -634,21 +682,101 @@ main .purchase .purchase-info .purchase-btn {
     font-size: 1.7rem;
   }
 }
+main .purchase .goods-review {
+  /*----------------------------------- .purchase .goods-review ------------------------ */
+  width: 100%;
+  padding: 20px 0;
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .purchase .goods-review {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .purchase .goods-review {
+    padding: 0;
+  }
+}
+main .purchase .goods-review table {
+  width: 100%;
+}
+main .purchase .goods-review table tr {
+  display: none;
+  border-bottom: 1px solid #ddd;
+}
+main .purchase .goods-review table tr.active {
+  display: block;
+}
+main .purchase .goods-review table td {
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 1.7rem;
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .purchase .goods-review table td {
+    padding: 5px 10px;
+    font-size: 1.6rem;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .purchase .goods-review table td {
+    padding: 10px 5px;
+    font-size: 1.4rem;
+  }
+}
+main .purchase .goods-review table td.customer-id {
+  width: 20%;
+}
+main .purchase .goods-review table .register-date {
+  width: 20%;
+}
+main .purchase .goods-review table .review {
+  width: 60%;
+}
+main .purchase .review-wrapper {
+  /*----------------------------------- .purchase .review-pager ------------------------ */
+  width: 100%;
+}
+main .purchase .review-wrapper ul {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+}
+main .purchase .review-wrapper ul li {
+  display: inline-block;
+}
+main .purchase .review-wrapper ul li a {
+  width: 100%;
+  text-decoration: none;
+  font-size: 1.8rem;
+  margin: 0 5px;
+  padding: 5px 10px;
+  color: black;
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .purchase .review-wrapper ul li a {
+    padding: 3px 8px;
+    font-size: 1.6rem;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .purchase .review-wrapper ul li a {
+    padding: 2px 6px;
+    font-size: 1.4rem;
+  }
+}
+main .purchase .review-wrapper ul li.active a {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
 
 footer {
   background-color: white;
 }
 
 /* ------------------------------- animation ------------------------------------- */
-@-webkit-keyframes fadeOut {
-  0% {
-    display: none;
-    opacity: 0;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
 @keyframes fadeOut {
   0% {
     display: none;

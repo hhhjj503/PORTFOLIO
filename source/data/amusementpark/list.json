@@ -2,57 +2,68 @@
   {
     "title": "알파카 인형",
     "imagePath": "../../source/images/amusementpark/krustyland/alpaca.JPG",
-    "price": 25000
+    "price": 25000,
+    "reviewCount": 10
   },
   {
     "title": "배트맨 덕",
     "imagePath": "../../source/images/amusementpark/krustyland/batman_duck.JPG",
-    "price": 17000
+    "price": 17000,
+    "reviewCount": 3
   },
   {
     "title": "곰 인형",
     "imagePath": "../../source/images/amusementpark/krustyland/bear.JPG",
-    "price": 15000
+    "price": 15000,
+    "reviewCount": 18
   },
   {
     "title": "고양이 인형",
     "imagePath": "../../source/images/amusementpark/krustyland/cat.JPG",
-    "price": 15000
+    "price": 15000,
+    "reviewCount": 7
   },
   {
     "title": "다이노공룡",
     "imagePath": "../../source/images/amusementpark/krustyland/dinosaur.JPG",
-    "price": 25000
+    "price": 25000,
+    "reviewCount": 0
   },
   {
     "title": "호기심 기린",
     "imagePath": "../../source/images/amusementpark/krustyland/green_giraffe.JPG",
-    "price": 17000
+    "price": 17000,
+    "reviewCount": 3
   },
   {
     "title": "손들어냥",
     "imagePath": "../../source/images/amusementpark/krustyland/handsupcat.JPG",
-    "price": 10000
+    "price": 10000,
+    "reviewCount": 3
   },
 
   {
     "title": "원숭이 인형",
     "imagePath": "../../source/images/amusementpark/krustyland/monkey.JPG",
-    "price": 15000
+    "price": 15000,
+    "reviewCount": 12
   },
   {
     "title": "이상해C",
     "imagePath": "../../source/images/amusementpark/krustyland/pokemon.JPG",
-    "price": 20000
+    "price": 20000,
+    "reviewCount": 8
   },
   {
     "title": "레고기차",
     "imagePath": "../../source/images/amusementpark/krustyland/train.JPG",
-    "price": 150000
+    "price": 150000,
+    "reviewCount": 5
   },
   {
     "title": "장난감 트럭",
     "imagePath": "../../source/images/amusementpark/krustyland/trucks.JPG",
-    "price": 30000
+    "price": 30000,
+    "reviewCount": 20
   }
 ]
