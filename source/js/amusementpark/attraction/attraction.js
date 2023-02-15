@@ -17,25 +17,6 @@ window.addEventListener("load", () => {
   //attraction offsetTop push
   pushWindowInnerHeight();
 
-  //pageNav click event
-  for (let i = 0; i < attractionNav.length; i++) {
-    attractionNav[i].addEventListener("click", (e) => {
-      e.preventDefault();
-      //
-      for (let j = 0; j < attractionNav.length; j++) {
-        removeClass(attractionNav[j], "active");
-      }
-      window.scrollTo(0, attractionsOffsetTop[i]);
-      addClass(attractionNav[i], "active");
-      showElements(hidings[i]);
-    });
-  }
-
-  //어트랙션별 offsettop 위치를 data-offtop 값으로 설정
-  for (let i = 0; i < hidings.length; i++) {
-    hidings[i].dataset.offtop = hidings[i].getBoundingClientRect().top;
-  }
-
   window.addEventListener("scroll", () => {
     const currentTop = html.scrollTop;
     for (let i = 0; i < hidings.length; i++) {
@@ -54,6 +35,25 @@ window.addEventListener("load", () => {
   window.addEventListener("resize", function () {
     pushWindowInnerHeight();
   });
+
+  //pageNav click event
+  for (let i = 0; i < attractionNav.length; i++) {
+    attractionNav[i].addEventListener("click", (e) => {
+      e.preventDefault();
+      //
+      for (let j = 0; j < attractionNav.length; j++) {
+        removeClass(attractionNav[j], "active");
+      }
+      window.scrollTo(0, attractionsOffsetTop[i]);
+      addClass(attractionNav[i], "active");
+      showElements(hidings[i]);
+    });
+  }
+
+  //어트랙션별 offsettop 위치를 data-offtop 값으로 설정
+  for (let i = 0; i < hidings.length; i++) {
+    hidings[i].dataset.offtop = hidings[i].getBoundingClientRect().top;
+  }
 
   /**
    * 엘리먼트의 css 를 변경
