@@ -11,12 +11,11 @@ window.addEventListener("load", () => {
   const wheelDown = document.querySelector(".wheel-down");
   const attractionNav = document.querySelectorAll(".attraction-nav a");
   const attractions = document.querySelectorAll(".attraction");
-  const attractionsOffsetTop = [];
+  let attractionsOffsetTop = [];
+  let userScreenHeight = 0;
 
   //attraction offsetTop push
-  for (let i = 0; i < attractions.length; i++) {
-    attractionsOffsetTop.push(attractions[i].offsetTop);
-  }
+  getWindowInnerHeight();
 
   //pageNav click event
   for (let i = 0; i < attractionNav.length; i++) {
@@ -52,6 +51,10 @@ window.addEventListener("load", () => {
     }
   });
 
+  window.addEventListener("resize", function () {
+    getWindowInnerHeight();
+  });
+
   /**
    * 엘리먼트의 css 를 변경
    * @param {element} element
@@ -77,6 +80,19 @@ window.addEventListener("load", () => {
    */
   function addClass(element, className) {
     element.classList.add(className);
+  }
+
+  /**
+   * 사용자의 window.innerHeight 를 가져와
+   * 배수로 증가하여 offset 배열에 추가하는 함수
+   */
+  function getWindowInnerHeight() {
+    userScreenHeight = 0;
+    attractionsOffsetTop = [];
+    for (let i = 0; i < attractions.length; i++) {
+      attractionsOffsetTop.push(userScreenHeight);
+      userScreenHeight += window.innerHeight;
+    }
   }
 
   window.addEventListener("scroll", () => {

@@ -101,22 +101,22 @@ main > .wrapper .attraction-nav li {
 }
 main > .wrapper .attraction-nav li a {
   display: block;
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background-color: white;
   transition: 0.2s ease-in-out;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
   main > .wrapper .attraction-nav li a {
-    width: 8px;
-    height: 8px;
+    width: 15px;
+    height: 15px;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 479px) {
   main > .wrapper .attraction-nav li a {
-    width: 6px;
-    height: 6px;
+    width: 10px;
+    height: 10px;
   }
 }
 main > .wrapper .attraction-nav li a.active {
