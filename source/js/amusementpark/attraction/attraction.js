@@ -15,7 +15,7 @@ window.addEventListener("load", () => {
   let userScreenHeight = 0;
 
   //attraction offsetTop push
-  getWindowInnerHeight();
+  pushWindowInnerHeight();
 
   //pageNav click event
   for (let i = 0; i < attractionNav.length; i++) {
@@ -52,7 +52,7 @@ window.addEventListener("load", () => {
   });
 
   window.addEventListener("resize", function () {
-    getWindowInnerHeight();
+    pushWindowInnerHeight();
   });
 
   /**
@@ -86,7 +86,7 @@ window.addEventListener("load", () => {
    * 사용자의 window.innerHeight 를 가져와
    * 배수로 증가하여 offset 배열에 추가하는 함수
    */
-  function getWindowInnerHeight() {
+  function pushWindowInnerHeight() {
     userScreenHeight = 0;
     attractionsOffsetTop = [];
     for (let i = 0; i < attractions.length; i++) {
