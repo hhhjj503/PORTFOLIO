@@ -44,7 +44,7 @@ window.addEventListener("load", () => {
       for (let j = 0; j < attractionNav.length; j++) {
         removeClass(attractionNav[j], "active");
       }
-      window.scrollTo(0, attractionsOffsetTop[i]);
+      html.scrollTop = attractionsOffsetTop[i];
       addClass(attractionNav[i], "active");
       showElements(hidings[i]);
     });
