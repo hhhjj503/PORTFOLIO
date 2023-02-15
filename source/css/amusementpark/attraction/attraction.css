@@ -89,6 +89,40 @@ main > .wrapper .wheel-down .deco:nth-child(2) {
   position: relative;
   top: -2vh;
 }
+main > .wrapper .attraction-nav {
+  position: fixed;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  z-index: 20;
+}
+main > .wrapper .attraction-nav li {
+  margin: 10px 0;
+}
+main > .wrapper .attraction-nav li a {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  transition: 0.2s ease-in-out;
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main > .wrapper .attraction-nav li a {
+    width: 8px;
+    height: 8px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main > .wrapper .attraction-nav li a {
+    width: 6px;
+    height: 6px;
+  }
+}
+main > .wrapper .attraction-nav li a.active {
+  background-color: rgb(246, 72, 246);
+  box-shadow: 1px 1px 10px rgb(199, 199, 199);
+}
 main > .wrapper .attraction {
   max-width: initial;
   width: 100%;

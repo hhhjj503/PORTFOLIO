@@ -9,6 +9,28 @@ window.addEventListener("load", () => {
   //어트랙션 페이지의 변수
   const hidings = document.querySelectorAll("a.hiding + *"); //a 태그 다음의 엘리먼트 한개만 선택
   const wheelDown = document.querySelector(".wheel-down");
+  const attractionNav = document.querySelectorAll(".attraction-nav a");
+  const attractions = document.querySelectorAll(".attraction");
+  const attractionsOffsetTop = [];
+
+  //attraction offsetTop push
+  for (let i = 0; i < attractions.length; i++) {
+    attractionsOffsetTop.push(attractions[i].offsetTop);
+  }
+
+  //pageNav click event
+  for (let i = 0; i < attractionNav.length; i++) {
+    attractionNav[i].addEventListener("click", (e) => {
+      e.preventDefault();
+      //
+      for (let j = 0; j < attractionNav.length; j++) {
+        removeClass(attractionNav[j], "active");
+      }
+      window.scrollTo(0, attractionsOffsetTop[i]);
+      addClass(attractionNav[i], "active");
+      showElements(hidings[i]);
+    });
+  }
 
   //어트랙션별 offsettop 위치를 data-offtop 값으로 설정
   for (let i = 0; i < hidings.length; i++) {
@@ -21,6 +43,12 @@ window.addEventListener("load", () => {
       if (currentTop >= hidings[i].dataset.offtop) {
         showElements(hidings[i]);
       }
+      if (currentTop > attractions[i].offsetTop - 50) {
+        for (let i = 0; i < attractions.length; i++) {
+          removeClass(attractionNav[i], "active");
+        }
+        addClass(attractionNav[i], "active");
+      }
     }
   });
 
@@ -31,6 +59,24 @@ window.addEventListener("load", () => {
   function showElements(element) {
     element.style.top = "0px";
     element.style.opacity = "1";
+  }
+
+  /**
+   * 엘리먼트의 클래스를 제거해주는 함수
+   * @param {element} element
+   * @param {string} className
+   */
+  function removeClass(element, className) {
+    element.classList.remove(className);
+  }
+
+  /**
+   * 엘리먼트의 클래스를 추가해주는 함수
+   * @param {element} element
+   * @param {string} className
+   */
+  function addClass(element, className) {
+    element.classList.add(className);
   }
 
   window.addEventListener("scroll", () => {
