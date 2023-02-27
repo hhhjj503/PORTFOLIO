@@ -30,11 +30,11 @@ window.addEventListener("load", function () {
   //스크롤 내리면 헤드메뉴 투명하게
   window.addEventListener("scroll", () => {
     if (html.scrollTop > 0) {
-      topNav.style.opacity = "0";
-      topNavMobile.style.opacity = "0";
+      topNav.classList.add("scrolldown");
+      topNavMobile.classList.add("scrolldown");
     } else {
-      topNav.style.opacity = "1";
-      topNavMobile.style.opacity = "1";
+      topNav.classList.remove("scrolldown");
+      topNavMobile.classList.remove("scrolldown");
     }
   });
 

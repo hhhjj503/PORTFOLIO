@@ -18,6 +18,7 @@ body {
 }
 .top-nav.scrolldown {
   opacity: 0;
+  pointer-events: none;
 }
 .top-nav > .wrapper li:nth-child(4) a {
   color: red; /* nav 의 크러스티랜드 글자 빨갛게 변경 */
@@ -28,6 +29,7 @@ body {
 }
 .top-nav-mobile.scrolldown {
   opacity: 0;
+  pointer-events: none;
 }
 
 a.hiding + * {
@@ -192,7 +194,7 @@ main .goods-wrapper ul li a img {
   transition: 0.3s ease-in-out;
 }
 main .goods-wrapper ul li a:hover img {
-  transform: scale(110%);
+  transform: scale(1.1);
   transform-origin: center center;
 }
 main .goods-wrapper ul li a h5 {
@@ -429,6 +431,20 @@ main .purchase .purchase-info .goods-title {
   font-size: 2.3rem;
   padding: 20px;
 }
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .purchase .purchase-info .goods-title {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 2rem;
+    padding: 30px 40px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .purchase .purchase-info .goods-title {
+    font-size: 1.6rem;
+    padding: 10px 20px;
+  }
+}
 main .purchase .purchase-info .goods-title .review-count {
   font-size: 2rem;
   font-weight: bold;
@@ -437,7 +453,6 @@ main .purchase .purchase-info .goods-title .review-count {
   cursor: pointer;
   color: red;
   position: relative;
-  vertical-align: top;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
   main .purchase .purchase-info .goods-title .review-count {
@@ -452,18 +467,35 @@ main .purchase .purchase-info .goods-title .review-count {
 main .purchase .purchase-info .goods-title .review-count:hover {
   text-decoration: underline;
 }
+main .purchase .purchase-info .goods-title .rating {
+  display: inline-block;
+  margin-left: 3px;
+  vertical-align: text-bottom;
+}
+main .purchase .purchase-info .goods-title .rating .rating-star {
+  background-image: url(../../../images/amusementpark/krustyland/star-solid.svg);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+}
+main .purchase .purchase-info .goods-title .rating .rating-half-star {
+  background-image: url(../../../images/amusementpark/krustyland/star-half-stroke-solid.svg);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+}
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  main .purchase .purchase-info .goods-title {
-    box-sizing: border-box;
-    width: 100%;
-    font-size: 2rem;
-    padding: 30px 40px;
+  main .purchase .purchase-info .goods-title .rating .rating-star, main .purchase .purchase-info .goods-title .rating .rating-half-star {
+    width: 18px;
+    height: 18px;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 479px) {
-  main .purchase .purchase-info .goods-title {
-    font-size: 1.6rem;
-    padding: 10px 20px;
+  main .purchase .purchase-info .goods-title .rating .rating-star, main .purchase .purchase-info .goods-title .rating .rating-half-star {
+    width: 15px;
+    height: 15px;
   }
 }
 main .purchase .purchase-info .goods-price {

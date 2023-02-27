@@ -18,6 +18,7 @@ body {
 }
 .top-nav.scrolldown {
   opacity: 0;
+  pointer-events: none;
 }
 .top-nav > .wrapper li:nth-child(5) a {
   color: red; /* nav 의 아쿠아리움 글자 빨갛게 변경 */
@@ -29,6 +30,7 @@ body {
 }
 .top-nav-mobile.scrolldown {
   opacity: 0;
+  pointer-events: none;
 }
 
 a.hiding + * {

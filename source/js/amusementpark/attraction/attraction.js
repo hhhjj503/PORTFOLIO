@@ -98,13 +98,12 @@ window.addEventListener("load", () => {
   window.addEventListener("scroll", () => {
     if (html.scrollTop > 0) {
       wheelDown.classList.add("fadeout");
-      topNav.style.opacity = "0";
-      topNavMobile.style.opacity = "0";
+      topNav.classList.add("scrolldown");
+      topNavMobile.classList.add("scrolldown");
     } else {
       wheelDown.classList.remove("fadeout");
-
-      topNav.style.opacity = "1";
-      topNavMobile.style.opacity = "1";
+      topNav.classList.remove("scrolldown");
+      topNavMobile.classList.remove("scrolldown");
     }
   });
 

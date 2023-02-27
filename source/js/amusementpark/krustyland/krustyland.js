@@ -33,11 +33,11 @@ window.addEventListener("load", () => {
 
   window.addEventListener("scroll", () => {
     if (html.scrollTop > 0) {
-      topNav.style.opacity = "0";
-      topNavMobile.style.opacity = "0";
+      topNav.classList.add("scrolldown");
+      topNavMobile.classList.add("scrolldown");
     } else {
-      topNav.style.opacity = "1";
-      topNavMobile.style.opacity = "1";
+      topNav.classList.remove("scrolldown");
+      topNavMobile.classList.remove("scrolldown");
     }
   });
 
@@ -95,6 +95,8 @@ window.addEventListener("load", () => {
         ' />"' +
         "<h5 data-reviewcount='" +
         item.reviewCount +
+        "' data-rating='" +
+        item.rating +
         "'>" +
         item.title +
         "</h5>" +
@@ -111,68 +113,6 @@ window.addEventListener("load", () => {
 
     list.append(elements);
 
-    const trList = $("table tr");
-    const commentsPerPage = 5;
-
-    /**
-     * 배열을 파라미터로 받아 클래스를 제거하는 함수
-     * @param {Array} list
-     * @param {string} className
-     */
-    function removeClass(list, className) {
-      for (let i = 0; i < list.length; i++) {
-        list[i].classList.remove(className);
-      }
-    }
-    /**
-     * 상품이미지 클릭시 a태그의 의 innerText 와 전체리뷰수를 파라미터로 받아
-     * 보여줄  tr 태그만 클래스를 추가해주는 함수
-     * @param {string} pagernumberText
-     * @param {string} reviewCountsText
-     */
-    function getCommetns(pagernumberText, reviewCountsText) {
-      const pagernumber = parseInt(pagernumberText);
-      const reviewCounts = parseInt(reviewCountsText);
-      const nav = document.querySelectorAll(".review-pager li");
-
-      removeClass(nav, "active");
-      nav[pagernumber - 1].classList.add("active");
-      removeClass(trList, "active");
-
-      if (pagernumberText > 1) {
-        //
-        if (nav.length === pagernumber) {
-          for (
-            let i = commentsPerPage * (pagernumber - 1);
-            i < reviewCountsText;
-            i++
-          ) {
-            trList[i].classList.add("active");
-          }
-        } else {
-          //
-          for (
-            let i = commentsPerPage * (pagernumber - 1);
-            i < pagernumber * commentsPerPage;
-            i++
-          ) {
-            trList[i].classList.add("active");
-          }
-        }
-      } else {
-        //
-        if (reviewCounts < 6) {
-          for (let i = 0; i < reviewCounts; i++) {
-            trList[i].classList.add("active");
-          }
-        } else {
-          for (let i = 0; i < commentsPerPage; i++) {
-            trList[i].classList.add("active");
-          }
-        }
-      }
-    }
-
     list.imagesLoaded(function () {
       list
         .find("li")
@@ -182,6 +122,10 @@ window.addEventListener("load", () => {
         //이미지 goodsImage , 타이틀 goodsTitle, 가격 perPrice, 수량 quantityPlus quantity quantityMinus, 총합 totalPrice
         .click(function (e) {
           e.preventDefault();
+
+          const trList = $("table tr");
+          const commentsPerPage = 5;
+
           if (html.scrollTop === 0) html.scrollTop += 1;
 
           if (purchase.classList.contains("close")) {
@@ -192,17 +136,42 @@ window.addEventListener("load", () => {
           const selectedGoods = this.querySelector("img");
           const selectedGoodsReviews =
             this.querySelector("h5").dataset.reviewcount;
+          const selectedGoodsRating = this.querySelector("h5").dataset.rating;
 
           goodsImage.src = selectedGoods.src;
           goodsTitle.innerText = selectedGoods.alt;
+
+          //제품 제목변경
           if (selectedGoodsReviews > 0) {
             const reviewCount = document.createElement("span");
             reviewCount.classList.add("review-count");
             reviewCount.innerText = "(" + selectedGoodsReviews + ")";
             goodsTitle.appendChild(reviewCount);
           }
+
+          //제품 평점변경
+          if (selectedGoodsRating > 0) {
+            const rating = document.createElement("span");
+            rating.classList.add("rating");
+
+            for (let i = 0; i < selectedGoodsRating; i++) {
+              const svg = document.createElement("svg");
+              svg.classList.add("rating-star");
+              rating.appendChild(svg);
+            }
+            //평점이 마지막 svg 태그 제어한뒤 .5로 끝날경우 반개짜리별로 추가
+            if (selectedGoodsRating % 1) {
+              const svg = document.createElement("svg");
+              svg.classList.add("rating-half-star");
+              rating.removeChild(rating.lastChild);
+              rating.appendChild(svg);
+            }
+            goodsTitle.appendChild(rating);
+          }
+
           perPrice.innerText = selectedGoods.dataset.price;
 
+          //리뷰란 페이저생성
           const reviewPager = document.querySelector(
             ".goods-review .review-pager"
           );
@@ -243,6 +212,69 @@ window.addEventListener("load", () => {
         });
     });
   } //addItem
+
+  /**
+   * 배열을 파라미터로 받아 클래스를 제거하는 함수
+   * @param {Array} list
+   * @param {string} className
+   */
+  function removeClass(list, className) {
+    for (let i = 0; i < list.length; i++) {
+      list[i].classList.remove(className);
+    }
+  }
+
+  /**
+   * 상품이미지 클릭시 a태그의 의 innerText 와 전체리뷰수를 파라미터로 받아
+   * 보여줄  tr 태그만 클래스를 추가해주는 함수 (댓글을 불러오는 함수)
+   * @param {string} pagernumberText
+   * @param {string} reviewCountsText
+   */
+  function getCommetns(pagernumberText, reviewCountsText) {
+    const pagernumber = parseInt(pagernumberText);
+    const reviewCounts = parseInt(reviewCountsText);
+    const nav = document.querySelectorAll(".review-pager li");
+
+    const trList = $("table tr");
+    const commentsPerPage = 5;
+
+    removeClass(nav, "active");
+    nav[pagernumber - 1].classList.add("active");
+    removeClass(trList, "active");
+
+    if (pagernumberText > 1) {
+      //
+      if (nav.length === pagernumber) {
+        for (
+          let i = commentsPerPage * (pagernumber - 1);
+          i < reviewCountsText;
+          i++
+        ) {
+          trList[i].classList.add("active");
+        }
+      } else {
+        //
+        for (
+          let i = commentsPerPage * (pagernumber - 1);
+          i < pagernumber * commentsPerPage;
+          i++
+        ) {
+          trList[i].classList.add("active");
+        }
+      }
+    } else {
+      //
+      if (reviewCounts < 6) {
+        for (let i = 0; i < reviewCounts; i++) {
+          trList[i].classList.add("active");
+        }
+      } else {
+        for (let i = 0; i < commentsPerPage; i++) {
+          trList[i].classList.add("active");
+        }
+      }
+    }
+  }
 
   quantityPlusBtn.addEventListener("click", () => {
     let number = parseInt(quantity.innerText);
