@@ -543,6 +543,9 @@ main .purchase .purchase-info .goods-price .dib img {
   float: right;
   cursor: pointer;
 }
+main .purchase .purchase-info .goods-price .dib img.clicked {
+  content: url(../../../images/amusementpark/krustyland/heart-solid.svg);
+}
 @media screen and (min-width: 480px) and (max-width: 768px) {
   main .purchase .purchase-info .goods-price .dib img {
     width: 18px;

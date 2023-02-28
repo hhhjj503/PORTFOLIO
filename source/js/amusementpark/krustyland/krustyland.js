@@ -23,6 +23,7 @@ window.addEventListener("load", () => {
     ".goods-quantity .quantity-box .quantity"
   );
   let totalPrice = document.querySelector(".goods-total-price .total-price");
+  const dibImg = document.querySelector(".dib img");
 
   //제품리스트를 제이슨으로 받아와 담기위한 배열과 카운트 선언
   let addedItemCount = 5;
@@ -169,6 +170,7 @@ window.addEventListener("load", () => {
             goodsTitle.appendChild(rating);
           }
 
+          dibImg.classList.remove("clicked");
           perPrice.innerText = selectedGoods.dataset.price;
 
           //리뷰란 페이저생성
@@ -276,6 +278,16 @@ window.addEventListener("load", () => {
     }
   }
 
+  //하트클릭시 이미지변경
+  dibImg.addEventListener("click", function () {
+    if (!dibImg.classList.contains("clicked")) {
+      dibImg.classList.add("clicked");
+    } else {
+      dibImg.classList.remove("clicked");
+    }
+  });
+
+  //제품수량 + 버튼
   quantityPlusBtn.addEventListener("click", () => {
     let number = parseInt(quantity.innerText);
     number += 1;
@@ -283,6 +295,7 @@ window.addEventListener("load", () => {
     updatedTotalPrice = number * parseInt(intedPerPrice);
     totalPrice.innerText = Number(updatedTotalPrice).toLocaleString("en");
   });
+  //제품수량 - 버튼
   quantityMinusBtn.addEventListener("click", () => {
     let number = parseInt(quantity.innerText);
     number -= 1;
