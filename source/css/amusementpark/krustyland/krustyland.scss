@@ -489,10 +489,9 @@ main {
           font-size: 2rem;
           font-weight: bold;
           margin-left: 5px;
-          display: inline-block;
           cursor: pointer;
           color: red;
-          position: relative;
+          float: right;
 
           @media screen and (min-width: 480px) and (max-width: 768px) {
             & {
@@ -511,9 +510,10 @@ main {
         }
 
         & .rating {
-          display: inline-block;
+          //display: inline-block;
           margin-left: 3px;
           vertical-align: text-bottom;
+          float: right;
 
           & .rating-star {
             background-image: url(../../../images/amusementpark/krustyland/star-solid.svg);

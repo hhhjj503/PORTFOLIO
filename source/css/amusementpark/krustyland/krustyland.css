@@ -449,10 +449,9 @@ main .purchase .purchase-info .goods-title .review-count {
   font-size: 2rem;
   font-weight: bold;
   margin-left: 5px;
-  display: inline-block;
   cursor: pointer;
   color: red;
-  position: relative;
+  float: right;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
   main .purchase .purchase-info .goods-title .review-count {
@@ -468,9 +467,9 @@ main .purchase .purchase-info .goods-title .review-count:hover {
   text-decoration: underline;
 }
 main .purchase .purchase-info .goods-title .rating {
-  display: inline-block;
   margin-left: 3px;
   vertical-align: text-bottom;
+  float: right;
 }
 main .purchase .purchase-info .goods-title .rating .rating-star {
   background-image: url(../../../images/amusementpark/krustyland/star-solid.svg);

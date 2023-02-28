@@ -141,7 +141,7 @@ window.addEventListener("load", () => {
           goodsImage.src = selectedGoods.src;
           goodsTitle.innerText = selectedGoods.alt;
 
-          //제품 제목변경
+          //제품 리뷰수 변경
           if (selectedGoodsReviews > 0) {
             const reviewCount = document.createElement("span");
             reviewCount.classList.add("review-count");
