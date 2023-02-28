@@ -43,6 +43,11 @@ main .wrapper .type > a {
   height: 100%;
   z-index: 2;
 }
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .wrapper .type > a {
+    z-index: 3;
+  }
+}
 main .wrapper .type:after {
   content: "";
   width: 100%;
