@@ -30,6 +30,22 @@ window.addEventListener("load", () => {
   let added = 0;
   let allData = [];
 
+  //이미지미리로드
+  const imgSourceArray = [];
+  imgSourceArray.push(
+    "../../source/images/amusementpark/krustyland/star-solid.svg"
+  );
+  imgSourceArray.push(
+    "../../source/images/amusementpark/krustyland/star-half-stroke-solid.svg"
+  );
+  imgSourceArray.push(
+    "../../source/images/amusementpark/krustyland/heart-solid.svg"
+  );
+  for (let i = 0; i < imgSourceArray.length; i++) {
+    let img = new Image();
+    img.src = imgSourceArray[i];
+  }
+
   const list = $(".list-wrapper .list");
 
   window.addEventListener("scroll", () => {

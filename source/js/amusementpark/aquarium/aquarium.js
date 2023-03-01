@@ -25,6 +25,17 @@ window.addEventListener("load", function () {
     ".index-button-wrapper .index-button3"
   );
 
+  //이미지미리로드
+  const imgSourceArray = [];
+  imgSourceArray.push(
+    "../../source/images/amusementpark/aquarium/dmitry-bukhantsov-IBrZ-TXYWY8.jpg"
+  );
+
+  for (let i = 0; i < imgSourceArray.length; i++) {
+    let img = new Image();
+    img.src = imgSourceArray[i];
+  }
+
   const sliderItems = $(".event-slider .item");
 
   //스크롤 내리면 헤드메뉴 투명하게
