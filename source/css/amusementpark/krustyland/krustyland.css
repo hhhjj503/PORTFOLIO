@@ -264,14 +264,12 @@ main .purchase::-webkit-scrollbar-thumb {
   main .purchase::-webkit-scrollbar {
     width: 8px;
     height: 6px;
-    background-color: #d5d5d5; /* or add it to the track */
   }
 }
 @media screen and (min-width: 320px) and (max-width: 479px) {
   main .purchase::-webkit-scrollbar {
     width: 4px;
     height: 4px;
-    background-color: #d5d5d5; /* or add it to the track */
   }
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
