@@ -188,9 +188,7 @@ main {
             line-height: 30px;
             color: white;
             font-size: 2rem;
-            word-break: keep-all;
             letter-spacing: 3px;
-            white-space: break-spaces;
             text-align: center;
 
             @media screen and (max-width: 1000px) {
@@ -204,7 +202,7 @@ main {
               & {
                 font-size: 1.8rem;
                 width: 100%;
-                line-height: 35px;
+                line-height: 30px;
                 text-align: center;
                 padding: 0 10px;
                 box-sizing: border-box;
@@ -215,6 +213,7 @@ main {
               & {
                 font-size: 1.4rem;
                 width: 100%;
+                line-height: 25px;
                 padding: 0 10px;
                 box-sizing: border-box;
               }
