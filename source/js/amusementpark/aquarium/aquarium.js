@@ -115,9 +115,11 @@ window.addEventListener("load", function () {
   let hours = document.querySelector(".hours");
   let minutes = document.querySelector(".minutes");
   let seconds = document.querySelector(".seconds");
+  let countdownTitle = document.querySelector(".countdown-title");
 
   if (currentTime.hours() >= 10 && currentTime.hours() <= 20) {
     const countdown = setInterval(function () {
+      countdownTitle.innerText = "OPEN";
       timeCountdown();
     }, 1000);
   }
