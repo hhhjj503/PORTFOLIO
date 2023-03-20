@@ -58,7 +58,7 @@ window.addEventListener("load", function () {
     subMenu.classList.toggle("opened");
   });
 
-  // ---------------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------------//
 
   for (let i = 0; i < as.length; i++) {
     as[i].addEventListener("click", function (e) {
@@ -109,6 +109,46 @@ window.addEventListener("load", function () {
   changeIndex();
 
   const timer = setInterval(autoslider, 4000);
+
+  //moment js 시간 타이머
+  let currentTime = moment();
+  let hours = document.querySelector(".hours");
+  let minutes = document.querySelector(".minutes");
+  let seconds = document.querySelector(".seconds");
+
+  if (currentTime.hours() >= 10 && currentTime.hours() <= 20) {
+    const countdown = setInterval(function () {
+      timeCountdown();
+    }, 1000);
+  }
+
+  /**
+   * 마감 closed 시간까지 남은 시간을 계산하는 함수
+   */
+  function timeCountdown() {
+    const closingTime = moment("21:00:00", "hh:mm:ss");
+    currentTime = moment();
+    let leftTime = moment.duration(closingTime.diff(currentTime));
+    const leftHours = leftTime.hours();
+    const leftMinutes = leftTime.minutes();
+    const leftSeconds = leftTime.seconds();
+    console.log(leftHours, leftMinutes, leftSeconds);
+    if (leftHours < 10) {
+      hours.innerText = "0" + leftHours;
+    } else {
+      hours.innerText = leftHours;
+    }
+    if (leftMinutes < 10) {
+      minutes.innerText = "0" + leftMinutes;
+    } else {
+      minutes.innerText = leftMinutes;
+    }
+    if (leftSeconds < 10) {
+      seconds.innerText = "0" + leftSeconds;
+    } else {
+      seconds.innerText = leftSeconds;
+    }
+  }
 
   /**
    *슬라이드 인덱스를 다음 슬라이드로 증가시키고 슬라이더 내부의 타이틀 엘리먼트를 표시해주는 함수
