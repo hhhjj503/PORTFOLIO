@@ -55,7 +55,7 @@ header .entrance-wrapper {
   font-weight: bold;
   color: white;
   margin: 0 auto;
-  background-color: #22313f;
+  background-color: #0c273f;
   padding: 6px 9px;
   white-space: nowrap;
 }
@@ -103,7 +103,7 @@ header .entrance-wrapper {
 
 .contents-items .navbar-wrapper {
   width: 100%;
-  background-color: #22313f;
+  background-color: #0c273f;
   position: sticky;
   top: -1px;
   left: 0;
@@ -335,7 +335,7 @@ header .entrance-wrapper {
   height: 300px;
   display: inline-block;
   border-radius: 15px;
-  background-color: #22313f;
+  background-color: #0c273f;
   background-position: center;
   background-size: 150%;
   background-repeat: no-repeat;
@@ -431,7 +431,7 @@ header .entrance-wrapper {
 /* ----------------------------------------------- footer ----------------------------------------------------------- */
 
 footer .contact-wrapper {
-  background-color: #22313f;
+  background-color: #0c273f;
   padding: 100px 0;
   margin-top: 100px;
 }
@@ -495,7 +495,8 @@ footer .contact-wrapper {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #22313f;
+  /*background-color: #22313f;*/
+  background-color: #0c273f;
   transition: 0.3s ease-in-out;
   z-index: 98;
   overflow: hidden;
