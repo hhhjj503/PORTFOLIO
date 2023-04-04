@@ -151,9 +151,6 @@ main .info .contents .slider-wrapper .slider .slide {
   box-sizing: border-box;
   cursor: pointer;
 }
-main .info .contents .slider-wrapper .slider .slide:hover {
-  border: 5px solid rgb(142, 181, 240);
-}
 main .info .contents .slider-wrapper .slider .slide img {
   width: 100%;
   height: 100%;

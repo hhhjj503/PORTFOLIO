@@ -362,42 +362,41 @@ main .wrapper .aquarium .description {
 
 footer {
   /* ------------------------------- footer --------------------------------- */
-  position: fixed;
   bottom: 0;
   height: 40px;
-  background-color: #ac8bbe;
   width: 100%;
   text-align: center;
   line-height: 40px;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: white;
   font-weight: bolder;
-  text-shadow: 0.1px 0.1px white, -0.1px -0.1px white, 0.2px 0.2px white, -0.2px -0.2px white;
   letter-spacing: 1px;
   transition: 0.7s ease-in-out;
   z-index: 99;
+  position: fixed;
+  /*
+  &:before {
+    @include content-resoure-path("fort-awesome-white.svg");
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+  }
+  &:after {
+    @include content-resoure-path("fort-awesome-white.svg");
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+  } */
 }
 @media screen and (min-width: 320px) and (max-width: 479px) {
   footer {
     opacity: 0;
     display: none;
   }
-}
-footer:before {
-  content: url(../../images/amusementpark/fort-awesome-white.svg);
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  transform: translateY(-50%);
-  width: 30px;
-  height: 30px;
-}
-footer:after {
-  content: url(../../images/amusementpark/fort-awesome-white.svg);
-  position: absolute;
-  top: 50%;
-  right: 20%;
-  transform: translateY(-50%);
-  width: 30px;
-  height: 30px;
 }/*# sourceMappingURL=index.css.map */

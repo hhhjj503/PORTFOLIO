@@ -106,8 +106,9 @@ main > .wrapper .attraction-nav li a {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.4);
   transition: 0.2s ease-in-out;
+  box-sizing: border-box;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
   main > .wrapper .attraction-nav li a {
@@ -122,7 +123,8 @@ main > .wrapper .attraction-nav li a {
   }
 }
 main > .wrapper .attraction-nav li a.active {
-  background-color: rgb(246, 72, 246);
+  background-color: transparent;
+  border: 1px solid white;
   box-shadow: 1px 1px 10px rgb(199, 199, 199);
 }
 main > .wrapper .attraction {
