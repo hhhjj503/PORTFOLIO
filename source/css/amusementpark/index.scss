@@ -430,23 +430,4 @@ footer {
     }
   }
   position: fixed;
-  /*
-  &:before {
-    @include content-resoure-path("fort-awesome-white.svg");
-    position: absolute;
-    top: 50%;
-    left: 20%;
-    transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
-  }
-  &:after {
-    @include content-resoure-path("fort-awesome-white.svg");
-    position: absolute;
-    top: 50%;
-    right: 20%;
-    transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
-  } */
 }
