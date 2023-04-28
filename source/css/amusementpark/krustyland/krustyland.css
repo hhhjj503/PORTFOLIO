@@ -167,7 +167,7 @@ main .goods-wrapper ul li {
   display: inline-block;
 }
 main .goods-wrapper ul li.loaded {
-  animation: showItems 1s forwards ease-in-out;
+  animation: showItems 0.8s forwards ease-in-out;
 }
 @keyframes showItems {
   0% {

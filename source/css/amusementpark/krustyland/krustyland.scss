@@ -185,7 +185,7 @@ main {
         display: inline-block;
 
         &.loaded {
-          animation: showItems 1s forwards ease-in-out;
+          animation: showItems 0.8s forwards ease-in-out;
         }
 
         @keyframes showItems {
