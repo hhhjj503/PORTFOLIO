@@ -831,6 +831,7 @@ main .shopping-bag {
   background-size: 60% 60%;
   background-position: center;
   background-repeat: no-repeat;
+  box-shadow: 0.5px 0.5px 3px #999;
   cursor: pointer;
 }
 main .shopping-bag.rotate {
@@ -849,7 +850,7 @@ main .shopping-bag .bag-desc {
   background-color: white;
   bottom: 70px;
   font-size: 1.5rem;
-  font-weight: bold;
+  line-height: 20px;
   word-break: keep-all;
   padding: 10px;
   border-radius: 10px;
