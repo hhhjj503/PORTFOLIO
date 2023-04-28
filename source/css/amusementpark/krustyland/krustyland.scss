@@ -181,7 +181,22 @@ main {
         margin: 30px;
         border-radius: 5px;
         transition: 0.3s ease-in-out;
+        visibility: hidden;
         display: inline-block;
+
+        &.loaded {
+          animation: showItems 1s forwards ease-in-out;
+        }
+
+        @keyframes showItems {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
 
         @media screen and (min-width: 480px) and (max-width: 768px) {
           & {
