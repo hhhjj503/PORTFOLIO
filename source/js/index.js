@@ -8,6 +8,7 @@ window.onload = function () {
   const lists = document.querySelectorAll(".portfolio .list");
   const pagemoves = document.querySelectorAll(".pagemove");
   let imgCheck = false;
+  let sourceArray = [];
 
   /*------------------------------- 이미지로드 ----------------------------*/
   for (let i = 0; i < 1; i++) {
@@ -32,15 +33,18 @@ window.onload = function () {
   for (const item of items) {
     const path = new Image();
     path.src = item.dataset.path;
+    item.removeAttribute("data-path");
   }
 
   for (const list of lists) {
     const path = new Image();
     path.src = list.dataset.path;
+    sourceArray.push(list.dataset.path);
+    list.removeAttribute("data-path");
   }
 
   for (let i = 0; i < lists.length; i++) {
-    lists[i].style.backgroundImage = "url(" + lists[i].dataset.path + ")";
+    lists[i].style.backgroundImage = "url(" + sourceArray[i] + ")";
   }
 
   /*------------------------------- throttle.js ----------------------------*/
