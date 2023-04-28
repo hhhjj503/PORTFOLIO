@@ -61,6 +61,7 @@ window.addEventListener("load", () => {
       slides[i].addEventListener("click", function () {
         const img = slides[i].querySelector("img");
         overlayImg.src = img.getAttribute("src");
+        overlayImg.alt = img.getAttribute("alt");
         overlay.classList.add("visible");
       });
     }
@@ -74,6 +75,7 @@ window.addEventListener("load", () => {
     slide.addEventListener("click", () => {
       const img = slide.querySelector("img");
       overlayImg.src = img.getAttribute("src");
+      overlayImg.alt = img.getAttribute("alt");
       overlay.classList.add("visible");
     });
   }

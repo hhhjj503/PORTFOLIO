@@ -156,6 +156,7 @@ window.addEventListener("load", () => {
           const selectedGoodsRating = this.querySelector("h5").dataset.rating;
 
           goodsImage.src = selectedGoods.src;
+          goodsImage.alt = selectedGoods.alt;
           goodsTitle.innerText = selectedGoods.alt;
 
           //제품 리뷰수 변경
