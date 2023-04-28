@@ -33,7 +33,7 @@ main .wrapper {
 main .wrapper .type {
   /* ------------------- .wrapper type 공통속성 --------------- */
   position: relative;
-  transition: 0.7s ease-in-out;
+  transition: 0.7s ease;
 }
 main .wrapper .type > a {
   position: absolute;
