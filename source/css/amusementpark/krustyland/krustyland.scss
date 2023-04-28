@@ -912,6 +912,76 @@ main {
       }
     }
   }
+
+  & .shopping-bag {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    left: 5%;
+    bottom: 5%;
+    background-color: white;
+    border-radius: 50%;
+    background-image: url(../../../images/amusementpark/krustyland/heart-solid.svg);
+    background-size: 60% 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    &.rotate {
+      animation: rotating 0.3s forwards ease;
+    }
+
+    &:hover {
+      .bag-desc {
+        opacity: 1;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      & {
+        display: none;
+      }
+    }
+
+    .bag-desc {
+      position: absolute;
+      background-color: white;
+      bottom: 70px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      word-break: keep-all;
+      padding: 10px;
+      border-radius: 10px;
+      width: 200%;
+      opacity: 0;
+      transition: 0.3s ease;
+    }
+
+    img {
+      position: absolute;
+      left: 5%;
+      bottom: 70px;
+      width: 150px;
+      height: 200px;
+      background-color: white;
+      border-radius: 10px;
+      object-fit: cover;
+      transition: 0.3s ease-in-out;
+      visibility: hidden;
+
+      &.shown {
+        visibility: visible;
+      }
+
+      &.hidden {
+        width: 0px;
+        height: 0px;
+        left: 10%;
+        bottom: 0px;
+        border-radius: 50%;
+      }
+    }
+  }
 }
 
 footer {
@@ -926,5 +996,34 @@ footer {
   }
   100% {
     opacity: 100%;
+  }
+}
+
+@keyframes showItem {
+  0% {
+    visibility: visible;
+  }
+  100% {
+  }
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }

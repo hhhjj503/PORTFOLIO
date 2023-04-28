@@ -13,6 +13,11 @@ window.addEventListener("load", () => {
   let goodsTitle = document.querySelector(".goods-title");
   const perPrice = document.querySelector(".goods-price .per-price");
   let intedPerPrice;
+
+  //하트이미지 클릭시 장바구니에 넣기위한 변수
+  const shoppingBag = document.querySelector(".shopping-bag");
+  let bagImg = document.querySelector(".shopping-bag img");
+
   const quantityMinusBtn = document.querySelector(
     ".goods-quantity .quantity-box .minus"
   );
@@ -159,6 +164,9 @@ window.addEventListener("load", () => {
           goodsImage.alt = selectedGoods.alt;
           goodsTitle.innerText = selectedGoods.alt;
 
+          //장바구니 이미지 클래스 초기화
+          bagImg.classList.remove("hidden");
+
           //제품 리뷰수 변경
           if (selectedGoodsReviews > 0) {
             const reviewCount = document.createElement("span");
@@ -299,9 +307,20 @@ window.addEventListener("load", () => {
   dibImg.addEventListener("click", function () {
     if (!dibImg.classList.contains("clicked")) {
       dibImg.classList.add("clicked");
+      bagImg.src = goodsImage.src;
+      bagImg.alt = goodsImage.alt;
+      shoppingBag.classList.add("rotate");
+      bagImg.classList.add("shown");
+      setTimeout(() => {
+        bagImg.classList.remove("shown");
+        bagImg.classList.add("hidden");
+        shoppingBag.classList.remove("rotate");
+      }, 300);
     } else {
       dibImg.classList.remove("clicked");
     }
+
+    bagImg.classList.remove("hidden");
   });
 
   //제품수량 + 버튼
