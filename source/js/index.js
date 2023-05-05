@@ -9,15 +9,8 @@ window.addEventListener("load", () => {
   const goup = document.querySelector(".goup");
 
   let itemsOffsetTops = [];
-  //헤더길이도 뺴기
-  for (let i = 0; i < headerAs.length; i++) {
-    itemsOffsetTops.push(
-      items[i].getBoundingClientRect().top +
-        window.pageYOffset -
-        header.offsetHeight
-    );
-  }
-  itemsOffsetTops[headerAs.length - 1] = html.scrollHeight;
+  //배열에 스크롤 이벤트 트리거가 되는 엘리먼트의 top 값을 저장
+  saveOffsetTop();
 
   for (let i = 0; i < headerAs.length; i++) {
     headerAs[i].addEventListener("click", (e) => {
@@ -61,6 +54,11 @@ window.addEventListener("load", () => {
     { passive: true }
   );
 
+  //윈도우 사이즈 변경시 트리거 top 값 다시 저장
+  window.addEventListener("resize", () => {
+    saveOffsetTop();
+  });
+
   function throttle(callback, limit = 1000 / 15) {
     let waiting = false;
     return function () {
@@ -72,5 +70,17 @@ window.addEventListener("load", () => {
         }, limit);
       }
     };
+  }
+
+  function saveOffsetTop() {
+    itemsOffsetTops = [];
+    for (let i = 0; i < headerAs.length; i++) {
+      itemsOffsetTops.push(
+        items[i].getBoundingClientRect().top +
+          window.pageYOffset -
+          header.offsetHeight
+      );
+    }
+    itemsOffsetTops[headerAs.length - 1] = html.scrollHeight;
   }
 });
