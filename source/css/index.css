@@ -157,12 +157,19 @@ main .hj {
 .graph .vertex {
   position: absolute;
   bottom: 18%;
+  left: 0%;
   color: white;
   width: 20px;
   height: 20px;
   border-radius: 50%;
   background-color: #333;
   cursor: pointer;
+}
+
+.vertex:hover {
+  transition: 0.3s ease;
+  transform: scale(120%, 120%);
+  background-color: #41bfcf;
 }
 
 .vertex:nth-child(1) {
