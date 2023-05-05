@@ -1,77 +1,59 @@
-window.onload = function () {
-  //변수선언
+window.addEventListener("load", () => {
   const html = document.querySelector("html");
-  const entrance = document.querySelector(".entrance");
-  const items = document.querySelectorAll(".technology .item");
-  const scores = document.querySelectorAll(".technology .score");
-  const bars = document.querySelectorAll(".technology .score .bar");
-  const lists = document.querySelectorAll(".portfolio .list");
-  const pagemoves = document.querySelectorAll(".pagemove");
-  let imgCheck = false;
-  let sourceArray = [];
+  const header = document.querySelector("header");
+  const headerAs = document.querySelectorAll("header a"); //헤더클릭시 스크롤이동
+  const graph = document.querySelector(".graph"); //그래프클래스제어
+  const items = document.querySelectorAll(".item"); //스크롤이동할 타이틀컴포넌트
+  const skills = document.querySelector(".skills");
+  const portfolio = document.querySelector(".portfolio");
+  const goup = document.querySelector(".goup");
 
-  /*------------------------------- 이미지로드 ----------------------------*/
-  for (let i = 0; i < 1; i++) {
-    const img = new Image();
-    img.src = entrance.dataset.path;
-    img.addEventListener("load", () => {
-      imgCheck = true;
-      if (imgCheck) {
-        const loadingAnimationWrapper = document.querySelector(
-          ".loading-animation-wrapper"
-        );
-        setTimeout(() => {
-          loadingAnimationWrapper.classList.add("loaded");
-        }, 2000);
-        setTimeout(() => {
-          loadingAnimationWrapper.classList.add("hide");
-        }, 2500);
-      }
+  let itemsOffsetTops = [];
+  //헤더길이도 뺴기
+  for (let i = 0; i < headerAs.length; i++) {
+    itemsOffsetTops.push(
+      items[i].getBoundingClientRect().top +
+        window.pageYOffset -
+        header.offsetHeight
+    );
+  }
+  itemsOffsetTops[headerAs.length - 1] = html.scrollHeight;
+
+  for (let i = 0; i < headerAs.length; i++) {
+    headerAs[i].addEventListener("click", (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: itemsOffsetTops[i],
+        left: 0,
+        behavior: "smooth",
+      });
     });
   }
 
-  for (const item of items) {
-    const path = new Image();
-    path.src = item.dataset.path;
-    item.removeAttribute("data-path");
-  }
+  goup.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  });
 
-  for (const list of lists) {
-    const path = new Image();
-    path.src = list.dataset.path;
-    sourceArray.push(list.dataset.path);
-    list.removeAttribute("data-path");
-  }
+  console.log(header.offsetHeight);
 
-  for (let i = 0; i < lists.length; i++) {
-    lists[i].style.backgroundImage = "url(" + sourceArray[i] + ")";
-  }
+  graph.classList.add("active");
 
-  /*------------------------------- throttle.js ----------------------------*/
-  window.addEventListener(
-    "scroll",
-    $.throttle(1000 / 15, function () {
-      scrollEvent();
-    })
-  ); //$.throttle
+  window.addEventListener("scroll", () => {
+    const skillsTrigger = itemsOffsetTops[1] * 0.7;
+    const portfolioTrigger = itemsOffsetTops[2] * 0.9;
 
-  /*------------------------------- 스크롤 내릴시 SKILLS 애니메이션 적용 ----------------------------*/
-  function scrollEvent() {
-    const documentHeight = html.scrollHeight;
-    const showValue = documentHeight * 0.21;
-    let currentValue = html.scrollTop;
+    if (html.scrollTop > skillsTrigger) skills.classList.add("active");
+    else skills.classList.remove("active");
 
-    if (currentValue > showValue) {
-      for (let i = 0; i < items.length; i++) {
-        items[i].classList.add("show");
-      }
-      setTimeout(() => {
-        for (let i = 0; i < bars.length; i++) {
-          const score = scores[i].dataset.score;
-          bars[i].style.backgroundColor = bars[i].dataset.color;
-          bars[i].style.width = `${score}%`;
-        }
-      }, 1300);
-    }
-  } //scrollEvent
-};
+    if (html.scrollTop > portfolioTrigger) portfolio.classList.add("active");
+    else portfolio.classList.remove("active");
+
+    if (html.scrollTop > html.scrollHeight * 0.5) goup.classList.add("active");
+    else goup.classList.remove("active");
+  });
+});

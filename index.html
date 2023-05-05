@@ -1,263 +1,218 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./source/css/index.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.6.3.min.js"
-      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.js"></script>
     <script src="./source/js/index.js"></script>
-    <title>HJ's PORTFOLIO</title>
+    <title>HJ Portfolio</title>
   </head>
   <body>
-    <!-- loading animation -->
-    <div class="loading-animation-wrapper">
-      <div class="words-wrapper">
-        <span class="word-HJ">HJ</span>
-        <span class="word-S">'s</span>
-        <span class="word-Portfolio">&emsp;Portfolio</span>
-      </div>
-    </div>
-    <!-- header -->
-    <header class="header">
-      <div class="entrance-wrapper">
-        <div
-          class="entrance"
-          data-path="./source/images/index/patrick-tomasso-QMDap1TAu0g-unsplash.jpg"
-        >
-          <div class="board">
-            <div class="description">Welcome to HJ's PORTFOLIO</div>
-          </div>
-        </div>
-      </div>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">hj</a></li>
+          <li><a href="#">skills</a></li>
+          <li><a href="#">portfolio</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+      </nav>
     </header>
-    <!------- main ------->
-    <main class="contents">
-      <div class="contents-items">
-        <!-- nav -->
-        <div class="navbar-wrapper">
-          <nav class="navbar">
+    <main>
+      <div class="wrapper white">
+        <div class="hj item">
+          <h1 class="title">hj portfolio</h1>
+          <p class="intro">안녕하세요 개발자 <span>허현재</span> 입니다.</p>
+          <div class="graph">
+            <div class="line"></div>
             <ul>
-              <li><a href="#hj">HJ?</a></li>
-              <li><a href="#skill">Skill</a></li>
-              <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li class="vertex">
+                <p><b>2016.02</b> | 시각디자인과 졸업</p>
+              </li>
+              <li class="vertex">
+                <p><b>2020.05</b> | 컴퓨터활용능력1급</p>
+              </li>
+              <li class="vertex">
+                <p><b>2020.10</b> | 이젠IT학원수료</p>
+              </li>
+              <li class="vertex">
+                <p><b>2022.09</b> | 정보처리기사</p>
+              </li>
+              <li class="vertex">
+                <p><b>2023.02</b> | 방송통신대학교 편입졸업</p>
+              </li>
             </ul>
-          </nav>
-        </div>
-        <!-- introduce -->
-        <a id="hj"></a>
-        <div class="introduce-wrapper">
-          <div class="introduce">
-            <div class="information">
-              <div class="name">HHJ</div>
-              <div class="email">
-                <em>kil3120@naver.com</em><br /><span>010-3793-7843</span>
-              </div>
-            </div>
-            <div class="desc">
-              <p class="story">
-                <span class="bolded">안녕하세요</span>
-                끊임없이 노력하며 발전하는 허현재 입니다<br />
-                고등학교부터 대학교육까지 디자인을 공부했으며 졸업 후<br />
-                국비지원의 체계적인 교육을 통한 6개월의 개발 교육과<br />
-                교육수료이후 전문적인 IT지식들의 공부와 실습을 통해,<br />
-                <em
-                  >웹 제작과 관련한 그 어떤 분야와도 협업이 가능한<br />
-                  허현재 입니다</em
-                >
-              </p>
-              <br />
-              <div class="certification">
-                <ul>
-                  <li>2020.05 | 컴퓨터활용능력1급</li>
-                  <li>2022.09 | 정보처리기사</li>
-                </ul>
-              </div>
-            </div>
+          </div>
+          <div class="mobile">
+            <ul>
+              <li><b>2016.02</b> | 시각디자인과 졸업</li>
+              <li><b>2020.05</b> | 컴퓨터활용능력1급</li>
+              <li><b>2020.10</b> | 이젠IT학원수료</li>
+              <li><b>2022.09</b> | 정보처리기사</li>
+              <li><b>2023.02</b> | 방송통신대학교 편입졸업</li>
+            </ul>
           </div>
         </div>
-        <!-- skill -->
-        <a id="skill"></a>
-        <div class="tech-wrapper">
-          <h2 class="part"><span>SkILLS</span></h2>
-          <div class="technology">
-            <div class="item" data-path="./source/images/index/html.png">
-              <img
-                src="./source/images/index/html.png"
-                alt="html 아이콘 이미지"
-              />
-              <div class="type">HTML</div>
-              <div class="score" data-score="80">
-                <div class="bar" data-color="#ec6630"></div>
-              </div>
-            </div>
-            <div class="item" data-path="./source/images/index/css.png">
-              <img
-                src="./source/images/index/css.png"
-                alt="css 아이콘 이미지"
-              />
-              <div class="type">CSS</div>
-              <div class="score" data-score="80">
-                <div class="bar" data-color="#0096e6"></div>
-              </div>
-            </div>
-            <div class="item" data-path="./source/images/index/javascript.png">
-              <img
-                src="./source/images/index/javascript.png"
-                alt="javascript 아이콘 이미지"
-              />
-              <div class="type">JAVASCRIPT</div>
-              <div class="score" data-score="80">
-                <div class="bar" data-color="#eeaf4b"></div>
-              </div>
-            </div>
-            <div class="item" data-path="./source/images/index/jquery.png">
-              <img
-                src="./source/images/index/jquery.png"
-                alt="jquery 아이콘 이미지"
-              />
-              <div class="type">jQUERY</div>
-              <div class="score" data-score="50">
-                <div class="bar" data-color="#0669ad"></div>
-              </div>
-            </div>
-            <div class="item" data-path="./source/images/index/sass.png">
-              <img
-                src="./source/images/index/sass.png"
-                alt="sass 아이콘 이미지"
-              />
-              <div class="type">Sass</div>
-              <div class="score" data-score="50">
-                <div class="bar" data-color="#cd6799"></div>
-              </div>
-            </div>
-            <div class="item" data-path="./source/images/index/sql.png">
-              <img
-                src="./source/images/index/sql.png"
-                alt="sql 아이콘 이미지"
-              />
-              <div class="type">SQL</div>
-              <div class="score" data-score="50">
-                <div class="bar" data-color="#000000"></div>
-              </div>
-            </div>
-            <div
-              class="item"
-              data-path="./source/images/index/java-thumbnail.png"
-            >
-              <img
-                src="./source/images/index/java-thumbnail.png"
-                alt="java 아이콘 이미지"
-              />
-              <div class="type">JAVA</div>
-              <div class="score" data-score="50">
-                <div class="bar" data-color="#db380e"></div>
-              </div>
-            </div>
-            <div class="item" data-path="./source/images/index/react_icon.png">
-              <img
-                src="./source/images/index/react_icon.png"
-                alt="react 아이콘 이미지"
-              />
-              <div class="type">REACT</div>
-              <div class="score" data-score="50">
-                <div class="bar" data-color="#61dbfb"></div>
-              </div>
-            </div>
-          </div>
+      </div>
+      <div class="wrapper">
+        <div class="skills item">
+          <h2 class="title">skills</h2>
+          <ul>
+            <li>html</li>
+            <li>css</li>
+            <li>javascript</li>
+            <li>jquery</li>
+            <li>sass</li>
+            <li>sql</li>
+            <li>java</li>
+            <li>react</li>
+          </ul>
         </div>
-        <!-- portfolio -->
-        <a id="portfolio"></a>
-        <div class="portfolio-wrapper">
-          <h2 class="part"><span>PORTFOLIO - React</span></h2>
-          <div class="portfolio">
-            <div class="list" data-path="./source/images/index/api_service.JPG">
-              <a
-                href="https://github.com/hhhjj503/React_api_service_app"
-                target="_blank"
-              >
-                <span class="list-desc"
-                  >#React #TS #json #axios <br />#Redux #공공API프로젝트</span
-                >
-              </a>
-            </div>
-            <div class="list" data-path="./source/images/index/react.JPG">
-              <a
-                href="https://hhhjj503.github.io/React_Portfolio/"
-                target="_blank"
-              >
-                <span class="list-desc"
-                  >#React <br />#반응형 #styledcomponent</span
-                >
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio-wrapper">
-          <h2 class="part"><span>PORTFOLIO - Publishing</span></h2>
-          <div class="portfolio">
-            <div
-              class="list"
-              data-path="./source/images/amusementpark/amuesementpark.JPG"
-            >
-              <a href="./pages/amusementpark/index.html" target="_blank">
-                <span class="list-desc"
-                  >#놀이공원 홈페이지 <br />#반응형 #Sass</span
-                >
-              </a>
-            </div>
-            <div
-              class="list"
-              data-path="./source/images/thecircle/whatsinthecircle.JPG"
-            >
-              <a href="./pages/thecircle/index.html" target="_blank"
-                ><span class="list-desc">#반응형 스크롤 홈페이지</span></a
-              >
-            </div>
-            <div
-              class="list"
-              data-path="./source/images/greennature/greennature.png"
-            >
-              <a href="./pages/greennature/index.html" target="_blank"
-                ><span class="list-desc"
-                  >#여행서비스 홈페이지<br />#모든페이지퍼블리싱</span
-                ></a
-              >
-            </div>
+      </div>
+      <div class="wrapper white">
+        <div class="portfolio item">
+          <h2 class="title">portfolio</h2>
+          <div class="react">
+            <ul>
+              <li>
+                <div class="image">
+                  <img src="./source/images/index/api_service.JPG" alt="" />
+                </div>
+                <div class="desc">
+                  <h4>미세먼지 API 서비스</h4>
+                  <p>리액트를 사용하여 api 서비스를 제공하는 프로젝트 입니다</p>
+                  <ul class="skill-list">
+                    <li>react</li>
+                    <li>redux</li>
+                    <li>typescript</li>
+                    <li>공공api</li>
+                  </ul>
+                  <div>
+                    <a
+                      class="btn"
+                      href="https://github.com/hhhjj503/React_api_service_app"
+                      target="_blank"
+                      >GO</a
+                    >
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="image">
+                  <img src="./source/images/index/react.JPG" alt="" />
+                </div>
+                <div class="desc">
+                  <h4>리액트 포트폴리오 홈페이지</h4>
+                  <p>리액트를 사용하여 만든 포트폴리오 홈페이지 입니다</p>
+                  <ul class="skill-list">
+                    <li>react</li>
+                    <li>responsive</li>
+                  </ul>
+                  <div>
+                    <a
+                      class="btn"
+                      href="https://hhhjj503.github.io/React_Portfolio/"
+                      target="_blank"
+                      >GO</a
+                    >
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="image">
+                  <img
+                    src="./source/images/amusementpark/amuesementpark.JPG"
+                    alt=""
+                  />
+                </div>
+                <div class="desc">
+                  <h4>AMUSEMENT PARK</h4>
+                  <p>놀이공원을 주제로 한 홈페이지 입니다</p>
+                  <ul class="skill-list">
+                    <li>html</li>
+                    <li>sass</li>
+                    <li>jquery</li>
+                    <li>responsive</li>
+                  </ul>
+                  <div>
+                    <a
+                      class="btn"
+                      href="./pages/amusementpark/index.html"
+                      target="_blank"
+                      >GO</a
+                    >
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="image">
+                  <img
+                    src="./source/images/thecircle/whatsinthecircle.JPG"
+                    alt=""
+                  />
+                </div>
+                <div class="desc">
+                  <h4>반응형 스크롤 홈페이지</h4>
+                  <p>마우스휠 화면전체 스크롤이 가능한 홈페이지 입니다</p>
+                  <ul class="skill-list">
+                    <li>html</li>
+                    <li>css</li>
+                    <li>javascript</li>
+                    <li>responsive</li>
+                  </ul>
+                  <div>
+                    <a
+                      class="btn"
+                      href="./pages/thecircle/index.html"
+                      target="_blank"
+                      >GO</a
+                    >
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="image">
+                  <img
+                    src="./source/images/greennature/greennature.png"
+                    alt=""
+                  />
+                </div>
+                <div class="desc">
+                  <h4>여행 사이트</h4>
+                  <p>여행관련정보를 제공하는 홈페이지 입니다</p>
+                  <ul class="skill-list">
+                    <li>html</li>
+                    <li>css</li>
+                    <li>javascript</li>
+                  </ul>
+                  <div>
+                    <a
+                      class="btn"
+                      href="./pages/greennature/index.html"
+                      target="_blank"
+                      >GO</a
+                    >
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </main>
-    <!-- footer -->
-    <footer class="footer">
-      <a id="contact"></a>
-      <div class="contact-wrapper">
-        <h2 class="part last"><span>CONTACT</span></h2>
-        <div class="contact">
-          <div class="comment">방문해 주셔서 감사합니다</div>
-          <div class="tel">
-            <a href="tel:010-3793-7843">010-3793-7843</a>
-          </div>
-          <div class="mail">
-            <a href="mailto:kil3120@naver.com">kil3120@naver.com</a>
-          </div>
-          <div class="up-btn">
-            <a href="#hj">
-              <img
-                src="./source/images/arrow-up-solid.svg"
-                alt="위 화살표 아이콘 이미지"
-              />
-            </a>
-          </div>
-        </div>
+    <footer>
+      <div class="contact item">
+        <h2 class="title">contact</h2>
+        <ul class="info">
+          <li>방문해 주셔서 감사합니다</li>
+          <li>kil3120 @ naver.com</li>
+          <li>010 3793 7843</li>
+        </ul>
       </div>
     </footer>
+    <div class="goup">
+      <a href="#"></a>
+    </div>
   </body>
 </html>
