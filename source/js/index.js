@@ -39,21 +39,38 @@ window.addEventListener("load", () => {
     });
   });
 
-  console.log(header.offsetHeight);
-
   graph.classList.add("active");
 
-  window.addEventListener("scroll", () => {
-    const skillsTrigger = itemsOffsetTops[1] * 0.7;
-    const portfolioTrigger = itemsOffsetTops[2] * 0.9;
+  //스크롤 이벤트  + throttle
+  window.addEventListener(
+    "scroll",
+    throttle(() => {
+      const skillsTrigger = itemsOffsetTops[1] * 0.7;
+      const portfolioTrigger = itemsOffsetTops[2] * 0.9;
 
-    if (html.scrollTop > skillsTrigger) skills.classList.add("active");
-    else skills.classList.remove("active");
+      if (html.scrollTop > skillsTrigger) skills.classList.add("active");
+      else skills.classList.remove("active");
 
-    if (html.scrollTop > portfolioTrigger) portfolio.classList.add("active");
-    else portfolio.classList.remove("active");
+      if (html.scrollTop > portfolioTrigger) portfolio.classList.add("active");
+      else portfolio.classList.remove("active");
 
-    if (html.scrollTop > html.scrollHeight * 0.5) goup.classList.add("active");
-    else goup.classList.remove("active");
-  });
+      if (html.scrollTop > html.scrollHeight * 0.5)
+        goup.classList.add("active");
+      else goup.classList.remove("active");
+    }),
+    { passive: true }
+  );
+
+  function throttle(callback, limit = 1000 / 15) {
+    let waiting = false;
+    return function () {
+      if (!waiting) {
+        callback.apply(this, arguments);
+        waiting = true;
+        setTimeout(() => {
+          waiting = false;
+        }, limit);
+      }
+    };
+  }
 });
