@@ -234,10 +234,10 @@ main .wrapper .nightshow:hover {
   }
 }
 main .wrapper .nightshow .background:after {
-  background: linear-gradient(to bottom, transparent, #ac8bbe);
+  background: linear-gradient(to bottom, transparent, #70a0e0);
 }
 main .wrapper .nightshow .description {
-  background-color: #ac8bbe;
+  background-color: #70a0e0;
 }
 main .wrapper .rollercoaster {
   /* ----------------------- rollercoaster ---------------------- */

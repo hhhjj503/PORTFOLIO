@@ -409,18 +409,26 @@ main .benefits .sub-desc {
   padding: 8px;
   text-align: center;
 }
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .benefits .sub-desc {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .benefits .sub-desc {
+    width: 60%;
+    font-size: 1.2rem;
+  }
+}
 main .benefits .desc {
   width: 30%;
   margin: 0 auto 30px auto;
   font-size: 2rem;
   font-weight: bold;
-  border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   color: #333;
   padding: 8px;
   text-align: center;
-  position: relative;
-  top: -30px;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
   main .benefits .desc {
@@ -538,9 +546,7 @@ main .benefits .listwrapper .benefit button {
   }
 }
 main .benefits .listwrapper .benefit:hover button {
-  background-color: #333;
-  color: white;
-  font-weight: bold;
+  cursor: pointer;
 }
 main .benefits .listwrapper .benefit:nth-child(1) {
   background-color: #287fc9;
