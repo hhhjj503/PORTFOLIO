@@ -509,13 +509,13 @@ main .hj {
 
   .portfolio .image {
     display: block;
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
   }
 
   .portfolio .desc {
     display: block;
-    width: 70%;
+    width: 80%;
     padding: 30px 0;
     text-align: center;
     margin: 0 auto;
