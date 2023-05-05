@@ -44,14 +44,13 @@ main .banner .main_img {
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+  background-position: bottom;
 }
 main .info {
   /*----------------------- main .info ------------------------ */
-  max-width: 1400px;
+  max-width: 1200px;
   width: 100%;
-  padding: 250px 0;
+  padding: 100px 0;
   margin: 0 auto;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
@@ -67,67 +66,85 @@ main .info {
     overflow: hidden;
   }
 }
-main .info .desc {
-  font-size: 2.5rem;
-  border-bottom: 1px solid #e1e1e1;
+main .info .sub-desc {
+  width: 30%;
+  margin: 0 auto;
+  font-size: 1.6em;
+  border-top: 1px solid #ccc;
   font-weight: bold;
-  position: relative;
-  top: -30px;
-  color: #000;
-  padding: 20px;
+  color: #666;
+  padding: 8px;
+  text-align: center;
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .info .sub-desc {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .info .sub-desc {
+    width: 60%;
+    font-size: 1.2rem;
+  }
+}
+main .info .desc {
+  width: 30%;
+  margin: 0 auto 30px auto;
+  font-size: 2rem;
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+  color: #333;
+  padding: 8px;
+  text-align: center;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
   main .info .desc {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 479px) {
   main .info .desc {
-    font-size: 1.8rem;
+    width: 60%;
+    font-size: 1.5rem;
   }
-}
-main .info .desc:before {
-  position: absolute;
-  content: "";
-  top: 50%;
-  left: 0;
-  width: 5px;
-  height: 40%;
-  transform: translateY(-50%);
-  background-color: purple;
 }
 main .info .contents {
   width: 100%;
   height: initial;
   position: relative;
+  overflow: hidden;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
   main .info .contents {
+    width: 600px;
     overflow: hidden;
+    margin: 0 auto;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 479px) {
   main .info .contents {
+    width: 300px;
     overflow: hidden;
+    margin: 0 auto;
   }
 }
 main .info .contents .slider-wrapper {
   position: relative;
-  left: 30%;
+  left: 0;
   top: 0;
   width: 1600px;
   overflow: hidden;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
   main .info .contents .slider-wrapper {
-    left: 20%;
-    transition: 0.3s ease-in-out;
+    left: 0;
+    transition: 0.3s ease;
     overflow: hidden;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 479px) {
   main .info .contents .slider-wrapper {
-    left: 20%;
+    left: 0;
   }
 }
 main .info .contents .slider-wrapper .slider {
@@ -140,14 +157,12 @@ main .info .contents .slider-wrapper .slider {
 }
 main .info .contents .slider-wrapper .slider .slide {
   float: left;
-  width: 300px;
+  width: 298px;
   height: 300px;
   background-color: black;
-  border-radius: 10px;
-  overflow: hidden;
   white-space: nowrap;
-  margin: 0 10px;
-  transition: 0.5s ease-in-out;
+  margin: 0 1px;
+  transition: 0.5s ease;
   box-sizing: border-box;
   cursor: pointer;
 }
@@ -195,60 +210,235 @@ main .info .contents .overlay img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .benefits {
-  /*----------------------- main .benefits ------------------------ */
-  position: relative;
-  padding: 200px 0;
-  background-image: url(../../../images/amusementpark/nightshow/rides.PNG);
+main .letter-wrapper {
+  width: 100%;
+  background-image: url(../../../images/amusementpark/nightshow/letter_back.PNG);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
-  main .benefits {
-    padding: 150px 0;
-  }
-}
-@media screen and (min-width: 320px) and (max-width: 479px) {
-  main .benefits {
-    padding: 100px 0;
-  }
-}
-main .benefits:after {
+main .letter-wrapper:before {
   position: absolute;
   content: "";
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-color: #1c3055;
-  opacity: 0.6;
+  height: 70%;
+  background: linear-gradient(to bottom, transparent 0%, black 100%);
   z-index: 0;
 }
-main .benefits .desc {
-  font-size: 3rem;
-  border-bottom: 1px solid #e1e1e1;
+main .letter-wrapper .letter {
+  /*----------------------- main .letter ------------------------ */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .letter-wrapper .letter {
+    padding: 50px 0;
+  }
+}
+main .letter-wrapper .letter .desc {
+  width: 30%;
+  margin: 0 auto 30px auto;
+  font-size: 2rem;
+  font-weight: bold;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  color: #333;
+  padding: 8px;
   text-align: center;
   position: relative;
   top: -30px;
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .letter-wrapper .letter .desc {
+    font-size: 1.7rem;
+    margin: 0 auto 10px auto;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .letter-wrapper .letter .desc {
+    width: 60%;
+    font-size: 1.5rem;
+    margin: 0 auto 10px auto;
+  }
+}
+main .letter-wrapper .letter .form-wrapper {
+  padding: 50px 0;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .letter-wrapper .letter .form-wrapper {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .letter-wrapper .letter .form-wrapper {
+    min-width: initial;
+    width: 85%;
+    padding: 0;
+  }
+}
+main .letter-wrapper .letter .form-wrapper form label {
+  display: inline-block;
+  background-color: #1c3055;
   color: white;
-  padding: 20px;
+  padding: 10px 15px;
+  border-radius: 30px;
+  font-size: 1.8rem;
+  box-shadow: 1px 1px 10px rgb(77, 77, 77);
+  font-weight: bold;
+  margin: 30px 0 10px 0;
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .letter-wrapper .letter .form-wrapper form label {
+    font-size: 1.3rem;
+    padding: 10px;
+    font-weight: normal;
+  }
+}
+main .letter-wrapper .letter .form-wrapper form input {
+  width: 100%;
+  padding: 20px 20px;
+  box-sizing: border-box;
+  font-size: 1.8rem;
+  margin: 5px 0;
+  border: none;
+  box-shadow: 1px 1px 10px rgb(166, 166, 166);
+}
+main .letter-wrapper .letter .form-wrapper form input[type=radio] {
+  width: 100%;
+  box-shadow: none;
+  box-sizing: border-box;
+  display: block;
+  margin: 10px;
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .letter-wrapper .letter .form-wrapper form input {
+    padding: 10px;
+    font-size: 1.5rem;
+  }
+}
+main .letter-wrapper .letter .form-wrapper form textarea {
+  resize: none;
+  width: 100%;
+  font-size: 1.8rem;
+  box-sizing: border-box;
+  padding: 10px;
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .letter-wrapper .letter .form-wrapper form textarea {
+    font-size: 1.5rem;
+  }
+}
+main .letter-wrapper .letter .form-wrapper form .customer-item li {
+  width: 30%;
+  height: 220px;
+  margin: 10px;
+  display: inline-block;
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .letter-wrapper .letter .form-wrapper form .customer-item li {
+    box-sizing: border-box;
+    margin: 0 5px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .letter-wrapper .letter .form-wrapper form .customer-item li {
+    width: 40%;
+    height: 150px;
+  }
+}
+main .letter-wrapper .letter .form-wrapper form .customer-item li img {
+  width: 100%;
+  height: 90%;
+  border-radius: 15px;
+  border: 3px solid white;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .letter-wrapper .letter .form-wrapper form .customer-item li img {
+    height: 70%;
+  }
+}
+main .letter-wrapper .letter .form-wrapper form button {
+  margin: 0 auto;
+  display: block;
+  padding: 10px 30px;
+  font-size: 1.8rem;
+  border-radius: 15px;
+  border: transparent;
+  background-color: #e1e1e1;
+  margin-top: 50px;
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .letter-wrapper .letter .form-wrapper form button {
+    padding: 5px 20px;
+    font-size: 1.4rem;
+  }
+}
+main .benefits {
+  /*----------------------- main .benefits ------------------------ */
+  position: relative;
+  padding: 100px 0;
+}
+main .benefits .sub-desc {
+  width: 30%;
+  margin: 0 auto;
+  font-size: 1.6em;
+  border-top: 1px solid #ccc;
+  font-weight: bold;
+  color: #666;
+  padding: 8px;
+  text-align: center;
+}
+main .benefits .desc {
+  width: 30%;
+  margin: 0 auto 30px auto;
+  font-size: 2rem;
+  font-weight: bold;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  color: #333;
+  padding: 8px;
+  text-align: center;
+  position: relative;
+  top: -30px;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
   main .benefits .desc {
-    font-size: 2.5rem;
+    width: 30%;
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .benefits .desc {
+    width: 60%;
+    font-size: 1.5rem;
   }
 }
 main .benefits .listwrapper {
-  max-width: 1400px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   z-index: 1;
   position: relative;
+  white-space: nowrap;
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .benefits .listwrapper {
+    white-space: initial;
+  }
 }
 @media screen and (min-width: 320px) and (max-width: 479px) {
-  main .benefits .listwrapper .desc {
-    font-size: 1.8rem;
+  main .benefits .listwrapper {
+    white-space: initial;
   }
 }
 main .benefits .listwrapper ul {
@@ -259,53 +449,25 @@ main .benefits .listwrapper ul {
 main .benefits .listwrapper .benefit {
   display: inline-block;
   height: 300px;
-  width: 16%;
+  width: 298px;
   background-color: white;
   vertical-align: middle;
-  border-radius: 15px;
   transition: 0.3s ease-in-out;
-  position: relative;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   position: relative;
   overflow: hidden;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
   main .benefits .listwrapper .benefit {
-    height: 250px;
-    width: 170px;
+    margin: 5px;
+    width: 40%;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 479px) {
   main .benefits .listwrapper .benefit {
     margin: 3px 1px;
     height: 190px;
-    width: 35%;
-    padding: 0 5px;
+    width: 70%;
   }
-}
-main .benefits .listwrapper .benefit:nth-child(2n) {
-  position: relative;
-  top: 20px;
-}
-main .benefits .listwrapper .benefit:before {
-  position: absolute;
-  content: "";
-  top: -60%;
-  left: 50%;
-  width: 105%;
-  height: 100%;
-  border-radius: 50%;
-  transform: translateX(-50%);
-  background-color: rgb(112, 149, 194);
-  transition: 0.3s ease-in-out;
-}
-main .benefits .listwrapper .benefit:hover {
-  position: relative;
-  transform: rotate(-5deg);
-  box-shadow: 1px 1px 20px rgb(77, 77, 77);
-  z-index: 1;
 }
 main .benefits .listwrapper .benefit > div {
   position: absolute;
@@ -314,41 +476,12 @@ main .benefits .listwrapper .benefit > div {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-main .benefits .listwrapper .benefit .number {
-  font-size: 10rem;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  text-shadow: 0.5px 0.5px rgb(113, 113, 113), -0.5px -0.5px rgb(106, 106, 106);
-  display: block;
-  width: 100%;
-  position: relative;
-}
-@media screen and (min-width: 480px) and (max-width: 768px) {
-  main .benefits .listwrapper .benefit .number {
-    font-size: 7rem;
-  }
-}
-@media screen and (min-width: 320px) and (max-width: 479px) {
-  main .benefits .listwrapper .benefit .number {
-    font-size: 5rem;
-  }
-}
-main .benefits .listwrapper .benefit .number:before {
-  position: absolute;
-  content: "";
-  width: 50%;
-  height: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  border-radius: 50%;
-}
 main .benefits .listwrapper .benefit p {
   width: 90%;
   font-size: 1.4rem;
   margin: 20px auto;
   font-weight: bold;
-  color: black;
+  color: white;
   line-height: 20px;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
@@ -377,202 +510,44 @@ main .benefits .listwrapper .benefit button {
   margin: 0 auto;
   padding: 7px 0;
   border-radius: 15px;
-  border: 1px solid white;
+  border: none;
   font-size: 1.2rem;
   transition: 0.3s ease-in-out;
 }
-main .benefits .listwrapper .benefit:hover button {
-  background-color: rgb(136, 0, 0);
-  color: white;
-  font-weight: bold;
-}
-main .benefits .listwrapper .more {
-  text-align: center;
-  margin-top: 80px;
-}
-main .benefits .listwrapper .more button {
-  width: 15%;
-  padding: 15px 0;
-  border-radius: 30px;
-  border: transparent;
-  font-size: 1.5rem;
-  background: #7095c2;
-  color: white;
-  font-weight: bold;
-  transition: 0.3s ease-in-out;
-}
-main .benefits .listwrapper .more button:hover {
-  background-color: rgb(136, 0, 0);
-  cursor: pointer;
-  box-shadow: 1px 1px 20px rgb(77, 77, 77);
-}
-@media screen and (min-width: 320px) and (max-width: 479px) {
-  main .benefits .listwrapper .more button {
-    width: 35%;
-    padding: 15px 0;
-    font-size: 1.5rem;
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  main .benefits .listwrapper .benefit button {
+    width: 40%;
+    font-size: 1.3rem;
   }
 }
-main .letter {
-  /*----------------------- main .letter ------------------------ */
-  width: 100%;
-  margin: 0 auto;
-  padding: 100px 0;
-  background-image: url(../../../images/amusementpark/nightshow/letter_back.PNG);
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .benefits .listwrapper .benefit button {
+    width: 30%;
+    font-size: 1.1rem;
+  }
+}
+main .benefits .listwrapper .benefit:hover button {
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+}
+main .benefits .listwrapper .benefit:nth-child(1) {
+  background-color: #287fc9;
+  background-image: url(../../../images/amusementpark/nightshow/nightshow_fireworks.PNG);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: relative;
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
-  main .letter {
-    padding: 50px 0;
-  }
+main .benefits .listwrapper .benefit:nth-child(2) {
+  background-color: orange;
 }
-main .letter:before {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 70%;
-  background: linear-gradient(to bottom, transparent 0%, black 100%);
-  z-index: 0;
+main .benefits .listwrapper .benefit:nth-child(3) {
+  background-color: #287fc9;
+  background-image: url(../../../images/amusementpark/nightshow/nightsky.PNG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
-main .letter .desc {
-  font-size: 2.5rem;
-  border-bottom: 1px solid white;
-  text-align: center;
-  position: relative;
-  color: black;
-  padding: 20px;
-  font-weight: bold;
-  margin: 0 auto;
-  max-width: 1400px;
-  width: 80%;
-  z-index: 1;
-}
-@media screen and (min-width: 480px) and (max-width: 768px) {
-  main .letter .desc {
-    font-size: 2rem;
-  }
-}
-@media screen and (min-width: 320px) and (max-width: 479px) {
-  main .letter .desc {
-    font-size: 1.8rem;
-  }
-}
-main .letter .form-wrapper {
-  padding: 50px 0;
-  width: 40%;
-  max-width: 1400px;
-  min-width: 600px;
-  margin: 0 auto;
-  position: relative;
-}
-@media screen and (min-width: 480px) and (max-width: 768px) {
-  main .letter .form-wrapper {
-    width: 80%;
-  }
-}
-@media screen and (min-width: 320px) and (max-width: 479px) {
-  main .letter .form-wrapper {
-    min-width: initial;
-    width: 85%;
-    padding: 30px 0;
-  }
-}
-main .letter .form-wrapper form label {
-  display: inline-block;
-  background-color: #1c3055;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 30px;
-  font-size: 1.8rem;
-  box-shadow: 1px 1px 10px rgb(77, 77, 77);
-  font-weight: bold;
-  margin: 30px 0 10px 0;
-}
-@media screen and (min-width: 320px) and (max-width: 479px) {
-  main .letter .form-wrapper form label {
-    font-size: 1.5rem;
-    padding: 10px;
-    font-weight: normal;
-  }
-}
-main .letter .form-wrapper form input {
-  width: 100%;
-  padding: 20px 20px;
-  box-sizing: border-box;
-  font-size: 1.8rem;
-  margin: 5px 0;
-  border: none;
-  box-shadow: 1px 1px 10px rgb(166, 166, 166);
-}
-main .letter .form-wrapper form input[type=radio] {
-  width: 100%;
-  box-shadow: none;
-  box-sizing: border-box;
-  display: block;
-  margin: 10px;
-}
-@media screen and (min-width: 320px) and (max-width: 479px) {
-  main .letter .form-wrapper form input {
-    padding: 10px;
-    font-size: 1.5rem;
-  }
-}
-main .letter .form-wrapper form textarea {
-  resize: none;
-  width: 100%;
-  font-size: 1.8rem;
-  box-sizing: border-box;
-  padding: 10px;
-}
-@media screen and (min-width: 320px) and (max-width: 479px) {
-  main .letter .form-wrapper form textarea {
-    font-size: 1.5rem;
-  }
-}
-main .letter .form-wrapper form .customer-item li {
-  width: 30%;
-  height: 220px;
-  margin: 10px;
-  display: inline-block;
-}
-@media screen and (min-width: 480px) and (max-width: 768px) {
-  main .letter .form-wrapper form .customer-item li {
-    box-sizing: border-box;
-    margin: 0 5px;
-  }
-}
-@media screen and (min-width: 320px) and (max-width: 479px) {
-  main .letter .form-wrapper form .customer-item li {
-    width: 40%;
-    height: 150px;
-  }
-}
-main .letter .form-wrapper form .customer-item li img {
-  width: 100%;
-  height: 90%;
-  border-radius: 15px;
-  border: 3px solid white;
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media screen and (min-width: 320px) and (max-width: 479px) {
-  main .letter .form-wrapper form .customer-item li img {
-    height: 70%;
-  }
-}
-main .letter .form-wrapper form button {
-  margin: 0 auto;
-  display: block;
-  padding: 10px 30px;
-  font-size: 1.8rem;
-  border-radius: 15px;
-  border: transparent;
-  background-color: #e1e1e1;
-  margin-top: 50px;
+main .benefits .listwrapper .benefit:nth-child(4) {
+  background-color: #287fc9;
 }/*# sourceMappingURL=nightshow.css.map */

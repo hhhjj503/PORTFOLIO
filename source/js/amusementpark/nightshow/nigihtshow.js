@@ -98,8 +98,8 @@ window.addEventListener("load", () => {
    * 슬라이더에 left : -320px css 를 적용하는 함수
    */
   function addStyle() {
-    slider.style.transition = "1s ease-in-out";
-    slider.style.left = "-320px";
+    slider.style.transition = "1s ease";
+    slider.style.left = "-300px";
   }
 
   /**
