@@ -360,6 +360,8 @@ main .goods-slider ul li p {
   main .goods-slider ul li p {
     width: 100px;
     height: 100px;
+    font-size: 1.1rem;
+    line-height: 100px;
   }
 }
 main .purchase {
