@@ -70,6 +70,7 @@ main {
       position: absolute;
       top: 50%;
       left: 50%;
+      margin: 0 auto;
       transform: translate(-50%, -50%);
       font-size: 4rem;
       color: white;
@@ -148,19 +149,18 @@ main {
   }
   & .info-wrapper {
     /*-- ------------------------------  main .info-wrapper -------------------------------- */
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
-    width: 100%;
 
     padding: 100px 0;
     text-align: center;
 
     @media screen and (min-width: 480px) and (max-width: 768px) {
-      padding: 100px 0;
+      padding: 80px 0;
     }
 
     @media screen and (min-width: 320px) and (max-width: 479px) {
-      padding: 70px 0;
+      padding: 60px 0;
     }
 
     & .time {
@@ -168,25 +168,24 @@ main {
       height: 100%;
 
       & img {
-        width: 95px;
-        height: 95px;
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: 30px;
+        width: 80px;
+        height: 80px;
+        display: block;
+        margin: 0 auto;
       }
 
       & .open-time {
         font-size: 3rem;
         font-weight: bold;
-        display: inline-block;
-        letter-spacing: 2px;
-        margin-left: 30px;
+        letter-spacing: 5px;
+        display: block;
+        margin-top: 50px;
       }
 
       @media screen and (min-width: 480px) and (max-width: 768px) {
         & img {
-          width: 85px;
-          height: 85px;
+          width: 70px;
+          height: 70px;
           display: block;
           margin: 0 auto;
           margin-bottom: 15px;
@@ -196,14 +195,14 @@ main {
           display: block;
           margin-left: 0px;
           margin-top: 15px;
-          font-size: 2.7rem;
+          font-size: 2.4rem;
         }
       }
 
       @media screen and (min-width: 320px) and (max-width: 479px) {
         & img {
-          width: 75px;
-          height: 75px;
+          width: 55px;
+          height: 55px;
           display: block;
           margin: 0 auto;
           margin-bottom: 10px;
@@ -211,9 +210,9 @@ main {
 
         & .open-time {
           display: block;
-          margin-left: 0px;
+          font-size: 2rem;
           margin-top: 10px;
-          font-size: 2.5rem;
+          letter-spacing: 5.5px;
         }
       }
     }
@@ -223,48 +222,60 @@ main {
       height: 100%;
       margin-top: 50px;
       @media screen and (min-width: 480px) and (max-width: 768px) {
+        margin-top: 30px;
       }
 
       @media screen and (min-width: 320px) and (max-width: 479px) {
+        margin-top: 20px;
       }
 
       & .part {
         display: inline-block;
-        min-width: 100px;
-        height: 100px;
-        padding: 0 20px;
+        width: 80px;
+        height: 80px;
         box-sizing: border-box;
         text-align: center;
         margin: 0 3px;
-        line-height: 100px;
+        line-height: 80px;
         background-color: rgb(71, 71, 71);
         color: white;
         border-radius: 15px;
-        font-size: 5rem;
+        font-size: 3rem;
+
         @media screen and (min-width: 480px) and (max-width: 768px) {
+          width: 67px;
+          height: 67px;
+          line-height: 67px;
+          font-size: 2.5rem;
         }
 
         @media screen and (min-width: 320px) and (max-width: 479px) {
-          min-width: 70px;
-          height: 70px;
-          line-height: 70px;
-          font-size: 3.5rem;
+          width: 60px;
+          height: 60px;
+          line-height: 60px;
+          font-size: 2rem;
         }
       }
 
       & .countdown-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
         margin: 50px auto 0 auto;
         color: rgb(71, 71, 71);
         background-color: rgb(219, 219, 219);
-        width: 30%;
+        width: 255px;
         padding: 10px 0;
-        border-radius: 15px;
+        border-radius: 10px;
+
         @media screen and (min-width: 480px) and (max-width: 768px) {
+          width: 220px;
+          font-size: 1.8rem;
+          margin-top: 30px;
         }
 
         @media screen and (min-width: 320px) and (max-width: 479px) {
-          font-size: 2rem;
+          width: 205px;
+          font-size: 1.6rem;
+          margin-top: 20px;
         }
       }
     }
@@ -292,7 +303,7 @@ main {
       text-align: center;
       transform: translate(-50%, -50%);
       font-weight: bold;
-      font-size: 3rem;
+      font-size: 2.5rem;
       opacity: 0;
       color: white;
       z-index: 10;
@@ -305,14 +316,14 @@ main {
       }
 
       @media screen and (min-width: 480px) and (max-width: 768px) {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
         text-align: center;
         word-break: keep-all;
       }
 
       @media screen and (min-width: 320px) and (max-width: 479px) {
         & {
-          font-size: 2rem;
+          font-size: 1.8rem;
           text-align: center;
           word-break: keep-all;
         }
@@ -359,8 +370,7 @@ main {
 
     & .btn-wrapper {
       /*------- ..event-wrapper .btn-wrapper -----------*/
-      max-width: 1400px;
-      width: 100%;
+      max-width: 1200px;
       height: 100%;
       margin: 0 auto;
       top: 0;
