@@ -70,7 +70,7 @@ window.addEventListener("load", () => {
         }, limit);
       }
     };
-  }
+  } //throttle
 
   function saveOffsetTop() {
     itemsOffsetTops = [];
@@ -82,5 +82,5 @@ window.addEventListener("load", () => {
       );
     }
     itemsOffsetTops[headerAs.length - 1] = html.scrollHeight;
-  }
+  } //창 사이즈 변경시 top값 다시저장
 });

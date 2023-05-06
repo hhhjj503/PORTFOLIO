@@ -5,6 +5,7 @@ window.addEventListener("load", () => {
   const overlayImg = document.querySelector(".overlay img");
   const hidings = document.querySelectorAll("a.hiding + *");
   const html = document.querySelector("html");
+  const gotop = document.querySelector(".gotop");
 
   //모바일 메뉴
   const topNavMobile = document.querySelector(".top-nav-mobile");
@@ -15,6 +16,15 @@ window.addEventListener("load", () => {
     subMenu.classList.toggle("opened");
   });
 
+  //gotop 버튼
+  gotop.addEventListener(
+    "click",
+    () => {
+      window.scrollTo(0, 0);
+    },
+    { passive: true }
+  );
+
   //click 이벤트 작동하지 않음
   goup.addEventListener("mouseenter", () => {
     subMenu.classList.toggle("opened");
@@ -24,14 +34,17 @@ window.addEventListener("load", () => {
     hidings[i].dataset.offtop = hidings[i].getBoundingClientRect().top - 1000;
   }
 
-  window.addEventListener("scroll", () => {
-    const currentTop = html.scrollTop;
-    for (let i = 0; i < hidings.length; i++) {
-      if (currentTop >= hidings[i].dataset.offtop) {
-        showElements(hidings[i]);
+  window.addEventListener(
+    "scroll",
+    throttle(() => {
+      const currentTop = html.scrollTop;
+      for (let i = 0; i < hidings.length; i++) {
+        if (currentTop >= hidings[i].dataset.offtop) {
+          showElements(hidings[i]);
+        }
       }
-    }
-  });
+    })
+  );
 
   function showElements(element) {
     element.style.top = "0px";
@@ -95,7 +108,7 @@ window.addEventListener("load", () => {
   }
 
   /**
-   * 슬라이더에 left : -320px css 를 적용하는 함수
+   * 슬라이더에 left : -300px css 를 적용하는 함수
    */
   function addStyle() {
     slider.style.transition = "1s ease";
@@ -114,4 +127,17 @@ window.addEventListener("load", () => {
     slider.style.transition = "none";
     slider.style.left = "0px";
   }
+
+  function throttle(callback, limit = 1000 / 15) {
+    let waiting = false;
+    return function () {
+      if (!waiting) {
+        callback.apply(this, arguments);
+        waiting = true;
+        setTimeout(() => {
+          waiting = false;
+        }, limit);
+      }
+    };
+  } //throttle
 });
