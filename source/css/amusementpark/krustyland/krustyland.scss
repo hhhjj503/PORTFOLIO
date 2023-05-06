@@ -15,6 +15,7 @@ body {
 .top-nav {
   transition: 0.5s ease-in-out;
   z-index: 98; /* 상품구매창의 레이어를 위해 z-index  변경*/
+  position: fixed;
 
   &.scrolldown {
     opacity: 0;
@@ -52,11 +53,8 @@ main {
   /* ----------------------------------- main  --------------------------------------- */
 
   & .background {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 1300px;
+    height: 500px;
     background: url(../../../images/amusementpark/krustyland.PNG) no-repeat;
     background-size: cover;
     background-position: center center;
@@ -64,33 +62,59 @@ main {
 
     @media screen and (min-width: 480px) and (max-width: 768px) {
       & {
-        height: 1000px;
+        height: 400px;
       }
     }
     @media screen and (min-width: 320px) and (max-width: 479px) {
       & {
-        height: 100vh;
+        height: 300px;
+      }
+    }
+  }
+
+  & .menu {
+    width: 100%;
+    background-color: #fbc717;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-sizing: border-box;
+
+    @media screen and (min-width: 480px) and (max-width: 768px) {
+      & {
+        padding: 0 20px;
+      }
+    }
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+      & {
+        position: relative;
+        padding: 0 20px;
       }
     }
 
-    &:after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      display: block;
-      width: 100%;
-      height: 100px;
-      background: linear-gradient(to bottom, transparent, white);
+    & .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      height: 50px;
 
-      @media screen and (min-width: 480px) and (max-width: 768px) {
-        & {
-          height: 20px;
+      & p {
+        font-size: 1.4rem;
+        color: white;
+        line-height: 50px;
+
+        @media screen and (min-width: 320px) and (max-width: 479px) {
+          & {
+            font-size: 1.3rem;
+          }
         }
-      }
-      @media screen and (min-width: 320px) and (max-width: 479px) {
-        & {
-          height: 20px;
+
+        &:nth-child(1) {
+          float: left;
+        }
+
+        &:nth-child(2) {
+          float: right;
         }
       }
     }
@@ -98,91 +122,86 @@ main {
 
   & .goods-wrapper {
     /*----------------------- main .goods-wrapper------------------------ */
-    padding: 70px 0;
-    max-width: 1400px;
-    min-height: 1000px;
-    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 100px 0;
+    background-color: white;
 
     @media screen and (min-width: 480px) and (max-width: 768px) {
       & {
-        padding-bottom: 0;
+        padding: 70px 0;
       }
     }
     @media screen and (min-width: 320px) and (max-width: 479px) {
       & {
-        min-height: 400px;
-        padding-bottom: 0;
+        padding: 50px 0;
       }
     }
 
     & .title {
-      width: 100%;
+      width: 20%;
       text-align: center;
-      font-size: 3rem;
+      font-size: 1.6rem;
       font-weight: bold;
-      color: white;
-      margin-bottom: 150px;
+      color: #333;
+      margin: 0 auto 50px auto;
+      border-top: 1px solid #bebebe;
+      border-bottom: 1px solid #bebebe;
+      padding: 8px 0;
+
       @media screen and (min-width: 480px) and (max-width: 768px) {
         & {
-          font-size: 2.5rem;
+          width: 30%;
+          font-size: 1.5rem;
         }
       }
       @media screen and (min-width: 320px) and (max-width: 479px) {
         & {
-          font-size: 2rem;
-          margin-bottom: 50px;
+          width: 40%;
+          font-size: 1.4rem;
         }
       }
     }
 
     & .list-wrapper {
-      width: 90%;
-      position: relative;
-      padding: 70px;
+      width: 100%;
       box-sizing: border-box;
       margin: 0 auto;
 
-      &:before {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: white;
-        border-radius: 10px;
-        top: 0;
-        left: 0;
-        opacity: 0.9;
-        z-index: 0;
+      @media screen and (min-width: 480px) and (max-width: 768px) {
+        & {
+          padding: 0 10px;
+        }
       }
-
       @media screen and (min-width: 320px) and (max-width: 479px) {
         & {
-          width: 100%;
-          padding: 0px;
-          padding-bottom: 50px;
         }
       }
     }
 
     & ul {
       width: 100%;
-      min-height: 400px;
+      padding-bottom: 50px;
       position: relative;
       box-sizing: border-box;
-      text-align: center;
+      text-align: left;
+      font-size: 0;
+
+      @media screen and (min-width: 320px) and (max-width: 479px) {
+        & {
+          margin-bottom: 0;
+        }
+      }
 
       & li {
-        width: 210px;
-        height: 210px;
+        width: 200px;
+        height: 200px;
         overflow: hidden;
         box-sizing: border-box;
-        margin: 30px;
-        border-radius: 5px;
         transition: 0.3s ease-in-out;
         visibility: hidden;
         display: inline-block;
+        margin-top: 50px;
 
         &.loaded {
           animation: showItems 0.8s forwards ease-in-out;
@@ -200,14 +219,15 @@ main {
 
         @media screen and (min-width: 480px) and (max-width: 768px) {
           & {
-            width: 43%;
-            margin: 10px;
+            width: 19%;
+            margin: 10px 0.5%;
           }
         }
         @media screen and (min-width: 320px) and (max-width: 479px) {
           & {
-            width: 40%;
-            margin: 10px;
+            width: 30%;
+            height: 150px;
+            margin: 5px;
           }
         }
 
@@ -228,7 +248,7 @@ main {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: 0.3s ease-in-out;
+            transition: 0.3s ease;
           }
 
           //목록에 hover 시 img 크기 키우기
@@ -239,22 +259,31 @@ main {
 
           & h5 {
             position: absolute;
+            display: inline;
             left: 50%;
             bottom: 10%;
             transform: translateX(-50%);
-            padding: 5px 5%;
+            padding: 0 10px;
             word-break: keep-all;
             border-radius: 15px;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             line-height: 20px;
             font-weight: bold;
             background-color: white;
             text-align: center;
             transition: 0.3s ease-in-out;
+
+            @media screen and (min-width: 480px) and (max-width: 768px) {
+              & {
+                font-size: 1.2rem;
+              }
+            }
+
             @media screen and (min-width: 320px) and (max-width: 479px) {
               & {
-                font-size: 1.3rem;
-                min-width: 50%;
+                font-size: 1.1rem;
+                padding: 0 5px;
+                min-width: 55%;
               }
             }
           }
@@ -266,9 +295,9 @@ main {
       position: relative;
       z-index: 1;
       display: block;
-      margin: 50px auto 0 auto;
-      padding: 10px 30px;
-      font-size: 1.5rem;
+      margin: 0 auto;
+      padding: 10px 20px;
+      font-size: 1.3rem;
       border: none;
       background-color: red;
       border-radius: 5px;
@@ -278,12 +307,111 @@ main {
       cursor: pointer;
       transition: 0.3s ease-in-out;
 
+      @media screen and (min-width: 480px) and (max-width: 768px) {
+        & {
+          margin: 0 auto 50px auto;
+        }
+      }
+      @media screen and (min-width: 320px) and (max-width: 479px) {
+        & {
+          width: 30%;
+          font-size: 1.4rem;
+        }
+      }
+
       &.nomore {
         display: none;
       }
 
       &:hover {
         border: rgb(141, 0, 0);
+      }
+    }
+  }
+
+  & .goods-slider {
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 20px 0;
+
+    @media screen and (min-width: 480px) and (max-width: 768px) {
+      & {
+        overflow: scroll;
+      }
+    }
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+      & {
+        overflow: scroll;
+      }
+    }
+
+    ul {
+      max-width: 1200px;
+      text-align: center;
+      white-space: nowrap;
+      margin: 0 auto;
+      font-size: 0;
+
+      & li {
+        position: relative;
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        border-radius: 50%;
+        overflow: hidden;
+
+        @media screen and (min-width: 480px) and (max-width: 768px) {
+          & {
+            width: 150px;
+            height: 150px;
+          }
+        }
+        @media screen and (min-width: 320px) and (max-width: 479px) {
+          & {
+            width: 100px;
+            height: 100px;
+          }
+        }
+
+        &:hover p {
+          transition: opacity 0.3s ease;
+          opacity: 1;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        p {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: rgba(0, 0, 0, 0.6);
+          color: white;
+          font-size: 1.4rem;
+          line-height: 200px;
+          opacity: 0;
+
+          @media screen and (min-width: 480px) and (max-width: 768px) {
+            & {
+              width: 150px;
+              height: 150px;
+              font-size: 1.3rem;
+              line-height: 150px;
+            }
+          }
+          @media screen and (min-width: 320px) and (max-width: 479px) {
+            & {
+              width: 100px;
+              height: 100px;
+            }
+          }
+        }
       }
     }
   }
@@ -483,14 +611,14 @@ main {
       }
 
       & .goods-title {
-        font-size: 2.3rem;
+        font-size: 2rem;
         padding: 20px;
 
         @media screen and (min-width: 480px) and (max-width: 768px) {
           & {
             box-sizing: border-box;
             width: 100%;
-            font-size: 2rem;
+            font-size: 1.8rem;
             padding: 30px 40px;
           }
         }
@@ -502,7 +630,7 @@ main {
         }
 
         & .review-count {
-          font-size: 2rem;
+          font-size: 1.8rem;
           font-weight: bold;
           margin-left: 5px;
           cursor: pointer;
@@ -511,7 +639,7 @@ main {
 
           @media screen and (min-width: 480px) and (max-width: 768px) {
             & {
-              font-size: 1.8rem;
+              font-size: 1.7rem;
             }
           }
           @media screen and (min-width: 320px) and (max-width: 479px) {
@@ -589,20 +717,20 @@ main {
         }
 
         & .per-price {
-          font-size: 2.5rem;
+          font-size: 2rem;
           font-weight: bold;
           float: left;
 
           @media screen and (min-width: 480px) and (max-width: 768px) {
             & {
-              font-size: 2rem;
+              font-size: 1.9rem;
               font-weight: bold;
               float: left;
             }
           }
           @media screen and (min-width: 320px) and (max-width: 479px) {
             & {
-              font-size: 2rem;
+              font-size: 1.8rem;
               font-weight: bold;
               float: left;
             }
@@ -656,7 +784,7 @@ main {
         }
 
         & .number-title {
-          font-size: 2.2rem;
+          font-size: 1.8rem;
           float: left;
 
           @media screen and (min-width: 480px) and (max-width: 768px) {
@@ -666,7 +794,7 @@ main {
           }
           @media screen and (min-width: 320px) and (max-width: 479px) {
             & {
-              font-size: 1.7rem;
+              font-size: 1.6rem;
             }
           }
         }
@@ -679,7 +807,7 @@ main {
             border: none;
             width: 25px;
             height: 25px;
-            font-size: 2.3rem;
+            font-size: 1.8rem;
             line-height: 25px;
             cursor: pointer;
 
@@ -703,7 +831,7 @@ main {
         }
 
         & .quantity {
-          font-size: 2.3rem;
+          font-size: 1.8rem;
           margin: 0 20px;
           @media screen and (min-width: 480px) and (max-width: 768px) {
             & {
@@ -743,7 +871,7 @@ main {
 
         & .total-title {
           float: left;
-          font-size: 2.3rem;
+          font-size: 1.8rem;
           @media screen and (min-width: 480px) and (max-width: 768px) {
             & {
               font-size: 1.7rem;
@@ -759,7 +887,7 @@ main {
           float: right;
           color: red;
           font-weight: bold;
-          font-size: 2.5rem;
+          font-size: 2.3rem;
           @media screen and (min-width: 480px) and (max-width: 768px) {
             & {
               font-size: 1.9rem;
@@ -775,14 +903,14 @@ main {
 
       & .purchase-btn {
         /*----------------------------------- .purchase .purchase-btn ------------------------ */
-        width: 90%;
+        width: 80%;
         display: block;
         margin-top: 50px;
         padding: 20px 10px;
         margin: 50px auto 0 auto;
         box-sizing: border-box;
         cursor: pointer;
-        font-size: 2rem;
+        font-size: 1.8rem;
         border: none;
         color: white;
         background-color: #000;
@@ -811,7 +939,7 @@ main {
     & .goods-review {
       /*----------------------------------- .purchase .goods-review ------------------------ */
       width: 100%;
-      padding: 20px 0;
+      padding: 15px 0;
 
       @media screen and (min-width: 480px) and (max-width: 768px) {
         & {
@@ -839,12 +967,12 @@ main {
           padding: 10px;
           box-sizing: border-box;
           text-align: center;
-          font-size: 1.7rem;
+          font-size: 1.5rem;
 
           @media screen and (min-width: 480px) and (max-width: 768px) {
             & {
               padding: 5px 10px;
-              font-size: 1.6rem;
+              font-size: 1.4rem;
             }
           }
           @media screen and (min-width: 320px) and (max-width: 479px) {
@@ -883,9 +1011,9 @@ main {
           a {
             width: 100%;
             text-decoration: none;
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             margin: 0 5px;
-            padding: 5px 10px;
+            padding: 3px 8px;
             color: black;
 
             @media screen and (min-width: 480px) and (max-width: 768px) {

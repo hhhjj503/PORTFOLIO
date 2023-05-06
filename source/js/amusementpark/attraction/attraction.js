@@ -5,6 +5,7 @@ window.addEventListener("load", () => {
   const topNavMobile = document.querySelector(".top-nav-mobile");
   const subMenu = document.querySelector(".top-nav-mobile .sub-menu");
   const goup = document.querySelector(".top-nav-mobile .goup");
+  const gotop = document.querySelector(".gotop");
 
   //어트랙션 페이지의 변수
   const hidings = document.querySelectorAll("a.hiding + *"); //a 태그 다음의 엘리먼트 한개만 선택
@@ -17,20 +18,32 @@ window.addEventListener("load", () => {
   //attraction offsetTop push
   pushWindowInnerHeight();
 
-  window.addEventListener("scroll", () => {
-    const currentTop = html.scrollTop;
-    for (let i = 0; i < hidings.length; i++) {
-      if (currentTop >= hidings[i].dataset.offtop) {
-        showElements(hidings[i]);
-      }
-      if (currentTop > attractions[i].offsetTop - 50) {
-        for (let i = 0; i < attractions.length; i++) {
-          removeClass(attractionNav[i], "active");
-        }
-        addClass(attractionNav[i], "active");
-      }
-    }
+  //gotop 버튼
+  gotop.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo(0, 0);
   });
+
+  window.addEventListener(
+    "scroll",
+    throttle(() => {
+      const currentTop = html.scrollTop;
+      for (let i = 0; i < hidings.length; i++) {
+        if (currentTop >= hidings[i].dataset.offtop) {
+          showElements(hidings[i]);
+          setTimeout(() => {
+            attractions[i].querySelector(".info").classList.add("active");
+          }, 700);
+        }
+        if (currentTop > attractions[i].offsetTop - 50) {
+          for (let i = 0; i < attractions.length; i++) {
+            removeClass(attractionNav[i], "active");
+          }
+          addClass(attractionNav[i], "active");
+        }
+      }
+    })
+  );
 
   window.addEventListener("resize", function () {
     pushWindowInnerHeight();
@@ -115,4 +128,17 @@ window.addEventListener("load", () => {
   goup.addEventListener("mouseenter", () => {
     subMenu.classList.toggle("opened");
   });
+
+  function throttle(callback, limit = 1000 / 15) {
+    let waiting = false;
+    return function () {
+      if (!waiting) {
+        callback.apply(this, arguments);
+        waiting = true;
+        setTimeout(() => {
+          waiting = false;
+        }, limit);
+      }
+    };
+  } //throttle
 });

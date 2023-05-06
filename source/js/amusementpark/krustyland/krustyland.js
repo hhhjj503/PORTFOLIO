@@ -7,6 +7,10 @@ window.addEventListener("load", () => {
   const moreBtn = document.querySelector(".more");
   const purchase = document.querySelector(".purchase");
   const purchaseCloseBtn = document.querySelector(".purchase-close-btn");
+  const menu = document.querySelector("main .menu");
+  const background = document.querySelector(".background");
+
+  document.querySelector(".background").offsetHeight + "px";
 
   //제품클릭시 제품내용변경을 위한 변수
   const goodsImage = document.querySelector(".goods-image");
@@ -54,12 +58,17 @@ window.addEventListener("load", () => {
   const list = $(".list-wrapper .list");
 
   window.addEventListener("scroll", () => {
-    if (html.scrollTop > 0) {
-      topNav.classList.add("scrolldown");
-      topNavMobile.classList.add("scrolldown");
+    const mobileHeader = topNavMobile.style.display;
+    if (
+      html.scrollTop > background.offsetHeight - menu.offsetHeight &&
+      topNav.offsetHeight !== 0
+    ) {
+      //pc일때 fixed 위치조정
+      menu.style.position = "fixed";
+      menu.style.top = topNav.offsetHeight + "px";
     } else {
-      topNav.classList.remove("scrolldown");
-      topNavMobile.classList.remove("scrolldown");
+      menu.style.position = "relative";
+      menu.style.top = 0;
     }
   });
 

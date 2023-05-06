@@ -17,13 +17,10 @@ window.addEventListener("load", () => {
   });
 
   //gotop 버튼
-  gotop.addEventListener(
-    "click",
-    () => {
-      window.scrollTo(0, 0);
-    },
-    { passive: true }
-  );
+  gotop.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo(0, 0);
+  });
 
   //click 이벤트 작동하지 않음
   goup.addEventListener("mouseenter", () => {
