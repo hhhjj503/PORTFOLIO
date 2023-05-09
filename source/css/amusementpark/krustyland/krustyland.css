@@ -15,7 +15,6 @@ body {
 .top-nav {
   transition: 0.5s ease-in-out;
   z-index: 98; /* 상품구매창의 레이어를 위해 z-index  변경*/
-  position: fixed;
 }
 .top-nav.scrolldown {
   opacity: 0;
@@ -48,7 +47,7 @@ main .background {
   height: 500px;
   background: url(../../../images/amusementpark/krustyland.PNG) no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: center 70%;
   z-index: -1;
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {

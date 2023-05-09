@@ -47,7 +47,7 @@ main .banner .main_img {
   width: 100%;
   margin: 0 auto;
   height: 100%;
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: bottom;
 }
