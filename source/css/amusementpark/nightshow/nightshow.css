@@ -51,6 +51,11 @@ main .banner .main_img {
   background-repeat: no-repeat;
   background-position: bottom;
 }
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .banner .main_img {
+    background-size: cover;
+  }
+}
 main .info {
   /*----------------------- main .info ------------------------ */
   max-width: 1200px;
