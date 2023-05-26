@@ -284,7 +284,7 @@ main .letter-wrapper .letter .desc {
 }
 main .letter-wrapper .letter .form-wrapper {
   padding: 50px 0;
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
   position: relative;
 }
@@ -306,7 +306,7 @@ main .letter-wrapper .letter .form-wrapper form label {
   color: white;
   padding: 10px 15px;
   border-radius: 30px;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   box-shadow: 1px 1px 10px rgb(77, 77, 77);
   font-weight: bold;
   margin: 30px 0 10px 0;
@@ -325,9 +325,9 @@ main .letter-wrapper .letter .form-wrapper form label {
 }
 main .letter-wrapper .letter .form-wrapper form input {
   width: 100%;
-  padding: 20px 20px;
+  padding: 15px;
   box-sizing: border-box;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   margin: 8px 0;
   border: none;
   box-shadow: 1px 1px 10px rgb(166, 166, 166);
@@ -398,8 +398,8 @@ main .letter-wrapper .letter .form-wrapper form .customer-item li img {
 main .letter-wrapper .letter .form-wrapper form button {
   margin: 0 auto;
   display: block;
-  padding: 10px 30px;
-  font-size: 1.8rem;
+  padding: 10px 20px;
+  font-size: 1.7rem;
   border-radius: 15px;
   border: transparent;
   background-color: #e1e1e1;
