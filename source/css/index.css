@@ -122,6 +122,10 @@ main .hj {
   color: #444;
 }
 
+.hj .break {
+  display: none;
+}
+
 .hj .graph {
   position: relative;
   margin-top: 30px;
@@ -267,6 +271,10 @@ main .hj {
     padding-bottom: 30px;
     font-size: 1rem;
     line-height: 24px;
+  }
+
+  .hj .break {
+    display: block;
   }
 
   .hj .graph {
