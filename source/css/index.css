@@ -566,6 +566,7 @@ main .hj {
   .desc p {
     word-break: keep-all;
     line-height: 24px;
+    margin-bottom: 20px;
   }
 
   .desc h4 {
