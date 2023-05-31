@@ -241,7 +241,7 @@ main .hj {
   }
 
   .hj .graph {
-    padding: 150px 0;
+    padding: 100px 0;
     width: 70%;
   }
 
@@ -260,8 +260,13 @@ main .hj {
   }
 
   .hj .intro {
+    width: 70%;
+    margin: 0 auto;
+    word-break: keep-all;
+    padding-top: 60px;
     padding-bottom: 30px;
     font-size: 1rem;
+    line-height: 24px;
   }
 
   .hj .graph {
