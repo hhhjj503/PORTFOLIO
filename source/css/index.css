@@ -264,7 +264,8 @@ main .hj {
     width: 70%;
   }
 
-  .graph .line {
+  .graph .line,
+  .graph .deco-line {
     bottom: 20.5%;
   }
 
