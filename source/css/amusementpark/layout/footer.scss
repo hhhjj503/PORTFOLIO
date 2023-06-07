@@ -29,6 +29,10 @@ footer {
         }
       }
 
+      & .mobile {
+        display: none;
+      }
+
       &:after {
         display: block;
         content: "";
@@ -91,12 +95,12 @@ footer {
       height: 50px;
       background-color: #1c3055;
 
-      @media screen and (min-width: 480px) and (max-width: 768px) {
+      @media screen and (max-width: 1024px) {
         & {
           right: 10px;
         }
       }
-      @media screen and (min-width: 320px) and (max-width: 479px) {
+      @media screen and (max-width: 550px) {
         & {
           padding-bottom: 0;
         }
@@ -123,7 +127,7 @@ footer {
 
 /*----------------------------------------------------------------------*/
 
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   footer {
     & > .wrapper {
       .list {
@@ -144,7 +148,7 @@ footer {
 
 /*----------------------------------------------------------------------*/
 
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   footer {
     & > .wrapper {
       white-space: normal;
@@ -153,6 +157,10 @@ footer {
         margin-bottom: 0;
         width: 100%;
         display: block;
+
+        & .mobile {
+          display: block;
+        }
       }
 
       .sns {

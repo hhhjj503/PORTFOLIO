@@ -17,11 +17,6 @@ footer > .wrapper .list {
   display: block;
   margin: 10px 0;
 }
-
-footer > .wrapper .list br {
-  display: none;
-}
-
 footer > .wrapper .list li {
   display: inline-block;
   padding: 0 5px;
@@ -30,6 +25,9 @@ footer > .wrapper .list li a {
   text-decoration: none;
   font-size: 1.5rem;
   color: gray;
+}
+footer > .wrapper .list .mobile {
+  display: none;
 }
 footer > .wrapper .list:after {
   display: block;
@@ -90,7 +88,7 @@ footer > .wrapper .gotop {
     right: 10px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   footer > .wrapper .gotop {
     padding-bottom: 0;
   }
@@ -100,7 +98,7 @@ footer > .wrapper .gotop > a {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 footer > .wrapper .gotop > a img {
   position: absolute;
@@ -130,17 +128,14 @@ footer > .wrapper .gotop > a img {
     margin-bottom: 0;
     width: 100%;
     display: block;
-    line-height: 20px;
   }
-
-  footer > .wrapper .list br {
+  footer > .wrapper .list .mobile {
     display: block;
   }
-
   footer > .wrapper .sns {
     width: 100%;
     display: block;
     margin: 10px 0;
     text-align: center;
   }
-} /*# sourceMappingURL=footer.css.map */
+}/*# sourceMappingURL=footer.css.map */
