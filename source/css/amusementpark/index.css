@@ -43,7 +43,7 @@ main .wrapper .type > a {
   height: 100%;
   z-index: 2;
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .wrapper .type > a {
     z-index: 3;
   }
@@ -61,7 +61,7 @@ main .wrapper .type:after {
   z-index: 0;
   pointer-events: none;
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .wrapper .type:after {
     z-index: 2;
   }
@@ -83,7 +83,7 @@ main .wrapper .type .background {
   background-position: center center;
   position: relative;
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .wrapper .type .background {
     position: absolute;
     z-index: 1;
@@ -102,7 +102,7 @@ main .wrapper .type .description {
   width: 100%;
   height: 40%;
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .wrapper .type .description {
     position: absolute;
     height: 100%;
@@ -124,7 +124,7 @@ main .wrapper .type .description .desc {
     width: 60%;
   }
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .wrapper .type .description .desc {
     height: 60%;
     width: 60%;
@@ -134,7 +134,7 @@ main .wrapper .type .description .desc {
     transform: translateX(-50%);
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .wrapper .type .description .desc {
     height: 50%;
     width: 30%;
@@ -177,7 +177,7 @@ main .wrapper .type .description .desc .title {
     width: 90%;
   }
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .wrapper .type .description .desc .title {
     font-size: 1.8rem;
     width: 100%;
@@ -187,7 +187,7 @@ main .wrapper .type .description .desc .title {
     box-sizing: border-box;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .wrapper .type .description .desc .title {
     font-size: 1.4rem;
     width: 100%;
@@ -205,14 +205,14 @@ main .wrapper .nightshow {
   height: 100%;
   display: inline-block;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .wrapper .nightshow {
     float: left;
     width: 50%;
     height: 50vh;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .wrapper .nightshow {
     display: block;
     width: 100%;
@@ -223,12 +223,12 @@ main .wrapper .nightshow:hover {
   width: var(--hoveredwidth);
   cursor: pointer;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .wrapper .nightshow:hover {
     width: 50%;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .wrapper .nightshow:hover {
     width: 100%;
   }
@@ -245,14 +245,14 @@ main .wrapper .rollercoaster {
   height: 100%;
   display: inline-block;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .wrapper .rollercoaster {
     float: left;
     width: 50%;
     height: 50vh;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .wrapper .rollercoaster {
     display: block;
     width: 100%;
@@ -263,12 +263,12 @@ main .wrapper .rollercoaster:hover {
   width: var(--hoveredwidth);
   cursor: pointer;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .wrapper .rollercoaster:hover {
     width: 50%;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .wrapper .rollercoaster:hover {
     width: 100%;
   }
@@ -285,14 +285,14 @@ main .wrapper .krustyland {
   height: 100%;
   display: inline-block;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .wrapper .krustyland {
     float: left;
     width: 50%;
     height: 50vh;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .wrapper .krustyland {
     display: block;
     width: 100%;
@@ -303,12 +303,12 @@ main .wrapper .krustyland:hover {
   width: var(--hoveredwidth);
   cursor: pointer;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .wrapper .krustyland:hover {
     width: 50%;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .wrapper .krustyland:hover {
     width: 100%;
   }
@@ -325,14 +325,14 @@ main .wrapper .aquarium {
   height: 100%;
   display: inline-block;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .wrapper .aquarium {
     float: left;
     width: 50%;
     height: 50vh;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .wrapper .aquarium {
     display: block;
     width: 100%;
@@ -343,12 +343,12 @@ main .wrapper .aquarium:hover {
   width: var(--hoveredwidth);
   cursor: pointer;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .wrapper .aquarium:hover {
     width: 50%;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .wrapper .aquarium:hover {
     width: 100%;
   }
@@ -375,7 +375,7 @@ footer {
   z-index: 99;
   position: fixed;
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   footer {
     opacity: 0;
     display: none;

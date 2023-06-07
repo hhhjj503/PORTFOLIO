@@ -75,13 +75,13 @@ main > .wrapper .wheel-down .deco {
   box-sizing: border-box;
   transform: rotate(-45deg);
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main > .wrapper .wheel-down .deco {
     width: 35px;
     height: 35px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main > .wrapper .wheel-down .deco {
     width: 28px;
     height: 28px;
@@ -110,13 +110,13 @@ main > .wrapper .attraction-nav li a {
   transition: 0.2s ease-in-out;
   box-sizing: border-box;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main > .wrapper .attraction-nav li a {
     width: 15px;
     height: 15px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main > .wrapper .attraction-nav li a {
     width: 10px;
     height: 10px;
@@ -178,12 +178,12 @@ main > .wrapper .attraction .info.active:after {
   opacity: 1;
   transition: 0.3s ease;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main > .wrapper .attraction .info {
     font-size: 1.6rem;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main > .wrapper .attraction .info {
     font-size: 1.6rem;
   }

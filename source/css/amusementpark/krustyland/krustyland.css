@@ -50,12 +50,12 @@ main .background {
   background-position: center 70%;
   z-index: -1;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .background {
     height: 400px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .background {
     height: 300px;
   }
@@ -69,12 +69,12 @@ main .menu {
   z-index: 10;
   box-sizing: border-box;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .menu {
     padding: 0 20px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .menu {
     position: relative;
     padding: 0 20px;
@@ -90,7 +90,7 @@ main .menu .container p {
   color: white;
   line-height: 50px;
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .menu .container p {
     font-size: 1.3rem;
   }
@@ -108,12 +108,12 @@ main .goods-wrapper {
   padding: 100px 0;
   background-color: white;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .goods-wrapper {
     padding: 70px 0;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .goods-wrapper {
     padding: 50px 0;
   }
@@ -129,13 +129,13 @@ main .goods-wrapper .title {
   border-bottom: 1px solid #bebebe;
   padding: 8px 0;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .goods-wrapper .title {
     width: 30%;
     font-size: 1.5rem;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .goods-wrapper .title {
     width: 40%;
     font-size: 1.4rem;
@@ -146,7 +146,7 @@ main .goods-wrapper .list-wrapper {
   box-sizing: border-box;
   margin: 0 auto;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .goods-wrapper .list-wrapper {
     padding: 0 10px;
   }
@@ -159,7 +159,7 @@ main .goods-wrapper ul {
   text-align: left;
   font-size: 0;
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .goods-wrapper ul {
     margin-bottom: 0;
   }
@@ -186,13 +186,13 @@ main .goods-wrapper ul li.loaded {
     opacity: 1;
   }
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .goods-wrapper ul li {
     width: 19%;
     margin: 10px 0.5%;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .goods-wrapper ul li {
     width: 30%;
     height: 150px;
@@ -237,12 +237,12 @@ main .goods-wrapper ul li a h5 {
   text-align: center;
   transition: 0.3s ease-in-out;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .goods-wrapper ul li a h5 {
     font-size: 1.2rem;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .goods-wrapper ul li a h5 {
     font-size: 1.1rem;
     padding: 0 5px;
@@ -265,12 +265,12 @@ main .goods-wrapper button {
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .goods-wrapper button {
     margin: 0 auto 50px auto;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .goods-wrapper button {
     width: 30%;
     font-size: 1.4rem;
@@ -287,12 +287,12 @@ main .goods-slider {
   background-color: #f8f8f8;
   padding: 20px 0;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .goods-slider {
     overflow: scroll;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .goods-slider {
     overflow: scroll;
   }
@@ -313,13 +313,13 @@ main .goods-slider ul li {
   border-radius: 50%;
   overflow: hidden;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .goods-slider ul li {
     width: 150px;
     height: 150px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .goods-slider ul li {
     width: 100px;
     height: 100px;
@@ -347,7 +347,7 @@ main .goods-slider ul li p {
   line-height: 200px;
   opacity: 0;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .goods-slider ul li p {
     width: 150px;
     height: 150px;
@@ -355,7 +355,7 @@ main .goods-slider ul li p {
     line-height: 150px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .goods-slider ul li p {
     width: 100px;
     height: 100px;
@@ -384,19 +384,19 @@ main .purchase::-webkit-scrollbar {
 main .purchase::-webkit-scrollbar-thumb {
   background: #5e5e5e;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .purchase::-webkit-scrollbar {
     width: 8px;
     height: 6px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .purchase::-webkit-scrollbar {
     width: 4px;
     height: 4px;
   }
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .purchase {
     left: 0;
     bottom: 0;
@@ -410,7 +410,7 @@ main .purchase::-webkit-scrollbar-thumb {
     overflow-y: scroll;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .purchase {
     left: 0;
     bottom: 0;
@@ -427,12 +427,12 @@ main .purchase::-webkit-scrollbar-thumb {
 main .purchase.close {
   right: -9999em;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .purchase.close {
     bottom: -9999em;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .purchase.close {
     bottom: -9999em;
   }
@@ -440,12 +440,12 @@ main .purchase.close {
 main .purchase.open {
   right: 0;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .purchase.open {
     bottom: 0;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .purchase.open {
     bottom: 0;
   }
@@ -461,13 +461,13 @@ main .purchase .purchase-close-btn {
   right: 20px;
   cursor: pointer;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .purchase .purchase-close-btn {
     top: 30px;
     right: 30px;
   }
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .purchase .purchase-close-btn {
     width: 30px;
     height: 30px;
@@ -478,7 +478,7 @@ main .purchase .purchase-close-btn {
     height: 3px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .purchase .purchase-close-btn {
     width: 30px;
     height: 30px;
@@ -495,12 +495,12 @@ main .purchase .purchase-close-btn span {
   top: 50%;
   transform: translateY(-50%);
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .purchase .purchase-close-btn span {
     height: 3px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .purchase .purchase-close-btn span {
     height: 3px;
   }
@@ -517,7 +517,7 @@ main .purchase img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .purchase img {
     float: left;
     box-sizing: border-box;
@@ -528,9 +528,9 @@ main .purchase img {
        object-fit: cover;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .purchase img {
-    width: 70%;
+    width: 100%;
     height: 50%;
     margin: 0 auto;
     display: block;
@@ -538,12 +538,21 @@ main .purchase img {
        object-fit: contain;
   }
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .purchase .purchase-info {
     height: 100%;
-    overflow: auto;
     float: right;
     width: 50%;
+    box-sizing: border-box;
+    height: 100%;
+    vertical-align: text-bottom;
+  }
+}
+@media screen and (max-width: 550px) {
+  main .purchase .purchase-info {
+    height: 100%;
+    float: right;
+    width: 100%;
     box-sizing: border-box;
     height: 100%;
     vertical-align: text-bottom;
@@ -553,7 +562,7 @@ main .purchase .purchase-info .goods-title {
   font-size: 2rem;
   padding: 20px;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .purchase .purchase-info .goods-title {
     box-sizing: border-box;
     width: 100%;
@@ -561,7 +570,7 @@ main .purchase .purchase-info .goods-title {
     padding: 30px 40px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .purchase .purchase-info .goods-title {
     font-size: 1.6rem;
     padding: 10px 20px;
@@ -575,12 +584,12 @@ main .purchase .purchase-info .goods-title .review-count {
   color: red;
   float: right;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .purchase .purchase-info .goods-title .review-count {
     font-size: 1.7rem;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .purchase .purchase-info .goods-title .review-count {
     font-size: 1.6rem;
   }
@@ -607,13 +616,13 @@ main .purchase .purchase-info .goods-title .rating .rating-half-star {
   height: 20px;
   background-repeat: no-repeat;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .purchase .purchase-info .goods-title .rating .rating-star, main .purchase .purchase-info .goods-title .rating .rating-half-star {
     width: 18px;
     height: 18px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .purchase .purchase-info .goods-title .rating .rating-star, main .purchase .purchase-info .goods-title .rating .rating-half-star {
     width: 15px;
     height: 15px;
@@ -623,13 +632,13 @@ main .purchase .purchase-info .goods-price {
   border-bottom: 1px solid #dddfe1;
   padding: 20px;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .purchase .purchase-info .goods-price {
     border-bottom: 1px solid #dddfe1;
     padding: 15px 40px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .purchase .purchase-info .goods-price {
     border-bottom: 1px solid #dddfe1;
     padding: 10px 20px;
@@ -645,14 +654,14 @@ main .purchase .purchase-info .goods-price .per-price {
   font-weight: bold;
   float: left;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .purchase .purchase-info .goods-price .per-price {
     font-size: 1.9rem;
     font-weight: bold;
     float: left;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .purchase .purchase-info .goods-price .per-price {
     font-size: 1.8rem;
     font-weight: bold;
@@ -668,13 +677,13 @@ main .purchase .purchase-info .goods-price .dib img {
 main .purchase .purchase-info .goods-price .dib img.clicked {
   content: url(../../../images/amusementpark/krustyland/heart-solid.svg);
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .purchase .purchase-info .goods-price .dib img {
     width: 18px;
     height: 18px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .purchase .purchase-info .goods-price .dib img {
     width: 18px;
     height: 18px;
@@ -685,12 +694,12 @@ main .purchase .purchase-info .goods-quantity {
   padding: 20px;
   border-bottom: 1px solid #dddfe1;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .purchase .purchase-info .goods-quantity {
     padding: 15px 40px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .purchase .purchase-info .goods-quantity {
     padding: 10px 20px;
   }
@@ -704,12 +713,12 @@ main .purchase .purchase-info .goods-quantity .number-title {
   font-size: 1.8rem;
   float: left;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .purchase .purchase-info .goods-quantity .number-title {
     font-size: 1.7rem;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .purchase .purchase-info .goods-quantity .number-title {
     font-size: 1.6rem;
   }
@@ -726,7 +735,7 @@ main .purchase .purchase-info .goods-quantity .quantity-box button {
   line-height: 25px;
   cursor: pointer;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .purchase .purchase-info .goods-quantity .quantity-box button {
     width: 20px;
     height: 20px;
@@ -734,7 +743,7 @@ main .purchase .purchase-info .goods-quantity .quantity-box button {
     line-height: 20px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .purchase .purchase-info .goods-quantity .quantity-box button {
     width: 20px;
     height: 20px;
@@ -746,13 +755,13 @@ main .purchase .purchase-info .goods-quantity .quantity {
   font-size: 1.8rem;
   margin: 0 20px;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .purchase .purchase-info .goods-quantity .quantity {
     font-size: 1.7rem;
     margin: 0 20px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .purchase .purchase-info .goods-quantity .quantity {
     font-size: 1.7rem;
     margin: 0 20px;
@@ -762,12 +771,12 @@ main .purchase .purchase-info .goods-total-price {
   /*----------------------------------- .purchase .goods-total-price ------------------------ */
   padding: 20px;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .purchase .purchase-info .goods-total-price {
     padding: 15px 40px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .purchase .purchase-info .goods-total-price {
     padding: 10px 20px;
   }
@@ -781,12 +790,12 @@ main .purchase .purchase-info .goods-total-price .total-title {
   float: left;
   font-size: 1.8rem;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .purchase .purchase-info .goods-total-price .total-title {
     font-size: 1.7rem;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .purchase .purchase-info .goods-total-price .total-title {
     font-size: 1.7rem;
   }
@@ -797,12 +806,12 @@ main .purchase .purchase-info .goods-total-price .total-price {
   font-weight: bold;
   font-size: 2.3rem;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .purchase .purchase-info .goods-total-price .total-price {
     font-size: 1.9rem;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .purchase .purchase-info .goods-total-price .total-price {
     font-size: 1.9rem;
   }
@@ -822,7 +831,7 @@ main .purchase .purchase-info .purchase-btn {
   background-color: #000;
   border-bottom: 1px solid #dddfe1;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .purchase .purchase-info .purchase-btn {
     width: 60%;
     padding: 10px 10px;
@@ -830,7 +839,7 @@ main .purchase .purchase-info .purchase-btn {
     font-size: 1.7rem;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .purchase .purchase-info .purchase-btn {
     width: 80%;
     padding: 10px 10px;
@@ -843,12 +852,12 @@ main .purchase .goods-review {
   width: 100%;
   padding: 15px 0;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .purchase .goods-review {
     padding: 0;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .purchase .goods-review {
     padding: 0;
   }
@@ -869,13 +878,13 @@ main .purchase .goods-review table td {
   text-align: center;
   font-size: 1.5rem;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .purchase .goods-review table td {
     padding: 5px 10px;
     font-size: 1.4rem;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .purchase .goods-review table td {
     padding: 10px 5px;
     font-size: 1.4rem;
@@ -910,13 +919,13 @@ main .purchase .review-wrapper ul li a {
   padding: 3px 8px;
   color: black;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .purchase .review-wrapper ul li a {
     padding: 3px 8px;
     font-size: 1.6rem;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .purchase .review-wrapper ul li a {
     padding: 2px 6px;
     font-size: 1.4rem;
@@ -948,7 +957,7 @@ main .shopping-bag.rotate {
 main .shopping-bag:hover .bag-desc {
   opacity: 1;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .shopping-bag {
     display: none;
   }

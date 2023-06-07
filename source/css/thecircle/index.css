@@ -54,20 +54,20 @@ body {
 }
 
 .slide img {
-  width: 630px;
-  height: 630px;
+  width: 530px;
+  height: 530px;
   object-fit: cover;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 50%;
-  right: 15%;
+  right: 20%;
 }
 
 .slide .content {
   position: absolute;
   top: 50%;
-  left: 15%;
+  left: 20%;
   transform: translateY(-50%);
   z-index: 1;
 }
@@ -190,7 +190,7 @@ input.checked ~ .pagelabels label.checked:before {
 
 /* ------------------------------------------------------------- */
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   .slide img {
     width: 450px;
     height: 450px;
@@ -217,7 +217,7 @@ input.checked ~ .pagelabels label.checked:before {
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   .slide img {
     width: 330px;
     height: 330px;

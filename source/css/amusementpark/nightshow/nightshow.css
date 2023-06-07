@@ -33,12 +33,12 @@ main .banner {
   width: 100%;
   height: 500px;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .banner {
     height: 400px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .banner {
     height: 300px;
   }
@@ -51,7 +51,7 @@ main .banner .main_img {
   background-repeat: no-repeat;
   background-position: bottom;
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .banner .main_img {
     background-size: cover;
   }
@@ -63,14 +63,14 @@ main .info {
   padding: 100px 0;
   margin: 0 auto;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .info {
     transition: 0.3s ease-in-out;
     padding: 100px 0;
     overflow: hidden;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .info {
     padding: 50px 0;
     overflow: hidden;
@@ -86,12 +86,12 @@ main .info .sub-desc {
   padding: 8px;
   text-align: center;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .info .sub-desc {
     font-size: 1.4rem;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .info .sub-desc {
     width: 60%;
     font-size: 1.2rem;
@@ -107,12 +107,12 @@ main .info .desc {
   padding: 8px;
   text-align: center;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .info .desc {
     font-size: 1.7rem;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .info .desc {
     width: 60%;
     font-size: 1.5rem;
@@ -124,14 +124,14 @@ main .info .contents {
   position: relative;
   overflow: hidden;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .info .contents {
     width: 600px;
     overflow: hidden;
     margin: 0 auto;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .info .contents {
     width: 300px;
     overflow: hidden;
@@ -145,14 +145,14 @@ main .info .contents .slider-wrapper {
   width: 1600px;
   overflow: hidden;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .info .contents .slider-wrapper {
     left: 0;
     transition: 0.3s ease;
     overflow: hidden;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .info .contents .slider-wrapper {
     left: 0;
   }
@@ -255,7 +255,7 @@ main .letter-wrapper .letter:before {
   background: linear-gradient(to bottom, transparent 0%, #321d36 100%);
   z-index: 0;
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .letter-wrapper .letter {
     padding: 50px 0;
   }
@@ -273,14 +273,14 @@ main .letter-wrapper .letter .desc {
   position: relative;
   top: -30px;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .letter-wrapper .letter .desc {
     font-size: 1.7rem;
     margin: 0 auto 10px auto;
     white-space: nowrap;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .letter-wrapper .letter .desc {
     width: 60%;
     font-size: 1.5rem;
@@ -293,12 +293,12 @@ main .letter-wrapper .letter .form-wrapper {
   margin: 0 auto;
   position: relative;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .letter-wrapper .letter .form-wrapper {
     width: 80%;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .letter-wrapper .letter .form-wrapper {
     min-width: initial;
     width: 85%;
@@ -316,12 +316,12 @@ main .letter-wrapper .letter .form-wrapper form label {
   font-weight: bold;
   margin: 30px 0 10px 0;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .letter-wrapper .letter .form-wrapper form label {
     font-size: 1.5rem;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .letter-wrapper .letter .form-wrapper form label {
     font-size: 1.3rem;
     padding: 10px;
@@ -344,13 +344,13 @@ main .letter-wrapper .letter .form-wrapper form input[type=radio] {
   display: block;
   margin: 10px;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .letter-wrapper .letter .form-wrapper form input {
     padding: 15px;
     font-size: 1.7rem;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .letter-wrapper .letter .form-wrapper form input {
     padding: 10px;
     font-size: 1.5rem;
@@ -363,7 +363,7 @@ main .letter-wrapper .letter .form-wrapper form textarea {
   box-sizing: border-box;
   padding: 10px;
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .letter-wrapper .letter .form-wrapper form textarea {
     font-size: 1.5rem;
   }
@@ -374,13 +374,13 @@ main .letter-wrapper .letter .form-wrapper form .customer-item li {
   margin: 10px;
   display: inline-block;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .letter-wrapper .letter .form-wrapper form .customer-item li {
     box-sizing: border-box;
     margin: 0 5px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .letter-wrapper .letter .form-wrapper form .customer-item li {
     width: 40%;
     height: 150px;
@@ -395,7 +395,7 @@ main .letter-wrapper .letter .form-wrapper form .customer-item li img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .letter-wrapper .letter .form-wrapper form .customer-item li img {
     height: 70%;
   }
@@ -410,7 +410,7 @@ main .letter-wrapper .letter .form-wrapper form button {
   background-color: #e1e1e1;
   margin-top: 50px;
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .letter-wrapper .letter .form-wrapper form button {
     padding: 5px 20px;
     font-size: 1.4rem;
@@ -431,12 +431,12 @@ main .benefits .sub-desc {
   padding: 8px;
   text-align: center;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .benefits .sub-desc {
     font-size: 1.4rem;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .benefits .sub-desc {
     width: 60%;
     font-size: 1.2rem;
@@ -452,13 +452,13 @@ main .benefits .desc {
   padding: 8px;
   text-align: center;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .benefits .desc {
     width: 30%;
     font-size: 1.8rem;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .benefits .desc {
     width: 60%;
     font-size: 1.5rem;
@@ -472,12 +472,12 @@ main .benefits .listwrapper {
   position: relative;
   white-space: nowrap;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .benefits .listwrapper {
     white-space: initial;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .benefits .listwrapper {
     white-space: initial;
   }
@@ -497,13 +497,13 @@ main .benefits .listwrapper .benefit {
   position: relative;
   overflow: hidden;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .benefits .listwrapper .benefit {
     margin: 5px;
     width: 40%;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .benefits .listwrapper .benefit {
     margin: 3px 1px;
     height: 190px;
@@ -525,12 +525,12 @@ main .benefits .listwrapper .benefit p {
   color: white;
   line-height: 20px;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .benefits .listwrapper .benefit p {
     font-size: 1.3rem;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .benefits .listwrapper .benefit p {
     font-size: 1.1rem;
     word-break: keep-all;
@@ -540,7 +540,7 @@ main .benefits .listwrapper .benefit li:nth-child(2n) {
   position: relative;
   top: 20px;
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .benefits .listwrapper .benefit li:nth-child(2n) {
     top: 0;
     margin: 10px;
@@ -555,13 +555,13 @@ main .benefits .listwrapper .benefit button {
   font-size: 1.2rem;
   transition: 0.3s ease-in-out;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main .benefits .listwrapper .benefit button {
     width: 40%;
     font-size: 1.3rem;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 550px) {
   main .benefits .listwrapper .benefit button {
     width: 30%;
     font-size: 1.1rem;
