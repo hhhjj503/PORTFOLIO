@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,7 +10,10 @@
     <title>HJ Portfolio</title>
   </head>
   <body>
+    <!-- header -->
     <header>
+      <div class="skip"><a href="#portfolio">포트폴리오로 이동하기</a></div>
+      <!-- nav -->
       <nav>
         <ul>
           <li><a href="#">hj</a></li>
@@ -20,8 +23,10 @@
         </ul>
       </nav>
     </header>
+    <!-- main -->
     <main>
       <div class="wrapper white">
+        <!-- hj -->
         <div class="hj item">
           <h1 class="title">hj portfolio</h1>
           <p class="intro">
@@ -32,55 +37,58 @@
             <div class="line"></div>
             <div class="deco-line"></div>
             <ul>
-              <li class="vertex">
+              <li class="vertex" tabindex="0">
                 <p><b>2014.03</b> | 상일미디어고 디자인과 졸업</p>
               </li>
-              <li class="vertex">
+              <li class="vertex" tabindex="0">
                 <p><b>2016.02</b> | 시각디자인과 졸업</p>
               </li>
-              <li class="vertex">
+              <li class="vertex" tabindex="0">
                 <p><b>2020.05</b> | 컴퓨터활용능력1급</p>
               </li>
-              <li class="vertex">
+              <li class="vertex" tabindex="0">
                 <p><b>2020.10</b> | 이젠IT학원수료</p>
               </li>
-              <li class="vertex">
+              <li class="vertex" tabindex="0">
                 <p><b>2022.09</b> | 정보처리기사</p>
               </li>
-              <li class="vertex">
+              <li class="vertex" tabindex="0">
                 <p><b>2023.02</b> | 방송통신대학교 편입졸업</p>
               </li>
             </ul>
           </div>
+          <!-- mobile menu -->
           <div class="mobile">
             <ul>
-              <li><b>2014.03</b> | 상일미디어고디자인과 졸업</li>
-              <li><b>2016.02</b> | 시각디자인과 졸업</li>
-              <li><b>2020.05</b> | 컴퓨터활용능력1급</li>
-              <li><b>2020.10</b> | 이젠IT학원수료</li>
-              <li><b>2022.09</b> | 정보처리기사</li>
-              <li><b>2023.02</b> | 방송통신대학교 편입졸업</li>
+              <li tabindex="0"><b>2014.03</b> | 상일미디어고디자인과 졸업</li>
+              <li tabindex="0"><b>2016.02</b> | 시각디자인과 졸업</li>
+              <li tabindex="0"><b>2020.05</b> | 컴퓨터활용능력1급</li>
+              <li tabindex="0"><b>2020.10</b> | 이젠IT학원수료</li>
+              <li tabindex="0"><b>2022.09</b> | 정보처리기사</li>
+              <li tabindex="0"><b>2023.02</b> | 방송통신대학교 편입졸업</li>
             </ul>
           </div>
         </div>
       </div>
       <div class="wrapper">
+        <!-- skills -->
         <div class="skills item">
           <h2 class="title">skills</h2>
           <ul>
-            <li>html</li>
-            <li>css</li>
-            <li>javascript</li>
-            <li>jquery</li>
-            <li>sass</li>
-            <li>sql</li>
-            <li>java</li>
-            <li>react</li>
+            <li tabindex="0">html</li>
+            <li tabindex="0">css</li>
+            <li tabindex="0">javascript</li>
+            <li tabindex="0">jquery</li>
+            <li tabindex="0">sass</li>
+            <li tabindex="0">sql</li>
+            <li tabindex="0">java</li>
+            <li tabindex="0">react</li>
           </ul>
         </div>
       </div>
       <div class="wrapper white">
-        <div class="portfolio item">
+        <!-- portfolio -->
+        <div class="portfolio item" id="portfolio">
           <h2 class="title">portfolio</h2>
           <div class="list">
             <ul>
@@ -244,17 +252,18 @@
       </div>
     </main>
     <footer>
+      <!-- contact -->
       <div class="contact item">
         <h2 class="title">contact</h2>
         <ul class="info">
           <li>방문해 주셔서 감사합니다</li>
-          <li>kil3120 @ naver.com</li>
-          <li>010 3793 7843</li>
+          <li><a href="mailto:kil3120@naver.com">kil3120 @ naver.com</a></li>
+          <li><a href="tel:010-3793-7843">010 3793 7843</a></li>
         </ul>
       </div>
     </footer>
     <div class="goup">
-      <a href="#"></a>
+      <a href="#" aria-label="위로가는버튼"></a>
     </div>
   </body>
 </html>

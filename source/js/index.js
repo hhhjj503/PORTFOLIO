@@ -1,9 +1,10 @@
 window.addEventListener("load", () => {
   const html = document.querySelector("html");
   const header = document.querySelector("header");
-  const headerAs = document.querySelectorAll("header a"); //헤더클릭시 스크롤이동
+  const headerAs = document.querySelectorAll("header nav a"); //헤더클릭시 스크롤이동
   const graph = document.querySelector(".graph"); //그래프클래스제어
   const items = document.querySelectorAll(".item"); //스크롤이동할 타이틀컴포넌트
+  const wrappers = document.querySelectorAll(".wrapper"); //스크롤이동할 타이틀컴포넌트
   const decoLine = document.querySelector(".deco-line");
   const vertexs = document.querySelectorAll(".vertex");
   const skills = document.querySelector(".skills");
@@ -27,10 +28,21 @@ window.addEventListener("load", () => {
         behavior: "smooth",
       });
     });
+    headerAs[i].addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        window.scrollTo({
+          top: itemsOffsetTops[i],
+          left: 0,
+          behavior: "smooth",
+        });
+        const event = new Event("click");
+        wrappers[i].dispatchEvent(event);
+      }
+    });
   }
 
-  console.log(vertexsOffsetLefts);
-  //vertex 이벤트
+  //vertex에 기본적인 이벤트 추가
   for (let i = 0; i < vertexs.length; i++) {
     vertexs[i].addEventListener("mouseenter", () => {
       vertexs.forEach((vertex) => vertex.classList.remove("active"));
@@ -38,8 +50,21 @@ window.addEventListener("load", () => {
       vertexsIndex = i;
       decoLine.style.width = vertexsOffsetLefts[i] + "px";
     });
+    vertexs[i].addEventListener("click", () => {
+      vertexs.forEach((vertex) => vertex.classList.remove("active"));
+      vertexs[i].classList.add("active");
+      vertexsIndex = i;
+      decoLine.style.width = vertexsOffsetLefts[i] + "px";
+    });
     vertexs[i].addEventListener("mouseleave", () => {
       vertexs[i].classList.remove("active");
+    });
+    vertexs[i].addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        vertexs.forEach((vertex) => vertex.classList.remove("active"));
+        vertexs[i].classList.add("active");
+        decoLine.style.width = vertexs[i].offsetLeft + "px";
+      }
     });
   }
 
