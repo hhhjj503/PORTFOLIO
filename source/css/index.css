@@ -39,7 +39,8 @@ header .skip a {
 
 header .skip a:focus {
   visibility: visible;
-  background-color: #41bfcf;
+  border: 5px solid #41bfcf;
+  box-sizing: border-box;
   top: 0%;
   opacity: 1;
 }
@@ -66,8 +67,7 @@ header nav a {
   text-transform: uppercase;
 }
 
-header nav a:hover,
-header nav a:focus {
+header nav a:hover {
   transition: 0.3s ease;
   color: #41bfcf;
 }
@@ -212,7 +212,7 @@ main .hj {
 
 .vertex.active {
   transition: 0.3s ease;
-  transform: scale(120%, 120%);
+  transform: scale(120%);
   background-color: #41bfcf;
 }
 
