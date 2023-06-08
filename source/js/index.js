@@ -28,6 +28,7 @@ window.addEventListener("load", () => {
         behavior: "smooth",
       });
     });
+
     headerAs[i].addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
         e.preventDefault();
