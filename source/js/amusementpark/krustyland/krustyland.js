@@ -85,11 +85,17 @@ window.addEventListener("load", () => {
   //구매창 버튼 클릭시 창닫기
   purchaseCloseBtn.addEventListener("click", (e) => {
     e.preventDefault();
+
+    // tabindex 변경
+    const tabControls = document.querySelectorAll(".tab-control");
+    for (let i = 0; i < tabControls.length; i++) {
+      tabControls[i].setAttribute("tabindex", "-1");
+    }
+
     purchase.classList.remove("open");
     purchase.classList.add("close");
   });
 
-  //
   //제이슨 파일 데이터로 li 만들기=
   $.getJSON("../../source/data/amusementpark/list.json", initItems);
 
@@ -114,11 +120,11 @@ window.addEventListener("load", () => {
     $.each(slicedData, function (i, item) {
       const elementText =
         ' <li class="item" >' +
-        '<a href="#"' +
-        "><img " +
+        '<a href="#" ' +
+        "><img  " +
         'src="' +
         item.imagePath +
-        '"' +
+        '" ' +
         ' alt="' +
         item.title +
         '" data-price=' +
@@ -128,7 +134,7 @@ window.addEventListener("load", () => {
         item.reviewCount +
         "' data-rating='" +
         item.rating +
-        "'>" +
+        "' >" +
         item.title +
         "</h5>" +
         "</a>" +
@@ -158,7 +164,6 @@ window.addEventListener("load", () => {
           const commentsPerPage = 5;
 
           if (html.scrollTop === 0) html.scrollTop += 1;
-
           if (purchase.classList.contains("close")) {
             purchase.classList.remove("close");
             purchase.classList.add("open");
@@ -218,8 +223,9 @@ window.addEventListener("load", () => {
           for (let i = 0; i < liCounts; i++) {
             const newLi = document.createElement("li");
             const newA = document.createElement("a");
-            newA.href = "";
+            newA.setAttribute("href", "#");
             newA.innerText = i + 1;
+            newA.setAttribute("class", "tab-control");
             newLi.appendChild(newA);
             newA.addEventListener("click", function (e) {
               e.preventDefault();
@@ -245,6 +251,13 @@ window.addEventListener("load", () => {
           totalPrice.innerText = Number(
             selectedGoods.dataset.price
           ).toLocaleString("en");
+
+          //tabindex 변경
+          const tabControls = document.querySelectorAll(".tab-control");
+          console.log(tabControls);
+          for (let i = 0; i < tabControls.length; i++) {
+            tabControls[i].setAttribute("tabindex", 0);
+          }
         });
     });
   } //addItem

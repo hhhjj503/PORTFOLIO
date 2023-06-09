@@ -33,13 +33,16 @@ header .skip a {
   font-size: 1.2rem;
   font-weight: bold;
   padding: 8px;
-  color: #333;
+  color: white;
   transition: 0.3s ease;
 }
 
 header .skip a:focus {
   visibility: visible;
-  border: 10px solid #41bfcf;
+  background-color: #333;
+  border: 2px solid white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   box-sizing: border-box;
   top: 0%;
   opacity: 1;
@@ -542,6 +545,10 @@ main .hj {
 .btn:focus {
   transition: 0.3s ease;
   background-color: #333;
+}
+
+.btn:focus {
+  border: 2px solid white;
 }
 
 .desc .skill-list li {

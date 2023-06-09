@@ -78,38 +78,38 @@
       </div>
       <!------------------------------------- info ------------------------------------------>
       <div class="info">
-        <a href="#" class="hiding"></a>
+        <a href="#" class="hiding" tabindex="-1"></a>
         <div class="sub-desc">한여름을 밝게비출 시원한 밤</div>
         <div class="desc">신나는 불꽃축제!</div>
-        <a href="#" class="hiding"></a>
+        <a href="#" class="hiding" tabindex="-1"></a>
         <div class="contents">
           <div class="slider-wrapper">
             <div class="slider">
-              <div class="slide">
+              <div class="slide" tabindex="0" role="button">
                 <img
                   src="../../source/images/amusementpark/nightshow/nightshow.PNG"
                   alt="불꽃놀이사진"
                 />
               </div>
-              <div class="slide">
+              <div class="slide" tabindex="0" role="button">
                 <img
                   src="../../source/images/amusementpark/nightshow/nightshow_fireworks.PNG"
                   alt="불꽃놀이사진"
                 />
               </div>
-              <div class="slide">
+              <div class="slide" tabindex="0" role="button">
                 <img
                   src="../../source/images/amusementpark/nightshow/nightshow_lights.JPG"
                   alt="불빛사진"
                 />
               </div>
-              <div class="slide">
+              <div class="slide" tabindex="0" role="button">
                 <img
                   src="../../source/images/amusementpark/nightshow/nightshow4.JPG"
                   alt="관람차사진"
                 />
               </div>
-              <div class="slide">
+              <div class="slide" tabindex="0" role="button">
                 <img
                   src="../../source/images/amusementpark/nightshow/nightshow_lights.JPG"
                   alt="불빛사진"
@@ -119,15 +119,18 @@
           </div>
           <div class="overlay">
             <img src="#" alt="오버레이이미지" />
+            <div class="guide">
+              창을 닫으려면 Esc키를 누르거나 화면의 아무곳이나 클릭해주세요
+            </div>
           </div>
         </div>
       </div>
       <!------------------------------------- letter ------------------------------------------>
       <div class="letter-wrapper">
         <div class="letter">
-          <a href="#" class="hiding"></a>
+          <a href="#" class="hiding" tabindex="-1"></a>
           <div class="desc">여러분의 이야기를 들려주세요!</div>
-          <a href="#" class="hiding"></a>
+          <a href="#" class="hiding" tabindex="-1"></a>
           <div class="form-wrapper">
             <form action="#" method="get">
               <div class="customer-name">
@@ -193,14 +196,26 @@
                       src="../../source/images/amusementpark/nightshow/ramen.PNG"
                       alt="라면"
                     />
-                    <input type="radio" name="item" id="item2" value="2" />
+                    <input
+                      type="radio"
+                      name="item"
+                      id="item2"
+                      value="2"
+                      tabindex="0"
+                    />
                   </li>
                   <li class="item-img">
                     <img
                       src="../../source/images/amusementpark/nightshow/phone.PNG"
                       alt="핸드폰"
                     />
-                    <input type="radio" name="item" id="item3" value="3" />
+                    <input
+                      type="radio"
+                      name="item"
+                      id="item3"
+                      value="3"
+                      tabindex="0"
+                    />
                   </li>
                 </ul>
               </div>
@@ -212,10 +227,10 @@
       <!------------------------------------- benefits ------------------------------------------>
       <div class="benefits">
         <div class="listwrapper">
-          <a href="#" class="hiding"></a>
+          <a href="#" class="hiding" tabindex="-1"></a>
           <div class="sub-desc">놓치지 마세요!</div>
           <div class="desc">잊지말아야 할 혜택 네가지!</div>
-          <a href="#" class="hiding"></a>
+          <a href="#" class="hiding" tabindex="-1"></a>
           <ul>
             <li class="benefit">
               <div>
@@ -242,7 +257,7 @@
               </div>
             </li>
           </ul>
-          <a href="#" class="hiding"></a>
+          <a href="#" class="hiding" tabindex="-1"></a>
         </div>
       </div>
     </main>
@@ -255,7 +270,6 @@
             <li><a href="#">문의</a></li>
             <li><a href="#">이용약관</a></li>
             <li><a href="#">개인정보관리</a></li>
-            <br class="mobile" />
             <li><a href="#">이메일무단수집거부</a></li>
             <li><a href="#">사이트맵</a></li>
             <li><a href="#">직원채용</a></li>
@@ -265,14 +279,17 @@
           <img
             src="../../source/images/amusementpark/youtubeicon.png"
             alt="페이스북 로고 이미지"
+            tabindex="0"
           />
           <img
             src="../../source/images/amusementpark/instaicon.png"
             alt="인스타그램 로고 이미지"
+            tabindex="0"
           />
           <img
             src="../../source/images/amusementpark/facebookicon.png"
             alt="유튜브 로고 이미지"
+            tabindex="0"
           />
         </div>
         <div class="logo"><div class="name">Amusement Park</div></div>

@@ -195,7 +195,6 @@ main {
       & li {
         width: 200px;
         height: 200px;
-        overflow: hidden;
         box-sizing: border-box;
         transition: 0.3s ease-in-out;
         visibility: hidden;
@@ -373,7 +372,8 @@ main {
           }
         }
 
-        &:hover p {
+        &:hover p,
+        &:focus p {
           transition: opacity 0.3s ease;
           opacity: 1;
         }
@@ -428,6 +428,7 @@ main {
     background-color: white;
     z-index: 99;
     overflow: auto;
+
     &::-webkit-scrollbar {
       width: 10px;
       height: 8px;

@@ -21,6 +21,7 @@ footer {
       li {
         display: inline-block;
         padding: 0 5px;
+        line-height: 1.618;
 
         a {
           text-decoration: none;
@@ -111,6 +112,7 @@ footer {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        border-radius: 50%;
 
         img {
           position: absolute;
@@ -157,10 +159,6 @@ footer {
         margin-bottom: 0;
         width: 100%;
         display: block;
-
-        & .mobile {
-          display: block;
-        }
       }
 
       .sns {

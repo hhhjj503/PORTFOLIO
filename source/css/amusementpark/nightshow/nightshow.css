@@ -175,6 +175,8 @@ main .info .contents .slider-wrapper .slider .slide {
   transition: 0.5s ease;
   box-sizing: border-box;
   cursor: pointer;
+  outline: none;
+  border: none;
 }
 main .info .contents .slider-wrapper .slider .slide img {
   width: 100%;
@@ -207,6 +209,23 @@ main .info .contents .overlay.visible {
   pointer-events: all;
   overflow: hidden;
 }
+main .info .contents .overlay .guide {
+  position: absolute;
+  color: white;
+  left: 50%;
+  bottom: 15%;
+  padding: 5px 10px;
+  transform: translateX(-50%);
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+@media screen and (max-width: 1024px) {
+  main .info .contents .overlay .guide {
+    width: 80%;
+    text-align: center;
+    line-height: 1.618;
+  }
+}
 main .info .contents .overlay img {
   position: absolute;
   width: 40%;
@@ -219,6 +238,18 @@ main .info .contents .overlay img {
   background-color: aliceblue;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media screen and (max-width: 1024px) {
+  main .info .contents .overlay img {
+    width: 80%;
+    height: 50%;
+  }
+}
+@media screen and (max-width: 550px) {
+  main .info .contents .overlay img {
+    width: 80%;
+    height: 50%;
+  }
 }
 main .letter-wrapper {
   background-color: #e5e5e7;

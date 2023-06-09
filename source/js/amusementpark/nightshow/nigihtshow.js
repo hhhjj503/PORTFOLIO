@@ -3,6 +3,7 @@ window.addEventListener("load", () => {
   const slider = document.querySelector(".contents .slider");
   const overlay = document.querySelector(".overlay");
   const overlayImg = document.querySelector(".overlay img");
+  const as = document.querySelectorAll("a.hiding");
   const hidings = document.querySelectorAll("a.hiding + *");
   const html = document.querySelector("html");
   const gotop = document.querySelector(".gotop");
@@ -29,6 +30,11 @@ window.addEventListener("load", () => {
 
   for (let i = 0; i < hidings.length; i++) {
     hidings[i].dataset.offtop = hidings[i].getBoundingClientRect().top - 1000;
+    as[i].addEventListener("keydown", (e) => {
+      if (e.keyCode === 13) {
+        e.preventDefault();
+      }
+    });
   }
 
   window.addEventListener(
@@ -61,6 +67,11 @@ window.addEventListener("load", () => {
   overlay.addEventListener("click", function () {
     this.classList.remove("visible");
   });
+  html.addEventListener("keydown", function (e) {
+    if (overlay.classList.contains("visible") && e.key === "Escape") {
+      overlay.classList.remove("visible");
+    }
+  });
 
   /**
    * 슬라이더를 초기화하는 함수
@@ -74,6 +85,11 @@ window.addEventListener("load", () => {
         overlayImg.alt = img.getAttribute("alt");
         overlay.classList.add("visible");
       });
+      slides[i].addEventListener("keydown", function (e) {
+        if (e.key === "Enter") {
+          slides[i].dispatchEvent(new Event("click"));
+        }
+      });
     }
   }
 
@@ -82,11 +98,17 @@ window.addEventListener("load", () => {
    * @param {element} slide
    */
   function overlayImage(slide) {
-    slide.addEventListener("click", () => {
+    slide.addEventListener("click", function () {
       const img = slide.querySelector("img");
       overlayImg.src = img.getAttribute("src");
       overlayImg.alt = img.getAttribute("alt");
       overlay.classList.add("visible");
+    });
+    slide.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        const event = new Event("click");
+        this.dispatchEvent(event);
+      }
     });
   }
 

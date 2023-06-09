@@ -8,6 +8,7 @@ window.addEventListener("load", () => {
   const gotop = document.querySelector(".gotop");
 
   //어트랙션 페이지의 변수
+  const as = document.querySelectorAll("a.hiding");
   const hidings = document.querySelectorAll("a.hiding + *"); //a 태그 다음의 엘리먼트 한개만 선택
   const wheelDown = document.querySelector(".wheel-down");
   const attractionNav = document.querySelectorAll(".attraction-nav a");
@@ -23,6 +24,15 @@ window.addEventListener("load", () => {
     e.preventDefault();
     window.scrollTo(0, 0);
   });
+
+  for (let i = 0; i < hidings.length; i++) {
+    hidings[i].dataset.offtop = hidings[i].getBoundingClientRect().top - 1000;
+    as[i].addEventListener("keydown", (e) => {
+      if (e.keyCode === 13) {
+        e.preventDefault();
+      }
+    });
+  }
 
   window.addEventListener(
     "scroll",

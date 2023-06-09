@@ -43,6 +43,7 @@ main .wrapper .type > a {
   height: 100%;
   z-index: 2;
 }
+
 @media screen and (max-width: 550px) {
   main .wrapper .type > a {
     z-index: 3;
@@ -380,4 +381,4 @@ footer {
     opacity: 0;
     display: none;
   }
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */

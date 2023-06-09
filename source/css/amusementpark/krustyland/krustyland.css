@@ -167,7 +167,6 @@ main .goods-wrapper ul {
 main .goods-wrapper ul li {
   width: 200px;
   height: 200px;
-  overflow: hidden;
   box-sizing: border-box;
   transition: 0.3s ease-in-out;
   visibility: hidden;
@@ -325,7 +324,7 @@ main .goods-slider ul li {
     height: 100px;
   }
 }
-main .goods-slider ul li:hover p {
+main .goods-slider ul li:hover p, main .goods-slider ul li:focus p {
   transition: opacity 0.3s ease;
   opacity: 1;
 }
