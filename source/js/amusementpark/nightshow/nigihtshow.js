@@ -7,6 +7,8 @@ window.addEventListener("load", () => {
   const hidings = document.querySelectorAll("a.hiding + *");
   const html = document.querySelector("html");
   const gotop = document.querySelector(".gotop");
+  const pauseBtn = document.querySelector(".slider-controller .pause");
+  const playBtn = document.querySelector(".slider-controller .play");
 
   //모바일 메뉴
   const topNavMobile = document.querySelector(".top-nav-mobile");
@@ -57,12 +59,17 @@ window.addEventListener("load", () => {
   const img = new Image();
   img.src = mainImg.dataset.path;
 
+  pauseBtn.addEventListener("click", function () {
+    clearInterval(timer);
+  });
+  playBtn.addEventListener("click", function () {
+    timer = setInterval(infiniteSlider, 3000);
+  });
+
   intializeSlides();
 
   //무한슬라이더 작동시작
-  setInterval(() => {
-    infiniteSlider();
-  }, 3000);
+  let timer = setInterval(infiniteSlider, 3000);
 
   overlay.addEventListener("click", function () {
     this.classList.remove("visible");

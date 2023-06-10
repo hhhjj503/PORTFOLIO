@@ -24,6 +24,8 @@ window.addEventListener("load", function () {
   const indexBtn3 = document.querySelector(
     ".index-button-wrapper .index-button3"
   );
+  const pauseBtn = document.querySelector(".index-button-wrapper .pause");
+  const playBtn = document.querySelector(".index-button-wrapper .play");
 
   //이미지미리로드
   const imgSourceArray = [];
@@ -105,10 +107,16 @@ window.addEventListener("load", function () {
     siemaSlider.goTo(2);
     changeIndex(2);
   });
+  pauseBtn.addEventListener("click", () => {
+    clearInterval(timer);
+  });
+  playBtn.addEventListener("click", () => {
+    timer = setInterval(autoslider, 4000);
+  });
 
   changeIndex();
 
-  const timer = setInterval(autoslider, 4000);
+  let timer = setInterval(autoslider, 4000);
 
   //moment js 시간 타이머
   let currentTime = moment();

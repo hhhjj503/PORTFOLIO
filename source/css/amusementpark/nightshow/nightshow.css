@@ -194,6 +194,26 @@ main .info .contents .slider-wrapper .slider:after {
   clear: both;
   display: block;
 }
+main .info .contents .slider-controller {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+}
+main .info .contents .slider-controller button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+main .info .contents .slider-controller button img {
+  width: 15px;
+  height: 15px;
+  display: block;
+  background-color: transparent;
+}
 main .info .contents .overlay {
   position: fixed;
   pointer-events: none;

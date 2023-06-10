@@ -419,5 +419,18 @@ main .event-wrapper .btn-wrapper .index-button-wrapper .index-button {
 main .event-wrapper .btn-wrapper .index-button-wrapper .index-button.selected {
   background-color: white;
 }
+main .event-wrapper .btn-wrapper .index-button-wrapper .controller {
+  width: 17px;
+  height: 17px;
+  padding: 0;
+  margin: 0 10px;
+  color: white;
+  vertical-align: middle;
+}
+main .event-wrapper .btn-wrapper .index-button-wrapper .controller img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 
 /* --------------------------------------------------------------------------- *//*# sourceMappingURL=aquarium.css.map */
