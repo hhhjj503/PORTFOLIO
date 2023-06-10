@@ -11,6 +11,9 @@ window.onload = function () {
   const depth2Lis = document.querySelectorAll(
     "header .h-wrapper .h-menu1 > li.depth2"
   );
+  const depth2As = document.querySelectorAll(
+    "header .h-wrapper .h-menu1 > li.depth2 a"
+  );
 
   //헤더를 화면에 늦게 띄우기 위한 기능
   setTimeout(() => {
@@ -69,7 +72,7 @@ window.onload = function () {
   const topUl = document.querySelector(".tbn ul");
   const hWrapper = document.querySelector("header .h-wrapper");
   const allMenu = document.querySelector("header .h-wrapper .all-menu");
-  const allMenuBtn = document.querySelector(".all-menu-btn svg");
+  const allMenuBtn = document.querySelector(".all-menu-btn");
   const hMenu1 = document.querySelector("header .h-wrapper .h-menu1");
   const hMenu1Lis = document.querySelectorAll(
     "header .h-wrapper .h-menu1 > li"
@@ -98,6 +101,31 @@ window.onload = function () {
 
   //전체메뉴를 화면에 잘 보이기 위해 css 변경
   allMenuBtn.addEventListener("click", function () {
+    showAllMenu();
+  });
+  allMenuBtn.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") showAllMenu();
+  });
+
+  //전체메뉴를 화면에 잘 보이기 위해 css 변경한걸 제거
+  allMenuBtnX.addEventListener("click", function () {
+    hideAllMenu();
+  });
+  allMenuBtnX.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") hideAllMenu();
+  });
+
+  //a 태그밑의 밑줄을 위한 class 추가 제거
+  for (let i = 0; i < lis.length; i++) {
+    lis[i].addEventListener("mouseenter", function () {
+      as[i].classList.add("show");
+    });
+    lis[i].addEventListener("mouseleave", function () {
+      as[i].classList.remove("show");
+    });
+  }
+
+  function showAllMenu() {
     topUl.classList.add("show-all-menu");
     hWrapper.classList.add("show-all-menu");
     hMenu1.classList.add("show-all-menu");
@@ -114,10 +142,9 @@ window.onload = function () {
     allMenuBtnLi.classList.add("hide");
     allMenuBtnX.classList.add("show-all-menu");
     allMenu.classList.add("show-all-menu");
-  });
+  }
 
-  //전체메뉴를 화면에 잘 보이기 위해 css 변경한걸 제거
-  allMenuBtnX.addEventListener("click", function () {
+  function hideAllMenu() {
     allMenu.classList.remove("show-all-menu");
     topUl.classList.remove("show-all-menu");
     hWrapper.classList.remove("show-all-menu");
@@ -134,15 +161,5 @@ window.onload = function () {
     allMenuBtn.classList.remove("hide");
     allMenuBtnLi.classList.remove("hide");
     allMenuBtnX.classList.remove("show-all-menu");
-  });
-
-  //a 태그밑의 밑줄을 위한 class 추가 제거
-  for (let i = 0; i < lis.length; i++) {
-    lis[i].addEventListener("mouseenter", function () {
-      as[i].classList.add("show");
-    });
-    lis[i].addEventListener("mouseleave", function () {
-      as[i].classList.remove("show");
-    });
   }
 };

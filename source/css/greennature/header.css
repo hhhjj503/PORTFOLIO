@@ -267,6 +267,49 @@ header .h-wrapper .h-menu1 li.depth2:hover .folded-menu {
   max-height: 230px;
 }
 
+/* tab 을 위한 설정들 */
+header .h-wrapper .h-menu1 li.depth2 a:focus-visible + .folded-menu {
+  max-height: 230px;
+  z-index: 20;
+  transition: 0.3s ease-out;
+}
+header .h-wrapper .h-menu1 li.depth2 a:focus-visible + .folded-menu .f-left {
+  background-color: rgb(49, 84, 179);
+}
+header
+  .h-wrapper
+  .h-menu1
+  li.depth2
+  a:focus-visible
+  + .folded-menu
+  .f-left
+  .left-title {
+  visibility: visible;
+}
+header
+  .h-wrapper
+  .h-menu1
+  li.depth2
+  a:focus-visible
+  + .folded-menu
+  .f-left
+  .left-desc {
+  visibility: visible;
+}
+header .h-wrapper .h-menu1 li.depth2 a:focus-visible + .folded-menu .f-right {
+  background-color: white;
+}
+header
+  .h-wrapper
+  .h-menu1
+  li.depth2
+  a:focus-visible
+  + .folded-menu
+  .f-right
+  ul {
+  visibility: visible;
+}
+
 /* 드랍다운메뉴가 있는 li 중 가장 처음 hover 된 li 만 보이도록 배경을 설정하고
  다른 li에 hover가 되도 첫li 로서 max-height 를 계속유지(화면에 표시) */
 /* max-height 를 준 이유는 folded 메뉴의 드랍다운이 max-height가 300이 되면서 진행되기 때문에
