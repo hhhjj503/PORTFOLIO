@@ -150,6 +150,11 @@ input {
   color: white;
 }
 
+.pagelabels label:focus-visible {
+  /* focus-visible 키보드 포커스 */
+  outline: 10px solid snow;
+}
+
 .pagelabels label:after {
   position: absolute;
   top: 50%;

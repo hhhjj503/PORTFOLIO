@@ -114,6 +114,11 @@ footer {
         object-fit: cover;
         border-radius: 50%;
 
+        &:focus-visible {
+          border: 3px solid white;
+          box-sizing: border-box;
+        }
+
         img {
           position: absolute;
           top: 50%;

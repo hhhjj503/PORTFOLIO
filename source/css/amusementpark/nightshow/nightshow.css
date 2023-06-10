@@ -175,8 +175,11 @@ main .info .contents .slider-wrapper .slider .slide {
   transition: 0.5s ease;
   box-sizing: border-box;
   cursor: pointer;
-  outline: none;
   border: none;
+}
+main .info .contents .slider-wrapper .slider .slide:focus-visible {
+  border: 5px solid white;
+  box-sizing: border-box;
 }
 main .info .contents .slider-wrapper .slider .slide img {
   width: 100%;

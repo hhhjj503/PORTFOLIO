@@ -15,6 +15,8 @@ window.addEventListener("load", () => {
     input.setAttribute("type", "radio");
     input.setAttribute("id", `slide_control${i}`);
     input.setAttribute("data-left", `${left}`);
+    input.setAttribute("tabindex", -1);
+    input.setAttribute("role", "button");
     if (i === 0) {
       input.checked = true;
     }
@@ -22,6 +24,7 @@ window.addEventListener("load", () => {
 
     //label 태그 동적생성
     const label = document.createElement("label");
+    label.setAttribute("tabindex", 0);
     label.htmlFor = `slide_control${i}`;
     label.addEventListener("mouseenter", () => {
       label.classList.add("hovered");
@@ -48,8 +51,18 @@ window.addEventListener("load", () => {
 
   //label 에 클릭이벤트 추가 , wheelIndex 변경
   for (let i = 0; i < labels.length; i++) {
-    labels[i].addEventListener("click", () => {
+    labels[i].addEventListener("mousedown", (e) => {
+      e.stopPropagation();
       if (moving === false) {
+        movingCheck();
+        changeImage(inputs[i], labels[i]);
+        const leftValue = inputs[i].dataset.left;
+        moveLeft(leftValue);
+        currentWheelIndex = i;
+      }
+    });
+    labels[i].addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
         movingCheck();
         changeImage(inputs[i], labels[i]);
         const leftValue = inputs[i].dataset.left;

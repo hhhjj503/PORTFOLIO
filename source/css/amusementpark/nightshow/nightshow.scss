@@ -202,8 +202,12 @@ main {
             //border: 3px solid purple;
             box-sizing: border-box;
             cursor: pointer;
-            outline: none;
             border: none;
+
+            &:focus-visible {
+              border: 5px solid white;
+              box-sizing: border-box;
+            }
 
             img {
               width: 100%;

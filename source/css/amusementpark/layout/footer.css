@@ -102,6 +102,10 @@ footer > .wrapper .gotop > a {
      object-fit: cover;
   border-radius: 50%;
 }
+footer > .wrapper .gotop > a:focus-visible {
+  border: 3px solid white;
+  box-sizing: border-box;
+}
 footer > .wrapper .gotop > a img {
   position: absolute;
   top: 50%;
