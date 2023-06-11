@@ -58,18 +58,23 @@ window.addEventListener("load", () => {
 
   const img = new Image();
   img.src = mainImg.dataset.path;
+  let sliderWorking = true;
 
   pauseBtn.addEventListener("click", function () {
     clearInterval(timer);
+    sliderWorking = false;
   });
   playBtn.addEventListener("click", function () {
-    timer = setInterval(infiniteSlider, 3000);
+    if (!sliderWorking) {
+      sliderWorking = true;
+      timer = setInterval(infiniteSlider, 4000);
+    }
   });
 
   intializeSlides();
 
   //무한슬라이더 작동시작
-  let timer = setInterval(infiniteSlider, 3000);
+  let timer = setInterval(infiniteSlider, 4000);
 
   overlay.addEventListener("click", function () {
     this.classList.remove("visible");
@@ -137,7 +142,7 @@ window.addEventListener("load", () => {
    * 슬라이더에 left : -300px css 를 적용하는 함수
    */
   function addStyle() {
-    slider.style.transition = "1s ease";
+    slider.style.transition = "1s ease-in-out";
     slider.style.left = "-300px";
   }
 

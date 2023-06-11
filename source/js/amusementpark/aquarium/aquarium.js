@@ -26,6 +26,7 @@ window.addEventListener("load", function () {
   );
   const pauseBtn = document.querySelector(".index-button-wrapper .pause");
   const playBtn = document.querySelector(".index-button-wrapper .play");
+  let sliderWorking = true;
 
   //이미지미리로드
   const imgSourceArray = [];
@@ -109,9 +110,13 @@ window.addEventListener("load", function () {
   });
   pauseBtn.addEventListener("click", () => {
     clearInterval(timer);
+    sliderWorking = false;
   });
   playBtn.addEventListener("click", () => {
-    timer = setInterval(autoslider, 4000);
+    if (!sliderWorking) {
+      sliderWorking = true;
+      timer = setInterval(autoslider, 4000);
+    }
   });
 
   changeIndex();
