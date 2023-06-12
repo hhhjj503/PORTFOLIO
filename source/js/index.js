@@ -20,16 +20,15 @@ window.addEventListener("load", () => {
 
   //헤더메뉴 클릭시 스크롤이동
   for (let i = 0; i < headerAs.length; i++) {
-    headerAs[i].addEventListener("click", (e) => {
-      e.preventDefault();
+    headerAs[i].addEventListener("click", () => {
+      //e.preventDefault();
       window.scrollTo({
         top: itemsOffsetTops[i],
         left: 0,
-        behavior: "smooth",
       });
     });
 
-    headerAs[i].addEventListener("keydown", (e) => {
+    /*headerAs[i].addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
         e.preventDefault();
         window.scrollTo({
@@ -40,7 +39,7 @@ window.addEventListener("load", () => {
         const event = new Event("click");
         wrappers[i].dispatchEvent(event);
       }
-    });
+    });*/
   }
 
   //vertex에 기본적인 이벤트 추가

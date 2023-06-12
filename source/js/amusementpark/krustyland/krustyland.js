@@ -120,7 +120,7 @@ window.addEventListener("load", () => {
     $.each(slicedData, function (i, item) {
       const elementText =
         ' <li class="item" >' +
-        '<a href="#" ' +
+        '<a href="#purchase-div" ' +
         "><img  " +
         'src="' +
         item.imagePath +
@@ -139,6 +139,7 @@ window.addEventListener("load", () => {
         "</h5>" +
         "</a>" +
         "</li>";
+
       elements.push($(elementText).get(0));
     });
     added = added + addedItemCount;

@@ -12,14 +12,16 @@
   <body>
     <!-- header -->
     <header>
-      <div class="skip"><a href="#portfolio">포트폴리오로 이동하기</a></div>
+      <div class="skip">
+        <a href="#portfolio-item">포트폴리오로 이동하기</a>
+      </div>
       <!-- nav -->
       <nav>
         <ul>
-          <li><a href="#">hj</a></li>
-          <li><a href="#">skills</a></li>
-          <li><a href="#">portfolio</a></li>
-          <li><a href="#">contact</a></li>
+          <li><a href="#hj-tem">hj</a></li>
+          <li><a href="#skills-item">skills</a></li>
+          <li><a href="#portfolio-item">portfolio</a></li>
+          <li><a href="#contact-item">contact</a></li>
         </ul>
       </nav>
     </header>
@@ -27,7 +29,7 @@
     <main>
       <div class="wrapper white">
         <!-- hj -->
-        <div class="hj item">
+        <div id="hj-item" class="hj item">
           <h1 class="title">hj portfolio</h1>
           <p class="intro">
             <span>안녕하세요</span> 항상 노력하며 발전하는 <br class="break" />
@@ -72,7 +74,7 @@
       </div>
       <div class="wrapper">
         <!-- skills -->
-        <div class="skills item">
+        <div id="skills-item" class="skills item">
           <h2 class="title">skills</h2>
           <ul>
             <li tabindex="0">html</li>
@@ -88,7 +90,7 @@
       </div>
       <div class="wrapper white">
         <!-- portfolio -->
-        <div class="portfolio item" id="portfolio">
+        <div id="portfolio-item" class="portfolio item">
           <h2 class="title">portfolio</h2>
           <div class="list">
             <ul>
@@ -253,7 +255,7 @@
     </main>
     <footer>
       <!-- contact -->
-      <div class="contact item">
+      <div id="contact-item" class="contact item">
         <h2 class="title">contact</h2>
         <ul class="info">
           <li>방문해 주셔서 감사합니다</li>

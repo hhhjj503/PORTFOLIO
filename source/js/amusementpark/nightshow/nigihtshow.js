@@ -9,6 +9,8 @@ window.addEventListener("load", () => {
   const gotop = document.querySelector(".gotop");
   const pauseBtn = document.querySelector(".slider-controller .pause");
   const playBtn = document.querySelector(".slider-controller .play");
+  const inputs = document.querySelectorAll("input");
+  const textarea = document.querySelector("textarea");
 
   //모바일 메뉴
   const topNavMobile = document.querySelector(".top-nav-mobile");
@@ -69,6 +71,12 @@ window.addEventListener("load", () => {
       sliderWorking = true;
       timer = setInterval(infiniteSlider, 4000);
     }
+  });
+
+  //뒤로가기, 새로고침 차단
+  window.addEventListener("beforeunload", function (e) {
+    e.preventDefault();
+    e.returnValue = "";
   });
 
   intializeSlides();
