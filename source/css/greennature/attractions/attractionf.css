@@ -3,6 +3,6 @@
 @import url(attraction_template.css);
 
 /* --------------------- inner_nav li 페이지 색상 변경 ---------------*/
-.inner_nav li:nth-child(1) a {
+.inner-nav li:nth-child(1) a {
   background-color: #028585;
 }

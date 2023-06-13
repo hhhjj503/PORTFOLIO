@@ -225,13 +225,14 @@ main .main-items .ad .controller {
 
 main .main-items .ad .controller .c-btn {
   width: 10px;
-  padding: 0 10px;
+  padding: 0 15px;
   height: 55px;
-  font-size: 4rem;
+  font-size: 3rem;
   background-color: rgb(192, 192, 192);
   box-shadow: 0 0 8px 0 rgb(0 0 0/30%);
   border-radius: 4px;
   color: white;
+  border: none;
   cursor: pointer;
   user-select: none;
   margin-top: 75px;

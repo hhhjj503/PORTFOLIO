@@ -51,6 +51,11 @@ form .search-wrapper {
   border: 1px solid #ccc;
 }
 
+.search-wrapper select:focus-visible,
+.search-wrapper button:focus-visible {
+  outline: 1px solid black;
+}
+
 .search-wrapper button {
   width: 70px;
   background-color: rgb(0, 160, 160);

@@ -9,13 +9,13 @@
 
 /* ---------------- inner > inner-desc --------------- */
 
-.inner-desc p {
+main .inner-desc p {
   font-size: 1.5rem;
   line-height: 25px;
   margin-top: 50px;
 }
 
-h4 {
+main h4 {
   margin-top: 150px;
   font-size: 4rem;
   font-weight: bold;
@@ -23,13 +23,13 @@ h4 {
   width: 100%;
 }
 
-h4 span {
+main h4 span {
   color: rgb(0, 160, 160);
   display: inline-block;
   position: relative;
 }
 
-h4 span:before {
+main h4 span:before {
   content: "";
   width: 10px;
   height: 10px;
@@ -42,7 +42,7 @@ h4 span:before {
   background-color: rgb(0, 160, 160);
 }
 
-h4 + p {
+main h4 + p {
   width: 700px;
   text-align: center;
   margin: 50px auto 0;
