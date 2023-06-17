@@ -33,6 +33,7 @@ window.addEventListener("load", () => {
   );
   let totalPrice = document.querySelector(".goods-total-price .total-price");
   const dibImg = document.querySelector(".dib img");
+  const dibWrapper = document.querySelector(".dib");
 
   //제품리스트를 제이슨으로 받아와 담기위한 배열과 카운트 선언
   let addedItemCount = 5;
@@ -255,7 +256,6 @@ window.addEventListener("load", () => {
 
           //tabindex 변경
           const tabControls = document.querySelectorAll(".tab-control");
-          console.log(tabControls);
           for (let i = 0; i < tabControls.length; i++) {
             tabControls[i].setAttribute("tabindex", 0);
           }
@@ -341,6 +341,26 @@ window.addEventListener("load", () => {
       }, 300);
     } else {
       dibImg.classList.remove("clicked");
+    }
+
+    bagImg.classList.remove("hidden");
+  });
+  dibWrapper.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+      if (!dibImg.classList.contains("clicked")) {
+        dibImg.classList.add("clicked");
+        bagImg.src = goodsImage.src;
+        bagImg.alt = goodsImage.alt;
+        shoppingBag.classList.add("rotate");
+        bagImg.classList.add("shown");
+        setTimeout(() => {
+          bagImg.classList.remove("shown");
+          bagImg.classList.add("hidden");
+          shoppingBag.classList.remove("rotate");
+        }, 300);
+      } else {
+        dibImg.classList.remove("clicked");
+      }
     }
 
     bagImg.classList.remove("hidden");
