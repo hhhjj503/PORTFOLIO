@@ -324,7 +324,7 @@ main .goods-slider ul li {
     height: 100px;
   }
 }
-main .goods-slider ul li:hover p, main .goods-slider ul li:focus p {
+main .goods-slider ul li:hover p, main .goods-slider ul li:focus-visible p {
   transition: opacity 0.3s ease;
   opacity: 1;
 }
