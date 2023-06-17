@@ -374,7 +374,6 @@ main {
 
         &:hover p,
         &:focus-visible p {
-          transition: opacity 0.3s ease;
           opacity: 1;
         }
 
@@ -395,6 +394,7 @@ main {
           font-size: 1.4rem;
           line-height: 200px;
           opacity: 0;
+          transition: opacity 0.3s ease;
 
           @media screen and (max-width: 1024px) {
             & {

@@ -325,7 +325,6 @@ main .goods-slider ul li {
   }
 }
 main .goods-slider ul li:hover p, main .goods-slider ul li:focus-visible p {
-  transition: opacity 0.3s ease;
   opacity: 1;
 }
 main .goods-slider ul li img {
@@ -345,6 +344,7 @@ main .goods-slider ul li p {
   font-size: 1.4rem;
   line-height: 200px;
   opacity: 0;
+  transition: opacity 0.3s ease;
 }
 @media screen and (max-width: 1024px) {
   main .goods-slider ul li p {
