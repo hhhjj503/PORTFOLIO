@@ -653,6 +653,7 @@ footer {
 }
 
 footer .contact {
+  position: relative;
   max-width: 1200px;
   width: 100%;
   height: auto;
@@ -675,6 +676,21 @@ footer .contact {
   line-height: 30px;
 }
 
+footer img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 70%;
+  border-radius: 10px;
+}
+
+.contact img:nth-last-child(1) {
+  right: 0;
+}
+.contact img:nth-last-child(2) {
+  left: 0;
+}
+
 @media screen and (max-width: 1024px) {
   footer .contact {
     padding: 70px 0;
@@ -687,6 +703,17 @@ footer .contact {
   .info li {
     font-size: 1.1rem;
     line-height: 30px;
+  }
+
+  footer img {
+    height: 50%;
+  }
+
+  .contact img:nth-last-child(1) {
+    right: 10%;
+  }
+  .contact img:nth-last-child(2) {
+    left: 10%;
   }
 }
 
@@ -702,6 +729,12 @@ footer .contact {
   .info li {
     font-size: 1rem;
     line-height: 30px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  footer img {
+    display: none;
   }
 }
 
