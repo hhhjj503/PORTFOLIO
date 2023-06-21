@@ -49,7 +49,7 @@ main .banner .main_img {
   height: 100%;
   background-size: 100%;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position-y: 90%;
 }
 @media screen and (max-width: 550px) {
   main .banner .main_img {
@@ -275,28 +275,17 @@ main .info .contents .overlay img {
   }
 }
 main .letter-wrapper {
-  background-color: #e5e5e7;
   position: relative;
-  background-image: url(../../../images/amusementpark/nightshow/letter_back.PNG);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-main .letter-wrapper:before {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 70%;
-  background: linear-gradient(to bottom, transparent 0%, black 100%);
-  z-index: 0;
 }
 main .letter-wrapper .letter {
   /*----------------------- main .letter ------------------------ */
   max-width: 1200px;
   margin: 0 auto;
   padding: 100px 0;
+  background-image: url(../../../images/amusementpark/nightshow/letter_back.PNG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   position: relative;
 }
 main .letter-wrapper .letter:before {
@@ -342,7 +331,6 @@ main .letter-wrapper .letter .desc {
   }
 }
 main .letter-wrapper .letter .form-wrapper {
-  padding: 50px 0;
   width: 60%;
   margin: 0 auto;
   position: relative;
@@ -359,16 +347,19 @@ main .letter-wrapper .letter .form-wrapper {
     padding: 0;
   }
 }
+main .letter-wrapper .letter .form-wrapper form > div {
+  margin-bottom: 10px;
+}
 main .letter-wrapper .letter .form-wrapper form label {
   display: inline-block;
   background-color: #1c3055;
   color: white;
   padding: 10px 15px;
-  border-radius: 30px;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   box-shadow: 1px 1px 10px rgb(77, 77, 77);
   font-weight: bold;
-  margin: 30px 0 10px 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 @media screen and (max-width: 1024px) {
   main .letter-wrapper .letter .form-wrapper form label {
@@ -387,7 +378,6 @@ main .letter-wrapper .letter .form-wrapper form input {
   padding: 15px;
   box-sizing: border-box;
   font-size: 1.7rem;
-  margin: 8px 0;
   border: none;
   box-shadow: 1px 1px 10px rgb(166, 166, 166);
 }
@@ -396,7 +386,6 @@ main .letter-wrapper .letter .form-wrapper form input[type=radio] {
   box-shadow: none;
   box-sizing: border-box;
   display: block;
-  margin: 10px;
 }
 @media screen and (max-width: 1024px) {
   main .letter-wrapper .letter .form-wrapper form input {
@@ -425,7 +414,6 @@ main .letter-wrapper .letter .form-wrapper form textarea {
 main .letter-wrapper .letter .form-wrapper form .customer-item li {
   width: 30%;
   height: 220px;
-  margin: 10px;
   display: inline-block;
 }
 @media screen and (max-width: 1024px) {
@@ -539,7 +527,6 @@ main .benefits .listwrapper {
 main .benefits .listwrapper ul {
   width: 100%;
   text-align: center;
-  margin-top: 50px;
 }
 main .benefits .listwrapper .benefit {
   display: inline-block;
