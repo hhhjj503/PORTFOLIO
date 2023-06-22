@@ -18,7 +18,7 @@ window.addEventListener("load", () => {
     setTimeout(() => {
       attractionsOffsetTops = [];
       attractionsOffsetTops = getOffsetTop();
-    }, 100);
+    }, 500);
   });
 
   window.addEventListener(
