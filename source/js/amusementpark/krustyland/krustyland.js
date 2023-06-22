@@ -61,12 +61,12 @@ window.addEventListener("load", () => {
   window.addEventListener("scroll", () => {
     const mobileHeader = topNavMobile.style.display;
     if (
-      html.scrollTop > background.offsetHeight - menu.offsetHeight &&
-      topNav.offsetHeight !== 0
+      html.scrollTop > background.offsetHeight
+      //- menu.offsetHeight && topNav.offsetHeight !== 0
     ) {
       //pc일때 fixed 위치조정
       menu.style.position = "fixed";
-      menu.style.top = topNav.offsetHeight + "px";
+      menu.style.top = "0px";
     } else {
       menu.style.position = "relative";
       menu.style.top = 0;

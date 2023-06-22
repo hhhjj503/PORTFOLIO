@@ -9,13 +9,12 @@
       href="../../source/css/amusementpark/attraction/attraction.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="../../source/js/amusementpark/header.js"></script>
     <script src="../../source/js/amusementpark/attraction/attraction.js"></script>
     <title>어트랙션 | Amusement Park</title>
   </head>
   <body>
-    <!-- main -->
-    <main>
-      <!-- 헤드 nav 메뉴(PC) -->
+    <header>
       <nav class="top-nav">
         <div class="wrapper">
           <ul>
@@ -66,39 +65,352 @@
           </div>
         </div>
       </nav>
+    </header>
+    <!-- main -->
+    <main>
       <!-- attrations wrapper -->
       <div class="wrapper">
-        <div class="wheel-down">
-          <div class="deco"></div>
-          <div class="deco"></div>
+        <ul class="attraction-nav">
+          <li>
+            <a href="#">
+              <img
+                src="../../source/images/amusementpark/attraction/rollercoaster.PNG"
+                alt="롤러코스터 썸네일 이미지"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="../../source/images/amusementpark/attraction/ferris_wheel.JPG"
+                alt="관람차 썸네일 이미지"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="../../source/images/amusementpark/attraction/water_slide.jpg"
+                alt="워터 슬라이드 썸네일 이미지"
+            /></a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="../../source/images/amusementpark/attraction/carousel.JPG"
+                alt="회전목마 썸네일 이미지"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="../../source/images/amusementpark/attraction/crystal_jo.JPG"
+                alt="열기구 썸네일 이미지"
+              />
+            </a>
+          </li>
+        </ul>
+        <div class="attraction rollercoaster">
+          <span class="deco">Rollercoaster</span>
+          <img
+            src="../../source/images/amusementpark/attraction/rollercoaster.PNG"
+            alt="롤러코스터"
+          />
+          <div class="desc">
+            <h4>롤러코스터</h4>
+            <ul class="ban-icons">
+              <li>
+                <img
+                  src="../../source/images/amusementpark/attraction/ban-solid.svg"
+                  alt="금지표시"
+                />
+              </li>
+
+              <li>
+                <img
+                  src="../../source/images/amusementpark/attraction/mug-hot-solid.svg"
+                  alt="컵 그림"
+                />
+              </li>
+              <li>
+                <img
+                  src="../../source/images/amusementpark/attraction/glasses-solid.svg"
+                  alt="안경그림"
+                />
+              </li>
+            </ul>
+            <ul class="ban-list">
+              <li>No Drink</li>
+              <li>No Glasses</li>
+            </ul>
+          </div>
+          <div class="mobile">
+            <h4>롤러코스터</h4>
+            <ul class="ban-icons">
+              <li>
+                <img
+                  src="../../source/images/amusementpark/attraction/ban-solid.svg"
+                  alt="금지표시"
+                />
+              </li>
+              <li>
+                <img
+                  src="../../source/images/amusementpark/attraction/baby-solid.svg"
+                  alt="아기 그림"
+                />
+              </li>
+              <li>
+                <img
+                  src="../../source/images/amusementpark/attraction/mug-hot-solid.svg"
+                  alt="컵 그림"
+                />
+              </li>
+              <li>
+                <img
+                  src="../../source/images/amusementpark/attraction/glasses-solid.svg"
+                  alt="안경그림"
+                />
+              </li>
+            </ul>
+            <ul class="ban-list">
+              <li>No Children</li>
+              <li>No Drink</li>
+              <li>No Glasses</li>
+            </ul>
+          </div>
         </div>
-        <div class="attraction-nav">
-          <ul>
-            <li><a href="#" class="active"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-          </ul>
+        <div class="attraction ferris-wheel right">
+          <span class="deco left">Ferris Wheel</span>
+          <div class="desc right">
+            <h4>대관람차</h4>
+            <ul class="ban-icons">
+              <li>
+                <img
+                  src="../../source/images/amusementpark/attraction/ban-solid.svg"
+                  alt="금지표시"
+                />
+              </li>
+
+              <li>
+                <img
+                  src="../../source/images/amusementpark/attraction/mug-hot-solid.svg"
+                  alt="컵 그림"
+                />
+              </li>
+            </ul>
+            <ul class="ban-list">
+              <li>No Drink</li>
+            </ul>
+          </div>
+          <img
+            src="../../source/images/amusementpark/attraction/ferris_wheel.JPG"
+            alt="관람차"
+          />
+          <div class="mobile">
+            <h4>대관람차</h4>
+            <ul class="ban-icons">
+              <li>
+                <img
+                  src="../../source/images/amusementpark/attraction/ban-solid.svg"
+                  alt="금지표시"
+                />
+              </li>
+
+              <li>
+                <img
+                  src="../../source/images/amusementpark/attraction/mug-hot-solid.svg"
+                  alt="컵 그림"
+                />
+              </li>
+            </ul>
+            <ul class="ban-list">
+              <li>No Drink</li>
+            </ul>
+          </div>
         </div>
-        <div class="attraction">
-          <a href="#" class="hiding" tabindex="-1"></a>
-          <div class="rollercoaster"></div>
-          <div class="info">신나는 롤러코스터</div>
+        <div class="attraction water-slide">
+          <span class="deco">Water Slide</span>
+          <img
+            src="../../source/images/amusementpark/attraction/water_slide.jpg"
+            alt="워터 슬라이드"
+          />
+          <div class="desc">
+            <h4>워터슬라이드</h4>
+            <ul class="ban-icons">
+              <li>
+                <img
+                  src="../../source/images/amusementpark/attraction/ban-solid.svg"
+                  alt="금지표시"
+                />
+              </li>
+              <li>
+                <img
+                  src="../../source/images/amusementpark/attraction/baby-solid.svg"
+                  alt="아기 그림"
+                />
+              </li>
+              <li>
+                <img
+                  src="../../source/images/amusementpark/attraction/mug-hot-solid.svg"
+                  alt="컵 그림"
+                />
+              </li>
+            </ul>
+            <ul class="ban-list">
+              <li>No Children</li>
+              <li>No Drink</li>
+            </ul>
+          </div>
+          <div class="mobile">
+            <h4>워터슬라이드</h4>
+            <ul class="ban-icons">
+              <li>
+                <img
+                  src="../../source/images/amusementpark/attraction/ban-solid.svg"
+                  alt="금지표시"
+                />
+              </li>
+              <li>
+                <img
+                  src="../../source/images/amusementpark/attraction/baby-solid.svg"
+                  alt="아기 그림"
+                />
+              </li>
+              <li>
+                <img
+                  src="../../source/images/amusementpark/attraction/mug-hot-solid.svg"
+                  alt="컵 그림"
+                />
+              </li>
+            </ul>
+            <ul class="ban-list">
+              <li>No Children</li>
+              <li>No Drink</li>
+            </ul>
+          </div>
         </div>
-        <div class="attraction">
-          <a href="#" class="hiding" tabindex="-1"></a>
-          <div class="ferris-wheel"></div>
-          <div class="info">환상적인 대관람차</div>
+        <div class="attraction carousel right">
+          <span class="deco left">Carousel</span>
+          <div class="desc right">
+            <h4>회전목마</h4>
+            <ul class="ban-icons">
+              <li>
+                <img
+                  src="../../source/images/amusementpark/attraction/ban-solid.svg"
+                  alt="금지표시"
+                />
+              </li>
+              <li>
+                <img
+                  src="../../source/images/amusementpark/attraction/baby-solid.svg"
+                  alt="아기 그림"
+                />
+              </li>
+              <li>
+                <img
+                  src="../../source/images/amusementpark/attraction/mug-hot-solid.svg"
+                  alt="컵 그림"
+                />
+              </li>
+            </ul>
+            <ul class="ban-list">
+              <li>No Children</li>
+              <li>No Drink</li>
+            </ul>
+          </div>
+          <img
+            src="../../source/images/amusementpark/attraction/carousel.JPG"
+            alt="회전목마"
+          />
+          <div class="mobile">
+            <h4>회전목마</h4>
+            <ul class="ban-icons">
+              <li>
+                <img
+                  src="../../source/images/amusementpark/attraction/ban-solid.svg"
+                  alt="금지표시"
+                />
+              </li>
+              <li>
+                <img
+                  src="../../source/images/amusementpark/attraction/baby-solid.svg"
+                  alt="아기 그림"
+                />
+              </li>
+              <li>
+                <img
+                  src="../../source/images/amusementpark/attraction/mug-hot-solid.svg"
+                  alt="컵 그림"
+                />
+              </li>
+            </ul>
+            <ul class="ban-list">
+              <li>No Children</li>
+              <li>No Drink</li>
+            </ul>
+          </div>
         </div>
-        <div class="attraction">
-          <a href="#" class="hiding" tabindex="-1"></a>
-          <div class="carousel"></div>
-          <div class="info">회전목마</div>
-        </div>
-        <div class="attraction">
-          <a href="#" class="hiding" tabindex="-1"></a>
-          <div class="crystal-jo"></div>
-          <div class="info">하늘 열기구</div>
+        <div class="attraction crystal-jo">
+          <span class="deco">Crystal Jo</span>
+          <img
+            src="../../source/images/amusementpark/attraction/crystal_jo.JPG"
+            alt="열기구"
+          />
+          <div class="desc">
+            <h4>회전열기구</h4>
+            <ul class="ban-icons">
+              <li>
+                <img
+                  src="../../source/images/amusementpark/attraction/ban-solid.svg"
+                  alt="금지표시"
+                />
+              </li>
+              <li>
+                <img
+                  src="../../source/images/amusementpark/attraction/baby-solid.svg"
+                  alt="아기 그림"
+                />
+              </li>
+              <li>
+                <img
+                  src="../../source/images/amusementpark/attraction/mug-hot-solid.svg"
+                  alt="컵 그림"
+                />
+              </li>
+            </ul>
+            <ul class="ban-list">
+              <li>No Children</li>
+              <li>No Drink</li>
+            </ul>
+          </div>
+          <div class="mobile">
+            <h4>회전열기구</h4>
+            <ul class="ban-icons">
+              <li>
+                <img
+                  src="../../source/images/amusementpark/attraction/ban-solid.svg"
+                  alt="금지표시"
+                />
+              </li>
+              <li>
+                <img
+                  src="../../source/images/amusementpark/attraction/baby-solid.svg"
+                  alt="아기 그림"
+                />
+              </li>
+              <li>
+                <img
+                  src="../../source/images/amusementpark/attraction/mug-hot-solid.svg"
+                  alt="컵 그림"
+                />
+              </li>
+            </ul>
+            <ul class="ban-list">
+              <li>No Children</li>
+              <li>No Drink</li>
+            </ul>
+          </div>
         </div>
       </div>
     </main>

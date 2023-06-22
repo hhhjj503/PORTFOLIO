@@ -279,6 +279,7 @@ main .letter-wrapper {
 }
 main .letter-wrapper .letter {
   /*----------------------- main .letter ------------------------ */
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
   padding: 100px 0;
@@ -286,7 +287,8 @@ main .letter-wrapper .letter {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
 }
 main .letter-wrapper .letter:before {
   position: absolute;
@@ -297,6 +299,11 @@ main .letter-wrapper .letter:before {
   height: 100%;
   background: linear-gradient(to bottom, transparent 0%, #321d36 100%);
   z-index: 0;
+}
+@media screen and (max-width: 1200px) {
+  main .letter-wrapper .letter {
+    border-radius: 0;
+  }
 }
 @media screen and (max-width: 550px) {
   main .letter-wrapper .letter {
@@ -386,6 +393,8 @@ main .letter-wrapper .letter .form-wrapper form input[type=radio] {
   box-shadow: none;
   box-sizing: border-box;
   display: block;
+  padding: 0;
+  margin: 5px 0;
 }
 @media screen and (max-width: 1024px) {
   main .letter-wrapper .letter .form-wrapper form input {

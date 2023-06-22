@@ -8,12 +8,11 @@ html {
 }
 
 body {
-  font-family: "NotoSans-Bold", "맑은 고딕", "Malgun Gothic", sans-serif;
+  font-family: "NotoSans-Bold", "Noto Sans KR", "Margun Gothic", sans-serif;
   overflow-x: hidden;
 }
 
 .top-nav {
-  position: fixed; /* position : fixed */
   transition: 0.5s ease-in-out;
 }
 .top-nav.scrolldown {
@@ -24,217 +23,275 @@ body {
   color: red; /* nav 의 어트랙션 글자 빨갛게 변경 */
 }
 
-.top-nav-mobile {
-  position: fixed; /* position : fixed */
-  transition: 0.5s ease-in-out;
-}
-.top-nav-mobile.scrolldown {
-  opacity: 0;
-  pointer-events: none;
-}
-
-a.hiding + * {
-  position: relative;
-  transition: 0.6s cubic-bezier(0.5, 0, 0.75, 0);
-  top: 50px;
-  opacity: 0;
-}
-
 main {
-  /* -------------------------------------- main ----------------------------------- */
-  width: auto;
-  height: auto;
-}
-main > .wrapper {
-  /* --------------------------- wrapper ------------------------ */
-  position: relative;
-  top: 0;
   width: 100%;
-  height: auto;
 }
-main > .wrapper .wheel-down {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 5vh;
-  z-index: 10;
-  opacity: 1;
+main .banner img {
   display: block;
-  animation: move-up-down 2s infinite;
-  transition: 0.3s ease-in-out;
-  pointer-events: none;
-}
-main > .wrapper .wheel-down.fadeout {
-  opacity: 0;
-}
-main > .wrapper .wheel-down .deco {
-  width: 40px;
-  height: 40px;
-  border-left: 3px solid #c4c4c4;
-  border-bottom: 3px solid #c4c4c4;
-  box-sizing: border-box;
-  transform: rotate(-45deg);
-}
-@media screen and (max-width: 1024px) {
-  main > .wrapper .wheel-down .deco {
-    width: 35px;
-    height: 35px;
-  }
-}
-@media screen and (max-width: 550px) {
-  main > .wrapper .wheel-down .deco {
-    width: 28px;
-    height: 28px;
-  }
-}
-main > .wrapper .wheel-down .deco:nth-child(2) {
-  position: relative;
-  top: -2vh;
-}
-main > .wrapper .attraction-nav {
-  position: fixed;
-  top: 50%;
-  right: 5%;
-  transform: translateY(-50%);
-  z-index: 20;
-}
-main > .wrapper .attraction-nav li {
-  margin: 10px 0;
-}
-main > .wrapper .attraction-nav li a {
-  display: block;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.4);
-  transition: 0.2s ease-in-out;
-  box-sizing: border-box;
-}
-@media screen and (max-width: 1024px) {
-  main > .wrapper .attraction-nav li a {
-    width: 15px;
-    height: 15px;
-  }
-}
-@media screen and (max-width: 550px) {
-  main > .wrapper .attraction-nav li a {
-    width: 10px;
-    height: 10px;
-  }
-}
-main > .wrapper .attraction-nav li a.active {
-  background-color: transparent;
-  border: 1px solid white;
-  box-shadow: 1px 1px 10px rgb(199, 199, 199);
-}
-main > .wrapper .attraction {
-  max-width: initial;
   width: 100%;
-  height: 100vh;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: middle;
+     object-position: middle;
+}
+main .wrapper {
+  max-width: 1600px;
   margin: 0 auto;
-  position: sticky;
-  top: 0;
-  white-space: nowrap;
 }
-main > .wrapper .attraction .info {
-  display: inline-block;
-  position: absolute;
+main .wrapper .attraction-nav {
+  position: fixed;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: transparent;
-  font-size: 2rem;
-  color: white;
-  text-shadow: 2px 2px 10px black, -2px -2px 10px black;
-  word-spacing: -1px;
+  right: 2%;
+  transform: translateY(-50%);
+  z-index: 99;
 }
-main > .wrapper .attraction .info:before {
+main .wrapper .attraction-nav li a {
+  position: relative;
+  display: block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+main .wrapper .attraction-nav li a:after {
   content: "";
   position: absolute;
-  top: -100%;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 1px;
-  background-color: white;
-  opacity: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: 0.3s ease;
+  border-radius: 50%;
 }
-main > .wrapper .attraction .info:after {
+main .wrapper .attraction-nav li a.active:after, main .wrapper .attraction-nav li a:hover:after {
+  background-color: transparent;
+}
+@media screen and (max-width: 600px) {
+  main .wrapper .attraction-nav li a {
+    width: 50px;
+    height: 50px;
+  }
+}
+main .wrapper .attraction-nav li a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+main .wrapper .attraction {
+  position: relative;
+  width: 100%;
+  padding: 100px;
+  box-sizing: border-box;
+}
+main .wrapper .attraction:before {
   content: "";
   position: absolute;
-  bottom: -100%;
+  top: 20%;
+  background-color: #040247;
+  left: 0;
   right: 0;
   width: 100%;
   height: 1px;
+}
+main .wrapper .attraction:after {
+  content: "";
+  position: absolute;
+  bottom: 20%;
+  background-color: #040247;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 1px;
+}
+@media screen and (max-width: 1280px) {
+  main .wrapper .attraction {
+    text-align: center;
+    padding: 50px;
+  }
+  main .wrapper .attraction:after {
+    width: 90%;
+    margin: 0 auto;
+  }
+  main .wrapper .attraction:before {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  main .wrapper .attraction:before {
+    display: none;
+  }
+  main .wrapper .attraction:after {
+    display: none;
+  }
+}
+main .wrapper .attraction.right {
+  text-align: right;
+}
+@media screen and (max-width: 1280px) {
+  main .wrapper .attraction.right {
+    text-align: center;
+  }
+}
+main .wrapper .attraction .deco {
+  position: absolute;
+  bottom: 100px;
+  right: 0;
   background-color: white;
-  opacity: 0;
+  text-align: center;
+  color: #040247;
+  font-size: 6rem;
+  font-weight: bold;
 }
-main > .wrapper .attraction .info.active:before {
-  top: -50%;
-  opacity: 1;
+main .wrapper .attraction .deco.left {
+  left: 0;
+  right: initial;
+}
+@media screen and (max-width: 1280px) {
+  main .wrapper .attraction .deco {
+    bottom: 50px;
+    font-size: 4rem;
+    right: 10%;
+  }
+  main .wrapper .attraction .deco.left {
+    left: 10%;
+    right: initial;
+  }
+}
+@media screen and (max-width: 600px) {
+  main .wrapper .attraction .deco {
+    font-size: 2rem;
+    bottom: 20px;
+  }
+}
+main .wrapper .attraction > img {
+  position: relative;
+  display: inline-block;
+  width: 700px;
+  height: 700px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  vertical-align: middle;
   transition: 0.3s ease;
+  z-index: 1;
 }
-main > .wrapper .attraction .info.active:after {
-  bottom: -50%;
-  opacity: 1;
-  transition: 0.3s ease;
+main .wrapper .attraction > img:nth-child(even) {
+  margin-left: auto;
 }
-@media screen and (max-width: 1024px) {
-  main > .wrapper .attraction .info {
-    font-size: 1.6rem;
+@media screen and (max-width: 1280px) {
+  main .wrapper .attraction > img {
+    width: 400px;
+    height: 400px;
   }
 }
-@media screen and (max-width: 550px) {
-  main > .wrapper .attraction .info {
-    font-size: 1.6rem;
+@media screen and (max-width: 600px) {
+  main .wrapper .attraction > img {
+    display: block;
+    width: 70vw;
+    height: 70vw;
+    margin: 0 auto;
   }
 }
-main > .wrapper .attraction .rollercoaster {
-  font-size: 4rem;
+main .wrapper .attraction .desc {
   display: inline-block;
-  background-image: url(../../../images/amusementpark/attraction/rollercoaster.PNG);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-left: 5%;
+  vertical-align: middle;
+  line-height: 1.618;
+}
+@media screen and (max-width: 1280px) {
+  main .wrapper .attraction .desc {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 600px) {
+  main .wrapper .attraction .desc {
+    display: none;
+  }
+}
+main .wrapper .attraction .desc.right {
+  margin-left: 0;
+  margin-right: 5%;
+}
+@media screen and (max-width: 1280px) {
+  main .wrapper .attraction .desc.right {
+    text-align: right;
+  }
+}
+@media screen and (max-width: 1280px) {
+  main .wrapper .attraction .desc h4 {
+    font-size: 2rem;
+  }
+}
+main .wrapper .attraction .desc .ban-icons li {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+@media screen and (max-width: 1280px) {
+  main .wrapper .attraction .desc .ban-icons li {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  main .wrapper .attraction .desc .ban-list {
+    font-size: 2rem;
+  }
+}
+main .wrapper .attraction .mobile {
+  position: relative;
+  display: none;
+  margin-top: 25px;
+  padding: 25px 0;
+  line-height: 1.618;
+}
+@media screen and (max-width: 600px) {
+  main .wrapper .attraction .mobile {
+    display: block;
+  }
+  main .wrapper .attraction .mobile:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    background-color: #040247;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+  }
+  main .wrapper .attraction .mobile:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-color: #040247;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+  }
+}
+main .wrapper .attraction .mobile h4 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+main .wrapper .attraction .mobile .ban-icons li {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+main .wrapper .attraction .mobile .ban-icons li img {
   width: 100%;
   height: 100%;
 }
-main > .wrapper .attraction .ferris-wheel {
-  display: inline-block;
-  background-image: url(../../../images/amusementpark/attraction/ferris_wheel.JPG);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-}
-main > .wrapper .attraction .carousel {
-  display: inline-block;
-  background-image: url(../../../images/amusementpark/attraction/carousel.JPG);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-}
-main > .wrapper .attraction .crystal-jo {
-  display: inline-block;
-  background-image: url(../../../images/amusementpark/attraction/crystal_jo.JPG);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-}
-
-/* --------------------------- animation -------------------------------- */
-@keyframes move-up-down {
-  0% {
-    bottom: 5vh;
-  }
-  50% {
-    bottom: 7vh;
-  }
-  100% {
-    bottom: 5vh;
-  }
+main .wrapper .attraction .mobile .ban-list li {
+  font-size: 1.6rem;
 }/*# sourceMappingURL=attraction.css.map */

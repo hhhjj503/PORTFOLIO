@@ -2,16 +2,18 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="../../source/css/amusementpark/nightshow/nightshow2.css"
+      href="../../source/css/amusementpark/attraction/attraction.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <script src="../../source/js/amusementpark/nightshow/nigihtshow.js"></script>
-    <title>나이트쇼 | Amusement Park</title>
+    <script src="../../source/js/amusementpark/attraction/attraction.js"></script>
+    <title>어트랙션 | Amusement Park</title>
   </head>
   <body>
+    <!-- main -->
     <main>
       <!-- 헤드 nav 메뉴(PC) -->
       <nav class="top-nav">
@@ -64,11 +66,40 @@
           </div>
         </div>
       </nav>
-      <div>
-        <img
-          src="../../source/images/amusementpark/nightshow/fireworks.jpg"
-          alt=""
-        />
+      <!-- attrations wrapper -->
+      <div class="wrapper">
+        <div class="wheel-down">
+          <div class="deco"></div>
+          <div class="deco"></div>
+        </div>
+        <div class="attraction-nav">
+          <ul>
+            <li><a href="#" class="active"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </div>
+        <div class="attraction">
+          <a href="#" class="hiding" tabindex="-1"></a>
+          <div class="rollercoaster"></div>
+          <div class="info">신나는 롤러코스터</div>
+        </div>
+        <div class="attraction">
+          <a href="#" class="hiding" tabindex="-1"></a>
+          <div class="ferris-wheel"></div>
+          <div class="info">환상적인 대관람차</div>
+        </div>
+        <div class="attraction">
+          <a href="#" class="hiding" tabindex="-1"></a>
+          <div class="carousel"></div>
+          <div class="info">회전목마</div>
+        </div>
+        <div class="attraction">
+          <a href="#" class="hiding" tabindex="-1"></a>
+          <div class="crystal-jo"></div>
+          <div class="info">하늘 열기구</div>
+        </div>
       </div>
     </main>
     <!-- footer -->

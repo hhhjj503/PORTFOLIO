@@ -331,6 +331,7 @@ main {
 
     .letter {
       /*----------------------- main .letter ------------------------ */
+      position: relative;
       max-width: 1200px;
       margin: 0 auto;
       padding: 100px 0;
@@ -338,8 +339,8 @@ main {
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-
-      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
 
       &:before {
         position: absolute;
@@ -350,6 +351,12 @@ main {
         height: 100%;
         background: linear-gradient(to bottom, transparent 0%, #321d36 100%);
         z-index: 0;
+      }
+
+      @media screen and (max-width: 1200px) {
+        & {
+          border-radius: 0;
+        }
       }
 
       @media screen and (max-width: 550px) {
@@ -450,6 +457,8 @@ main {
               box-shadow: none;
               box-sizing: border-box;
               display: block;
+              padding: 0;
+              margin: 5px 0;
             }
 
             @media screen and (max-width: 1024px) {
