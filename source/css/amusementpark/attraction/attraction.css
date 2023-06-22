@@ -44,7 +44,7 @@ main .wrapper .attraction-nav {
   top: 50%;
   right: 2%;
   transform: translateY(-50%);
-  z-index: 99;
+  z-index: 10;
 }
 main .wrapper .attraction-nav li a {
   position: relative;
