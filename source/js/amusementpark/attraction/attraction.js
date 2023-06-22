@@ -4,7 +4,7 @@ window.addEventListener("load", () => {
   const attractions = document.querySelectorAll(".attraction");
 
   let attractionsOffsetTops = [];
-  attractionsOffsetTops = getOffsetTop(attractions);
+  attractionsOffsetTops = getOffsetTop();
 
   for (let i = 0; i < attracionNavs.length; i++) {
     attracionNavs[i].addEventListener("click", function (e) {
@@ -15,7 +15,10 @@ window.addEventListener("load", () => {
   }
 
   window.addEventListener("resize", function () {
-    attractionsOffsetTops = getOffsetTop(attractions);
+    setTimeout(() => {
+      attractionsOffsetTops = [];
+      attractionsOffsetTops = getOffsetTop();
+    }, 100);
   });
 
   window.addEventListener(
@@ -30,10 +33,13 @@ window.addEventListener("load", () => {
     })
   );
 
-  function getOffsetTop(array) {
+  function getOffsetTop() {
+    const attractionsTemp = document.querySelectorAll(".attraction");
     let newArray = [];
-    for (let i = 0; i < array.length; i++) {
-      newArray.push(array[i].offsetTop);
+    for (let i = 0; i < attractionsTemp.length; i++) {
+      newArray.push(
+        window.scrollY + attractionsTemp[i].getBoundingClientRect().top
+      );
     }
     return newArray;
   } //offsetTop 다시 받는 메서드
