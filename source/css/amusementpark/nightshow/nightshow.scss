@@ -755,24 +755,24 @@ main {
         }
       }
 
-      .benefit:nth-child(1) {
+      li.benefit:nth-child(1) {
         background-color: #3870e0;
         @include content-resoure-path("nightshow_fireworks.PNG");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
       }
-      .benefit:nth-child(2) {
+      li.benefit:nth-child(2) {
         background-color: #b30fff;
       }
-      .benefit:nth-child(3) {
+      li.benefit:nth-child(3) {
         background-color: #3870e0;
         @include content-resoure-path("nightsky.PNG");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
       }
-      .benefit:nth-child(4) {
+      li.benefit:nth-child(4) {
         background-color: #3870e0;
       }
     }

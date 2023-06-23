@@ -636,23 +636,23 @@ main .benefits .listwrapper .benefit button {
 main .benefits .listwrapper .benefit:hover button {
   cursor: pointer;
 }
-main .benefits .listwrapper .benefit:nth-child(1) {
+main .benefits .listwrapper li.benefit:nth-child(1) {
   background-color: #3870e0;
   background-image: url(../../../images/amusementpark/nightshow/nightshow_fireworks.PNG);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-main .benefits .listwrapper .benefit:nth-child(2) {
+main .benefits .listwrapper li.benefit:nth-child(2) {
   background-color: #b30fff;
 }
-main .benefits .listwrapper .benefit:nth-child(3) {
+main .benefits .listwrapper li.benefit:nth-child(3) {
   background-color: #3870e0;
   background-image: url(../../../images/amusementpark/nightshow/nightsky.PNG);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-main .benefits .listwrapper .benefit:nth-child(4) {
+main .benefits .listwrapper li.benefit:nth-child(4) {
   background-color: #3870e0;
 }/*# sourceMappingURL=nightshow.css.map */
