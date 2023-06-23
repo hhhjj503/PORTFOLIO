@@ -59,12 +59,12 @@ main {
     background-position: center 70%;
     z-index: -1;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1281px) {
       & {
         height: 400px;
       }
     }
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: 600px) {
       & {
         height: 300px;
       }
@@ -80,12 +80,12 @@ main {
     z-index: 10;
     box-sizing: border-box;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1281px) {
       & {
         padding: 0 20px;
       }
     }
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: 600px) {
       & {
         position: relative;
         padding: 0 20px;
@@ -102,7 +102,7 @@ main {
         color: white;
         line-height: 50px;
 
-        @media screen and (max-width: 550px) {
+        @media screen and (max-width: 600px) {
           & {
             font-size: 1.3rem;
           }
@@ -126,12 +126,12 @@ main {
     padding: 100px 0;
     background-color: white;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1281px) {
       & {
         padding: 70px 0;
       }
     }
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: 600px) {
       & {
         padding: 50px 0;
       }
@@ -148,13 +148,13 @@ main {
       border-bottom: 1px solid #bebebe;
       padding: 8px 0;
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 1281px) {
         & {
           width: 30%;
           font-size: 1.5rem;
         }
       }
-      @media screen and (max-width: 550px) {
+      @media screen and (max-width: 600px) {
         & {
           width: 40%;
           font-size: 1.4rem;
@@ -167,12 +167,12 @@ main {
       box-sizing: border-box;
       margin: 0 auto;
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 1281px) {
         & {
           padding: 0 10px;
         }
       }
-      @media screen and (max-width: 550px) {
+      @media screen and (max-width: 600px) {
         & {
         }
       }
@@ -186,7 +186,7 @@ main {
       text-align: left;
       font-size: 0;
 
-      @media screen and (max-width: 550px) {
+      @media screen and (max-width: 600px) {
         & {
           margin-bottom: 0;
         }
@@ -215,13 +215,13 @@ main {
           }
         }
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1281px) {
           & {
             width: 19%;
             margin: 10px 0.5%;
           }
         }
-        @media screen and (max-width: 550px) {
+        @media screen and (max-width: 600px) {
           & {
             width: 30%;
             height: 150px;
@@ -271,13 +271,13 @@ main {
             text-align: center;
             transition: 0.3s ease-in-out;
 
-            @media screen and (max-width: 1024px) {
+            @media screen and (max-width: 1281px) {
               & {
                 font-size: 1.2rem;
               }
             }
 
-            @media screen and (max-width: 550px) {
+            @media screen and (max-width: 600px) {
               & {
                 font-size: 1.1rem;
                 padding: 0 5px;
@@ -305,12 +305,12 @@ main {
       cursor: pointer;
       transition: 0.3s ease-in-out;
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 1281px) {
         & {
           margin: 0 auto 50px auto;
         }
       }
-      @media screen and (max-width: 550px) {
+      @media screen and (max-width: 600px) {
         & {
           width: 30%;
           font-size: 1.4rem;
@@ -332,12 +332,12 @@ main {
     background-color: #f8f8f8;
     padding: 20px 0;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1281px) {
       & {
         overflow: scroll;
       }
     }
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: 600px) {
       & {
         overflow: scroll;
       }
@@ -359,13 +359,13 @@ main {
         border-radius: 50%;
         overflow: hidden;
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1281px) {
           & {
             width: 150px;
             height: 150px;
           }
         }
-        @media screen and (max-width: 550px) {
+        @media screen and (max-width: 600px) {
           & {
             width: 100px;
             height: 100px;
@@ -396,7 +396,7 @@ main {
           opacity: 0;
           transition: opacity 0.3s ease;
 
-          @media screen and (max-width: 1024px) {
+          @media screen and (max-width: 1281px) {
             & {
               width: 150px;
               height: 150px;
@@ -404,7 +404,7 @@ main {
               line-height: 150px;
             }
           }
-          @media screen and (max-width: 550px) {
+          @media screen and (max-width: 600px) {
             & {
               width: 100px;
               height: 100px;
@@ -440,20 +440,20 @@ main {
       background: #5e5e5e;
     }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1281px) {
       &::-webkit-scrollbar {
         width: 8px;
         height: 6px;
       }
     }
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: 600px) {
       &::-webkit-scrollbar {
         width: 4px;
         height: 4px;
       }
     }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1281px) {
       & {
         left: 0;
         bottom: 0;
@@ -467,7 +467,7 @@ main {
         overflow-y: scroll;
       }
     }
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: 600px) {
       & {
         left: 0;
         bottom: 0;
@@ -485,12 +485,12 @@ main {
     &.close {
       right: -9999em;
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 1281px) {
         & {
           bottom: -9999em;
         }
       }
-      @media screen and (max-width: 550px) {
+      @media screen and (max-width: 600px) {
         bottom: -9999em;
       }
     }
@@ -498,12 +498,12 @@ main {
     &.open {
       right: 0;
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 1281px) {
         & {
           bottom: 0;
         }
       }
-      @media screen and (max-width: 550px) {
+      @media screen and (max-width: 600px) {
         bottom: 0;
       }
     }
@@ -519,14 +519,14 @@ main {
       right: 20px;
       cursor: pointer;
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 1281px) {
         & {
           top: 30px;
           right: 30px;
         }
       }
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 1281px) {
         & {
           width: 30px;
           height: 30px;
@@ -537,7 +537,7 @@ main {
           }
         }
       }
-      @media screen and (max-width: 550px) {
+      @media screen and (max-width: 600px) {
         width: 30px;
         height: 30px;
         top: 10px;
@@ -553,12 +553,12 @@ main {
         top: 50%;
         transform: translateY(-50%);
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1281px) {
           & {
             height: 3px;
           }
         }
-        @media screen and (max-width: 550px) {
+        @media screen and (max-width: 600px) {
           & {
             height: 3px;
           }
@@ -578,7 +578,7 @@ main {
       height: 60%;
       object-fit: cover;
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 1281px) {
         & {
           float: left;
           box-sizing: border-box;
@@ -589,7 +589,7 @@ main {
           object-fit: cover;
         }
       }
-      @media screen and (max-width: 550px) {
+      @media screen and (max-width: 600px) {
         & {
           width: 100%;
           height: 50%;
@@ -600,7 +600,7 @@ main {
       }
     }
     & .purchase-info {
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 1281px) {
         & {
           height: 100%;
           float: right;
@@ -610,7 +610,7 @@ main {
           vertical-align: text-bottom;
         }
       }
-      @media screen and (max-width: 550px) {
+      @media screen and (max-width: 600px) {
         & {
           height: 100%;
           float: right;
@@ -625,7 +625,7 @@ main {
         font-size: 2rem;
         padding: 20px;
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1281px) {
           & {
             box-sizing: border-box;
             width: 100%;
@@ -633,7 +633,7 @@ main {
             padding: 30px 40px;
           }
         }
-        @media screen and (max-width: 550px) {
+        @media screen and (max-width: 600px) {
           & {
             font-size: 1.6rem;
             padding: 10px 20px;
@@ -648,12 +648,12 @@ main {
           color: red;
           float: right;
 
-          @media screen and (max-width: 1024px) {
+          @media screen and (max-width: 1281px) {
             & {
               font-size: 1.7rem;
             }
           }
-          @media screen and (max-width: 550px) {
+          @media screen and (max-width: 600px) {
             & {
               font-size: 1.6rem;
             }
@@ -688,13 +688,13 @@ main {
 
           & .rating-star,
           & .rating-half-star {
-            @media screen and (max-width: 1024px) {
+            @media screen and (max-width: 1281px) {
               & {
                 width: 18px;
                 height: 18px;
               }
             }
-            @media screen and (max-width: 550px) {
+            @media screen and (max-width: 600px) {
               & {
                 width: 15px;
                 height: 15px;
@@ -708,13 +708,13 @@ main {
         border-bottom: 1px solid #dddfe1;
         padding: 20px;
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1281px) {
           & {
             border-bottom: 1px solid #dddfe1;
             padding: 15px 40px;
           }
         }
-        @media screen and (max-width: 550px) {
+        @media screen and (max-width: 600px) {
           & {
             border-bottom: 1px solid #dddfe1;
             padding: 10px 20px;
@@ -732,14 +732,14 @@ main {
           font-weight: bold;
           float: left;
 
-          @media screen and (max-width: 1024px) {
+          @media screen and (max-width: 1281px) {
             & {
               font-size: 1.9rem;
               font-weight: bold;
               float: left;
             }
           }
-          @media screen and (max-width: 550px) {
+          @media screen and (max-width: 600px) {
             & {
               font-size: 1.8rem;
               font-weight: bold;
@@ -757,13 +757,13 @@ main {
             content: url(../../../images/amusementpark/krustyland/heart-solid.svg);
           }
 
-          @media screen and (max-width: 1024px) {
+          @media screen and (max-width: 1281px) {
             & {
               width: 18px;
               height: 18px;
             }
           }
-          @media screen and (max-width: 550px) {
+          @media screen and (max-width: 600px) {
             & {
               width: 18px;
               height: 18px;
@@ -777,12 +777,12 @@ main {
         padding: 20px;
         border-bottom: 1px solid #dddfe1;
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1281px) {
           & {
             padding: 15px 40px;
           }
         }
-        @media screen and (max-width: 550px) {
+        @media screen and (max-width: 600px) {
           & {
             padding: 10px 20px;
           }
@@ -798,12 +798,12 @@ main {
           font-size: 1.8rem;
           float: left;
 
-          @media screen and (max-width: 1024px) {
+          @media screen and (max-width: 1281px) {
             & {
               font-size: 1.7rem;
             }
           }
-          @media screen and (max-width: 550px) {
+          @media screen and (max-width: 600px) {
             & {
               font-size: 1.6rem;
             }
@@ -822,7 +822,7 @@ main {
             line-height: 25px;
             cursor: pointer;
 
-            @media screen and (max-width: 1024px) {
+            @media screen and (max-width: 1281px) {
               & {
                 width: 20px;
                 height: 20px;
@@ -830,7 +830,7 @@ main {
                 line-height: 20px;
               }
             }
-            @media screen and (max-width: 550px) {
+            @media screen and (max-width: 600px) {
               & {
                 width: 20px;
                 height: 20px;
@@ -844,13 +844,13 @@ main {
         & .quantity {
           font-size: 1.8rem;
           margin: 0 20px;
-          @media screen and (max-width: 1024px) {
+          @media screen and (max-width: 1281px) {
             & {
               font-size: 1.7rem;
               margin: 0 20px;
             }
           }
-          @media screen and (max-width: 550px) {
+          @media screen and (max-width: 600px) {
             & {
               font-size: 1.7rem;
               margin: 0 20px;
@@ -863,12 +863,12 @@ main {
         /*----------------------------------- .purchase .goods-total-price ------------------------ */
         padding: 20px;
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1281px) {
           & {
             padding: 15px 40px;
           }
         }
-        @media screen and (max-width: 550px) {
+        @media screen and (max-width: 600px) {
           & {
             padding: 10px 20px;
           }
@@ -883,12 +883,12 @@ main {
         & .total-title {
           float: left;
           font-size: 1.8rem;
-          @media screen and (max-width: 1024px) {
+          @media screen and (max-width: 1281px) {
             & {
               font-size: 1.7rem;
             }
           }
-          @media screen and (max-width: 550px) {
+          @media screen and (max-width: 600px) {
             & {
               font-size: 1.7rem;
             }
@@ -899,12 +899,12 @@ main {
           color: red;
           font-weight: bold;
           font-size: 2.3rem;
-          @media screen and (max-width: 1024px) {
+          @media screen and (max-width: 1281px) {
             & {
               font-size: 1.9rem;
             }
           }
-          @media screen and (max-width: 550px) {
+          @media screen and (max-width: 600px) {
             & {
               font-size: 1.9rem;
             }
@@ -928,7 +928,7 @@ main {
 
         border-bottom: 1px solid #dddfe1;
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1281px) {
           & {
             width: 60%;
             padding: 10px 10px;
@@ -936,7 +936,7 @@ main {
             font-size: 1.7rem;
           }
         }
-        @media screen and (max-width: 550px) {
+        @media screen and (max-width: 600px) {
           & {
             width: 80%;
             padding: 10px 10px;
@@ -952,12 +952,12 @@ main {
       width: 100%;
       padding: 15px 0;
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 1281px) {
         & {
           padding: 0;
         }
       }
-      @media screen and (max-width: 550px) {
+      @media screen and (max-width: 600px) {
         & {
           padding: 0;
         }
@@ -980,13 +980,13 @@ main {
           text-align: center;
           font-size: 1.5rem;
 
-          @media screen and (max-width: 1024px) {
+          @media screen and (max-width: 1281px) {
             & {
               padding: 5px 10px;
               font-size: 1.4rem;
             }
           }
-          @media screen and (max-width: 550px) {
+          @media screen and (max-width: 600px) {
             & {
               padding: 10px 5px;
               font-size: 1.4rem;
@@ -1027,13 +1027,13 @@ main {
             padding: 3px 8px;
             color: black;
 
-            @media screen and (max-width: 1024px) {
+            @media screen and (max-width: 1281px) {
               & {
                 padding: 3px 8px;
                 font-size: 1.6rem;
               }
             }
-            @media screen and (max-width: 550px) {
+            @media screen and (max-width: 600px) {
               & {
                 padding: 2px 6px;
                 font-size: 1.4rem;
@@ -1077,7 +1077,7 @@ main {
       }
     }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1281px) {
       & {
         display: none;
       }

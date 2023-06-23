@@ -61,12 +61,12 @@ main .banner-wrapper .title {
   font-weight: bold;
   text-shadow: 1px 1px 5px #558abb, -1px -1px 5px #558abb;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1281px) {
   main .banner-wrapper .title {
     font-size: 3rem;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   main .banner-wrapper .title {
     font-size: 2.5rem;
   }
@@ -104,7 +104,7 @@ main .banner-wrapper .waves-wrapper .waves .parallax > use:nth-child(2) {
     transform: translate3d(85px, 0, 0);
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1281px) {
   main .banner-wrapper .waves-wrapper .waves {
     height: 80px;
     min-height: 80px;
@@ -113,7 +113,7 @@ main .banner-wrapper .waves-wrapper .waves .parallax > use:nth-child(2) {
     height: 30vh;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   main .banner-wrapper .waves-wrapper .waves {
     height: 60px;
     min-height: 60px;
@@ -129,12 +129,12 @@ main .info-wrapper {
   padding: 100px 0;
   text-align: center;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1281px) {
   main .info-wrapper {
     padding: 80px 0;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   main .info-wrapper {
     padding: 60px 0;
   }
@@ -156,7 +156,7 @@ main .info-wrapper .time .open-time {
   display: block;
   margin-top: 50px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1281px) {
   main .info-wrapper .time img {
     width: 70px;
     height: 70px;
@@ -171,7 +171,7 @@ main .info-wrapper .time .open-time {
     font-size: 2.4rem;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   main .info-wrapper .time img {
     width: 55px;
     height: 55px;
@@ -191,12 +191,12 @@ main .info-wrapper .countdown {
   height: 100%;
   margin-top: 50px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1281px) {
   main .info-wrapper .countdown {
     margin-top: 30px;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   main .info-wrapper .countdown {
     margin-top: 20px;
   }
@@ -214,7 +214,7 @@ main .info-wrapper .countdown .part {
   border-radius: 15px;
   font-size: 3rem;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1281px) {
   main .info-wrapper .countdown .part {
     width: 67px;
     height: 67px;
@@ -222,7 +222,7 @@ main .info-wrapper .countdown .part {
     font-size: 2.5rem;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   main .info-wrapper .countdown .part {
     width: 60px;
     height: 60px;
@@ -239,14 +239,14 @@ main .info-wrapper .countdown .countdown-title {
   padding: 10px 0;
   border-radius: 10px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1281px) {
   main .info-wrapper .countdown .countdown-title {
     width: 220px;
     font-size: 1.8rem;
     margin-top: 30px;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   main .info-wrapper .countdown .countdown-title {
     width: 205px;
     font-size: 1.6rem;
@@ -260,12 +260,12 @@ main .event-wrapper {
   overflow: hidden;
   position: relative;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1281px) {
   main .event-wrapper {
     height: 500px;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   main .event-wrapper {
     height: 300px;
   }
@@ -289,14 +289,14 @@ main .event-wrapper .title.active {
   opacity: 1;
   transition-delay: 1s;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1281px) {
   main .event-wrapper .title {
     font-size: 2.3rem;
     text-align: center;
     word-break: keep-all;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   main .event-wrapper .title {
     font-size: 1.8rem;
     text-align: center;
@@ -320,12 +320,12 @@ main .event-wrapper .event-slider div.item {
   background-size: cover;
   background-position: center;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1281px) {
   main .event-wrapper .event-slider div.item {
     height: 500px;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   main .event-wrapper .event-slider div.item {
     height: 300px;
   }
@@ -359,7 +359,7 @@ main .event-wrapper .btn-wrapper button {
   background-color: transparent;
   cursor: pointer;
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   main .event-wrapper .btn-wrapper button {
     width: 30px;
     height: 30px;
@@ -373,12 +373,12 @@ main .event-wrapper .btn-wrapper .prev {
   border-bottom: 3px solid rgba(255, 255, 255, 0.7);
   transform: rotate(45deg) translateY(-50%);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1281px) {
   main .event-wrapper .btn-wrapper .prev {
     left: 5%;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   main .event-wrapper .btn-wrapper .prev {
     left: 5%;
   }
@@ -391,12 +391,12 @@ main .event-wrapper .btn-wrapper .next {
   border-top: 3px solid rgba(255, 255, 255, 0.7);
   transform: rotate(45deg) translateY(-50%);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1281px) {
   main .event-wrapper .btn-wrapper .next {
     right: 10%;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   main .event-wrapper .btn-wrapper .next {
     right: 10%;
   }

@@ -195,7 +195,7 @@ input.checked ~ .pagelabels label.checked:before {
 
 /* ------------------------------------------------------------- */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1281px) {
   .slide img {
     width: 450px;
     height: 450px;
@@ -222,7 +222,7 @@ input.checked ~ .pagelabels label.checked:before {
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   .slide img {
     width: 330px;
     height: 330px;

@@ -89,7 +89,7 @@ h2 {
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1281px) {
   header {
     height: 70px;
   }
@@ -290,7 +290,7 @@ main .hj {
   line-height: 30px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1281px) {
   main .hj {
     padding: 110px 0;
   }
@@ -423,7 +423,7 @@ main .hj {
   border-radius: 30px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1281px) {
   h2 {
     font-size: 1.8rem;
   }
@@ -568,7 +568,7 @@ main .hj {
   border-radius: 20px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1281px) {
   .portfolio {
     padding: 110px 0;
     padding-bottom: 0px;
@@ -693,7 +693,7 @@ footer img {
   left: 0;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1281px) {
   footer .contact {
     padding: 70px 0;
   }
@@ -767,7 +767,7 @@ footer img {
   transition: opacity 0.3s ease;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1281px) {
 }
 
 @media screen and (max-width: 600px) {

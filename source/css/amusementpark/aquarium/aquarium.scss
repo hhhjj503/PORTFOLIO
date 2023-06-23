@@ -77,13 +77,13 @@ main {
       font-weight: bold;
       text-shadow: 1px 1px 5px #558abb, -1px -1px 5px #558abb;
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 1281px) {
         & {
           font-size: 3rem;
         }
       }
 
-      @media screen and (max-width: 550px) {
+      @media screen and (max-width: 600px) {
         & {
           font-size: 2.5rem;
         }
@@ -126,7 +126,7 @@ main {
           }
         }
       }
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 1281px) {
         .waves {
           height: 80px;
           min-height: 80px;
@@ -136,7 +136,7 @@ main {
         }
       }
 
-      @media screen and (max-width: 550px) {
+      @media screen and (max-width: 600px) {
         .waves {
           height: 60px;
           min-height: 60px;
@@ -155,11 +155,11 @@ main {
     padding: 100px 0;
     text-align: center;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1281px) {
       padding: 80px 0;
     }
 
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: 600px) {
       padding: 60px 0;
     }
 
@@ -182,7 +182,7 @@ main {
         margin-top: 50px;
       }
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 1281px) {
         & img {
           width: 70px;
           height: 70px;
@@ -199,7 +199,7 @@ main {
         }
       }
 
-      @media screen and (max-width: 550px) {
+      @media screen and (max-width: 600px) {
         & img {
           width: 55px;
           height: 55px;
@@ -221,11 +221,11 @@ main {
       width: 100%;
       height: 100%;
       margin-top: 50px;
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 1281px) {
         margin-top: 30px;
       }
 
-      @media screen and (max-width: 550px) {
+      @media screen and (max-width: 600px) {
         margin-top: 20px;
       }
 
@@ -242,14 +242,14 @@ main {
         border-radius: 15px;
         font-size: 3rem;
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1281px) {
           width: 67px;
           height: 67px;
           line-height: 67px;
           font-size: 2.5rem;
         }
 
-        @media screen and (max-width: 550px) {
+        @media screen and (max-width: 600px) {
           width: 60px;
           height: 60px;
           line-height: 60px;
@@ -266,13 +266,13 @@ main {
         padding: 10px 0;
         border-radius: 10px;
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1281px) {
           width: 220px;
           font-size: 1.8rem;
           margin-top: 30px;
         }
 
-        @media screen and (max-width: 550px) {
+        @media screen and (max-width: 600px) {
           width: 205px;
           font-size: 1.6rem;
           margin-top: 20px;
@@ -288,11 +288,11 @@ main {
     overflow: hidden;
     position: relative;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1281px) {
       height: 500px;
     }
 
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: 600px) {
       height: 300px;
     }
 
@@ -315,13 +315,13 @@ main {
         transition-delay: 1s;
       }
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 1281px) {
         font-size: 2.3rem;
         text-align: center;
         word-break: keep-all;
       }
 
-      @media screen and (max-width: 550px) {
+      @media screen and (max-width: 600px) {
         & {
           font-size: 1.8rem;
           text-align: center;
@@ -348,11 +348,11 @@ main {
         background-size: cover;
         background-position: center;
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1281px) {
           height: 500px;
         }
 
-        @media screen and (max-width: 550px) {
+        @media screen and (max-width: 600px) {
           height: 300px;
         }
       }
@@ -388,10 +388,10 @@ main {
         background-color: transparent;
         cursor: pointer;
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1281px) {
         }
 
-        @media screen and (max-width: 550px) {
+        @media screen and (max-width: 600px) {
           & {
             width: 30px;
             height: 30px;
@@ -407,13 +407,13 @@ main {
         border-bottom: 3px solid $color;
         transform: rotate(45deg) translateY(-50%);
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1281px) {
           & {
             left: 5%;
           }
         }
 
-        @media screen and (max-width: 550px) {
+        @media screen and (max-width: 600px) {
           & {
             left: 5%;
           }
@@ -428,13 +428,13 @@ main {
         border-top: 3px solid $color;
         transform: rotate(45deg) translateY(-50%);
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1281px) {
           & {
             right: 10%;
           }
         }
 
-        @media screen and (max-width: 550px) {
+        @media screen and (max-width: 600px) {
           & {
             right: 10%;
           }

@@ -127,7 +127,7 @@ main {
         height: 1px;
       }
 
-      @media screen and (max-width: 1280px) {
+      @media screen and (max-width: 1281px) {
         & {
           text-align: center;
           padding: 50px;
@@ -155,7 +155,7 @@ main {
       &.right {
         text-align: right;
 
-        @media screen and (max-width: 1280px) {
+        @media screen and (max-width: 1281px) {
           & {
             text-align: center;
           }
@@ -178,7 +178,7 @@ main {
           right: initial;
         }
 
-        @media screen and (max-width: 1280px) {
+        @media screen and (max-width: 1281px) {
           & {
             bottom: 50px;
             font-size: 4rem;
@@ -214,7 +214,7 @@ main {
           margin-left: auto;
         }
 
-        @media screen and (max-width: 1280px) {
+        @media screen and (max-width: 1281px) {
           & {
             width: 400px;
             height: 400px;
@@ -239,7 +239,7 @@ main {
         vertical-align: middle;
         line-height: 1.618;
 
-        @media screen and (max-width: 1280px) {
+        @media screen and (max-width: 1281px) {
           & {
             text-align: left;
           }
@@ -255,7 +255,7 @@ main {
           margin-left: 0;
           margin-right: 5%;
 
-          @media screen and (max-width: 1280px) {
+          @media screen and (max-width: 1281px) {
             & {
               text-align: right;
             }
@@ -263,7 +263,7 @@ main {
         }
 
         & h4 {
-          @media screen and (max-width: 1280px) {
+          @media screen and (max-width: 1281px) {
             & {
               font-size: 2rem;
             }
@@ -276,7 +276,7 @@ main {
             width: 80px;
             height: 80px;
 
-            @media screen and (max-width: 1280px) {
+            @media screen and (max-width: 1281px) {
               & {
                 width: 60px;
                 height: 60px;
@@ -286,7 +286,7 @@ main {
         }
 
         & .ban-list {
-          @media screen and (max-width: 1280px) {
+          @media screen and (max-width: 1281px) {
             & {
               font-size: 2rem;
             }
