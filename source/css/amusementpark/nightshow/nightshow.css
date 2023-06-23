@@ -25,16 +25,6 @@ a.hiding + * {
   opacity: 0;
 }
 
-::-moz-selection {
-  background: #2575bb;
-  color: #fff;
-}
-
-::selection {
-  background: #2575bb;
-  color: #fff;
-}
-
 main {
   /* -------------------------------------------- main ------------------------------------------- */
 }
@@ -594,6 +584,7 @@ main .benefits .listwrapper .benefit > div {
 }
 main .benefits .listwrapper .benefit p {
   width: 90%;
+  background-color: inherit;
   font-size: 1.4rem;
   margin: 20px auto;
   font-weight: bold;
@@ -646,7 +637,7 @@ main .benefits .listwrapper .benefit:hover button {
   cursor: pointer;
 }
 main .benefits .listwrapper .benefit:nth-child(1) {
-  background-color: #287fc9;
+  background-color: #3870e0;
   background-image: url(../../../images/amusementpark/nightshow/nightshow_fireworks.PNG);
   background-repeat: no-repeat;
   background-size: cover;
@@ -656,7 +647,7 @@ main .benefits .listwrapper .benefit:nth-child(2) {
   background-color: #b30fff;
 }
 main .benefits .listwrapper .benefit:nth-child(3) {
-  background-color: #287fc9;
+  background-color: #3870e0;
   background-image: url(../../../images/amusementpark/nightshow/nightsky.PNG);
   background-repeat: no-repeat;
   background-size: cover;

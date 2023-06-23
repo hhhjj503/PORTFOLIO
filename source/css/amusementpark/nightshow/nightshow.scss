@@ -37,15 +37,6 @@ a.hiding {
   background-image: url(../../../images/amusementpark/nightshow/#{$resource});
 }
 
-::-moz-selection {
-  background: #2575bb;
-  color: #fff;
-}
-::selection {
-  background: #2575bb;
-  color: #fff;
-}
-
 main {
   /* -------------------------------------------- main ------------------------------------------- */
   .banner {
@@ -700,6 +691,7 @@ main {
 
         p {
           width: 90%;
+          background-color: inherit;
           font-size: 1.4rem;
           margin: 20px auto;
           font-weight: bold;
@@ -764,7 +756,7 @@ main {
       }
 
       .benefit:nth-child(1) {
-        background-color: #287fc9;
+        background-color: #3870e0;
         @include content-resoure-path("nightshow_fireworks.PNG");
         background-repeat: no-repeat;
         background-size: cover;
@@ -774,7 +766,7 @@ main {
         background-color: #b30fff;
       }
       .benefit:nth-child(3) {
-        background-color: #287fc9;
+        background-color: #3870e0;
         @include content-resoure-path("nightsky.PNG");
         background-repeat: no-repeat;
         background-size: cover;
