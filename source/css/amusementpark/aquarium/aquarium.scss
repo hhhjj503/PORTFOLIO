@@ -64,9 +64,9 @@ main {
     /* -----------------------------------  main .banner-wrapper  --------------------------------------- */
     width: 100vw;
     min-height: 100vh;
-    background-color: aqua;
-    background: url(../../../images/amusementpark/aquarium/dmitry-bukhantsov-IBrZ-TXYWY8_row.jpg)
-      no-repeat;
+    background-color: blue;
+    background-image: url(../../../images/amusementpark/aquarium/dmitry-bukhantsov-IBrZ-TXYWY8_row.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -349,6 +349,7 @@ main {
       & div.item {
         width: 100%;
         height: 800px;
+        background-color: blue;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
