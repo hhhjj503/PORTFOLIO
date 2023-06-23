@@ -54,6 +54,11 @@ $color: rgba(
   $alpha: 0.7,
 );
 
+html:not(.js) h2,
+html:not(.js) h3 {
+  color: black;
+}
+
 main {
   & .banner-wrapper {
     /* -----------------------------------  main .banner-wrapper  --------------------------------------- */

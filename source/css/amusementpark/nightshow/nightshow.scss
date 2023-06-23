@@ -37,6 +37,15 @@ a.hiding {
   background-image: url(../../../images/amusementpark/nightshow/#{$resource});
 }
 
+::-moz-selection {
+  background: #277bc4;
+  color: #fff;
+}
+::selection {
+  background: #277bc4;
+  color: #fff;
+}
+
 main {
   /* -------------------------------------------- main ------------------------------------------- */
   .banner {

@@ -25,6 +25,16 @@ a.hiding + * {
   opacity: 0;
 }
 
+::-moz-selection {
+  background: #277bc4;
+  color: #fff;
+}
+
+::selection {
+  background: #277bc4;
+  color: #fff;
+}
+
 main {
   /* -------------------------------------------- main ------------------------------------------- */
 }

@@ -40,6 +40,11 @@ a.hiding + * {
   opacity: 0;
 }
 
+html:not(.js) h2,
+html:not(.js) h3 {
+  color: black;
+}
+
 main .banner-wrapper {
   /* -----------------------------------  main .banner-wrapper  --------------------------------------- */
   width: 100vw;
