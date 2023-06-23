@@ -387,7 +387,7 @@ main {
         height: 50px;
         background-color: transparent;
         cursor: pointer;
-        text-indent: -999em;
+        text-indent: -9999em;
         vertical-align: sub;
 
         @media screen and (max-width: 1281px) {
@@ -457,7 +457,7 @@ main {
           background-color: $color;
           border-radius: 50%;
           margin: 0 10px;
-          text-indent: -999em;
+          text-indent: -9999em;
 
           &.selected {
             background-color: white;

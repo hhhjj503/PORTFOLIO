@@ -358,7 +358,7 @@ main .event-wrapper .btn-wrapper button {
   height: 50px;
   background-color: transparent;
   cursor: pointer;
-  text-indent: -999em;
+  text-indent: -9999em;
   vertical-align: sub;
 }
 @media screen and (max-width: 600px) {
@@ -417,7 +417,7 @@ main .event-wrapper .btn-wrapper .index-button-wrapper .index-button {
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 50%;
   margin: 0 10px;
-  text-indent: -999em;
+  text-indent: -9999em;
 }
 main .event-wrapper .btn-wrapper .index-button-wrapper .index-button.selected {
   background-color: white;

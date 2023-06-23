@@ -43,7 +43,7 @@ main .wrapper .type > a {
   height: 100%;
   z-index: 2;
   font-size: 1.8rem;
-  text-indent: -999em;
+  text-indent: -9999em;
 }
 main .wrapper .type > a:focus-visible {
   border: 2px solid white;
