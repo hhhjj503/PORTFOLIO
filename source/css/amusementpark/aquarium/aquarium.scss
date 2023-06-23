@@ -64,12 +64,15 @@ main {
     /* -----------------------------------  main .banner-wrapper  --------------------------------------- */
     width: 100vw;
     min-height: 100vh;
-    background-color: blue;
     background-image: url(../../../images/amusementpark/aquarium/dmitry-bukhantsov-IBrZ-TXYWY8.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
+
+    &.loaded {
+      background-color: blue;
+    }
 
     & .title {
       position: absolute;
