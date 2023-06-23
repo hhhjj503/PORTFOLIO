@@ -102,13 +102,17 @@ h2 {
     font-size: 1.3rem;
   }
 
+  header nav li {
+    width: 24.8%;
+  }
+
   header nav a {
     line-height: 70px;
     font-size: 1.3rem;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   header {
     height: 60px;
   }
@@ -119,6 +123,10 @@ h2 {
 
   header .skip a {
     font-size: 0.9rem;
+  }
+
+  header nav li {
+    width: 24.5%;
   }
 
   header nav a {
@@ -307,7 +315,7 @@ main .hj {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   main .hj {
     padding: 80px 0;
   }
@@ -436,7 +444,7 @@ main .hj {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   h2 {
     font-size: 1.6rem;
   }
@@ -541,12 +549,6 @@ main .hj {
   border: none;
   color: white;
   font-size: 0.9rem;
-  background-color: #b6b4b4;
-}
-
-.btn:hover,
-.btn:focus {
-  transition: 0.3s ease;
   background-color: #333;
 }
 
@@ -594,7 +596,7 @@ main .hj {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .portfolio {
     padding: 80px 0;
     padding-bottom: 0px;
@@ -717,7 +719,7 @@ footer img {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   footer .contact {
     padding: 50px 0;
   }
@@ -744,8 +746,8 @@ footer img {
   position: fixed;
   right: 5%;
   bottom: 5%;
-  background-color: #b6b4b4;
-  z-index: 100;
+  border: 1px solid black;
+  background-color: white;
   background-image: url(../../source/images/arrow-up-solid.svg);
   background-size: 50%;
   background-repeat: no-repeat;
@@ -756,6 +758,7 @@ footer img {
   border-radius: 50%;
   visibility: hidden;
   opacity: 0;
+  z-index: 100;
 }
 
 .goup.active a {
@@ -767,7 +770,7 @@ footer img {
 @media screen and (max-width: 1024px) {
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .goup a {
     width: 30px;
     height: 30px;
