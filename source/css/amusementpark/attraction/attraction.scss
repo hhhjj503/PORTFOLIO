@@ -143,6 +143,15 @@ main {
         }
       }
 
+      @media screen and (max-width: 768px) {
+        &:before {
+          display: none;
+        }
+        &:after {
+          display: none;
+        }
+      }
+
       @media screen and (max-width: 600px) {
         &:before {
           display: none;
@@ -188,6 +197,13 @@ main {
           &.left {
             left: 10%;
             right: initial;
+          }
+        }
+
+        @media screen and (max-width: 768px) {
+          & {
+            font-size: 3rem;
+            bottom: 10px;
           }
         }
 
@@ -242,6 +258,12 @@ main {
         @media screen and (max-width: 1281px) {
           & {
             text-align: left;
+          }
+        }
+
+        @media screen and (max-width: 768px) {
+          & {
+            display: none;
           }
         }
 
@@ -302,6 +324,36 @@ main {
         padding: 25px 0;
         line-height: 1.618;
 
+        @media screen and (max-width: 768px) {
+          & {
+            display: block;
+          }
+
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            background-color: #040247;
+            left: 0;
+            right: 0;
+            width: 85%;
+            height: 1px;
+            margin: 0 auto;
+          }
+
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            background-color: #040247;
+            left: 0;
+            right: 0;
+            width: 85%;
+            height: 1px;
+            margin: 0 auto;
+          }
+        }
+
         @media screen and (max-width: 600px) {
           & {
             display: block;
@@ -334,6 +386,12 @@ main {
           font-size: 2rem;
           font-weight: bold;
           margin-bottom: 25px;
+
+          @media screen and (max-width: 768px) {
+            & {
+              font-size: 2.2rem;
+            }
+          }
         }
 
         & .ban-icons {
@@ -341,6 +399,13 @@ main {
             display: inline-block;
             width: 50px;
             height: 50px;
+
+            @media screen and (max-width: 768px) {
+              & {
+                width: 60px;
+                height: 60px;
+              }
+            }
 
             & img {
               width: 100%;
@@ -352,6 +417,12 @@ main {
         & .ban-list {
           & li {
             font-size: 1.6rem;
+
+            @media screen and (max-width: 768px) {
+              & {
+                font-size: 1.8rem;
+              }
+            }
           }
         }
       }

@@ -122,6 +122,14 @@ main .wrapper .attraction:after {
     margin: 0 auto;
   }
 }
+@media screen and (max-width: 768px) {
+  main .wrapper .attraction:before {
+    display: none;
+  }
+  main .wrapper .attraction:after {
+    display: none;
+  }
+}
 @media screen and (max-width: 600px) {
   main .wrapper .attraction:before {
     display: none;
@@ -161,6 +169,12 @@ main .wrapper .attraction .deco.left {
   main .wrapper .attraction .deco.left {
     left: 10%;
     right: initial;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .wrapper .attraction .deco {
+    font-size: 3rem;
+    bottom: 10px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -211,6 +225,11 @@ main .wrapper .attraction .desc {
     text-align: left;
   }
 }
+@media screen and (max-width: 768px) {
+  main .wrapper .attraction .desc {
+    display: none;
+  }
+}
 @media screen and (max-width: 600px) {
   main .wrapper .attraction .desc {
     display: none;
@@ -253,6 +272,33 @@ main .wrapper .attraction .mobile {
   padding: 25px 0;
   line-height: 1.618;
 }
+@media screen and (max-width: 768px) {
+  main .wrapper .attraction .mobile {
+    display: block;
+  }
+  main .wrapper .attraction .mobile:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    background-color: #040247;
+    left: 0;
+    right: 0;
+    width: 85%;
+    height: 1px;
+    margin: 0 auto;
+  }
+  main .wrapper .attraction .mobile:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-color: #040247;
+    left: 0;
+    right: 0;
+    width: 85%;
+    height: 1px;
+    margin: 0 auto;
+  }
+}
 @media screen and (max-width: 600px) {
   main .wrapper .attraction .mobile {
     display: block;
@@ -283,10 +329,21 @@ main .wrapper .attraction .mobile h4 {
   font-weight: bold;
   margin-bottom: 25px;
 }
+@media screen and (max-width: 768px) {
+  main .wrapper .attraction .mobile h4 {
+    font-size: 2.2rem;
+  }
+}
 main .wrapper .attraction .mobile .ban-icons li {
   display: inline-block;
   width: 50px;
   height: 50px;
+}
+@media screen and (max-width: 768px) {
+  main .wrapper .attraction .mobile .ban-icons li {
+    width: 60px;
+    height: 60px;
+  }
 }
 main .wrapper .attraction .mobile .ban-icons li img {
   width: 100%;
@@ -294,4 +351,9 @@ main .wrapper .attraction .mobile .ban-icons li img {
 }
 main .wrapper .attraction .mobile .ban-list li {
   font-size: 1.6rem;
+}
+@media screen and (max-width: 768px) {
+  main .wrapper .attraction .mobile .ban-list li {
+    font-size: 1.8rem;
+  }
 }/*# sourceMappingURL=attraction.css.map */
