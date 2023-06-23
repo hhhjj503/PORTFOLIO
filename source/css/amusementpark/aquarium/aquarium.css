@@ -359,6 +359,7 @@ main .event-wrapper .btn-wrapper button {
   background-color: transparent;
   cursor: pointer;
   text-indent: -999em;
+  vertical-align: sub;
 }
 @media screen and (max-width: 600px) {
   main .event-wrapper .btn-wrapper button {
