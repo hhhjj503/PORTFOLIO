@@ -16,8 +16,8 @@ body {
 
 .top-nav {
   & > .wrapper {
-    li {
-      &:nth-child(2) a {
+    li:nth-child(2) {
+      & a {
         color: #e60000; /* nav 의 나이트쇼 글자 빨갛게 변경 */
       }
     }

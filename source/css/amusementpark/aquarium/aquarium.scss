@@ -22,8 +22,8 @@ body {
   }
 
   & > .wrapper {
-    li {
-      &:nth-child(5) a {
+    li:nth-child(5) {
+      & a {
         color: #e60000; /* nav 의 아쿠아리움 글자 빨갛게 변경 */
       }
     }

@@ -22,8 +22,8 @@ body {
   }
 
   & > .wrapper {
-    li {
-      &:nth-child(4) a {
+    li:nth-child(4) {
+      & a {
         color: #e60000; /* nav 의 크러스티랜드 글자 빨갛게 변경 */
       }
     }

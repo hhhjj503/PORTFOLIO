@@ -21,8 +21,8 @@ body {
   }
 
   & > .wrapper {
-    li {
-      &:nth-child(3) a {
+    li:nth-child(3) {
+      & a {
         color: #e60000; /* nav 의 어트랙션 글자 빨갛게 변경 */
       }
     }
