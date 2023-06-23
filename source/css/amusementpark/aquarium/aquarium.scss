@@ -24,7 +24,7 @@ body {
   & > .wrapper {
     li {
       &:nth-child(5) a {
-        color: red; /* nav 의 아쿠아리움 글자 빨갛게 변경 */
+        color: #e60000; /* nav 의 아쿠아리움 글자 빨갛게 변경 */
       }
     }
   }
