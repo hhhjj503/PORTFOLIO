@@ -40,7 +40,7 @@
   right: 0;
   width: 2px;
   height: 100%;
-  background-color: #777;
+  background-color: #757575;
 }
 
 .top-nav > .wrapper li:nth-child(2):before {
@@ -50,7 +50,7 @@
   left: 0;
   width: 2px;
   height: 100%;
-  background-color: #777;
+  background-color: #757575;
 }
 
 /* ------------ 제일왼쪽 로고부분------------- */
@@ -81,7 +81,7 @@
   text-align: center;
   font-size: 1.8rem;
   text-decoration: none;
-  color: #777;
+  color: #757575;
   font-weight: 800;
   position: relative;
   white-space: nowrap;

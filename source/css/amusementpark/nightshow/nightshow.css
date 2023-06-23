@@ -15,7 +15,7 @@ body {
 }
 
 .top-nav > .wrapper li:nth-child(2) a {
-  color: red; /* nav 의 나이트쇼 글자 빨갛게 변경 */
+  color: #e60000; /* nav 의 나이트쇼 글자 빨갛게 변경 */
 }
 
 a.hiding + * {
@@ -364,7 +364,8 @@ main .letter-wrapper .letter .form-wrapper {
 main .letter-wrapper .letter .form-wrapper form > div {
   margin-bottom: 10px;
 }
-main .letter-wrapper .letter .form-wrapper form label {
+main .letter-wrapper .letter .form-wrapper form label,
+main .letter-wrapper .letter .form-wrapper form h4 {
   display: inline-block;
   background-color: #1c3055;
   color: white;
@@ -375,13 +376,19 @@ main .letter-wrapper .letter .form-wrapper form label {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
+main .letter-wrapper .letter .form-wrapper form label.for-radio,
+main .letter-wrapper .letter .form-wrapper form h4.for-radio {
+  display: none;
+}
 @media screen and (max-width: 1281px) {
-  main .letter-wrapper .letter .form-wrapper form label {
+  main .letter-wrapper .letter .form-wrapper form label,
+  main .letter-wrapper .letter .form-wrapper form h4 {
     font-size: 1.5rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .letter-wrapper .letter .form-wrapper form label {
+  main .letter-wrapper .letter .form-wrapper form label,
+  main .letter-wrapper .letter .form-wrapper form h4 {
     font-size: 1.3rem;
     padding: 10px;
     font-weight: normal;
@@ -636,7 +643,7 @@ main .benefits .listwrapper .benefit:nth-child(1) {
   background-position: center;
 }
 main .benefits .listwrapper .benefit:nth-child(2) {
-  background-color: orange;
+  background-color: #b30fff;
 }
 main .benefits .listwrapper .benefit:nth-child(3) {
   background-color: #287fc9;
@@ -646,5 +653,5 @@ main .benefits .listwrapper .benefit:nth-child(3) {
   background-position: center;
 }
 main .benefits .listwrapper .benefit:nth-child(4) {
-  background-color: #287fc9;
+  background-color: #3870e0;
 }/*# sourceMappingURL=nightshow.css.map */

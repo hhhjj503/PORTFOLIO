@@ -18,7 +18,7 @@ body {
   & > .wrapper {
     li {
       &:nth-child(2) a {
-        color: red; /* nav 의 나이트쇼 글자 빨갛게 변경 */
+        color: #e60000; /* nav 의 나이트쇼 글자 빨갛게 변경 */
       }
     }
   }
@@ -427,7 +427,8 @@ main {
             margin-bottom: 10px;
           }
 
-          label {
+          label,
+          h4 {
             display: inline-block;
             background-color: #1c3055;
             color: white;
@@ -437,6 +438,10 @@ main {
             font-weight: bold;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
+
+            &.for-radio {
+              display: none;
+            }
 
             @media screen and (max-width: 1281px) {
               & {
@@ -757,7 +762,7 @@ main {
         background-position: center;
       }
       .benefit:nth-child(2) {
-        background-color: orange;
+        background-color: #b30fff;
       }
       .benefit:nth-child(3) {
         background-color: #287fc9;
@@ -767,7 +772,7 @@ main {
         background-position: center;
       }
       .benefit:nth-child(4) {
-        background-color: #287fc9;
+        background-color: #3870e0;
       }
     }
   }

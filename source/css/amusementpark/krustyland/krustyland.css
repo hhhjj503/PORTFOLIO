@@ -87,7 +87,8 @@ main .menu .container {
 }
 main .menu .container p {
   font-size: 1.4rem;
-  color: white;
+  font-weight: bold;
+  color: #333333;
   line-height: 50px;
 }
 @media screen and (max-width: 600px) {
@@ -256,7 +257,7 @@ main .goods-wrapper button {
   padding: 10px 20px;
   font-size: 1.3rem;
   border: none;
-  background-color: red;
+  background-color: #eb0000;
   border-radius: 5px;
   font-weight: bold;
   color: white;
