@@ -25,6 +25,7 @@ window.addEventListener("load", () => {
     //label 태그 동적생성
     const label = document.createElement("label");
     label.setAttribute("tabindex", 0);
+    label.innerText = "슬라이더인덱스" + (i + 1);
     label.htmlFor = `slide_control${i}`;
     label.addEventListener("mouseenter", () => {
       label.classList.add("hovered");
@@ -73,27 +74,43 @@ window.addEventListener("load", () => {
   }
 
   //마우스 휠 스크롤 슬라이드 만들기
-  window.addEventListener("wheel", (e) => {
-    if (moving === false) {
-      if (e.deltaY > 0) {
-        movingCheck();
-        ++currentWheelIndex;
-        if (currentWheelIndex > maxWheelIndex) currentWheelIndex = 0;
-        const leftValue = inputs[currentWheelIndex].dataset.left;
-        changeImage(inputs[currentWheelIndex], labels[currentWheelIndex]);
-        moveLeft(leftValue);
-      }
+  window.addEventListener(
+    "wheel",
+    throttle((e) => {
+      if (moving === false) {
+        if (e.deltaY > 0) {
+          movingCheck();
+          ++currentWheelIndex;
+          if (currentWheelIndex > maxWheelIndex) currentWheelIndex = 0;
+          const leftValue = inputs[currentWheelIndex].dataset.left;
+          changeImage(inputs[currentWheelIndex], labels[currentWheelIndex]);
+          moveLeft(leftValue);
+        }
 
-      if (e.deltaY < 0) {
-        movingCheck();
-        --currentWheelIndex;
-        if (currentWheelIndex < 0) currentWheelIndex = 4;
-        const leftValue = inputs[currentWheelIndex].dataset.left;
-        changeImage(inputs[currentWheelIndex], labels[currentWheelIndex]);
-        moveLeft(leftValue);
+        if (e.deltaY < 0) {
+          movingCheck();
+          --currentWheelIndex;
+          if (currentWheelIndex < 0) currentWheelIndex = 4;
+          const leftValue = inputs[currentWheelIndex].dataset.left;
+          changeImage(inputs[currentWheelIndex], labels[currentWheelIndex]);
+          moveLeft(leftValue);
+        }
       }
-    }
-  });
+    })
+  );
+
+  function throttle(callback, limit = 1000 / 15) {
+    let waiting = false;
+    return function () {
+      if (!waiting) {
+        callback.apply(this, arguments);
+        waiting = true;
+        setTimeout(() => {
+          waiting = false;
+        }, limit);
+      }
+    };
+  } //throttle
 
   /**
    * input 엘리먼트와 label 엘리먼트의 class 속성을 추가하는 함수

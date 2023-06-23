@@ -82,7 +82,6 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%;
   text-align: center;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -92,6 +91,13 @@ body {
   font-size: 2.8rem;
   font-weight: bold;
   text-shadow: 0.5px 0.5px white, -0.5px -0.5px rgb(6, 6, 6);
+}
+
+.slide h2.contrast {
+  padding: 10px;
+  display: inline-block;
+  border-radius: 20px;
+  background-color: #333;
 }
 
 /* .slide1 {
@@ -148,6 +154,8 @@ input {
   margin: 0 13px;
   position: relative;
   color: white;
+  display: inline-block;
+  text-indent: -999em;
 }
 
 .pagelabels label:focus-visible {
