@@ -39,6 +39,7 @@ main {
       /* ------------------- .wrapper type 공통속성 --------------- */
       position: relative;
       transition: 0.7s ease;
+      background-color: black;
 
       & > a {
         position: absolute;
@@ -98,7 +99,7 @@ main {
 
       .background {
         width: 100%;
-        height: 60%;
+        height: 100%;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -118,13 +119,19 @@ main {
           content: "";
           width: 100%;
           height: 20%;
+
+          @media screen and (max-width: 600px) {
+            height: 40%;
+          }
         }
       }
 
       .description {
         position: absolute;
         width: 100%;
-        height: 40%;
+        height: 100%;
+        top: 0;
+        left: 0;
 
         @media screen and (max-width: 600px) {
           position: absolute;
@@ -132,9 +139,12 @@ main {
         }
 
         .desc {
-          position: relative;
+          position: absolute;
           width: 40%;
-          height: 40%;
+          height: 15%;
+          top: 60%;
+          left: 50%;
+          transform: translate(-50%, -50%);
           box-sizing: border-box;
           margin: 0 auto;
           border: 1px solid rgb(224, 224, 224);
@@ -142,31 +152,25 @@ main {
           transition: 0.7s ease-in-out;
           z-index: 3;
 
+          @media screen and (max-width: 1281px) {
+            & {
+              top: 50%;
+              height: 25%;
+              width: 30%;
+              position: absolute;
+            }
+          }
+
           @media screen and (max-width: 1000px) {
             & {
               width: 60%;
             }
           }
 
-          @media screen and (max-width: 1281px) {
-            & {
-              height: 70%;
-              width: 30%;
-              position: absolute;
-              top: -50%;
-              left: 50%;
-              transform: translateX(-50%);
-            }
-          }
-
           @media screen and (max-width: 1279px) {
             & {
-              height: 60%;
+              height: 25%;
               width: 40%;
-              position: absolute;
-              top: -50%;
-              left: 50%;
-              transform: translateX(-50%);
             }
           }
 
@@ -176,9 +180,6 @@ main {
               width: 30%;
               z-index: 3;
               position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
             }
           }
 
@@ -189,11 +190,7 @@ main {
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(
-              to bottom,
-              transparent 70%,
-              transparent 100%
-            );
+            background: linear-gradient(to bottom, #333 70%, transparent 100%);
             opacity: 0.5;
             transition: 0.5s ease-in-out;
             z-index: 0;
@@ -287,10 +284,6 @@ main {
       .background:after {
         background: linear-gradient(to bottom, transparent, #2d74d2);
       }
-
-      .description {
-        background-color: #2d74d2;
-      }
     }
 
     .rollercoaster {
@@ -331,10 +324,6 @@ main {
 
       .background:after {
         background: linear-gradient(to bottom, transparent, #1570ef);
-      }
-
-      .description {
-        background-color: #1570ef;
       }
     }
 
@@ -377,10 +366,6 @@ main {
       .background:after {
         background: linear-gradient(to bottom, transparent, #943940);
       }
-
-      .description {
-        background-color: #943940;
-      }
     }
 
     .aquarium {
@@ -421,10 +406,6 @@ main {
 
       .background:after {
         background: linear-gradient(to bottom, transparent, #2d8098);
-      }
-
-      .description {
-        background-color: #2d8098;
       }
     }
   }

@@ -34,6 +34,7 @@ main .wrapper .type {
   /* ------------------- .wrapper type 공통속성 --------------- */
   position: relative;
   transition: 0.7s ease;
+  background-color: black;
 }
 main .wrapper .type > a {
   position: absolute;
@@ -83,7 +84,7 @@ main .wrapper .type:hover .desc {
 }
 main .wrapper .type .background {
   width: 100%;
-  height: 60%;
+  height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -103,10 +104,17 @@ main .wrapper .type .background:after {
   width: 100%;
   height: 20%;
 }
+@media screen and (max-width: 600px) {
+  main .wrapper .type .background:after {
+    height: 40%;
+  }
+}
 main .wrapper .type .description {
   position: absolute;
   width: 100%;
-  height: 40%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 @media screen and (max-width: 600px) {
   main .wrapper .type .description {
@@ -115,9 +123,12 @@ main .wrapper .type .description {
   }
 }
 main .wrapper .type .description .desc {
-  position: relative;
+  position: absolute;
   width: 40%;
-  height: 40%;
+  height: 15%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   box-sizing: border-box;
   margin: 0 auto;
   border: 1px solid rgb(224, 224, 224);
@@ -125,29 +136,23 @@ main .wrapper .type .description .desc {
   transition: 0.7s ease-in-out;
   z-index: 3;
 }
+@media screen and (max-width: 1281px) {
+  main .wrapper .type .description .desc {
+    top: 50%;
+    height: 25%;
+    width: 30%;
+    position: absolute;
+  }
+}
 @media screen and (max-width: 1000px) {
   main .wrapper .type .description .desc {
     width: 60%;
   }
 }
-@media screen and (max-width: 1281px) {
-  main .wrapper .type .description .desc {
-    height: 70%;
-    width: 30%;
-    position: absolute;
-    top: -50%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
 @media screen and (max-width: 1279px) {
   main .wrapper .type .description .desc {
-    height: 60%;
+    height: 25%;
     width: 40%;
-    position: absolute;
-    top: -50%;
-    left: 50%;
-    transform: translateX(-50%);
   }
 }
 @media screen and (max-width: 600px) {
@@ -156,9 +161,6 @@ main .wrapper .type .description .desc {
     width: 30%;
     z-index: 3;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
 }
 main .wrapper .type .description .desc:before {
@@ -168,7 +170,7 @@ main .wrapper .type .description .desc:before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, transparent 70%, transparent 100%);
+  background: linear-gradient(to bottom, #333 70%, transparent 100%);
   opacity: 0.5;
   transition: 0.5s ease-in-out;
   z-index: 0;
@@ -252,9 +254,6 @@ main .wrapper .nightshow:hover {
 main .wrapper .nightshow .background:after {
   background: linear-gradient(to bottom, transparent, #2d74d2);
 }
-main .wrapper .nightshow .description {
-  background-color: #2d74d2;
-}
 main .wrapper .rollercoaster {
   /* ----------------------- rollercoaster ---------------------- */
   width: var(--blockwidth);
@@ -291,9 +290,6 @@ main .wrapper .rollercoaster:hover {
 }
 main .wrapper .rollercoaster .background:after {
   background: linear-gradient(to bottom, transparent, #1570ef);
-}
-main .wrapper .rollercoaster .description {
-  background-color: #1570ef;
 }
 main .wrapper .krustyland {
   /* ----------------------- krustyland ---------------------- */
@@ -332,9 +328,6 @@ main .wrapper .krustyland:hover {
 main .wrapper .krustyland .background:after {
   background: linear-gradient(to bottom, transparent, #943940);
 }
-main .wrapper .krustyland .description {
-  background-color: #943940;
-}
 main .wrapper .aquarium {
   /* ----------------------- aquarium ---------------------- */
   width: var(--blockwidth);
@@ -371,9 +364,6 @@ main .wrapper .aquarium:hover {
 }
 main .wrapper .aquarium .background:after {
   background: linear-gradient(to bottom, transparent, #2d8098);
-}
-main .wrapper .aquarium .description {
-  background-color: #2d8098;
 }
 
 footer {
