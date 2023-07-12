@@ -150,7 +150,6 @@ window.addEventListener("load", function () {
     const leftHours = leftTime.hours();
     const leftMinutes = leftTime.minutes();
     const leftSeconds = leftTime.seconds();
-    console.log(leftHours, leftMinutes, leftSeconds);
     if (leftHours < 10) {
       hours.innerText = "0" + leftHours;
     } else {

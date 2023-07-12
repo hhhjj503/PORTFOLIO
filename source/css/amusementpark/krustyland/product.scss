@@ -1,0 +1,722 @@
+@import url(../../reset.css);
+@import url(../layout/header.css);
+@import url(../layout/footer.css);
+
+html {
+  font-size: 62.5%; /*  setting rem  */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "NotoSans-Bold", "맑은 고딕", "Malgun Gothic", sans-serif;
+  overflow-x: hidden;
+}
+
+.top-nav {
+  transition: 0.5s ease-in-out;
+  z-index: 98; /* 상품구매창의 레이어를 위해 z-index  변경*/
+
+  &.scrolldown {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  & > .wrapper {
+    li:nth-child(4) {
+      & a {
+        color: #e60000; /* nav 의 크러스티랜드 글자 빨갛게 변경 */
+      }
+    }
+  }
+}
+
+.top-nav-mobile {
+  transition: 0.5s ease-in-out;
+
+  &.scrolldown {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+main {
+  /* ----------------------------------- main  --------------------------------------- */
+
+  & .background {
+    width: 100%;
+    height: 500px;
+    background: url(../../../images/amusementpark/krustyland.PNG) no-repeat;
+    background-size: cover;
+    background-position: center 70%;
+    z-index: -1;
+
+    @media screen and (max-width: 1281px) {
+      & {
+        height: 400px;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      & {
+        height: 300px;
+      }
+    }
+  }
+
+  & .menu {
+    width: 100%;
+    background-color: #fbc717;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 1281px) {
+      & {
+        padding: 0 20px;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      & {
+        position: relative;
+        padding: 0 20px;
+      }
+    }
+
+    & .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      height: 50px;
+
+      & p {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #333333;
+        line-height: 50px;
+
+        @media screen and (max-width: 600px) {
+          & {
+            font-size: 1.3rem;
+          }
+        }
+
+        &:nth-child(1) {
+          float: left;
+        }
+
+        &:nth-child(2) {
+          float: right;
+        }
+      }
+    }
+  }
+
+  & .purchase {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+    background-color: white;
+    white-space: nowrap;
+
+    @media screen and (max-width: 1281px) {
+      & {
+      }
+    }
+    @media screen and (max-width: 600px) {
+      & {
+        padding: 0;
+      }
+    }
+
+    & .image-info {
+      width: 65%;
+      display: inline-block;
+
+      @media screen and (max-width: 1281px) {
+        & {
+        }
+      }
+      @media screen and (max-width: 600px) {
+        & {
+          display: block;
+          width: 100%;
+        }
+      }
+
+      & .slider {
+        position: relative;
+        width: 100%;
+        height: 600px;
+
+        @media screen and (max-width: 1281px) {
+          & {
+          }
+        }
+        @media screen and (max-width: 600px) {
+          & {
+            height: 400px;
+          }
+        }
+
+        & img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+
+          @media screen and (max-width: 1281px) {
+            & {
+            }
+          }
+        }
+
+        & button {
+          position: absolute;
+          top: 50%;
+          width: 50px;
+          height: 50px;
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          transform: translateY(-50%);
+
+          &.left {
+            left: 5%;
+          }
+          &.right {
+            right: 5%;
+          }
+        }
+      }
+    }
+
+    & .info {
+      display: inline-block;
+      vertical-align: top;
+      width: 35%;
+      height: 600px;
+
+      @media screen and (max-width: 1281px) {
+        & {
+        }
+      }
+      @media screen and (max-width: 600px) {
+        & {
+          display: block;
+          width: 100%;
+          height: 400px;
+        }
+      }
+
+      & h5 {
+        font-size: 1.8rem;
+        padding: 20px;
+
+        @media screen and (max-width: 1281px) {
+          & {
+            box-sizing: border-box;
+            width: 100%;
+            font-size: 1.6rem;
+          }
+        }
+        @media screen and (max-width: 600px) {
+          & {
+            font-size: 1.6rem;
+            padding: 20px;
+          }
+        }
+      }
+
+      & .dib {
+        cursor: pointer;
+        padding: 20px;
+
+        &.clicked img {
+          content: url(../../../images/amusementpark/krustyland/heart-solid.svg);
+        }
+
+        @media screen and (max-width: 1281px) {
+          & {
+            width: 18px;
+            height: 18px;
+          }
+        }
+        @media screen and (max-width: 600px) {
+          & {
+            padding: 10px 20px;
+          }
+        }
+
+        & img {
+          display: block;
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      & .price {
+        border-bottom: 1px solid #dddfe1;
+        padding: 20px;
+
+        @media screen and (max-width: 1281px) {
+          & {
+          }
+        }
+        @media screen and (max-width: 600px) {
+          & {
+            border-bottom: 1px solid #dddfe1;
+            padding: 10px 20px;
+          }
+        }
+
+        &:after {
+          content: "";
+          clear: both;
+          display: block;
+        }
+
+        & .per-price {
+          display: block;
+
+          font-size: 2.2rem;
+          font-weight: bold;
+
+          @media screen and (max-width: 1281px) {
+            & {
+              font-size: 1.9rem;
+              font-weight: bold;
+            }
+          }
+          @media screen and (max-width: 600px) {
+            & {
+              font-size: 1.8rem;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      & .color {
+        padding: 20px;
+        border-bottom: 1px solid #dddfe1;
+        font-size: 1.8rem;
+
+        & .color-title {
+          display: block;
+          margin-bottom: 15px;
+
+          @media screen and (max-width: 1281px) {
+            & {
+              font-size: 1.6rem;
+            }
+          }
+          @media screen and (max-width: 600px) {
+            & {
+              font-size: 1.4rem;
+            }
+          }
+        }
+
+        & .palette {
+          & li {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+
+          & li:nth-child(1) {
+            background-color: red;
+          }
+          & li:nth-child(2) {
+            background-color: orange;
+          }
+          & li:nth-child(3) {
+            background-color: yellow;
+          }
+          & li:nth-child(4) {
+            background-color: green;
+          }
+        }
+      }
+
+      & .quantity {
+        padding: 20px;
+        border-bottom: 1px solid #dddfe1;
+        font-size: 1.8rem;
+
+        @media screen and (max-width: 1281px) {
+          & {
+          }
+        }
+        @media screen and (max-width: 600px) {
+          & {
+            padding: 10px 20px;
+          }
+        }
+
+        &:after {
+          content: "";
+          clear: both;
+          display: block;
+        }
+
+        & .number-title {
+          display: block;
+          font-size: 1.8rem;
+          margin-bottom: 15px;
+
+          @media screen and (max-width: 1281px) {
+            & {
+              font-size: 1.6rem;
+            }
+          }
+          @media screen and (max-width: 600px) {
+            & {
+              font-size: 1.4rem;
+            }
+          }
+        }
+
+        & .value {
+          @media screen and (max-width: 1281px) {
+            & {
+              font-size: 1.8rem;
+            }
+          }
+          @media screen and (max-width: 600px) {
+            & {
+              font-size: 1.6rem;
+              margin: 0 5px;
+            }
+          }
+        }
+
+        & button {
+          border-radius: 50%;
+          border: none;
+          width: 25px;
+          height: 25px;
+          line-height: 25px;
+          font-size: 1.8rem;
+          line-height: 25px;
+          cursor: pointer;
+          border: 1px solid #6b6b6b;
+          background-color: white;
+
+          @media screen and (max-width: 1281px) {
+            & {
+              width: 20px;
+              height: 20px;
+              font-size: 1.9rem;
+              line-height: 20px;
+            }
+          }
+          @media screen and (max-width: 600px) {
+            & {
+              width: 20px;
+              height: 20px;
+              font-size: 1.9rem;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+
+      & .total {
+        padding: 20px;
+
+        @media screen and (max-width: 1281px) {
+          & {
+          }
+        }
+        @media screen and (max-width: 600px) {
+          & {
+            padding: 10px 20px;
+          }
+        }
+
+        &:after {
+          content: "";
+          clear: both;
+          display: block;
+        }
+
+        & .total-title {
+          display: block;
+          font-size: 1.8rem;
+          margin-bottom: 15px;
+
+          @media screen and (max-width: 1281px) {
+            & {
+              font-size: 1.6rem;
+            }
+          }
+          @media screen and (max-width: 600px) {
+            & {
+              font-size: 1.4rem;
+            }
+          }
+        }
+        & .total-price {
+          color: red;
+          font-weight: bold;
+          font-size: 2.3rem;
+          float: right;
+
+          @media screen and (max-width: 1281px) {
+            & {
+              font-size: 1.9rem;
+            }
+          }
+          @media screen and (max-width: 600px) {
+            & {
+              font-size: 1.9rem;
+            }
+          }
+        }
+      }
+
+      & .purchase-btn {
+        /*----------------------------------- .purchase .purchase-btn ------------------------ */
+        width: 100%;
+        display: block;
+        margin-top: 50px;
+        padding: 20px 10px;
+        margin: 50px auto 0 auto;
+        box-sizing: border-box;
+        cursor: pointer;
+        font-size: 1.8rem;
+        border: none;
+        color: white;
+        background-color: #000;
+
+        border-bottom: 1px solid #dddfe1;
+
+        @media screen and (max-width: 1281px) {
+          & {
+            width: 60%;
+            padding: 10px 10px;
+            margin: 30px auto 30px auto;
+            font-size: 1.7rem;
+          }
+        }
+        @media screen and (max-width: 600px) {
+          & {
+            width: 80%;
+            padding: 10px 10px;
+            margin: 30px auto 30px auto;
+            font-size: 1.7rem;
+          }
+        }
+      }
+    }
+
+    & .review {
+      width: 100%;
+      padding: 15px 0;
+
+      & h5 {
+        box-sizing: border-box;
+        width: 100%;
+        font-size: 1.8rem;
+        padding: 20px;
+        margin-top: 100px;
+        font-weight: bold;
+        border-bottom: 1px solid #333333;
+      }
+
+      @media screen and (max-width: 1281px) {
+        & {
+          padding: 0;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        & {
+          padding: 0;
+        }
+      }
+
+      & table {
+        width: 100%;
+
+        tr {
+          border-bottom: 1px solid #ddd;
+        }
+        tr.active {
+          display: block;
+        }
+
+        td {
+          padding: 10px;
+          box-sizing: border-box;
+          text-align: center;
+          font-size: 1.5rem;
+
+          @media screen and (max-width: 1281px) {
+            & {
+              padding: 5px 10px;
+              font-size: 1.4rem;
+            }
+          }
+          @media screen and (max-width: 600px) {
+            & {
+              padding: 10px 5px;
+              font-size: 1.4rem;
+            }
+          }
+        }
+
+        & td.customer-id {
+          width: 20%;
+        }
+
+        & td.rate img {
+          width: 20px;
+          height: 20px;
+        }
+
+        & .register-date {
+          width: 20%;
+        }
+      }
+    }
+
+    & .review-wrapper {
+      /*----------------------------------- .purchase .review-pager ------------------------ */
+      width: 100%;
+
+      & ul {
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+
+        & li {
+          display: inline-block;
+          a {
+            width: 100%;
+            text-decoration: none;
+            font-size: 1.4rem;
+            margin: 0 5px;
+            padding: 3px 8px;
+            color: black;
+
+            @media screen and (max-width: 1281px) {
+              & {
+                padding: 3px 8px;
+                font-size: 1.6rem;
+              }
+            }
+            @media screen and (max-width: 600px) {
+              & {
+                padding: 2px 6px;
+                font-size: 1.4rem;
+              }
+            }
+          }
+          &.active {
+            a {
+              background-color: black;
+              color: white;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & .shopping-bag {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    left: 5%;
+    bottom: 5%;
+    background-color: white;
+    border-radius: 50%;
+    background-image: url(../../../images/amusementpark/krustyland/heart-solid.svg);
+    background-size: 60% 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0.5px 0.5px 3px #999;
+    cursor: pointer;
+
+    &.rotate {
+      animation: rotating 0.3s forwards ease;
+    }
+
+    &:hover,
+    &:focus-visible {
+      .bag-desc {
+        opacity: 1;
+      }
+    }
+
+    @media screen and (max-width: 1281px) {
+      & {
+        display: none;
+      }
+    }
+
+    .bag-desc {
+      position: absolute;
+      background-color: white;
+      bottom: 70px;
+      font-size: 1.5rem;
+      line-height: 20px;
+      word-break: keep-all;
+      padding: 10px;
+      border-radius: 10px;
+      width: 200%;
+      opacity: 0;
+      transition: 0.3s ease;
+    }
+
+    img {
+      position: absolute;
+      left: 5%;
+      bottom: 70px;
+      width: 150px;
+      height: 200px;
+      background-color: white;
+      border-radius: 10px;
+      object-fit: cover;
+      transition: 0.3s ease-in-out;
+      visibility: hidden;
+
+      &.shown {
+        visibility: visible;
+      }
+
+      &.hidden {
+        width: 0px;
+        height: 0px;
+        left: 10%;
+        bottom: 0px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

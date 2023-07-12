@@ -69,12 +69,5 @@
     "price": 150000,
     "reviewCount": 5,
     "rating": 5
-  },
-  {
-    "title": "장난감 트럭",
-    "imagePath": "../../source/images/amusementpark/krustyland/trucks.JPG",
-    "price": 30000,
-    "reviewCount": 20,
-    "rating": 3.5
   }
 ]
