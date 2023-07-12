@@ -108,7 +108,7 @@ main .wrapper .type .description .desc {
   border: 1px solid rgb(224, 224, 224);
   border-bottom: 0px solid transparent;
   transition: 0.7s ease-in-out;
-  z-index: 3;
+  z-index: 2;
 }
 @media screen and (max-width: 1281px) {
   main .wrapper .type .description .desc {
