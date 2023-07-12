@@ -381,6 +381,8 @@ main .hj {
   bottom: 0px;
   transition-delay: 0.1s;
   opacity: 1;
+  background-color: #333;
+  color: white;
 }
 .skills.active li:nth-child(2) {
   bottom: 0px;
@@ -391,6 +393,8 @@ main .hj {
   bottom: 0px;
   transition-delay: 0.3s;
   opacity: 1;
+  background-color: #333;
+  color: white;
 }
 .skills.active li:nth-child(4) {
   bottom: 0px;
