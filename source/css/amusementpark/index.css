@@ -80,7 +80,7 @@ main .wrapper .type .background:after {
 }
 @media screen and (max-width: 600px) {
   main .wrapper .type .background:after {
-    height: 40%;
+    height: 10%;
   }
 }
 main .wrapper .type .description {
