@@ -640,6 +640,7 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: 0.5px 0.5px 3px #999;
+    z-index: 11;
     cursor: pointer;
 
     &.rotate {
