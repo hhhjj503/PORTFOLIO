@@ -89,17 +89,20 @@ window.addEventListener("load", () => {
         ' alt="' +
         item.title +
         '"  />' +
-        "<h5 data-reviewcount='" +
-        item.reviewCount +
-        "' data-rating='" +
+        '<h5 data-index="' +
+        item.index +
+        '" data-rating="' +
         item.rating +
-        "' >" +
+        '" >' +
         item.title +
         "</h5>" +
         "</a>" +
         "</li>";
 
-      elements.push($(elementText).get(0));
+      //클릭시 h5 의 index 값을 가져와 json 파일로 만드는 코드 만들기
+      const element = $(elementText).get(0);
+
+      elements.push(element);
     });
     added = added + addedItemCount;
 
