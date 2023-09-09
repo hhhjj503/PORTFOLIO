@@ -1,0 +1,162 @@
+@charset "UTF-8";
+@import url(../reset.css);
+html {
+  font-size: 62.5%; /*  setting rem (1rem = 10px)  */
+}
+
+body {
+  font-family: "Nanum Gothic", "돋움", "Dotum", "Apple Gothic", sans-serif;
+  font-family: "Open Sans", "Pretendard", sans-serif;
+  overflow-x: hidden;
+  background-color: #f4a5b7;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 0.8rem solid #000000;
+  display: inline-block;
+  padding: 1rem;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 0.5px 0.5px #000000, -0.5px -0.5px #000000;
+}
+
+h1 .deco.rotate {
+  transition: 0.5s ease-in-out;
+  font-size: 5.2rem;
+  display: inline-block;
+  transform: rotate(180deg);
+}
+
+section {
+  max-width: 146rem;
+  margin: 0 auto 20rem auto;
+  position: relative;
+}
+
+/* intro */
+.intro .images {
+  position: relative;
+  height: 70rem;
+  width: 88rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.intro .images li {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  transition: 0.3s ease-in-out;
+  display: inline-block;
+}
+
+.intro .images li:nth-child(1) {
+  left: 40%;
+}
+
+.intro .images li:nth-child(2) {
+  left: 50%;
+}
+
+.intro .images li:nth-child(3) {
+  left: 60%;
+}
+
+.intro .images li.siding {
+  left: 115%;
+}
+
+.intro .images img {
+  width: 700px;
+  height: 700px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.intro .images .source {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.intro h2 {
+  font-size: 3rem;
+  font-weight: bolder;
+  text-align: center;
+  font-family: "Exo", "NanumSquare", "Margun Gothic", sans-serif;
+}
+
+.intro h2 .rotate {
+  display: inline-block;
+  transform: rotate(180deg);
+}
+
+.intro p {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Exo", "NanumSquare", "Margun Gothic", sans-serif;
+  line-height: 1.618;
+  text-align: left;
+  word-break: keep-all;
+}
+
+/* memners */
+
+.members h2 {
+  color: #969696;
+  font-size: 10rem;
+  z-index: -1;
+}
+
+.members table {
+  width: 146rem;
+}
+
+table th {
+  padding: 30px;
+  font-size: 2rem;
+  box-sizing: border-box;
+  font-family: "Exo", "NanumSquare", "Margun Gothic", sans-serif;
+  font-weight: bold;
+  background-color: #000000;
+  color: #f4a5b7;
+  border-collapse: collapse;
+}
+
+table td {
+  width: 25%;
+  background-color: #000000;
+}
+
+.members tr.profile img {
+  width: 100%;
+  height: 60rem;
+  object-fit: cover;
+}
+
+table tr.mv td {
+  border: 0px;
+}
+
+table .mv a {
+  display: block;
+  width: 100%;
+  height: 31.5rem;
+}
+
+table .mv img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* album */
+
+.album div {
+  margin-bottom: 10rem;
+}
