@@ -92,6 +92,8 @@ section {
 
 .banner .controls .control {
   cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 .banner .controls .line {
@@ -121,6 +123,7 @@ section {
   right: 0px;
   background-image: url(../../images/blackpink/pause-solid.svg);
   background-repeat: no-repeat;
+  background-color: transparent;
 }
 .banner .controls .play {
   width: 20px;
@@ -130,6 +133,7 @@ section {
   right: 40px;
   background-image: url(../../images/blackpink/play-solid.svg);
   background-repeat: no-repeat;
+  background-color: transparent;
 }
 
 .banner .controls .active {
@@ -137,51 +141,123 @@ section {
 }
 
 /* intro */
-
-.intro .wrapper {
-  width: 88rem;
-  margin: 0 auto;
+:root {
+  --intro-imgage-height: 70rem;
 }
 
-.intro .images {
-  position: relative;
+.intro .thumnail {
+  display: inline-block;
   height: 70rem;
+  width: 19%;
+  vertical-align: top;
+  position: relative;
+}
+
+.intro .thumnail .view-box {
   width: 100%;
+  height: 20%;
+  box-sizing: border-box;
+  border: 3px solid #000000;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s ease;
+  z-index: 2;
+}
+
+.intro .thumnail:hover .view-box {
+  top: 40%;
+}
+
+.intro .thumnail ul {
+  width: 100%;
+  height: 100%;
+}
+
+.intro .thumnail li {
+  width: 100%;
+  height: 20%;
+  background-color: #000000;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.intro .thumnail li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top bottom;
+}
+
+.intro .thumnail li img.top {
+  object-position: top;
+}
+
+.intro .thumnail li:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.7;
+}
+
+.intro .original {
+  position: relative;
+  display: inline-block;
+  height: 70rem;
+  width: 80%;
   overflow: hidden;
 }
 
-.intro .images li {
+.intro .original .images-list {
   position: absolute;
   top: 0;
-  transform: translateX(-50%);
-  transition: 0.3s ease-in-out;
-  display: inline-block;
+  left: 0;
+  width: 100%;
+  height: calc(var(--intro-imgage-height) * 5);
+  background-color: #000000;
+  transition: 0.4s ease;
 }
 
-.intro .images li:nth-child(1) {
-  left: 40%;
+.intro .original .images-list li {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 70rem;
 }
 
-.intro .images li:nth-child(2) {
-  left: 50%;
+.intro .original .images-list li:nth-child(1) {
+  top: calc(var(--intro-imgage-height) * 0);
+}
+.intro .original .images-list li:nth-child(2) {
+  top: calc(var(--intro-imgage-height) * 1);
+}
+.intro .original .images-list li:nth-child(3) {
+  top: calc(var(--intro-imgage-height) * 2);
+}
+.intro .original .images-list li:nth-child(4) {
+  top: calc(var(--intro-imgage-height) * 3);
+}
+.intro .original .images-list li:nth-child(5) {
+  top: calc(var(--intro-imgage-height) * 4);
 }
 
-.intro .images li:nth-child(3) {
-  left: 60%;
-}
-
-.intro .images li.siding {
-  left: 115%;
-}
-
-.intro .images img {
-  width: 700px;
-  height: 700px;
+.intro .images-list img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center center;
+  transition: 0.3s ease;
 }
 
-.intro .images .source {
+.intro .images-list .source {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -233,58 +309,151 @@ section {
   word-break: break-all;
 }
 
-/* memners */
+/* members */
+
+.members {
+  font-size: 0;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
 
 .members h2 {
-  color: #f4a5b7;
-  font-size: 9rem;
-  font-weight: bold;
-  background-color: #000000;
-  box-sizing: border-box;
-  padding: 20px;
-}
-
-.members table {
-  width: 146rem;
-}
-
-table th {
-  padding: 30px;
-  font-size: 2rem;
-  box-sizing: border-box;
+  color: #000000;
+  font-size: 8rem;
   font-family: "Exo", "NanumSquare", "Margun Gothic", sans-serif;
   font-weight: bold;
-  background-color: #000000;
+  box-sizing: border-box;
+  padding: 2rem 2rem 2rem 0;
+  padding-left: 0px;
+  text-align: left;
+  letter-spacing: 1px;
+}
+
+.members .member h4 {
   color: #f4a5b7;
-  border-collapse: collapse;
+  font-size: 2.2rem;
+  font-weight: bold;
+  font-family: "Exo", "NanumSquare", "Margun Gothic", sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
-table td {
+.members .member {
+  display: inline-block;
   width: 25%;
+  overflow: hidden;
   background-color: #000000;
 }
 
-.members tr.profile img {
+.members .member img {
   width: 100%;
   height: 60rem;
   object-fit: cover;
 }
 
-table tr.mv td {
-  border: 0px;
-}
-
-table .mv a {
+.members .member a {
   display: block;
   width: 100%;
   height: 31.5rem;
 }
 
-table .mv img {
+.members .member a img {
   display: block;
   width: 100%;
   height: 100%;
+  height: 31.5rem;
   object-fit: cover;
+}
+
+/* news */
+
+.news {
+  max-width: initial;
+  background-color: black;
+  margin: 0 0 0 0;
+}
+
+.wrapper {
+  width: 146rem;
+  margin: 0 auto;
+}
+
+.news h2 {
+  width: 100%;
+  font-size: 8rem;
+  font-weight: bold;
+  text-align: left;
+  font-family: "Exo", "NanumSquare", "Margun Gothic", sans-serif;
+  color: #f4a5b7;
+  box-sizing: border-box;
+  padding: 2rem 2rem 2rem 0;
+  background-color: #000000;
+}
+
+.news .news-control {
+  margin: 5rem 0;
+}
+
+.news .news-control button {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  vertical-align: sub;
+}
+
+.news .news-control button img {
+  object-fit: cover;
+}
+
+.news .news-control button.before {
+  margin-right: 2rem;
+}
+
+.news .news-control button.next {
+  margin-left: 2rem;
+}
+
+.news .news-control span {
+  display: inline-block;
+  font-size: 2rem;
+  color: white;
+}
+
+.news .news-control .percentage {
+  display: inline-block;
+  width: 20%;
+  height: 0.5rem;
+  margin: 0 0.5rem;
+  background: white;
+  border-radius: 1rem;
+  vertical-align: text-top;
+}
+
+.news .news-list {
+  width: fit-content;
+  position: relative;
+  top: 0;
+  left: 0%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.news .news-list li {
+  display: inline-block;
+  margin: 10rem 2rem;
+  width: 32rem;
+  height: 35rem;
+  background-color: white;
+}
+
+.news .news-list li:nth-child(1) {
+  margin-left: 0;
 }
 
 /* albums */
@@ -297,7 +466,7 @@ table .mv img {
   background-image: url(../../images/blackpink/earthrounding.gif);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: top center;
   background-attachment: fixed;
   height: 800px;
   margin: 0;
@@ -307,10 +476,11 @@ table .mv img {
   width: 146rem;
   margin: 0 auto;
   color: #f4a5b7;
-  font-size: 7rem;
-  font-weight: bolder;
+  font-size: 8rem;
+  font-family: "Exo", "NanumSquare", "Margun Gothic", sans-serif;
+  font-weight: bold;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 2rem 2rem 2rem 0;
 }
 
 .albums .album {
