@@ -11,28 +11,55 @@ body {
   background-color: #f4a5b7;
 }
 
+a {
+  text-decoration: none;
+}
+
+.skip a {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
+  background-color: #f4a5b7;
+  text-align: center;
+  transition: 0.1s ease;
+  font-size: 2rem;
+  font-weight: bold;
+  border-bottom: 0.1rem solid #fff;
+  color: #000000;
+  z-index: 99;
+}
+
+.skip a:focus {
+  top: 0;
+}
+
 .wrapper-h1 {
   background-color: #000000;
   width: 100%;
+  padding: 1rem 0;
   position: sticky;
+  border-bottom: 0.05rem solid #f4a5b7;
   top: 0;
   left: 0;
-  padding: 1rem 0;
-  box-sizing: border-box;
-  border: 0.8rem solid #000000;
-  border-bottom: 0.05rem solid #f4a5b7;
-  transition: 0.3s ease;
-  z-index: 99;
+  z-index: 10;
 }
 
 h1 {
   width: 146rem;
   margin: 0 auto;
+}
+
+h1 a {
+  box-sizing: border-box;
+  transition: 0.3s ease;
+  text-decoration: none;
   font-size: 5rem;
   font-weight: bolder;
+  text-shadow: 0.05rem 0.05rem #f4a5b7, -0.05rem -0.05rem #f4a5b7;
   font-family: Arial, Helvetica, sans-serif;
   color: #f4a5b7;
-  text-shadow: 0.05rem 0.05rem #f4a5b7, -0.05rem -0.05rem #f4a5b7;
 }
 
 h1 .deco.rotate {
@@ -55,6 +82,21 @@ section {
   position: relative;
 }
 
+.banner .banner-viewer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.banner ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease-in-out;
+}
+
 .banner li {
   position: absolute;
   top: 0;
@@ -66,6 +108,7 @@ section {
   background-position: center;
   width: 100%;
   height: 100%;
+  transition: 0.5s ease;
 }
 
 .banner li img {
@@ -99,7 +142,6 @@ section {
 .banner .controls .control {
   cursor: pointer;
   border: none;
-  outline: none;
 }
 
 .banner .controls .line {
@@ -115,10 +157,15 @@ section {
   position: absolute;
   top: 2rem;
   left: 0;
+  transition: 0.3s ease;
 }
 
 .banner .controls .index:nth-child(2) {
   left: 3rem;
+}
+
+.banner .controls .index.active {
+  background-color: #f4a5b7;
 }
 
 .banner .controls .stop {
@@ -151,7 +198,7 @@ section {
   --intro-imgage-height: 70rem;
 }
 
-.intro .thumnail {
+.intro .thumbnail {
   display: inline-block;
   height: 70rem;
   width: 19%;
@@ -159,7 +206,7 @@ section {
   position: relative;
 }
 
-.intro .thumnail .view-box {
+.intro .thumbnail .thumbnail-viewer {
   width: 100%;
   height: 20%;
   box-sizing: border-box;
@@ -173,39 +220,45 @@ section {
   pointer-events: none;
 }
 
-.intro .thumnail:hover .view-box {
-  top: 40%;
-}
-
-.intro .thumnail ul {
+.intro .thumbnail ul {
   width: 100%;
   height: 100%;
 }
 
-.intro .thumnail li {
+.intro .thumbnail li {
   width: 100%;
   height: 20%;
   background-color: #000000;
   position: relative;
   top: 0;
   left: 0;
-  overflow: hidden;
   box-sizing: border-box;
   cursor: pointer;
 }
 
-.intro .thumnail li img {
+.intro .thumbnail li button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: inherit;
+  padding: 0;
+  outline-width: 0.5rem;
+}
+
+.intro .thumbnail li img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top bottom;
+  transition: 0.5s ease;
 }
 
-.intro .thumnail li img.top {
+.intro .thumbnail li img.top {
   object-position: top;
 }
 
-.intro .thumnail li:after {
+.intro .thumbnail li:after {
   content: "";
   position: absolute;
   top: 0;
@@ -216,7 +269,8 @@ section {
   opacity: 0.7;
 }
 
-.intro .thumnail li:hover:after {
+.intro .thumbnail li:hover:after,
+.intro .thumbnail li.active:after {
   transition: 0.5s ease;
   background-color: transparent;
 }
@@ -244,8 +298,8 @@ section {
   border-radius: 50%;
   background-color: #f4a5b7;
   border: none;
-  outline: none;
   margin: 0 0.5rem;
+  cursor: pointer;
 }
 
 .intro .original .size-controls img {
@@ -259,7 +313,7 @@ section {
   top: 0;
   left: 0;
   width: 100%;
-  height: 350rem;
+  height: inherit;
   background-color: #000000;
   transition: 0.4s ease;
 }
@@ -268,23 +322,23 @@ section {
   position: absolute;
   left: 0;
   width: 100%;
-  height: 70rem;
+  height: 100%;
+  background-color: #000000;
 }
-
 .intro .original .images-list li:nth-child(1) {
   top: 0;
 }
 .intro .original .images-list li:nth-child(2) {
-  top: 70rem;
+  top: 100%;
 }
 .intro .original .images-list li:nth-child(3) {
-  top: 140rem;
+  top: 200%;
 }
 .intro .original .images-list li:nth-child(4) {
-  top: 210rem;
+  top: 300%;
 }
 .intro .original .images-list li:nth-child(5) {
-  top: 280rem;
+  top: 400%;
 }
 
 .intro .images-list img {
@@ -292,7 +346,10 @@ section {
   height: 100%;
   object-fit: cover;
   object-position: center center;
-  transition: 0.3s ease;
+}
+
+.intro .images-list li.contain img {
+  object-fit: contain;
 }
 
 .intro .images-list .source {
@@ -332,12 +389,12 @@ section {
   color: #f4a5b7;
   font-size: 2rem;
   border: none;
-  outline: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
 }
 
 .intro p {
+  display: none;
   width: 60%;
   margin: 0 auto;
   font-size: 2rem;
@@ -348,12 +405,23 @@ section {
   word-break: break-all;
 }
 
+.intro p.active {
+  display: block;
+}
+
 /* members */
 
 .members {
   font-size: 0;
   letter-spacing: 0;
   white-space: nowrap;
+  max-width: initial;
+}
+
+.members .members-wrapper {
+  max-width: 146rem;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .members h2 {
@@ -381,10 +449,33 @@ section {
 }
 
 .members .member {
+  position: relative;
   display: inline-block;
   width: 25%;
-  overflow: hidden;
   background-color: #000000;
+  transition: 0.5s ease;
+  opacity: 0;
+}
+
+.members .member:nth-child(2) {
+  top: -8rem;
+}
+.members .member:nth-child(3) {
+  top: -8rem;
+  transition-delay: 0.2s;
+}
+.members .member:nth-child(4) {
+  top: -8rem;
+  transition-delay: 0.4s;
+}
+.members .member:nth-child(5) {
+  top: -8rem;
+  transition-delay: 0.6s;
+}
+
+.members .member.active {
+  opacity: 1;
+  top: 0;
 }
 
 .members .member img {
@@ -444,7 +535,6 @@ section {
   height: 2.5rem;
   background-color: transparent;
   border: none;
-  outline: none;
   vertical-align: sub;
 }
 
@@ -482,15 +572,25 @@ section {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
+  width: 0;
   height: 100%;
   background-color: #f4a5b7;
+  transition: 0.5s ease;
 }
 
 .news .news-list-viewer {
+  position: relative;
+  left: -8rem;
   width: 216rem;
   height: 100%;
   overflow: hidden;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.news .news-list-viewer.active {
+  left: 0;
+  opacity: 1;
 }
 
 .news .news-list {
@@ -521,18 +621,23 @@ section {
 }
 
 /* albums */
+/* albums */
 
 .albums {
   max-width: initial;
   margin-bottom: 10rem;
   width: 100%;
-  background-image: url(../../images/blackpink/earthrounding.gif);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
   background-attachment: fixed;
   height: 80rem;
   margin: 0;
+  background-image: url(../../images/blackpink/crown.jpg);
+}
+
+.albums.active {
+  background-image: url(../../images/blackpink/earthrounding.gif);
 }
 
 .albums .all-songs-wrapper {
@@ -555,8 +660,14 @@ section {
 }
 
 .albums .all-songs-wrapper li {
-  color: #f4a5b7;
+  color: #000000;
   font-size: 2.2rem;
+  opacity: 0.4;
+}
+
+.albums .all-songs-wrapper li:hover {
+  color: #f4a5b7;
+  opacity: 1;
 }
 
 .albums .albums-wrapper {
@@ -564,8 +675,31 @@ section {
   width: 100%;
   height: auto;
   position: relative;
-  margin: 10rem auto 0 auto;
+  margin: 8rem auto 0 auto;
   text-align: center;
+}
+
+.albums .albums-wrapper .show-all {
+  display: block;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: "Exo", "NanumSquare", "Margun Gothic", sans-serif;
+  text-shadow: -0.05rem -0.05rem white, 0.05rem 0.05rem #000000;
+  text-shadow: -0.1rem -0.1rem white, 0.1rem 0.1rem #000000;
+  color: #f4a5b7;
+  border-radius: 1rem;
+  border: 0.3rem outset #f4a5b7;
+  background-color: #000000;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.albums .albums-wrapper .show-all.active {
+  border-style: inset;
+  text-shadow: 0.05rem 0.05rem white, -0.05rem -0.05rem #000000;
+  text-shadow: 0.1rem 0.1rem white, -0.1rem -0.1rem #000000;
 }
 
 .albums.nonactive {
@@ -589,6 +723,13 @@ section {
   display: inline-block;
   vertical-align: text-top;
   white-space: nowrap;
+  cursor: pointer;
+  transition: 0.5s ease;
+  opacity: 0.4;
+}
+
+.albums .album:hover {
+  opacity: 1;
 }
 
 .albums img {
@@ -622,7 +763,6 @@ section {
   background-repeat: no-repeat;
   background-color: transparent;
   border: none;
-  outline: none;
   margin-left: 2rem;
   cursor: pointer;
 }
@@ -633,7 +773,6 @@ section {
   background-repeat: no-repeat;
   background-color: transparent;
   border: none;
-  outline: none;
   cursor: pointer;
 }
 
@@ -645,14 +784,14 @@ section {
   margin-bottom: 0;
 }
 
-.game .wrapper {
+.game .game-wrapper {
   max-width: 146rem;
   width: 100%;
   margin: 0 auto;
   height: 80rem;
 }
 
-.game .wrapper h2 {
+.game .game-wrapper h2 {
   width: 100%;
   font-size: 8rem;
   font-weight: bold;
@@ -663,7 +802,7 @@ section {
   padding: 2rem 2rem 2rem 0;
 }
 
-.game .wrapper .units {
+.game .game-wrapper .units {
   position: relative;
   width: 100%;
   height: 80%;
@@ -671,7 +810,7 @@ section {
   white-space: nowrap;
 }
 
-.game .wrapper .units:after {
+.game .game-wrapper .units:after {
   content: "";
   position: absolute;
   left: 0;
@@ -681,14 +820,14 @@ section {
   background-color: #f4a5b7;
 }
 
-.game .wrapper .units .unit {
+.game .game-wrapper .units .unit {
   display: inline-block;
   width: 10rem;
   height: 100%;
   margin: 0 1rem;
 }
 
-.game .wrapper .unit div {
+.game .game-wrapper .unit div {
   width: 9rem;
   height: 9rem;
   background-color: black;
@@ -696,23 +835,48 @@ section {
   border-radius: 50%;
 }
 
-.game .wrapper .unit.jennie div {
+.game .game-wrapper .unit.jennie div {
   background-image: url(../../images/blackpink/0000926654.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
-.game .wrapper .unit.rose div {
+.game .game-wrapper .unit.rose div {
   background-image: url(../../images/blackpink/roseyg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
-.game .wrapper .unit.lisa div {
+.game .game-wrapper .unit.lisa div {
   background-image: url(../../images/blackpink/0002650199.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
-.game .wrapper .unit.jisoo div {
+.game .game-wrapper .unit.jisoo div {
   background-image: url(../../images/blackpink/0001567912_0019.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.game .game-wrapper button {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+  padding: 0.5rem 1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: "Exo", "NanumSquare", "Margun Gothic", sans-serif;
+  text-shadow: -0.05rem -0.05rem white, 0.05rem 0.05rem #000000;
+  text-shadow: -0.1rem -0.1rem white, 0.1rem 0.1rem #000000;
+  color: #f4a5b7;
+  border-radius: 1rem;
+  border: 0.3rem outset #f4a5b7;
+  background-color: #000000;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.game .game-wrapper button:focus {
+  border-style: inset;
+  text-shadow: 0.05rem 0.05rem white, -0.05rem -0.05rem #000000;
+  text-shadow: 0.1rem 0.1rem white, -0.1rem -0.1rem #000000;
 }

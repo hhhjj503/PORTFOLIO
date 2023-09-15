@@ -13,83 +13,100 @@
     <title>BLACKPINK History</title>
   </head>
   <body>
+    <div class="skip">
+      <a href="#main">본문 바로가기</a>
+    </div>
     <!-- benner -->
     <div class="wrapper-h1">
-      <h1>BLA<span class="deco">C</span>KPINK HISTORY</h1>
+      <h1>
+        <a href="index.html">BLA<span class="deco">C</span>KPINK HISTORY</a>
+      </h1>
     </div>
     <section class="banner">
-      <ul>
-        <li>
-          <img
-            src="../../source/images/blackpink/68468368.jpg"
-            alt="BLACKPINK 2019 PRIVATE STAGE [Chapter 1] 2019.09/21(SAT) 1PM/6PM OLYMPIC PARK OLYMPIC HALL"
-          />
-          <span class="out-text">출처 : 블랙핑크 페이스북</span>
-        </li>
-        <li>
-          <img
-            src="../../source/images/blackpink/131108774.jpg"
-            alt="BLACKPINK LIVESTREAM CONCERT: THE SHOW 2021.1.31 SYN 2PM(KST)"
-          />
-          <span class="out-text">출처 : 블랙핑크 페이스북</span>
-        </li>
-      </ul>
+      <div class="banner-viewer">
+        <ul>
+          <li>
+            <img
+              src="../../source/images/blackpink/68468368.jpg"
+              alt="BLACKPINK 2019 PRIVATE STAGE [Chapter 1] 2019.09/21(SAT) 1PM/6PM OLYMPIC PARK OLYMPIC HALL"
+            />
+            <span class="out-text">출처 : 블랙핑크 페이스북</span>
+          </li>
+          <li>
+            <img
+              src="../../source/images/blackpink/131108774.jpg"
+              alt="BLACKPINK LIVESTREAM CONCERT: THE SHOW 2021.1.31 SYN 2PM(KST)"
+            />
+            <span class="out-text">출처 : 블랙핑크 페이스북</span>
+          </li>
+        </ul>
+      </div>
       <div class="controls">
         <div class="line">
-          <button class="control index"></button>
-          <button class="control index"></button>
-          <button class="control stop"></button>
-          <button class="control play"></button>
+          <button type="button" class="control index active"></button>
+          <button type="button" class="control index"></button>
+          <button type="button" class="control play"></button>
+          <button type="button" class="control stop"></button>
         </div>
       </div>
     </section>
     <!-- intro -->
-    <section class="intro">
-      <div class="thumnail">
-        <div class="view-box"></div>
+    <section class="intro" id="main">
+      <div class="thumbnail">
+        <div class="thumbnail-viewer"></div>
         <ul>
-          <li>
-            <img
-              src="../../source/images/blackpink/channels4_profile.jpg"
-              alt="블랙핑크썸네일이미지"
-            />
+          <li class="active">
+            <button type="button">
+              <img
+                src="../../source/images/blackpink/channels4_profile.jpg"
+                alt="블랙핑크썸네일이미지"
+              />
+            </button>
           </li>
           <li>
-            <img
-              class="top"
-              src="../../source/images/blackpink/blackpink.jpg"
-              alt="블랙핑크썸네일이미지"
-            />
+            <button type="button">
+              <img
+                class="top"
+                src="../../source/images/blackpink/blackpink.jpg"
+                alt="블랙핑크썸네일이미지"
+              />
+            </button>
           </li>
           <li>
-            <img
-              src="../../source/images/blackpink/main-img.jpg"
-              alt="블랙핑크썸네일이미지"
-            />
+            <button type="button">
+              <img
+                src="../../source/images/blackpink/main-img.jpg"
+                alt="블랙핑크썸네일이미지"
+              />
+            </button>
           </li>
           <li>
-            <img
-              src="../../source/images/blackpink/299204677.jpg"
-              alt="BLACKPINK Pre-Release-Single PINK VENOM 2022.08.19 12AM EST & 1PM KST"
-            />
+            <button type="button">
+              <img
+                src="../../source/images/blackpink/299204677.jpg"
+                alt="BLACKPINK Pre-Release-Single PINK VENOM 2022.08.19 12AM EST & 1PM KST"
+              />
+            </button>
           </li>
           <li>
-            <img
-              src="../../source/images/blackpink/299145099.jpg"
-              alt="BLACKPINK Pre-Release-Single PINK VENOM"
-            />
+            <button type="button">
+              <img
+                src="../../source/images/blackpink/299145099.jpg"
+                alt="BLACKPINK Pre-Release-Single PINK VENOM"
+              />
+            </button>
           </li>
         </ul>
       </div>
       <div class="original">
         <div class="size-controls">
-          <button class="size-cover">
+          <button type="button" class="size-cover">
             <img
               src="../../source/images/blackpink/plus-solid.svg"
               alt="확대버튼이미지"
             />
           </button>
-          <button class="size-contain">
+          <button type="button" class="size-contain">
             <img
               src="../../source/images/blackpink/minus-solid.svg"
               alt="축소버튼이미지"
@@ -140,10 +157,10 @@
         <div class="line"></div>
         <h2>BLACKPINK</h2>
         <div class="translate">
-          <button class="language">K</button>
-          <button class="language">E</button>
+          <button type="button" class="language korea">K</button>
+          <button type="button" class="language english">E</button>
         </div>
-        <p>
+        <p class="active">
           BLACKPINK(블랙핑크)는 2016년 8월 8일에 데뷔한 대한민국의 YG
           엔터테인먼트 소속 4인조 다국적 걸 그룹이다. YG 엔터테인먼트 소속
           아티스트들 중 처음으로 리더가 없는 그룹으로, 구성원 네 명이 친구처럼
@@ -179,85 +196,78 @@
           its global reach with "Ddu-Du Ddu-Du" (2018), which was the first song
           by a Korean female group to enter the UK Singles Chart and receive a
           certification from the Recording Industry Association of America
-          (RIAA).[3] Its music video was the first by a Korean group to surpass
-          one billion and two billion views and is the most-viewed by a Korean
-          group on YouTube.[4] Blackpink's 2018 song "Kiss and Make Up" was the
-          first by a Korean group to receive a certification from the British
-          Phonographic Industry (BPI) and a platinum certification from the
-          Australian Recording Industry Association (ARIA).[5] Their music
-          videos for "Kill This Love" (2019) and "How You Like That" (2020) each
-          set records for the most-viewed music video within the first 24 hours
-          of release, with the latter breaking five Guinness World Records.[6]
-          (source : wikipedia)
+          (RIAA). (source : wikipedia)
         </p>
       </div>
     </section>
     <!-- members -->
     <section class="members">
-      <h2>MEMBERs</h2>
-      <div class="member">
-        <h4>제니(JENNIE)</h4>
-        <img
-          src="../../source/images/blackpink/4ae1ec53b817.jpg"
-          alt="JENNIE SOLO 900 MILLION VIEWS ON YOUTUBE"
-        />
-        <a
-          href="https://www.youtube.com/watch?v=b73BI9eUkjM&ab_channel=BLACKPINK"
-          target="_blank"
-        >
+      <div class="members-wrapper">
+        <h2>MEMBERs</h2>
+        <div class="member">
+          <h4>제니(JENNIE)</h4>
           <img
-            src="../../source/images/blackpink/solothumnail.JPG"
-            alt="JENNIE - SOLO M/V YG OFFICIAL"
+            src="../../source/images/blackpink/4ae1ec53b817.jpg"
+            alt="JENNIE SOLO 900 MILLION VIEWS ON YOUTUBE"
           />
-        </a>
-      </div>
-      <div class="member">
-        <h4>로제(ROSE)</h4>
-        <img
-          src="../../source/images/blackpink/0000990112_00.jpg"
-          alt="200 MILLION VIEWS ON YOUTUBE ROSE GONE"
-        />
-        <a
-          href="https://www.youtube.com/watch?v=b73BI9eUkjM&ab_channel=BLACKPINK"
-          target="_blank"
-        >
+          <a
+            href="https://www.youtube.com/watch?v=b73BI9eUkjM&ab_channel=BLACKPINK"
+            target="_blank"
+          >
+            <img
+              src="../../source/images/blackpink/solothumnail.JPG"
+              alt="JENNIE - SOLO M/V YG OFFICIAL"
+            />
+          </a>
+        </div>
+        <div class="member">
+          <h4>로제(ROSE)</h4>
           <img
-            src="../../source/images/blackpink/gonethumnail.JPG"
-            alt="ROSE - GOne M/V YG OFFICIAL"
+            src="../../source/images/blackpink/0000990112_00.jpg"
+            alt="200 MILLION VIEWS ON YOUTUBE ROSE GONE"
           />
-        </a>
-      </div>
-      <div class="member">
-        <h4>리사(LALISA)</h4>
-        <img
-          src="../../source/images/blackpink/AKR20220109039500005.jpg"
-          alt="LISA FIRST SINGLE ALBUM LALISA 400M VIEWS ON YOUTUBE"
-        />
-        <a
-          href="https://www.youtube.com/watch?v=b73BI9eUkjM&ab_channel=BLACKPINK"
-          target="_blank"
-        >
+          <a
+            href="https://www.youtube.com/watch?v=b73BI9eUkjM&ab_channel=BLACKPINK"
+            target="_blank"
+          >
+            <img
+              src="../../source/images/blackpink/gonethumnail.JPG"
+              alt="ROSE - GOne M/V YG OFFICIAL"
+            />
+          </a>
+        </div>
+        <div class="member">
+          <h4>리사(LALISA)</h4>
           <img
-            src="../../source/images/blackpink/moneythumnail.JPG"
-            alt="LISA - LALISA M/V YG OFFICIAL"
+            src="../../source/images/blackpink/AKR20220109039500005.jpg"
+            alt="LISA FIRST SINGLE ALBUM LALISA 400M VIEWS ON YOUTUBE"
           />
-        </a>
-      </div>
-      <div class="member">
-        <h4>지수(JISOO)</h4>
-        <img
-          src="../../source/images/blackpink/e37c28054a.jpg"
-          alt="JISOO 200M views on youtube flower music video 200 million views on youtube"
-        />
-        <a
-          href="https://www.youtube.com/watch?v=b73BI9eUkjM&ab_channel=BLACKPINK"
-          target="_blank"
-        >
+          <a
+            href="https://www.youtube.com/watch?v=b73BI9eUkjM&ab_channel=BLACKPINK"
+            target="_blank"
+          >
+            <img
+              src="../../source/images/blackpink/moneythumnail.JPG"
+              alt="LISA - LALISA M/V YG OFFICIAL"
+            />
+          </a>
+        </div>
+        <div class="member">
+          <h4>지수(JISOO)</h4>
           <img
-            src="../../source/images/blackpink/flowerthumnail.JPG"
-            alt="JISOO - 꽃(FLOWER) M/V YG OFFICIAL"
+            src="../../source/images/blackpink/e37c28054a.jpg"
+            alt="JISOO 200M views on youtube flower music video 200 million views on youtube"
           />
-        </a>
+          <a
+            href="https://www.youtube.com/watch?v=b73BI9eUkjM&ab_channel=BLACKPINK"
+            target="_blank"
+          >
+            <img
+              src="../../source/images/blackpink/flowerthumnail.JPG"
+              alt="JISOO - 꽃(FLOWER) M/V YG OFFICIAL"
+            />
+          </a>
+        </div>
       </div>
     </section>
     <!-- news -->
@@ -265,18 +275,18 @@
       <div class="wrapper">
         <h2>NEWS</h2>
         <div class="news-controls">
-          <button class="before">
+          <button type="button" class="before">
             <img
               src="../../source/images/blackpink/chevron-left-solid.svg"
               alt="이전버튼이미지"
             />
           </button>
-          <span>01</span>
+          <span class="start-number"></span>
           <div class="percentage">
             <div class="bar"></div>
           </div>
-          <span>06</span>
-          <button class="next">
+          <span class="last-number"></span>
+          <button type="button" class="next">
             <img
               src="../../source/images/blackpink/chevron-right-solid.svg"
               alt="다음버튼이미지"
@@ -332,7 +342,7 @@
       </div>
     </section>
     <!-- albums -->
-    <section class="albums">
+    <section class="albums active">
       <h2>ALBUMs</h2>
       <div class="all-songs-wrapper">
         <ul>
@@ -373,7 +383,12 @@
           <li class="born-pink">Ready For Love</li>
         </ul>
       </div>
+      <div class="albums-controls">
+        <button type="button" class="constrol play"></button>
+        <button type="button" class="control stop"></button>
+      </div>
       <div class="albums-wrapper">
+        <button type="button" class="show-all">ALL</button>
         <div class="album">
           <img
             src="../../source/images/blackpink/squareone.jpg"
@@ -412,14 +427,10 @@
           />
         </div>
       </div>
-      <div class="albums-controls">
-        <button class="constrol play"></button>
-        <button class="control stop"></button>
-      </div>
     </section>
     <!-- game section -->
     <section class="game">
-      <div class="wrapper">
+      <div class="game-wrapper">
         <h2>RUN BLACKPINK</h2>
         <div class="units">
           <div class="unit jennie"><div></div></div>
@@ -427,6 +438,8 @@
           <div class="unit lisa"><div></div></div>
           <div class="unit jisoo"><div></div></div>
         </div>
+        <button type="button" class="game-start">시작</button>
+        <button type="button" class="game-replay">다시하기</button>
       </div>
     </section>
     <!-- <section class="performance">유튜브 영상</section> -->
