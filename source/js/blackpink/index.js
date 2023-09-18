@@ -18,6 +18,12 @@ window.addEventListener("load", () => {
   const imagesListLis = document.querySelectorAll(
     ".intro .original .images-list li"
   );
+  const thumbnailViewerMobile = document.querySelector(
+    ".intro .thumbnail-mobile .thumbnail-viewer-mobile"
+  );
+  const thumbLisMobile = document.querySelectorAll(
+    ".intro .thumbnail-mobile li"
+  );
   const sizeCoverBtn = document.querySelector(
     ".intro .size-controls .size-cover"
   );
@@ -260,6 +266,16 @@ window.addEventListener("load", () => {
     });
   } //썸네일 클릭시 대형이미지 슬라이드
 
+  for (let i = 0; i < thumbLisMobile.length; i++) {
+    thumbLisMobile[i].addEventListener("click", function () {
+      removeAllClassThenAddClass(thumbLisMobile, thumbLisMobile[i], "active");
+      if (i < thumbLisMobile.length) {
+        offLeftPosition(thumbnailViewerMobile, i * 20, "%");
+      }
+      offTopPosition(imagesListUl, -(i * 100), "%");
+    });
+  } //모바일 썸네일 클릭시 대형이미지 슬라이드
+
   //section.banner
   let bannerAutoSlide = setInterval(function () {
     let event = new Event("click");
@@ -324,6 +340,10 @@ window.addEventListener("load", () => {
 
   function offTopPosition(element, value, unit) {
     element.style.top = value + unit;
+  }
+
+  function offLeftPosition(element, value, unit) {
+    element.style.left = value + unit;
   }
 
   function throttle(callback, limit = 1000 / 15) {
