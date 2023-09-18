@@ -495,8 +495,14 @@ section {
   display: block;
 }
 
-/* members */
+/* intro 반응형 */
+@media screen and (max-width: 1281px) {
+}
 
+@media screen and (max-width: 600px) {
+}
+
+/* members */
 .members {
   font-size: 0;
   letter-spacing: 0;
@@ -584,9 +590,14 @@ section {
   height: 31.5rem;
   object-fit: cover;
 }
+/* members section 반응형 */
+@media screen and (max-width: 1281px) {
+}
+
+@media screen and (max-width: 600px) {
+}
 
 /* news */
-
 .news {
   max-width: initial;
   background-color: black;
@@ -707,10 +718,14 @@ section {
 .news .news-list li:nth-child(1) {
   margin-left: 0;
 }
+/* news section 반응형 */
+@media screen and (max-width: 1281px) {
+}
+
+@media screen and (max-width: 600px) {
+}
 
 /* albums */
-/* albums */
-
 .albums {
   max-width: initial;
   width: 100%;
@@ -871,9 +886,14 @@ section {
   border: none;
   cursor: pointer;
 }
+/* album section 반응형 */
+@media screen and (max-width: 1281px) {
+}
+
+@media screen and (max-width: 600px) {
+}
 
 /* game */
-
 .game {
   max-width: initial;
   background-image: url(../../images/blackpink/grass.JPG);
@@ -1020,9 +1040,33 @@ section {
   font-weight: bold;
   font-size: 7rem;
 }
-
+/* game 반응형 */
 @media screen and (max-width: 1281px) {
 }
 
 @media screen and (max-width: 600px) {
+}
+
+/* 스크롤 이동버튼 */
+.scroll-up {
+  position: fixed;
+  width: 5rem;
+  height: 5rem;
+  right: 2%;
+  bottom: 2%;
+  background-color: #f4a5b7;
+  background-image: url(../../images/blackpink/chevron-up-solid.svg);
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: center center;
+  cursor: pointer;
+  opacity: 0;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.scroll-up.active {
+  opacity: 1;
+  pointer-events: all;
 }

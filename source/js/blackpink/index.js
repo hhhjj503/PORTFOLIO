@@ -93,6 +93,12 @@ window.addEventListener("load", () => {
     "url(../../source/images/blackpink/0001567912_0019.jpg)", //지수이미지
   ];
   const result = document.querySelector(".game .game-wrapper .result");
+  //scroll-up
+  const scrollUp = document.querySelector(".scroll-up");
+
+  scrollUp.addEventListener("click", function () {
+    html.scrollTop = 0;
+  });
 
   gameStart.addEventListener("click", function () {
     removeClass(this, "active");
@@ -236,6 +242,10 @@ window.addEventListener("load", () => {
       } else {
         removeClass(newsListViewer, "active");
       }
+
+      if (currentScrollTop > 200) {
+        addClass(scrollUp, "active");
+      } else removeClass(scrollUp, "active");
     })
   );
 
