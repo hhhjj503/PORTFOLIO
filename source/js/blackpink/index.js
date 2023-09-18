@@ -62,9 +62,110 @@ window.addEventListener("load", () => {
   const albumsSection = document.querySelector(".albums");
   const albumsBGPlay = document.querySelector(".albums .albums-controls .play");
   const albumsBGStop = document.querySelector(".albums .albums-controls .stop");
+  const allSongs = document.querySelectorAll(".albums .all-songs-wrapper li");
+  const albums = document.querySelectorAll(".albums .albums-wrapper .album");
+  const albumNames = [
+    "square-one",
+    "square-two",
+    "square-up",
+    "kill-this-love",
+    "the-album",
+    "born-pink",
+  ];
+  const showAll = document.querySelector(".albums .albums-wrapper .show-all");
+  //section.game
+  const unitImages = document.querySelectorAll(".game .units .unit div");
+  const unit = document.querySelector(".game .units .unit");
+  const gameStart = document.querySelector(".game .game-start");
+  const gameReset = document.querySelector(".game .game-reset");
+  let moving = false;
+  let scores = [0, 0, 0, 0];
+  let urls = [
+    "url(../../source/images/blackpink/0000926654.jpg)", //제니이미지
+    "url(../../source/images/blackpink/roseyg.jpg)", //로제이미지
+    "url(../../source/images/blackpink/0002650199.jpg)", //리사이미지
+    "url(../../source/images/blackpink/0001567912_0019.jpg)", //지수이미지
+  ];
+  const result = document.querySelector(".game .game-wrapper .result");
+
+  gameStart.addEventListener("click", function () {
+    removeClass(this, "active");
+    moving = setInterval(function () {
+      const limit = unit.offsetHeight - unitImages[0].offsetHeight * 1.5;
+
+      for (let i = 0; i < unitImages.length; i++) {
+        scores[i] = scores[i] + Math.floor(Math.random() * (100 - 50) + 50);
+        unitImages[i].style.top = scores[i] + "px";
+
+        if (scores[i] > limit) {
+          clearInterval(moving);
+          const maxScore = Math.max(...scores);
+
+          for (let j = 0; j < scores.length; j++) {
+            if (maxScore === scores[j]) {
+              result.style.backgroundImage = urls[j];
+              addClass(result, "active");
+            }
+          }
+          addClass(gameReset, "active");
+        }
+      }
+    }, 1000);
+  });
+
+  gameReset.addEventListener("click", function () {
+    scores = [0, 0, 0, 0];
+    for (let i = 0; i < unitImages.length; i++) {
+      unitImages[i].style.top = 0 + "px";
+      removeClass(gameReset, "active");
+      addClass(gameStart, "active");
+      removeClass(result, "active");
+    }
+  });
+
+  window.addEventListener("resize", function () {
+    memberThreshold =
+      window.pageYOffset +
+      membersSection.getBoundingClientRect().top -
+      html.scrollHeight * 0.1;
+    newsThreshold =
+      window.pageYOffset +
+      newsSection.getBoundingClientRect().top -
+      html.scrollHeight * 0.08;
+  }); //resize 이벤트
 
   //section.albums
-  //all 버튼 기능부터 추가하면됨
+  showAll.addEventListener("click", function () {
+    if (!this.classList.contains("active")) {
+      addAllClass(albums, "active");
+      addAllClass(allSongs, "active");
+    }
+  });
+
+  for (let i = 0; i < allSongs.length; i++) {
+    if (allSongs[i].classList.contains(albumNames[0])) {
+      addClass(allSongs[i], "active");
+    }
+  } //홈페이지 로딩시 default active 할 요소
+
+  for (let i = 0; i < albums.length; i++) {
+    albums[i].addEventListener("click", function () {
+      let addingClass = false;
+      const albumName = albumNames[i];
+      if (!addingClass) {
+        addingClass = true;
+        removeAllClass(albums, "active");
+        addClass(albums[i], "active");
+        removeAllClass(allSongs, "active");
+        for (let j = 0; j < allSongs.length; j++)
+          if (allSongs[j].classList.contains(albumName)) {
+            addClass(allSongs[j], "active");
+            addingClass = false;
+          }
+      }
+    });
+  } //album 버튼 클릭이벤트
+
   albumsBGPlay.addEventListener("click", function () {
     addClass(albumsSection, "active");
   });
@@ -78,34 +179,36 @@ window.addEventListener("load", () => {
   plusWidthValue(newsProgressBar, newsCurrentIndex, progressValue, "%");
   newsBeforeBtn.addEventListener("click", function () {
     if (newsCurrentIndex <= 1) {
-      newsCurrentIndex = 1;
-      return;
+      newsCurrentIndex = newsListLis.length;
+      newsOffsetLeft =
+        newsListLis[newsCurrentIndex - 1].offsetWidth * newsListLis.length -
+        120; //중복되는 margin 제거
+      newsUl.style.left = -newsOffsetLeft + "px";
+    } else {
+      newsCurrentIndex--;
+      newsOffsetLeft =
+        newsOffsetLeft - (newsListLis[newsCurrentIndex - 1].offsetWidth + 40);
+      newsOffsetLeft = Number.parseInt(newsOffsetLeft);
+      newsUl.style.left = -newsOffsetLeft + "px";
     }
-    newsCurrentIndex--;
     newsStartIndex.innerText = "0" + newsCurrentIndex;
     minusWidthValue(newsProgressBar, newsCurrentIndex, progressValue, "%");
-    //
-    newsOffsetLeft =
-      newsOffsetLeft - (newsListLis[newsCurrentIndex - 1].offsetWidth + 40);
-    newsOffsetLeft = Number.parseInt(newsOffsetLeft);
-    newsUl.style.left = -newsOffsetLeft + "px";
-    console.log(newsOffsetLeft);
-  });
+  }); //뉴스 슬라이더 다음버튼
   newsNextBtn.addEventListener("click", function () {
     if (newsCurrentIndex == newsListLis.length) {
-      newsCurrentIndex = newsListLis.length;
-      return;
+      newsCurrentIndex = 1;
+      newsOffsetLeft = 0;
+      newsUl.style.left = 0 + "px";
+    } else {
+      newsCurrentIndex++;
+      newsOffsetLeft =
+        newsOffsetLeft + newsListLis[newsCurrentIndex - 1].offsetWidth + 40; //margin 40
+      newsOffsetLeft = Number.parseInt(newsOffsetLeft);
+      newsUl.style.left = -newsOffsetLeft + "px";
     }
-    newsCurrentIndex++;
-    newsStartIndex.innerText = "0" + newsCurrentIndex;
     plusWidthValue(newsProgressBar, newsCurrentIndex, progressValue, "%");
-    //
-    newsOffsetLeft =
-      newsOffsetLeft + newsListLis[newsCurrentIndex - 1].offsetWidth + 40; //margin 40
-    newsOffsetLeft = Number.parseInt(newsOffsetLeft);
-    newsUl.style.left = -newsOffsetLeft + "px";
-    console.log(newsOffsetLeft);
-  });
+    newsStartIndex.innerText = "0" + newsCurrentIndex;
+  }); //뉴스 슬라이더 이전버튼
   function plusWidthValue(element, currentIndex, value, unit) {
     element.style.width = currentIndex * value + unit;
   }
