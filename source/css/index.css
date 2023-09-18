@@ -234,19 +234,23 @@ main .hj {
   left: 10%;
 }
 .vertex:nth-child(2) {
-  left: 20%;
+  left: 24%;
 }
 .vertex:nth-child(3) {
-  left: 40%;
+  left: 38%;
 }
 .vertex:nth-child(4) {
-  left: 50%;
+  left: 52%;
 }
+
 .vertex:nth-child(5) {
-  left: 80%;
+  left: 66%;
 }
 .vertex:nth-child(6) {
-  left: 90%;
+  left: 80%;
+}
+.vertex:nth-child(7) {
+  left: 94%;
 }
 
 .vertex b {

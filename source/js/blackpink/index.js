@@ -252,19 +252,20 @@ window.addEventListener("load", () => {
       addAllClass(imagesListLis, "contain");
     }
   });
-
-  //section.banner
-  let bannerAutoSlide = setInterval(function () {
-    let event = new Event("click");
-    bannerIndexs[bannerStartIndex].dispatchEvent(event);
-  }, 3000);
   for (let i = 0; i < thumbLis.length; i++) {
     thumbLis[i].addEventListener("click", function () {
       removeAllClassThenAddClass(thumbLis, thumbLis[i], "active");
       if (i < thumbLis.length) offTopPosition(thumbnailViewer, i * 20, "%");
       offTopPosition(imagesListUl, -(i * 100), "%");
     });
-  }
+  } //썸네일 클릭시 대형이미지 슬라이드
+
+  //section.banner
+  let bannerAutoSlide = setInterval(function () {
+    let event = new Event("click");
+    bannerIndexs[bannerStartIndex].dispatchEvent(event);
+  }, 3000);
+
   for (let i = 0; i < bannerIndexs.length; i++) {
     bannerIndexs[i].addEventListener("click", function () {
       removeAllClassThenAddClass(bannerIndexs, bannerIndexs[i], "active");
