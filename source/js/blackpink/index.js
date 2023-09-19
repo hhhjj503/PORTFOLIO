@@ -37,14 +37,14 @@ window.addEventListener("load", () => {
   const membersSection = document.querySelector(".members");
   const membersMember = document.querySelectorAll(".members .member");
   const html = document.querySelector("html");
-  const memberThreshold =
+  let memberThreshold =
     window.pageYOffset +
     membersSection.getBoundingClientRect().top -
     html.scrollHeight * 0.1;
   //section.news
   const newsSection = document.querySelector(".news");
   const newsListViewer = document.querySelector(".news .news-list-viewer");
-  const newsThreshold =
+  let newsThreshold =
     window.pageYOffset +
     newsSection.getBoundingClientRect().top -
     html.scrollHeight * 0.08;

@@ -47,7 +47,8 @@ a {
 }
 
 h1 {
-  width: 146rem;
+  max-width: 146rem;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -66,6 +67,23 @@ h1 .deco.rotate {
   font-size: 5.2rem;
   display: inline-block;
   transform: rotate(180deg);
+}
+
+@media screen and (max-width: 1281px) {
+  h1 {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 a {
+    font-size: 3rem;
+  }
+
+  h1 .deco.rotate {
+    font-size: 3.2rem;
+  }
 }
 
 section {
@@ -187,8 +205,38 @@ section {
   background-color: transparent;
 }
 
-.banner .controls .active {
-  display: show;
+/* banner */
+@media screen and (max-width: 1281px) {
+  .banner {
+    overflow: hidden;
+    height: 55vh;
+  }
+
+  .banner .controls {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .banner {
+    height: 20rem;
+  }
+
+  .banner .controls {
+    bottom: 25%;
+  }
+  .banner .controls .line {
+    border-top: 0;
+  }
+
+  .banner .controls .index {
+    width: 1rem;
+    height: 1rem;
+  }
+  .banner .controls .play,
+  .banner .controls .stop {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }
 
 /* intro */
@@ -253,7 +301,7 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top bottom;
+  object-position: top;
   transition: 0.5s ease;
 }
 
@@ -286,6 +334,12 @@ section {
   height: 20rem;
   white-space: nowrap;
   font-size: 0;
+}
+@media screen and (max-width: 1281px) {
+  .intro .thumbnail-mobile {
+    width: 95%;
+    margin: 0 auto;
+  }
 }
 
 .intro .thumbnail-mobile .thumbnail-viewer-mobile {
@@ -352,20 +406,11 @@ section {
   opacity: 0.7;
 }
 
-@media screen and (max-width: 600px) {
-  .intro .thumbnail {
-    display: none;
-  }
-  .intro .thumbnail-mobile {
-    display: block;
-  }
-}
-
 .intro .original {
   position: relative;
   display: inline-block;
   height: 70rem;
-  width: 80%;
+  width: 80.5%;
   overflow: hidden;
 }
 
@@ -497,9 +542,73 @@ section {
 
 /* intro 반응형 */
 @media screen and (max-width: 1281px) {
+  .intro {
+    padding: 16rem 0;
+  }
+
+  .intro .thumbnail {
+    display: none;
+  }
+  .intro .thumbnail-mobile {
+    display: block;
+    height: 20rem;
+  }
+
+  .intro .original {
+    display: block;
+    width: 95%;
+    height: 50rem;
+    margin: 0 auto;
+  }
+
+  .intro .intro-desc {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .intro p {
+    width: 80%;
+    font-size: 1.8rem;
+  }
+  .intro h2 {
+    font-size: 2.5rem;
+    margin: 1.8rem 0;
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (max-width: 600px) {
+  .intro {
+    padding: 8rem 0;
+  }
+
+  .intro .original {
+    height: 30rem;
+  }
+
+  .intro .original .size-controls button {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .intro .thumbnail-mobile {
+    display: block;
+    height: 10rem;
+  }
+
+  .intro h2 {
+    font-size: 2.2rem;
+  }
+
+  .intro .translate button {
+    font-size: 1.6rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .intro p {
+    width: 95%;
+    font-size: 1.3rem;
+  }
 }
 
 /* members */
@@ -592,9 +701,55 @@ section {
 }
 /* members section 반응형 */
 @media screen and (max-width: 1281px) {
+  .members {
+    white-space: initial;
+  }
+
+  .members .members-wrapper {
+    width: 95%;
+    position: relative;
+  }
+  .members h2 {
+    width: 100%;
+    font-size: 6rem;
+  }
+
+  .members .member {
+    width: 50%;
+  }
+  .members .member h4 {
+    font-size: 2rem;
+  }
+  .members .member img {
+    height: 50rem;
+    object-fit: cover;
+  }
 }
 
 @media screen and (max-width: 600px) {
+  .members h2 {
+    font-size: 4rem;
+  }
+
+  .members .members-wrapper {
+    padding-bottom: 8rem;
+  }
+
+  .members .member h4 {
+    font-size: 1.6rem;
+  }
+
+  .members .member img {
+    height: 30rem;
+  }
+
+  .members .member a {
+    height: 15rem;
+  }
+
+  .members .member a img {
+    height: 100%;
+  }
 }
 
 /* news */
@@ -720,9 +875,49 @@ section {
 }
 /* news section 반응형 */
 @media screen and (max-width: 1281px) {
+  .news {
+    overflow: hidden;
+  }
+
+  .news h2 {
+    font-size: 6rem;
+  }
+
+  .news .wrapper {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .news .news-controls .percentage {
+    width: 40%;
+  }
 }
 
 @media screen and (max-width: 600px) {
+  .news h2 {
+    font-size: 4rem;
+  }
+
+  .news .news-controls {
+    margin: 2rem 0;
+  }
+
+  .news .news-controls button {
+    width: 2rem;
+    height: 2rem;
+    vertical-align: inherit;
+  }
+
+  .news .news-controls button.before {
+    margin-right: 1rem;
+  }
+  .news .news-controls button.next {
+    margin-left: 1rem;
+  }
+
+  .news .news-controls span {
+    font-size: 1.6rem;
+  }
 }
 
 /* albums */
@@ -742,6 +937,8 @@ section {
 
 .albums.active {
   background-image: url(../../images/blackpink/earthrounding.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .albums .all-songs-wrapper {
@@ -814,7 +1011,7 @@ section {
 }
 
 .albums h2 {
-  width: 146rem;
+  max-width: 146rem;
   margin: 0 auto;
   color: #f4a5b7;
   font-size: 8rem;
@@ -888,9 +1085,73 @@ section {
 }
 /* album section 반응형 */
 @media screen and (max-width: 1281px) {
+  .albums {
+    background-attachment: initial;
+  }
+  .albums.active {
+    background-attachment: initial;
+  }
+
+  .albums h2 {
+    font-size: 6rem;
+  }
+
+  .albums .albums-controls {
+    width: 95%;
+  }
+
+  .albums .all-songs-wrapper {
+    width: 95%;
+  }
+  .albums .all-songs-wrapper li {
+    margin-right: 3rem;
+    line-height: 1.618;
+  }
+
+  .albums .albums-wrapper {
+    margin-top: 6rem;
+  }
+  .albums .albums-wrapper .show-all {
+    margin-bottom: 2rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
+  .albums h2 {
+    font-size: 4rem;
+  }
+
+  .albums .albums-controls {
+    padding-top: 3.5rem;
+  }
+
+  .albums .albums-controls .play,
+  .albums .albums-controls .stop {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  .albums .all-songs-wrapper {
+    margin-top: 2rem;
+  }
+
+  .albums .all-songs-wrapper li {
+    font-size: 1.6rem;
+    margin-right: 1rem;
+  }
+
+  .albums .albums-wrapper {
+    margin-top: 4rem;
+  }
+
+  .albums .albums-wrapper .show-all {
+    font-size: 1.2rem;
+  }
+
+  .albums .album {
+    width: 10rem;
+    height: 10rem;
+  }
 }
 
 /* game */
@@ -917,6 +1178,12 @@ section {
   color: #f4a5b7;
   box-sizing: border-box;
   padding: 2rem 2rem 2rem 0;
+}
+
+@media screen and (max-width: 600px) {
+  .game .game-wrapper h2 {
+    font-size: 4rem;
+  }
 }
 
 .game .game-wrapper .units {
@@ -1042,9 +1309,47 @@ section {
 }
 /* game 반응형 */
 @media screen and (max-width: 1281px) {
+  .game .game-wrapper h2 {
+    width: 95%;
+    margin: 0 auto;
+    font-size: 6rem;
+  }
+
+  .game .game-wrapper .units {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .game .game-wrapper button {
+    font-size: 1.4rem;
+  }
+
+  .game .game-wrapper .result {
+    width: 40%;
+  }
 }
 
 @media screen and (max-width: 600px) {
+  .game .game-wrapper {
+    height: 60rem;
+  }
+
+  .game .game-wrapper h2 {
+    font-size: 4rem;
+  }
+
+  .game .game-wrapper .units .unit {
+    width: 6rem;
+  }
+
+  .game .game-wrapper .unit div {
+    width: 7rem;
+    height: 7rem;
+    background-position: center;
+  }
+
+  .game .game-wrapper .units:after {
+    height: 0.3rem;
+  }
 }
 
 /* 스크롤 이동버튼 */
@@ -1069,4 +1374,19 @@ section {
 .scroll-up.active {
   opacity: 1;
   pointer-events: all;
+}
+/* scroll-up 반응형 */
+
+@media screen and (max-width: 600px) {
+  .scroll-up {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media screen and (max-width: 1281px) {
+  section h2 {
+    width: 95%;
+    margin: 0 auto;
+  }
 }
