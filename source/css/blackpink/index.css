@@ -15,7 +15,7 @@ a {
   text-decoration: none;
 }
 
-button {
+button.text-indent {
   text-indent: -9999em;
 }
 
@@ -1355,6 +1355,9 @@ section {
 
   .game .game-wrapper .units:after {
     height: 0.3rem;
+  }
+  .game .game-wrapper .result {
+    width: 60%;
   }
 }
 

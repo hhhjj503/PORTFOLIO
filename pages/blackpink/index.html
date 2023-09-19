@@ -9,6 +9,7 @@
       integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo="
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="../../source/js/blackpink/index.js"></script>
     <title>BLACKPINK History</title>
   </head>
@@ -43,10 +44,18 @@
       </div>
       <div class="controls">
         <div class="line">
-          <button type="button" class="control index active">인덱스1</button>
-          <button type="button" class="control index">인덱스2</button>
-          <button type="button" class="control play">시작버튼</button>
-          <button type="button" class="control stop">멈춤버튼</button>
+          <button type="button" class="control index text-indent active">
+            인덱스1
+          </button>
+          <button type="button" class="control text-indent index">
+            인덱스2
+          </button>
+          <button type="button" class="control text-indent play">
+            시작버튼
+          </button>
+          <button type="button" class="control text-indent stop">
+            멈춤버튼
+          </button>
         </div>
       </div>
     </section>
@@ -430,8 +439,12 @@
         </ul>
       </div>
       <div class="albums-controls">
-        <button type="button" class="constrol play">동적배경이미지 버튼</button>
-        <button type="button" class="control stop">정적배경이미지 버튼</button>
+        <button type="button" class="constrol text-indent play">
+          동적배경이미지 버튼
+        </button>
+        <button type="button" class="control text-indent stop">
+          정적배경이미지 버튼
+        </button>
       </div>
       <div class="albums-wrapper">
         <button type="button" class="show-all">SHOW ALL</button>
