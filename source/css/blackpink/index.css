@@ -214,6 +214,7 @@ section {
 
   .banner .controls {
     width: 90%;
+    bottom: 15%;
   }
 }
 @media screen and (max-width: 600px) {
@@ -722,13 +723,13 @@ section {
   }
   .members .member img {
     height: 50rem;
-    object-fit: cover;
+    object-fit: contain;
   }
 }
 
 @media screen and (max-width: 600px) {
   .members h2 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   .members .members-wrapper {
@@ -895,7 +896,7 @@ section {
 
 @media screen and (max-width: 600px) {
   .news h2 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   .news .news-controls {
@@ -1118,7 +1119,7 @@ section {
 
 @media screen and (max-width: 600px) {
   .albums h2 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   .albums .albums-controls {
@@ -1334,7 +1335,7 @@ section {
   }
 
   .game .game-wrapper h2 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   .game .game-wrapper .units .unit {
