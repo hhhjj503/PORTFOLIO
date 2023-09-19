@@ -1344,7 +1344,7 @@ section {
   .game .game-wrapper .unit div {
     width: 7rem;
     height: 7rem;
-    background-position: center;
+    background-position: top;
   }
 
   .game .game-wrapper .units:after {
