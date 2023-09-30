@@ -1,24 +1,29 @@
+@charset "UTF-8";
 @import url(./reset.css);
 
 html {
   scroll-behavior: smooth;
 }
-
 body {
   font-family: "Roboto", "Noto Sans KR", sans-serif;
   font-size: 62.5%;
 }
-
 body * {
   color: #333;
 }
-
 a {
   text-decoration: none;
 }
+/* 
 
-/*--------------------------------------- header ---------------------------------------*/
 
+
+
+
+
+
+*/
+/*================================ header ================================*/
 header {
   position: fixed;
   top: 0;
@@ -28,7 +33,6 @@ header {
   background-color: rgba(255, 255, 255, 0.8);
   z-index: 100;
 }
-
 header .skip a {
   position: absolute;
   top: -100%;
@@ -39,7 +43,6 @@ header .skip a {
   color: white;
   transition: 0.3s ease;
 }
-
 header .skip a:focus {
   visibility: visible;
   background-color: #333;
@@ -50,19 +53,16 @@ header .skip a:focus {
   top: 0%;
   opacity: 1;
 }
-
 header nav {
   max-width: 1200px;
   margin: 0 auto;
   white-space: nowrap;
 }
-
 header nav li {
   display: inline-block;
   width: 24%;
   text-align: center;
 }
-
 header nav a {
   display: inline-block;
   width: 100%;
@@ -134,28 +134,35 @@ h2 {
     font-size: 0.9rem;
   }
 }
+/* 
 
-/*--------------------------------------- main ---------------------------------------*/
+
+
+
+
+
+
+*/
+/*================================ main ================================*/
 /*----------- hj ----------*/
-
 main {
   margin-bottom: 350px;
   position: relative;
   z-index: 99;
 }
 
-main .hj {
+main #hj {
   max-width: 1200px;
   margin: 0 auto;
   padding: 150px 0;
 }
 
-.hj span {
+#hj span {
   color: #41bfcf;
   font-weight: bold;
 }
 
-.hj .intro {
+#hj .intro {
   width: 100%;
   padding-top: 70px;
   text-align: center;
@@ -163,11 +170,11 @@ main .hj {
   color: #444;
 }
 
-.hj .break {
+#hj .break {
   display: none;
 }
 
-.hj .graph {
+#hj .graph {
   position: relative;
   margin-top: 30px;
   padding: 200px 0;
@@ -212,7 +219,7 @@ main .hj {
   width: 10%;
 }
 
-.graph .vertex {
+.graph .vertex-li {
   position: absolute;
   bottom: 18%;
   color: white;
@@ -224,45 +231,36 @@ main .hj {
   transition: 0.3s ease;
 }
 
-.vertex.active {
+.vertex-li.active {
   transition: 0.3s ease;
-  transform: scale(120%);
+  transform: scale(1.2);
   background-color: #41bfcf;
 }
 
-.vertex:nth-child(1) {
+.vertex-li:nth-child(1) {
   left: 10%;
 }
-.vertex:nth-child(2) {
+.vertex-li:nth-child(2) {
   left: 24%;
 }
-.vertex:nth-child(3) {
+.vertex-li:nth-child(3) {
   left: 38%;
 }
-.vertex:nth-child(4) {
+.vertex-li:nth-child(4) {
   left: 52%;
 }
 
-.vertex:nth-child(5) {
+.vertex-li:nth-child(5) {
   left: 66%;
 }
-.vertex:nth-child(6) {
+.vertex-li:nth-child(6) {
   left: 80%;
 }
-.vertex:nth-child(7) {
+.vertex-li:nth-child(7) {
   left: 94%;
 }
 
-.vertex b {
-  font-weight: bold;
-}
-
-.vertex.active p {
-  visibility: visible;
-  opacity: 1;
-}
-
-.graph p {
+.graph p.vertex-p {
   position: absolute;
   bottom: 200%;
   right: 0;
@@ -277,11 +275,20 @@ main .hj {
   opacity: 0;
 }
 
-.hj .mobile {
+.vertex-li.active .vertex-p {
+  visibility: visible;
+  opacity: 1;
+}
+
+.vertex-li b {
+  font-weight: bold;
+}
+
+#hj .mobile {
   display: none;
 }
 
-.hj .mobile li {
+#hj .mobile li {
   box-sizing: border-box;
   background-color: whitesmoke;
   padding: 5px 0;
@@ -295,16 +302,16 @@ main .hj {
 }
 
 @media screen and (max-width: 1281px) {
-  main .hj {
+  main #hj {
     padding: 110px 0;
   }
 
-  .hj .intro {
+  #hj .intro {
     padding-top: 60px;
     font-size: 1.2rem;
   }
 
-  .hj .graph {
+  #hj .graph {
     padding: 150px 0;
     width: 70%;
   }
@@ -320,11 +327,11 @@ main .hj {
 }
 
 @media screen and (max-width: 600px) {
-  main .hj {
+  main #hj {
     padding: 80px 0;
   }
 
-  .hj .intro {
+  #hj .intro {
     width: 70%;
     margin: 0 auto;
     word-break: keep-all;
@@ -334,38 +341,56 @@ main .hj {
     line-height: 24px;
   }
 
-  .hj .break {
+  #hj .break {
     display: block;
   }
 
-  .hj .graph {
+  #hj .graph {
     display: none;
   }
 
-  .hj .mobile {
+  #hj .mobile {
     display: block;
   }
 }
 
-/*----------- wrapper ----------*/
+/* 
 
+
+
+
+
+
+
+*/
+/*----------- wrapper ----------*/
 .wrapper {
   background-color: #f2f7f8;
+}
+
+.wrapper.bg-white {
+  background-color: white;
 }
 
 .wrapper h2 {
   margin-bottom: 70px;
 }
+/* 
 
+
+
+
+
+
+
+*/
 /* skills */
-
-.skills {
+#skills {
   max-width: 1200px;
   margin: 0 auto;
   padding: 150px 0;
 }
-
-.skills li {
+#skills .skills-li {
   position: relative;
   width: 100%;
   box-sizing: border-box;
@@ -380,55 +405,53 @@ main .hj {
   transition: 0.3s ease;
   opacity: 0;
 }
-
-.skills.active li:nth-child(1) {
+#skills.active .skills-li:nth-child(1) {
   bottom: 0px;
   transition-delay: 0.1s;
   opacity: 1;
   background-color: #333;
   color: white;
 }
-.skills.active li:nth-child(2) {
+#skills.active .skills-li:nth-child(2) {
   bottom: 0px;
   transition-delay: 0.2s;
   opacity: 1;
 }
-.skills.active li:nth-child(3) {
+#skills.active .skills-li:nth-child(3) {
   bottom: 0px;
   transition-delay: 0.3s;
   opacity: 1;
   background-color: #333;
   color: white;
 }
-.skills.active li:nth-child(4) {
+#skills.active .skills-li:nth-child(4) {
   bottom: 0px;
   transition-delay: 0.4s;
   opacity: 1;
 }
-.skills.active li:nth-child(5) {
+#skills.active .skills-li:nth-child(5) {
   bottom: 0px;
   transition-delay: 0.5s;
   opacity: 1;
 }
-.skills.active li:nth-child(6) {
+#skills.active .skills-li:nth-child(6) {
   bottom: 0px;
   transition-delay: 0.6s;
   opacity: 1;
   background-color: #333;
   color: white;
 }
-.skills.active li:nth-child(7) {
+#skills.active .skills-li:nth-child(7) {
   bottom: 0px;
   transition-delay: 0.7s;
   opacity: 1;
 }
-.skills.active li:nth-child(8) {
+#skills.active .skills-li:nth-child(8) {
   bottom: 0px;
   transition-delay: 0.8s;
   opacity: 1;
 }
-
-.skills li.active {
+#skills .skills-li.active {
   color: white;
   border-radius: 30px;
 }
@@ -442,13 +465,13 @@ main .hj {
     margin-bottom: 60px;
   }
 
-  .skills {
+  #skills {
     max-width: 1200px;
     margin: 0 auto;
     padding: 110px 0;
   }
 
-  .skills li {
+  #skills .skills-li {
     width: 80%;
     margin: 5px auto;
   }
@@ -463,35 +486,37 @@ main .hj {
     margin-bottom: 30px;
   }
 
-  .skills {
+  #skills {
     max-width: 1200px;
     margin: 0 auto;
     padding: 80px 0;
   }
 
-  .skills li {
+  #skills .skills-li {
     width: 70%;
     margin: 3px auto;
     font-size: 1rem;
   }
 }
 
-/*----------- wrapper ----------*/
+/* 
 
-.wrapper.white {
-  background-color: white;
-}
 
+
+
+
+
+
+*/
 /* portfolio */
-
-.portfolio {
+#portfolio {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   padding: 150px 0;
 }
 
-.portfolio li {
+#portfolio .portfolio-li {
   position: relative;
   bottom: -50px;
   width: 100%;
@@ -501,12 +526,12 @@ main .hj {
   transition: all 0.3s ease;
 }
 
-.portfolio.active li {
+#portfolio.active .portfolio-li {
   bottom: 0;
   opacity: 1;
 }
 
-.portfolio .image {
+#portfolio .image {
   display: inline-block;
   width: 60%;
   height: 100%;
@@ -522,7 +547,7 @@ main .hj {
   height: 100%;
 }
 
-.portfolio .desc {
+#portfolio .desc {
   display: inline-block;
   vertical-align: bottom;
   width: 39%;
@@ -550,7 +575,7 @@ main .hj {
   text-align: center;
 }
 
-.desc .btn {
+.desc .btn-a {
   display: inline;
   padding: 7px 20px;
   margin: 0 auto;
@@ -562,11 +587,11 @@ main .hj {
   background-color: #333;
 }
 
-.btn:focus {
+.btn-a:focus {
   border: 2px solid white;
 }
 
-.desc .skill-list li {
+.desc .used-languages-ul li.used-languages-li {
   display: inline;
   padding: 3px 10px;
   box-sizing: border-box;
@@ -579,21 +604,21 @@ main .hj {
 }
 
 @media screen and (max-width: 1281px) {
-  .portfolio {
+  #portfolio {
     padding: 110px 0;
     padding-bottom: 0px;
   }
-  .portfolio li {
+  #portfolio .portfolio-li {
     height: 100%;
   }
 
-  .portfolio .image {
+  #portfolio .image {
     display: block;
     width: 80%;
     margin: 0 auto;
   }
 
-  .portfolio .desc {
+  #portfolio .desc {
     display: block;
     width: 80%;
     padding: 30px 0;
@@ -607,22 +632,22 @@ main .hj {
 }
 
 @media screen and (max-width: 600px) {
-  .portfolio {
+  #portfolio {
     padding: 80px 0;
     padding-bottom: 0px;
   }
-  .portfolio li {
+  #portfolio .portfolio-li {
     height: 100%;
   }
 
-  .portfolio .image {
+  #portfolio .image {
     display: block;
     width: 100%;
     margin: 0 auto;
     border-radius: 0;
   }
 
-  .portfolio .desc {
+  #portfolio .desc {
     display: block;
     width: 70%;
     padding: 30px 0;
@@ -647,14 +672,22 @@ main .hj {
     margin: 20px auto;
   }
 
-  .desc .skill-list li {
+  .desc .used-languages-ul li.used-languages-li {
     padding: 3px 5px;
     font-size: 0.7rem;
   }
 }
 
-/*--------------------------------------- footer ---------------------------------------*/
+/* 
 
+
+
+
+
+
+
+*/
+/*================================ footer ================================*/
 footer {
   position: fixed;
   left: 0;
@@ -664,7 +697,7 @@ footer {
   z-index: 1;
 }
 
-footer .contact {
+footer #contact {
   position: relative;
   max-width: 1200px;
   width: 100%;
@@ -674,11 +707,11 @@ footer .contact {
   padding: 80px 0;
 }
 
-.contact h2 {
+#contact h2 {
   margin-bottom: 70px;
 }
 
-.contact .info {
+#contact .info {
   text-align: center;
   line-height: 1.618;
 }
@@ -696,19 +729,19 @@ footer img {
   border-radius: 10px;
 }
 
-.contact img:nth-last-child(1) {
+#contact img:nth-last-child(1) {
   right: 0;
 }
-.contact img:nth-last-child(2) {
+#contact img:nth-last-child(2) {
   left: 0;
 }
 
 @media screen and (max-width: 1281px) {
-  footer .contact {
+  footer #contact {
     padding: 70px 0;
   }
 
-  .contact h2 {
+  #contact h2 {
     margin-bottom: 50px;
   }
 
@@ -721,20 +754,20 @@ footer img {
     height: 50%;
   }
 
-  .contact img:nth-last-child(1) {
+  #contact img:nth-last-child(1) {
     right: 10%;
   }
-  .contact img:nth-last-child(2) {
+  #contact img:nth-last-child(2) {
     left: 10%;
   }
 }
 
 @media screen and (max-width: 600px) {
-  footer .contact {
+  footer #contact {
     padding: 50px 0;
   }
 
-  .contact h2 {
+  #contact h2 {
     margin-bottom: 50px;
   }
 
@@ -750,9 +783,17 @@ footer img {
   }
 }
 
-/* goup */
+/* 
 
-.goup a {
+
+
+
+
+
+
+*/
+/* gotop */
+.gotop a {
   position: fixed;
   right: 5%;
   bottom: 5%;
@@ -771,7 +812,7 @@ footer img {
   z-index: 100;
 }
 
-.goup.active a {
+.gotop.active a {
   visibility: visible;
   opacity: 1;
   transition: opacity 0.3s ease;
@@ -781,7 +822,7 @@ footer img {
 }
 
 @media screen and (max-width: 600px) {
-  .goup a {
+  .gotop a {
     width: 30px;
     height: 30px;
   }
