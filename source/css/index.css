@@ -144,6 +144,27 @@ h2 {
 
 */
 /*================================ main ================================*/
+/*----------- wrapper ----------*/
+.wrapper {
+  background-color: #f2f7f8;
+}
+
+.wrapper.bg-white {
+  background-color: white;
+}
+
+.wrapper h2 {
+  margin-bottom: 70px;
+}
+/* 
+
+
+
+
+
+
+
+*/
 /*----------- hj ----------*/
 main {
   margin-bottom: 350px;
@@ -352,28 +373,6 @@ main #hj {
   #hj .mobile {
     display: block;
   }
-}
-
-/* 
-
-
-
-
-
-
-
-*/
-/*----------- wrapper ----------*/
-.wrapper {
-  background-color: #f2f7f8;
-}
-
-.wrapper.bg-white {
-  background-color: white;
-}
-
-.wrapper h2 {
-  margin-bottom: 70px;
 }
 /* 
 
