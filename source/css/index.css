@@ -590,7 +590,7 @@ main #hj {
   border: 2px solid white;
 }
 
-.desc .used-languages-ul li.used-languages-li {
+.desc .usedlanguages-ul li.usedlanguages-li {
   display: inline;
   padding: 3px 10px;
   box-sizing: border-box;
@@ -671,7 +671,7 @@ main #hj {
     margin: 20px auto;
   }
 
-  .desc .used-languages-ul li.used-languages-li {
+  .desc .usedlanguages-ul li.usedlanguages-li {
     padding: 3px 5px;
     font-size: 0.7rem;
   }
