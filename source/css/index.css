@@ -404,11 +404,13 @@ main #hj {
   transition: 0.3s ease;
   opacity: 0;
 }
+#skills .skills-li.bg-333 {
+  background-color: #333;
+}
 #skills.active .skills-li:nth-child(1) {
   bottom: 0px;
   transition-delay: 0.1s;
   opacity: 1;
-  background-color: #333;
   color: white;
 }
 #skills.active .skills-li:nth-child(2) {
@@ -420,7 +422,6 @@ main #hj {
   bottom: 0px;
   transition-delay: 0.3s;
   opacity: 1;
-  background-color: #333;
   color: white;
 }
 #skills.active .skills-li:nth-child(4) {
@@ -437,7 +438,6 @@ main #hj {
   bottom: 0px;
   transition-delay: 0.6s;
   opacity: 1;
-  background-color: #333;
   color: white;
 }
 #skills.active .skills-li:nth-child(7) {
