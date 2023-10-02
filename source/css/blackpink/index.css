@@ -19,6 +19,17 @@ button.text-indent {
   text-indent: -9999em;
 }
 
+section {
+  max-width: 146rem;
+  position: relative;
+}
+
+.maxwidthinitial {
+  max-width: initial;
+}
+
+/* ================================= skip ================================= */
+
 .skip a {
   position: absolute;
   top: -100%;
@@ -39,6 +50,7 @@ button.text-indent {
   top: 0;
 }
 
+/* ================================= h1 ================================= */
 .wrapper-h1 {
   background-color: #000000;
   width: 100%;
@@ -90,13 +102,9 @@ h1 .deco.rotate {
   }
 }
 
-section {
-  max-width: 146rem;
-  position: relative;
-}
+/*================================= banner =================================*/
 
-.banner {
-  max-width: initial;
+.banner.maxwidthinitial {
   width: 100%;
   height: 85vh;
   position: relative;
@@ -108,7 +116,7 @@ section {
   overflow: hidden;
 }
 
-.banner ul {
+.banner .slider-ul {
   position: absolute;
   top: 0;
   left: 0;
@@ -117,7 +125,7 @@ section {
   transition: 0.5s ease-in-out;
 }
 
-.banner li {
+.banner .slider-li {
   position: absolute;
   top: 0;
   left: 0;
@@ -211,7 +219,7 @@ section {
 
 /* banner */
 @media screen and (max-width: 1281px) {
-  .banner {
+  .banner.maxwidthinitial {
     overflow: hidden;
     height: 55vh;
   }
@@ -244,10 +252,7 @@ section {
   }
 }
 
-/* intro */
-:root {
-  --intro-imgage-height: 70rem;
-}
+/*================================= intro =================================*/
 
 .intro {
   padding: 20rem 0;
@@ -617,12 +622,11 @@ section {
   }
 }
 
-/* members */
-.members {
+/*================================= members =================================*/
+.members.maxwidthinitial {
   font-size: 0;
   letter-spacing: 0;
   white-space: nowrap;
-  max-width: initial;
 }
 
 .members .members-wrapper {
@@ -707,7 +711,7 @@ section {
 }
 /* members section 반응형 */
 @media screen and (max-width: 1281px) {
-  .members {
+  .members.maxwidthinitial {
     white-space: initial;
   }
 
@@ -758,15 +762,14 @@ section {
   }
 }
 
-/* news */
-.news {
-  max-width: initial;
+/*================================= news =================================*/
+.news.maxwidthinitial {
   background-color: black;
   margin: 0 0 0 0;
   padding-bottom: 10rem;
 }
 
-.news .wrapper {
+.news .news-wrapper {
   max-width: 146rem;
   width: 100%;
   margin: 0 auto;
@@ -853,7 +856,7 @@ section {
   opacity: 1;
 }
 
-.news .news-list {
+.news .news-list-ul {
   width: fit-content;
   position: relative;
   top: 0;
@@ -862,7 +865,7 @@ section {
   transition: 0.5s ease;
 }
 
-.news .news-list li {
+.news .news-list-ul .news-list-li {
   display: inline-block;
   margin: 10rem 2rem;
   width: 32rem;
@@ -870,18 +873,18 @@ section {
   background-color: white;
 }
 
-.news .news-list img {
+.news .news-list-li img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.news .news-list li:nth-child(1) {
+.news .news-list-ul li:nth-child(1) {
   margin-left: 0;
 }
 /* news section 반응형 */
 @media screen and (max-width: 1281px) {
-  .news {
+  .news.maxwidthinitial {
     overflow: hidden;
   }
 
@@ -889,7 +892,7 @@ section {
     font-size: 6rem;
   }
 
-  .news .wrapper {
+  .news .news-wrapper {
     width: 95%;
     margin: 0 auto;
   }
@@ -926,9 +929,8 @@ section {
   }
 }
 
-/* albums */
-.albums {
-  max-width: initial;
+/*================================= albums =================================*/
+.albums.maxwidthinitial {
   width: 100%;
   min-height: 80rem;
   background-repeat: no-repeat;
@@ -947,14 +949,18 @@ section {
   background-size: cover;
 }
 
-.albums .all-songs-wrapper {
+.albums .albums-wrapper {
   max-width: 146rem;
+  margin: 0 auto;
+}
+
+.albums-wrapper .all-songs-wrapper {
   width: 100%;
   margin: 8rem auto 0 auto;
   text-align: center;
 }
 
-.albums .all-songs-wrapper li {
+.albums-wrapper .all-songs-title-ul .song-title-li {
   display: inline-block;
   width: fit-content;
   margin-right: 5rem;
@@ -966,20 +972,23 @@ section {
   transition: 0.5s ease;
 }
 
-.albums .all-songs-wrapper li {
+.albums-wrapper .all-songs-title-ul .song-title-li {
   color: #000000;
   font-size: 2.2rem;
   opacity: 0.4;
 }
 
-.albums .all-songs-wrapper li.active,
-.albums .all-songs-wrapper li:hover {
+.albums-wrapper .all-songs-title-ul .song-title-li.active,
+.albums-wrapper .all-songs-title-ul .song-title-li:hover {
   color: #f4a5b7;
   opacity: 1;
 }
 
-.albums .albums-wrapper {
-  max-width: 146rem;
+.albums-wrapper .maxwidth1281 {
+  display: none;
+}
+
+.albums-wrapper .albums-buttons-wrapper {
   width: 100%;
   height: auto;
   position: relative;
@@ -987,7 +996,7 @@ section {
   text-align: center;
 }
 
-.albums .albums-wrapper .show-all {
+.albums-wrapper .albums-buttons-wrapper .show-all {
   display: block;
   margin: 0 auto;
   padding: 0.5rem 1rem;
@@ -1005,20 +1014,19 @@ section {
   transition: 0.3s ease;
 }
 
-.albums .albums-wrapper .show-all.active,
-.albums .albums-wrapper .show-all:focus {
+.albums-wrapper .albums-buttons-wrapper .show-all.active,
+.albums-wrapper .albums-buttons-wrapper .show-all:focus {
   border-style: inset;
   text-shadow: 0.05rem 0.05rem white, -0.05rem -0.05rem #000000;
   text-shadow: 0.1rem 0.1rem white, -0.1rem -0.1rem #000000;
 }
 
-.albums.nonactive {
+.albums-wrapper.nonactive {
   background-image: url(../../images/blackpink/crown.jpg);
 }
 
-.albums h2 {
-  max-width: 146rem;
-  margin: 0 auto;
+.albums-wrapper h2 {
+  max-width: 100%;
   color: #f4a5b7;
   font-size: 8rem;
   font-family: "Exo", "NanumSquare", "Margun Gothic", sans-serif;
@@ -1027,7 +1035,7 @@ section {
   padding: 2rem 2rem 2rem 0;
 }
 
-.albums .album {
+.albums-wrapper .album {
   width: 20rem;
   height: 20rem;
   display: inline-block;
@@ -1038,24 +1046,24 @@ section {
   opacity: 0.4;
 }
 
-.albums .album:hover,
-.albums .album.active {
+.albums-wrapper .album:hover,
+.albums-wrapper .album.active {
   opacity: 1;
 }
 
-.albums .album button {
+.albums-wrapper .album button {
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 
-.albums .album button img {
+.albums-wrapper .album button img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.albums .albums-controls {
+.albums-wrapper .albums-controls {
   position: absolute;
   top: 0;
   left: 0;
@@ -1070,7 +1078,7 @@ section {
   padding-top: 5rem;
 }
 
-.albums .albums-controls .stop {
+.albums-wrapper .albums-controls .stop {
   width: 2rem;
   height: 2rem;
   background-image: url(../../images/blackpink/pause-solid.svg);
@@ -1081,7 +1089,7 @@ section {
   color: #fff;
   cursor: pointer;
 }
-.albums .albums-controls .play {
+.albums-wrapper .albums-controls .play {
   width: 2rem;
   height: 2rem;
   background-image: url(../../images/blackpink/play-solid.svg);
@@ -1093,78 +1101,87 @@ section {
 }
 /* album section 반응형 */
 @media screen and (max-width: 1281px) {
-  .albums {
+  .albums.maxwidthinitial {
     background-attachment: initial;
   }
   .albums.active {
     background-attachment: initial;
   }
 
-  .albums h2 {
+  .albums-wrapper h2 {
     font-size: 6rem;
   }
 
-  .albums .albums-controls {
+  .albums-wrapper .albums-controls {
     width: 95%;
   }
 
-  .albums .all-songs-wrapper {
+  .albums-wrapper .all-songs-wrapper {
     width: 95%;
   }
-  .albums .all-songs-wrapper li {
+  .albums-wrapper .all-songs-title-ul .song-title-li {
     margin-right: 3rem;
     line-height: 1.618;
   }
 
-  .albums .albums-wrapper {
+  .albums-wrapper .maxwidth1281 {
+    display: block;
+  }
+
+  .albums-wrapper .albums-buttons-wrapper {
     margin-top: 6rem;
   }
-  .albums .albums-wrapper .show-all {
+  .albums-wrapper .albums-buttons-wrapper .show-all {
     margin-bottom: 2rem;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .albums h2 {
+  .albums-wrapper h2 {
     font-size: 3rem;
   }
 
-  .albums .albums-controls {
+  .albums-wrapper .albums-controls {
     padding-top: 3.5rem;
   }
 
-  .albums .albums-controls .play,
-  .albums .albums-controls .stop {
+  .albums-wrapper .albums-controls .play,
+  .albums-wrapper .albums-controls .stop {
     width: 1.6rem;
     height: 1.6rem;
   }
 
-  .albums .all-songs-wrapper {
+  .albums-wrapper .all-songs-wrapper {
     margin-top: 2rem;
   }
 
-  .albums .all-songs-wrapper li {
+  .albums-wrapper .all-songs-title-ul .song-title-li {
     font-size: 1.6rem;
     margin-right: 1rem;
   }
 
-  .albums .albums-wrapper {
+  .albums-wrapper .albums-buttons-wrapper {
     margin-top: 4rem;
   }
 
-  .albums .albums-wrapper .show-all {
+  .albums-wrapper .albums-buttons-wrapper .show-all {
     font-size: 1.2rem;
   }
 
-  .albums .album {
+  .albums-wrapper .album {
     width: 10rem;
     height: 10rem;
   }
 }
 
-/* game */
-.game {
-  max-width: initial;
+@media screen and (max-width: 280px) {
+  .albums-wrapper .maxwidth1281 {
+    display: none;
+  }
+}
+
+/*================================= game =================================*/
+.game.maxwidthinitial {
   background-image: url(../../images/blackpink/grass.JPG);
   margin-bottom: 0;
   background-color: #000000;

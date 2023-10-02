@@ -48,9 +48,11 @@ window.addEventListener("load", () => {
     window.pageYOffset +
     newsSection.getBoundingClientRect().top -
     html.scrollHeight * 0.08;
-  const newsUl = document.querySelector(".news .news-list-viewer .news-list");
+  const newsUl = document.querySelector(
+    ".news .news-list-viewer .news-list-ul"
+  );
   const newsListLis = document.querySelectorAll(
-    ".news .news-list-viewer .news-list li"
+    ".news .news-list-viewer .news-list-ul li"
   );
   const newsBeforeBtn = document.querySelector(".news .news-controls .before");
   const newsNextBtn = document.querySelector(".news .news-controls .next");
