@@ -14,9 +14,11 @@ window.addEventListener("load", () => {
     ".intro .thumbnail .thumbnail-viewer"
   );
   const thumbLis = document.querySelectorAll(".intro .thumbnail li");
-  const imagesListUl = document.querySelector(".intro .original .images-list");
+  const imagesListUl = document.querySelector(
+    ".intro .original .original-img-ul"
+  );
   const imagesListLis = document.querySelectorAll(
-    ".intro .original .images-list li"
+    ".intro .original .original-img-ul li"
   );
   const thumbnailViewerMobile = document.querySelector(
     ".intro .thumbnail-mobile .thumbnail-viewer-mobile"
