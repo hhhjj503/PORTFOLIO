@@ -1,10 +1,10 @@
-.top-nav-mobile {
+.mobile-nav {
   display: none;
 }
 
 /* -------------------------------------------------------- */
 
-.top-nav {
+.h-nav {
   width: 100%;
   padding: 10px 0;
   font-family: "SCDream", sans-serif;
@@ -16,7 +16,7 @@
   transition: 0.3s ease-in-out;
 }
 
-.top-nav > .wrapper {
+.h-nav .nav-ul {
   max-width: 1200px;
   width: 100%;
   height: 100%;
@@ -25,7 +25,7 @@
   font-size: 0;
 }
 
-.top-nav > .wrapper li {
+.h-nav .nav-ul li {
   display: inline-block;
   width: 20%;
   height: 100%;
@@ -33,7 +33,7 @@
   vertical-align: middle;
 }
 
-.top-nav > .wrapper li:not(:first-child):after {
+.h-nav .nav-ul li:not(:first-child):after {
   position: absolute;
   content: "";
   top: 0;
@@ -43,7 +43,7 @@
   background-color: #757575;
 }
 
-.top-nav > .wrapper li:nth-child(2):before {
+.h-nav .nav-ul li:nth-child(2):before {
   position: absolute;
   content: "";
   top: 0;
@@ -55,16 +55,16 @@
 
 /* ------------ 제일왼쪽 로고부분------------- */
 
-.top-nav > .wrapper a.home {
+.h-nav .nav-ul .home-a {
   position: relative;
 }
 
-.top-nav > .wrapper a.home > img {
+.h-nav .nav-ul .home-a img {
   width: 100%;
   height: 40px;
 }
 
-.top-nav > .wrapper a.home > span {
+.h-nav .nav-ul .home-a span {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -75,7 +75,7 @@
 
 /* --------------- 일반 a 태그 --------------- */
 
-.top-nav > .wrapper a {
+.h-nav .nav-ul a {
   display: block;
   width: 100%;
   text-align: center;
@@ -91,27 +91,27 @@
 
 /* ---------------------------------------------------------------- */
 @media screen and (max-width: 1024px) {
-  .top-nav {
+  .h-nav {
     padding: 20px 0;
   }
 
-  .top-nav > .wrapper a.home > img {
+  .h-nav .nav-ul .home-a img {
     width: 100%;
     height: 40px;
   }
 
-  .top-nav > .wrapper a {
+  .h-nav .nav-ul a {
     font-size: 1.7rem;
   }
 }
 
 /* ---------------------------------------------------------------- */
 @media screen and (max-width: 500px) {
-  .top-nav {
+  .h-nav {
     display: none;
   }
 
-  .top-nav-mobile {
+  .mobile-nav {
     display: block;
     position: sticky;
     width: 100%;
@@ -120,22 +120,22 @@
     z-index: 99;
   }
 
-  .top-nav-mobile > .wrapper {
+  .mobile-nav .wrapper {
     width: 100%;
     height: 7vh;
     transition: 0.3s ease-in-out;
   }
 
-  .top-nav-mobile > .wrapper .menu-btn {
+  .mobile-nav .wrapper .home-btn {
     width: 100%;
     height: 100%;
   }
-  .top-nav-mobile > .wrapper img {
+  .mobile-nav .wrapper img {
     width: 100%;
     height: 90%;
   }
 
-  .top-nav-mobile .sub-menu {
+  .mobile-nav .sub-menu {
     position: relative;
     max-height: 0px;
     overflow: hidden;
@@ -143,7 +143,7 @@
     transition: 0.5s ease-in-out;
   }
 
-  .top-nav-mobile .sub-menu.opened {
+  .mobile-nav .sub-menu.opened {
     max-height: 250px;
   }
 

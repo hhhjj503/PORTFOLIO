@@ -15,34 +15,35 @@
     ></script>
     <script src="../../source/js/amusementpark/aquarium/siema.min.js"></script>
     <script src="../../source/js/amusementpark/aquarium/moment.min.js"></script>
+    <script src="../../source/js/amusementpark/header.js"></script>
     <script src="../../source/js/amusementpark/aquarium/aquarium.js"></script>
     <title>아쿠아리움 | Amusement Park</title>
   </head>
   <body>
+    <!-- header -->
     <header>
-      <nav class="top-nav">
-        <div class="wrapper">
-          <ul>
-            <li>
-              <a href="./index.html" class="home">
-                <img
-                  src="../../source/images/amusementpark/fort-awesome.svg"
-                  alt="보라색 성 아이콘"
-                />
-              </a>
-            </li>
-            <li><a href="./nightshow.html">나이트쇼</a></li>
-            <li><a href="./attraction.html">어트랙션</a></li>
-            <li><a href="./krustyland.html">크러스티랜드</a></li>
-            <li><a href="./aquarium.html">아쿠아리움</a></li>
-          </ul>
-        </div>
+      <nav class="h-nav">
+        <ul class="nav-ul">
+          <li>
+            <a href="./index.html" class="home-a">
+              <img
+                src="../../source/images/amusementpark/fort-awesome.svg"
+                alt="보라색 성 아이콘"
+              />
+            </a>
+          </li>
+          <li><a href="./nightshow.html">나이트쇼</a></li>
+          <li><a href="./attraction.html">어트랙션</a></li>
+          <li><a href="./krustyland.html">크러스티랜드</a></li>
+          <li><a href="./aquarium.html">아쿠아리움</a></li>
+        </ul>
       </nav>
-      <!-- 헤드 nav 메뉴(Mobile) -->
-      <nav class="top-nav-mobile">
+
+      <!-- mobile nav -->
+      <nav class="mobile-nav">
         <div class="wrapper">
-          <div class="menu-btn">
-            <a href="#" class="home">
+          <div class="home-btn">
+            <a href="#" class="home-a">
               <img
                 src="../../source/images/amusementpark/fort-awesome.svg"
                 alt="보라색 성 아이콘"
@@ -71,14 +72,15 @@
         </div>
       </nav>
     </header>
+    <!-- //header -->
+
     <!-- main -->
     <main>
-      <!-- 헤드 nav 메뉴(PC) -->
-
-      <!-- banner wrapper -->
-      <div class="banner-wrapper">
+      <!-- banner bgdiv -->
+      <div class="banner-bgdiv">
         <h2 class="title">AMUSEMENT PARK AQUARIUM <br /></h2>
-        <!-- wave 효과 사용을 위한 태그 -->
+
+        <!-- wave effect -->
         <div class="waves-wrapper">
           <svg
             class="waves"
@@ -111,8 +113,9 @@
           </svg>
         </div>
       </div>
-      <!-- info wrapper -->
-      <div class="info-wrapper" tabindex="0">
+
+      <!-- time wrapper -->
+      <div class="time-wrapper" tabindex="0">
         <div class="time">
           <img
             src="../../source/images/amusementpark/aquarium/clock-solid.svg"
@@ -120,7 +123,7 @@
           /><span class="open-time">10:00 ~ 21:00</span>
         </div>
         <div class="countdown">
-          <div class="wrapper">
+          <div class="lefttime">
             <div class="part">
               <div class="hours">00</div>
             </div>
@@ -134,6 +137,7 @@
           <h5 class="countdown-title">CLOSED</h5>
         </div>
       </div>
+
       <!-- slider (siema.js) -->
       <div class="event-wrapper">
         <div class="event-slider">
@@ -171,10 +175,12 @@
         </div>
       </div>
     </main>
+    <!-- //main -->
+
     <!-- footer -->
     <footer>
       <div class="wrapper">
-        <div class="list">
+        <div class="list-ul">
           <ul>
             <li><a href="#">소개</a></li>
             <li><a href="#">문의</a></li>
@@ -185,7 +191,7 @@
             <li><a href="#">직원채용</a></li>
           </ul>
         </div>
-        <div class="sns">
+        <div class="sns-imgs-wrapper">
           <img
             src="../../source/images/amusementpark/youtubeicon.png"
             alt="페이스북 로고 이미지"
@@ -212,5 +218,6 @@
         </div>
       </div>
     </footer>
+    <!-- //footer -->
   </body>
 </html>

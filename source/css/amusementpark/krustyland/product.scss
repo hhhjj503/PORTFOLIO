@@ -12,16 +12,11 @@ body {
   overflow-x: hidden;
 }
 
-.top-nav {
+.h-nav {
   transition: 0.5s ease-in-out;
   z-index: 98; /* 상품구매창의 레이어를 위해 z-index  변경*/
 
-  &.scrolldown {
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  & > .wrapper {
+  & .nav-ul {
     li:nth-child(4) {
       & a {
         color: #e60000; /* nav 의 크러스티랜드 글자 빨갛게 변경 */
@@ -30,7 +25,7 @@ body {
   }
 }
 
-.top-nav-mobile {
+.mobile-nav {
   transition: 0.5s ease-in-out;
 
   &.scrolldown {
@@ -39,9 +34,9 @@ body {
   }
 }
 
+/*=================================================================================*/
 main {
-  /* ----------------------------------- main  --------------------------------------- */
-
+  /*----------------------------------- main  ---------------------------------------*/
   & .background {
     width: 100%;
     height: 500px;
@@ -111,7 +106,7 @@ main {
     }
   }
 
-  & .purchase {
+  & .goods {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 0;
@@ -128,7 +123,7 @@ main {
       }
     }
 
-    & .image-info {
+    & .info {
       width: 65%;
       display: inline-block;
 
@@ -190,7 +185,7 @@ main {
       }
     }
 
-    & .info {
+    & .option {
       display: inline-block;
       vertical-align: top;
       width: 35%;
@@ -479,7 +474,7 @@ main {
       }
 
       & .purchase-btn {
-        /*----------------------------------- .purchase .purchase-btn ------------------------ */
+        /*----------------------------------- .goods .purchase-btn ------------------------ */
         width: 100%;
         display: block;
         margin-top: 50px;
@@ -538,7 +533,7 @@ main {
         }
       }
 
-      & table {
+      & .review-table {
         width: 100%;
 
         tr {
@@ -584,7 +579,7 @@ main {
     }
 
     & .review-wrapper {
-      /*----------------------------------- .purchase .review-pager ------------------------ */
+      /*----------------------------------- .goods .review-pager ------------------------ */
       width: 100%;
 
       & ul {

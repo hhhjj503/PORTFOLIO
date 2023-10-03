@@ -1,13 +1,9 @@
 window.addEventListener("load", function () {
-  const topNavMobile = document.querySelector(".top-nav-mobile");
-  const subMenu = document.querySelector(".top-nav-mobile .sub-menu");
-  const goup = document.querySelector(".top-nav-mobile .goup");
-  const menu = document.querySelector(".menu");
   const html = document.querySelector("html");
+  const menu = document.querySelector(".menu");
   const background = document.querySelector(".background");
 
   window.addEventListener("scroll", () => {
-    const mobileHeader = topNavMobile.style.display;
     if (
       html.scrollTop > background.offsetHeight
       //- menu.offsetHeight && topNav.offsetHeight !== 0
@@ -19,16 +15,6 @@ window.addEventListener("load", function () {
       menu.style.position = "relative";
       menu.style.top = 0;
     }
-  });
-
-  //모바일 메뉴 클릭시 아코디언
-  topNavMobile.addEventListener("click", () => {
-    subMenu.classList.toggle("opened");
-  });
-
-  //모바일 에러용
-  goup.addEventListener("mouseenter", () => {
-    subMenu.classList.toggle("opened");
   });
 
   /*

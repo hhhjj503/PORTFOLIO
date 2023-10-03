@@ -8,34 +8,35 @@
       href="../../source/css/amusementpark/krustyland/product.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="../../source/js/amusementpark/header.js"></script>
     <script src="../../source/js/amusementpark/krustyland/product.js"></script>
     <title>제품정보 | Amusement Park</title>
   </head>
   <body>
+    <!-- header -->
     <header>
-      <nav class="top-nav">
-        <div class="wrapper">
-          <ul>
-            <li>
-              <a href="./index.html" class="home">
-                <img
-                  src="../../source/images/amusementpark/fort-awesome.svg"
-                  alt="보라색 성 아이콘"
-                />
-              </a>
-            </li>
-            <li><a href="./nightshow.html">나이트쇼</a></li>
-            <li><a href="./attraction.html">어트랙션</a></li>
-            <li><a href="./krustyland.html">크러스티랜드</a></li>
-            <li><a href="./aquarium.html">아쿠아리움</a></li>
-          </ul>
-        </div>
+      <nav class="h-nav">
+        <ul class="nav-ul">
+          <li>
+            <a href="./index.html" class="home-a">
+              <img
+                src="../../source/images/amusementpark/fort-awesome.svg"
+                alt="보라색 성 아이콘"
+              />
+            </a>
+          </li>
+          <li><a href="./nightshow.html">나이트쇼</a></li>
+          <li><a href="./attraction.html">어트랙션</a></li>
+          <li><a href="./krustyland.html">크러스티랜드</a></li>
+          <li><a href="./aquarium.html">아쿠아리움</a></li>
+        </ul>
       </nav>
-      <!-- 헤드 nav 메뉴(Mobile) -->
-      <nav class="top-nav-mobile">
+
+      <!-- mobile nav -->
+      <nav class="mobile-nav">
         <div class="wrapper">
-          <div class="menu-btn">
-            <a href="#" class="home">
+          <div class="home-btn">
+            <a href="#" class="home-a">
               <img
                 src="../../source/images/amusementpark/fort-awesome.svg"
                 alt="보라색 성 아이콘"
@@ -64,6 +65,9 @@
         </div>
       </nav>
     </header>
+    <!-- //header -->
+
+    <!-- main -->
     <main>
       <div class="background"></div>
       <div class="menu">
@@ -72,9 +76,10 @@
           <p>ISLAND</p>
         </div>
       </div>
+
       <!-- purchase -->
-      <div class="purchase">
-        <div class="image-info">
+      <div class="goods">
+        <div class="info">
           <div class="slider">
             <img
               src="../../source/images/amusementpark/krustyland/alpaca.JPG"
@@ -94,8 +99,9 @@
             </button>
           </div>
         </div>
+
         <!-- product-info -->
-        <div class="info">
+        <div class="option">
           <h5>알파카 인형</h5>
           <!-- goods price -->
           <div class="dib">
@@ -108,7 +114,7 @@
           <div class="price">
             <span class="per-price">15,000</span>
           </div>
-          <!-- quantity -->
+          <!-- color -->
           <div class="color">
             <span class="color-title">컬러 </span>
             <ul class="palette">
@@ -132,13 +138,13 @@
             <span class="total-title">총합계</span>
             <span class="total-price">15,000</span>
           </div>
-          <!-- 구매버튼 -->
+          <!-- purchase -->
           <button class="purchase-btn tab-control">구매하기</button>
         </div>
         <!-- review -->
         <div class="review">
           <h5>상품평</h5>
-          <table>
+          <table class="review-table">
             <tbody>
               <tr>
                 <td class="customer-id">1</td>
@@ -379,6 +385,7 @@
           </div>
         </div>
       </div>
+
       <div class="shopping-bag" tabindex="0">
         <span class="bag-desc">제품의 하트를 클릭해보세요!</span>
         <img
@@ -387,10 +394,12 @@
         />
       </div>
     </main>
+    <!-- //main -->
+
     <!-- footer -->
     <footer>
       <div class="wrapper">
-        <div class="list">
+        <div class="list-ul">
           <ul>
             <li><a href="#">소개</a></li>
             <li><a href="#">문의</a></li>
@@ -401,7 +410,7 @@
             <li><a href="#">직원채용</a></li>
           </ul>
         </div>
-        <div class="sns">
+        <div class="sns-imgs-wrapper">
           <img
             src="../../source/images/amusementpark/youtubeicon.png"
             alt="페이스북 로고 이미지"
@@ -428,5 +437,6 @@
         </div>
       </div>
     </footer>
+    <!-- //footer -->
   </body>
 </html>

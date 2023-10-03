@@ -14,36 +14,36 @@ body {
   overflow-x: hidden;
 }
 
-.top-nav > .wrapper li:nth-child(2) a {
+.h-nav .nav-ul li:nth-child(2) a {
   color: #e60000; /* nav 의 나이트쇼 글자 빨갛게 변경 */
 }
 
-a.hiding + * {
+a.hidingThreshold + * {
   position: relative;
   transition: 1s ease-in-out;
   top: 100px;
   opacity: 0;
 }
 
+/*=================================================================================*/
 main {
   /* -------------------------------------------- main ------------------------------------------- */
 }
-main .banner {
-  /*----------------------- main .banner ------------------------ */
+main .banner-wrapper {
   width: 100%;
   height: 500px;
 }
 @media screen and (max-width: 1281px) {
-  main .banner {
+  main .banner-wrapper {
     height: 400px;
   }
 }
 @media screen and (max-width: 600px) {
-  main .banner {
+  main .banner-wrapper {
     height: 300px;
   }
 }
-main .banner .main_img {
+main .banner-wrapper .img {
   width: 100%;
   margin: 0 auto;
   height: 100%;
@@ -52,31 +52,31 @@ main .banner .main_img {
   background-position-y: 90%;
 }
 @media screen and (max-width: 600px) {
-  main .banner .main_img {
+  main .banner-wrapper .img {
     background-size: cover;
   }
 }
-main .info {
-  /*----------------------- main .info ------------------------ */
+main .info-wrapper {
+  /*----------------------- main .info-wrapper ------------------------ */
   max-width: 1200px;
   width: 100%;
   padding: 100px 0;
   margin: 0 auto;
 }
 @media screen and (max-width: 1281px) {
-  main .info {
+  main .info-wrapper {
     transition: 0.3s ease-in-out;
     padding: 100px 0;
     overflow: hidden;
   }
 }
 @media screen and (max-width: 600px) {
-  main .info {
+  main .info-wrapper {
     padding: 50px 0;
     overflow: hidden;
   }
 }
-main .info .sub-desc {
+main .info-wrapper .sub-desc {
   width: 30%;
   margin: 0 auto;
   font-size: 1.6em;
@@ -87,17 +87,17 @@ main .info .sub-desc {
   text-align: center;
 }
 @media screen and (max-width: 1281px) {
-  main .info .sub-desc {
+  main .info-wrapper .sub-desc {
     font-size: 1.4rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .info .sub-desc {
+  main .info-wrapper .sub-desc {
     width: 60%;
     font-size: 1.2rem;
   }
 }
-main .info .desc {
+main .info-wrapper .desc {
   width: 30%;
   margin: 0 auto 30px auto;
   font-size: 2rem;
@@ -108,44 +108,44 @@ main .info .desc {
   text-align: center;
 }
 @media screen and (max-width: 1281px) {
-  main .info .desc {
+  main .info-wrapper .desc {
     font-size: 1.7rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .info .desc {
+  main .info-wrapper .desc {
     width: 60%;
     font-size: 1.5rem;
   }
 }
-main .info .contents {
+main .info-wrapper .contents {
   width: 100%;
   height: initial;
   position: relative;
   overflow: hidden;
 }
 @media screen and (max-width: 1281px) {
-  main .info .contents {
+  main .info-wrapper .contents {
     width: 900px;
     overflow: hidden;
     margin: 0 auto;
   }
 }
 @media screen and (max-width: 1279px) {
-  main .info .contents {
+  main .info-wrapper .contents {
     width: 600px;
     overflow: hidden;
     margin: 0 auto;
   }
 }
 @media screen and (max-width: 600px) {
-  main .info .contents {
+  main .info-wrapper .contents {
     width: 300px;
     overflow: hidden;
     margin: 0 auto;
   }
 }
-main .info .contents .slider-wrapper {
+main .info-wrapper .contents .slider-wrapper {
   position: relative;
   left: 0;
   top: 0;
@@ -153,18 +153,18 @@ main .info .contents .slider-wrapper {
   overflow: hidden;
 }
 @media screen and (max-width: 1281px) {
-  main .info .contents .slider-wrapper {
+  main .info-wrapper .contents .slider-wrapper {
     left: 0;
     transition: 0.3s ease;
     overflow: hidden;
   }
 }
 @media screen and (max-width: 600px) {
-  main .info .contents .slider-wrapper {
+  main .info-wrapper .contents .slider-wrapper {
     left: 0;
   }
 }
-main .info .contents .slider-wrapper .slider {
+main .info-wrapper .contents .slider-wrapper .slider {
   width: 100%;
   height: 100%;
   position: relative;
@@ -172,7 +172,7 @@ main .info .contents .slider-wrapper .slider {
   white-space: nowrap;
   overflow: hidden;
 }
-main .info .contents .slider-wrapper .slider .slide {
+main .info-wrapper .contents .slider-wrapper .slider .slide {
   float: left;
   width: 298px;
   height: 300px;
@@ -184,11 +184,11 @@ main .info .contents .slider-wrapper .slider .slide {
   cursor: pointer;
   border: none;
 }
-main .info .contents .slider-wrapper .slider .slide:focus-visible {
+main .info-wrapper .contents .slider-wrapper .slider .slide:focus-visible {
   border: 5px solid white;
   box-sizing: border-box;
 }
-main .info .contents .slider-wrapper .slider .slide img {
+main .info-wrapper .contents .slider-wrapper .slider .slide img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -196,12 +196,12 @@ main .info .contents .slider-wrapper .slider .slide img {
   -o-object-position: center center;
      object-position: center center;
 }
-main .info .contents .slider-wrapper .slider:after {
+main .info-wrapper .contents .slider-wrapper .slider:after {
   content: "";
   clear: both;
   display: block;
 }
-main .info .contents .slider-controller {
+main .info-wrapper .contents .slider-controls {
   position: absolute;
   bottom: 10px;
   right: 10px;
@@ -209,19 +209,19 @@ main .info .contents .slider-controller {
   color: white;
   font-size: 2rem;
 }
-main .info .contents .slider-controller button {
+main .info-wrapper .contents .slider-controls button {
   background-color: transparent;
   border: none;
   padding: 0;
   cursor: pointer;
 }
-main .info .contents .slider-controller button img {
+main .info-wrapper .contents .slider-controls button img {
   width: 15px;
   height: 15px;
   display: block;
   background-color: transparent;
 }
-main .info .contents .overlay {
+main .info-wrapper .contents .overlay {
   position: fixed;
   pointer-events: none;
   width: 100%;
@@ -234,12 +234,12 @@ main .info .contents .overlay {
   transition: 0.5s ease-in-out;
   opacity: 0;
 }
-main .info .contents .overlay.visible {
+main .info-wrapper .contents .overlay.visible {
   opacity: 1;
   pointer-events: all;
   overflow: hidden;
 }
-main .info .contents .overlay .guide {
+main .info-wrapper .contents .overlay .guide {
   position: absolute;
   color: white;
   left: 50%;
@@ -250,13 +250,13 @@ main .info .contents .overlay .guide {
   cursor: pointer;
 }
 @media screen and (max-width: 1281px) {
-  main .info .contents .overlay .guide {
+  main .info-wrapper .contents .overlay .guide {
     width: 80%;
     text-align: center;
     line-height: 1.618;
   }
 }
-main .info .contents .overlay img {
+main .info-wrapper .contents .overlay img {
   position: absolute;
   width: 40%;
   height: 50%;
@@ -270,13 +270,13 @@ main .info .contents .overlay img {
      object-fit: cover;
 }
 @media screen and (max-width: 1281px) {
-  main .info .contents .overlay img {
+  main .info-wrapper .contents .overlay img {
     width: 80%;
     height: 50%;
   }
 }
 @media screen and (max-width: 600px) {
-  main .info .contents .overlay img {
+  main .info-wrapper .contents .overlay img {
     width: 80%;
     height: 50%;
   }
@@ -548,11 +548,11 @@ main .benefits .listwrapper {
     white-space: initial;
   }
 }
-main .benefits .listwrapper ul {
+main .benefits .listwrapper .benefit-ul {
   width: 100%;
   text-align: center;
 }
-main .benefits .listwrapper .benefit {
+main .benefits .listwrapper .benefit-li {
   display: inline-block;
   height: 300px;
   width: 298px;
@@ -563,26 +563,26 @@ main .benefits .listwrapper .benefit {
   overflow: hidden;
 }
 @media screen and (max-width: 1281px) {
-  main .benefits .listwrapper .benefit {
+  main .benefits .listwrapper .benefit-li {
     margin: 5px;
     width: 40%;
   }
 }
 @media screen and (max-width: 600px) {
-  main .benefits .listwrapper .benefit {
+  main .benefits .listwrapper .benefit-li {
     margin: 3px 1px;
     height: 190px;
     width: 80%;
   }
 }
-main .benefits .listwrapper .benefit > div {
+main .benefits .listwrapper .benefit-li > div {
   position: absolute;
   width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-main .benefits .listwrapper .benefit p {
+main .benefits .listwrapper .benefit-li p {
   width: 90%;
   background-color: inherit;
   font-size: 1.4rem;
@@ -592,27 +592,27 @@ main .benefits .listwrapper .benefit p {
   line-height: 20px;
 }
 @media screen and (max-width: 1281px) {
-  main .benefits .listwrapper .benefit p {
+  main .benefits .listwrapper .benefit-li p {
     font-size: 1.3rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .benefits .listwrapper .benefit p {
+  main .benefits .listwrapper .benefit-li p {
     font-size: 1.1rem;
     word-break: keep-all;
   }
 }
-main .benefits .listwrapper .benefit li:nth-child(2n) {
+main .benefits .listwrapper .benefit-li li:nth-child(2n) {
   position: relative;
   top: 20px;
 }
 @media screen and (max-width: 600px) {
-  main .benefits .listwrapper .benefit li:nth-child(2n) {
+  main .benefits .listwrapper .benefit-li li:nth-child(2n) {
     top: 0;
     margin: 10px;
   }
 }
-main .benefits .listwrapper .benefit button {
+main .benefits .listwrapper .benefit-li button {
   width: 50%;
   margin: 0 auto;
   padding: 7px 0;
@@ -622,37 +622,37 @@ main .benefits .listwrapper .benefit button {
   transition: 0.3s ease-in-out;
 }
 @media screen and (max-width: 1281px) {
-  main .benefits .listwrapper .benefit button {
+  main .benefits .listwrapper .benefit-li button {
     width: 40%;
     font-size: 1.3rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .benefits .listwrapper .benefit button {
+  main .benefits .listwrapper .benefit-li button {
     width: 30%;
     font-size: 1.1rem;
   }
 }
-main .benefits .listwrapper .benefit:hover button {
+main .benefits .listwrapper .benefit-li:hover button {
   cursor: pointer;
 }
-main .benefits .listwrapper li.benefit:nth-child(1) {
+main .benefits .listwrapper .benefit-li:nth-child(1) {
   background-color: #3870e0;
   background-image: url(../../../images/amusementpark/nightshow/nightshow_fireworks.PNG);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-main .benefits .listwrapper li.benefit:nth-child(2) {
+main .benefits .listwrapper .benefit-li:nth-child(2) {
   background-color: #b30fff;
 }
-main .benefits .listwrapper li.benefit:nth-child(3) {
+main .benefits .listwrapper .benefit-li:nth-child(3) {
   background-color: #3870e0;
   background-image: url(../../../images/amusementpark/nightshow/nightsky.PNG);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-main .benefits .listwrapper li.benefit:nth-child(4) {
+main .benefits .listwrapper .benefit-li:nth-child(4) {
   background-color: #3870e0;
 }/*# sourceMappingURL=nightshow.css.map */

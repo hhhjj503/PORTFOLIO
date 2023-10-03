@@ -12,28 +12,25 @@ body {
   overflow-x: hidden;
 }
 
-.top-nav {
+.h-nav {
   transition: 0.5s ease-in-out;
   z-index: 98; /* 상품구매창의 레이어를 위해 z-index  변경*/
 }
-.top-nav.scrolldown {
-  opacity: 0;
-  pointer-events: none;
-}
-.top-nav > .wrapper li:nth-child(4) a {
+.h-nav .nav-ul li:nth-child(4) a {
   color: #e60000; /* nav 의 크러스티랜드 글자 빨갛게 변경 */
 }
 
-.top-nav-mobile {
+.mobile-nav {
   transition: 0.5s ease-in-out;
 }
-.top-nav-mobile.scrolldown {
+.mobile-nav.scrolldown {
   opacity: 0;
   pointer-events: none;
 }
 
+/*=================================================================================*/
 main {
-  /* ----------------------------------- main  --------------------------------------- */
+  /*----------------------------------- main  ---------------------------------------*/
 }
 main .background {
   width: 100%;
@@ -95,7 +92,7 @@ main .menu .container p:nth-child(1) {
 main .menu .container p:nth-child(2) {
   float: right;
 }
-main .purchase {
+main .goods {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 0;
@@ -103,38 +100,38 @@ main .purchase {
   white-space: nowrap;
 }
 @media screen and (max-width: 600px) {
-  main .purchase {
+  main .goods {
     padding: 0;
   }
 }
-main .purchase .image-info {
+main .goods .info {
   width: 65%;
   display: inline-block;
 }
 @media screen and (max-width: 600px) {
-  main .purchase .image-info {
+  main .goods .info {
     display: block;
     width: 100%;
   }
 }
-main .purchase .image-info .slider {
+main .goods .info .slider {
   position: relative;
   width: 100%;
   height: 600px;
 }
 @media screen and (max-width: 600px) {
-  main .purchase .image-info .slider {
+  main .goods .info .slider {
     height: 400px;
   }
 }
-main .purchase .image-info .slider img {
+main .goods .info .slider img {
   display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-main .purchase .image-info .slider button {
+main .goods .info .slider button {
   position: absolute;
   top: 50%;
   width: 50px;
@@ -144,177 +141,177 @@ main .purchase .image-info .slider button {
   cursor: pointer;
   transform: translateY(-50%);
 }
-main .purchase .image-info .slider button.left {
+main .goods .info .slider button.left {
   left: 5%;
 }
-main .purchase .image-info .slider button.right {
+main .goods .info .slider button.right {
   right: 5%;
 }
-main .purchase .info {
+main .goods .option {
   display: inline-block;
   vertical-align: top;
   width: 35%;
   height: 600px;
 }
 @media screen and (max-width: 600px) {
-  main .purchase .info {
+  main .goods .option {
     display: block;
     width: 100%;
     height: 400px;
   }
 }
-main .purchase .info h5 {
+main .goods .option h5 {
   font-size: 1.8rem;
   padding: 20px;
 }
 @media screen and (max-width: 1281px) {
-  main .purchase .info h5 {
+  main .goods .option h5 {
     box-sizing: border-box;
     width: 100%;
     font-size: 1.6rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .purchase .info h5 {
+  main .goods .option h5 {
     font-size: 1.6rem;
     padding: 20px;
   }
 }
-main .purchase .info .dib {
+main .goods .option .dib {
   cursor: pointer;
   padding: 20px;
 }
-main .purchase .info .dib.clicked img {
+main .goods .option .dib.clicked img {
   content: url(../../../images/amusementpark/krustyland/heart-solid.svg);
 }
 @media screen and (max-width: 1281px) {
-  main .purchase .info .dib {
+  main .goods .option .dib {
     width: 18px;
     height: 18px;
   }
 }
 @media screen and (max-width: 600px) {
-  main .purchase .info .dib {
+  main .goods .option .dib {
     padding: 10px 20px;
   }
 }
-main .purchase .info .dib img {
+main .goods .option .dib img {
   display: block;
   width: 20px;
   height: 20px;
 }
-main .purchase .info .price {
+main .goods .option .price {
   border-bottom: 1px solid #dddfe1;
   padding: 20px;
 }
 @media screen and (max-width: 600px) {
-  main .purchase .info .price {
+  main .goods .option .price {
     border-bottom: 1px solid #dddfe1;
     padding: 10px 20px;
   }
 }
-main .purchase .info .price:after {
+main .goods .option .price:after {
   content: "";
   clear: both;
   display: block;
 }
-main .purchase .info .price .per-price {
+main .goods .option .price .per-price {
   display: block;
   font-size: 2.2rem;
   font-weight: bold;
 }
 @media screen and (max-width: 1281px) {
-  main .purchase .info .price .per-price {
+  main .goods .option .price .per-price {
     font-size: 1.9rem;
     font-weight: bold;
   }
 }
 @media screen and (max-width: 600px) {
-  main .purchase .info .price .per-price {
+  main .goods .option .price .per-price {
     font-size: 1.8rem;
     font-weight: bold;
   }
 }
-main .purchase .info .color {
+main .goods .option .color {
   padding: 20px;
   border-bottom: 1px solid #dddfe1;
   font-size: 1.8rem;
 }
-main .purchase .info .color .color-title {
+main .goods .option .color .color-title {
   display: block;
   margin-bottom: 15px;
 }
 @media screen and (max-width: 1281px) {
-  main .purchase .info .color .color-title {
+  main .goods .option .color .color-title {
     font-size: 1.6rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .purchase .info .color .color-title {
+  main .goods .option .color .color-title {
     font-size: 1.4rem;
   }
 }
-main .purchase .info .color .palette li {
+main .goods .option .color .palette li {
   display: inline-block;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   cursor: pointer;
 }
-main .purchase .info .color .palette li:nth-child(1) {
+main .goods .option .color .palette li:nth-child(1) {
   background-color: red;
 }
-main .purchase .info .color .palette li:nth-child(2) {
+main .goods .option .color .palette li:nth-child(2) {
   background-color: orange;
 }
-main .purchase .info .color .palette li:nth-child(3) {
+main .goods .option .color .palette li:nth-child(3) {
   background-color: yellow;
 }
-main .purchase .info .color .palette li:nth-child(4) {
+main .goods .option .color .palette li:nth-child(4) {
   background-color: green;
 }
-main .purchase .info .quantity {
+main .goods .option .quantity {
   padding: 20px;
   border-bottom: 1px solid #dddfe1;
   font-size: 1.8rem;
 }
 @media screen and (max-width: 600px) {
-  main .purchase .info .quantity {
+  main .goods .option .quantity {
     padding: 10px 20px;
   }
 }
-main .purchase .info .quantity:after {
+main .goods .option .quantity:after {
   content: "";
   clear: both;
   display: block;
 }
-main .purchase .info .quantity .number-title {
+main .goods .option .quantity .number-title {
   display: block;
   font-size: 1.8rem;
   margin-bottom: 15px;
 }
 @media screen and (max-width: 1281px) {
-  main .purchase .info .quantity .number-title {
+  main .goods .option .quantity .number-title {
     font-size: 1.6rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .purchase .info .quantity .number-title {
+  main .goods .option .quantity .number-title {
     font-size: 1.4rem;
   }
 }
 @media screen and (max-width: 1281px) {
-  main .purchase .info .quantity .value {
+  main .goods .option .quantity .value {
     font-size: 1.8rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .purchase .info .quantity .value {
+  main .goods .option .quantity .value {
     font-size: 1.6rem;
     margin: 0 5px;
   }
 }
-main .purchase .info .quantity button {
+main .goods .option .quantity button {
   border-radius: 50%;
   border: none;
   width: 25px;
@@ -327,7 +324,7 @@ main .purchase .info .quantity button {
   background-color: white;
 }
 @media screen and (max-width: 1281px) {
-  main .purchase .info .quantity button {
+  main .goods .option .quantity button {
     width: 20px;
     height: 20px;
     font-size: 1.9rem;
@@ -335,59 +332,59 @@ main .purchase .info .quantity button {
   }
 }
 @media screen and (max-width: 600px) {
-  main .purchase .info .quantity button {
+  main .goods .option .quantity button {
     width: 20px;
     height: 20px;
     font-size: 1.9rem;
     line-height: 20px;
   }
 }
-main .purchase .info .total {
+main .goods .option .total {
   padding: 20px;
 }
 @media screen and (max-width: 600px) {
-  main .purchase .info .total {
+  main .goods .option .total {
     padding: 10px 20px;
   }
 }
-main .purchase .info .total:after {
+main .goods .option .total:after {
   content: "";
   clear: both;
   display: block;
 }
-main .purchase .info .total .total-title {
+main .goods .option .total .total-title {
   display: block;
   font-size: 1.8rem;
   margin-bottom: 15px;
 }
 @media screen and (max-width: 1281px) {
-  main .purchase .info .total .total-title {
+  main .goods .option .total .total-title {
     font-size: 1.6rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .purchase .info .total .total-title {
+  main .goods .option .total .total-title {
     font-size: 1.4rem;
   }
 }
-main .purchase .info .total .total-price {
+main .goods .option .total .total-price {
   color: red;
   font-weight: bold;
   font-size: 2.3rem;
   float: right;
 }
 @media screen and (max-width: 1281px) {
-  main .purchase .info .total .total-price {
+  main .goods .option .total .total-price {
     font-size: 1.9rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .purchase .info .total .total-price {
+  main .goods .option .total .total-price {
     font-size: 1.9rem;
   }
 }
-main .purchase .info .purchase-btn {
-  /*----------------------------------- .purchase .purchase-btn ------------------------ */
+main .goods .option .purchase-btn {
+  /*----------------------------------- .goods .purchase-btn ------------------------ */
   width: 100%;
   display: block;
   margin-top: 50px;
@@ -402,7 +399,7 @@ main .purchase .info .purchase-btn {
   border-bottom: 1px solid #dddfe1;
 }
 @media screen and (max-width: 1281px) {
-  main .purchase .info .purchase-btn {
+  main .goods .option .purchase-btn {
     width: 60%;
     padding: 10px 10px;
     margin: 30px auto 30px auto;
@@ -410,18 +407,18 @@ main .purchase .info .purchase-btn {
   }
 }
 @media screen and (max-width: 600px) {
-  main .purchase .info .purchase-btn {
+  main .goods .option .purchase-btn {
     width: 80%;
     padding: 10px 10px;
     margin: 30px auto 30px auto;
     font-size: 1.7rem;
   }
 }
-main .purchase .review {
+main .goods .review {
   width: 100%;
   padding: 15px 0;
 }
-main .purchase .review h5 {
+main .goods .review h5 {
   box-sizing: border-box;
   width: 100%;
   font-size: 1.8rem;
@@ -431,65 +428,65 @@ main .purchase .review h5 {
   border-bottom: 1px solid #333333;
 }
 @media screen and (max-width: 1281px) {
-  main .purchase .review {
+  main .goods .review {
     padding: 0;
   }
 }
 @media screen and (max-width: 600px) {
-  main .purchase .review {
+  main .goods .review {
     padding: 0;
   }
 }
-main .purchase .review table {
+main .goods .review .review-table {
   width: 100%;
 }
-main .purchase .review table tr {
+main .goods .review .review-table tr {
   border-bottom: 1px solid #ddd;
 }
-main .purchase .review table tr.active {
+main .goods .review .review-table tr.active {
   display: block;
 }
-main .purchase .review table td {
+main .goods .review .review-table td {
   padding: 10px;
   box-sizing: border-box;
   text-align: center;
   font-size: 1.5rem;
 }
 @media screen and (max-width: 1281px) {
-  main .purchase .review table td {
+  main .goods .review .review-table td {
     padding: 5px 10px;
     font-size: 1.4rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .purchase .review table td {
+  main .goods .review .review-table td {
     padding: 10px 5px;
     font-size: 1.4rem;
   }
 }
-main .purchase .review table td.customer-id {
+main .goods .review .review-table td.customer-id {
   width: 20%;
 }
-main .purchase .review table td.rate img {
+main .goods .review .review-table td.rate img {
   width: 20px;
   height: 20px;
 }
-main .purchase .review table .register-date {
+main .goods .review .review-table .register-date {
   width: 20%;
 }
-main .purchase .review-wrapper {
-  /*----------------------------------- .purchase .review-pager ------------------------ */
+main .goods .review-wrapper {
+  /*----------------------------------- .goods .review-pager ------------------------ */
   width: 100%;
 }
-main .purchase .review-wrapper ul {
+main .goods .review-wrapper ul {
   width: 100%;
   text-align: center;
   padding: 20px 0;
 }
-main .purchase .review-wrapper ul li {
+main .goods .review-wrapper ul li {
   display: inline-block;
 }
-main .purchase .review-wrapper ul li a {
+main .goods .review-wrapper ul li a {
   width: 100%;
   text-decoration: none;
   font-size: 1.4rem;
@@ -498,18 +495,18 @@ main .purchase .review-wrapper ul li a {
   color: black;
 }
 @media screen and (max-width: 1281px) {
-  main .purchase .review-wrapper ul li a {
+  main .goods .review-wrapper ul li a {
     padding: 3px 8px;
     font-size: 1.6rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .purchase .review-wrapper ul li a {
+  main .goods .review-wrapper ul li a {
     padding: 2px 6px;
     font-size: 1.4rem;
   }
 }
-main .purchase .review-wrapper ul li.active a {
+main .goods .review-wrapper ul li.active a {
   background-color: black;
   color: white;
   font-weight: bold;

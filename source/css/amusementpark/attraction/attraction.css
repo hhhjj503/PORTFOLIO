@@ -12,18 +12,20 @@ body {
   overflow-x: hidden;
 }
 
-.top-nav {
+.h-nav {
   transition: 0.5s ease-in-out;
 }
-.top-nav.scrolldown {
+.h-nav.scrolldown {
   opacity: 0;
   pointer-events: none;
 }
-.top-nav > .wrapper li:nth-child(3) a {
+.h-nav .nav-ul li:nth-child(3) a {
   color: #e60000; /* nav 의 어트랙션 글자 빨갛게 변경 */
 }
 
+/*=================================================================================*/
 main {
+  /* -------------------------------------------- main ------------------------------------------- */
   width: 100%;
 }
 main .banner img {
@@ -35,18 +37,18 @@ main .banner img {
   -o-object-position: middle;
      object-position: middle;
 }
-main .wrapper {
+main .attraction-wrapper {
   max-width: 1600px;
   margin: 0 auto;
 }
-main .wrapper .attraction-nav {
+main .attraction-wrapper .attraction-nav-ul {
   position: fixed;
   top: 50%;
   right: 2%;
   transform: translateY(-50%);
   z-index: 10;
 }
-main .wrapper .attraction-nav li a {
+main .attraction-wrapper .attraction-nav-ul li a {
   position: relative;
   display: block;
   width: 70px;
@@ -54,7 +56,7 @@ main .wrapper .attraction-nav li a {
   border-radius: 50%;
   margin-bottom: 5px;
 }
-main .wrapper .attraction-nav li a:after {
+main .attraction-wrapper .attraction-nav-ul li a:after {
   content: "";
   position: absolute;
   top: 0;
@@ -65,16 +67,16 @@ main .wrapper .attraction-nav li a:after {
   transition: 0.3s ease;
   border-radius: 50%;
 }
-main .wrapper .attraction-nav li a.active:after, main .wrapper .attraction-nav li a:hover:after {
+main .attraction-wrapper .attraction-nav-ul li a.active:after, main .attraction-wrapper .attraction-nav-ul li a:hover:after {
   background-color: transparent;
 }
 @media screen and (max-width: 600px) {
-  main .wrapper .attraction-nav li a {
+  main .attraction-wrapper .attraction-nav-ul li a {
     width: 50px;
     height: 50px;
   }
 }
-main .wrapper .attraction-nav li a img {
+main .attraction-wrapper .attraction-nav-ul li a img {
   display: block;
   width: 100%;
   height: 100%;
@@ -82,13 +84,13 @@ main .wrapper .attraction-nav li a img {
      object-fit: cover;
   border-radius: 50%;
 }
-main .wrapper .attraction {
+main .attraction-wrapper .attraction {
   position: relative;
   width: 100%;
   padding: 100px;
   box-sizing: border-box;
 }
-main .wrapper .attraction:before {
+main .attraction-wrapper .attraction:before {
   content: "";
   position: absolute;
   top: 20%;
@@ -98,7 +100,7 @@ main .wrapper .attraction:before {
   width: 100%;
   height: 1px;
 }
-main .wrapper .attraction:after {
+main .attraction-wrapper .attraction:after {
   content: "";
   position: absolute;
   bottom: 20%;
@@ -109,44 +111,44 @@ main .wrapper .attraction:after {
   height: 1px;
 }
 @media screen and (max-width: 1281px) {
-  main .wrapper .attraction {
+  main .attraction-wrapper .attraction {
     text-align: center;
     padding: 50px;
   }
-  main .wrapper .attraction:after {
+  main .attraction-wrapper .attraction:after {
     width: 90%;
     margin: 0 auto;
   }
-  main .wrapper .attraction:before {
+  main .attraction-wrapper .attraction:before {
     width: 90%;
     margin: 0 auto;
   }
 }
 @media screen and (max-width: 768px) {
-  main .wrapper .attraction:before {
+  main .attraction-wrapper .attraction:before {
     display: none;
   }
-  main .wrapper .attraction:after {
+  main .attraction-wrapper .attraction:after {
     display: none;
   }
 }
 @media screen and (max-width: 600px) {
-  main .wrapper .attraction:before {
+  main .attraction-wrapper .attraction:before {
     display: none;
   }
-  main .wrapper .attraction:after {
+  main .attraction-wrapper .attraction:after {
     display: none;
   }
 }
-main .wrapper .attraction.right {
+main .attraction-wrapper .attraction.right {
   text-align: right;
 }
 @media screen and (max-width: 1281px) {
-  main .wrapper .attraction.right {
+  main .attraction-wrapper .attraction.right {
     text-align: center;
   }
 }
-main .wrapper .attraction .deco {
+main .attraction-wrapper .attraction .deco {
   position: absolute;
   bottom: 100px;
   right: 0;
@@ -156,34 +158,34 @@ main .wrapper .attraction .deco {
   font-size: 6rem;
   font-weight: bold;
 }
-main .wrapper .attraction .deco.left {
+main .attraction-wrapper .attraction .deco.left {
   left: 0;
   right: initial;
 }
 @media screen and (max-width: 1281px) {
-  main .wrapper .attraction .deco {
+  main .attraction-wrapper .attraction .deco {
     bottom: 50px;
     font-size: 4rem;
     right: 10%;
   }
-  main .wrapper .attraction .deco.left {
+  main .attraction-wrapper .attraction .deco.left {
     left: 10%;
     right: initial;
   }
 }
 @media screen and (max-width: 768px) {
-  main .wrapper .attraction .deco {
+  main .attraction-wrapper .attraction .deco {
     font-size: 3rem;
     bottom: 10px;
   }
 }
 @media screen and (max-width: 600px) {
-  main .wrapper .attraction .deco {
+  main .attraction-wrapper .attraction .deco {
     font-size: 2rem;
     bottom: 20px;
   }
 }
-main .wrapper .attraction > img {
+main .attraction-wrapper .attraction > img {
   position: relative;
   display: inline-block;
   width: 700px;
@@ -195,24 +197,24 @@ main .wrapper .attraction > img {
   transition: 0.3s ease;
   z-index: 1;
 }
-main .wrapper .attraction > img:nth-child(even) {
+main .attraction-wrapper .attraction > img:nth-child(even) {
   margin-left: auto;
 }
 @media screen and (max-width: 1281px) {
-  main .wrapper .attraction > img {
+  main .attraction-wrapper .attraction > img {
     width: 400px;
     height: 400px;
   }
 }
 @media screen and (max-width: 600px) {
-  main .wrapper .attraction > img {
+  main .attraction-wrapper .attraction > img {
     display: block;
     width: 70vw;
     height: 70vw;
     margin: 0 auto;
   }
 }
-main .wrapper .attraction .desc {
+main .attraction-wrapper .attraction .desc {
   display: inline-block;
   font-size: 3rem;
   font-weight: bold;
@@ -221,51 +223,51 @@ main .wrapper .attraction .desc {
   line-height: 1.618;
 }
 @media screen and (max-width: 1281px) {
-  main .wrapper .attraction .desc {
+  main .attraction-wrapper .attraction .desc {
     text-align: left;
   }
 }
 @media screen and (max-width: 768px) {
-  main .wrapper .attraction .desc {
+  main .attraction-wrapper .attraction .desc {
     display: none;
   }
 }
 @media screen and (max-width: 600px) {
-  main .wrapper .attraction .desc {
+  main .attraction-wrapper .attraction .desc {
     display: none;
   }
 }
-main .wrapper .attraction .desc.right {
+main .attraction-wrapper .attraction .desc.right {
   margin-left: 0;
   margin-right: 5%;
 }
 @media screen and (max-width: 1281px) {
-  main .wrapper .attraction .desc.right {
+  main .attraction-wrapper .attraction .desc.right {
     text-align: right;
   }
 }
 @media screen and (max-width: 1281px) {
-  main .wrapper .attraction .desc h4 {
+  main .attraction-wrapper .attraction .desc h4 {
     font-size: 2rem;
   }
 }
-main .wrapper .attraction .desc .ban-icons li {
+main .attraction-wrapper .attraction .desc .ban-icons li {
   display: inline-block;
   width: 80px;
   height: 80px;
 }
 @media screen and (max-width: 1281px) {
-  main .wrapper .attraction .desc .ban-icons li {
+  main .attraction-wrapper .attraction .desc .ban-icons li {
     width: 60px;
     height: 60px;
   }
 }
 @media screen and (max-width: 1281px) {
-  main .wrapper .attraction .desc .ban-list {
+  main .attraction-wrapper .attraction .desc .ban-ul {
     font-size: 2rem;
   }
 }
-main .wrapper .attraction .mobile {
+main .attraction-wrapper .attraction .mobile {
   position: relative;
   display: none;
   margin-top: 25px;
@@ -273,10 +275,10 @@ main .wrapper .attraction .mobile {
   line-height: 1.618;
 }
 @media screen and (max-width: 768px) {
-  main .wrapper .attraction .mobile {
+  main .attraction-wrapper .attraction .mobile {
     display: block;
   }
-  main .wrapper .attraction .mobile:before {
+  main .attraction-wrapper .attraction .mobile:before {
     content: "";
     position: absolute;
     top: 0;
@@ -287,7 +289,7 @@ main .wrapper .attraction .mobile {
     height: 1px;
     margin: 0 auto;
   }
-  main .wrapper .attraction .mobile:after {
+  main .attraction-wrapper .attraction .mobile:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -300,10 +302,10 @@ main .wrapper .attraction .mobile {
   }
 }
 @media screen and (max-width: 600px) {
-  main .wrapper .attraction .mobile {
+  main .attraction-wrapper .attraction .mobile {
     display: block;
   }
-  main .wrapper .attraction .mobile:before {
+  main .attraction-wrapper .attraction .mobile:before {
     content: "";
     position: absolute;
     top: 0;
@@ -313,7 +315,7 @@ main .wrapper .attraction .mobile {
     width: 100%;
     height: 1px;
   }
-  main .wrapper .attraction .mobile:after {
+  main .attraction-wrapper .attraction .mobile:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -324,36 +326,36 @@ main .wrapper .attraction .mobile {
     height: 1px;
   }
 }
-main .wrapper .attraction .mobile h4 {
+main .attraction-wrapper .attraction .mobile h4 {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 25px;
 }
 @media screen and (max-width: 768px) {
-  main .wrapper .attraction .mobile h4 {
+  main .attraction-wrapper .attraction .mobile h4 {
     font-size: 2.2rem;
   }
 }
-main .wrapper .attraction .mobile .ban-icons li {
+main .attraction-wrapper .attraction .mobile .ban-icons li {
   display: inline-block;
   width: 50px;
   height: 50px;
 }
 @media screen and (max-width: 768px) {
-  main .wrapper .attraction .mobile .ban-icons li {
+  main .attraction-wrapper .attraction .mobile .ban-icons li {
     width: 60px;
     height: 60px;
   }
 }
-main .wrapper .attraction .mobile .ban-icons li img {
+main .attraction-wrapper .attraction .mobile .ban-icons li img {
   width: 100%;
   height: 100%;
 }
-main .wrapper .attraction .mobile .ban-list li {
+main .attraction-wrapper .attraction .mobile .ban-ul li {
   font-size: 1.6rem;
 }
 @media screen and (max-width: 768px) {
-  main .wrapper .attraction .mobile .ban-list li {
+  main .attraction-wrapper .attraction .mobile .ban-ul li {
     font-size: 1.8rem;
   }
 }/*# sourceMappingURL=attraction.css.map */

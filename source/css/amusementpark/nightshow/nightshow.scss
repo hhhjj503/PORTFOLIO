@@ -14,8 +14,8 @@ body {
   overflow-x: hidden;
 }
 
-.top-nav {
-  & > .wrapper {
+.h-nav {
+  & .nav-ul {
     li:nth-child(2) {
       & a {
         color: #e60000; /* nav 의 나이트쇼 글자 빨갛게 변경 */
@@ -24,7 +24,7 @@ body {
   }
 }
 
-a.hiding {
+a.hidingThreshold {
   & + * {
     position: relative;
     transition: 1s ease-in-out;
@@ -37,10 +37,11 @@ a.hiding {
   background-image: url(../../../images/amusementpark/nightshow/#{$resource});
 }
 
+/*=================================================================================*/
+
 main {
   /* -------------------------------------------- main ------------------------------------------- */
-  .banner {
-    /*----------------------- main .banner ------------------------ */
+  .banner-wrapper {
     width: 100%;
     height: 500px;
 
@@ -55,7 +56,7 @@ main {
       }
     }
 
-    .main_img {
+    .img {
       width: 100%;
       margin: 0 auto;
       height: 100%;
@@ -71,8 +72,8 @@ main {
     }
   }
 
-  .info {
-    /*----------------------- main .info ------------------------ */
+  .info-wrapper {
+    /*----------------------- main .info-wrapper ------------------------ */
     max-width: 1200px;
     width: 100%;
     padding: 100px 0;
@@ -232,7 +233,7 @@ main {
         }
       }
 
-      & .slider-controller {
+      & .slider-controls {
         position: absolute;
         bottom: 10px;
         right: 10px;
@@ -651,12 +652,12 @@ main {
         }
       }
 
-      ul {
+      .benefit-ul {
         width: 100%;
         text-align: center;
       }
 
-      .benefit {
+      .benefit-li {
         display: inline-block;
         height: 300px;
         width: 298px;
@@ -755,24 +756,24 @@ main {
         }
       }
 
-      li.benefit:nth-child(1) {
+      .benefit-li:nth-child(1) {
         background-color: #3870e0;
         @include content-resoure-path("nightshow_fireworks.PNG");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
       }
-      li.benefit:nth-child(2) {
+      .benefit-li:nth-child(2) {
         background-color: #b30fff;
       }
-      li.benefit:nth-child(3) {
+      .benefit-li:nth-child(3) {
         background-color: #3870e0;
         @include content-resoure-path("nightsky.PNG");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
       }
-      li.benefit:nth-child(4) {
+      .benefit-li:nth-child(4) {
         background-color: #3870e0;
       }
     }

@@ -1,10 +1,11 @@
 window.addEventListener("load", () => {
-  //상세페이지별 공통변수
+  //상세페이지별 공통변수(night show 페이지 제외)
   const html = document.querySelector("html");
-  const topNav = document.querySelector(".top-nav");
-  const topNavMobile = document.querySelector(".top-nav-mobile");
-  const subMenu = document.querySelector(".top-nav-mobile .sub-menu");
-  const goup = document.querySelector(".top-nav-mobile .goup");
+
+  const hNav = document.querySelector("header .h-nav");
+  const hMobileNav = document.querySelector("header .mobile-nav");
+  const subMenu = document.querySelector(".mobile-nav .sub-menu");
+  const mobileGotop = document.querySelector(".mobile-nav .goup");
   const gotop = document.querySelector(".gotop");
 
   //gotop 버튼
@@ -15,20 +16,20 @@ window.addEventListener("load", () => {
 
   window.addEventListener("scroll", () => {
     if (html.scrollTop > 0) {
-      topNav.classList.add("scrolldown");
-      topNavMobile.classList.add("scrolldown");
+      hNav.classList.add("scrolldown");
+      hMobileNav.classList.add("scrolldown");
     } else {
-      topNav.classList.remove("scrolldown");
-      topNavMobile.classList.remove("scrolldown");
+      hNav.classList.remove("scrolldown");
+      hMobileNav.classList.remove("scrolldown");
     }
   });
 
-  topNavMobile.addEventListener("click", () => {
+  hMobileNav.addEventListener("click", () => {
     subMenu.classList.toggle("opened");
   });
 
   //click 이벤트 작동하지 않을때
-  goup.addEventListener("mouseenter", () => {
+  mobileGotop.addEventListener("mouseenter", () => {
     subMenu.classList.toggle("opened");
   });
 });

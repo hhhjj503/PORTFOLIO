@@ -12,33 +12,23 @@ body {
   overflow-x: hidden;
 }
 
-.top-nav {
+.h-nav {
   transition: 0.5s ease-in-out;
   z-index: 98; /* 상품구매창의 레이어를 위해 z-index  변경*/
 }
-.top-nav.scrolldown {
-  opacity: 0;
-  pointer-events: none;
-}
-.top-nav > .wrapper li:nth-child(4) a {
+.h-nav .nav-ul li:nth-child(4) a {
   color: #e60000; /* nav 의 크러스티랜드 글자 빨갛게 변경 */
 }
 
-.top-nav-mobile {
+.mobile-nav {
   transition: 0.5s ease-in-out;
 }
-.top-nav-mobile.scrolldown {
+.mobile-nav.scrolldown {
   opacity: 0;
   pointer-events: none;
 }
 
-a.hiding + * {
-  position: relative;
-  transition: 0.6s cubic-bezier(0.5, 0, 0.75, 0);
-  top: 50px;
-  opacity: 0;
-}
-
+/*=================================================================================*/
 main {
   /* ----------------------------------- main  --------------------------------------- */
 }
@@ -142,17 +132,12 @@ main .goods-wrapper .title {
     font-size: 1.4rem;
   }
 }
-main .goods-wrapper .list-wrapper {
+main .goods-wrapper .goods-container {
   width: 100%;
   box-sizing: border-box;
   margin: 0 auto;
 }
-@media screen and (max-width: 1281px) {
-  main .goods-wrapper .list-wrapper {
-    padding: 0 10px;
-  }
-}
-main .goods-wrapper ul {
+main .goods-wrapper .goods-ul {
   width: 100%;
   padding-bottom: 50px;
   position: relative;
@@ -161,11 +146,11 @@ main .goods-wrapper ul {
   font-size: 0;
 }
 @media screen and (max-width: 600px) {
-  main .goods-wrapper ul {
+  main .goods-wrapper .goods-ul {
     margin-bottom: 0;
   }
 }
-main .goods-wrapper ul li {
+main .goods-wrapper .goods-ul .goods-li {
   width: 200px;
   height: 350px;
   box-sizing: border-box;
@@ -174,7 +159,7 @@ main .goods-wrapper ul li {
   display: inline-block;
   margin: 10px;
 }
-main .goods-wrapper ul li.loaded {
+main .goods-wrapper .goods-ul .goods-li.loaded {
   animation: showItems 0.8s forwards ease-in-out;
 }
 @keyframes showItems {
@@ -187,22 +172,22 @@ main .goods-wrapper ul li.loaded {
   }
 }
 @media screen and (max-width: 1281px) {
-  main .goods-wrapper ul li {
+  main .goods-wrapper .goods-ul .goods-li {
     width: 19%;
     margin: 10px 0.5%;
   }
 }
 @media screen and (max-width: 600px) {
-  main .goods-wrapper ul li {
+  main .goods-wrapper .goods-ul .goods-li {
     width: 30%;
     height: 150px;
     margin: 5px;
   }
 }
-main .goods-wrapper ul li:hover {
+main .goods-wrapper .goods-ul .goods-li:hover {
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0.3em 0.3em 1em rgba(0, 0, 0, 0.1);
 }
-main .goods-wrapper ul li a {
+main .goods-wrapper .goods-ul .goods-li a {
   display: inline-block;
   width: 100%;
   height: 100%;
@@ -210,18 +195,18 @@ main .goods-wrapper ul li a {
   color: black;
   overflow: hidden;
 }
-main .goods-wrapper ul li a img {
+main .goods-wrapper .goods-ul .goods-li a img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   transition: 0.3s ease;
 }
-main .goods-wrapper ul li a:hover img {
+main .goods-wrapper .goods-ul .goods-li a:hover img {
   transform: scale(1.1);
   transform-origin: center center;
 }
-main .goods-wrapper ul li a h5 {
+main .goods-wrapper .goods-ul .goods-li a h5 {
   position: absolute;
   display: inline;
   left: 50%;
@@ -238,12 +223,12 @@ main .goods-wrapper ul li a h5 {
   transition: 0.3s ease-in-out;
 }
 @media screen and (max-width: 1281px) {
-  main .goods-wrapper ul li a h5 {
+  main .goods-wrapper .goods-ul .goods-li a h5 {
     font-size: 1.2rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .goods-wrapper ul li a h5 {
+  main .goods-wrapper .goods-ul .goods-li a h5 {
     font-size: 1.1rem;
     padding: 0 5px;
     min-width: 55%;
@@ -282,29 +267,33 @@ main .goods-wrapper button.nomore {
 main .goods-wrapper button:hover {
   border: rgb(141, 0, 0);
 }
-main .goods-slider {
+main .goods-wrapper2 {
+  /*----------------------- main .goods-wrapper2------------------------ */
   width: 100%;
   background-color: #f8f8f8;
   padding: 20px 0;
 }
 @media screen and (max-width: 1281px) {
-  main .goods-slider {
+  main .goods-wrapper2 {
     overflow: scroll;
   }
 }
 @media screen and (max-width: 600px) {
-  main .goods-slider {
+  main .goods-wrapper2 {
     overflow: scroll;
   }
 }
-main .goods-slider ul {
+main .goods-wrapper2 .goods-ul {
   max-width: 1200px;
-  text-align: center;
-  white-space: nowrap;
+  width: 100%;
   margin: 0 auto;
+  white-space: nowrap;
+}
+main .goods-wrapper2 .goods-ul li {
+  text-align: center;
   font-size: 0;
 }
-main .goods-slider ul li {
+main .goods-wrapper2 .goods-ul li {
   position: relative;
   display: inline-block;
   width: 200px;
@@ -314,27 +303,27 @@ main .goods-slider ul li {
   overflow: hidden;
 }
 @media screen and (max-width: 1281px) {
-  main .goods-slider ul li {
+  main .goods-wrapper2 .goods-ul li {
     width: 150px;
     height: 150px;
   }
 }
 @media screen and (max-width: 600px) {
-  main .goods-slider ul li {
+  main .goods-wrapper2 .goods-ul li {
     width: 100px;
     height: 100px;
   }
 }
-main .goods-slider ul li:hover p, main .goods-slider ul li:focus-visible p {
+main .goods-wrapper2 .goods-ul li:hover p, main .goods-wrapper2 .goods-ul li:focus-visible p {
   opacity: 1;
 }
-main .goods-slider ul li img {
+main .goods-wrapper2 .goods-ul li img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .goods-slider ul li p {
+main .goods-wrapper2 .goods-ul li p {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -348,7 +337,7 @@ main .goods-slider ul li p {
   transition: opacity 0.3s ease;
 }
 @media screen and (max-width: 1281px) {
-  main .goods-slider ul li p {
+  main .goods-wrapper2 .goods-ul li p {
     width: 150px;
     height: 150px;
     font-size: 1.3rem;
@@ -356,186 +345,11 @@ main .goods-slider ul li p {
   }
 }
 @media screen and (max-width: 600px) {
-  main .goods-slider ul li p {
+  main .goods-wrapper2 .goods-ul li p {
     width: 100px;
     height: 100px;
     font-size: 1.1rem;
     line-height: 100px;
-  }
-}
-main .purchase {
-  /*----------------------------------- main .purchase ------------------------ */
-  position: fixed;
-  bottom: 0;
-  width: 21%;
-  min-width: 380px;
-  max-width: 450px;
-  height: 100%;
-  background-color: white;
-  z-index: 99;
-  overflow: auto;
-  /* Add a thumb */
-}
-main .purchase::-webkit-scrollbar {
-  width: 10px;
-  height: 8px;
-  background-color: #d5d5d5; /* or add it to the track */
-}
-main .purchase::-webkit-scrollbar-thumb {
-  background: #5e5e5e;
-}
-@media screen and (max-width: 1281px) {
-  main .purchase::-webkit-scrollbar {
-    width: 8px;
-    height: 6px;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .purchase::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
-  }
-}
-@media screen and (max-width: 1281px) {
-  main .purchase {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    max-width: initial;
-    min-width: initial;
-    height: 40%;
-    background-color: white;
-    z-index: 99;
-    box-shadow: -1px -1px 20px rgb(192, 192, 192);
-    overflow-y: scroll;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .purchase {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    max-width: initial;
-    min-width: initial;
-    height: 50%;
-    background-color: white;
-    z-index: 99;
-    box-shadow: -1px -1px 20px rgb(192, 192, 192);
-    overflow-y: scroll;
-  }
-}
-main .purchase.close {
-  right: -9999em;
-}
-@media screen and (max-width: 1281px) {
-  main .purchase.close {
-    bottom: -9999em;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .purchase.close {
-    bottom: -9999em;
-  }
-}
-main .purchase.open {
-  right: 0;
-}
-@media screen and (max-width: 1281px) {
-  main .purchase.open {
-    bottom: 0;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .purchase.open {
-    bottom: 0;
-  }
-}
-main .purchase .purchase-close-btn {
-  /*----------------------------------- .purchase .purchase-close-btn ------------------------ */
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: block;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-}
-@media screen and (max-width: 1281px) {
-  main .purchase .purchase-close-btn {
-    top: 30px;
-    right: 30px;
-  }
-}
-@media screen and (max-width: 1281px) {
-  main .purchase .purchase-close-btn {
-    width: 30px;
-    height: 30px;
-    top: 10px;
-    right: 10px;
-  }
-  main .purchase .purchase-close-btn span {
-    height: 3px;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .purchase .purchase-close-btn {
-    width: 30px;
-    height: 30px;
-    top: 10px;
-    right: 10px;
-  }
-}
-main .purchase .purchase-close-btn span {
-  width: 100%;
-  height: 5px;
-  background-color: #000;
-  position: absolute;
-  display: block;
-  top: 50%;
-  transform: translateY(-50%);
-}
-@media screen and (max-width: 1281px) {
-  main .purchase .purchase-close-btn span {
-    height: 3px;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .purchase .purchase-close-btn span {
-    height: 3px;
-  }
-}
-main .purchase .purchase-close-btn span:nth-child(1) {
-  transform: rotate(45deg);
-}
-main .purchase .purchase-close-btn span:nth-child(2) {
-  transform: rotate(-45deg);
-}
-main .purchase img {
-  width: 100%;
-  height: 60%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media screen and (max-width: 1281px) {
-  main .purchase img {
-    float: left;
-    box-sizing: border-box;
-    width: 50%;
-    height: 100%;
-    margin: 0 auto;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .purchase img {
-    width: 100%;
-    height: 50%;
-    margin: 0 auto;
-    display: block;
-    -o-object-fit: contain;
-       object-fit: contain;
   }
 }
 

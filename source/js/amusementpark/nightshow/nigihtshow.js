@@ -1,23 +1,26 @@
 window.addEventListener("load", () => {
-  const mainImg = document.querySelector(".main_img");
+  const html = document.querySelector("html");
+
+  const bannerImg = document.querySelector(".banner-wrapper .img");
   const slider = document.querySelector(".contents .slider");
+  const pauseBtn = document.querySelector(".slider-controls .pause"); //controller > controls
+  const playBtn = document.querySelector(".slider-controls .play");
   const overlay = document.querySelector(".overlay");
   const overlayImg = document.querySelector(".overlay img");
-  const as = document.querySelectorAll("a.hiding");
-  const hidings = document.querySelectorAll("a.hiding + *");
-  const html = document.querySelector("html");
+
+  const hidingThresholds = document.querySelectorAll(".hidingThreshold"); //hiding > hidingThreshold
+  const hiddenElements = document.querySelectorAll(".hidingThreshold + *"); //hidings > hiddenElements
+
   const gotop = document.querySelector(".gotop");
-  const pauseBtn = document.querySelector(".slider-controller .pause");
-  const playBtn = document.querySelector(".slider-controller .play");
   const inputs = document.querySelectorAll("input");
   const textarea = document.querySelector("textarea");
 
   //모바일 메뉴
-  const topNavMobile = document.querySelector(".top-nav-mobile");
-  const subMenu = document.querySelector(".top-nav-mobile .sub-menu");
-  const goup = document.querySelector(".top-nav-mobile .goup");
+  const hMobileNav = document.querySelector("header .mobile-nav"); //top-nav-mobile > mobile-nav
+  const subMenu = document.querySelector(".mobile-nav .sub-menu");
+  const goup = document.querySelector(".mobile-nav .goup");
 
-  topNavMobile.addEventListener("click", () => {
+  hMobileNav.addEventListener("click", () => {
     subMenu.classList.toggle("opened");
   });
 
@@ -32,11 +35,12 @@ window.addEventListener("load", () => {
     subMenu.classList.toggle("opened");
   });
 
-  for (let i = 0; i < hidings.length; i++) {
-    hidings[i].dataset.offtop = hidings[i].getBoundingClientRect().top - 1000;
-    as[i].addEventListener("keydown", (e) => {
+  for (let i = 0; i < hiddenElements.length; i++) {
+    hiddenElements[i].dataset.offtop =
+      hiddenElements[i].getBoundingClientRect().top - 1000;
+    hidingThresholds[i].addEventListener("keydown", (e) => {
       if (e.keyCode === 13) {
-        e.preventDefault();
+        e.preventDefault(); //a태그의 enter 키 차단
       }
     });
   }
@@ -45,9 +49,9 @@ window.addEventListener("load", () => {
     "scroll",
     throttle(() => {
       const currentTop = html.scrollTop;
-      for (let i = 0; i < hidings.length; i++) {
-        if (currentTop >= hidings[i].dataset.offtop) {
-          showElements(hidings[i]);
+      for (let i = 0; i < hiddenElements.length; i++) {
+        if (currentTop >= hiddenElements[i].dataset.offtop) {
+          showElements(hiddenElements[i]);
         }
       }
     })
@@ -59,7 +63,7 @@ window.addEventListener("load", () => {
   }
 
   const img = new Image();
-  img.src = mainImg.dataset.path;
+  img.src = bannerImg.dataset.path;
   let sliderWorking = true;
 
   pauseBtn.addEventListener("click", function () {

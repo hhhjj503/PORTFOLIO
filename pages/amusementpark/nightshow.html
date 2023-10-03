@@ -13,31 +13,30 @@
     <title>나이트쇼 | Amusement Park</title>
   </head>
   <body>
+    <!-- header -->
     <header>
-      <!-- 헤드 nav 메뉴(PC) -->
-      <nav class="top-nav">
-        <div class="wrapper">
-          <ul>
-            <li>
-              <a href="./index.html" class="home">
-                <img
-                  src="../../source/images/amusementpark/fort-awesome.svg"
-                  alt="보라색 성 아이콘"
-                />
-              </a>
-            </li>
-            <li><a href="./nightshow.html">나이트쇼</a></li>
-            <li><a href="./attraction.html">어트랙션</a></li>
-            <li><a href="./krustyland.html">크러스티랜드</a></li>
-            <li><a href="./aquarium.html">아쿠아리움</a></li>
-          </ul>
-        </div>
+      <nav class="h-nav">
+        <ul class="nav-ul">
+          <li>
+            <a href="./index.html" class="home-a">
+              <img
+                src="../../source/images/amusementpark/fort-awesome.svg"
+                alt="보라색 성 아이콘"
+              />
+            </a>
+          </li>
+          <li><a href="./nightshow.html">나이트쇼</a></li>
+          <li><a href="./attraction.html">어트랙션</a></li>
+          <li><a href="./krustyland.html">크러스티랜드</a></li>
+          <li><a href="./aquarium.html">아쿠아리움</a></li>
+        </ul>
       </nav>
-      <!-- 헤드 nav 메뉴(Mobile) -->
-      <nav class="top-nav-mobile">
+
+      <!-- mobile nav -->
+      <nav class="mobile-nav">
         <div class="wrapper">
-          <div class="menu-btn">
-            <a href="#" class="home">
+          <div class="home-btn">
+            <a href="#" class="home-a">
               <img
                 src="../../source/images/amusementpark/fort-awesome.svg"
                 alt="보라색 성 아이콘"
@@ -66,24 +65,28 @@
         </div>
       </nav>
     </header>
+    <!-- //header -->
+
     <!-- main -->
     <main>
       <!-- banner -->
-      <div class="banner">
+      <div class="banner-wrapper">
         <div
-          class="main_img"
+          class="img"
           style="
             background-image: url(../../source/images/amusementpark/nightshow/fireworks.jpg);
           "
           data-path="../../source/images/amusementpark/nightshow/alexander-popov-IL3s8qi8XaA-unsplash.jpg"
         ></div>
       </div>
+      <!-- //banner -->
+
       <!-- info -->
-      <div class="info">
-        <a href="#" class="hiding" tabindex="-1"></a>
+      <div class="info-wrapper">
+        <a href="#" class="hidingThreshold" tabindex="-1"></a>
         <div class="sub-desc">한여름을 밝게비출 시원한 밤</div>
         <div class="desc">신나는 불꽃축제!</div>
-        <a href="#" class="hiding" tabindex="-1"></a>
+        <a href="#" class="hidingThreshold" tabindex="-1"></a>
         <div class="contents">
           <div class="slider-wrapper">
             <div class="slider">
@@ -119,7 +122,7 @@
               </div>
             </div>
           </div>
-          <div class="slider-controller">
+          <div class="slider-controls">
             <button class="pause">
               <img
                 src="../../source/images/amusementpark/aquarium/pause-solid.svg"
@@ -141,12 +144,14 @@
           </div>
         </div>
       </div>
+      <!-- //info -->
+
       <!-- letter -->
       <div class="letter-wrapper">
         <div class="letter">
-          <a href="#" class="hiding" tabindex="-1"></a>
+          <a href="#" class="hidingThreshold" tabindex="-1"></a>
           <div class="desc">여러분의 이야기를 들려주세요!</div>
-          <a href="#" class="hiding" tabindex="-1"></a>
+          <a href="#" class="hidingThreshold" tabindex="-1"></a>
           <div class="form-wrapper">
             <form action="#" method="get">
               <div class="customer-name">
@@ -239,58 +244,62 @@
           </div>
         </div>
       </div>
+      <!-- //letter -->
+
       <!-- benefits -->
       <div class="benefits">
         <div class="listwrapper">
-          <a href="#" class="hiding" tabindex="-1"></a>
+          <a href="#" class="hidingThreshold" tabindex="-1"></a>
           <div class="sub-desc">놓치지 마세요!</div>
           <div class="desc">잊지말아야 할 혜택 네가지!</div>
-          <a href="#" class="hiding" tabindex="-1"></a>
-          <ul>
-            <li class="benefit">
+          <a href="#" class="hidingThreshold" tabindex="-1"></a>
+          <ul class="benefit-ul">
+            <li class="benefit-li">
               <div>
                 <p>어플을 통해 이벤트를 받아보세요!</p>
                 <button>바로가기</button>
               </div>
             </li>
-            <li class="benefit">
+            <li class="benefit-li">
               <div>
                 <p>다양한 행사를 통한 푸짐한 상품들!</p>
                 <button>바로가기</button>
               </div>
             </li>
-            <li class="benefit">
+            <li class="benefit-li">
               <div>
                 <p>온가족이 함께하면 더욱 커지는 할인혜택!</p>
                 <button>바로가기</button>
               </div>
             </li>
-            <li class="benefit">
+            <li class="benefit-li">
               <div>
                 <p>언제인지 모르는 깜짝 이벤트까지!</p>
                 <button>바로가기</button>
               </div>
             </li>
           </ul>
-          <a href="#" class="hiding" tabindex="-1"></a>
+          <a href="#" class="hidingThreshold" tabindex="-1"></a>
         </div>
       </div>
+      <!-- //benefits -->
     </main>
+    <!-- //main -->
+
     <!-- footer -->
     <footer>
       <div class="wrapper">
-        <div class="list">
-          <ul>
-            <li><a href="#">소개</a></li>
-            <li><a href="#">문의</a></li>
-            <li><a href="#">이용약관</a></li>
-            <li><a href="#">개인정보관리</a></li>
-            <li><a href="#">이메일무단수집거부</a></li>
-            <li><a href="#">사이트맵</a></li>
-            <li><a href="#">직원채용</a></li>
-          </ul>
-        </div>
-        <div class="sns">
+        <ul class="list-ul">
+          <li><a href="#">소개</a></li>
+          <li><a href="#">문의</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보관리</a></li>
+          <li><a href="#">이메일무단수집거부</a></li>
+          <li><a href="#">사이트맵</a></li>
+          <li><a href="#">직원채용</a></li>
+        </ul>
+
+        <div class="sns-imgs-wrapper">
           <img
             src="../../source/images/amusementpark/youtubeicon.png"
             alt="페이스북 로고 이미지"
@@ -307,6 +316,7 @@
             tabindex="0"
           />
         </div>
+
         <div class="logo"><div class="name">Amusement Park</div></div>
         <div class="gotop">
           <a href="#"
@@ -317,5 +327,6 @@
         </div>
       </div>
     </footer>
+    <!-- //footer -->
   </body>
 </html>

@@ -1,10 +1,8 @@
 window.addEventListener("load", function () {
-  //상세페이지별 공통변수
+  //상세페이지별 공통변수, 아쿠아리움 페이지용 추가기능을 위한 쿼리
   const html = document.querySelector("html");
-  const topNav = document.querySelector(".top-nav");
-  const topNavMobile = document.querySelector(".top-nav-mobile");
-  const subMenu = document.querySelector(".top-nav-mobile .sub-menu");
-  const goup = document.querySelector(".top-nav-mobile .goup");
+  const hNav = document.querySelector(".h-nav");
+  const hNavMobile = document.querySelector(".mobile-nav");
 
   //아쿠아리움 페이지 슬라이더 사용을 위한 변수
   const as = document.querySelectorAll(".event-slider a");
@@ -28,7 +26,7 @@ window.addEventListener("load", function () {
   const playBtn = document.querySelector(".index-button-wrapper .play");
   let sliderWorking = true;
 
-  const mainBannerWrapper = document.querySelector("main .banner-wrapper");
+  const bannerBgDiv = document.querySelector("main .banner-bgdiv");
   //이미지미리로드
   const imgSourceArray = [];
   imgSourceArray.push(
@@ -45,23 +43,13 @@ window.addEventListener("load", function () {
   //스크롤 내리면 헤드메뉴 투명하게
   window.addEventListener("scroll", () => {
     if (html.scrollTop > 0) {
-      topNav.classList.add("scrolldown");
-      topNavMobile.classList.add("scrolldown");
+      hNav.classList.add("scrolldown");
+      hNavMobile.classList.add("scrolldown");
     } else {
-      topNav.classList.remove("scrolldown");
-      topNavMobile.classList.remove("scrolldown");
+      hNav.classList.remove("scrolldown");
+      hNavMobile.classList.remove("scrolldown");
     }
   });
-
-  topNavMobile.addEventListener("click", () => {
-    subMenu.classList.toggle("opened");
-  });
-
-  //모바일 에러용
-  goup.addEventListener("mouseenter", () => {
-    subMenu.classList.toggle("opened");
-  });
-
   // ---------------------------------------------------------------------------------//
 
   for (let i = 0; i < as.length; i++) {
@@ -138,7 +126,7 @@ window.addEventListener("load", function () {
     }, 1000);
   }
 
-  mainBannerWrapper.classList.add("loaded");
+  bannerBgDiv.classList.add("loaded");
 
   /**
    * 마감 closed 시간까지 남은 시간을 계산하는 함수

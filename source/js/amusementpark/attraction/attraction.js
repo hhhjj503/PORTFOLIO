@@ -1,6 +1,6 @@
 window.addEventListener("load", () => {
   const html = document.querySelector("html");
-  const attracionNavs = document.querySelectorAll(".attraction-nav a");
+  const attracionNavs = document.querySelectorAll(".attraction-nav-ul a");
   const attractions = document.querySelectorAll(".attraction");
 
   let attractionsOffsetTops = [];

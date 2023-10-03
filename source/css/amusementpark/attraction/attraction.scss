@@ -12,7 +12,7 @@ body {
   overflow-x: hidden;
 }
 
-.top-nav {
+.h-nav {
   transition: 0.5s ease-in-out;
 
   &.scrolldown {
@@ -20,7 +20,7 @@ body {
     pointer-events: none;
   }
 
-  & > .wrapper {
+  & .nav-ul {
     li:nth-child(3) {
       & a {
         color: #e60000; /* nav 의 어트랙션 글자 빨갛게 변경 */
@@ -29,9 +29,10 @@ body {
   }
 }
 
-//
+/*=================================================================================*/
 
 main {
+  /* -------------------------------------------- main ------------------------------------------- */
   width: 100%;
 
   & .banner {
@@ -44,11 +45,11 @@ main {
     }
   }
 
-  & .wrapper {
+  & .attraction-wrapper {
     max-width: 1600px;
     margin: 0 auto;
 
-    & .attraction-nav {
+    & .attraction-nav-ul {
       position: fixed;
       top: 50%;
       right: 2%;
@@ -307,7 +308,7 @@ main {
           }
         }
 
-        & .ban-list {
+        & .ban-ul {
           @media screen and (max-width: 1281px) {
             & {
               font-size: 2rem;
@@ -414,7 +415,7 @@ main {
           }
         }
 
-        & .ban-list {
+        & .ban-ul {
           & li {
             font-size: 1.6rem;
 

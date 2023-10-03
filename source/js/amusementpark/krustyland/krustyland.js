@@ -1,9 +1,5 @@
 window.addEventListener("load", () => {
   const html = document.querySelector("html");
-  const topNav = document.querySelector(".top-nav");
-  const topNavMobile = document.querySelector(".top-nav-mobile");
-  const subMenu = document.querySelector(".top-nav-mobile .sub-menu");
-  const goup = document.querySelector(".top-nav-mobile .goup");
   const moreBtn = document.querySelector(".more");
   const menu = document.querySelector("main .menu");
   const background = document.querySelector(".background");
@@ -31,10 +27,9 @@ window.addEventListener("load", () => {
     img.src = imgSourceArray[i];
   }
 
-  const list = $(".list-wrapper .list");
+  const goodsUl = $(".goods-wrapper .goods-ul");
 
   window.addEventListener("scroll", () => {
-    const mobileHeader = topNavMobile.style.display;
     if (
       html.scrollTop > background.offsetHeight
       //- menu.offsetHeight && topNav.offsetHeight !== 0
@@ -46,16 +41,6 @@ window.addEventListener("load", () => {
       menu.style.position = "relative";
       menu.style.top = 0;
     }
-  });
-
-  //모바일 메뉴 클릭시 아코디언
-  topNavMobile.addEventListener("click", () => {
-    subMenu.classList.toggle("opened");
-  });
-
-  //모바일 에러용
-  goup.addEventListener("mouseenter", () => {
-    subMenu.classList.toggle("opened");
   });
 
   //제이슨 파일 데이터로 li 만들기=
@@ -81,7 +66,7 @@ window.addEventListener("load", () => {
 
     $.each(slicedData, function (i, item) {
       const elementText =
-        ' <li class="item" >' +
+        ' <li class="goods-li" >' +
         '<a href="./product.html" ' +
         '><img  src="' +
         item.imagePath +
@@ -111,10 +96,10 @@ window.addEventListener("load", () => {
       moreBtn.classList.add("nomore");
     }
 
-    list.append(elements);
+    goodsUl.append(elements);
 
-    list.imagesLoaded(function () {
-      list.find("li").addClass("loaded");
+    goodsUl.imagesLoaded(function () {
+      goodsUl.find("li").addClass("loaded");
     });
   } //addItem
 });
