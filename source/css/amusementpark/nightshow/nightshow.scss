@@ -47,6 +47,7 @@ main {
     background: url(../../../images/amusementpark/nightshow/fireworks.jpg)
       no-repeat;
     background-position: bottom;
+    background-size: cover;
 
     @media screen and (max-width: 1281px) {
       & {

@@ -34,6 +34,7 @@ main .banner-wrapper.bg-img {
   height: 500px;
   background: url(../../../images/amusementpark/nightshow/fireworks.jpg) no-repeat;
   background-position: bottom;
+  background-size: cover;
 }
 @media screen and (max-width: 1281px) {
   main .banner-wrapper.bg-img {
