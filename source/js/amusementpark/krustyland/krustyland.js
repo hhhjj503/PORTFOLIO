@@ -2,9 +2,9 @@ window.addEventListener("load", () => {
   const html = document.querySelector("html");
   const moreBtn = document.querySelector(".more");
   const menu = document.querySelector("main .menu");
-  const background = document.querySelector(".background");
+  const background = document.querySelector(".banner-wrapper.bg-img");
 
-  document.querySelector(".background").offsetHeight + "px";
+  document.querySelector(".banner-wrapper.bg-img").offsetHeight + "px";
 
   //제품리스트를 제이슨으로 받아와 담기위한 배열과 카운트 선언
   let addedItemCount = 5;

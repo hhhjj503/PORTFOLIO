@@ -32,7 +32,7 @@ body {
 main {
   /*----------------------------------- main  ---------------------------------------*/
 }
-main .background {
+main .banner-wrapper.bg-img {
   width: 100%;
   height: 500px;
   background: url(../../../images/amusementpark/krustyland.PNG) no-repeat;
@@ -41,12 +41,12 @@ main .background {
   z-index: -1;
 }
 @media screen and (max-width: 1281px) {
-  main .background {
+  main .banner-wrapper.bg-img {
     height: 400px;
   }
 }
 @media screen and (max-width: 600px) {
-  main .background {
+  main .banner-wrapper.bg-img {
     height: 300px;
   }
 }
@@ -258,17 +258,23 @@ main .goods .option .color .palette li {
   border-radius: 50%;
   cursor: pointer;
 }
-main .goods .option .color .palette li:nth-child(1) {
+main .goods .option .color .palette li:nth-child(1) button.red {
   background-color: red;
 }
-main .goods .option .color .palette li:nth-child(2) {
+main .goods .option .color .palette li:nth-child(2) button.orange {
   background-color: orange;
 }
-main .goods .option .color .palette li:nth-child(3) {
+main .goods .option .color .palette li:nth-child(3) button.yellow {
   background-color: yellow;
 }
-main .goods .option .color .palette li:nth-child(4) {
+main .goods .option .color .palette li:nth-child(4) button.green {
   background-color: green;
+}
+main .goods .option .color .palette li button {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: none;
 }
 main .goods .option .quantity {
   padding: 20px;

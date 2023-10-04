@@ -37,7 +37,7 @@ body {
 /*=================================================================================*/
 main {
   /*----------------------------------- main  ---------------------------------------*/
-  & .background {
+  & .banner-wrapper.bg-img {
     width: 100%;
     height: 500px;
     background: url(../../../images/amusementpark/krustyland.PNG) no-repeat;
@@ -321,17 +321,24 @@ main {
             cursor: pointer;
           }
 
-          & li:nth-child(1) {
+          & li:nth-child(1) button.red {
             background-color: red;
           }
-          & li:nth-child(2) {
+          & li:nth-child(2) button.orange {
             background-color: orange;
           }
-          & li:nth-child(3) {
+          & li:nth-child(3) button.yellow {
             background-color: yellow;
           }
-          & li:nth-child(4) {
+          & li:nth-child(4) button.green {
             background-color: green;
+          }
+
+          & li button {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: none;
           }
         }
       }

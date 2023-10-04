@@ -41,9 +41,12 @@ a.hidingThreshold {
 
 main {
   /* -------------------------------------------- main ------------------------------------------- */
-  .banner-wrapper {
+  .banner-wrapper.bg-img {
     width: 100%;
     height: 500px;
+    background: url(../../../images/amusementpark/nightshow/fireworks.jpg)
+      no-repeat;
+    background-position: bottom;
 
     @media screen and (max-width: 1281px) {
       & {
@@ -53,21 +56,6 @@ main {
     @media screen and (max-width: 600px) {
       & {
         height: 300px;
-      }
-    }
-
-    .img {
-      width: 100%;
-      margin: 0 auto;
-      height: 100%;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      background-position-y: 90%;
-
-      @media screen and (max-width: 600px) {
-        & {
-          background-size: cover;
-        }
       }
     }
   }

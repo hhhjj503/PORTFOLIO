@@ -32,7 +32,7 @@ body {
 main {
   /* ----------------------------------- main  --------------------------------------- */
 }
-main .background {
+main .banner-wrapper.bg-img {
   width: 100%;
   height: 500px;
   background: url(../../../images/amusementpark/krustyland.PNG) no-repeat;
@@ -41,12 +41,12 @@ main .background {
   z-index: -1;
 }
 @media screen and (max-width: 1281px) {
-  main .background {
+  main .banner-wrapper.bg-img {
     height: 400px;
   }
 }
 @media screen and (max-width: 600px) {
-  main .background {
+  main .banner-wrapper.bg-img {
     height: 300px;
   }
 }

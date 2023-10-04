@@ -30,13 +30,13 @@ main .wrapper {
   word-spacing: 0;
   white-space: nowrap;
 }
-main .wrapper .type {
+main .wrapper .div-a {
   /* ------------------- .wrapper type 공통속성 --------------- */
   position: relative;
   transition: 0.7s ease;
   background-color: black;
 }
-main .wrapper .type > a {
+main .wrapper .div-a > a {
   position: absolute;
   top: 0;
   left: 0;
@@ -47,16 +47,16 @@ main .wrapper .type > a {
   font-size: 1.8rem;
   z-index: 2;
 }
-main .wrapper .type > a:focus-visible {
+main .wrapper .div-a > a:focus-visible {
   border: 2px solid white;
   box-sizing: border-box;
 }
 @media screen and (max-width: 600px) {
-  main .wrapper .type > a {
+  main .wrapper .div-a > a {
     z-index: 3;
   }
 }
-main .wrapper .type .background {
+main .wrapper .div-a .background {
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -65,12 +65,12 @@ main .wrapper .type .background {
   position: relative;
 }
 @media screen and (max-width: 600px) {
-  main .wrapper .type .background {
+  main .wrapper .div-a .background {
     position: absolute;
     z-index: 1;
   }
 }
-main .wrapper .type .background:after {
+main .wrapper .div-a .background:after {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -79,11 +79,11 @@ main .wrapper .type .background:after {
   height: 20%;
 }
 @media screen and (max-width: 600px) {
-  main .wrapper .type .background:after {
+  main .wrapper .div-a .background:after {
     display: none;
   }
 }
-main .wrapper .type .description {
+main .wrapper .div-a .description {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -91,12 +91,12 @@ main .wrapper .type .description {
   left: 0;
 }
 @media screen and (max-width: 600px) {
-  main .wrapper .type .description {
+  main .wrapper .div-a .description {
     position: absolute;
     height: 100%;
   }
 }
-main .wrapper .type .description .desc {
+main .wrapper .div-a .description .desc {
   position: absolute;
   width: 40%;
   height: 15%;
@@ -111,7 +111,7 @@ main .wrapper .type .description .desc {
   z-index: 2;
 }
 @media screen and (max-width: 1281px) {
-  main .wrapper .type .description .desc {
+  main .wrapper .div-a .description .desc {
     top: 50%;
     height: 25%;
     width: 30%;
@@ -119,25 +119,25 @@ main .wrapper .type .description .desc {
   }
 }
 @media screen and (max-width: 1000px) {
-  main .wrapper .type .description .desc {
+  main .wrapper .div-a .description .desc {
     width: 60%;
   }
 }
 @media screen and (max-width: 1279px) {
-  main .wrapper .type .description .desc {
+  main .wrapper .div-a .description .desc {
     height: 25%;
     width: 40%;
   }
 }
 @media screen and (max-width: 600px) {
-  main .wrapper .type .description .desc {
+  main .wrapper .div-a .description .desc {
     height: 50%;
     width: 30%;
     z-index: 3;
     position: absolute;
   }
 }
-main .wrapper .type .description .desc:before {
+main .wrapper .div-a .description .desc:before {
   content: "";
   position: absolute;
   top: 0;
@@ -149,7 +149,7 @@ main .wrapper .type .description .desc:before {
   transition: 0.5s ease-in-out;
   z-index: 0;
 }
-main .wrapper .type .description .desc .title {
+main .wrapper .div-a .description .desc h5 {
   position: absolute;
   width: 80%;
   top: 50%;
@@ -162,15 +162,16 @@ main .wrapper .type .description .desc .title {
   font-size: 2rem;
   letter-spacing: 3px;
   text-align: center;
+  font-weight: bold;
 }
 @media screen and (max-width: 1000px) {
-  main .wrapper .type .description .desc .title {
+  main .wrapper .div-a .description .desc h5 {
     font-size: 1.6rem;
     width: 90%;
   }
 }
 @media screen and (max-width: 1281px) {
-  main .wrapper .type .description .desc .title {
+  main .wrapper .div-a .description .desc h5 {
     font-size: 1.8rem;
     width: 100%;
     line-height: 30px;
@@ -180,7 +181,7 @@ main .wrapper .type .description .desc .title {
   }
 }
 @media screen and (max-width: 600px) {
-  main .wrapper .type .description .desc .title {
+  main .wrapper .div-a .description .desc h5 {
     font-size: 1.4rem;
     width: 100%;
     line-height: 25px;
@@ -188,14 +189,14 @@ main .wrapper .type .description .desc .title {
     box-sizing: border-box;
   }
 }
-main .wrapper .type .description .desc .title span {
-  font-weight: bold;
-}
 main .wrapper .nightshow {
   /* ----------------------- nightshow ---------------------- */
   width: var(--blockwidth);
   height: 100%;
   display: inline-block;
+  background: url(../../images/amusementpark/nightshow/nightshow_fireworks.PNG) no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 @media screen and (max-width: 1281px) {
   main .wrapper .nightshow {
@@ -233,6 +234,9 @@ main .wrapper .rollercoaster {
   width: var(--blockwidth);
   height: 100%;
   display: inline-block;
+  background: url(../../images/amusementpark/attraction/rollercoaster.PNG) no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 @media screen and (max-width: 1281px) {
   main .wrapper .rollercoaster {
@@ -270,6 +274,9 @@ main .wrapper .krustyland {
   width: var(--blockwidth);
   height: 100%;
   display: inline-block;
+  background: url(../../images/amusementpark/krustyland.PNG) no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 @media screen and (max-width: 1281px) {
   main .wrapper .krustyland {
@@ -307,6 +314,9 @@ main .wrapper .aquarium {
   width: var(--blockwidth);
   height: 100%;
   display: inline-block;
+  background: url(../../images/amusementpark/aquarium.PNG) no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 @media screen and (max-width: 1281px) {
   main .wrapper .aquarium {

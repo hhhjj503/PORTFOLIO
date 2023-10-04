@@ -1,7 +1,6 @@
 window.addEventListener("load", () => {
   const html = document.querySelector("html");
 
-  const bannerImg = document.querySelector(".banner-wrapper .img");
   const slider = document.querySelector(".contents .slider");
   const pauseBtn = document.querySelector(".slider-controls .pause"); //controller > controls
   const playBtn = document.querySelector(".slider-controls .play");
@@ -62,8 +61,6 @@ window.addEventListener("load", () => {
     element.style.opacity = "1";
   }
 
-  const img = new Image();
-  img.src = bannerImg.dataset.path;
   let sliderWorking = true;
 
   pauseBtn.addEventListener("click", function () {

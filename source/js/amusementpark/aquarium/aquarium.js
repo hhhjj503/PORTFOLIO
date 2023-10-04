@@ -26,7 +26,7 @@ window.addEventListener("load", function () {
   const playBtn = document.querySelector(".index-button-wrapper .play");
   let sliderWorking = true;
 
-  const bannerBgDiv = document.querySelector("main .banner-bgdiv");
+  const bannerWrapper = document.querySelector("main .banner-wrapper.bg-img");
   //이미지미리로드
   const imgSourceArray = [];
   imgSourceArray.push(
@@ -126,7 +126,7 @@ window.addEventListener("load", function () {
     }, 1000);
   }
 
-  bannerBgDiv.classList.add("loaded");
+  bannerWrapper.classList.add("loaded");
 
   /**
    * 마감 closed 시간까지 남은 시간을 계산하는 함수
