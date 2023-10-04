@@ -2,9 +2,11 @@ window.addEventListener("load", () => {
   //h1
   const deco = document.querySelector("h1 .deco");
   //section.banner
-  const bannerIndexs = document.querySelectorAll(".banner .controls .index");
-  const bannerPlay = document.querySelector(".banner .controls .play");
-  const bannerStop = document.querySelector(".banner .controls .stop");
+  const bannerIndexs = document.querySelectorAll(
+    ".banner .slider-controls .index"
+  );
+  const bannerPlay = document.querySelector(".banner .slider-controls .play");
+  const bannerStop = document.querySelector(".banner .slider-controls .stop");
   const bannerUl = document.querySelector(".banner ul");
   let bannerStartIndex = 0;
   let bannerLastIndex = bannerIndexs.length;
@@ -56,22 +58,32 @@ window.addEventListener("load", () => {
   const newsListLis = document.querySelectorAll(
     ".news .news-list-viewer .news-list-ul li"
   );
-  const newsBeforeBtn = document.querySelector(".news .news-controls .before");
-  const newsNextBtn = document.querySelector(".news .news-controls .next");
-  const newsProgressBar = document.querySelector(".news .news-controls .bar");
+  const newsBeforeBtn = document.querySelector(
+    ".news .news-index-controls .before"
+  );
+  const newsNextBtn = document.querySelector(
+    ".news .news-index-controls .next"
+  );
+  const newsProgressBar = document.querySelector(
+    ".news .news-index-controls .bar"
+  );
   const progressValue = 100 / newsListLis.length;
   const newsStartIndex = document.querySelector(
-    ".news .news-controls .start-number"
+    ".news .news-index-controls .start-number"
   );
   const newsLastIndex = document.querySelector(
-    ".news .news-controls .last-number"
+    ".news .news-index-controls .last-number"
   );
   let newsCurrentIndex = 1;
   let newsOffsetLeft = 0;
   //section.albums
   const albumsSection = document.querySelector(".albums");
-  const albumsBGPlay = document.querySelector(".albums .albums-controls .play");
-  const albumsBGStop = document.querySelector(".albums .albums-controls .stop");
+  const albumsBGPlay = document.querySelector(
+    ".albums .albums-bg-controls .play"
+  );
+  const albumsBGStop = document.querySelector(
+    ".albums .albums-bg-controls .stop"
+  );
   const allSongs = document.querySelectorAll(".albums .all-songs-wrapper li");
   const albums = document.querySelectorAll(".albums .albums-wrapper .album");
   const albumNames = [

@@ -164,7 +164,7 @@ section.banner {
   border: none;
 }
 
-.banner .slider-controls .line {
+.banner .slider-controls div.border-top {
   width: 100%;
   border-top: 0.1rem solid white;
 }
@@ -229,7 +229,7 @@ section.banner {
   .banner .slider-controls {
     bottom: 25%;
   }
-  .banner .slider-controls .line {
+  .banner .slider-controls div.border-top {
     border-top: 0;
   }
 
@@ -499,7 +499,7 @@ section.intro {
   color: #fff;
 }
 
-.intro .line {
+.intro .black-line {
   width: 100%;
   height: 0.1rem;
   background-color: #000000;
@@ -788,11 +788,11 @@ section.news {
   background-color: #000000;
 }
 
-.news .news-controls {
+.news .news-index-controls {
   margin: 5rem 0;
 }
 
-.news .news-controls button {
+.news .news-index-controls button {
   display: inline-block;
   width: 2.5rem;
   height: 2.5rem;
@@ -802,25 +802,25 @@ section.news {
   cursor: pointer;
 }
 
-.news .news-controls button img {
+.news .news-index-controls button img {
   object-fit: cover;
 }
 
-.news .news-controls button.before {
+.news .news-index-controls button.before {
   margin-right: 2rem;
 }
 
-.news .news-controls button.next {
+.news .news-index-controls button.next {
   margin-left: 2rem;
 }
 
-.news .news-controls span {
+.news .news-index-controls span {
   display: inline-block;
   font-size: 2rem;
   color: white;
 }
 
-.news .news-controls .percentage {
+.news .news-index-controls .percentage {
   position: relative;
   display: inline-block;
   width: 20%;
@@ -832,7 +832,7 @@ section.news {
   overflow: hidden;
 }
 
-.news .news-controls .percentage .bar {
+.news .news-index-controls .percentage .bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -899,7 +899,7 @@ section.news {
     margin: 0 auto;
   }
 
-  .news .news-controls .percentage {
+  .news .news-index-controls .percentage {
     width: 40%;
   }
 }
@@ -909,24 +909,24 @@ section.news {
     font-size: 3rem;
   }
 
-  .news .news-controls {
+  .news .news-index-controls {
     margin: 2rem 0;
   }
 
-  .news .news-controls button {
+  .news .news-index-controls button {
     width: 2rem;
     height: 2rem;
     vertical-align: inherit;
   }
 
-  .news .news-controls button.before {
+  .news .news-index-controls button.before {
     margin-right: 1rem;
   }
-  .news .news-controls button.next {
+  .news .news-index-controls button.next {
     margin-left: 1rem;
   }
 
-  .news .news-controls span {
+  .news .news-index-controls span {
     font-size: 1.6rem;
   }
 }
@@ -1066,7 +1066,7 @@ section.albums {
   object-fit: cover;
 }
 
-.albums-wrapper .albums-controls {
+.albums-wrapper .albums-bg-controls {
   position: absolute;
   top: 0;
   left: 0;
@@ -1081,7 +1081,7 @@ section.albums {
   padding-top: 5rem;
 }
 
-.albums-wrapper .albums-controls .stop {
+.albums-wrapper .albums-bg-controls .stop {
   width: 2rem;
   height: 2rem;
   background-image: url(../../images/blackpink/pause-solid.svg);
@@ -1092,7 +1092,7 @@ section.albums {
   color: #fff;
   cursor: pointer;
 }
-.albums-wrapper .albums-controls .play {
+.albums-wrapper .albums-bg-controls .play {
   width: 2rem;
   height: 2rem;
   background-image: url(../../images/blackpink/play-solid.svg);
@@ -1115,7 +1115,7 @@ section.albums {
     font-size: 6rem;
   }
 
-  .albums-wrapper .albums-controls {
+  .albums-wrapper .albums-bg-controls {
     width: 95%;
   }
 
@@ -1144,12 +1144,12 @@ section.albums {
     font-size: 3rem;
   }
 
-  .albums-wrapper .albums-controls {
+  .albums-wrapper .albums-bg-controls {
     padding-top: 3.5rem;
   }
 
-  .albums-wrapper .albums-controls .play,
-  .albums-wrapper .albums-controls .stop {
+  .albums-wrapper .albums-bg-controls .play,
+  .albums-wrapper .albums-bg-controls .stop {
     width: 1.6rem;
     height: 1.6rem;
   }
