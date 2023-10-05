@@ -842,7 +842,7 @@ section.news {
   transition: 0.5s ease;
 }
 
-.news .news-list-viewer {
+.news .news-viewer {
   position: relative;
   left: -8rem;
   width: 216rem;
@@ -852,12 +852,12 @@ section.news {
   transition: 0.5s ease;
 }
 
-.news .news-list-viewer.active {
+.news .news-viewer.active {
   left: 0;
   opacity: 1;
 }
 
-.news .news-list-ul {
+.news .news-ul {
   width: fit-content;
   position: relative;
   top: 0;
@@ -866,7 +866,7 @@ section.news {
   transition: 0.5s ease;
 }
 
-.news .news-list-ul .news-list-li {
+.news .news-ul .news-li {
   display: inline-block;
   width: 32rem;
   height: 35rem;
@@ -875,13 +875,13 @@ section.news {
   /* 340px */
 }
 
-.news .news-list-li img {
+.news .news-li img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.news .news-list-ul li:nth-child(1) {
+.news .news-ul li:nth-child(1) {
   margin-left: 0;
 }
 /* news section 반응형 */
@@ -957,13 +957,13 @@ section.albums {
   margin: 0 auto;
 }
 
-.albums-wrapper .all-songs-wrapper {
+.albums-wrapper .songs-title-wrapper {
   width: 100%;
   margin: 8rem auto 0 auto;
   text-align: center;
 }
 
-.albums-wrapper .all-songs-title-ul .song-title-li {
+.albums-wrapper .songs-title-ul .song-title-li {
   display: inline-block;
   width: fit-content;
   margin-right: 5rem;
@@ -975,14 +975,14 @@ section.albums {
   transition: 0.5s ease;
 }
 
-.albums-wrapper .all-songs-title-ul .song-title-li {
+.albums-wrapper .songs-title-ul .song-title-li {
   color: #000000;
   font-size: 2.2rem;
   opacity: 0.4;
 }
 
-.albums-wrapper .all-songs-title-ul .song-title-li.active,
-.albums-wrapper .all-songs-title-ul .song-title-li:hover {
+.albums-wrapper .songs-title-ul .song-title-li.active,
+.albums-wrapper .songs-title-ul .song-title-li:hover {
   color: #f4a5b7;
   opacity: 1;
 }
@@ -1119,10 +1119,10 @@ section.albums {
     width: 95%;
   }
 
-  .albums-wrapper .all-songs-wrapper {
+  .albums-wrapper .songs-title-wrapper {
     width: 95%;
   }
-  .albums-wrapper .all-songs-title-ul .song-title-li {
+  .albums-wrapper .songs-title-ul .song-title-li {
     margin-right: 3rem;
     line-height: 1.618;
   }
@@ -1154,11 +1154,11 @@ section.albums {
     height: 1.6rem;
   }
 
-  .albums-wrapper .all-songs-wrapper {
+  .albums-wrapper .songs-title-wrapper {
     margin-top: 2rem;
   }
 
-  .albums-wrapper .all-songs-title-ul .song-title-li {
+  .albums-wrapper .songs-title-ul .song-title-li {
     font-size: 1.6rem;
     margin-right: 1rem;
   }

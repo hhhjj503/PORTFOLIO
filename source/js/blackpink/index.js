@@ -1,6 +1,8 @@
 window.addEventListener("load", () => {
+  //
   //h1
   const deco = document.querySelector("h1 .deco");
+  //
   //section.banner
   const bannerIndexs = document.querySelectorAll(
     ".banner .slider-controls .index"
@@ -11,8 +13,9 @@ window.addEventListener("load", () => {
   let bannerStartIndex = 0;
   let bannerLastIndex = bannerIndexs.length;
   let bannerSliding = true;
+  //
   //section.intro
-  const thumbnailViewer = document.querySelector(
+  const thumbnaiviewer = document.querySelector(
     ".intro .thumbnail .thumbnail-viewer"
   );
   const thumbLis = document.querySelectorAll(".intro .thumbnail li");
@@ -22,7 +25,7 @@ window.addEventListener("load", () => {
   const imagesListLis = document.querySelectorAll(
     ".intro .original .original-img-ul li"
   );
-  const thumbnailViewerMobile = document.querySelector(
+  const thumbnaiviewerMobile = document.querySelector(
     ".intro .thumbnail-mobile .thumbnail-viewer-mobile"
   );
   const thumbLisMobile = document.querySelectorAll(
@@ -37,6 +40,7 @@ window.addEventListener("load", () => {
   const translateKorea = document.querySelector(".intro .translate .korea");
   const translateEnglish = document.querySelector(".intro .translate .english");
   const introDescPs = document.querySelectorAll(".intro .intro-desc p");
+  //
   //section.members
   const membersSection = document.querySelector(".members");
   const membersMember = document.querySelectorAll(".members .member");
@@ -45,18 +49,17 @@ window.addEventListener("load", () => {
     window.pageYOffset +
     membersSection.getBoundingClientRect().top -
     html.scrollHeight * 0.1;
+  //
   //section.news
   const newsSection = document.querySelector(".news");
-  const newsListViewer = document.querySelector(".news .news-list-viewer");
+  const newsListViewer = document.querySelector(".news .news-viewer");
   let newsThreshold =
     window.pageYOffset +
     newsSection.getBoundingClientRect().top -
     html.scrollHeight * 0.08;
-  const newsUl = document.querySelector(
-    ".news .news-list-viewer .news-list-ul"
-  );
+  const newsUl = document.querySelector(".news .news-viewer .news-ul");
   const newsListLis = document.querySelectorAll(
-    ".news .news-list-viewer .news-list-ul li"
+    ".news .news-viewer .news-ul li"
   );
   const newsBeforeBtn = document.querySelector(
     ".news .news-index-controls .before"
@@ -76,6 +79,7 @@ window.addEventListener("load", () => {
   );
   let newsCurrentIndex = 1;
   let newsOffsetLeft = 0;
+  //
   //section.albums
   const albumsSection = document.querySelector(".albums");
   const albumsBGPlay = document.querySelector(
@@ -84,7 +88,7 @@ window.addEventListener("load", () => {
   const albumsBGStop = document.querySelector(
     ".albums .albums-bg-controls .stop"
   );
-  const allSongs = document.querySelectorAll(".albums .all-songs-wrapper li");
+  const allSongs = document.querySelectorAll(".albums .songs-title-wrapper li");
   const albums = document.querySelectorAll(".albums .albums-wrapper .album");
   const albumNames = [
     "square-one",
@@ -95,6 +99,7 @@ window.addEventListener("load", () => {
     "born-pink",
   ];
   const showAll = document.querySelector(".albums .albums-wrapper .show-all");
+  //
   //section.game
   const unitImages = document.querySelectorAll(".game .units .unit div");
   const unit = document.querySelector(".game .units .unit");
@@ -109,6 +114,7 @@ window.addEventListener("load", () => {
     "url(../../source/images/blackpink/0001567912_0019.jpg)", //지수이미지
   ];
   const result = document.querySelector(".game .game-wrapper .result");
+  //
   //scroll-up
   const scrollUp = document.querySelector(".scroll-up");
 
@@ -161,7 +167,7 @@ window.addEventListener("load", () => {
       newsSection.getBoundingClientRect().top -
       html.scrollHeight * 0.08;
   }); //resize 이벤트
-
+  //
   //section.albums
   showAll.addEventListener("click", function () {
     if (!this.classList.contains("active")) {
@@ -199,7 +205,7 @@ window.addEventListener("load", () => {
   });
   albumsBGStop.addEventListener("click", function () {
     removeClass(albumsSection, "active");
-  });
+  }); //앨범섹션 배경이미지 변경
 
   //section.news
   newsLastIndex.innerText = "0" + newsListLis.length;
@@ -263,7 +269,7 @@ window.addEventListener("load", () => {
         addClass(scrollUp, "active");
       } else removeClass(scrollUp, "active");
     })
-  );
+  ); //스크롤하면 member 화면에 표시
 
   //section.intro
   translateKorea.addEventListener("click", function () {
@@ -287,16 +293,16 @@ window.addEventListener("load", () => {
   for (let i = 0; i < thumbLis.length; i++) {
     thumbLis[i].addEventListener("click", function () {
       removeAllClassThenAddClass(thumbLis, thumbLis[i], "active");
-      if (i < thumbLis.length) offTopPosition(thumbnailViewer, i * 20, "%");
+      if (i < thumbLis.length) offTopPosition(thumbnaiviewer, i * 20, "%");
       offTopPosition(imagesListUl, -(i * 100), "%");
     });
-  } //썸네일 클릭시 대형이미지 슬라이드
+  } //썸네일 클릭시 original 이미지 슬라이드
 
   for (let i = 0; i < thumbLisMobile.length; i++) {
     thumbLisMobile[i].addEventListener("click", function () {
       removeAllClassThenAddClass(thumbLisMobile, thumbLisMobile[i], "active");
       if (i < thumbLisMobile.length) {
-        offLeftPosition(thumbnailViewerMobile, i * 20, "%");
+        offLeftPosition(thumbnaiviewerMobile, i * 20, "%");
       }
       offTopPosition(imagesListUl, -(i * 100), "%");
     });
@@ -306,7 +312,7 @@ window.addEventListener("load", () => {
   let bannerAutoSlide = setInterval(function () {
     let event = new Event("click");
     bannerIndexs[bannerStartIndex].dispatchEvent(event);
-  }, 3000);
+  }, 3000); //자동배너 슬라이더
 
   for (let i = 0; i < bannerIndexs.length; i++) {
     bannerIndexs[i].addEventListener("click", function () {
@@ -315,7 +321,7 @@ window.addEventListener("load", () => {
       bannerStartIndex++;
       if (bannerLastIndex <= bannerStartIndex) bannerStartIndex = 0;
     });
-  }
+  } //배너 인덱스 클릭이벤트
   bannerPlay.addEventListener("click", function () {
     if (bannerSliding == false) {
       bannerAutoSlide = setInterval(function () {
@@ -324,11 +330,11 @@ window.addEventListener("load", () => {
       }, 3500);
     }
     bannerSliding = true;
-  });
+  }); //배너슬라이드 플레이
   bannerStop.addEventListener("click", function () {
     bannerSliding = false;
     clearInterval(bannerAutoSlide);
-  });
+  }); //배너슬라이드 멈춤
 
   //h1
   setTimeout(() => {
