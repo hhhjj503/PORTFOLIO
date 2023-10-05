@@ -34,6 +34,10 @@ body {
   // }
 }
 
+.text-indent {
+  text-indent: -9999em;
+}
+
 /*=================================================================================*/
 main {
   /*----------------------------------- main  ---------------------------------------*/
@@ -321,16 +325,16 @@ main {
             cursor: pointer;
           }
 
-          & li:nth-child(1) button.red {
+          & li:nth-child(1) button.red.text-indent {
             background-color: red;
           }
-          & li:nth-child(2) button.orange {
+          & li:nth-child(2) button.orange.text-indent {
             background-color: orange;
           }
-          & li:nth-child(3) button.yellow {
+          & li:nth-child(3) button.yellow.text-indent {
             background-color: yellow;
           }
-          & li:nth-child(4) button.green {
+          & li:nth-child(4) button.green.text-indent {
             background-color: green;
           }
 
