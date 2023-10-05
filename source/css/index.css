@@ -219,7 +219,7 @@ main #hj {
   width: 0%;
 }
 
-.graph .line {
+.graph .base-line.bg-333 {
   position: absolute;
   bottom: 20%;
   width: 100%;
@@ -227,7 +227,7 @@ main #hj {
   background-color: #333;
 }
 
-.graph .deco-line {
+.graph .color-line {
   position: absolute;
   bottom: 20%;
   width: 0%;
@@ -235,7 +235,7 @@ main #hj {
   background-color: #41bfcf;
 }
 
-.deco-line.active {
+.color-line.active {
   transition: width 0.5s ease;
   width: 10%;
 }
@@ -337,8 +337,8 @@ main #hj {
     width: 70%;
   }
 
-  .graph .line,
-  .graph .deco-line {
+  .graph .base-line.bg-333,
+  .graph .color-line {
     bottom: 20.5%;
   }
 
