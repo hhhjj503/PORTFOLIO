@@ -30,13 +30,37 @@ main .wrapper {
   word-spacing: 0;
   white-space: nowrap;
 }
-main .wrapper .div-a {
-  /* ------------------- .wrapper type 공통속성 --------------- */
+main .wrapper div.w25p {
+  /* ------------------- div.w25p 공통속성 --------------- */
+  display: inline-block;
   position: relative;
+  width: 25%;
+  height: 100%;
   transition: 0.7s ease;
   background-color: black;
+  background-position: center;
+  background-size: cover;
 }
-main .wrapper .div-a > a {
+@media screen and (min-width: 1282px) {
+  main .wrapper div.w25p:hover {
+    width: 27%;
+  }
+}
+@media screen and (max-width: 1281px) {
+  main .wrapper div.w25p {
+    float: left;
+    width: 50%;
+    height: 50vh;
+  }
+}
+@media screen and (max-width: 600px) {
+  main .wrapper div.w25p {
+    display: block;
+    width: 100%;
+    height: 25vh;
+  }
+}
+main .wrapper div.w25p a {
   position: absolute;
   top: 0;
   left: 0;
@@ -47,56 +71,16 @@ main .wrapper .div-a > a {
   font-size: 1.8rem;
   z-index: 2;
 }
-main .wrapper .div-a > a:focus-visible {
+main .wrapper div.w25p a:focus-visible {
   border: 2px solid white;
   box-sizing: border-box;
 }
 @media screen and (max-width: 600px) {
-  main .wrapper .div-a > a {
+  main .wrapper div.w25p a {
     z-index: 3;
   }
 }
-main .wrapper .div-a .background {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  position: relative;
-}
-@media screen and (max-width: 600px) {
-  main .wrapper .div-a .background {
-    position: absolute;
-    z-index: 1;
-  }
-}
-main .wrapper .div-a .background:after {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  content: "";
-  width: 100%;
-  height: 20%;
-}
-@media screen and (max-width: 600px) {
-  main .wrapper .div-a .background:after {
-    display: none;
-  }
-}
-main .wrapper .div-a .description {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-@media screen and (max-width: 600px) {
-  main .wrapper .div-a .description {
-    position: absolute;
-    height: 100%;
-  }
-}
-main .wrapper .div-a .description .desc {
+main .wrapper div.w25p .title {
   position: absolute;
   width: 40%;
   height: 15%;
@@ -111,7 +95,7 @@ main .wrapper .div-a .description .desc {
   z-index: 2;
 }
 @media screen and (max-width: 1281px) {
-  main .wrapper .div-a .description .desc {
+  main .wrapper div.w25p .title {
     top: 50%;
     height: 25%;
     width: 30%;
@@ -119,25 +103,25 @@ main .wrapper .div-a .description .desc {
   }
 }
 @media screen and (max-width: 1000px) {
-  main .wrapper .div-a .description .desc {
+  main .wrapper div.w25p .title {
     width: 60%;
   }
 }
 @media screen and (max-width: 1279px) {
-  main .wrapper .div-a .description .desc {
+  main .wrapper div.w25p .title {
     height: 25%;
     width: 40%;
   }
 }
 @media screen and (max-width: 600px) {
-  main .wrapper .div-a .description .desc {
+  main .wrapper div.w25p .title {
     height: 50%;
     width: 30%;
     z-index: 3;
     position: absolute;
   }
 }
-main .wrapper .div-a .description .desc:before {
+main .wrapper div.w25p .title:before {
   content: "";
   position: absolute;
   top: 0;
@@ -149,29 +133,29 @@ main .wrapper .div-a .description .desc:before {
   transition: 0.5s ease-in-out;
   z-index: 0;
 }
-main .wrapper .div-a .description .desc h5 {
+main .wrapper div.w25p .title h5 {
   position: absolute;
-  width: 80%;
+  width: 100%;
   top: 50%;
   left: 50%;
   right: 0;
   bottom: 0;
   transform: translate(-50%, -50%);
-  line-height: 30px;
+  line-height: 1.618;
   color: white;
   font-size: 2rem;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   text-align: center;
   font-weight: bold;
 }
 @media screen and (max-width: 1000px) {
-  main .wrapper .div-a .description .desc h5 {
+  main .wrapper div.w25p .title h5 {
     font-size: 1.6rem;
     width: 90%;
   }
 }
 @media screen and (max-width: 1281px) {
-  main .wrapper .div-a .description .desc h5 {
+  main .wrapper div.w25p .title h5 {
     font-size: 1.8rem;
     width: 100%;
     line-height: 30px;
@@ -181,7 +165,7 @@ main .wrapper .div-a .description .desc h5 {
   }
 }
 @media screen and (max-width: 600px) {
-  main .wrapper .div-a .description .desc h5 {
+  main .wrapper div.w25p .title h5 {
     font-size: 1.4rem;
     width: 100%;
     line-height: 25px;
@@ -190,184 +174,14 @@ main .wrapper .div-a .description .desc h5 {
   }
 }
 main .wrapper .nightshow {
-  /* ----------------------- nightshow ---------------------- */
-  width: var(--blockwidth);
-  height: 100%;
-  display: inline-block;
   background: url(../../images/amusementpark/nightshow/nightshow_fireworks.PNG) no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-@media screen and (max-width: 1281px) {
-  main .wrapper .nightshow {
-    float: left;
-    width: 50%;
-    height: 50vh;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .wrapper .nightshow {
-    display: block;
-    width: 100%;
-    height: 25vh;
-  }
-}
-main .wrapper .nightshow:hover {
-  width: var(--hoveredwidth);
-  cursor: pointer;
-}
-@media screen and (max-width: 1281px) {
-  main .wrapper .nightshow:hover {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .wrapper .nightshow:hover {
-    width: 100%;
-  }
-}
-main .wrapper .nightshow .background:after {
-  background: linear-gradient(to bottom, transparent, #2d74d2);
 }
 main .wrapper .rollercoaster {
-  /* ----------------------- rollercoaster ---------------------- */
-  width: var(--blockwidth);
-  height: 100%;
-  display: inline-block;
   background: url(../../images/amusementpark/attraction/rollercoaster.PNG) no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-@media screen and (max-width: 1281px) {
-  main .wrapper .rollercoaster {
-    float: left;
-    width: 50%;
-    height: 50vh;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .wrapper .rollercoaster {
-    display: block;
-    width: 100%;
-    height: 25vh;
-  }
-}
-main .wrapper .rollercoaster:hover {
-  width: var(--hoveredwidth);
-  cursor: pointer;
-}
-@media screen and (max-width: 1281px) {
-  main .wrapper .rollercoaster:hover {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .wrapper .rollercoaster:hover {
-    width: 100%;
-  }
-}
-main .wrapper .rollercoaster .background:after {
-  background: linear-gradient(to bottom, transparent, #1570ef);
 }
 main .wrapper .krustyland {
-  /* ----------------------- krustyland ---------------------- */
-  width: var(--blockwidth);
-  height: 100%;
-  display: inline-block;
   background: url(../../images/amusementpark/krustyland.PNG) no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-@media screen and (max-width: 1281px) {
-  main .wrapper .krustyland {
-    float: left;
-    width: 50%;
-    height: 50vh;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .wrapper .krustyland {
-    display: block;
-    width: 100%;
-    height: 25vh;
-  }
-}
-main .wrapper .krustyland:hover {
-  width: var(--hoveredwidth);
-  cursor: pointer;
-}
-@media screen and (max-width: 1281px) {
-  main .wrapper .krustyland:hover {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .wrapper .krustyland:hover {
-    width: 100%;
-  }
-}
-main .wrapper .krustyland .background:after {
-  background: linear-gradient(to bottom, transparent, #943940);
 }
 main .wrapper .aquarium {
-  /* ----------------------- aquarium ---------------------- */
-  width: var(--blockwidth);
-  height: 100%;
-  display: inline-block;
   background: url(../../images/amusementpark/aquarium.PNG) no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-@media screen and (max-width: 1281px) {
-  main .wrapper .aquarium {
-    float: left;
-    width: 50%;
-    height: 50vh;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .wrapper .aquarium {
-    display: block;
-    width: 100%;
-    height: 25vh;
-  }
-}
-main .wrapper .aquarium:hover {
-  width: var(--hoveredwidth);
-  cursor: pointer;
-}
-@media screen and (max-width: 1281px) {
-  main .wrapper .aquarium:hover {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .wrapper .aquarium:hover {
-    width: 100%;
-  }
-}
-main .wrapper .aquarium .background:after {
-  background: linear-gradient(to bottom, transparent, #2d8098);
-}
-
-footer {
-  /* ------------------------------- footer --------------------------------- */
-  bottom: 0;
-  height: 40px;
-  width: 100%;
-  text-align: center;
-  line-height: 40px;
-  font-size: 1.5rem;
-  color: white;
-  font-weight: bolder;
-  letter-spacing: 1px;
-  transition: 0.7s ease-in-out;
-  z-index: 99;
-  position: fixed;
-}
-@media screen and (max-width: 600px) {
-  footer {
-    opacity: 0;
-    display: none;
-  }
 }/*# sourceMappingURL=index.css.map */

@@ -35,13 +35,39 @@ main {
     word-spacing: 0;
     white-space: nowrap;
 
-    .div-a {
-      /* ------------------- .wrapper type 공통속성 --------------- */
+    div.w25p {
+      /* ------------------- div.w25p 공통속성 --------------- */
+      display: inline-block;
       position: relative;
+      width: 25%;
+      height: 100%;
       transition: 0.7s ease;
       background-color: black;
+      background-position: center;
+      background-size: cover;
 
-      & > a {
+      @media screen and (min-width: 1282px) {
+        &:hover {
+          width: 27%;
+        }
+      }
+
+      @media screen and (max-width: 1281px) {
+        & {
+          float: left;
+          width: 50%;
+          height: 50vh;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        & {
+          display: block;
+          width: 100%;
+          height: 25vh;
+        }
+      }
+
+      & a {
         position: absolute;
         top: 0;
         left: 0;
@@ -64,146 +90,104 @@ main {
         }
       }
 
-      .background {
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        position: relative;
+      .title {
+        position: absolute;
+        width: 40%;
+        height: 15%;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box;
+        margin: 0 auto;
+        border: 1px solid rgb(224, 224, 224);
+        border-bottom: 0px solid transparent;
+        transition: 0.7s ease-in-out;
+        z-index: 2;
+
+        @media screen and (max-width: 1281px) {
+          & {
+            top: 50%;
+            height: 25%;
+            width: 30%;
+            position: absolute;
+          }
+        }
+
+        @media screen and (max-width: 1000px) {
+          & {
+            width: 60%;
+          }
+        }
+
+        @media screen and (max-width: 1279px) {
+          & {
+            height: 25%;
+            width: 40%;
+          }
+        }
 
         @media screen and (max-width: 600px) {
           & {
+            height: 50%;
+            width: 30%;
+            z-index: 3;
             position: absolute;
-            z-index: 1;
           }
         }
 
-        &:after {
-          position: absolute;
-          left: 0;
-          bottom: 0;
+        &:before {
           content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
           width: 100%;
-          height: 20%;
-
-          @media screen and (max-width: 600px) {
-            display: none;
-          }
-        }
-      }
-
-      .description {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-
-        @media screen and (max-width: 600px) {
-          position: absolute;
           height: 100%;
+          background: linear-gradient(to bottom, #333 70%, transparent 100%);
+          opacity: 0.5;
+          transition: 0.5s ease-in-out;
+          z-index: 0;
         }
 
-        .desc {
+        h5 {
           position: absolute;
-          width: 40%;
-          height: 15%;
-          top: 60%;
+          width: 100%;
+          top: 50%;
           left: 50%;
+          right: 0;
+          bottom: 0;
           transform: translate(-50%, -50%);
-          box-sizing: border-box;
-          margin: 0 auto;
-          border: 1px solid rgb(224, 224, 224);
-          border-bottom: 0px solid transparent;
-          transition: 0.7s ease-in-out;
-          z-index: 2;
-
-          @media screen and (max-width: 1281px) {
-            & {
-              top: 50%;
-              height: 25%;
-              width: 30%;
-              position: absolute;
-            }
-          }
+          line-height: 1.618;
+          color: white;
+          font-size: 2rem;
+          letter-spacing: 1px;
+          text-align: center;
+          font-weight: bold;
 
           @media screen and (max-width: 1000px) {
             & {
-              width: 60%;
+              font-size: 1.6rem;
+              width: 90%;
             }
           }
 
-          @media screen and (max-width: 1279px) {
+          @media screen and (max-width: 1281px) {
             & {
-              height: 25%;
-              width: 40%;
+              font-size: 1.8rem;
+              width: 100%;
+              line-height: 30px;
+              text-align: center;
+              padding: 0 10px;
+              box-sizing: border-box;
             }
           }
 
           @media screen and (max-width: 600px) {
             & {
-              height: 50%;
-              width: 30%;
-              z-index: 3;
-              position: absolute;
-            }
-          }
-
-          &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, #333 70%, transparent 100%);
-            opacity: 0.5;
-            transition: 0.5s ease-in-out;
-            z-index: 0;
-          }
-
-          h5 {
-            position: absolute;
-            width: 80%;
-            top: 50%;
-            left: 50%;
-            right: 0;
-            bottom: 0;
-            transform: translate(-50%, -50%);
-            line-height: 30px;
-            color: white;
-            font-size: 2rem;
-            letter-spacing: 3px;
-            text-align: center;
-            font-weight: bold;
-
-            @media screen and (max-width: 1000px) {
-              & {
-                font-size: 1.6rem;
-                width: 90%;
-              }
-            }
-
-            @media screen and (max-width: 1281px) {
-              & {
-                font-size: 1.8rem;
-                width: 100%;
-                line-height: 30px;
-                text-align: center;
-                padding: 0 10px;
-                box-sizing: border-box;
-              }
-            }
-
-            @media screen and (max-width: 600px) {
-              & {
-                font-size: 1.4rem;
-                width: 100%;
-                line-height: 25px;
-                padding: 0 10px;
-                box-sizing: border-box;
-              }
+              font-size: 1.4rem;
+              width: 100%;
+              line-height: 25px;
+              padding: 0 10px;
+              box-sizing: border-box;
             }
           }
         }
@@ -211,208 +195,21 @@ main {
     }
 
     .nightshow {
-      /* ----------------------- nightshow ---------------------- */
-      width: var(--blockwidth);
-      height: 100%;
-      display: inline-block;
       background: url(../../images/amusementpark/nightshow/nightshow_fireworks.PNG)
         no-repeat;
-      background-position: center;
-      background-size: cover;
-
-      @media screen and (max-width: 1281px) {
-        & {
-          float: left;
-          width: 50%;
-          height: 50vh;
-        }
-      }
-      @media screen and (max-width: 600px) {
-        & {
-          display: block;
-          width: 100%;
-          height: 25vh;
-        }
-      }
-
-      &:hover {
-        width: var(--hoveredwidth);
-        cursor: pointer;
-        @media screen and (max-width: 1281px) {
-          & {
-            width: 50%;
-          }
-        }
-        @media screen and (max-width: 600px) {
-          & {
-            width: 100%;
-          }
-        }
-      }
-
-      .background:after {
-        background: linear-gradient(to bottom, transparent, #2d74d2);
-      }
     }
 
     .rollercoaster {
-      /* ----------------------- rollercoaster ---------------------- */
-      width: var(--blockwidth);
-      height: 100%;
-      display: inline-block;
       background: url(../../images/amusementpark/attraction/rollercoaster.PNG)
         no-repeat;
-      background-position: center;
-      background-size: cover;
-
-      @media screen and (max-width: 1281px) {
-        & {
-          float: left;
-          width: 50%;
-          height: 50vh;
-        }
-      }
-
-      @media screen and (max-width: 600px) {
-        & {
-          display: block;
-          width: 100%;
-          height: 25vh;
-        }
-      }
-
-      &:hover {
-        width: var(--hoveredwidth);
-        cursor: pointer;
-        @media screen and (max-width: 1281px) {
-          & {
-            width: 50%;
-          }
-        }
-        @media screen and (max-width: 600px) {
-          & {
-            width: 100%;
-          }
-        }
-      }
-
-      .background:after {
-        background: linear-gradient(to bottom, transparent, #1570ef);
-      }
     }
 
     .krustyland {
-      /* ----------------------- krustyland ---------------------- */
-      width: var(--blockwidth);
-      height: 100%;
-      display: inline-block;
       background: url(../../images/amusementpark/krustyland.PNG) no-repeat;
-      background-position: center;
-      background-size: cover;
-
-      @media screen and (max-width: 1281px) {
-        & {
-          float: left;
-          width: 50%;
-          height: 50vh;
-        }
-      }
-
-      @media screen and (max-width: 600px) {
-        & {
-          display: block;
-          width: 100%;
-          height: 25vh;
-        }
-      }
-
-      &:hover {
-        width: var(--hoveredwidth);
-        cursor: pointer;
-        @media screen and (max-width: 1281px) {
-          & {
-            width: 50%;
-          }
-        }
-        @media screen and (max-width: 600px) {
-          & {
-            width: 100%;
-          }
-        }
-      }
-
-      .background:after {
-        background: linear-gradient(to bottom, transparent, #943940);
-      }
     }
 
     .aquarium {
-      /* ----------------------- aquarium ---------------------- */
-      width: var(--blockwidth);
-      height: 100%;
-      display: inline-block;
       background: url(../../images/amusementpark/aquarium.PNG) no-repeat;
-      background-position: center;
-      background-size: cover;
-
-      @media screen and (max-width: 1281px) {
-        & {
-          float: left;
-          width: 50%;
-          height: 50vh;
-        }
-      }
-
-      @media screen and (max-width: 600px) {
-        & {
-          display: block;
-          width: 100%;
-          height: 25vh;
-        }
-      }
-
-      &:hover {
-        width: var(--hoveredwidth);
-        cursor: pointer;
-        @media screen and (max-width: 1281px) {
-          & {
-            width: 50%;
-          }
-        }
-        @media screen and (max-width: 600px) {
-          & {
-            width: 100%;
-          }
-        }
-      }
-
-      .background:after {
-        background: linear-gradient(to bottom, transparent, #2d8098);
-      }
     }
   }
-}
-
-footer {
-  /* ------------------------------- footer --------------------------------- */
-  bottom: 0;
-  height: 40px;
-  //background-color: #ac8bbe;
-  width: 100%;
-  text-align: center;
-  line-height: 40px;
-  font-size: 1.5rem;
-  color: white;
-  font-weight: bolder;
-  letter-spacing: 1px;
-  transition: 0.7s ease-in-out;
-  z-index: 99;
-
-  @media screen and (max-width: 600px) {
-    & {
-      opacity: 0;
-      display: none;
-    }
-  }
-  position: fixed;
 }
