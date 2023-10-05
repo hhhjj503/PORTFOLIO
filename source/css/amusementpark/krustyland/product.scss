@@ -589,12 +589,12 @@ main {
       /*----------------------------------- .goods .review-pager ------------------------ */
       width: 100%;
 
-      & ul {
+      & .review-pager {
         width: 100%;
         text-align: center;
         padding: 20px 0;
 
-        & li {
+        & .num {
           display: inline-block;
           a {
             width: 100%;

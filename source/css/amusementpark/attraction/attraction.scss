@@ -172,7 +172,7 @@ main {
         }
       }
 
-      & .deco {
+      & .deco-text {
         position: absolute;
         bottom: 100px;
         right: 0;
@@ -293,7 +293,7 @@ main {
           }
         }
 
-        & .ban-icons {
+        & .ban-icons-ul {
           & li {
             display: inline-block;
             width: 80px;
@@ -308,7 +308,7 @@ main {
           }
         }
 
-        & .ban-ul {
+        & .ban-text-ul {
           @media screen and (max-width: 1281px) {
             & {
               font-size: 2rem;
@@ -318,7 +318,7 @@ main {
       }
       //
 
-      & .mobile {
+      & .mobile-desc {
         position: relative;
         display: none;
         margin-top: 25px;
@@ -395,7 +395,7 @@ main {
           }
         }
 
-        & .ban-icons {
+        & .ban-icons-ul {
           & li {
             display: inline-block;
             width: 50px;
@@ -415,7 +415,7 @@ main {
           }
         }
 
-        & .ban-ul {
+        & .ban-text-ul {
           & li {
             font-size: 1.6rem;
 

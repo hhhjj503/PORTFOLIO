@@ -148,7 +148,7 @@ main .attraction-wrapper .attraction.right {
     text-align: center;
   }
 }
-main .attraction-wrapper .attraction .deco {
+main .attraction-wrapper .attraction .deco-text {
   position: absolute;
   bottom: 100px;
   right: 0;
@@ -158,29 +158,29 @@ main .attraction-wrapper .attraction .deco {
   font-size: 6rem;
   font-weight: bold;
 }
-main .attraction-wrapper .attraction .deco.left {
+main .attraction-wrapper .attraction .deco-text.left {
   left: 0;
   right: initial;
 }
 @media screen and (max-width: 1281px) {
-  main .attraction-wrapper .attraction .deco {
+  main .attraction-wrapper .attraction .deco-text {
     bottom: 50px;
     font-size: 4rem;
     right: 10%;
   }
-  main .attraction-wrapper .attraction .deco.left {
+  main .attraction-wrapper .attraction .deco-text.left {
     left: 10%;
     right: initial;
   }
 }
 @media screen and (max-width: 768px) {
-  main .attraction-wrapper .attraction .deco {
+  main .attraction-wrapper .attraction .deco-text {
     font-size: 3rem;
     bottom: 10px;
   }
 }
 @media screen and (max-width: 600px) {
-  main .attraction-wrapper .attraction .deco {
+  main .attraction-wrapper .attraction .deco-text {
     font-size: 2rem;
     bottom: 20px;
   }
@@ -251,23 +251,23 @@ main .attraction-wrapper .attraction .desc.right {
     font-size: 2rem;
   }
 }
-main .attraction-wrapper .attraction .desc .ban-icons li {
+main .attraction-wrapper .attraction .desc .ban-icons-ul li {
   display: inline-block;
   width: 80px;
   height: 80px;
 }
 @media screen and (max-width: 1281px) {
-  main .attraction-wrapper .attraction .desc .ban-icons li {
+  main .attraction-wrapper .attraction .desc .ban-icons-ul li {
     width: 60px;
     height: 60px;
   }
 }
 @media screen and (max-width: 1281px) {
-  main .attraction-wrapper .attraction .desc .ban-ul {
+  main .attraction-wrapper .attraction .desc .ban-text-ul {
     font-size: 2rem;
   }
 }
-main .attraction-wrapper .attraction .mobile {
+main .attraction-wrapper .attraction .mobile-desc {
   position: relative;
   display: none;
   margin-top: 25px;
@@ -275,10 +275,10 @@ main .attraction-wrapper .attraction .mobile {
   line-height: 1.618;
 }
 @media screen and (max-width: 768px) {
-  main .attraction-wrapper .attraction .mobile {
+  main .attraction-wrapper .attraction .mobile-desc {
     display: block;
   }
-  main .attraction-wrapper .attraction .mobile:before {
+  main .attraction-wrapper .attraction .mobile-desc:before {
     content: "";
     position: absolute;
     top: 0;
@@ -289,7 +289,7 @@ main .attraction-wrapper .attraction .mobile {
     height: 1px;
     margin: 0 auto;
   }
-  main .attraction-wrapper .attraction .mobile:after {
+  main .attraction-wrapper .attraction .mobile-desc:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -302,10 +302,10 @@ main .attraction-wrapper .attraction .mobile {
   }
 }
 @media screen and (max-width: 600px) {
-  main .attraction-wrapper .attraction .mobile {
+  main .attraction-wrapper .attraction .mobile-desc {
     display: block;
   }
-  main .attraction-wrapper .attraction .mobile:before {
+  main .attraction-wrapper .attraction .mobile-desc:before {
     content: "";
     position: absolute;
     top: 0;
@@ -315,7 +315,7 @@ main .attraction-wrapper .attraction .mobile {
     width: 100%;
     height: 1px;
   }
-  main .attraction-wrapper .attraction .mobile:after {
+  main .attraction-wrapper .attraction .mobile-desc:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -326,36 +326,36 @@ main .attraction-wrapper .attraction .mobile {
     height: 1px;
   }
 }
-main .attraction-wrapper .attraction .mobile h4 {
+main .attraction-wrapper .attraction .mobile-desc h4 {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 25px;
 }
 @media screen and (max-width: 768px) {
-  main .attraction-wrapper .attraction .mobile h4 {
+  main .attraction-wrapper .attraction .mobile-desc h4 {
     font-size: 2.2rem;
   }
 }
-main .attraction-wrapper .attraction .mobile .ban-icons li {
+main .attraction-wrapper .attraction .mobile-desc .ban-icons-ul li {
   display: inline-block;
   width: 50px;
   height: 50px;
 }
 @media screen and (max-width: 768px) {
-  main .attraction-wrapper .attraction .mobile .ban-icons li {
+  main .attraction-wrapper .attraction .mobile-desc .ban-icons-ul li {
     width: 60px;
     height: 60px;
   }
 }
-main .attraction-wrapper .attraction .mobile .ban-icons li img {
+main .attraction-wrapper .attraction .mobile-desc .ban-icons-ul li img {
   width: 100%;
   height: 100%;
 }
-main .attraction-wrapper .attraction .mobile .ban-ul li {
+main .attraction-wrapper .attraction .mobile-desc .ban-text-ul li {
   font-size: 1.6rem;
 }
 @media screen and (max-width: 768px) {
-  main .attraction-wrapper .attraction .mobile .ban-ul li {
+  main .attraction-wrapper .attraction .mobile-desc .ban-text-ul li {
     font-size: 1.8rem;
   }
 }/*# sourceMappingURL=attraction.css.map */

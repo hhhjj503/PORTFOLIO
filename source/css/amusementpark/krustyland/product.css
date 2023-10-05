@@ -480,15 +480,15 @@ main .goods .review-wrapper {
   /*----------------------------------- .goods .review-pager ------------------------ */
   width: 100%;
 }
-main .goods .review-wrapper ul {
+main .goods .review-wrapper .review-pager {
   width: 100%;
   text-align: center;
   padding: 20px 0;
 }
-main .goods .review-wrapper ul li {
+main .goods .review-wrapper .review-pager .num {
   display: inline-block;
 }
-main .goods .review-wrapper ul li a {
+main .goods .review-wrapper .review-pager .num a {
   width: 100%;
   text-decoration: none;
   font-size: 1.4rem;
@@ -497,18 +497,18 @@ main .goods .review-wrapper ul li a {
   color: black;
 }
 @media screen and (max-width: 1281px) {
-  main .goods .review-wrapper ul li a {
+  main .goods .review-wrapper .review-pager .num a {
     padding: 3px 8px;
     font-size: 1.6rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .goods .review-wrapper ul li a {
+  main .goods .review-wrapper .review-pager .num a {
     padding: 2px 6px;
     font-size: 1.4rem;
   }
 }
-main .goods .review-wrapper ul li.active a {
+main .goods .review-wrapper .review-pager .num.active a {
   background-color: black;
   color: white;
   font-weight: bold;

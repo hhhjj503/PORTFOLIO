@@ -1,7 +1,7 @@
 window.addEventListener("load", function () {
   const html = document.querySelector("html");
   const menu = document.querySelector(".menu");
-  const background = document.querySelector(".background");
+  const background = document.querySelector(".banner-wrapper"); //background > banner-wrapper
 
   window.addEventListener("scroll", () => {
     if (
