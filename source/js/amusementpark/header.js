@@ -3,9 +3,11 @@ window.addEventListener("load", () => {
   const html = document.querySelector("html");
 
   const hNav = document.querySelector("header .h-nav");
-  const hMobileNav = document.querySelector("header .mobile-nav");
-  const subMenu = document.querySelector(".mobile-nav .sub-menu");
-  const mobileGotop = document.querySelector(".mobile-nav .goup");
+  const hMobileNav = document.querySelector("header .mobile-menu");
+  const downSlidingMenu = document.querySelector(
+    ".mobile-menu .downSliding-nav"
+  ); //.sub-menu > .downSliding-nav
+  const mobileGotop = document.querySelector(".mobile-menu .goup");
   const gotop = document.querySelector(".gotop");
 
   //gotop 버튼
@@ -25,11 +27,11 @@ window.addEventListener("load", () => {
   });
 
   hMobileNav.addEventListener("click", () => {
-    subMenu.classList.toggle("opened");
+    downSlidingMenu.classList.toggle("opened");
   });
 
   //click 이벤트 작동하지 않을때
   mobileGotop.addEventListener("mouseenter", () => {
-    subMenu.classList.toggle("opened");
+    downSlidingMenu.classList.toggle("opened");
   });
 });

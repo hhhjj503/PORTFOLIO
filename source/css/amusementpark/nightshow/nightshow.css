@@ -46,27 +46,27 @@ main .banner-wrapper.bg-img {
     height: 300px;
   }
 }
-main .info-wrapper {
-  /*----------------------- main .info-wrapper ------------------------ */
+main .fireworks-wrapper {
+  /*----------------------- main .fireworks-wrapper ------------------------ */
   max-width: 1200px;
   width: 100%;
   padding: 100px 0;
   margin: 0 auto;
 }
 @media screen and (max-width: 1281px) {
-  main .info-wrapper {
+  main .fireworks-wrapper {
     transition: 0.3s ease-in-out;
     padding: 100px 0;
     overflow: hidden;
   }
 }
 @media screen and (max-width: 600px) {
-  main .info-wrapper {
+  main .fireworks-wrapper {
     padding: 50px 0;
     overflow: hidden;
   }
 }
-main .info-wrapper .sub-desc {
+main .fireworks-wrapper .sub-desc {
   width: 30%;
   margin: 0 auto;
   font-size: 1.6em;
@@ -77,17 +77,17 @@ main .info-wrapper .sub-desc {
   text-align: center;
 }
 @media screen and (max-width: 1281px) {
-  main .info-wrapper .sub-desc {
+  main .fireworks-wrapper .sub-desc {
     font-size: 1.4rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .info-wrapper .sub-desc {
+  main .fireworks-wrapper .sub-desc {
     width: 60%;
     font-size: 1.2rem;
   }
 }
-main .info-wrapper .desc {
+main .fireworks-wrapper .desc {
   width: 30%;
   margin: 0 auto 30px auto;
   font-size: 2rem;
@@ -98,71 +98,65 @@ main .info-wrapper .desc {
   text-align: center;
 }
 @media screen and (max-width: 1281px) {
-  main .info-wrapper .desc {
+  main .fireworks-wrapper .desc {
     font-size: 1.7rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .info-wrapper .desc {
+  main .fireworks-wrapper .desc {
     width: 60%;
     font-size: 1.5rem;
   }
 }
-main .info-wrapper .slider-viewer {
+main .fireworks-wrapper .slider-viewer {
   width: 100%;
   height: initial;
   position: relative;
   overflow: hidden;
 }
 @media screen and (max-width: 1281px) {
-  main .info-wrapper .slider-viewer {
+  main .fireworks-wrapper .slider-viewer {
     width: 900px;
     overflow: hidden;
     margin: 0 auto;
   }
 }
 @media screen and (max-width: 1279px) {
-  main .info-wrapper .slider-viewer {
+  main .fireworks-wrapper .slider-viewer {
     width: 600px;
     overflow: hidden;
     margin: 0 auto;
   }
 }
 @media screen and (max-width: 600px) {
-  main .info-wrapper .slider-viewer {
+  main .fireworks-wrapper .slider-viewer {
     width: 300px;
     overflow: hidden;
     margin: 0 auto;
   }
 }
-main .info-wrapper .slider-viewer .slider-wrapper {
+main .fireworks-wrapper .slider-viewer .slider-wrapper .slider {
   position: relative;
   left: 0;
   top: 0;
   width: 1600px;
+  height: 100%;
+  white-space: nowrap;
   overflow: hidden;
 }
 @media screen and (max-width: 1281px) {
-  main .info-wrapper .slider-viewer .slider-wrapper {
+  main .fireworks-wrapper .slider-viewer .slider-wrapper .slider {
     left: 0;
     transition: 0.3s ease;
     overflow: hidden;
   }
 }
 @media screen and (max-width: 600px) {
-  main .info-wrapper .slider-viewer .slider-wrapper {
+  main .fireworks-wrapper .slider-viewer .slider-wrapper .slider {
     left: 0;
   }
 }
-main .info-wrapper .slider-viewer .slider-wrapper .slider {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  left: 0;
-  white-space: nowrap;
-  overflow: hidden;
-}
-main .info-wrapper .slider-viewer .slider-wrapper .slider .slide {
+main .fireworks-wrapper .slider-viewer .slider-wrapper .slider .slide {
   float: left;
   width: 298px;
   height: 300px;
@@ -174,11 +168,11 @@ main .info-wrapper .slider-viewer .slider-wrapper .slider .slide {
   cursor: pointer;
   border: none;
 }
-main .info-wrapper .slider-viewer .slider-wrapper .slider .slide:focus-visible {
+main .fireworks-wrapper .slider-viewer .slider-wrapper .slider .slide:focus-visible {
   border: 5px solid white;
   box-sizing: border-box;
 }
-main .info-wrapper .slider-viewer .slider-wrapper .slider .slide img {
+main .fireworks-wrapper .slider-viewer .slider-wrapper .slider .slide img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -186,12 +180,12 @@ main .info-wrapper .slider-viewer .slider-wrapper .slider .slide img {
   -o-object-position: center center;
      object-position: center center;
 }
-main .info-wrapper .slider-viewer .slider-wrapper .slider:after {
+main .fireworks-wrapper .slider-viewer .slider-wrapper .slider:after {
   content: "";
   clear: both;
   display: block;
 }
-main .info-wrapper .slider-viewer .slider-controls {
+main .fireworks-wrapper .slider-viewer .slider-wrapper .slider-controls {
   position: absolute;
   bottom: 10px;
   right: 10px;
@@ -199,19 +193,19 @@ main .info-wrapper .slider-viewer .slider-controls {
   color: white;
   font-size: 2rem;
 }
-main .info-wrapper .slider-viewer .slider-controls button {
+main .fireworks-wrapper .slider-viewer .slider-wrapper .slider-controls button {
   background-color: transparent;
   border: none;
   padding: 0;
   cursor: pointer;
 }
-main .info-wrapper .slider-viewer .slider-controls button img {
+main .fireworks-wrapper .slider-viewer .slider-wrapper .slider-controls button img {
   width: 15px;
   height: 15px;
   display: block;
   background-color: transparent;
 }
-main .info-wrapper .slider-viewer .overlay-img {
+main .fireworks-wrapper .slider-viewer .overlay-img {
   position: fixed;
   pointer-events: none;
   width: 100%;
@@ -224,12 +218,12 @@ main .info-wrapper .slider-viewer .overlay-img {
   transition: 0.5s ease-in-out;
   opacity: 0;
 }
-main .info-wrapper .slider-viewer .overlay-img.visible {
+main .fireworks-wrapper .slider-viewer .overlay-img.visible {
   opacity: 1;
   pointer-events: all;
   overflow: hidden;
 }
-main .info-wrapper .slider-viewer .overlay-img .guide-txt {
+main .fireworks-wrapper .slider-viewer .overlay-img .guide-txt {
   position: absolute;
   color: white;
   left: 50%;
@@ -240,13 +234,13 @@ main .info-wrapper .slider-viewer .overlay-img .guide-txt {
   cursor: pointer;
 }
 @media screen and (max-width: 1281px) {
-  main .info-wrapper .slider-viewer .overlay-img .guide-txt {
+  main .fireworks-wrapper .slider-viewer .overlay-img .guide-txt {
     width: 80%;
     text-align: center;
     line-height: 1.618;
   }
 }
-main .info-wrapper .slider-viewer .overlay-img img {
+main .fireworks-wrapper .slider-viewer .overlay-img img {
   position: absolute;
   width: 40%;
   height: 50%;
@@ -260,13 +254,13 @@ main .info-wrapper .slider-viewer .overlay-img img {
      object-fit: cover;
 }
 @media screen and (max-width: 1281px) {
-  main .info-wrapper .slider-viewer .overlay-img img {
+  main .fireworks-wrapper .slider-viewer .overlay-img img {
     width: 80%;
     height: 50%;
   }
 }
 @media screen and (max-width: 600px) {
-  main .info-wrapper .slider-viewer .overlay-img img {
+  main .fireworks-wrapper .slider-viewer .overlay-img img {
     width: 80%;
     height: 50%;
   }
@@ -473,12 +467,23 @@ main .letter-event-wrapper .letter form button {
     font-size: 1.4rem;
   }
 }
-main .benefits {
-  /*----------------------- main .benefits ------------------------ */
+main .benefits-wrapper {
+  /*----------------------- main .benefits-wrapper ------------------------ */
   position: relative;
   padding: 100px 0;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+  white-space: nowrap;
 }
-main .benefits .sub-desc {
+@media screen and (max-width: 1281px) {
+  main .benefits-wrapper {
+    white-space: initial;
+  }
+}
+main .benefits-wrapper .sub-desc {
   width: 30%;
   margin: 0 auto;
   font-size: 1.6em;
@@ -489,17 +494,17 @@ main .benefits .sub-desc {
   text-align: center;
 }
 @media screen and (max-width: 1281px) {
-  main .benefits .sub-desc {
+  main .benefits-wrapper .sub-desc {
     font-size: 1.4rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .benefits .sub-desc {
+  main .benefits-wrapper .sub-desc {
     width: 60%;
     font-size: 1.2rem;
   }
 }
-main .benefits .desc {
+main .benefits-wrapper .desc {
   width: 30%;
   margin: 0 auto 30px auto;
   font-size: 2rem;
@@ -510,40 +515,22 @@ main .benefits .desc {
   text-align: center;
 }
 @media screen and (max-width: 1281px) {
-  main .benefits .desc {
+  main .benefits-wrapper .desc {
     width: 30%;
     font-size: 1.8rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .benefits .desc {
+  main .benefits-wrapper .desc {
     width: 60%;
     font-size: 1.5rem;
   }
 }
-main .benefits .listwrapper {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  z-index: 1;
-  position: relative;
-  white-space: nowrap;
-}
-@media screen and (max-width: 1281px) {
-  main .benefits .listwrapper {
-    white-space: initial;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .benefits .listwrapper {
-    white-space: initial;
-  }
-}
-main .benefits .listwrapper .benefit-ul {
+main .benefits-wrapper .benefit-ul {
   width: 100%;
   text-align: center;
 }
-main .benefits .listwrapper .benefit-li {
+main .benefits-wrapper .benefit-li {
   display: inline-block;
   height: 300px;
   width: 298px;
@@ -554,26 +541,26 @@ main .benefits .listwrapper .benefit-li {
   overflow: hidden;
 }
 @media screen and (max-width: 1281px) {
-  main .benefits .listwrapper .benefit-li {
+  main .benefits-wrapper .benefit-li {
     margin: 5px;
     width: 40%;
   }
 }
 @media screen and (max-width: 600px) {
-  main .benefits .listwrapper .benefit-li {
+  main .benefits-wrapper .benefit-li {
     margin: 3px 1px;
     height: 190px;
     width: 80%;
   }
 }
-main .benefits .listwrapper .benefit-li > div {
+main .benefits-wrapper .benefit-li > div {
   position: absolute;
   width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-main .benefits .listwrapper .benefit-li p {
+main .benefits-wrapper .benefit-li p {
   width: 90%;
   background-color: inherit;
   font-size: 1.4rem;
@@ -583,27 +570,27 @@ main .benefits .listwrapper .benefit-li p {
   line-height: 20px;
 }
 @media screen and (max-width: 1281px) {
-  main .benefits .listwrapper .benefit-li p {
+  main .benefits-wrapper .benefit-li p {
     font-size: 1.3rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .benefits .listwrapper .benefit-li p {
+  main .benefits-wrapper .benefit-li p {
     font-size: 1.1rem;
     word-break: keep-all;
   }
 }
-main .benefits .listwrapper .benefit-li li:nth-child(2n) {
+main .benefits-wrapper .benefit-li li:nth-child(2n) {
   position: relative;
   top: 20px;
 }
 @media screen and (max-width: 600px) {
-  main .benefits .listwrapper .benefit-li li:nth-child(2n) {
+  main .benefits-wrapper .benefit-li li:nth-child(2n) {
     top: 0;
     margin: 10px;
   }
 }
-main .benefits .listwrapper .benefit-li button {
+main .benefits-wrapper .benefit-li button {
   width: 50%;
   margin: 0 auto;
   padding: 7px 0;
@@ -613,37 +600,37 @@ main .benefits .listwrapper .benefit-li button {
   transition: 0.3s ease-in-out;
 }
 @media screen and (max-width: 1281px) {
-  main .benefits .listwrapper .benefit-li button {
+  main .benefits-wrapper .benefit-li button {
     width: 40%;
     font-size: 1.3rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .benefits .listwrapper .benefit-li button {
+  main .benefits-wrapper .benefit-li button {
     width: 30%;
     font-size: 1.1rem;
   }
 }
-main .benefits .listwrapper .benefit-li:hover button {
+main .benefits-wrapper .benefit-li:hover button {
   cursor: pointer;
 }
-main .benefits .listwrapper .benefit-li:nth-child(1) {
+main .benefits-wrapper .benefit-li:nth-child(1) {
   background-color: #3870e0;
   background-image: url(../../../images/amusementpark/nightshow/nightshow_fireworks.PNG);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-main .benefits .listwrapper .benefit-li:nth-child(2) {
+main .benefits-wrapper .benefit-li:nth-child(2) {
   background-color: #b30fff;
 }
-main .benefits .listwrapper .benefit-li:nth-child(3) {
+main .benefits-wrapper .benefit-li:nth-child(3) {
   background-color: #3870e0;
   background-image: url(../../../images/amusementpark/nightshow/nightsky.PNG);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-main .benefits .listwrapper .benefit-li:nth-child(4) {
+main .benefits-wrapper .benefit-li:nth-child(4) {
   background-color: #3870e0;
 }/*# sourceMappingURL=nightshow.css.map */

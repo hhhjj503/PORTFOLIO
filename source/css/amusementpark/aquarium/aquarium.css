@@ -24,11 +24,11 @@ body {
   color: #e60000; /* nav 의 아쿠아리움 글자 빨갛게 변경 */
 }
 
-.mobile-nav {
+.mobile-menu {
   position: fixed; /* position : fixed */
   transition: 0.5s ease-in-out;
 }
-.mobile-nav.scrolldown {
+.mobile-menu.scrolldown {
   opacity: 0;
   pointer-events: none;
 }

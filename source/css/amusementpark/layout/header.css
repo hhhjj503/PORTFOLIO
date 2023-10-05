@@ -1,4 +1,4 @@
-.mobile-nav {
+.mobile-menu {
   display: none;
 }
 
@@ -111,7 +111,8 @@
     display: none;
   }
 
-  .mobile-nav {
+  /* 모바일 메뉴로 표시 */
+  .mobile-menu {
     display: block;
     position: sticky;
     width: 100%;
@@ -120,22 +121,21 @@
     z-index: 99;
   }
 
-  .mobile-nav .wrapper {
+  .mobile-menu .menu-btn {
+    display: block;
     width: 100%;
     height: 7vh;
+    border: none;
+    background-color: #fff;
     transition: 0.3s ease-in-out;
+    cursor: pointer;
   }
-
-  .mobile-nav .wrapper .home-btn {
-    width: 100%;
-    height: 100%;
-  }
-  .mobile-nav .wrapper img {
+  .mobile-menu .menu-btn img {
     width: 100%;
     height: 90%;
   }
 
-  .mobile-nav .sub-menu {
+  .mobile-menu .downSliding-nav {
     position: relative;
     max-height: 0px;
     overflow: hidden;
@@ -143,14 +143,14 @@
     transition: 0.5s ease-in-out;
   }
 
-  .mobile-nav .sub-menu.opened {
+  .mobile-menu .downSliding-nav.opened {
     max-height: 250px;
   }
 
-  .sub-menu ul li {
+  .downSliding-nav ul li {
     width: 100%;
   }
-  .sub-menu ul a {
+  .downSliding-nav ul a {
     background-color: white;
     box-sizing: border-box;
     border-top: 1px solid #e1e1e1;
@@ -166,7 +166,7 @@
     font-weight: bold;
   }
 
-  .sub-menu .goup {
+  .downSliding-nav .goup {
     position: absolute;
     right: 10px;
     bottom: 10px;
@@ -177,7 +177,7 @@
     overflow: hidden;
   }
 
-  .sub-menu .goup > img {
+  .downSliding-nav .goup > img {
     object-fit: cover;
     display: block;
     width: 50%;

@@ -33,37 +33,33 @@
       </nav>
 
       <!-- mobile nav -->
-      <nav class="mobile-nav">
-        <div class="wrapper">
-          <div class="home-btn">
-            <a href="#" class="home-a">
-              <img
-                src="../../source/images/amusementpark/fort-awesome.svg"
-                alt="보라색 성 아이콘"
-              />
-            </a>
+      <div class="mobile-menu">
+        <button class="menu-btn">
+          <img
+            src="../../source/images/amusementpark/fort-awesome.svg"
+            alt="보라색 성 아이콘"
+          />
+        </button>
+        <nav class="downSliding-nav">
+          <ul>
+            <li>
+              <a href="./index.html">HOME</a>
+            </li>
+            <li>
+              <a href="./nightshow.html">나이트쇼</a>
+            </li>
+            <li><a href="./attraction.html">어트랙션</a></li>
+            <li><a href="./krustyland.html">크러스티랜드</a></li>
+            <li><a href="./aquarium.html">아쿠아리움</a></li>
+          </ul>
+          <div class="goup">
+            <img
+              src="../../source/images/amusementpark/nightshow/arrow-up-solid.svg"
+              alt="위 화살표 이미지"
+            />
           </div>
-          <div class="sub-menu">
-            <ul>
-              <li>
-                <a href="./index.html">HOME</a>
-              </li>
-              <li>
-                <a href="./nightshow.html">나이트쇼</a>
-              </li>
-              <li><a href="./attraction.html">어트랙션</a></li>
-              <li><a href="./krustyland.html">크러스티랜드</a></li>
-              <li><a href="./aquarium.html">아쿠아리움</a></li>
-            </ul>
-            <div class="goup">
-              <img
-                src="../../source/images/amusementpark/nightshow/arrow-up-solid.svg"
-                alt="위 화살표 이미지"
-              />
-            </div>
-          </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
     <!-- //header -->
 
@@ -74,7 +70,7 @@
       <!-- //banner -->
 
       <!-- info -->
-      <div class="info-wrapper">
+      <div class="fireworks-wrapper">
         <a href="#" class="hidingThreshold" tabindex="-1"></a>
         <div class="sub-desc">한여름을 밝게비출 시원한 밤</div>
         <div class="desc">신나는 불꽃축제!</div>
@@ -113,21 +109,22 @@
                 />
               </div>
             </div>
+            <div class="slider-controls">
+              <button class="pause">
+                <img
+                  src="../../source/images/amusementpark/aquarium/pause-solid.svg"
+                  alt="멈춤버튼 이미지"
+                />
+              </button>
+              <button class="play">
+                <img
+                  src="../../source/images/amusementpark/aquarium/play-solid.svg"
+                  alt="시작버튼 이미지"
+                />
+              </button>
+            </div>
           </div>
-          <div class="slider-controls">
-            <button class="pause">
-              <img
-                src="../../source/images/amusementpark/aquarium/pause-solid.svg"
-                alt="멈춤버튼 이미지"
-              />
-            </button>
-            <button class="play">
-              <img
-                src="../../source/images/amusementpark/aquarium/play-solid.svg"
-                alt="시작버튼 이미지"
-              />
-            </button>
-          </div>
+
           <div class="overlay-img">
             <img src="#" alt="오버레이이미지" />
             <div class="guide-txt">
@@ -230,42 +227,40 @@
       <!-- //letter -->
 
       <!-- benefits -->
-      <div class="benefits">
-        <div class="listwrapper">
-          <a href="#" class="hidingThreshold" tabindex="-1"></a>
-          <div class="sub-desc">놓치지 마세요!</div>
-          <div class="desc">잊지말아야 할 혜택 네가지!</div>
+      <div class="benefits-wrapper">
+        <a href="#" class="hidingThreshold" tabindex="-1"></a>
+        <div class="sub-desc">놓치지 마세요!</div>
+        <div class="desc">잊지말아야 할 혜택 네가지!</div>
 
-          <a href="#" class="hidingThreshold" tabindex="-1"></a>
-          <ul class="benefit-ul">
-            <li class="benefit-li">
-              <div>
-                <p>어플을 통해 이벤트를 받아보세요!</p>
-                <button>바로가기</button>
-              </div>
-            </li>
-            <li class="benefit-li">
-              <div>
-                <p>다양한 행사를 통한 푸짐한 상품들!</p>
-                <button>바로가기</button>
-              </div>
-            </li>
-            <li class="benefit-li">
-              <div>
-                <p>온가족이 함께하면 더욱 커지는 할인혜택!</p>
-                <button>바로가기</button>
-              </div>
-            </li>
-            <li class="benefit-li">
-              <div>
-                <p>언제인지 모르는 깜짝 이벤트까지!</p>
-                <button>바로가기</button>
-              </div>
-            </li>
-          </ul>
+        <a href="#" class="hidingThreshold" tabindex="-1"></a>
+        <ul class="benefit-ul">
+          <li class="benefit-li">
+            <div>
+              <p>어플을 통해 이벤트를 받아보세요!</p>
+              <button>바로가기</button>
+            </div>
+          </li>
+          <li class="benefit-li">
+            <div>
+              <p>다양한 행사를 통한 푸짐한 상품들!</p>
+              <button>바로가기</button>
+            </div>
+          </li>
+          <li class="benefit-li">
+            <div>
+              <p>온가족이 함께하면 더욱 커지는 할인혜택!</p>
+              <button>바로가기</button>
+            </div>
+          </li>
+          <li class="benefit-li">
+            <div>
+              <p>언제인지 모르는 깜짝 이벤트까지!</p>
+              <button>바로가기</button>
+            </div>
+          </li>
+        </ul>
 
-          <a href="#" class="hidingThreshold" tabindex="-1"></a>
-        </div>
+        <a href="#" class="hidingThreshold" tabindex="-1"></a>
       </div>
       <!-- //benefits -->
     </main>

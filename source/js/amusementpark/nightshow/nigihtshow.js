@@ -2,7 +2,7 @@ window.addEventListener("load", () => {
   const html = document.querySelector("html");
 
   const slider = document.querySelector(".slider-viewer .slider");
-  const pauseBtn = document.querySelector(".slider-controls .pause"); //controller > controls
+  const pauseBtn = document.querySelector(".slider-controls .pause"); //controller > slider-controls
   const playBtn = document.querySelector(".slider-controls .play");
   const overlay = document.querySelector(".overlay-img");
   const overlayImg = document.querySelector(".overlay-img img");
@@ -15,12 +15,14 @@ window.addEventListener("load", () => {
   const textarea = document.querySelector("textarea");
 
   //모바일 메뉴
-  const hMobileNav = document.querySelector("header .mobile-nav"); //top-nav-mobile > mobile-nav
-  const subMenu = document.querySelector(".mobile-nav .sub-menu");
-  const goup = document.querySelector(".mobile-nav .goup");
+  const hMobileNav = document.querySelector("header .mobile-menu"); //top-nav-mobile > mobile-menu
+  const downSlidingMenu = document.querySelector(
+    ".mobile-menu .downSliding-nav"
+  ); //sub-menu > downSliding-nav
+  const goup = document.querySelector(".mobile-menu .goup");
 
   hMobileNav.addEventListener("click", () => {
-    subMenu.classList.toggle("opened");
+    downSlidingMenu.classList.toggle("opened");
   });
 
   //gotop 버튼
@@ -31,7 +33,7 @@ window.addEventListener("load", () => {
 
   //click 이벤트 작동하지 않음
   goup.addEventListener("mouseenter", () => {
-    subMenu.classList.toggle("opened");
+    downSlidingMenu.classList.toggle("opened");
   });
 
   for (let i = 0; i < hiddenElements.length; i++) {
@@ -56,6 +58,11 @@ window.addEventListener("load", () => {
     })
   );
 
+  /**
+   * 엘리먼트의 top=0px, opacity=1 로 변경
+   * @param {*} element
+   *
+   */
   function showElements(element) {
     element.style.top = "0px";
     element.style.opacity = "1";

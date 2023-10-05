@@ -2,7 +2,7 @@ window.addEventListener("load", function () {
   //상세페이지별 공통변수, 아쿠아리움 페이지용 추가기능을 위한 쿼리
   const html = document.querySelector("html");
   const hNav = document.querySelector(".h-nav");
-  const hNavMobile = document.querySelector(".mobile-nav");
+  const mobileMenu = document.querySelector(".mobile-menu"); //mobile-nav > mobile-menu
 
   //아쿠아리움 페이지 슬라이더 사용을 위한 변수
   const as = document.querySelectorAll(".event-slider a");
@@ -44,10 +44,10 @@ window.addEventListener("load", function () {
   window.addEventListener("scroll", () => {
     if (html.scrollTop > 0) {
       hNav.classList.add("scrolldown");
-      hNavMobile.classList.add("scrolldown");
+      mobileMenu.classList.add("scrolldown");
     } else {
       hNav.classList.remove("scrolldown");
-      hNavMobile.classList.remove("scrolldown");
+      mobileMenu.classList.remove("scrolldown");
     }
   });
   // ---------------------------------------------------------------------------------//
