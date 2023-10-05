@@ -1,11 +1,11 @@
 window.addEventListener("load", () => {
   const html = document.querySelector("html");
 
-  const slider = document.querySelector(".contents .slider");
+  const slider = document.querySelector(".slider-viewer .slider");
   const pauseBtn = document.querySelector(".slider-controls .pause"); //controller > controls
   const playBtn = document.querySelector(".slider-controls .play");
-  const overlay = document.querySelector(".overlay");
-  const overlayImg = document.querySelector(".overlay img");
+  const overlay = document.querySelector(".overlay-img");
+  const overlayImg = document.querySelector(".overlay-img img");
 
   const hidingThresholds = document.querySelectorAll(".hidingThreshold"); //hiding > hidingThreshold
   const hiddenElements = document.querySelectorAll(".hidingThreshold + *"); //hidings > hiddenElements

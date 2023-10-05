@@ -6,13 +6,13 @@ footer {
   max-width: 100%;
   margin: 0 auto;
 
-  & > .wrapper {
+  & .wrapper {
     max-width: 1200px;
     margin: 0 auto;
     white-space: nowrap;
     position: relative;
 
-    .list {
+    .list-ul {
       width: 100%;
       text-align: center;
       display: block;
@@ -41,7 +41,7 @@ footer {
       }
     }
 
-    .sns {
+    .sns-imgs-wrapper {
       display: block;
       text-align: center;
       margin: 20px 0;
