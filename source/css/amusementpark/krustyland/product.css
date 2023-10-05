@@ -104,34 +104,34 @@ main .goods {
     padding: 0;
   }
 }
-main .goods .info {
+main .goods .slider-wrapper {
   width: 65%;
   display: inline-block;
 }
 @media screen and (max-width: 600px) {
-  main .goods .info {
+  main .goods .slider-wrapper {
     display: block;
     width: 100%;
   }
 }
-main .goods .info .slider {
+main .goods .slider-wrapper .slider {
   position: relative;
   width: 100%;
   height: 600px;
 }
 @media screen and (max-width: 600px) {
-  main .goods .info .slider {
+  main .goods .slider-wrapper .slider {
     height: 400px;
   }
 }
-main .goods .info .slider img {
+main .goods .slider-wrapper .slider img {
   display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-main .goods .info .slider button {
+main .goods .slider-wrapper .slider button {
   position: absolute;
   top: 50%;
   width: 50px;
@@ -141,10 +141,10 @@ main .goods .info .slider button {
   cursor: pointer;
   transform: translateY(-50%);
 }
-main .goods .info .slider button.left {
+main .goods .slider-wrapper .slider button.before {
   left: 5%;
 }
-main .goods .info .slider button.right {
+main .goods .slider-wrapper .slider button.next {
   right: 5%;
 }
 main .goods .option {
@@ -251,26 +251,26 @@ main .goods .option .color .color-title {
     font-size: 1.4rem;
   }
 }
-main .goods .option .color .palette li {
+main .goods .option .color .palette-ul li {
   display: inline-block;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   cursor: pointer;
 }
-main .goods .option .color .palette li:nth-child(1) button.red.text-indent {
+main .goods .option .color .palette-ul li:nth-child(1) button.red.text-indent {
   background-color: red;
 }
-main .goods .option .color .palette li:nth-child(2) button.orange.text-indent {
+main .goods .option .color .palette-ul li:nth-child(2) button.orange.text-indent {
   background-color: orange;
 }
-main .goods .option .color .palette li:nth-child(3) button.yellow.text-indent {
+main .goods .option .color .palette-ul li:nth-child(3) button.yellow.text-indent {
   background-color: yellow;
 }
-main .goods .option .color .palette li:nth-child(4) button.green.text-indent {
+main .goods .option .color .palette-ul li:nth-child(4) button.green.text-indent {
   background-color: green;
 }
-main .goods .option .color .palette li button {
+main .goods .option .color .palette-ul li button {
   width: 100%;
   height: 100%;
   border-radius: 50%;

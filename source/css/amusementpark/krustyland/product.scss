@@ -127,14 +127,10 @@ main {
       }
     }
 
-    & .info {
+    & .slider-wrapper {
       width: 65%;
       display: inline-block;
 
-      @media screen and (max-width: 1281px) {
-        & {
-        }
-      }
       @media screen and (max-width: 600px) {
         & {
           display: block;
@@ -147,10 +143,6 @@ main {
         width: 100%;
         height: 600px;
 
-        @media screen and (max-width: 1281px) {
-          & {
-          }
-        }
         @media screen and (max-width: 600px) {
           & {
             height: 400px;
@@ -162,11 +154,6 @@ main {
           width: 100%;
           height: 100%;
           object-fit: contain;
-
-          @media screen and (max-width: 1281px) {
-            & {
-            }
-          }
         }
 
         & button {
@@ -179,10 +166,10 @@ main {
           cursor: pointer;
           transform: translateY(-50%);
 
-          &.left {
+          &.before {
             left: 5%;
           }
-          &.right {
+          &.next {
             right: 5%;
           }
         }
@@ -316,7 +303,7 @@ main {
           }
         }
 
-        & .palette {
+        & .palette-ul {
           & li {
             display: inline-block;
             width: 30px;
