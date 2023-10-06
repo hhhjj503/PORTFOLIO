@@ -20,10 +20,10 @@ window.addEventListener("load", () => {
   );
   const thumbLis = document.querySelectorAll(".intro .thumbnail li");
   const imagesListUl = document.querySelector(
-    ".intro .original .original-img-ul"
+    ".intro .original-viewer .original-img-ul"
   );
   const imagesListLis = document.querySelectorAll(
-    ".intro .original .original-img-ul li"
+    ".intro .original-viewer .original-img-ul li"
   );
   const thumbnaiviewerMobile = document.querySelector(
     ".intro .thumbnail-mobile .thumbnail-viewer-mobile"
@@ -39,7 +39,7 @@ window.addEventListener("load", () => {
   );
   const translateKorea = document.querySelector(".intro .translate .korea");
   const translateEnglish = document.querySelector(".intro .translate .english");
-  const introDescPs = document.querySelectorAll(".intro .intro-desc p");
+  const introDescPs = document.querySelectorAll(".intro .desc p");
   //
   //section.members
   const membersSection = document.querySelector(".members");
@@ -88,8 +88,10 @@ window.addEventListener("load", () => {
   const albumsBGStop = document.querySelector(
     ".albums .albums-bg-controls .stop"
   );
-  const allSongs = document.querySelectorAll(".albums .songs-title-wrapper li");
-  const albums = document.querySelectorAll(".albums .albums-wrapper .album");
+  const allSongsLis = document.querySelectorAll(".albums .songs-title-ul li");
+  const albumImgBtns = document.querySelectorAll(
+    ".albums .albums-wrapper .img-btn"
+  ); //album > img-btn
   const albumNames = [
     "square-one",
     "square-two",
@@ -171,29 +173,29 @@ window.addEventListener("load", () => {
   //section.albums
   showAll.addEventListener("click", function () {
     if (!this.classList.contains("active")) {
-      addAllClass(albums, "active");
-      addAllClass(allSongs, "active");
+      addAllClass(albumImgBtns, "active");
+      addAllClass(allSongsLis, "active");
     }
   });
 
-  for (let i = 0; i < allSongs.length; i++) {
-    if (allSongs[i].classList.contains(albumNames[0])) {
-      addClass(allSongs[i], "active");
+  for (let i = 0; i < allSongsLis.length; i++) {
+    if (allSongsLis[i].classList.contains(albumNames[0])) {
+      addClass(allSongsLis[i], "active");
     }
   } //홈페이지 로딩시 default active 할 요소
 
-  for (let i = 0; i < albums.length; i++) {
-    albums[i].addEventListener("click", function () {
+  for (let i = 0; i < albumImgBtns.length; i++) {
+    albumImgBtns[i].addEventListener("click", function () {
       let addingClass = false;
       const albumName = albumNames[i];
       if (!addingClass) {
         addingClass = true;
-        removeAllClass(albums, "active");
-        addClass(albums[i], "active");
-        removeAllClass(allSongs, "active");
-        for (let j = 0; j < allSongs.length; j++)
-          if (allSongs[j].classList.contains(albumName)) {
-            addClass(allSongs[j], "active");
+        removeAllClass(albumImgBtns, "active");
+        addClass(albumImgBtns[i], "active");
+        removeAllClass(allSongsLis, "active");
+        for (let j = 0; j < allSongsLis.length; j++)
+          if (allSongsLis[j].classList.contains(albumName)) {
+            addClass(allSongsLis[j], "active");
             addingClass = false;
           }
       }
