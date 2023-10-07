@@ -1,10 +1,14 @@
 window.addEventListener("load", () => {
   const html = document.querySelector("html");
+
+  const attractionWrapper = document.querySelector(".attraction-wrapper");
+  const absoluteNav = document.querySelector(".absolute-nav");
   const attracionNavs = document.querySelectorAll(".attraction-nav-ul a");
   const attractions = document.querySelectorAll(".attraction");
 
   let attractionsOffsetTops = [];
   attractionsOffsetTops = getOffsetTop();
+  changeHeightValue(attractionWrapper.offsetHeight, absoluteNav);
 
   for (let i = 0; i < attracionNavs.length; i++) {
     attracionNavs[i].addEventListener("click", function (e) {
@@ -18,6 +22,7 @@ window.addEventListener("load", () => {
     setTimeout(() => {
       attractionsOffsetTops = [];
       attractionsOffsetTops = getOffsetTop();
+      changeHeightValue(attractionWrapper.offsetHeight, absoluteNav);
     }, 300);
   });
 
@@ -32,6 +37,10 @@ window.addEventListener("load", () => {
       }
     })
   );
+
+  function changeHeightValue(value, elment) {
+    elment.style.height = value + "px";
+  }
 
   function getOffsetTop() {
     const attractionsTemp = document.querySelectorAll(".attraction");

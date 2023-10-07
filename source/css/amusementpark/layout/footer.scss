@@ -136,15 +136,15 @@ footer {
 
 @media screen and (max-width: 1024px) {
   footer {
-    & > .wrapper {
-      .list {
+    & .wrapper {
+      .list-ul {
         li {
           box-sizing: border-box;
           padding: 0 5px;
         }
       }
 
-      .sns {
+      .sns-imgs-wrapper {
         img {
           margin: 0 1%;
         }
@@ -157,20 +157,25 @@ footer {
 
 @media screen and (max-width: 550px) {
   footer {
-    & > .wrapper {
+    padding: 20px 0;
+
+    & .wrapper {
       white-space: normal;
 
-      .list {
+      .list-ul {
         margin-bottom: 0;
         width: 100%;
         display: block;
+        box-sizing: border-box;
+        padding: 0 50px 20px 50px;
       }
 
-      .sns {
+      .sns-imgs-wrapper {
         width: 100%;
         display: block;
-        margin: 10px 0;
         text-align: center;
+        margin: 0;
+        padding: 0 0 20px 0;
       }
     }
   }

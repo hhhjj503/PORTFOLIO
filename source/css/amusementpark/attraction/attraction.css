@@ -41,14 +41,17 @@ main .attraction-wrapper {
   max-width: 1600px;
   margin: 0 auto;
 }
-main .attraction-wrapper .attraction-nav-ul {
-  position: fixed;
-  top: 50%;
+main .attraction-wrapper .absolute-nav {
+  position: absolute;
   right: 2%;
+}
+main .attraction-wrapper .absolute-nav .attraction-nav-ul {
+  position: sticky;
+  top: 50%;
   transform: translateY(-50%);
   z-index: 10;
 }
-main .attraction-wrapper .attraction-nav-ul li a {
+main .attraction-wrapper .absolute-nav .attraction-nav-ul li a {
   position: relative;
   display: block;
   width: 70px;
@@ -56,7 +59,7 @@ main .attraction-wrapper .attraction-nav-ul li a {
   border-radius: 50%;
   margin-bottom: 5px;
 }
-main .attraction-wrapper .attraction-nav-ul li a:after {
+main .attraction-wrapper .absolute-nav .attraction-nav-ul li a:after {
   content: "";
   position: absolute;
   top: 0;
@@ -67,16 +70,16 @@ main .attraction-wrapper .attraction-nav-ul li a:after {
   transition: 0.3s ease;
   border-radius: 50%;
 }
-main .attraction-wrapper .attraction-nav-ul li a.active:after, main .attraction-wrapper .attraction-nav-ul li a:hover:after {
+main .attraction-wrapper .absolute-nav .attraction-nav-ul li a.active:after, main .attraction-wrapper .absolute-nav .attraction-nav-ul li a:hover:after {
   background-color: transparent;
 }
 @media screen and (max-width: 600px) {
-  main .attraction-wrapper .attraction-nav-ul li a {
+  main .attraction-wrapper .absolute-nav .attraction-nav-ul li a {
     width: 50px;
     height: 50px;
   }
 }
-main .attraction-wrapper .attraction-nav-ul li a img {
+main .attraction-wrapper .absolute-nav .attraction-nav-ul li a img {
   display: block;
   width: 100%;
   height: 100%;

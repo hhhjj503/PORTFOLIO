@@ -117,28 +117,34 @@ footer .wrapper .gotop > a img {
 
 /*----------------------------------------------------------------------*/
 @media screen and (max-width: 1024px) {
-  footer > .wrapper .list li {
+  footer .wrapper .list-ul li {
     box-sizing: border-box;
     padding: 0 5px;
   }
-  footer > .wrapper .sns img {
+  footer .wrapper .sns-imgs-wrapper img {
     margin: 0 1%;
   }
 }
 /*----------------------------------------------------------------------*/
 @media screen and (max-width: 550px) {
-  footer > .wrapper {
+  footer {
+    padding: 20px 0;
+  }
+  footer .wrapper {
     white-space: normal;
   }
-  footer > .wrapper .list {
+  footer .wrapper .list-ul {
     margin-bottom: 0;
     width: 100%;
     display: block;
+    box-sizing: border-box;
+    padding: 0 50px 20px 50px;
   }
-  footer > .wrapper .sns {
+  footer .wrapper .sns-imgs-wrapper {
     width: 100%;
     display: block;
-    margin: 10px 0;
     text-align: center;
+    margin: 0;
+    padding: 0 0 20px 0;
   }
 }/*# sourceMappingURL=footer.css.map */

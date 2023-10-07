@@ -49,52 +49,56 @@ main {
     max-width: 1600px;
     margin: 0 auto;
 
-    & .attraction-nav-ul {
-      position: fixed;
-      top: 50%;
+    & .absolute-nav {
+      position: absolute;
       right: 2%;
-      transform: translateY(-50%);
-      z-index: 10;
 
-      & li {
-        & a {
-          position: relative;
-          display: block;
-          width: 70px;
-          height: 70px;
-          border-radius: 50%;
-          margin-bottom: 5px;
+      & .attraction-nav-ul {
+        position: sticky;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
 
-          &:after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba($color: #000000, $alpha: 0.7);
-            transition: 0.3s ease;
-            border-radius: 50%;
-          }
-
-          &.active:after,
-          &:hover:after {
-            background-color: transparent;
-          }
-
-          @media screen and (max-width: 600px) {
-            & {
-              width: 50px;
-              height: 50px;
-            }
-          }
-
-          & img {
+        & li {
+          & a {
+            position: relative;
             display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
+            margin-bottom: 5px;
+
+            &:after {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba($color: #000000, $alpha: 0.7);
+              transition: 0.3s ease;
+              border-radius: 50%;
+            }
+
+            &.active:after,
+            &:hover:after {
+              background-color: transparent;
+            }
+
+            @media screen and (max-width: 600px) {
+              & {
+                width: 50px;
+                height: 50px;
+              }
+            }
+
+            & img {
+              display: block;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 50%;
+            }
           }
         }
       }
