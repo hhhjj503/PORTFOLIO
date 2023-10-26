@@ -90,7 +90,7 @@ window.addEventListener("load", () => {
   );
   const allSongsLis = document.querySelectorAll(".albums .songs-title-ul li");
   const albumImgBtns = document.querySelectorAll(
-    ".albums .albums-wrapper .img-btn"
+    ".albums .albums-container .img-btn"
   ); //album > img-btn
   const albumNames = [
     "square-one",
@@ -100,7 +100,7 @@ window.addEventListener("load", () => {
     "the-album",
     "born-pink",
   ];
-  const showAll = document.querySelector(".albums .albums-wrapper .show-all");
+  const showAll = document.querySelector(".albums .albums-container .show-all");
   //
   //section.game
   const unitImages = document.querySelectorAll(".game .units .unit div");
@@ -115,7 +115,7 @@ window.addEventListener("load", () => {
     "url(../../source/images/blackpink/0002650199.jpg)", //리사이미지
     "url(../../source/images/blackpink/0001567912_0019.jpg)", //지수이미지
   ];
-  const result = document.querySelector(".game .game-wrapper .result");
+  const result = document.querySelector(".game .game-container .result");
   //
   //scroll-up
   const scrollUp = document.querySelector(".scroll-up");

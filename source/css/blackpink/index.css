@@ -23,6 +23,10 @@ button.text-indent {
   text-indent: -9999em;
 }
 
+.border-top {
+  border-top: 0.1rem solid white;
+}
+
 /* ================================= skip ================================= */
 
 .skip a {
@@ -168,9 +172,8 @@ section.banner {
   border: none;
 }
 
-.banner .slider-controls div.border-top {
+.banner .slider-controls {
   width: 100%;
-  border-top: 0.1rem solid white;
 }
 
 .banner .slider-controls .index {
@@ -226,15 +229,16 @@ section.banner {
   }
 }
 @media screen and (max-width: 600px) {
+  .border-top {
+    border-top: none;
+  }
+
   section.banner {
     height: 20rem;
   }
 
   .banner .slider-controls {
     bottom: 25%;
-  }
-  .banner .slider-controls div.border-top {
-    border-top: 0;
   }
 
   .banner .slider-controls .index {
@@ -256,7 +260,7 @@ section.intro {
   margin: 0 auto;
 }
 
-.intro .intro-wrapper {
+.intro .intro-container {
   max-width: 146rem;
   width: 100%;
   margin: 0 auto;
@@ -634,7 +638,7 @@ section.members {
   white-space: nowrap;
 }
 
-.members .members-wrapper {
+.members .members-container {
   max-width: 146rem;
   width: 100%;
   padding-bottom: 20rem;
@@ -720,7 +724,7 @@ section.members {
     white-space: initial;
   }
 
-  .members .members-wrapper {
+  .members .members-container {
     width: 95%;
     position: relative;
   }
@@ -746,7 +750,7 @@ section.members {
     font-size: 3rem;
   }
 
-  .members .members-wrapper {
+  .members .members-container {
     padding-bottom: 8rem;
   }
 
@@ -775,7 +779,7 @@ section.news {
   padding-bottom: 10rem;
 }
 
-.news .news-wrapper {
+.news .news-container {
   max-width: 146rem;
   width: 100%;
   margin: 0 auto;
@@ -899,7 +903,7 @@ section.news {
     font-size: 6rem;
   }
 
-  .news .news-wrapper {
+  .news .news-container {
     width: 95%;
     margin: 0 auto;
   }
@@ -957,18 +961,18 @@ section.albums {
   background-size: cover;
 }
 
-.albums .albums-wrapper {
+.albums .albums-container {
   max-width: 146rem;
   margin: 0 auto;
 }
 
-.albums-wrapper .songs-title-ul {
+.albums-container .songs-title-ul {
   width: 100%;
   margin: 8rem auto 0 auto;
   text-align: center;
 }
 
-.albums-wrapper .songs-title-ul .song-title-li {
+.albums-container .songs-title-ul .song-title-li {
   display: inline-block;
   width: fit-content;
   margin-right: 5rem;
@@ -980,23 +984,23 @@ section.albums {
   transition: 0.5s ease;
 }
 
-.albums-wrapper .songs-title-ul .song-title-li {
+.albums-container .songs-title-ul .song-title-li {
   color: #000000;
   font-size: 2.2rem;
   opacity: 0.4;
 }
 
-.albums-wrapper .songs-title-ul .song-title-li.active,
-.albums-wrapper .songs-title-ul .song-title-li:hover {
+.albums-container .songs-title-ul .song-title-li.active,
+.albums-container .songs-title-ul .song-title-li:hover {
   color: #f4a5b7;
   opacity: 1;
 }
 
-.albums-wrapper .break.maxwidth1281 {
+.albums-container .break.maxwidth1281 {
   display: none;
 }
 
-.albums-wrapper .albums-buttons-wrapper {
+.albums-container .albums-buttons-container {
   width: 100%;
   height: auto;
   position: relative;
@@ -1004,7 +1008,7 @@ section.albums {
   text-align: center;
 }
 
-.albums-wrapper .albums-buttons-wrapper .show-all {
+.albums-container .albums-buttons-container .show-all {
   display: block;
   margin: 0 auto;
   padding: 0.5rem 1rem;
@@ -1022,18 +1026,18 @@ section.albums {
   transition: 0.3s ease;
 }
 
-.albums-wrapper .albums-buttons-wrapper .show-all.active,
-.albums-wrapper .albums-buttons-wrapper .show-all:focus {
+.albums-container .albums-buttons-container .show-all.active,
+.albums-container .albums-buttons-container .show-all:focus {
   border-style: inset;
   text-shadow: 0.05rem 0.05rem white, -0.05rem -0.05rem #000000;
   text-shadow: 0.1rem 0.1rem white, -0.1rem -0.1rem #000000;
 }
 
-.albums-wrapper.nonactive {
+.albums-container.nonactive {
   background-image: url(../../images/blackpink/crown.jpg);
 }
 
-.albums-wrapper h2 {
+.albums-container h2 {
   max-width: 100%;
   color: #f4a5b7;
   font-size: 8rem;
@@ -1043,7 +1047,7 @@ section.albums {
   padding: 2rem 2rem 2rem 0;
 }
 
-.albums-wrapper .img-btn {
+.albums-container .img-btn {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -1057,18 +1061,18 @@ section.albums {
   opacity: 0.4;
 }
 
-.albums-wrapper .img-btn img {
+.albums-container .img-btn img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.albums-wrapper .img-btn:hover,
-.albums-wrapper .img-btn.active {
+.albums-container .img-btn:hover,
+.albums-container .img-btn.active {
   opacity: 1;
 }
 
-.albums-wrapper .albums-bg-controls {
+.albums-container .albums-bg-controls {
   position: absolute;
   top: 0;
   left: 0;
@@ -1083,7 +1087,7 @@ section.albums {
   padding-top: 5rem;
 }
 
-.albums-wrapper .albums-bg-controls .stop {
+.albums-container .albums-bg-controls .stop {
   width: 2rem;
   height: 2rem;
   background-image: url(../../images/blackpink/pause-solid.svg);
@@ -1094,7 +1098,7 @@ section.albums {
   color: #fff;
   cursor: pointer;
 }
-.albums-wrapper .albums-bg-controls .play {
+.albums-container .albums-bg-controls .play {
   width: 2rem;
   height: 2rem;
   background-image: url(../../images/blackpink/play-solid.svg);
@@ -1113,82 +1117,82 @@ section.albums {
     background-attachment: initial;
   }
 
-  .albums-wrapper h2 {
+  .albums-container h2 {
     font-size: 6rem;
   }
 
-  .albums-wrapper .albums-bg-controls {
+  .albums-container .albums-bg-controls {
     width: 95%;
   }
 
-  .albums-wrapper .songs-title-wrapper {
+  .albums-container .songs-title-container {
     width: 95%;
   }
-  .albums-wrapper .songs-title-ul .song-title-li {
+  .albums-container .songs-title-ul .song-title-li {
     margin-right: 3rem;
     line-height: 1.618;
   }
 
-  .albums-wrapper .break.maxwidth1281 {
+  .albums-container .break.maxwidth1281 {
     display: block;
   }
 
-  .albums-wrapper .albums-buttons-wrapper {
+  .albums-container .albums-buttons-container {
     margin-top: 6rem;
   }
-  .albums-wrapper .albums-buttons-wrapper .show-all {
+  .albums-container .albums-buttons-container .show-all {
     margin-bottom: 2rem;
   }
 
-  .albums-wrapper .albums-buttons-wrapper .img-btn {
+  .albums-container .albums-buttons-container .img-btn {
     margin-bottom: 2rem;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .albums-wrapper h2 {
+  .albums-container h2 {
     font-size: 3rem;
   }
 
-  .albums-wrapper .albums-bg-controls {
+  .albums-container .albums-bg-controls {
     padding-top: 3.5rem;
   }
 
-  .albums-wrapper .albums-bg-controls .play,
-  .albums-wrapper .albums-bg-controls .stop {
+  .albums-container .albums-bg-controls .play,
+  .albums-container .albums-bg-controls .stop {
     width: 1.6rem;
     height: 1.6rem;
   }
 
-  .albums-wrapper .songs-title-wrapper {
+  .albums-container .songs-title-container {
     margin-top: 2rem;
   }
 
-  .albums-wrapper .songs-title-ul .song-title-li {
+  .albums-container .songs-title-ul .song-title-li {
     font-size: 1.6rem;
     margin-right: 1rem;
   }
 
-  .albums-wrapper .albums-buttons-wrapper {
+  .albums-container .albums-buttons-container {
     margin-top: 4rem;
   }
 
-  .albums-wrapper .albums-buttons-wrapper .show-all {
+  .albums-container .albums-buttons-container .show-all {
     font-size: 1.2rem;
   }
 
-  .albums-wrapper .img-btn {
+  .albums-container .img-btn {
     width: 12rem;
     height: 12rem;
   }
 
-  .albums-wrapper .img-btn img {
+  .albums-container .img-btn img {
     object-fit: contain;
   }
 }
 
 @media screen and (max-width: 280px) {
-  .albums-wrapper .break.maxwidth1281 {
+  .albums-container .break.maxwidth1281 {
     display: none;
   }
 }
@@ -1200,7 +1204,7 @@ section.game {
   background-color: #000000;
 }
 
-.game .game-wrapper {
+.game .game-container {
   position: relative;
   max-width: 146rem;
   width: 100%;
@@ -1208,7 +1212,7 @@ section.game {
   height: 80rem;
 }
 
-.game .game-wrapper h2 {
+.game .game-container h2 {
   width: 100%;
   font-size: 8rem;
   font-weight: bold;
@@ -1220,12 +1224,12 @@ section.game {
 }
 
 @media screen and (max-width: 600px) {
-  .game .game-wrapper h2 {
+  .game .game-container h2 {
     font-size: 4rem;
   }
 }
 
-.game .game-wrapper .units {
+.game .game-container .units {
   position: relative;
   width: 100%;
   height: 80%;
@@ -1234,7 +1238,7 @@ section.game {
   overflow: hidden;
 }
 
-.game .game-wrapper .units:after {
+.game .game-container .units:after {
   content: "";
   position: absolute;
   left: 0;
@@ -1244,14 +1248,14 @@ section.game {
   background-color: #f4a5b7;
 }
 
-.game .game-wrapper .units .unit {
+.game .game-container .units .unit {
   display: inline-block;
   width: 10rem;
   height: 100%;
   margin: 0 1rem;
 }
 
-.game .game-wrapper .unit div {
+.game .game-container .unit div {
   position: relative;
   width: 9rem;
   height: 9rem;
@@ -1263,20 +1267,20 @@ section.game {
   background-repeat: no-repeat;
 }
 
-.game .game-wrapper .unit .jennie {
+.game .game-container .unit .jennie {
   background-image: url(../../images/blackpink/0000926654.jpg);
 }
-.game .game-wrapper .unit .rose {
+.game .game-container .unit .rose {
   background-image: url(../../images/blackpink/roseyg.jpg);
 }
-.game .game-wrapper .unit .lisa {
+.game .game-container .unit .lisa {
   background-image: url(../../images/blackpink/0002650199.jpg);
 }
-.game .game-wrapper .unit .jisoo {
+.game .game-container .unit .jisoo {
   background-image: url(../../images/blackpink/0001567912_0019.jpg);
 }
 
-.game .game-wrapper button {
+.game .game-container button {
   position: absolute;
   left: 50%;
   bottom: 10%;
@@ -1295,29 +1299,29 @@ section.game {
   cursor: pointer;
 }
 
-.game .game-wrapper button:focus {
+.game .game-container button:focus {
   border-style: inset;
   text-shadow: 0.05rem 0.05rem white, -0.05rem -0.05rem #000000;
   text-shadow: 0.1rem 0.1rem white, -0.1rem -0.1rem #000000;
 }
 
-.game .game-wrapper .game-start {
+.game .game-container .game-start {
   display: none;
   transition: 0.5s ease-in-out;
 }
-.game .game-wrapper .game-reset {
+.game .game-container .game-reset {
   display: none;
   transition: 0.3s ease-in-out;
 }
 
-.game .game-wrapper .game-start.active {
+.game .game-container .game-start.active {
   display: block;
 }
-.game .game-wrapper .game-reset.active {
+.game .game-container .game-reset.active {
   display: block;
 }
 
-.game .game-wrapper .result {
+.game .game-container .result {
   position: absolute;
   top: 50%;
   left: 40%;
@@ -1332,12 +1336,12 @@ section.game {
   transition: 0.3s ease;
 }
 
-.game .game-wrapper .result.active {
+.game .game-container .result.active {
   left: 50%;
   opacity: 1;
 }
 
-.game .game-wrapper .result span {
+.game .game-container .result span {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1348,48 +1352,48 @@ section.game {
 }
 /* game 반응형 */
 @media screen and (max-width: 1281px) {
-  .game .game-wrapper h2 {
+  .game .game-container h2 {
     width: 95%;
     margin: 0 auto;
     font-size: 6rem;
   }
 
-  .game .game-wrapper .units {
+  .game .game-container .units {
     width: 95%;
     margin: 0 auto;
   }
-  .game .game-wrapper button {
+  .game .game-container button {
     font-size: 1.4rem;
   }
 
-  .game .game-wrapper .result {
+  .game .game-container .result {
     width: 40%;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .game .game-wrapper {
+  .game .game-container {
     height: 60rem;
   }
 
-  .game .game-wrapper h2 {
+  .game .game-container h2 {
     font-size: 3rem;
   }
 
-  .game .game-wrapper .units .unit {
+  .game .game-container .units .unit {
     width: 6rem;
   }
 
-  .game .game-wrapper .unit div {
+  .game .game-container .unit div {
     width: 7rem;
     height: 7rem;
     background-position: top;
   }
 
-  .game .game-wrapper .units:after {
+  .game .game-container .units:after {
     height: 0.3rem;
   }
-  .game .game-wrapper .result {
+  .game .game-container .result {
     width: 60%;
   }
 }
