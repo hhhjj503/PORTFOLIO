@@ -29,8 +29,8 @@ button.text-indent {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #f4a5b7;
-    color: black;
+    background-color: #f4a5b7 !important;
+    color: black !important;
   }
 }
 
