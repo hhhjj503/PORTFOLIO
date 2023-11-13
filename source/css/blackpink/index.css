@@ -4,10 +4,6 @@ html {
   font-size: 62.5%; /*  setting rem (1rem = 10px)  */
 }
 
-:root {
-  color-scheme: light only;
-}
-
 body {
   font-family: "Nanum Gothic", "돋움", "Dotum", "Apple Gothic", sans-serif;
   font-family: "Open Sans", "Pretendard", sans-serif;
