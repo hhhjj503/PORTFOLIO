@@ -27,6 +27,13 @@ button.text-indent {
   border-top: 0.1rem solid white;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #f4a5b7;
+    color: black;
+  }
+}
+
 /* ================================= skip ================================= */
 
 .skip a {
