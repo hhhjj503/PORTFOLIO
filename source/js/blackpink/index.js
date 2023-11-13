@@ -1,7 +1,7 @@
 window.addEventListener("load", () => {
   //
   //h1
-  const deco = document.querySelector("h1 .deco");
+  const h1Span = document.querySelector("h1 span");
   //
   //section.banner
   const bannerIndexs = document.querySelectorAll(
@@ -340,7 +340,7 @@ window.addEventListener("load", () => {
 
   //h1
   setTimeout(() => {
-    deco.classList.add("rotate");
+    h1Span.classList.add("rotate");
   }, 500);
 
   function removeAllClassThenAddClass(elements, element, className) {

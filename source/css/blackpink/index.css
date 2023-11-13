@@ -4,6 +4,10 @@ html {
   font-size: 62.5%; /*  setting rem (1rem = 10px)  */
 }
 
+:root {
+  color-scheme: light only;
+}
+
 body {
   font-family: "Nanum Gothic", "돋움", "Dotum", "Apple Gothic", sans-serif;
   font-family: "Open Sans", "Pretendard", sans-serif;
@@ -49,25 +53,25 @@ button.text-indent {
   top: 0;
 }
 
-/* ================================= h1 ================================= */
-.wrapper-h1 {
+/* ================================= .header ================================= */
+.header {
   background-color: #000000;
   width: 100%;
   padding: 1rem 0;
   position: sticky;
-  border-bottom: 0.05rem solid #f4a5b7;
   top: 0;
   left: 0;
+  border-bottom: 0.05rem solid #f4a5b7;
   z-index: 10;
 }
 
-h1 {
+.header h1 {
   max-width: 146rem;
   width: 100%;
   margin: 0 auto;
 }
 
-h1 a {
+.header h1 a {
   box-sizing: border-box;
   text-decoration: none;
   font-size: 5rem;
@@ -77,7 +81,7 @@ h1 a {
   color: #f4a5b7;
 }
 
-h1 .deco.rotate {
+.header h1 span.rotate {
   transition: 0.5s ease-in-out;
   font-size: 5.2rem;
   display: inline-block;
@@ -85,38 +89,38 @@ h1 .deco.rotate {
 }
 
 @media screen and (max-width: 1281px) {
-  h1 {
+  .header h1 {
     width: 95%;
     margin: 0 auto;
   }
 }
 
 @media screen and (max-width: 600px) {
-  h1 a {
+  .header h1 a {
     font-size: 3rem;
   }
 
-  h1 .deco.rotate {
+  .header h1 span.rotate {
     font-size: 3.2rem;
   }
 }
 
 /*================================= banner =================================*/
 
-section.banner {
+.banner {
   position: relative;
   width: 100%;
   height: 85vh;
 }
 
-.banner .banner-viewer {
+.banner .slider-viewer {
   width: 100%;
   height: 100%;
   margin: 0 auto;
   overflow: hidden;
 }
 
-.banner .slider-ul {
+.slider-viewer .slider-ul {
   position: absolute;
   top: 0;
   left: 0;
@@ -125,7 +129,7 @@ section.banner {
   transition: 0.5s ease-in-out;
 }
 
-.banner .slider-li {
+.slider-ul .slider-li {
   position: absolute;
   top: 0;
   left: 0;
@@ -139,26 +143,26 @@ section.banner {
   transition: 0.5s ease;
 }
 
-.banner .slider-li img {
+.slider-ul .slider-li img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.banner .slider-li:nth-child(1) {
+.slider-ul .slider-li:nth-child(1) {
   left: 0;
 }
 
-.banner .slider-li:nth-child(2) {
+.slider-ul .slider-li:nth-child(2) {
   left: 100%;
 }
 
-.banner .out-text {
+.slider-viewer .out-text {
   position: absolute;
   left: -99999em;
 }
 
-.banner .slider-controls {
+.slider-viewer .slider-controls {
   max-width: 146rem;
   width: 100%;
   position: absolute;
@@ -167,16 +171,16 @@ section.banner {
   transform: translateX(-50%);
 }
 
-.banner .slider-controls .control {
+.slider-viewer .slider-controls .control {
   cursor: pointer;
   border: none;
 }
 
-.banner .slider-controls {
+.slider-viewer .slider-controls {
   width: 100%;
 }
 
-.banner .slider-controls .index {
+.slider-viewer .slider-controls .index {
   width: 1.3rem;
   height: 1.3rem;
   border-radius: 50%;
@@ -187,15 +191,15 @@ section.banner {
   transition: 0.3s ease;
 }
 
-.banner .slider-controls .index:nth-child(2) {
+.slider-viewer .slider-controls .index:nth-child(2) {
   left: 3rem;
 }
 
-.banner .slider-controls .index.active {
+.slider-viewer .slider-controls .index.active {
   background-color: #f4a5b7;
 }
 
-.banner .slider-controls .stop {
+.slider-viewer .slider-controls .stop {
   width: 2rem;
   height: 2rem;
   position: absolute;
@@ -205,7 +209,7 @@ section.banner {
   background-repeat: no-repeat;
   background-color: transparent;
 }
-.banner .slider-controls .play {
+.slider-viewer .slider-controls .play {
   width: 2rem;
   height: 2rem;
   position: absolute;
@@ -218,12 +222,12 @@ section.banner {
 
 /* banner 반응형 */
 @media screen and (max-width: 1281px) {
-  section.banner {
+  .banner {
     overflow: hidden;
     height: 55vh;
   }
 
-  .banner .slider-controls {
+  .slider-viewer .slider-controls {
     width: 90%;
     bottom: 15%;
   }
@@ -233,20 +237,20 @@ section.banner {
     border-top: none;
   }
 
-  section.banner {
+  .banner {
     height: 20rem;
   }
 
-  .banner .slider-controls {
+  .slider-viewer .slider-controls {
     bottom: 25%;
   }
 
-  .banner .slider-controls .index {
+  .slider-viewer .slider-controls .index {
     width: 1rem;
     height: 1rem;
   }
-  .banner .slider-controls .play,
-  .banner .slider-controls .stop {
+  .slider-viewer .slider-controls .play,
+  .slider-viewer .slider-controls .stop {
     width: 1.5rem;
     height: 1.5rem;
   }
@@ -254,19 +258,17 @@ section.banner {
 
 /*================================= intro =================================*/
 
-section.intro {
+.intro {
   position: relative;
-  padding: 20rem 0;
-  margin: 0 auto;
 }
 
-.intro .intro-container {
+.intro-container {
   max-width: 146rem;
+  margin: 20rem auto;
   width: 100%;
-  margin: 0 auto;
 }
 
-.intro .thumbnail {
+.intro-container .thumbnail {
   display: inline-block;
   height: 70rem;
   width: 19%;
@@ -274,7 +276,7 @@ section.intro {
   position: relative;
 }
 
-.intro .thumbnail .thumbnail-viewer {
+.intro-container .thumbnail .thumbnail-viewer {
   width: 100%;
   height: 20%;
   box-sizing: border-box;
@@ -288,12 +290,12 @@ section.intro {
   pointer-events: none;
 }
 
-.intro .thumbnail .thumbnail-img-ul {
+.intro-container .thumbnail .thumbnail-img-ul {
   width: 100%;
   height: 100%;
 }
 
-.intro .thumbnail .thumbnail-img-li {
+.intro-container .thumbnail .thumbnail-img-li {
   width: 100%;
   height: 20%;
   background-color: #000000;
@@ -304,7 +306,7 @@ section.intro {
   cursor: pointer;
 }
 
-.intro .thumbnail .thumbnail-img-li button {
+.intro-container .thumbnail .thumbnail-img-li button {
   display: block;
   width: 100%;
   height: 100%;
@@ -314,7 +316,7 @@ section.intro {
   outline-width: 0.5rem;
 }
 
-.intro .thumbnail .thumbnail-img-li img {
+.intro-container .thumbnail .thumbnail-img-li img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -322,11 +324,11 @@ section.intro {
   transition: 0.5s ease;
 }
 
-.intro .thumbnail .thumbnail-img-li img.top {
+.intro-container .thumbnail .thumbnail-img-li img.top {
   object-position: top;
 }
 
-.intro .thumbnail .thumbnail-img-li:after {
+.intro-container .thumbnail .thumbnail-img-li:after {
   content: "";
   position: absolute;
   top: 0;
@@ -337,14 +339,14 @@ section.intro {
   opacity: 0.7;
 }
 
-.intro .thumbnail .thumbnail-img-li:hover:after,
-.intro .thumbnail .thumbnail-img-li.active:after {
+.intro-container .thumbnail .thumbnail-img-li:hover:after,
+.intro-container .thumbnail .thumbnail-img-li.active:after {
   transition: 0.5s ease;
   background-color: transparent;
 }
 
 /* 모바일 intro 썸네일 표시 */
-.intro .thumbnail-mobile {
+.intro-container .thumbnail-mobile {
   position: relative;
   display: none;
   width: 100%;
@@ -353,13 +355,13 @@ section.intro {
   font-size: 0;
 }
 @media screen and (max-width: 1281px) {
-  .intro .thumbnail-mobile {
+  .intro-container .thumbnail-mobile {
     width: 95%;
     margin: 0 auto;
   }
 }
 
-.intro .thumbnail-mobile .thumbnail-viewer-mobile {
+.intro-container .thumbnail-mobile .thumbnail-viewer-mobile {
   position: absolute;
   top: 0;
   left: 0;
@@ -376,12 +378,12 @@ section.intro {
   pointer-events: none;
 }
 
-.intro .thumbnail-mobile ul {
+.intro-container .thumbnail-mobile ul {
   width: 100%;
   height: 100%;
 }
 
-.intro .thumbnail-mobile li {
+.intro-container .thumbnail-mobile li {
   position: relative;
   display: inline-block;
   width: 20%;
@@ -389,7 +391,7 @@ section.intro {
   cursor: pointer;
 }
 
-.intro .thumbnail-mobile li button {
+.intro-container .thumbnail-mobile li button {
   display: block;
   width: 100%;
   height: 100%;
@@ -399,20 +401,20 @@ section.intro {
   outline-width: 0.5rem;
 }
 
-.intro .thumbnail-mobile li img {
+.intro-container .thumbnail-mobile li img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: 0.5s ease;
 }
 
-.intro .thumbnail-mobile li:hover:after,
-.intro .thumbnail-mobile li.active:after {
+.intro-container .thumbnail-mobile li:hover:after,
+.intro-container .thumbnail-mobile li.active:after {
   transition: 0.5s ease;
   background-color: transparent;
 }
 
-.intro .thumbnail-mobile li:after {
+.intro-container .thumbnail-mobile li:after {
   content: "";
   position: absolute;
   top: 0;
@@ -423,7 +425,7 @@ section.intro {
   opacity: 0.7;
 }
 
-.intro .original-viewer {
+.intro-container .original-viewer {
   position: relative;
   display: inline-block;
   height: 70rem;
@@ -431,7 +433,7 @@ section.intro {
   overflow: hidden;
 }
 
-.intro .original-viewer .size-controls {
+.intro-container .original-viewer .size-controls {
   position: absolute;
   left: 50%;
   bottom: 5%;
@@ -440,7 +442,7 @@ section.intro {
   transition: 0.3s ease;
 }
 
-.intro .original-viewer .size-controls button {
+.intro-container .original-viewer .size-controls button {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
@@ -450,13 +452,13 @@ section.intro {
   cursor: pointer;
 }
 
-.intro .original-viewer .size-controls img {
+.intro-container .original-viewer .size-controls img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-.intro .original-viewer .original-img-ul {
+.intro-container .original-viewer .original-img-ul {
   position: absolute;
   top: 0;
   left: 0;
@@ -466,55 +468,55 @@ section.intro {
   transition: 0.4s ease;
 }
 
-.intro .original-viewer .original-img-ul .original-img-li {
+.intro-container .original-viewer .original-img-ul .original-img-li {
   position: absolute;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: #000000;
 }
-.intro .original-viewer .original-img-ul li:nth-child(1) {
+.intro-container .original-viewer .original-img-ul li:nth-child(1) {
   top: 0;
 }
-.intro .original-viewer .original-img-ul li:nth-child(2) {
+.intro-container .original-viewer .original-img-ul li:nth-child(2) {
   top: 100%;
 }
-.intro .original-viewer .original-img-ul li:nth-child(3) {
+.intro-container .original-viewer .original-img-ul li:nth-child(3) {
   top: 200%;
 }
-.intro .original-viewer .original-img-ul li:nth-child(4) {
+.intro-container .original-viewer .original-img-ul li:nth-child(4) {
   top: 300%;
 }
-.intro .original-viewer .original-img-ul li:nth-child(5) {
+.intro-container .original-viewer .original-img-ul li:nth-child(5) {
   top: 400%;
 }
 
-.intro .original-img-ul img {
+.intro-container .original-img-ul img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center center;
 }
 
-.intro .original-img-ul li.contain img {
+.intro-container .original-img-ul li.contain img {
   object-fit: contain;
 }
 
-.intro .original-img-ul .source {
+.intro-container .original-img-ul .source {
   position: absolute;
   right: 0;
   bottom: 0;
   color: #fff;
 }
 
-.intro .black-line {
+.intro-container .desc .black-line {
   width: 100%;
   height: 0.1rem;
   background-color: #000000;
   margin: 2rem 0;
 }
 
-.intro h2 {
+.intro-container .desc {
   font-size: 3rem;
   font-weight: bolder;
   text-align: center;
@@ -522,17 +524,17 @@ section.intro {
   margin: 0 auto;
 }
 
-.intro h2 .rotate {
+.intro-container .desc .rotate {
   display: inline-block;
   transform: rotate(180deg);
 }
 
-.intro .translate {
+.intro-container .desc .translate {
   width: 100%;
   text-align: center;
 }
 
-.intro .translate button {
+.intro-container .desc .translate button {
   display: inline-block;
   margin: 2rem 0;
   background-color: #000000;
@@ -543,7 +545,7 @@ section.intro {
   cursor: pointer;
 }
 
-.intro p {
+.intro-container .desc p {
   display: none;
   width: 60%;
   margin: 0 auto;
@@ -555,94 +557,91 @@ section.intro {
   word-break: break-all;
 }
 
-.intro p.active {
+.intro-container .desc p.active {
   display: block;
 }
 
 /* intro 반응형 */
 @media screen and (max-width: 1281px) {
-  section.intro {
-    padding: 16rem 0;
+  .intro-container {
+    margin: 16rem 0;
   }
 
-  .intro .thumbnail {
+  .intro-container .thumbnail {
     display: none;
   }
-  .intro .thumbnail-mobile {
+  .intro-container .thumbnail-mobile {
     display: block;
     height: 20rem;
   }
 
-  .intro .original-viewer {
+  .intro-container .original-viewer {
     display: block;
     width: 95%;
     height: 50rem;
     margin: 0 auto;
   }
 
-  .intro .desc {
+  .intro-container .desc {
     width: 95%;
-    margin: 0 auto;
-  }
-
-  .intro p {
-    width: 80%;
-    font-size: 1.8rem;
-  }
-  .intro h2 {
     font-size: 2.5rem;
     margin: 1.8rem auto;
     margin-bottom: 0;
   }
+
+  .intro-container .desc p {
+    width: 90%;
+    font-size: 1.7rem;
+  }
 }
 
+/* intro 반응형 600px */
 @media screen and (max-width: 600px) {
-  section.intro {
-    padding: 8rem 0;
+  .intro-container {
+    margin: 8rem 0;
   }
 
-  .intro .original-viewer {
+  .intro-container .original-viewer {
     height: 30rem;
   }
 
-  .intro .original-viewer .size-controls button {
+  .intro-container .original-viewer .size-controls button {
     width: 2rem;
     height: 2rem;
   }
 
-  .intro .thumbnail-mobile {
+  .intro-container .thumbnail-mobile {
     display: block;
     height: 10rem;
   }
 
-  .intro h2 {
+  .intro-container .desc {
     font-size: 2.2rem;
   }
 
-  .intro .translate button {
+  .intro-container .desc .translate button {
     font-size: 1.6rem;
     padding: 0.5rem 0.8rem;
   }
 
-  .intro p {
+  .intro-container .desc p {
     width: 95%;
     font-size: 1.3rem;
   }
 }
 
 /*================================= members =================================*/
-section.members {
+.members {
   position: relative;
   font-size: 0;
   letter-spacing: 0;
   white-space: nowrap;
 }
 
-.members .members-container {
+.members-container {
   max-width: 146rem;
   width: 100%;
-  padding-bottom: 20rem;
-  margin: 0 auto;
+  margin: 20rem auto;
 }
 
 .members h2 {
@@ -718,13 +717,13 @@ section.members {
   height: 31.5rem;
   object-fit: cover;
 }
-/* members section 반응형 */
+/* members div 반응형 */
 @media screen and (max-width: 1281px) {
-  section.members {
+  .members {
     white-space: initial;
   }
 
-  .members .members-container {
+  .members-container {
     width: 95%;
     position: relative;
   }
@@ -750,8 +749,8 @@ section.members {
     font-size: 3rem;
   }
 
-  .members .members-container {
-    padding-bottom: 8rem;
+  .members-container {
+    margin: 8rem auto;
   }
 
   .members .member h4 {
@@ -767,16 +766,19 @@ section.members {
   }
 
   .members .member a img {
-    height: 100%;
+    margin: 0 auto;
+    height: 90%;
+    width: 80%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
 /*================================= news =================================*/
-section.news {
+.news {
   position: relative;
   background-color: black;
-  margin: 0 0 0 0;
-  padding-bottom: 10rem;
 }
 
 .news .news-container {
@@ -893,9 +895,9 @@ section.news {
 .news .news-ul li:nth-child(1) {
   margin-left: 0;
 }
-/* news section 반응형 */
+/* news div 반응형 */
 @media screen and (max-width: 1281px) {
-  section.news {
+  .news {
     overflow: hidden;
   }
 
@@ -941,7 +943,7 @@ section.news {
 }
 
 /*================================= albums =================================*/
-section.albums {
+.albums {
   position: relative;
   width: 100%;
   min-height: 80rem;
@@ -1108,9 +1110,9 @@ section.albums {
   color: #fff;
   cursor: pointer;
 }
-/* album section 반응형 */
+/* album div 반응형 */
 @media screen and (max-width: 1281px) {
-  section.albums {
+  .albums {
     background-attachment: initial;
   }
   .albums.active {
@@ -1198,7 +1200,7 @@ section.albums {
 }
 
 /*================================= game =================================*/
-section.game {
+.game {
   background-image: url(../../images/blackpink/grass.JPG);
   margin-bottom: 0;
   background-color: #000000;
@@ -1436,7 +1438,7 @@ section.game {
 }
 
 @media screen and (max-width: 1281px) {
-  section h2 {
+  div h2 {
     width: 95%;
     margin: 0 auto;
   }
