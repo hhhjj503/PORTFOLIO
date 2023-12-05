@@ -27,6 +27,19 @@ button.text-indent {
   border-top: 0.1rem solid white;
 }
 
+.title-h2 {
+  color: #000000;
+  font-size: 8rem;
+  font-family: "Exo", "NanumSquare", "Margun Gothic", sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+  letter-spacing: 0.1rem;
+}
+
+.title-h2--pink {
+  color: #f4a5b7;
+}
+
 :root {
   color-scheme: light only;
 }
@@ -40,47 +53,47 @@ button.text-indent {
 
 /* ================================= skip ================================= */
 
-.skip a {
+.main-link {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000000;
+  background-color: #f4a5b7;
+  border-bottom: 0.1rem solid #fff;
+  text-align: center;
+}
+
+.skip__link {
   position: absolute;
   top: -100%;
   left: 0;
   width: 100%;
   padding: 1rem 0;
-  background-color: #f4a5b7;
-  text-align: center;
-  transition: 0.1s ease;
-  font-size: 2rem;
-  font-weight: bold;
-  border-bottom: 0.1rem solid #fff;
-  color: #000000;
   z-index: 99;
 }
 
-.skip a:focus {
+.skip__link:focus {
+  transition: 0.1s ease;
   top: 0;
 }
 
 /* ================================= .header ================================= */
 .header {
   background-color: #000000;
-  width: 100%;
-  padding: 1rem 0;
+  border-bottom: 0.05rem solid #f4a5b7;
+}
+
+.header__inner {
   position: sticky;
+  padding: 1rem 0;
+  max-width: 146rem;
+  width: 100%;
   top: 0;
   left: 0;
-  border-bottom: 0.05rem solid #f4a5b7;
+  margin: 0 auto;
   z-index: 10;
 }
 
-.header h1 {
-  max-width: 146rem;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.header h1 a {
-  box-sizing: border-box;
-  text-decoration: none;
+.header__link {
   font-size: 5rem;
   font-weight: bolder;
   text-shadow: 0.05rem 0.05rem #f4a5b7, -0.05rem -0.05rem #f4a5b7;
@@ -88,46 +101,47 @@ button.text-indent {
   color: #f4a5b7;
 }
 
-.header h1 span.rotate {
-  transition: 0.5s ease-in-out;
-  font-size: 5.2rem;
+.header__char--rotate {
   display: inline-block;
+  font-size: 5.2rem;
+  transition: 0.5s ease-in-out;
   transform: rotate(180deg);
 }
 
 @media screen and (max-width: 1281px) {
-  .header h1 {
+  .header__inner {
     width: 95%;
-    margin: 0 auto;
+  }
+
+  .header__link {
+    font-size: 4rem;
+  }
+
+  .header__char--rotate {
+    font-size: 4.2rem;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .header h1 a {
+  .header__link {
     font-size: 3rem;
   }
 
-  .header h1 span.rotate {
+  .header__char--rotate {
     font-size: 3.2rem;
   }
 }
 
 /*================================= banner =================================*/
 
-.banner {
+.banner__inner {
   position: relative;
   width: 100%;
   height: 85vh;
-}
-
-.banner .slider-viewer {
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
   overflow: hidden;
 }
 
-.slider-viewer .slider-ul {
+.slider__ul {
   position: absolute;
   top: 0;
   left: 0;
@@ -136,40 +150,36 @@ button.text-indent {
   transition: 0.5s ease-in-out;
 }
 
-.slider-ul .slider-li {
+.slider__li {
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   width: 100%;
   height: 100%;
   transition: 0.5s ease;
 }
 
-.slider-ul .slider-li img {
+.slider__li:nth-child(1) {
+  left: 0;
+}
+
+.slider__li:nth-child(2) {
+  left: 100%;
+}
+
+.slider__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.slider-ul .slider-li:nth-child(1) {
-  left: 0;
-}
-
-.slider-ul .slider-li:nth-child(2) {
-  left: 100%;
-}
-
-.slider-viewer .out-text {
+.out-text {
   position: absolute;
   left: -99999em;
 }
 
-.slider-viewer .slider-controls {
+.slider__controls {
   max-width: 146rem;
   width: 100%;
   position: absolute;
@@ -178,18 +188,14 @@ button.text-indent {
   transform: translateX(-50%);
 }
 
-.slider-viewer .slider-controls .control {
+.slider__btn {
   cursor: pointer;
   border: none;
 }
 
-.slider-viewer .slider-controls {
-  width: 100%;
-}
-
-.slider-viewer .slider-controls .index {
-  width: 1.3rem;
-  height: 1.3rem;
+.slider__btn--index {
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
   background-color: white;
   position: absolute;
@@ -198,17 +204,17 @@ button.text-indent {
   transition: 0.3s ease;
 }
 
-.slider-viewer .slider-controls .index:nth-child(2) {
+.slider__btn--index:nth-child(2) {
   left: 3rem;
 }
 
-.slider-viewer .slider-controls .index.active {
+.slider__btn--index.active {
   background-color: #f4a5b7;
 }
 
-.slider-viewer .slider-controls .stop {
-  width: 2rem;
-  height: 2rem;
+.slider__btn--stop {
+  width: 20px;
+  height: 20px;
   position: absolute;
   top: 2rem;
   right: 0;
@@ -216,9 +222,10 @@ button.text-indent {
   background-repeat: no-repeat;
   background-color: transparent;
 }
-.slider-viewer .slider-controls .play {
-  width: 2rem;
-  height: 2rem;
+
+.slider__btn--play {
+  width: 20px;
+  height: 20px;
   position: absolute;
   top: 2rem;
   right: 4rem;
@@ -229,12 +236,11 @@ button.text-indent {
 
 /* banner 반응형 */
 @media screen and (max-width: 1281px) {
-  .banner {
-    overflow: hidden;
+  .banner__inner {
     height: 55vh;
   }
 
-  .slider-viewer .slider-controls {
+  .slider__controls {
     width: 90%;
     bottom: 15%;
   }
@@ -244,65 +250,64 @@ button.text-indent {
     border-top: none;
   }
 
-  .banner {
+  .banner__inner {
     height: 20rem;
   }
 
-  .slider-viewer .slider-controls {
+  .slider__controls {
     bottom: 25%;
   }
 
-  .slider-viewer .slider-controls .index {
-    width: 1rem;
-    height: 1rem;
+  .slider__btn--index {
+    width: 10px;
+    height: 10px;
   }
-  .slider-viewer .slider-controls .play,
-  .slider-viewer .slider-controls .stop {
-    width: 1.5rem;
-    height: 1.5rem;
+  .slider__btn--play,
+  .slider__btn--stop {
+    width: 15px;
+    height: 15px;
   }
 }
 
 /*================================= intro =================================*/
 
-.intro {
+.intro__inner {
   position: relative;
-}
-
-.intro-container {
   max-width: 146rem;
   margin: 20rem auto;
   width: 100%;
 }
 
-.intro-container .thumbnail {
-  display: inline-block;
+.intro__thumbnail {
   height: 70rem;
-  width: 19%;
-  vertical-align: top;
-  position: relative;
+  width: 19.2%;
 }
 
-.intro-container .thumbnail .thumbnail-viewer {
+.btn-slider__inner {
+  position: relative;
+  display: inline-block;
+}
+
+.btn-slider__btn-viewer {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 20%;
   box-sizing: border-box;
   border: 0.3rem solid #000000;
   background-color: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
   transition: 0.5s ease;
   z-index: 2;
   pointer-events: none;
 }
 
-.intro-container .thumbnail .thumbnail-img-ul {
+.btn-slider__btn-ul {
   width: 100%;
   height: 100%;
 }
 
-.intro-container .thumbnail .thumbnail-img-li {
+.btn-slider__btn-li {
   width: 100%;
   height: 20%;
   background-color: #000000;
@@ -313,7 +318,7 @@ button.text-indent {
   cursor: pointer;
 }
 
-.intro-container .thumbnail .thumbnail-img-li button {
+.btn-slider__btn {
   display: block;
   width: 100%;
   height: 100%;
@@ -323,19 +328,17 @@ button.text-indent {
   outline-width: 0.5rem;
 }
 
-.intro-container .thumbnail .thumbnail-img-li img {
+.btn-slider__btn-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
-  transition: 0.5s ease;
 }
 
-.intro-container .thumbnail .thumbnail-img-li img.top {
+.object-position-top {
   object-position: top;
 }
 
-.intro-container .thumbnail .thumbnail-img-li:after {
+.btn-slider__btn-li:after {
   content: "";
   position: absolute;
   top: 0;
@@ -346,93 +349,13 @@ button.text-indent {
   opacity: 0.7;
 }
 
-.intro-container .thumbnail .thumbnail-img-li:hover:after,
-.intro-container .thumbnail .thumbnail-img-li.active:after {
+.btn-slider__btn-li:hover:after,
+.btn-slider__btn-li.active:after {
   transition: 0.5s ease;
   background-color: transparent;
 }
 
-/* 모바일 intro 썸네일 표시 */
-.intro-container .thumbnail-mobile {
-  position: relative;
-  display: none;
-  width: 100%;
-  height: 20rem;
-  white-space: nowrap;
-  font-size: 0;
-}
-@media screen and (max-width: 1281px) {
-  .intro-container .thumbnail-mobile {
-    width: 95%;
-    margin: 0 auto;
-  }
-}
-
-.intro-container .thumbnail-mobile .thumbnail-viewer-mobile {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 20%;
-  height: 100%;
-  box-sizing: border-box;
-  border: 0.3rem solid #000000;
-  background-color: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: 0.5s ease;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.intro-container .thumbnail-mobile ul {
-  width: 100%;
-  height: 100%;
-}
-
-.intro-container .thumbnail-mobile li {
-  position: relative;
-  display: inline-block;
-  width: 20%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.intro-container .thumbnail-mobile li button {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border: none;
-  background-color: inherit;
-  padding: 0;
-  outline-width: 0.5rem;
-}
-
-.intro-container .thumbnail-mobile li img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 0.5s ease;
-}
-
-.intro-container .thumbnail-mobile li:hover:after,
-.intro-container .thumbnail-mobile li.active:after {
-  transition: 0.5s ease;
-  background-color: transparent;
-}
-
-.intro-container .thumbnail-mobile li:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000000;
-  opacity: 0.7;
-}
-
-.intro-container .original-viewer {
+.intro__slider {
   position: relative;
   display: inline-block;
   height: 70rem;
@@ -440,7 +363,7 @@ button.text-indent {
   overflow: hidden;
 }
 
-.intro-container .original-viewer .size-controls {
+.btn-slider__img-size-controls {
   position: absolute;
   left: 50%;
   bottom: 5%;
@@ -449,7 +372,7 @@ button.text-indent {
   transition: 0.3s ease;
 }
 
-.intro-container .original-viewer .size-controls button {
+.btn-slider__size-btn {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
@@ -459,91 +382,169 @@ button.text-indent {
   cursor: pointer;
 }
 
-.intro-container .original-viewer .size-controls img {
+.btn-slider__size-btn > img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-.intro-container .original-viewer .original-img-ul {
+.btn-slider__slider-ul {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: inherit;
+  height: 100%;
   background-color: #000000;
   transition: 0.4s ease;
 }
 
-.intro-container .original-viewer .original-img-ul .original-img-li {
+.btn-slider__slider-li {
   position: absolute;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: #000000;
 }
-.intro-container .original-viewer .original-img-ul li:nth-child(1) {
+.btn-slider__slider-li:nth-child(1) {
   top: 0;
 }
-.intro-container .original-viewer .original-img-ul li:nth-child(2) {
+.btn-slider__slider-li:nth-child(2) {
   top: 100%;
 }
-.intro-container .original-viewer .original-img-ul li:nth-child(3) {
+.btn-slider__slider-li:nth-child(3) {
   top: 200%;
 }
-.intro-container .original-viewer .original-img-ul li:nth-child(4) {
+.btn-slider__slider-li:nth-child(4) {
   top: 300%;
 }
-.intro-container .original-viewer .original-img-ul li:nth-child(5) {
+.btn-slider__slider-li:nth-child(5) {
   top: 400%;
 }
 
-.intro-container .original-img-ul img {
+.btn-slider__slider-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center center;
 }
-
-.intro-container .original-img-ul li.contain img {
+.btn-slider__slider-img.cover {
+  object-fit: cover;
+}
+.btn-slider__slider-img.contain {
   object-fit: contain;
 }
 
-.intro-container .original-img-ul .source {
+.btn-slider__source {
   position: absolute;
   right: 0;
   bottom: 0;
   color: #fff;
 }
 
-.intro-container .desc .black-line {
+/* 모바일 intro 썸네일 */
+.intro__thumbnail-mobile {
+  display: none;
   width: 100%;
-  height: 0.1rem;
-  background-color: #000000;
-  margin: 2rem 0;
+  height: 20rem;
+  white-space: nowrap;
+  font-size: 0;
+  margin: 0.3% auto 0 auto;
 }
 
-.intro-container .desc {
-  font-size: 3rem;
-  font-weight: bolder;
-  text-align: center;
+.btn-slider__mobile-inner {
+  position: relative;
+}
+
+.btn-slider__mobile-btn-viewer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 0.3rem solid #000000;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.btn-slider__mobile-btn-ul {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-slider__mobile-btn-li {
+  position: relative;
+  display: inline-block;
+  width: 20%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.btn-slider__mobile-btn {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: inherit;
+  padding: 0;
+  outline-width: 0.5rem;
+}
+
+.btn-slider__mobile-btn-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.btn-slider__mobile-btn-li:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.7;
+}
+
+.btn-slider__mobile-btn-li:hover:after,
+.btn-slider__mobile-btn-li.active:after {
+  transition: 0.5s ease;
+  background-color: transparent;
+}
+
+/* intro__desc ↑ */
+
+.intro__line {
+  width: 100%;
+  height: 0.1rem;
+  margin: 2rem 0;
+  background-color: #000000;
+}
+
+.intro__desc {
   font-family: "Exo", "NanumSquare", "Margun Gothic", sans-serif;
   margin: 0 auto;
 }
 
-.intro-container .desc .rotate {
-  display: inline-block;
-  transform: rotate(180deg);
+.intro__title {
+  font-size: 3rem;
+  font-weight: bolder;
+  text-align: center;
 }
 
-.intro-container .desc .translate {
+.intro__lang-translate {
   width: 100%;
   text-align: center;
 }
 
-.intro-container .desc .translate button {
-  display: inline-block;
-  margin: 2rem 0;
+.lang-selector__btn {
   background-color: #000000;
   color: #f4a5b7;
   font-size: 2rem;
@@ -552,51 +553,64 @@ button.text-indent {
   cursor: pointer;
 }
 
-.intro-container .desc p {
-  display: none;
-  width: 60%;
-  margin: 0 auto;
+.intro__lang-btn {
+  display: inline-block;
+  margin: 2rem 0;
+}
+
+.lang-selector__p {
   font-size: 2rem;
   font-weight: bold;
   font-family: "Exo", "NanumSquare", "Margun Gothic", sans-serif;
   line-height: 1.618;
-  text-align: left;
   word-break: break-all;
 }
 
-.intro-container .desc p.active {
+.intro__lang-p {
+  display: none;
+  width: 60%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.intro__lang-p.active {
   display: block;
 }
 
 /* intro 반응형 */
 @media screen and (max-width: 1281px) {
-  .intro-container {
+  .intro__inner {
     margin: 16rem 0;
   }
 
-  .intro-container .thumbnail {
+  .intro__thumbnail {
     display: none;
   }
-  .intro-container .thumbnail-mobile {
-    display: block;
-    height: 20rem;
-  }
 
-  .intro-container .original-viewer {
+  .intro__slider {
     display: block;
     width: 95%;
     height: 50rem;
     margin: 0 auto;
   }
 
-  .intro-container .desc {
+  .intro__thumbnail-mobile {
+    width: 95%;
+    display: block;
+  }
+
+  .btn-slider__mobile-inner {
+    height: 20rem;
+  }
+
+  .intro__desc {
     width: 95%;
     font-size: 2.5rem;
     margin: 1.8rem auto;
     margin-bottom: 0;
   }
 
-  .intro-container .desc p {
+  .intro__lang-p {
     width: 90%;
     font-size: 1.7rem;
   }
@@ -604,253 +618,258 @@ button.text-indent {
 
 /* intro 반응형 600px */
 @media screen and (max-width: 600px) {
-  .intro-container {
+  .intro__inner {
     margin: 8rem 0;
   }
 
-  .intro-container .original-viewer {
+  .intro__slider {
     height: 30rem;
   }
 
-  .intro-container .original-viewer .size-controls button {
+  .btn-slider__size-btn {
     width: 2rem;
     height: 2rem;
   }
 
-  .intro-container .thumbnail-mobile {
-    display: block;
+  .intro__thumbnail-mobile {
     height: 10rem;
   }
 
-  .intro-container .desc {
+  .intro__desc {
     font-size: 2.2rem;
   }
 
-  .intro-container .desc .translate button {
+  .lang-selector__btn {
     font-size: 1.6rem;
     padding: 0.5rem 0.8rem;
   }
 
-  .intro-container .desc p {
+  .intro__lang-p {
     width: 95%;
     font-size: 1.3rem;
   }
 }
 
 /*================================= members =================================*/
-.members {
+.members__inner {
   position: relative;
-  font-size: 0;
-  letter-spacing: 0;
-  white-space: nowrap;
-}
-
-.members-container {
   max-width: 146rem;
   width: 100%;
   margin: 20rem auto;
+  white-space: nowrap;
+  font-size: 0;
+  letter-spacing: 0;
 }
 
-.members h2 {
-  color: #000000;
-  font-size: 8rem;
-  font-family: "Exo", "NanumSquare", "Margun Gothic", sans-serif;
-  font-weight: bold;
-  box-sizing: border-box;
+.members__title {
   padding: 2rem 2rem 2rem 0;
   padding-left: 0;
   text-align: left;
-  letter-spacing: 0.1rem;
 }
 
-.members .member h4 {
-  color: #f4a5b7;
-  font-size: 2.2rem;
-  font-weight: bold;
-  font-family: "Exo", "NanumSquare", "Margun Gothic", sans-serif;
-  font-weight: bold;
-  box-sizing: border-box;
-  padding: 2rem;
-  text-align: center;
-  letter-spacing: 0.1rem;
-}
-
-.members .member {
-  position: relative;
-  display: inline-block;
-  width: 25%;
+.vertical-media {
   background-color: #000000;
   transition: 0.5s ease;
   opacity: 0;
 }
 
-.members .member:nth-child(2) {
+.members__member {
+  position: relative;
+  display: inline-block;
+  width: 25%;
+}
+
+.vertical-media__title {
+  color: #f4a5b7;
+  font-size: 2.2rem;
+  font-weight: bold;
+  font-family: "Exo", "NanumSquare", "Margun Gothic", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
+.members__member-title {
+  text-align: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.members__member:nth-child(2) {
   top: -8rem;
 }
-.members .member:nth-child(3) {
+.members__member:nth-child(3) {
   top: -8rem;
   transition-delay: 0.2s;
 }
-.members .member:nth-child(4) {
+.members__member:nth-child(4) {
   top: -8rem;
   transition-delay: 0.4s;
 }
-.members .member:nth-child(5) {
+.members__member:nth-child(5) {
   top: -8rem;
   transition-delay: 0.6s;
 }
 
-.members .member.active {
+.members__member.active {
   opacity: 1;
   top: 0;
 }
 
-.members .member img {
+.vertical-media__img {
+  display: block;
   width: 100%;
-  height: 60rem;
+  height: 100%; /* height 를 주지않을 경우 기본값 */
   object-fit: fill;
 }
 
-.members .member a {
-  display: block;
-  width: 100%;
-  height: 31.5rem;
-}
-
-.members .member a img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  height: 31.5rem;
+.vertical-media__img--cover {
   object-fit: cover;
 }
+
+.members__img {
+  height: 60rem;
+}
+
+.vertical-media__link {
+  display: block;
+  width: 100%;
+}
+
+.members__link {
+  height: 31.5rem;
+}
+
 /* members div 반응형 */
 @media screen and (max-width: 1281px) {
-  .members {
+  .members__inner {
+    position: relative;
     white-space: initial;
+    width: 95%;
   }
 
-  .members-container {
-    width: 95%;
-    position: relative;
-  }
-  .members h2 {
-    width: 100%;
+  .title-h2 {
     font-size: 6rem;
   }
 
-  .members .member {
+  .members__member {
     width: 50%;
   }
-  .members .member h4 {
+
+  .members__member:nth-child(1),
+  .members__member:nth-child(2) {
+    margin-bottom: 0.1%;
+  }
+
+  .vertical-media__title {
     font-size: 2rem;
   }
-  .members .member img {
-    height: 50rem;
+
+  .members__member-title {
+    padding: 1.5rem;
+  }
+
+  .members__img {
+    object-fit: cover;
+  }
+
+  .vertical-media__img {
     object-fit: contain;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .members h2 {
+  .title-h2 {
     font-size: 3rem;
   }
 
-  .members-container {
-    margin: 8rem auto;
+  .members__member:nth-child(1),
+  .members__member:nth-child(2) {
+    margin-bottom: 0.3%;
   }
 
-  .members .member h4 {
-    font-size: 1.6rem;
+  .vertical-media__title {
+    font-size: 1.4rem;
   }
 
-  .members .member img {
+  .members__img {
     height: 30rem;
   }
 
-  .members .member a {
+  .members__link {
     height: 15rem;
   }
 
-  .members .member a img {
-    margin: 0 auto;
-    height: 90%;
-    width: 80%;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+  .vertical-media__img {
+    object-fit: contain;
   }
 }
 
 /*================================= news =================================*/
 .news {
-  position: relative;
   background-color: black;
 }
 
-.news .news-container {
+.news__inner {
+  position: relative;
   max-width: 146rem;
   width: 100%;
   margin: 0 auto;
 }
 
-.news h2 {
-  width: 100%;
-  font-size: 8rem;
-  font-weight: bold;
-  text-align: left;
-  font-family: "Exo", "NanumSquare", "Margun Gothic", sans-serif;
-  color: #f4a5b7;
-  box-sizing: border-box;
+.news__title {
   padding: 2rem 2rem 2rem 0;
-  background-color: #000000;
+  padding-left: 0;
+  text-align: left;
 }
 
-.news .news-index-controls {
+.news__controls {
   margin: 5rem 0;
 }
 
-.news .news-index-controls button {
+.arrow-slider__btn {
   display: inline-block;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 25px; /* default value */
+  height: 25px; /* default value */
   background-color: transparent;
   border: none;
   vertical-align: sub;
   cursor: pointer;
 }
 
-.news .news-index-controls button img {
+.arrow-slider__img {
   object-fit: cover;
 }
 
-.news .news-index-controls button.before {
+.news__slider-btn--before {
   margin-right: 2rem;
 }
 
-.news .news-index-controls button.next {
+.news__slider-btn--next {
   margin-left: 2rem;
 }
 
-.news .news-index-controls span {
+.arrow-slider__num {
   display: inline-block;
   font-size: 2rem;
   color: white;
 }
 
-.news .news-index-controls .percentage {
+.arrow-slider__percentage {
   position: relative;
   display: inline-block;
-  width: 20%;
-  height: 0.5rem;
-  margin: 0 0.5rem;
   background: white;
   border-radius: 1rem;
-  vertical-align: text-top;
   overflow: hidden;
 }
 
-.news .news-index-controls .percentage .bar {
+.news__percentage {
+  width: 20%;
+  height: 0.5rem;
+  margin: 0 0.5rem;
+  vertical-align: text-top;
+}
+
+.arrow-slider__bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -860,7 +879,7 @@ button.text-indent {
   transition: 0.5s ease;
 }
 
-.news .news-viewer {
+.arrow-slider__slider {
   position: relative;
   left: -8rem;
   width: 216rem;
@@ -870,12 +889,12 @@ button.text-indent {
   transition: 0.5s ease;
 }
 
-.news .news-viewer.active {
+.arrow-slider__slider.active {
   left: 0;
   opacity: 1;
 }
 
-.news .news-ul {
+.arrow-slider__ul {
   width: fit-content;
   position: relative;
   top: 0;
@@ -884,72 +903,93 @@ button.text-indent {
   transition: 0.5s ease;
 }
 
-.news .news-ul .news-li {
+.arrow-slider__li {
+  background-color: white;
   display: inline-block;
+}
+
+.news__li {
   width: 32rem;
   height: 35rem;
   margin: 10rem 2rem;
-  background-color: white;
-  /* 340px */
 }
 
-.news .news-li img {
+.arrow-slider__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.news .news-ul li:nth-child(1) {
+.news__li:nth-child(1) {
   margin-left: 0;
 }
+
 /* news div 반응형 */
 @media screen and (max-width: 1281px) {
-  .news {
+  .news__inner {
     overflow: hidden;
-  }
-
-  .news h2 {
-    font-size: 6rem;
-  }
-
-  .news .news-container {
     width: 95%;
     margin: 0 auto;
   }
 
-  .news .news-index-controls .percentage {
+  .news__percentage {
     width: 40%;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .news h2 {
-    font-size: 3rem;
-  }
-
-  .news .news-index-controls {
+  .news__controls {
     margin: 2rem 0;
   }
 
-  .news .news-index-controls button {
+  .news__slider-btn--before,
+  .news__slider-btn--next {
     width: 2rem;
     height: 2rem;
     vertical-align: inherit;
   }
 
-  .news .news-index-controls button.before {
+  .news__slider-btn--before {
     margin-right: 1rem;
   }
-  .news .news-index-controls button.next {
+
+  .news__slider-btn--next {
     margin-left: 1rem;
   }
 
-  .news .news-index-controls span {
+  .arrow-slider__num {
     font-size: 1.6rem;
   }
 }
 
 /*================================= albums =================================*/
+.pink-btn {
+  padding: 0.5rem 1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: "Exo", "NanumSquare", "Margun Gothic", sans-serif;
+  text-shadow: -0.05rem -0.05rem white, 0.05rem 0.05rem #000000;
+  text-shadow: -0.1rem -0.1rem white, 0.1rem 0.1rem #000000;
+  color: #f4a5b7;
+  border-radius: 1rem;
+  border: 0.3rem outset #f4a5b7;
+  background-color: #000000;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.pink-btn:focus {
+  border-style: inset;
+  text-shadow: 0.05rem 0.05rem white, -0.05rem -0.05rem #000000;
+  text-shadow: 0.1rem 0.1rem white, -0.1rem -0.1rem #000000;
+}
+
+@media screen and (max-width: 600px) {
+  .pink-btn {
+    font-size: 14px;
+  }
+}
+
 .albums {
   position: relative;
   width: 100%;
@@ -970,118 +1010,16 @@ button.text-indent {
   background-size: cover;
 }
 
-.albums .albums-container {
+.albums__inner {
   max-width: 146rem;
   margin: 0 auto;
 }
 
-.albums-container .songs-title-ul {
-  width: 100%;
-  margin: 8rem auto 0 auto;
-  text-align: center;
-}
-
-.albums-container .songs-title-ul .song-title-li {
-  display: inline-block;
-  width: fit-content;
-  margin-right: 5rem;
-  font-size: 2rem;
-  color: #f4a5b7;
-  font-family: "Exo", "NanumSquare", "Margun Gothic", sans-serif;
-  font-weight: bold;
-  line-height: 1.618;
-  transition: 0.5s ease;
-}
-
-.albums-container .songs-title-ul .song-title-li {
-  color: #000000;
-  font-size: 2.2rem;
-  opacity: 0.4;
-}
-
-.albums-container .songs-title-ul .song-title-li.active,
-.albums-container .songs-title-ul .song-title-li:hover {
-  color: #f4a5b7;
-  opacity: 1;
-}
-
-.albums-container .break.maxwidth1281 {
-  display: none;
-}
-
-.albums-container .albums-buttons-container {
-  width: 100%;
-  height: auto;
-  position: relative;
-  margin: 10rem auto 0 auto;
-  text-align: center;
-}
-
-.albums-container .albums-buttons-container .show-all {
-  display: block;
-  margin: 0 auto;
-  padding: 0.5rem 1rem;
-  font-size: 1.8rem;
-  font-weight: bold;
-  font-family: "Exo", "NanumSquare", "Margun Gothic", sans-serif;
-  text-shadow: -0.05rem -0.05rem white, 0.05rem 0.05rem #000000;
-  text-shadow: -0.1rem -0.1rem white, 0.1rem 0.1rem #000000;
-  color: #f4a5b7;
-  border-radius: 1rem;
-  border: 0.3rem outset #f4a5b7;
-  background-color: #000000;
-  margin-bottom: 1rem;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.albums-container .albums-buttons-container .show-all.active,
-.albums-container .albums-buttons-container .show-all:focus {
-  border-style: inset;
-  text-shadow: 0.05rem 0.05rem white, -0.05rem -0.05rem #000000;
-  text-shadow: 0.1rem 0.1rem white, -0.1rem -0.1rem #000000;
-}
-
-.albums-container.nonactive {
-  background-image: url(../../images/blackpink/crown.jpg);
-}
-
-.albums-container h2 {
-  max-width: 100%;
-  color: #f4a5b7;
-  font-size: 8rem;
-  font-family: "Exo", "NanumSquare", "Margun Gothic", sans-serif;
-  font-weight: bold;
-  box-sizing: border-box;
+.albums__title {
   padding: 2rem 2rem 2rem 0;
 }
 
-.albums-container .img-btn {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  width: 20rem;
-  height: 20rem;
-  display: inline-block;
-  vertical-align: text-top;
-  white-space: nowrap;
-  cursor: pointer;
-  transition: 0.5s ease;
-  opacity: 0.4;
-}
-
-.albums-container .img-btn img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.albums-container .img-btn:hover,
-.albums-container .img-btn.active {
-  opacity: 1;
-}
-
-.albums-container .albums-bg-controls {
+.albums__bg-controls {
   position: absolute;
   top: 0;
   left: 0;
@@ -1096,7 +1034,7 @@ button.text-indent {
   padding-top: 5rem;
 }
 
-.albums-container .albums-bg-controls .stop {
+.albums__btn--stop {
   width: 2rem;
   height: 2rem;
   background-image: url(../../images/blackpink/pause-solid.svg);
@@ -1107,7 +1045,8 @@ button.text-indent {
   color: #fff;
   cursor: pointer;
 }
-.albums-container .albums-bg-controls .play {
+
+.albums__btn--play {
   width: 2rem;
   height: 2rem;
   background-image: url(../../images/blackpink/play-solid.svg);
@@ -1117,91 +1056,166 @@ button.text-indent {
   color: #fff;
   cursor: pointer;
 }
+
+.albums__ul {
+  width: 100%;
+  margin: 8rem auto 0 auto;
+  text-align: center;
+}
+
+.switching-li__li {
+  display: inline-block;
+  width: fit-content;
+  font-size: 20px;
+  color: #f4a5b7;
+  font-family: "Exo", "NanumSquare", "Margun Gothic", sans-serif;
+  font-weight: bold;
+  line-height: 1.618;
+  transition: 0.5s ease;
+}
+
+.albums__li {
+  margin-right: 5rem;
+}
+
+.switching-li__li {
+  color: #000000;
+  font-size: 22px;
+  opacity: 0.4;
+}
+
+.switching-li__li.active,
+.switching-li__li:hover {
+  color: #f4a5b7;
+  opacity: 1;
+}
+
+.break.maxwidth1281 {
+  display: none;
+}
+
+.albums__controls {
+  width: 100%;
+  text-align: center;
+}
+
+.albums__control-btn {
+  display: block;
+  margin: 5rem auto 3rem auto;
+}
+
+.switching-li__btn.active,
+.switching-li__btn:focus {
+  border-style: inset;
+  text-shadow: 0.05rem 0.05rem white, -0.05rem -0.05rem #000000;
+  text-shadow: 0.1rem 0.1rem white, -0.1rem -0.1rem #000000;
+}
+
+.nonactive {
+  background-image: url(../../images/blackpink/crown.jpg);
+}
+
+.switching-li__img-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 20rem;
+  height: 20rem;
+  display: inline-block;
+  vertical-align: text-top;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: 0.5s ease;
+  opacity: 0.4;
+}
+
+.switching-li__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.switching-li__img-btn:hover,
+.switching-li__img-btn.active {
+  opacity: 1;
+}
+
 /* album div 반응형 */
 @media screen and (max-width: 1281px) {
-  .albums {
-    background-attachment: initial;
-  }
-  .albums.active {
-    background-attachment: initial;
-  }
-
-  .albums-container h2 {
-    font-size: 6rem;
-  }
-
-  .albums-container .albums-bg-controls {
+  .albums__inner,
+  .albums__bg-controls {
     width: 95%;
   }
 
-  .albums-container .songs-title-container {
-    width: 95%;
+  .albums__ul {
+    width: 90%;
   }
-  .albums-container .songs-title-ul .song-title-li {
-    margin-right: 3rem;
+
+  .switching-li__li {
+    font-size: 20px;
+  }
+
+  .albums__li {
+    margin-right: 2rem;
     line-height: 1.618;
   }
 
-  .albums-container .break.maxwidth1281 {
+  .break.maxwidth1281 {
     display: block;
   }
 
-  .albums-container .albums-buttons-container {
+  .albums__controls {
     margin-top: 6rem;
   }
-  .albums-container .albums-buttons-container .show-all {
+
+  .albums__control-btn {
     margin-bottom: 2rem;
   }
 
-  .albums-container .albums-buttons-container .img-btn {
+  .albums__img-btn {
     margin-bottom: 2rem;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .albums-container h2 {
-    font-size: 3rem;
-  }
-
-  .albums-container .albums-bg-controls {
+  .albums__bg-controls {
     padding-top: 3.5rem;
   }
 
-  .albums-container .albums-bg-controls .play,
-  .albums-container .albums-bg-controls .stop {
+  .albums__btn--stop,
+  .albums__btn--play {
     width: 1.6rem;
     height: 1.6rem;
   }
 
-  .albums-container .songs-title-container {
+  .albums__ul {
     margin-top: 2rem;
   }
 
-  .albums-container .songs-title-ul .song-title-li {
-    font-size: 1.6rem;
+  .switching-li__li {
+    font-size: 16px;
+  }
+
+  .albums__li {
     margin-right: 1rem;
   }
 
-  .albums-container .albums-buttons-container {
+  .albums__controls {
     margin-top: 4rem;
   }
 
-  .albums-container .albums-buttons-container .show-all {
-    font-size: 1.2rem;
-  }
-
-  .albums-container .img-btn {
+  .albums__img-btn {
     width: 12rem;
     height: 12rem;
   }
 
-  .albums-container .img-btn img {
+  .switching-li__img {
     object-fit: contain;
   }
 }
 
 @media screen and (max-width: 280px) {
-  .albums-container .break.maxwidth1281 {
+  .break.maxwidth1281 {
     display: none;
   }
 }
@@ -1213,7 +1227,7 @@ button.text-indent {
   background-color: #000000;
 }
 
-.game .game-container {
+.game__inner {
   position: relative;
   max-width: 146rem;
   width: 100%;
@@ -1221,24 +1235,11 @@ button.text-indent {
   height: 80rem;
 }
 
-.game .game-container h2 {
-  width: 100%;
-  font-size: 8rem;
-  font-weight: bold;
-  text-align: left;
-  font-family: "Exo", "NanumSquare", "Margun Gothic", sans-serif;
-  color: #f4a5b7;
-  box-sizing: border-box;
+.game__title {
   padding: 2rem 2rem 2rem 0;
 }
 
-@media screen and (max-width: 600px) {
-  .game .game-container h2 {
-    font-size: 4rem;
-  }
-}
-
-.game .game-container .units {
+.game__rank-game {
   position: relative;
   width: 100%;
   height: 80%;
@@ -1247,97 +1248,87 @@ button.text-indent {
   overflow: hidden;
 }
 
-.game .game-container .units:after {
+.rank-game__units:after {
   content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 0.5rem;
+  height: 5px;
   background-color: #f4a5b7;
 }
 
-.game .game-container .units .unit {
+.game__units {
+  height: 100%;
+}
+
+.rank-game__unit {
   display: inline-block;
+}
+
+.game__unit {
   width: 10rem;
   height: 100%;
   margin: 0 1rem;
 }
 
-.game .game-container .unit div {
+.rank-game__unit-img {
   position: relative;
-  width: 9rem;
-  height: 9rem;
   background-color: black;
-  margin: 0 auto;
-  border-radius: 50%;
-  transition: 0.3s ease;
   background-size: cover;
   background-repeat: no-repeat;
+  border-radius: 50%;
+  transition: 0.3s ease;
 }
 
-.game .game-container .unit .jennie {
+.game__unit-img {
+  width: 9rem;
+  height: 9rem;
+}
+
+.jennie {
   background-image: url(../../images/blackpink/0000926654.jpg);
 }
-.game .game-container .unit .rose {
+.rose {
   background-image: url(../../images/blackpink/roseyg.jpg);
 }
-.game .game-container .unit .lisa {
+.lisa {
   background-image: url(../../images/blackpink/0002650199.jpg);
 }
-.game .game-container .unit .jisoo {
+.jisoo {
   background-image: url(../../images/blackpink/0001567912_0019.jpg);
 }
 
-.game .game-container button {
+.rank-game__btn {
   position: absolute;
   left: 50%;
   bottom: 10%;
   transform: translateX(-50%);
-  padding: 0.5rem 1rem;
-  font-size: 1.8rem;
-  font-weight: bold;
-  font-family: "Exo", "NanumSquare", "Margun Gothic", sans-serif;
-  text-shadow: -0.05rem -0.05rem white, 0.05rem 0.05rem #000000;
-  text-shadow: -0.1rem -0.1rem white, 0.1rem 0.1rem #000000;
-  color: #f4a5b7;
-  border-radius: 1rem;
-  border: 0.3rem outset #f4a5b7;
-  background-color: #000000;
   margin-bottom: 1rem;
-  cursor: pointer;
 }
 
-.game .game-container button:focus {
-  border-style: inset;
-  text-shadow: 0.05rem 0.05rem white, -0.05rem -0.05rem #000000;
-  text-shadow: 0.1rem 0.1rem white, -0.1rem -0.1rem #000000;
-}
-
-.game .game-container .game-start {
+.rank-game__btn--start {
   display: none;
   transition: 0.5s ease-in-out;
 }
-.game .game-container .game-reset {
+.rank-game__btn--reset {
   display: none;
   transition: 0.3s ease-in-out;
 }
 
-.game .game-container .game-start.active {
+.rank-game__btn--start.active {
   display: block;
 }
-.game .game-container .game-reset.active {
+.rank-game__btn--reset.active {
   display: block;
 }
 
-.game .game-container .result {
+.rank-game__result {
   position: absolute;
   top: 50%;
   left: 40%;
   transform: translate(-50%, -50%);
-  width: 30%;
-  height: 50%;
-  border-radius: 0.5rem;
+  border-radius: 5px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
@@ -1345,65 +1336,62 @@ button.text-indent {
   transition: 0.3s ease;
 }
 
-.game .game-container .result.active {
+.game__result {
+  width: 30%;
+  height: 50%;
+}
+
+.rank-game__result.active {
   left: 50%;
   opacity: 1;
 }
 
-.game .game-container .result span {
+.rank-game__word {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
   font-weight: bold;
-  font-size: 7rem;
+  font-size: 70px;
 }
+
 /* game 반응형 */
 @media screen and (max-width: 1281px) {
-  .game .game-container h2 {
-    width: 95%;
-    margin: 0 auto;
-    font-size: 6rem;
-  }
-
-  .game .game-container .units {
+  .game__inner {
     width: 95%;
     margin: 0 auto;
   }
-  .game .game-container button {
-    font-size: 1.4rem;
-  }
 
-  .game .game-container .result {
+  .game__result {
     width: 40%;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .game .game-container {
+  .game__inner {
     height: 60rem;
   }
 
-  .game .game-container h2 {
-    font-size: 3rem;
-  }
-
-  .game .game-container .units .unit {
+  .game__unit {
     width: 6rem;
   }
 
-  .game .game-container .unit div {
+  .game__unit-img {
     width: 7rem;
     height: 7rem;
     background-position: top;
   }
 
-  .game .game-container .units:after {
+  .game__units:after {
     height: 0.3rem;
   }
-  .game .game-container .result {
+  .game__result {
     width: 60%;
+  }
+
+  .rank-game__word {
+    font-size: 50px;
   }
 }
 
@@ -1420,7 +1408,7 @@ button.text-indent {
   pointer-events: none;
   transition: 0.3s ease;
 }
-.scroll-up a {
+.scroll-up__link {
   display: block;
   width: 100%;
   height: 100%;
@@ -1445,8 +1433,8 @@ button.text-indent {
 }
 
 @media screen and (max-width: 1281px) {
-  div h2 {
+  /* div h2 {
     width: 95%;
     margin: 0 auto;
-  }
+  } */
 }

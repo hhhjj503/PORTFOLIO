@@ -1,97 +1,79 @@
 window.addEventListener("load", () => {
-  //
-  //h1
-  const h1Span = document.querySelector("h1 span");
-  //
-  //section.banner
-  const bannerIndexs = document.querySelectorAll(
-    ".banner .slider-controls .index"
+  //.header
+  const headerChar = document.querySelector(".header__char");
+
+  //.banner
+  const sliderBtnIndexs = document.querySelectorAll(".slider__btn--index");
+  const sliderBtnPlay = document.querySelector(".slider__btn--play");
+  const sliderBtnStop = document.querySelector(".slider__btn--stop");
+  const sliderUl = document.querySelector(".slider__ul");
+  let sliderStartIndex = 0;
+  let sliderLastIndex = sliderBtnIndexs.length;
+  let sliderSliding = true;
+
+  //.intro
+  const btnSliderBtnViewer = document.querySelector(".btn-slider__btn-viewer");
+  const btnSliderBtnLis = document.querySelectorAll(".btn-slider__btn-li");
+  const btnSliderSliderUl = document.querySelector(".btn-slider__slider-ul");
+  const btnSliderSliderImg = document.querySelectorAll(
+    ".btn-slider__slider-img"
   );
-  const bannerPlay = document.querySelector(".banner .slider-controls .play");
-  const bannerStop = document.querySelector(".banner .slider-controls .stop");
-  const bannerUl = document.querySelector(".banner ul");
-  let bannerStartIndex = 0;
-  let bannerLastIndex = bannerIndexs.length;
-  let bannerSliding = true;
-  //
-  //section.intro
-  const thumbnaiviewer = document.querySelector(
-    ".intro .thumbnail .thumbnail-viewer"
-  );
-  const thumbLis = document.querySelectorAll(".intro .thumbnail li");
-  const imagesListUl = document.querySelector(
-    ".intro .original-viewer .original-img-ul"
-  );
-  const imagesListLis = document.querySelectorAll(
-    ".intro .original-viewer .original-img-ul li"
-  );
-  const thumbnaiviewerMobile = document.querySelector(
-    ".intro .thumbnail-mobile .thumbnail-viewer-mobile"
-  );
-  const thumbLisMobile = document.querySelectorAll(
-    ".intro .thumbnail-mobile li"
-  );
-  const sizeCoverBtn = document.querySelector(
-    ".intro .size-controls .size-cover"
-  );
+  const sizeCoverBtn = document.querySelector(".btn-slider__size-btn_cover");
   const sizeContainBtn = document.querySelector(
-    ".intro .size-controls .size-contain"
+    ".btn-slider__size-btn_contain"
   );
-  const translateKorea = document.querySelector(".intro .translate .korea");
-  const translateEnglish = document.querySelector(".intro .translate .english");
-  const introDescPs = document.querySelectorAll(".intro .desc p");
-  //
-  //section.members
+  const btnSliderMobileBtnViewer = document.querySelector(
+    ".btn-slider__mobile-btn-viewer"
+  );
+  const btnSliderMobileBtnLis = document.querySelectorAll(
+    ".btn-slider__mobile-btn-li"
+  );
+
+  const langSelectorBtnKor = document.querySelector(".lang-selector__btn--kor");
+  const langSelectorBtnEng = document.querySelector(".lang-selector__btn--eng");
+  const langSelectorP = document.querySelectorAll(".lang-selector__p");
+
+  //.members
   const membersSection = document.querySelector(".members");
-  const membersMember = document.querySelectorAll(".members .member");
+  const membersMember = document.querySelectorAll(".vertical-media");
   const html = document.querySelector("html");
   let memberThreshold =
     window.pageYOffset +
     membersSection.getBoundingClientRect().top -
     html.scrollHeight * 0.1;
+
   //
   //section.news
   const newsSection = document.querySelector(".news");
-  const newsListViewer = document.querySelector(".news .news-viewer");
-  let newsThreshold =
+  const arrowSlider = document.querySelector(".arrow-slider__slider");
+  let arrowSliderThreshold =
     window.pageYOffset +
     newsSection.getBoundingClientRect().top -
     html.scrollHeight * 0.08;
-  const newsUl = document.querySelector(".news .news-viewer .news-ul");
-  const newsListLis = document.querySelectorAll(
-    ".news .news-viewer .news-ul li"
+  const arrowSliderUl = document.querySelector(".arrow-slider__ul");
+  const arrowSliderLis = document.querySelectorAll(".arrow-slider__li");
+
+  const arrowSliderBtnBefore = document.querySelector(
+    ".arrow-slider__btn--before"
   );
-  const newsBeforeBtn = document.querySelector(
-    ".news .news-index-controls .before"
+  const arrowSliderBtnNext = document.querySelector(".arrow-slider__btn--next");
+  const arrowSliderBar = document.querySelector(".arrow-slider__bar");
+  const progressValue = 100 / arrowSliderLis.length;
+  const arrowSliderNumStart = document.querySelector(
+    ".arrow-slider__num--start"
   );
-  const newsNextBtn = document.querySelector(
-    ".news .news-index-controls .next"
-  );
-  const newsProgressBar = document.querySelector(
-    ".news .news-index-controls .bar"
-  );
-  const progressValue = 100 / newsListLis.length;
-  const newsStartIndex = document.querySelector(
-    ".news .news-index-controls .start-number"
-  );
-  const newsLastIndex = document.querySelector(
-    ".news .news-index-controls .last-number"
-  );
-  let newsCurrentIndex = 1;
+  const arrowSliderNumLast = document.querySelector(".arrow-slider__num--last");
+  let arrowSliderCurrentIndex = 1;
   let newsOffsetLeft = 0;
-  //
+
   //section.albums
   const albumsSection = document.querySelector(".albums");
-  const albumsBGPlay = document.querySelector(
-    ".albums .albums-bg-controls .play"
+  const albumsBGPlay = document.querySelector(".albums__btn--play");
+  const albumsBGStop = document.querySelector(".albums__btn--stop");
+  const switchingLis = document.querySelectorAll(".switching-li__li");
+  const switchingLiImgBtns = document.querySelectorAll(
+    ".switching-li__img-btn"
   );
-  const albumsBGStop = document.querySelector(
-    ".albums .albums-bg-controls .stop"
-  );
-  const allSongsLis = document.querySelectorAll(".albums .songs-title-ul li");
-  const albumImgBtns = document.querySelectorAll(
-    ".albums .albums-container .img-btn"
-  ); //album > img-btn
   const albumNames = [
     "square-one",
     "square-two",
@@ -100,13 +82,15 @@ window.addEventListener("load", () => {
     "the-album",
     "born-pink",
   ];
-  const showAll = document.querySelector(".albums .albums-container .show-all");
-  //
+  const switchingLiControlBtn = document.querySelector(
+    ".switching-li__control-btn"
+  );
+
   //section.game
-  const unitImages = document.querySelectorAll(".game .units .unit div");
-  const unit = document.querySelector(".game .units .unit");
-  const gameStart = document.querySelector(".game .game-start");
-  const gameReset = document.querySelector(".game .game-reset");
+  const rankGameUnitImg = document.querySelectorAll(".rank-game__unit-img");
+  const rankGameUnit = document.querySelector(".rank-game__unit");
+  const rankGameBtnStart = document.querySelector(".rank-game__btn--start");
+  const rankGameBtnReset = document.querySelector(".rank-game__btn--reset");
   let moving = false;
   let scores = [0, 0, 0, 0];
   let urls = [
@@ -115,7 +99,7 @@ window.addEventListener("load", () => {
     "url(../../source/images/blackpink/0002650199.jpg)", //리사이미지
     "url(../../source/images/blackpink/0001567912_0019.jpg)", //지수이미지
   ];
-  const result = document.querySelector(".game .game-container .result");
+  const result = document.querySelector(".rank-game__result");
   //
   //scroll-up
   const scrollUp = document.querySelector(".scroll-up");
@@ -124,14 +108,15 @@ window.addEventListener("load", () => {
     html.scrollTop = 0;
   });
 
-  gameStart.addEventListener("click", function () {
+  rankGameBtnStart.addEventListener("click", function () {
     removeClass(this, "active");
     moving = setInterval(function () {
-      const limit = unit.offsetHeight - unitImages[0].offsetHeight * 1.5;
+      const limit =
+        rankGameUnit.offsetHeight - rankGameUnitImg[0].offsetHeight * 1.5;
 
-      for (let i = 0; i < unitImages.length; i++) {
+      for (let i = 0; i < rankGameUnitImg.length; i++) {
         scores[i] = scores[i] + Math.floor(Math.random() * (100 - 50) + 50);
-        unitImages[i].style.top = scores[i] + "px";
+        rankGameUnitImg[i].style.top = scores[i] + "px";
 
         if (scores[i] > limit) {
           clearInterval(moving);
@@ -143,18 +128,18 @@ window.addEventListener("load", () => {
               addClass(result, "active");
             }
           }
-          addClass(gameReset, "active");
+          addClass(rankGameBtnReset, "active");
         }
       }
     }, 1000);
   });
 
-  gameReset.addEventListener("click", function () {
+  rankGameBtnReset.addEventListener("click", function () {
     scores = [0, 0, 0, 0];
-    for (let i = 0; i < unitImages.length; i++) {
-      unitImages[i].style.top = 0 + "px";
-      removeClass(gameReset, "active");
-      addClass(gameStart, "active");
+    for (let i = 0; i < rankGameUnitImg.length; i++) {
+      rankGameUnitImg[i].style.top = 0 + "px";
+      removeClass(rankGameBtnReset, "active");
+      addClass(rankGameBtnStart, "active");
       removeClass(result, "active");
     }
   });
@@ -164,38 +149,38 @@ window.addEventListener("load", () => {
       window.pageYOffset +
       membersSection.getBoundingClientRect().top -
       html.scrollHeight * 0.1;
-    newsThreshold =
+    arrowSliderThreshold =
       window.pageYOffset +
       newsSection.getBoundingClientRect().top -
       html.scrollHeight * 0.08;
   }); //resize 이벤트
   //
   //section.albums
-  showAll.addEventListener("click", function () {
+  switchingLiControlBtn.addEventListener("click", function () {
     if (!this.classList.contains("active")) {
-      addAllClass(albumImgBtns, "active");
-      addAllClass(allSongsLis, "active");
+      addAllClass(switchingLiImgBtns, "active");
+      addAllClass(switchingLis, "active");
     }
   });
 
-  for (let i = 0; i < allSongsLis.length; i++) {
-    if (allSongsLis[i].classList.contains(albumNames[0])) {
-      addClass(allSongsLis[i], "active");
+  for (let i = 0; i < switchingLis.length; i++) {
+    if (switchingLis[i].classList.contains(albumNames[0])) {
+      addClass(switchingLis[i], "active");
     }
   } //홈페이지 로딩시 default active 할 요소
 
-  for (let i = 0; i < albumImgBtns.length; i++) {
-    albumImgBtns[i].addEventListener("click", function () {
+  for (let i = 0; i < switchingLiImgBtns.length; i++) {
+    switchingLiImgBtns[i].addEventListener("click", function () {
       let addingClass = false;
       const albumName = albumNames[i];
       if (!addingClass) {
         addingClass = true;
-        removeAllClass(albumImgBtns, "active");
-        addClass(albumImgBtns[i], "active");
-        removeAllClass(allSongsLis, "active");
-        for (let j = 0; j < allSongsLis.length; j++)
-          if (allSongsLis[j].classList.contains(albumName)) {
-            addClass(allSongsLis[j], "active");
+        removeAllClass(switchingLiImgBtns, "active");
+        addClass(switchingLiImgBtns[i], "active");
+        removeAllClass(switchingLis, "active");
+        for (let j = 0; j < switchingLis.length; j++)
+          if (switchingLis[j].classList.contains(albumName)) {
+            addClass(switchingLis[j], "active");
             addingClass = false;
           }
       }
@@ -210,40 +195,49 @@ window.addEventListener("load", () => {
   }); //앨범섹션 배경이미지 변경
 
   //section.news
-  newsLastIndex.innerText = "0" + newsListLis.length;
-  newsStartIndex.innerText = "0" + newsCurrentIndex;
-  plusWidthValue(newsProgressBar, newsCurrentIndex, progressValue, "%");
-  newsBeforeBtn.addEventListener("click", function () {
-    if (newsCurrentIndex <= 1) {
-      newsCurrentIndex = newsListLis.length;
+  arrowSliderNumLast.innerText = "0" + arrowSliderLis.length;
+  arrowSliderNumStart.innerText = "0" + arrowSliderCurrentIndex;
+  plusWidthValue(arrowSliderBar, arrowSliderCurrentIndex, progressValue, "%");
+  arrowSliderBtnBefore.addEventListener("click", function () {
+    if (arrowSliderCurrentIndex <= 1) {
+      arrowSliderCurrentIndex = arrowSliderLis.length;
       newsOffsetLeft =
-        newsListLis[newsCurrentIndex - 1].offsetWidth * newsListLis.length -
+        arrowSliderLis[arrowSliderCurrentIndex - 1].offsetWidth *
+          arrowSliderLis.length -
         120; //중복되는 margin 제거
-      newsUl.style.left = -newsOffsetLeft + "px";
+      arrowSliderUl.style.left = -newsOffsetLeft + "px";
     } else {
-      newsCurrentIndex--;
+      arrowSliderCurrentIndex--;
       newsOffsetLeft =
-        newsOffsetLeft - (newsListLis[newsCurrentIndex - 1].offsetWidth + 40);
+        newsOffsetLeft -
+        (arrowSliderLis[arrowSliderCurrentIndex - 1].offsetWidth + 40);
       newsOffsetLeft = Number.parseInt(newsOffsetLeft);
-      newsUl.style.left = -newsOffsetLeft + "px";
+      arrowSliderUl.style.left = -newsOffsetLeft + "px";
     }
-    newsStartIndex.innerText = "0" + newsCurrentIndex;
-    minusWidthValue(newsProgressBar, newsCurrentIndex, progressValue, "%");
+    arrowSliderNumStart.innerText = "0" + arrowSliderCurrentIndex;
+    minusWidthValue(
+      arrowSliderBar,
+      arrowSliderCurrentIndex,
+      progressValue,
+      "%"
+    );
   }); //뉴스 슬라이더 다음버튼
-  newsNextBtn.addEventListener("click", function () {
-    if (newsCurrentIndex == newsListLis.length) {
-      newsCurrentIndex = 1;
+  arrowSliderBtnNext.addEventListener("click", function () {
+    if (arrowSliderCurrentIndex == arrowSliderLis.length) {
+      arrowSliderCurrentIndex = 1;
       newsOffsetLeft = 0;
-      newsUl.style.left = 0 + "px";
+      arrowSliderUl.style.left = 0 + "px";
     } else {
-      newsCurrentIndex++;
+      arrowSliderCurrentIndex++;
       newsOffsetLeft =
-        newsOffsetLeft + newsListLis[newsCurrentIndex - 1].offsetWidth + 40; //margin 40
+        newsOffsetLeft +
+        arrowSliderLis[arrowSliderCurrentIndex - 1].offsetWidth +
+        40; //margin 40
       newsOffsetLeft = Number.parseInt(newsOffsetLeft);
-      newsUl.style.left = -newsOffsetLeft + "px";
+      arrowSliderUl.style.left = -newsOffsetLeft + "px";
     }
-    plusWidthValue(newsProgressBar, newsCurrentIndex, progressValue, "%");
-    newsStartIndex.innerText = "0" + newsCurrentIndex;
+    plusWidthValue(arrowSliderBar, arrowSliderCurrentIndex, progressValue, "%");
+    arrowSliderNumStart.innerText = "0" + arrowSliderCurrentIndex;
   }); //뉴스 슬라이더 이전버튼
   function plusWidthValue(element, currentIndex, value, unit) {
     element.style.width = currentIndex * value + unit;
@@ -261,10 +255,10 @@ window.addEventListener("load", () => {
         removeAllClass(membersMember, "active");
       }
 
-      if (currentScrollTop >= newsThreshold) {
-        addClass(newsListViewer, "active");
+      if (currentScrollTop >= arrowSliderThreshold) {
+        addClass(arrowSlider, "active");
       } else {
-        removeClass(newsListViewer, "active");
+        removeClass(arrowSlider, "active");
       }
 
       if (currentScrollTop > 200) {
@@ -274,73 +268,78 @@ window.addEventListener("load", () => {
   ); //스크롤하면 member 화면에 표시
 
   //section.intro
-  translateKorea.addEventListener("click", function () {
-    removeAllClass(introDescPs, "active");
-    addClass(introDescPs[0], "active");
+  langSelectorBtnKor.addEventListener("click", function () {
+    removeAllClass(langSelectorP, "active");
+    addClass(langSelectorP[0], "active");
   });
-  translateEnglish.addEventListener("click", function () {
-    removeClass(introDescPs[0], "active");
-    addClass(introDescPs[1], "active");
+  langSelectorBtnEng.addEventListener("click", function () {
+    removeClass(langSelectorP[0], "active");
+    addClass(langSelectorP[1], "active");
   });
   sizeCoverBtn.addEventListener("click", function () {
-    for (let i = 0; i < imagesListLis.length; i++) {
-      removeAllClass(imagesListLis, "contain");
+    for (let i = 0; i < btnSliderSliderImg.length; i++) {
+      removeAllClass(btnSliderSliderImg, "contain");
     }
   });
   sizeContainBtn.addEventListener("click", function () {
-    for (let i = 0; i < imagesListLis.length; i++) {
-      addAllClass(imagesListLis, "contain");
+    for (let i = 0; i < btnSliderSliderImg.length; i++) {
+      addAllClass(btnSliderSliderImg, "contain");
     }
   });
-  for (let i = 0; i < thumbLis.length; i++) {
-    thumbLis[i].addEventListener("click", function () {
-      removeAllClassThenAddClass(thumbLis, thumbLis[i], "active");
-      if (i < thumbLis.length) offTopPosition(thumbnaiviewer, i * 20, "%");
-      offTopPosition(imagesListUl, -(i * 100), "%");
+  for (let i = 0; i < btnSliderBtnLis.length; i++) {
+    btnSliderBtnLis[i].addEventListener("click", function () {
+      removeAllClassThenAddClass(btnSliderBtnLis, btnSliderBtnLis[i], "active");
+      if (i < btnSliderBtnLis.length)
+        offTopPosition(btnSliderBtnViewer, i * 20, "%");
+      offTopPosition(btnSliderSliderUl, -(i * 100), "%");
     });
   } //썸네일 클릭시 original 이미지 슬라이드
 
-  for (let i = 0; i < thumbLisMobile.length; i++) {
-    thumbLisMobile[i].addEventListener("click", function () {
-      removeAllClassThenAddClass(thumbLisMobile, thumbLisMobile[i], "active");
-      if (i < thumbLisMobile.length) {
-        offLeftPosition(thumbnaiviewerMobile, i * 20, "%");
+  for (let i = 0; i < btnSliderMobileBtnLis.length; i++) {
+    btnSliderMobileBtnLis[i].addEventListener("click", function () {
+      removeAllClassThenAddClass(
+        btnSliderMobileBtnLis,
+        btnSliderMobileBtnLis[i],
+        "active"
+      );
+      if (i < btnSliderMobileBtnLis.length) {
+        offLeftPosition(btnSliderMobileBtnViewer, i * 20, "%");
       }
-      offTopPosition(imagesListUl, -(i * 100), "%");
+      offTopPosition(btnSliderSliderUl, -(i * 100), "%");
     });
   } //모바일 썸네일 클릭시 대형이미지 슬라이드
 
   //section.banner
   let bannerAutoSlide = setInterval(function () {
     let event = new Event("click");
-    bannerIndexs[bannerStartIndex].dispatchEvent(event);
+    sliderBtnIndexs[sliderStartIndex].dispatchEvent(event);
   }, 3000); //자동배너 슬라이더
 
-  for (let i = 0; i < bannerIndexs.length; i++) {
-    bannerIndexs[i].addEventListener("click", function () {
-      removeAllClassThenAddClass(bannerIndexs, bannerIndexs[i], "active");
-      offLEftPosition(bannerUl, -(i * 100), "%");
-      bannerStartIndex++;
-      if (bannerLastIndex <= bannerStartIndex) bannerStartIndex = 0;
+  for (let i = 0; i < sliderBtnIndexs.length; i++) {
+    sliderBtnIndexs[i].addEventListener("click", function () {
+      removeAllClassThenAddClass(sliderBtnIndexs, sliderBtnIndexs[i], "active");
+      offLEftPosition(sliderUl, -(i * 100), "%");
+      sliderStartIndex++;
+      if (sliderLastIndex <= sliderStartIndex) sliderStartIndex = 0;
     });
   } //배너 인덱스 클릭이벤트
-  bannerPlay.addEventListener("click", function () {
-    if (bannerSliding == false) {
+  sliderBtnPlay.addEventListener("click", function () {
+    if (sliderSliding == false) {
       bannerAutoSlide = setInterval(function () {
         let event = new Event("click");
-        bannerIndexs[bannerStartIndex].dispatchEvent(event);
+        sliderBtnIndexs[sliderStartIndex].dispatchEvent(event);
       }, 3500);
     }
-    bannerSliding = true;
+    sliderSliding = true;
   }); //배너슬라이드 플레이
-  bannerStop.addEventListener("click", function () {
-    bannerSliding = false;
+  sliderBtnStop.addEventListener("click", function () {
+    sliderSliding = false;
     clearInterval(bannerAutoSlide);
   }); //배너슬라이드 멈춤
 
   //h1
   setTimeout(() => {
-    h1Span.classList.add("rotate");
+    headerChar.classList.add("header__char--rotate");
   }, 500);
 
   function removeAllClassThenAddClass(elements, element, className) {

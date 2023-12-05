@@ -17,47 +17,67 @@
   </head>
   <body>
     <div class="skip">
-      <a href="#intro">본문 바로가기</a>
+      <a class="skip__link main-link" href="#intro">본문 바로가기</a>
     </div>
     <header class="header">
-      <h1>
-        <a href="index.html">BLA<span>C</span>KPINK HISTORY</a>
-      </h1>
+      <div class="header__inner">
+        <h1 class="header__title">
+          <a class="header__link" href="index.html"
+            >BLA<span class="header__char">C</span>KPINK HISTORY</a
+          >
+        </h1>
+      </div>
     </header>
 
-    <main class="main">
+    <main>
       <!-- banner -->
       <div class="banner">
-        <div class="slider-viewer">
-          <ul class="slider-ul">
-            <li class="slider-li">
-              <img
-                src="../../source/images/blackpink/68468368.jpg"
-                alt="BLACKPINK 2019 PRIVATE STAGE [Chapter 1] 2019.09/21(SAT) 1PM/6PM OLYMPIC PARK OLYMPIC HALL"
-              />
-              <span class="out-text">출처 : 블랙핑크 페이스북</span>
-            </li>
-            <li class="slider-li">
-              <img
-                src="../../source/images/blackpink/131108774.jpg"
-                alt="BLACKPINK LIVESTREAM CONCERT: THE SHOW 2021.1.31 SYN 2PM(KST)"
-              />
-              <span class="out-text">출처 : 블랙핑크 페이스북</span>
-            </li>
-          </ul>
-          <div class="slider-controls border-top">
-            <button type="button" class="control index text-indent active">
-              인덱스1
-            </button>
-            <button type="button" class="control text-indent index">
-              인덱스2
-            </button>
-            <button type="button" class="control text-indent play">
-              시작버튼
-            </button>
-            <button type="button" class="control text-indent stop">
-              멈춤버튼
-            </button>
+        <div class="banner__inner">
+          <div class="slider">
+            <ul class="slider__ul">
+              <li class="slider__li">
+                <img
+                  class="slider__img"
+                  src="../../source/images/blackpink/68468368.jpg"
+                  alt="BLACKPINK 2019 PRIVATE STAGE [Chapter 1] 2019.09/21(SAT) 1PM/6PM OLYMPIC PARK OLYMPIC HALL"
+                />
+                <span class="out-text">출처 : 블랙핑크 페이스북</span>
+              </li>
+              <li class="slider__li">
+                <img
+                  class="slider__img"
+                  src="../../source/images/blackpink/131108774.jpg"
+                  alt="BLACKPINK LIVESTREAM CONCERT: THE SHOW 2021.1.31 SYN 2PM(KST)"
+                />
+                <span class="out-text">출처 : 블랙핑크 페이스북</span>
+              </li>
+            </ul>
+            <div class="slider__controls border-top">
+              <button
+                type="button"
+                class="slider__btn slider__btn--index text-indent active"
+              >
+                인덱스1
+              </button>
+              <button
+                type="button"
+                class="slider__btn slider__btn--index text-indent"
+              >
+                인덱스2
+              </button>
+              <button
+                type="button"
+                class="slider__btn slider__btn--play text-indent"
+              >
+                시작버튼
+              </button>
+              <button
+                type="button"
+                class="slider__btn slider__btn--stop text-indent"
+              >
+                멈춤버튼
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -65,201 +85,242 @@
 
       <!-- intro -->
       <div class="intro" id="intro">
-        <div class="intro-container">
-          <div class="thumbnail">
-            <div class="thumbnail-viewer"></div>
-            <ul class="thumbnail-img-ul">
-              <li class="thumbnail-img-li active">
-                <button type="button">
-                  <img
-                    src="../../source/images/blackpink/channels4_profile.jpg"
-                    alt="블랙핑크 멤버 단체사진"
-                  />
-                </button>
-              </li>
-              <li class="thumbnail-img-li">
-                <button type="button">
-                  <img
-                    class="top"
-                    src="../../source/images/blackpink/blackpink.jpg"
-                    alt="블랙핑크 멤버 단체사진"
-                  />
-                </button>
-              </li>
-              <li class="thumbnail-img-li">
-                <button type="button">
-                  <img
-                    src="../../source/images/blackpink/main-img.jpg"
-                    alt="블랙핑크 멤버 단체사진"
-                  />
-                </button>
-              </li>
-              <li class="thumbnail-img-li">
-                <button type="button">
-                  <img
-                    src="../../source/images/blackpink/299204677.jpg"
-                    alt="BLACKPINK Pre-Release-Single PINK VENOM 2022.08.19 12AM EST & 1PM KST"
-                  />
-                </button>
-              </li>
-              <li class="thumbnail-img-li">
-                <button type="button">
-                  <img
-                    src="../../source/images/blackpink/299145099.jpg"
-                    alt="BLACKPINK Pre-Release-Single PINK VENOM"
-                  />
-                </button>
-              </li>
-            </ul>
-          </div>
-          <div class="original-viewer">
-            <div class="size-controls">
-              <button type="button" class="size-cover">
-                <img
-                  src="../../source/images/blackpink/plus-solid.svg"
-                  alt="확대버튼이미지"
-                />
-              </button>
-              <button type="button" class="size-contain">
-                <img
-                  src="../../source/images/blackpink/minus-solid.svg"
-                  alt="축소버튼이미지"
-                />
-              </button>
+        <div class="intro__inner">
+          <div class="btn-slider">
+            <div class="intro__thumbnail btn-slider__inner">
+              <div class="btn-slider__btn-viewer"></div>
+              <ul class="btn-slider__btn-ul">
+                <li class="btn-slider__btn-li active">
+                  <button type="button" class="btn-slider__btn">
+                    <img
+                      class="btn-slider__btn-img"
+                      src="../../source/images/blackpink/channels4_profile.jpg"
+                      alt="블랙핑크 멤버 단체사진"
+                    />
+                  </button>
+                </li>
+                <li class="btn-slider__btn-li">
+                  <button type="button" class="btn-slider__btn">
+                    <img
+                      class="btn-slider__btn-img object-position-top"
+                      src="../../source/images/blackpink/blackpink.jpg"
+                      alt="블랙핑크 멤버 단체사진"
+                    />
+                  </button>
+                </li>
+                <li class="btn-slider__btn-li">
+                  <button type="button" class="btn-slider__btn">
+                    <img
+                      class="btn-slider__btn-img"
+                      src="../../source/images/blackpink/main-img.jpg"
+                      alt="블랙핑크 멤버 단체사진"
+                    />
+                  </button>
+                </li>
+                <li class="btn-slider__btn-li">
+                  <button type="button" class="btn-slider__btn">
+                    <img
+                      class="btn-slider__btn-img"
+                      src="../../source/images/blackpink/299204677.jpg"
+                      alt="BLACKPINK Pre-Release-Single PINK VENOM 2022.08.19 12AM EST & 1PM KST"
+                    />
+                  </button>
+                </li>
+                <li class="btn-slider__btn-li">
+                  <button type="button" class="btn-slider__btn">
+                    <img
+                      class="btn-slider__btn-img"
+                      src="../../source/images/blackpink/299145099.jpg"
+                      alt="BLACKPINK Pre-Release-Single PINK VENOM"
+                    />
+                  </button>
+                </li>
+              </ul>
             </div>
-            <ul class="original-img-ul">
-              <li class="original-img-li">
-                <img
-                  src="../../source/images/blackpink/channels4_profile.jpg"
-                  alt="블랙핑크 멤버 단체사진"
-                />
-                <span class="source">사진출처 - 유튜브 블랙핑크 채널</span>
-              </li>
-              <li class="original-img-li">
-                <img
-                  src="../../source/images/blackpink/blackpink.jpg"
-                  alt="블랙핑크 멤버 단체사진"
-                />
-                <span class="source"
-                  >사진출처 - http://www.breaknews.com/622171</span
+
+            <!--  -->
+            <div class="intro__slider btn-slider__slider">
+              <div class="btn-slider__img-size-controls">
+                <button
+                  type="button"
+                  class="btn-slider__size-btn btn-slider__size-btn_cover"
                 >
-              </li>
-              <li class="original-img-li">
-                <img
-                  src="../../source/images/blackpink/main-img.jpg"
-                  alt="블랙핑크 멤버 단체사진"
-                />
-                <span class="source">사진출처 - YG</span>
-              </li>
-              <li class="original-img-li">
-                <img
-                  src="../../source/images/blackpink/299204677.jpg"
-                  alt="BLACKPINK Pre-Release-Single PINK VENOM 2022.08.19 12AM EST & 1PM KST"
-                />
-                <span class="source">사진출처 - YG</span>
-              </li>
-              <li class="original-img-li">
-                <img
-                  src="../../source/images/blackpink/299145099.jpg"
-                  alt="BLACKPINK Pre-Release-Single PINK VENOM"
-                />
-                <span class="source">사진출처 - YG</span>
-              </li>
-            </ul>
-          </div>
-          <div class="thumbnail-mobile">
-            <div class="thumbnail-viewer-mobile"></div>
-            <ul>
-              <li class="active">
-                <button type="button">
                   <img
+                    src="../../source/images/blackpink/plus-solid.svg"
+                    alt="확대버튼이미지"
+                  />
+                </button>
+                <button
+                  type="button"
+                  class="btn-slider__size-btn btn-slider__size-btn_contain"
+                >
+                  <img
+                    src="../../source/images/blackpink/minus-solid.svg"
+                    alt="축소버튼이미지"
+                  />
+                </button>
+              </div>
+              <ul class="btn-slider__slider-ul">
+                <li class="btn-slider__slider-li">
+                  <img
+                    class="btn-slider__slider-img"
                     src="../../source/images/blackpink/channels4_profile.jpg"
                     alt="블랙핑크 멤버 단체사진"
                   />
-                </button>
-              </li>
-              <li>
-                <button type="button">
+                  <span class="btn-slider__source"
+                    >사진출처 - 유튜브 블랙핑크 채널</span
+                  >
+                </li>
+                <li class="btn-slider__slider-li">
                   <img
-                    class="top"
+                    class="btn-slider__slider-img"
                     src="../../source/images/blackpink/blackpink.jpg"
                     alt="블랙핑크 멤버 단체사진"
                   />
-                </button>
-              </li>
-              <li>
-                <button type="button">
+                  <span class="btn-slider__source"
+                    >사진출처 - http://www.breaknews.com/622171</span
+                  >
+                </li>
+                <li class="btn-slider__slider-li">
                   <img
+                    class="btn-slider__slider-img"
                     src="../../source/images/blackpink/main-img.jpg"
                     alt="블랙핑크 멤버 단체사진"
                   />
-                </button>
-              </li>
-              <li>
-                <button type="button">
+                  <span class="btn-slider__source">사진출처 - YG</span>
+                </li>
+                <li class="btn-slider__slider-li">
                   <img
+                    class="btn-slider__slider-img"
                     src="../../source/images/blackpink/299204677.jpg"
                     alt="BLACKPINK Pre-Release-Single PINK VENOM 2022.08.19 12AM EST & 1PM KST"
                   />
-                </button>
-              </li>
-              <li>
-                <button type="button">
+                  <span class="btn-slider__source">사진출처 - YG</span>
+                </li>
+                <li class="btn-slider__slider-li">
                   <img
+                    class="btn-slider__slider-img"
                     src="../../source/images/blackpink/299145099.jpg"
                     alt="BLACKPINK Pre-Release-Single PINK VENOM"
                   />
-                </button>
-              </li>
-            </ul>
-          </div>
-          <div class="desc">
-            <div class="black-line"></div>
-            <h2>BLACKPINK</h2>
-            <div class="translate">
-              <button type="button" class="language korea">K</button>
-              <button type="button" class="language english">E</button>
+                  <span class="btn-slider__source">사진출처 - YG</span>
+                </li>
+              </ul>
             </div>
-            <p class="kor active">
-              BLACKPINK(블랙핑크)는 2016년 8월 8일에 데뷔한 대한민국의 YG
-              엔터테인먼트 소속 4인조 다국적 걸 그룹이다. YG 엔터테인먼트 소속
-              아티스트들 중 처음으로 리더가 없는 그룹으로, 구성원 네 명이
-              친구처럼 지낸다. 팬 클럽 이름은 블링크이다. 8월 8일 오후 3시,
-              블랙핑크는 강남구 도산대로 모스 스튜디오에서 데뷔 기념 쇼케이스를
-              열고 싱글 앨범 'SQUARE ONE'과 수록곡인 '붐바야'와 '휘파람'의
-              뮤직비디오를 대중에 공개하여 대중의 인기를 끌었다.[1][2] 같은 날
-              오후 8시, 데뷔 음원을 공개한 지 네 시간 만에 신곡 '휘파람'이
-              대한민국 내 전 음원 순위에서 1위를 하는 저력을 발휘하였으며, 8월
-              14일 SBS 인기가요를 통하여 방송에 데뷔했다. 타이틀 곡 '휘파람'으로
-              8월 21일 SBS 인기가요에서 데뷔 2주 만에 1위를 차지해 미쓰에이의
-              "Bad Girl, Good Girl"이 기록한 걸그룹 역대 데뷔 최단기간 1위
-              기록을 갈아 치웠다.[3] 이후 '휘파람'은 2016년 8월 가온차트 디지털,
-              다운로드, 스트리밍, 모바일차트 등 정상에 오르며 4관왕을
-              달성했다.[4] 11월 1일, 두 번째 싱글 앨범인 'SQUARE TWO'의 발매와
-              함께 수록곡 '불장난'과 'STAY'의 뮤직비디오를 공개를 하며 인기를
-              끌었다.[5]11월 6일 인기가요에서 '불장난', 'STAY'의 첫 무대를
-              선보였다. '불장난'은 11월 27일과 12월 4일 2주 연속으로 SBS
-              인기가요에서 1위를 차지했다. (출처:위키백과)
-            </p>
-            <p class="eng">
-              Blackpink (Korean: 블랙핑크; RR: Beullaekpingkeu, stylized in all
-              caps or as BLɅϽKPIИK) is a South Korean girl group formed by YG
-              Entertainment, consisting of members Jisoo, Jennie, Rosé, and
-              Lisa. Dubbed the "biggest girl group in the world", they are known
-              for being the most successful Korean girl group internationally
-              and one of the leaders of the Korean Wave.[1] Blackpink debuted in
-              August 2016 with their single album Square One, which featured
-              "Whistle" and "Boombayah", their first number-one entries on South
-              Korea's Gaon Digital Chart and the US Billboard World Digital Song
-              Sales chart, respectively. It was followed in November by the
-              single album Square Two, whose song "Playing with Fire" was the
-              first by a Korean girl group to enter the Billboard Canadian Hot
-              100.[2] The group expanded its global reach with "Ddu-Du Ddu-Du"
-              (2018), which was the first song by a Korean female group to enter
-              the UK Singles Chart and receive a certification from the
-              Recording Industry Association of America (RIAA). (source :
-              wikipedia)
-            </p>
+
+            <!--btn-slider-mobile  -->
+            <div class="intro__thumbnail-mobile btn-slider__mobile-inner">
+              <div class="btn-slider__mobile-btn-viewer"></div>
+              <ul class="btn-slider__mobile-btn-ul">
+                <li class="btn-slider__mobile-btn-li active">
+                  <button type="button" class="btn-slider__mobile-btn">
+                    <img
+                      class="btn-slider__mobile-btn-img"
+                      src="../../source/images/blackpink/channels4_profile.jpg"
+                      alt="블랙핑크 멤버 단체사진"
+                    />
+                  </button>
+                </li>
+                <li class="btn-slider__mobile-btn-li">
+                  <button type="button" class="btn-slider__mobile-btn">
+                    <img
+                      class="btn-slider__mobile-btn-img object-position-top"
+                      src="../../source/images/blackpink/blackpink.jpg"
+                      alt="블랙핑크 멤버 단체사진"
+                    />
+                  </button>
+                </li>
+                <li class="btn-slider__mobile-btn-li">
+                  <button type="button" class="btn-slider__mobile-btn">
+                    <img
+                      class="btn-slider__mobile-btn-img"
+                      src="../../source/images/blackpink/main-img.jpg"
+                      alt="블랙핑크 멤버 단체사진"
+                    />
+                  </button>
+                </li>
+                <li class="btn-slider__mobile-btn-li">
+                  <button type="button" class="btn-slider__mobile-btn">
+                    <img
+                      class="btn-slider__mobile-btn-img"
+                      src="../../source/images/blackpink/299204677.jpg"
+                      alt="BLACKPINK Pre-Release-Single PINK VENOM 2022.08.19 12AM EST & 1PM KST"
+                    />
+                  </button>
+                </li>
+                <li class="btn-slider__mobile-btn-li">
+                  <button type="button" class="btn-slider__mobile-btn">
+                    <img
+                      class="btn-slider__mobile-btn-img"
+                      src="../../source/images/blackpink/299145099.jpg"
+                      alt="BLACKPINK Pre-Release-Single PINK VENOM"
+                    />
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <!--  -->
+          </div>
+
+          <!--  -->
+          <div class="intro__desc">
+            <div class="intro__line"></div>
+            <h2 class="intro__title">BLACKPINK</h2>
+            <div class="intro__lang-translate lang-selector">
+              <button
+                type="button"
+                class="intro__lang-btn lang-selector__btn lang-selector__btn--kor"
+              >
+                K
+              </button>
+              <button
+                type="button"
+                class="intro__lang-btn lang-selector__btn lang-selector__btn--eng"
+              >
+                E
+              </button>
+              <p class="intro__lang-p lang-selector__p active">
+                BLACKPINK(블랙핑크)는 2016년 8월 8일에 데뷔한 대한민국의 YG
+                엔터테인먼트 소속 4인조 다국적 걸 그룹이다. YG 엔터테인먼트 소속
+                아티스트들 중 처음으로 리더가 없는 그룹으로, 구성원 네 명이
+                친구처럼 지낸다. 팬 클럽 이름은 블링크이다. 8월 8일 오후 3시,
+                블랙핑크는 강남구 도산대로 모스 스튜디오에서 데뷔 기념
+                쇼케이스를 열고 싱글 앨범 'SQUARE ONE'과 수록곡인 '붐바야'와
+                '휘파람'의 뮤직비디오를 대중에 공개하여 대중의 인기를
+                끌었다.[1][2] 같은 날 오후 8시, 데뷔 음원을 공개한 지 네 시간
+                만에 신곡 '휘파람'이 대한민국 내 전 음원 순위에서 1위를 하는
+                저력을 발휘하였으며, 8월 14일 SBS 인기가요를 통하여 방송에
+                데뷔했다. 타이틀 곡 '휘파람'으로 8월 21일 SBS 인기가요에서 데뷔
+                2주 만에 1위를 차지해 미쓰에이의 "Bad Girl, Good Girl"이 기록한
+                걸그룹 역대 데뷔 최단기간 1위 기록을 갈아 치웠다.[3] 이후
+                '휘파람'은 2016년 8월 가온차트 디지털, 다운로드, 스트리밍,
+                모바일차트 등 정상에 오르며 4관왕을 달성했다.[4] 11월 1일, 두
+                번째 싱글 앨범인 'SQUARE TWO'의 발매와 함께 수록곡 '불장난'과
+                'STAY'의 뮤직비디오를 공개를 하며 인기를 끌었다.[5]11월 6일
+                인기가요에서 '불장난', 'STAY'의 첫 무대를 선보였다. '불장난'은
+                11월 27일과 12월 4일 2주 연속으로 SBS 인기가요에서 1위를
+                차지했다. (출처:위키백과)
+              </p>
+              <p class="intro__lang-p lang-selector__p">
+                Blackpink (Korean: 블랙핑크; RR: Beullaekpingkeu, stylized in
+                all caps or as BLɅϽKPIИK) is a South Korean girl group formed by
+                YG Entertainment, consisting of members Jisoo, Jennie, Rosé, and
+                Lisa. Dubbed the "biggest girl group in the world", they are
+                known for being the most successful Korean girl group
+                internationally and one of the leaders of the Korean Wave.[1]
+                Blackpink debuted in August 2016 with their single album Square
+                One, which featured "Whistle" and "Boombayah", their first
+                number-one entries on South Korea's Gaon Digital Chart and the
+                US Billboard World Digital Song Sales chart, respectively. It
+                was followed in November by the single album Square Two, whose
+                song "Playing with Fire" was the first by a Korean girl group to
+                enter the Billboard Canadian Hot 100.[2] The group expanded its
+                global reach with "Ddu-Du Ddu-Du" (2018), which was the first
+                song by a Korean female group to enter the UK Singles Chart and
+                receive a certification from the Recording Industry Association
+                of America (RIAA). (source : wikipedia)
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -267,58 +328,87 @@
 
       <!-- members -->
       <div class="members">
-        <div class="members-container">
-          <h2>MEMBERs</h2>
-          <div class="member">
-            <h4>제니(JENNIE)</h4>
+        <div class="members__inner">
+          <h2 class="members__title title-h2">MEMBERs</h2>
+          <div class="members__member vertical-media">
+            <h4 class="members__member-title vertical-media__title">
+              제니(JENNIE)
+            </h4>
             <img
+              class="members__img vertical-media__img"
               src="../../source/images/blackpink/4ae1ec53b817.jpg"
               alt="JENNIE SOLO 900 MILLION VIEWS ON YOUTUBE"
             />
             <a
+              class="members__link vertical-media__link"
               href="https://www.youtube.com/watch?v=b73BI9eUkjM&ab_channel=BLACKPINK"
               target="_blank"
             >
               <img
+                class="members__link-img vertical-media__img vertical-media__img--cover"
                 src="../../source/images/blackpink/solothumnail.JPG"
                 alt="JENNIE - SOLO M/V YG OFFICIAL"
               />
             </a>
           </div>
-          <div class="member">
-            <h4>로제(ROSE)</h4>
+          <div class="members__member vertical-media">
+            <h4 class="members__member-title vertical-media__title">
+              로제(ROSE)
+            </h4>
             <img
+              class="members__img vertical-media__img"
               src="../../source/images/blackpink/0000990112_00.jpg"
               alt="200 MILLION VIEWS ON YOUTUBE ROSE GONE"
             />
-            <a href="https://youtu.be/K9_VFxzCuQ0" target="_blank">
+            <a
+              class="members__link vertical-media__link"
+              href="https://youtu.be/K9_VFxzCuQ0"
+              target="_blank"
+            >
               <img
+                class="members__link-img vertical-media__img vertical-media__img--cover"
                 src="../../source/images/blackpink/gonethumnail.JPG"
                 alt="ROSE - GOne M/V YG OFFICIAL"
               />
             </a>
           </div>
-          <div class="member">
-            <h4>리사(LALISA)</h4>
+          <div class="members__member vertical-media">
+            <h4 class="members__member-title vertical-media__title">
+              리사(LALISA)
+            </h4>
             <img
+              class="members__img vertical-media__img"
               src="../../source/images/blackpink/AKR20220109039500005.jpg"
               alt="LISA FIRST SINGLE ALBUM LALISA 400M VIEWS ON YOUTUBE"
             />
-            <a href="https://youtu.be/awkkyBH2zEo" target="_blank">
+            <a
+              class="members__link vertical-media__link"
+              href="https://youtu.be/awkkyBH2zEo"
+              target="_blank"
+            >
               <img
+                class="members__link-img vertical-media__img vertical-media__img--cover"
                 src="../../source/images/blackpink/moneythumnail.JPG"
                 alt="LISA - LALISA M/V YG OFFICIAL"
               />
             </a>
           </div>
-          <div class="member">
-            <h4>지수(JISOO)</h4>
+          <div class="members__member vertical-media">
+            <h4 class="members__member-title vertical-media__title">
+              지수(JISOO)
+            </h4>
             <img
+              class="members__img vertical-media__img"
               src="../../source/images/blackpink/e37c28054a.jpg"
               alt="JISOO 200M views on youtube flower music video 200 million views on youtube"
             />
-            <a href="https://youtu.be/YudHcBIxlYw" target="_blank">
+            <a
+              class="members__link vertical-media__link"
+              href="https://youtu.be/YudHcBIxlYw"
+              target="_blank"
+            >
               <img
+                class="members__link-img vertical-media__img vertical-media__img--cover"
                 src="../../source/images/blackpink/flowerthumnail.JPG"
                 alt="JISOO - 꽃(FLOWER) M/V YG OFFICIAL"
               />
@@ -330,72 +420,89 @@
 
       <!-- news -->
       <div class="news">
-        <div class="news-container">
-          <h2>NEWS</h2>
-          <div class="news-index-controls">
-            <button type="button" class="before">
-              <img
-                src="../../source/images/blackpink/chevron-left-solid.svg"
-                alt="이전버튼이미지"
-              />
-            </button>
-            <span class="start-number"></span>
-            <div class="percentage">
-              <div class="bar"></div>
+        <div class="news__inner">
+          <h2 class="news__title title-h2 title-h2--pink">NEWS</h2>
+          <div class="arrow-slider">
+            <div class="news__controls arrow-slider__controls">
+              <button
+                type="button"
+                class="news__slider-btn--before arrow-slider__btn arrow-slider__btn--before"
+              >
+                <img
+                  class="arrow-slider__img"
+                  src="../../source/images/blackpink/chevron-left-solid.svg"
+                  alt="이전버튼이미지"
+                />
+              </button>
+              <span class="arrow-slider__num arrow-slider__num--start"></span>
+              <div class="news__percentage arrow-slider__percentage">
+                <div class="arrow-slider__bar"></div>
+              </div>
+              <span class="arrow-slider__num arrow-slider__num--last"></span>
+              <button
+                type="button"
+                class="news__slider-btn--next arrow-slider__btn arrow-slider__btn--next"
+              >
+                <img
+                  class="arrow-slider__img"
+                  src="../../source/images/blackpink/chevron-right-solid.svg"
+                  alt="다음버튼이미지"
+                />
+              </button>
             </div>
-            <span class="last-number"></span>
-            <button type="button" class="next">
-              <img
-                src="../../source/images/blackpink/chevron-right-solid.svg"
-                alt="다음버튼이미지"
-              />
-            </button>
-          </div>
-          <div class="news-viewer">
-            <ul class="news-ul">
-              <li class="news-li">
-                <a href="#"
-                  ><img
-                    src="../../source/images/blackpink/98313d8fee967938852ec894291.jpg"
-                    alt="icecream 800million views on youtube blackpink&selena gomez"
-                /></a>
-              </li>
-              <li class="news-li">
-                <a href="#"
-                  ><img
-                    src="../../source/images/blackpink/0000690395_001_20220808170502520.jpg"
-                    alt="blackpink pink venom pre-release single 2022.08.19 "
-                /></a>
-              </li>
-              <li class="news-li">
-                <a href="#"
-                  ><img
-                    src="../../source/images/blackpink/0006336861_001_20220.jpg"
-                    alt="2nd album born pink d-day 2022.09.16 12AM(EST)&!PM(KST) BLACKPINK"
-                /></a>
-              </li>
-              <li class="news-li">
-                <a href="#"
-                  ><img
-                    src="../../source/images/blackpink/0000310330_001_2022.jpg"
-                    alt="blackpink pre-release-single pink venom 19th AUGUST 2022 12AM EST 19th AUGUST 2022 1PM KST"
-                /></a>
-              </li>
-              <li class="news-li">
-                <a href="#"
-                  ><img
-                    src="../../source/images/blackpink/main-img.jpg"
-                    alt="블랙핑크이미지"
-                /></a>
-              </li>
-              <li class="news-li">
-                <a href="#"
-                  ><img
-                    src="../../source/images/blackpink/bornpinkposter.jpg"
-                    alt="blackpink born pink world tour seoul finale GOGHEOK SKY DOME 2023.09.16 SAT 7PM ~ 2023.09.17 SUN 6PM (KST) online ticket open 08.29 TUE 8PM / 09.01 FRI 2PM (KST) online ticket open 08.29 TUE 8PM (KST)"
-                /></a>
-              </li>
-            </ul>
+            <!--  -->
+            <div class="news__slider arrow-slider__slider">
+              <ul class="news__ul arrow-slider__ul">
+                <li class="news__li arrow-slider__li">
+                  <a href="#" class="arrow-slider__link"
+                    ><img
+                      class="arrow-slider__img"
+                      src="../../source/images/blackpink/98313d8fee967938852ec894291.jpg"
+                      alt="icecream 800million views on youtube blackpink&selena gomez"
+                  /></a>
+                </li>
+                <li class="news__li arrow-slider__li">
+                  <a href="#" class="arrow-slider__link"
+                    ><img
+                      class="arrow-slider__img"
+                      src="../../source/images/blackpink/0000690395_001_20220808170502520.jpg"
+                      alt="blackpink pink venom pre-release single 2022.08.19 "
+                  /></a>
+                </li>
+                <li class="news__li arrow-slider__li">
+                  <a href="#" class="arrow-slider__link"
+                    ><img
+                      class="arrow-slider__img"
+                      src="../../source/images/blackpink/0006336861_001_20220.jpg"
+                      alt="2nd album born pink d-day 2022.09.16 12AM(EST)&!PM(KST) BLACKPINK"
+                  /></a>
+                </li>
+                <li class="news__li arrow-slider__li">
+                  <a href="#" class="arrow-slider__link"
+                    ><img
+                      class="arrow-slider__img"
+                      src="../../source/images/blackpink/0000310330_001_2022.jpg"
+                      alt="blackpink pre-release-single pink venom 19th AUGUST 2022 12AM EST 19th AUGUST 2022 1PM KST"
+                  /></a>
+                </li>
+                <li class="news__li arrow-slider__li">
+                  <a href="#" class="arrow-slider__link"
+                    ><img
+                      class="arrow-slider__img"
+                      src="../../source/images/blackpink/main-img.jpg"
+                      alt="블랙핑크이미지"
+                  /></a>
+                </li>
+                <li class="news__li arrow-slider__li">
+                  <a href="#" class="arrow-slider__link"
+                    ><img
+                      class="arrow-slider__img"
+                      src="../../source/images/blackpink/bornpinkposter.jpg"
+                      alt="blackpink born pink world tour seoul finale GOGHEOK SKY DOME 2023.09.16 SAT 7PM ~ 2023.09.17 SUN 6PM (KST) online ticket open 08.29 TUE 8PM / 09.01 FRI 2PM (KST) online ticket open 08.29 TUE 8PM (KST)"
+                  /></a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -403,102 +510,171 @@
 
       <!-- albums -->
       <div class="albums active">
-        <div class="albums-container">
-          <h2>ALBUMs</h2>
+        <div class="albums__inner">
+          <h2 class="albums__title title-h2 title-h2--pink">ALBUMs</h2>
 
-          <div class="albums-bg-controls">
-            <button type="button" class="constrol text-indent play">
+          <div class="albums__bg-controls">
+            <button
+              type="button"
+              class="albums__btn albums__btn--play text text-indent"
+            >
               동적배경이미지 버튼
             </button>
-            <button type="button" class="control text-indent stop">
+            <button
+              type="button"
+              class="albums__btn albums__btn--stop text-indent"
+            >
               정적배경이미지 버튼
             </button>
           </div>
 
-          <ul class="songs-title-ul">
-            <li class="song-title-li square-one">휘파람</li>
-            <li class="song-title-li square-up">See U Later</li>
+          <div class="switching-li">
+            <ul class="albums__ul switching-li__ul">
+              <li class="albums__li switching-li__li square-one">휘파람</li>
+              <li class="albums__li switching-li__li square-up">See U Later</li>
 
-            <li class="song-title-li square-two">불장난</li>
-            <li class="song-title-li kill-this-love">Don't Know What To Do</li>
+              <li class="albums__li switching-li__li square-two">불장난</li>
+              <li class="albums__li switching-li__li kill-this-love">
+                Don't Know What To Do
+              </li>
+              <li class="albums__li switching-li__li square-up">
+                뚜두뚜두 (DDU-DU DDU-DU)
+              </li>
+              <li class="albums__li switching-li__li square-two">
+                휘파람(Acoustic Ver.)
+              </li>
+              <li class="albums__li switching-li__li square-one">붐바야</li>
 
-            <li class="song-title-li square-up">뚜두뚜두 (DDU-DU DDU-DU)</li>
-            <li class="song-title-li square-two">휘파람(Acoustic Ver.)</li>
-            <li class="song-title-li square-one">붐바야</li>
+              <li class="albums__li switching-li__li the-album">
+                Bet You Wanna (Feat. Cardi B)
+              </li>
+              <li class="albums__li switching-li__li kill-this-love">
+                Kill This Love
+              </li>
+              <li class="albums__li switching-li__li born-pink">Pink Venom</li>
+              <li class="albums__li switching-li__li kill-this-love">
+                아니길 (Hope Not)
+              </li>
+              <li class="albums__li switching-li__li kill-this-love">
+                뚜두뚜두 (DDU-DU DDU-DU) (Remix)
+              </li>
+              <li class="albums__li switching-li__li the-album">
+                How You Like That
+              </li>
 
-            <li class="song-title-li the-album">
-              Bet You Wanna (Feat. Cardi B)
-            </li>
-            <li class="song-title-li kill-this-love">Kill This Love</li>
-            <li class="song-title-li born-pink">Pink Venom</li>
-            <li class="song-title-li kill-this-love">아니길 (Hope Not)</li>
-            <li class="song-title-li kill-this-love">
-              뚜두뚜두 (DDU-DU DDU-DU) (Remix)
-            </li>
-            <li class="song-title-li the-album">How You Like That</li>
+              <li class="albums__li switching-li__li born-pink">Typa Girl</li>
+              <li class="albums__li switching-li__li the-album">
+                Ice Cream (with Selena Gomez)
+              </li>
+              <li class="albums__li switching-li__li kill-this-love">
+                Kick It
+              </li>
+              <li class="albums__li switching-li__li the-album">
+                Pretty Savage
+              </li>
+              <li class="albums__li switching-li__li square-up">
+                Forever Young
+              </li>
+              <li class="albums__li switching-li__li the-album">
+                Lovesick Girls
+              </li>
+              <li class="albums__li switching-li__li born-pink">Tally</li>
+              <li class="albums__li switching-li__li the-album">
+                Crazy Over You
+              </li>
+              <li class="albums__li switching-li__li square-two">STAY</li>
+              <li class="albums__li switching-li__li the-album">
+                You Never Know
+              </li>
+              <li class="albums__li switching-li__li born-pink">
+                Hard to Love
+              </li>
 
-            <li class="song-title-li born-pink">Typa Girl</li>
-            <li class="song-title-li the-album">
-              Ice Cream (with Selena Gomez)
-            </li>
-            <li class="song-title-li kill-this-love">Kick It</li>
-            <li class="song-title-li the-album">Pretty Savage</li>
-            <li class="song-title-li square-up">Forever Young</li>
-            <li class="song-title-li the-album">Lovesick Girls</li>
-            <li class="song-title-li born-pink">Tally</li>
-            <li class="song-title-li the-album">Crazy Over You</li>
-            <li class="song-title-li square-two">STAY</li>
-            <li class="song-title-li the-album">You Never Know</li>
-            <li class="song-title-li born-pink">Hard to Love</li>
+              <li class="albums__li switching-li__li born-pink">Shut Down</li>
+              <li class="albums__li switching-li__li the-album">
+                Love To Hate Me
+              </li>
+              <li class="albums__li switching-li__li born-pink">
+                Yeah Yeah Yeah
+              </li>
+              <li class="albums__li switching-li__li square-up">Really</li>
+              <li class="albums__li switching-li__li born-pink">
+                The Happiest Girl
+              </li>
+              <li class="albums__li switching-li__li born-pink">
+                Ready For Love
+              </li>
+            </ul>
 
-            <li class="song-title-li born-pink">Shut Down</li>
-            <li class="song-title-li the-album">Love To Hate Me</li>
-            <li class="song-title-li born-pink">Yeah Yeah Yeah</li>
-            <li class="song-title-li square-up">Really</li>
-            <li class="song-title-li born-pink">The Happiest Girl</li>
-            <li class="song-title-li born-pink">Ready For Love</li>
-          </ul>
-
-          <div class="albums-buttons-container">
-            <button type="button" class="show-all">SHOW ALL</button>
-
-            <button type="button" class="img-btn square-one active">
-              <img
-                src="../../source/images/blackpink/squareone.jpg"
-                alt="square one blackpink"
-              />
-            </button>
-            <button type="button" class="img-btn square-two">
-              <img
-                src="../../source/images/blackpink/squaretwo.jpg"
-                alt="square two blackpink"
-              />
-            </button>
-            <button type="button" class="img-btn square-up">
-              <img
-                src="../../source/images/blackpink/squareup.jpg"
-                alt="square up blackpink"
-              />
-            </button>
-            <br class="break maxwidth1281" />
-            <button type="button" class="img-btn kill-this-love">
-              <img
-                src="../../source/images/blackpink/killthislove.jpg"
-                alt="kill this love blackpink"
-              />
-            </button>
-            <button type="button" class="img-btn the-album">
-              <img
-                src="../../source/images/blackpink/thealbum.jpg"
-                alt="the album blackpink"
-              />
-            </button>
-            <button type="button" class="img-btn born-pink">
-              <img
-                src="../../source/images/blackpink/bornpink.jpg"
-                alt="born pink blackpink"
-              />
-            </button>
+            <div class="albums__controls">
+              <button
+                type="button"
+                class="pink-btn albums__control-btn switching-li__control-btn"
+              >
+                SHOW ALL
+              </button>
+              <button
+                type="button"
+                class="albums__img-btn switching-li__img-btn square-one active"
+              >
+                <img
+                  class="switching-li__img"
+                  src="../../source/images/blackpink/squareone.jpg"
+                  alt="square one blackpink"
+                />
+              </button>
+              <button
+                type="button"
+                class="albums__img-btn switching-li__img-btn square-two"
+              >
+                <img
+                  class="switching-li__img"
+                  src="../../source/images/blackpink/squaretwo.jpg"
+                  alt="square two blackpink"
+                />
+              </button>
+              <button
+                type="button"
+                class="albums__img-btn switching-li__img-btn square-up"
+              >
+                <img
+                  class="switching-li__img"
+                  src="../../source/images/blackpink/squareup.jpg"
+                  alt="square up blackpink"
+                />
+              </button>
+              <br class="break maxwidth1281" />
+              <button
+                type="button"
+                class="albums__img-btn switching-li__img-btn kill-this-love"
+              >
+                <img
+                  class="switching-li__img"
+                  src="../../source/images/blackpink/killthislove.jpg"
+                  alt="kill this love blackpink"
+                />
+              </button>
+              <button
+                type="button"
+                class="albums__img-btn switching-li__img-btn the-album"
+              >
+                <img
+                  class="switching-li__img"
+                  src="../../source/images/blackpink/thealbum.jpg"
+                  alt="the album blackpink"
+                />
+              </button>
+              <button
+                type="button"
+                class="albums__img-btn switching-li__img-btn born-pink"
+              >
+                <img
+                  class="switching-li__img"
+                  src="../../source/images/blackpink/bornpink.jpg"
+                  alt="born pink blackpink"
+                />
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -506,18 +682,38 @@
 
       <!-- game -->
       <div class="game">
-        <div class="game-container">
-          <h2>RUN BLACKPINK</h2>
-          <div class="units">
-            <div class="unit"><div class="jennie"></div></div>
-            <div class="unit"><div class="rose"></div></div>
-            <div class="unit"><div class="lisa"></div></div>
-            <div class="unit"><div class="jisoo"></div></div>
-          </div>
-          <button type="button" class="game-start active">시작</button>
-          <button type="button" class="game-reset">다시하기</button>
-          <div class="result">
-            <span>WIN</span>
+        <div class="game__inner">
+          <h2 class="game__title title-h2 title-h2--pink">RUN BLACKPINK</h2>
+          <div class="game__rank-game rank-game">
+            <div class="game__units rank-game__units">
+              <div class="game__unit rank-game__unit">
+                <div class="game__unit-img rank-game__unit-img jennie"></div>
+              </div>
+              <div class="game__unit rank-game__unit">
+                <div class="game__unit-img rank-game__unit-img rose"></div>
+              </div>
+              <div class="game__unit rank-game__unit">
+                <div class="game__unit-img rank-game__unit-img lisa"></div>
+              </div>
+              <div class="game__unit rank-game__unit">
+                <div class="game__unit-img rank-game__unit-img jisoo"></div>
+              </div>
+            </div>
+            <button
+              type="button"
+              class="pink-btn rank-game__btn rank-game__btn--start active"
+            >
+              시작
+            </button>
+            <button
+              type="button"
+              class="pink-btn rank-game__btn rank-game__btn--reset"
+            >
+              다시하기
+            </button>
+            <div class="game__result rank-game__result">
+              <span class="rank-game__word">WIN</span>
+            </div>
           </div>
         </div>
       </div>
@@ -527,7 +723,7 @@
     <footer class="footer"></footer>
 
     <div class="scroll-up">
-      <a href="#" class="text-indent">위로가기버튼</a>
+      <a href="#" class="scroll-up__link text-indent">위로가기버튼</a>
     </div>
   </body>
 </html>
