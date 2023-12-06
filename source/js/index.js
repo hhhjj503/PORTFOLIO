@@ -1,11 +1,11 @@
 window.addEventListener("load", () => {
   const html = document.querySelector("html");
-  const header = document.querySelector("header");
-  const headerAs = document.querySelectorAll("header nav a"); //헤더클릭시 스크롤이동
-  const graph = document.querySelector(".graph"); //그래프클래스제어
+  const header = document.querySelector(".header");
+  const headerLink = document.querySelectorAll(".header-link"); //헤더클릭시 스크롤이동
   const scrollElements = document.querySelectorAll(".offtop-element"); //스크롤이동할 엘리먼트 쿼리용 클래스
-  const decoLine = document.querySelector(".color-line"); // deco-line > color-line
-  const vertexLis = document.querySelectorAll(".vertex-li");
+  const graph = document.querySelector(".graph"); //그래프클래스제어
+  const graphColorLine = document.querySelector(".graph-color-line"); // deco-line > color-line
+  const vertexLis = document.querySelectorAll(".graph-vertex-li");
   const skills = document.querySelector("#skills");
   const portfolio = document.querySelector("#portfolio");
   const gotop = document.querySelector(".gotop");
@@ -18,8 +18,8 @@ window.addEventListener("load", () => {
   saveOffsetLeft();
 
   //헤더메뉴 클릭시 스크롤이동
-  for (let i = 0; i < headerAs.length; i++) {
-    headerAs[i].addEventListener("click", () => {
+  for (let i = 0; i < headerLink.length; i++) {
+    headerLink[i].addEventListener("click", () => {
       //e.preventDefault();
       window.scrollTo({
         top: scrollElementsOffsetTops[i],
@@ -27,7 +27,7 @@ window.addEventListener("load", () => {
       });
     });
 
-    /*headerAs[i].addEventListener("keydown", (e) => {
+    /*headerLink[i].addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
         e.preventDefault();
         window.scrollTo({
@@ -47,13 +47,13 @@ window.addEventListener("load", () => {
       vertexLis.forEach((vertex) => vertex.classList.remove("active"));
       vertexLis[i].classList.add("active");
       vertexLisIndex = i;
-      decoLine.style.width = vertexLisOffsetLefts[i] + "px";
+      graphColorLine.style.width = vertexLisOffsetLefts[i] + "px";
     });
     vertexLis[i].addEventListener("click", () => {
       vertexLis.forEach((vertex) => vertex.classList.remove("active"));
       vertexLis[i].classList.add("active");
       vertexLisIndex = i;
-      decoLine.style.width = vertexLisOffsetLefts[i] + "px";
+      graphColorLine.style.width = vertexLisOffsetLefts[i] + "px";
     });
     vertexLis[i].addEventListener("mouseleave", () => {
       vertexLis[i].classList.remove("active");
@@ -62,13 +62,13 @@ window.addEventListener("load", () => {
       if (e.key === "Enter") {
         vertexLis.forEach((vertex) => vertex.classList.remove("active"));
         vertexLis[i].classList.add("active");
-        decoLine.style.width = vertexLis[i].offsetLeft + "px";
+        graphColorLine.style.width = vertexLis[i].offsetLeft + "px";
       }
     });
   }
 
   setTimeout(() => {
-    decoLine.classList.add("active");
+    graphColorLine.classList.add("active");
   }, 1500);
   setTimeout(() => {
     const event = new Event("mouseenter");
@@ -91,8 +91,8 @@ window.addEventListener("load", () => {
   window.addEventListener(
     "scroll",
     throttle(() => {
-      const skillsTrigger = scrollElementsOffsetTops[1] * 0.7;
-      const portfolioTrigger = scrollElementsOffsetTops[2] * 0.9;
+      const skillsTrigger = scrollElementsOffsetTops[1] * 0.6;
+      const portfolioTrigger = scrollElementsOffsetTops[2] * 0.8;
 
       if (html.scrollTop > skillsTrigger) skills.classList.add("active");
       else skills.classList.remove("active");
@@ -100,7 +100,7 @@ window.addEventListener("load", () => {
       if (html.scrollTop > portfolioTrigger) portfolio.classList.add("active");
       else portfolio.classList.remove("active");
 
-      if (html.scrollTop > html.scrollHeight * 0.5)
+      if (html.scrollTop > html.scrollHeight * 0.02)
         gotop.classList.add("active");
       else gotop.classList.remove("active");
     }),
@@ -111,12 +111,12 @@ window.addEventListener("load", () => {
   window.addEventListener("resize", () => {
     saveOffsetLeft();
     saveOffsetTop();
-    decoLine.style.width = vertexLisOffsetLefts[vertexLisIndex] + "px";
+    graphColorLine.style.width = vertexLisOffsetLefts[vertexLisIndex] + "px";
     for (let i = 0; i < vertexLis.length; i++) {
       vertexLis[i].addEventListener("mouseenter", () => {
         vertexLis.forEach((vertex) => vertex.classList.remove("active"));
         vertexLis[i].classList.add("active");
-        decoLine.style.width = vertexLis[i].offsetLeft + "px";
+        graphColorLine.style.width = vertexLis[i].offsetLeft + "px";
       });
       vertexLis[i].addEventListener("mouseleave", () => {
         vertexLis[i].classList.remove("active");
@@ -139,14 +139,14 @@ window.addEventListener("load", () => {
 
   function saveOffsetTop() {
     scrollElementsOffsetTops = [];
-    for (let i = 0; i < headerAs.length; i++) {
+    for (let i = 0; i < headerLink.length; i++) {
       scrollElementsOffsetTops.push(
         scrollElements[i].getBoundingClientRect().top +
           window.pageYOffset -
           header.offsetHeight
       );
     }
-    scrollElementsOffsetTops[headerAs.length - 1] = html.scrollHeight;
+    scrollElementsOffsetTops[headerLink.length - 1] = html.scrollHeight;
   } //창 사이즈 변경시 top값 다시저장
 
   function saveOffsetLeft() {
