@@ -1,7 +1,11 @@
 @charset "UTF-8";
+/* 페이지 공통 레이아웃 */
 @import url(../../reset.css);
 @import url(../layout/header.css);
 @import url(../layout/footer.css);
+/* 자주사용되는 모듈 
+(블록주석 : shit alt all) */
+@import url(../module/background-img.css);
 html {
   font-size: 62.5%; /*  setting rem  */
   scroll-behavior: smooth;
@@ -14,7 +18,7 @@ body {
   overflow-x: hidden;
 }
 
-.h-nav .nav-ul li:nth-child(2) a {
+.header__li:nth-child(2) > .header__link {
   color: #e60000; /* nav 의 나이트쇼 글자 빨갛게 변경 */
 }
 
@@ -26,153 +30,91 @@ a.hidingThreshold + * {
 }
 
 /*=================================================================================*/
-main {
-  /* -------------------------------------------- main ------------------------------------------- */
+.main__banner {
+  background-image: url(../../../images/amusementpark/nightshow/fireworks.jpg);
 }
-main .banner-wrapper.bg-img {
-  width: 100%;
-  height: 500px;
-  background: url(../../../images/amusementpark/nightshow/fireworks.jpg) no-repeat;
-  background-position: bottom;
-  background-size: cover;
-}
-@media screen and (max-width: 1281px) {
-  main .banner-wrapper.bg-img {
-    height: 400px;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .banner-wrapper.bg-img {
-    height: 300px;
-  }
-}
-main .fireworks-wrapper {
-  /*----------------------- main .fireworks-wrapper ------------------------ */
+.main__inner {
   max-width: 1200px;
   width: 100%;
   padding: 100px 0;
   margin: 0 auto;
 }
 @media screen and (max-width: 1281px) {
-  main .fireworks-wrapper {
-    transition: 0.3s ease-in-out;
+  .main__inner {
     padding: 100px 0;
-    overflow: hidden;
   }
 }
 @media screen and (max-width: 600px) {
-  main .fireworks-wrapper {
+  .main__inner {
     padding: 50px 0;
-    overflow: hidden;
   }
 }
-main .fireworks-wrapper .sub-desc {
-  width: 30%;
-  margin: 0 auto;
-  font-size: 1.6em;
-  border-top: 1px solid #ccc;
+.main .desc__text {
   font-weight: bold;
   color: #666;
-  padding: 8px;
-  text-align: center;
+  padding: 8px 0;
+}
+.main .desc__text--small {
+  font-size: 16px;
 }
 @media screen and (max-width: 1281px) {
-  main .fireworks-wrapper .sub-desc {
-    font-size: 1.4rem;
+  .main .desc__text--small {
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 600px) {
-  main .fireworks-wrapper .sub-desc {
-    width: 60%;
-    font-size: 1.2rem;
+  .main .desc__text--small {
+    font-size: 12px;
   }
 }
-main .fireworks-wrapper .desc {
-  width: 30%;
-  margin: 0 auto 30px auto;
-  font-size: 2rem;
-  border-bottom: 1px solid #ccc;
+.main .desc__text--big {
+  font-size: 20px;
   font-weight: bold;
   color: #333;
   padding: 8px;
+}
+@media screen and (max-width: 1281px) {
+  .main .desc__text--big {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main .desc__text--big {
+    font-size: 15px;
+  }
+}
+.main .desc__text--border-top {
+  border-top: 1px solid #ccc;
+}
+.main .desc__text--border-bottom {
+  border-bottom: 1px solid #ccc;
+}
+.main .desc__text--border-white {
+  border-color: white;
+}
+.main__desc {
+  width: 30%;
+  margin: 0 auto 30px auto;
   text-align: center;
 }
-@media screen and (max-width: 1281px) {
-  main .fireworks-wrapper .desc {
-    font-size: 1.7rem;
-  }
-}
 @media screen and (max-width: 600px) {
-  main .fireworks-wrapper .desc {
+  .main__desc {
     width: 60%;
-    font-size: 1.5rem;
   }
 }
-main .fireworks-wrapper .slider-viewer {
-  width: 100%;
-  height: initial;
-  position: relative;
-  overflow: hidden;
-}
-@media screen and (max-width: 1281px) {
-  main .fireworks-wrapper .slider-viewer {
-    width: 900px;
-    overflow: hidden;
-    margin: 0 auto;
-  }
-}
-@media screen and (max-width: 1279px) {
-  main .fireworks-wrapper .slider-viewer {
-    width: 600px;
-    overflow: hidden;
-    margin: 0 auto;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .fireworks-wrapper .slider-viewer {
-    width: 300px;
-    overflow: hidden;
-    margin: 0 auto;
-  }
-}
-main .fireworks-wrapper .slider-viewer .slider-wrapper .slider {
-  position: relative;
-  left: 0;
-  top: 0;
-  width: 1600px;
-  height: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-@media screen and (max-width: 1281px) {
-  main .fireworks-wrapper .slider-viewer .slider-wrapper .slider {
-    left: 0;
-    transition: 0.3s ease;
-    overflow: hidden;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .fireworks-wrapper .slider-viewer .slider-wrapper .slider {
-    left: 0;
-  }
-}
-main .fireworks-wrapper .slider-viewer .slider-wrapper .slider .slide {
+.main .overlay-slider__slide {
   float: left;
-  width: 298px;
-  height: 300px;
   background-color: black;
-  white-space: nowrap;
-  margin: 0 1px;
   transition: 0.5s ease;
   box-sizing: border-box;
   cursor: pointer;
   border: none;
 }
-main .fireworks-wrapper .slider-viewer .slider-wrapper .slider .slide:focus-visible {
-  border: 5px solid white;
+.main .overlay-slider__slide:focus-visible {
+  border: 3px solid white;
   box-sizing: border-box;
 }
-main .fireworks-wrapper .slider-viewer .slider-wrapper .slider .slide img {
+.main .overlay-slider__img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -180,67 +122,50 @@ main .fireworks-wrapper .slider-viewer .slider-wrapper .slider .slide img {
   -o-object-position: center center;
      object-position: center center;
 }
-main .fireworks-wrapper .slider-viewer .slider-wrapper .slider:after {
+.main .overlay-slider:after {
   content: "";
   clear: both;
   display: block;
 }
-main .fireworks-wrapper .slider-viewer .slider-wrapper .slider-controls {
+.main .overlay-slider__controls {
   position: absolute;
   bottom: 10px;
   right: 10px;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 2rem;
+  font-size: 20px;
 }
-main .fireworks-wrapper .slider-viewer .slider-wrapper .slider-controls button {
+.main .overlay-slider__controls button {
   background-color: transparent;
   border: none;
   padding: 0;
   cursor: pointer;
 }
-main .fireworks-wrapper .slider-viewer .slider-wrapper .slider-controls button img {
+.main .overlay-slider__controls button img {
   width: 15px;
   height: 15px;
   display: block;
   background-color: transparent;
 }
-main .fireworks-wrapper .slider-viewer .overlay-img {
+.main .overlay-slider__overlay {
   position: fixed;
   pointer-events: none;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background-color: #000;
-  z-index: 99;
-  overflow: hidden;
-  transition: 0.5s ease-in-out;
   opacity: 0;
+  background-color: #000;
+  transition: 0.5s ease-in-out;
+  overflow: hidden;
+  z-index: 99;
 }
-main .fireworks-wrapper .slider-viewer .overlay-img.visible {
+.main .overlay-slider__overlay.visible {
   opacity: 1;
   pointer-events: all;
   overflow: hidden;
 }
-main .fireworks-wrapper .slider-viewer .overlay-img .guide-txt {
-  position: absolute;
-  color: white;
-  left: 50%;
-  bottom: 15%;
-  padding: 5px 10px;
-  transform: translateX(-50%);
-  font-size: 1.4rem;
-  cursor: pointer;
-}
-@media screen and (max-width: 1281px) {
-  main .fireworks-wrapper .slider-viewer .overlay-img .guide-txt {
-    width: 80%;
-    text-align: center;
-    line-height: 1.618;
-  }
-}
-main .fireworks-wrapper .slider-viewer .overlay-img img {
+.main .overlay-slider__overlay-img {
   position: absolute;
   width: 40%;
   height: 50%;
@@ -254,103 +179,128 @@ main .fireworks-wrapper .slider-viewer .overlay-img img {
      object-fit: cover;
 }
 @media screen and (max-width: 1281px) {
-  main .fireworks-wrapper .slider-viewer .overlay-img img {
+  .main .overlay-slider__overlay-img {
     width: 80%;
     height: 50%;
   }
 }
 @media screen and (max-width: 600px) {
-  main .fireworks-wrapper .slider-viewer .overlay-img img {
+  .main .overlay-slider__overlay-img {
     width: 80%;
     height: 50%;
   }
 }
-main .letter-event-wrapper {
-  position: relative;
+.main .overlay-slider__overlay-guide-txt {
+  position: absolute;
+  color: white;
+  left: 50%;
+  bottom: 15%;
+  padding: 5px 10px;
+  transform: translateX(-50%);
+  font-size: 1.4rem;
+  cursor: pointer;
 }
-main .letter-event-wrapper .letter {
-  /*----------------------- main .letter ------------------------ */
-  position: relative;
-  max-width: 1200px;
+@media screen and (max-width: 1281px) {
+  .main .overlay-slider__overlay-guide-txt {
+    width: 80%;
+    text-align: center;
+    line-height: 1.618;
+  }
+}
+.main__slider {
+  width: 100%;
+  overflow: hidden;
   margin: 0 auto;
+}
+@media screen and (max-width: 1281px) {
+  .main__slider {
+    width: 900px;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .main__slider {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main__slider {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .main__slider {
+    width: 200px;
+  }
+}
+.main__slider-inner {
+  width: 1600px;
+  height: 300px;
+  white-space: nowrap;
+}
+.main__slider-ly {
+  position: relative;
+  left: 0;
+  top: 0;
+  transition: 0.5s ease-in-out;
+}
+.main__slide {
+  width: 298px;
+  height: 300px;
+  margin: 0 1px;
+}
+.main__letter {
+  position: relative;
   padding: 100px 0;
-  background-image: url(../../../images/amusementpark/nightshow/letter_back.PNG);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   overflow: hidden;
   border-radius: 10px;
+  background-image: url(../../../images/amusementpark/nightshow/letter_back.PNG);
 }
-main .letter-event-wrapper .letter:before {
-  position: absolute;
+.main__letter:before {
   content: "";
-  bottom: 0;
+  position: absolute;
+  top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
   background: linear-gradient(to bottom, transparent 0%, #321d36 100%);
   z-index: 0;
 }
 @media screen and (max-width: 1200px) {
-  main .letter-event-wrapper .letter {
+  .main__letter .letter {
     border-radius: 0;
   }
 }
 @media screen and (max-width: 600px) {
-  main .letter-event-wrapper .letter {
+  .main__letter .letter {
     padding: 50px 0;
   }
 }
-main .letter-event-wrapper .letter .desc {
-  width: 30%;
-  margin: 0 auto 30px auto;
-  font-size: 2rem;
-  font-weight: bold;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
-  color: #333;
-  padding: 8px;
-  text-align: center;
-  position: relative;
-  top: -30px;
-}
-@media screen and (max-width: 1281px) {
-  main .letter-event-wrapper .letter .desc {
-    font-size: 1.7rem;
-    margin: 0 auto 10px auto;
-    white-space: nowrap;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .letter-event-wrapper .letter .desc {
-    width: 60%;
-    font-size: 1.5rem;
-    margin: 0 auto 10px auto;
-  }
-}
-main .letter-event-wrapper .letter form {
+.main__letter .letter form {
   width: 60%;
   margin: 0 auto;
   position: relative;
 }
 @media screen and (max-width: 1281px) {
-  main .letter-event-wrapper .letter form {
+  .main__letter .letter form {
     width: 80%;
   }
 }
 @media screen and (max-width: 600px) {
-  main .letter-event-wrapper .letter form {
+  .main__letter .letter form {
     min-width: initial;
     width: 85%;
     padding: 0;
   }
 }
-main .letter-event-wrapper .letter form input,
-main .letter-event-wrapper .letter form textarea {
+.main__letter .letter form input,
+.main__letter .letter form textarea {
   margin-bottom: 10px;
 }
-main .letter-event-wrapper .letter form label,
-main .letter-event-wrapper .letter form h4 {
+.main__letter .letter form label,
+.main__letter .letter form h4 {
   display: inline-block;
   background-color: #1c3055;
   color: white;
@@ -361,25 +311,25 @@ main .letter-event-wrapper .letter form h4 {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-main .letter-event-wrapper .letter form label.reward-label,
-main .letter-event-wrapper .letter form h4.reward-label {
+.main__letter .letter form label.reward-label,
+.main__letter .letter form h4.reward-label {
   display: none;
 }
 @media screen and (max-width: 1281px) {
-  main .letter-event-wrapper .letter form label,
-  main .letter-event-wrapper .letter form h4 {
+  .main__letter .letter form label,
+  .main__letter .letter form h4 {
     font-size: 1.5rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .letter-event-wrapper .letter form label,
-  main .letter-event-wrapper .letter form h4 {
+  .main__letter .letter form label,
+  .main__letter .letter form h4 {
     font-size: 1.3rem;
     padding: 10px;
     font-weight: normal;
   }
 }
-main .letter-event-wrapper .letter form input {
+.main__letter .letter form input {
   width: 100%;
   padding: 15px;
   box-sizing: border-box;
@@ -387,7 +337,7 @@ main .letter-event-wrapper .letter form input {
   border: none;
   box-shadow: 1px 1px 10px rgb(166, 166, 166);
 }
-main .letter-event-wrapper .letter form input[type=radio] {
+.main__letter .letter form input[type=radio] {
   width: 100%;
   box-shadow: none;
   box-sizing: border-box;
@@ -396,18 +346,18 @@ main .letter-event-wrapper .letter form input[type=radio] {
   margin: 5px 0;
 }
 @media screen and (max-width: 1281px) {
-  main .letter-event-wrapper .letter form input {
+  .main__letter .letter form input {
     padding: 15px;
     font-size: 1.7rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .letter-event-wrapper .letter form input {
+  .main__letter .letter form input {
     padding: 10px;
     font-size: 1.5rem;
   }
 }
-main .letter-event-wrapper .letter form textarea {
+.main__letter .letter form textarea {
   resize: none;
   width: 100%;
   font-size: 1.8rem;
@@ -415,29 +365,29 @@ main .letter-event-wrapper .letter form textarea {
   padding: 10px;
 }
 @media screen and (max-width: 600px) {
-  main .letter-event-wrapper .letter form textarea {
+  .main__letter .letter form textarea {
     font-size: 1.5rem;
   }
 }
-main .letter-event-wrapper .letter form .reward .reward-ul .reward-li {
+.main__letter .letter form .reward .reward-ul .reward-li {
   width: 30%;
   height: 220px;
   display: inline-block;
   margin-right: 5px;
 }
 @media screen and (max-width: 1281px) {
-  main .letter-event-wrapper .letter form .reward .reward-ul .reward-li {
+  .main__letter .letter form .reward .reward-ul .reward-li {
     box-sizing: border-box;
     margin: 0 5px;
   }
 }
 @media screen and (max-width: 600px) {
-  main .letter-event-wrapper .letter form .reward .reward-ul .reward-li {
+  .main__letter .letter form .reward .reward-ul .reward-li {
     width: 40%;
     height: 150px;
   }
 }
-main .letter-event-wrapper .letter form .reward .reward-ul .reward-li img {
+.main__letter .letter form .reward .reward-ul .reward-li img {
   width: 100%;
   height: 90%;
   border-radius: 5px;
@@ -447,11 +397,11 @@ main .letter-event-wrapper .letter form .reward .reward-ul .reward-li img {
      object-fit: cover;
 }
 @media screen and (max-width: 600px) {
-  main .letter-event-wrapper .letter form .reward .reward-ul .reward-li img {
+  .main__letter .letter form .reward .reward-ul .reward-li img {
     height: 70%;
   }
 }
-main .letter-event-wrapper .letter form button {
+.main__letter .letter form button {
   margin: 0 auto;
   display: block;
   padding: 10px 20px;
@@ -462,12 +412,12 @@ main .letter-event-wrapper .letter form button {
   margin-top: 50px;
 }
 @media screen and (max-width: 600px) {
-  main .letter-event-wrapper .letter form button {
+  .main__letter .letter form button {
     padding: 5px 20px;
     font-size: 1.4rem;
   }
 }
-main .benefits-wrapper {
+.main .benefits-wrapper {
   /*----------------------- main .benefits-wrapper ------------------------ */
   position: relative;
   padding: 100px 0;
@@ -479,11 +429,11 @@ main .benefits-wrapper {
   white-space: nowrap;
 }
 @media screen and (max-width: 1281px) {
-  main .benefits-wrapper {
+  .main .benefits-wrapper {
     white-space: initial;
   }
 }
-main .benefits-wrapper .sub-desc {
+.main .benefits-wrapper .sub-desc {
   width: 30%;
   margin: 0 auto;
   font-size: 1.6em;
@@ -494,17 +444,17 @@ main .benefits-wrapper .sub-desc {
   text-align: center;
 }
 @media screen and (max-width: 1281px) {
-  main .benefits-wrapper .sub-desc {
+  .main .benefits-wrapper .sub-desc {
     font-size: 1.4rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .benefits-wrapper .sub-desc {
+  .main .benefits-wrapper .sub-desc {
     width: 60%;
     font-size: 1.2rem;
   }
 }
-main .benefits-wrapper .desc {
+.main .benefits-wrapper .desc {
   width: 30%;
   margin: 0 auto 30px auto;
   font-size: 2rem;
@@ -515,22 +465,22 @@ main .benefits-wrapper .desc {
   text-align: center;
 }
 @media screen and (max-width: 1281px) {
-  main .benefits-wrapper .desc {
+  .main .benefits-wrapper .desc {
     width: 30%;
     font-size: 1.8rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .benefits-wrapper .desc {
+  .main .benefits-wrapper .desc {
     width: 60%;
     font-size: 1.5rem;
   }
 }
-main .benefits-wrapper .benefit-ul {
+.main .benefits-wrapper .benefit-ul {
   width: 100%;
   text-align: center;
 }
-main .benefits-wrapper .benefit-li {
+.main .benefits-wrapper .benefit-li {
   display: inline-block;
   height: 300px;
   width: 298px;
@@ -541,26 +491,26 @@ main .benefits-wrapper .benefit-li {
   overflow: hidden;
 }
 @media screen and (max-width: 1281px) {
-  main .benefits-wrapper .benefit-li {
+  .main .benefits-wrapper .benefit-li {
     margin: 5px;
     width: 40%;
   }
 }
 @media screen and (max-width: 600px) {
-  main .benefits-wrapper .benefit-li {
+  .main .benefits-wrapper .benefit-li {
     margin: 3px 1px;
     height: 190px;
     width: 80%;
   }
 }
-main .benefits-wrapper .benefit-li > div {
+.main .benefits-wrapper .benefit-li > div {
   position: absolute;
   width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-main .benefits-wrapper .benefit-li p {
+.main .benefits-wrapper .benefit-li p {
   width: 90%;
   background-color: inherit;
   font-size: 1.4rem;
@@ -570,27 +520,27 @@ main .benefits-wrapper .benefit-li p {
   line-height: 20px;
 }
 @media screen and (max-width: 1281px) {
-  main .benefits-wrapper .benefit-li p {
+  .main .benefits-wrapper .benefit-li p {
     font-size: 1.3rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .benefits-wrapper .benefit-li p {
+  .main .benefits-wrapper .benefit-li p {
     font-size: 1.1rem;
     word-break: keep-all;
   }
 }
-main .benefits-wrapper .benefit-li li:nth-child(2n) {
+.main .benefits-wrapper .benefit-li li:nth-child(2n) {
   position: relative;
   top: 20px;
 }
 @media screen and (max-width: 600px) {
-  main .benefits-wrapper .benefit-li li:nth-child(2n) {
+  .main .benefits-wrapper .benefit-li li:nth-child(2n) {
     top: 0;
     margin: 10px;
   }
 }
-main .benefits-wrapper .benefit-li button {
+.main .benefits-wrapper .benefit-li button {
   width: 50%;
   margin: 0 auto;
   padding: 7px 0;
@@ -600,37 +550,37 @@ main .benefits-wrapper .benefit-li button {
   transition: 0.3s ease-in-out;
 }
 @media screen and (max-width: 1281px) {
-  main .benefits-wrapper .benefit-li button {
+  .main .benefits-wrapper .benefit-li button {
     width: 40%;
     font-size: 1.3rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .benefits-wrapper .benefit-li button {
+  .main .benefits-wrapper .benefit-li button {
     width: 30%;
     font-size: 1.1rem;
   }
 }
-main .benefits-wrapper .benefit-li:hover button {
+.main .benefits-wrapper .benefit-li:hover button {
   cursor: pointer;
 }
-main .benefits-wrapper .benefit-li:nth-child(1) {
+.main .benefits-wrapper .benefit-li:nth-child(1) {
   background-color: #3870e0;
   background-image: url(../../../images/amusementpark/nightshow/nightshow_fireworks.PNG);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-main .benefits-wrapper .benefit-li:nth-child(2) {
+.main .benefits-wrapper .benefit-li:nth-child(2) {
   background-color: #b30fff;
 }
-main .benefits-wrapper .benefit-li:nth-child(3) {
+.main .benefits-wrapper .benefit-li:nth-child(3) {
   background-color: #3870e0;
   background-image: url(../../../images/amusementpark/nightshow/nightsky.PNG);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-main .benefits-wrapper .benefit-li:nth-child(4) {
+.main .benefits-wrapper .benefit-li:nth-child(4) {
   background-color: #3870e0;
 }/*# sourceMappingURL=nightshow.css.map */

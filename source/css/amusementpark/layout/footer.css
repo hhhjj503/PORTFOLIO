@@ -1,112 +1,109 @@
-/* ------------------------ footer ---------------------- */
-footer {
-  padding: 40px 0;
+.footer {
   border-top: 1px solid #e1e1e1;
-  max-width: 100%;
-  margin: 0 auto;
-}
-footer .wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
   white-space: nowrap;
+}
+
+.footer__inner {
   position: relative;
-}
-footer .wrapper .list-ul {
+  max-width: 1200px;
   width: 100%;
-  text-align: center;
-  display: block;
-  margin: 10px 0;
+  padding: 40px 0;
+  margin: 0 auto;
 }
-footer .wrapper .list-ul li {
+
+.footer__ul {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.info__li {
   display: inline-block;
   padding: 0 5px;
   line-height: 1.618;
 }
-footer .wrapper .list-ul li a {
+.info__link {
   text-decoration: none;
   font-size: 1.5rem;
   color: #757575;
 }
-footer .wrapper .list-ul .mobile {
-  display: none;
-}
-footer .wrapper .list-ul:after {
+
+.info__ul:after {
   display: block;
   content: "";
   clear: both;
 }
-footer .wrapper .sns-imgs-wrapper {
+.footer__sns-imgs {
   display: block;
   text-align: center;
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
-footer .wrapper .sns-imgs-wrapper img {
+.imgs__img {
   margin: 0 20px;
 }
-footer .wrapper .logo {
+
+.footer__logo-img {
   text-align: center;
   width: 100%;
-  padding: 20px 0;
   border-top: 1px solid #e1e1e1;
+  padding-top: 20px;
 }
-footer .wrapper .logo .name {
+
+.homepage-name {
   font-size: 2rem;
   position: relative;
   display: inline-block;
   height: 30px;
   line-height: 30px;
 }
-footer .wrapper .logo .name:before {
+.homepage-name:before {
+  content: "";
   position: absolute;
-  top: 0;
+  top: 50%;
   left: -50px;
+  transform: translateY(-50%);
   width: 30px;
   height: 30px;
   background-image: url(../../../images/amusementpark/fort-awesome.svg);
-  content: "";
 }
-footer .wrapper .logo .name:after {
+.homepage-name:after {
+  content: "";
   position: absolute;
-  top: 0;
+  top: 50%;
   right: -50px;
+  transform: translateY(-50%);
   width: 30px;
   height: 30px;
   background-image: url(../../../images/amusementpark/fort-awesome.svg);
-  content: "";
 }
-footer .wrapper .gotop {
+
+.footer__gotop {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  overflow: hidden;
-  border-radius: 50%;
+  bottom: 5%;
+  right: 5%;
   width: 50px;
   height: 50px;
+}
+
+.gotop {
+  overflow: hidden;
+  border-radius: 50%;
   background-color: #1c3055;
 }
-@media screen and (max-width: 1024px) {
-  footer .wrapper .gotop {
-    right: 10px;
-  }
-}
-@media screen and (max-width: 550px) {
-  footer .wrapper .gotop {
-    padding-bottom: 0;
-  }
-}
-footer .wrapper .gotop > a {
+
+.gotop__link {
   display: block;
-  width: 100%;
-  height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 50%;
 }
-footer .wrapper .gotop > a:focus-visible {
+
+.gotop__link:focus-visible {
   border: 3px solid white;
   box-sizing: border-box;
 }
-footer .wrapper .gotop > a img {
+.gotop__img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -116,35 +113,36 @@ footer .wrapper .gotop > a img {
 }
 
 /*----------------------------------------------------------------------*/
-@media screen and (max-width: 1024px) {
-  footer .wrapper .list-ul li {
+@media screen and (max-width: 1281px) {
+  .info__li {
     box-sizing: border-box;
     padding: 0 5px;
   }
-  footer .wrapper .sns-imgs-wrapper img {
+  .imgs__img {
     margin: 0 1%;
   }
 }
 /*----------------------------------------------------------------------*/
-@media screen and (max-width: 550px) {
-  footer {
+@media screen and (max-width: 600px) {
+  .footer__inner {
+    width: 80%;
     padding: 20px 0;
-  }
-  footer .wrapper {
     white-space: normal;
   }
-  footer .wrapper .list-ul {
-    margin-bottom: 0;
-    width: 100%;
-    display: block;
-    box-sizing: border-box;
-    padding: 0 50px 20px 50px;
-  }
-  footer .wrapper .sns-imgs-wrapper {
+
+  .footer__sns-imgs {
     width: 100%;
     display: block;
     text-align: center;
     margin: 0;
     padding: 0 0 20px 0;
   }
-}/*# sourceMappingURL=footer.css.map */
+
+  .footer__gotop {
+    position: absolute;
+    bottom: 5%;
+    right: -5%;
+    width: 40px;
+    height: 40px;
+  }
+}

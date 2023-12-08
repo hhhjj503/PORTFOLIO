@@ -9,128 +9,201 @@
       href="../../source/css/amusementpark/nightshow/nightshow.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="../../source/js/amusementpark/header.js"></script>
+    <script src="../../source/js/amusementpark/footer.js"></script>
     <script src="../../source/js/amusementpark/nightshow/nigihtshow.js"></script>
     <title>나이트쇼 | Amusement Park</title>
   </head>
   <body>
     <!-- header -->
-    <header>
-      <nav class="h-nav">
-        <ul class="nav-ul">
-          <li>
-            <a href="./index.html" class="home-a">
-              <img
-                src="../../source/images/amusementpark/fort-awesome.svg"
-                alt="보라색 성 아이콘"
-              />
-            </a>
-          </li>
-          <li><a href="./nightshow.html">나이트쇼</a></li>
-          <li><a href="./attraction.html">어트랙션</a></li>
-          <li><a href="./krustyland.html">크러스티랜드</a></li>
-          <li><a href="./aquarium.html">아쿠아리움</a></li>
-        </ul>
-      </nav>
+    <header class="header">
+      <div class="header__inner">
+        <nav class="header__nav">
+          <ul class="header__ul">
+            <li class="header__li">
+              <a href="./index.html" class="header__logo">
+                <img
+                  class="header__logo-img"
+                  src="../../source/images/amusementpark/fort-awesome.svg"
+                  alt="보라색 성 아이콘"
+                />
+              </a>
+            </li>
+            <li class="header__li">
+              <a class="header__link" href="./nightshow.html">나이트쇼</a>
+            </li>
+            <li class="header__li">
+              <a class="header__link" href="./attraction.html">어트랙션</a>
+            </li>
+            <li class="header__li">
+              <a class="header__link" href="./krustyland.html">크러스티랜드</a>
+            </li>
+            <li class="header__li">
+              <a class="header__link" href="./aquarium.html">아쿠아리움</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
       <!-- mobile nav -->
-      <div class="mobile-menu">
-        <button class="menu-btn">
-          <img
-            src="../../source/images/amusementpark/fort-awesome.svg"
-            alt="보라색 성 아이콘"
-          />
-        </button>
-        <nav class="downSliding-nav">
-          <ul>
-            <li>
-              <a href="./index.html">HOME</a>
-            </li>
-            <li>
-              <a href="./nightshow.html">나이트쇼</a>
-            </li>
-            <li><a href="./attraction.html">어트랙션</a></li>
-            <li><a href="./krustyland.html">크러스티랜드</a></li>
-            <li><a href="./aquarium.html">아쿠아리움</a></li>
-          </ul>
-          <div class="goup">
+      <div class="downSliding-header">
+        <div class="downSliding-header__inner">
+          <button class="downSliding-header__logo-btn">
             <img
-              src="../../source/images/amusementpark/nightshow/arrow-up-solid.svg"
-              alt="위 화살표 이미지"
+              class="downSliding-header__logo-img"
+              src="../../source/images/amusementpark/fort-awesome.svg"
+              alt="보라색 성 아이콘"
             />
-          </div>
-        </nav>
+          </button>
+          <nav class="downSliding-header__nav">
+            <ul class="downSliding-header__ul">
+              <li class="downSliding-header__li">
+                <a class="downSliding-header__link" href="./index.html">HOME</a>
+              </li>
+              <li class="downSliding-header__li">
+                <a class="downSliding-header__link" href="./nightshow.html"
+                  >나이트쇼</a
+                >
+              </li>
+              <li class="downSliding-header__li">
+                <a class="downSliding-header__link" href="./attraction.html"
+                  >어트랙션</a
+                >
+              </li>
+              <li class="downSliding-header__li">
+                <a class="downSliding-header__link" href="./krustyland.html"
+                  >크러스티랜드</a
+                >
+              </li>
+              <li class="downSliding-header__li">
+                <a class="downSliding-header__link" href="./aquarium.html"
+                  >아쿠아리움</a
+                >
+              </li>
+            </ul>
+            <div class="downSliding-header__up-btn">
+              <img
+                class="downSliding-header__up-btn-img"
+                src="../../source/images/amusementpark/nightshow/arrow-up-solid.svg"
+                alt="위 화살표 이미지"
+              />
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
     <!-- //header -->
 
     <!-- main -->
-    <main>
+    <main class="main">
       <!-- banner -->
-      <div class="banner-wrapper bg-img"></div>
+      <div class="main__banner background-img background-img--height-500"></div>
       <!-- //banner -->
 
-      <!-- info -->
-      <div class="fireworks-wrapper">
-        <a href="#" class="hidingThreshold" tabindex="-1"></a>
-        <div class="sub-desc">한여름을 밝게비출 시원한 밤</div>
-        <div class="desc">신나는 불꽃축제!</div>
-
-        <a href="#" class="hidingThreshold" tabindex="-1"></a>
-        <div class="slider-viewer">
-          <div class="slider-wrapper">
-            <div class="slider">
-              <div class="slide" tabindex="0" role="button">
-                <img
-                  src="../../source/images/amusementpark/nightshow/nightshow.PNG"
-                  alt="불꽃놀이사진"
-                />
-              </div>
-              <div class="slide" tabindex="0" role="button">
-                <img
-                  src="../../source/images/amusementpark/nightshow/nightshow_fireworks.PNG"
-                  alt="불꽃놀이사진"
-                />
-              </div>
-              <div class="slide" tabindex="0" role="button">
-                <img
-                  src="../../source/images/amusementpark/nightshow/nightshow_lights.JPG"
-                  alt="불빛사진"
-                />
-              </div>
-              <div class="slide" tabindex="0" role="button">
-                <img
-                  src="../../source/images/amusementpark/nightshow/nightshow4.JPG"
-                  alt="관람차사진"
-                />
-              </div>
-              <div class="slide" tabindex="0" role="button">
-                <img
-                  src="../../source/images/amusementpark/nightshow/nightshow_lights.JPG"
-                  alt="불빛사진"
-                />
-              </div>
+      <div class="main__inner">
+        <div class="main__desc-slider">
+          <a href="#" class="hidingThreshold" tabindex="-1"></a>
+          <div class="main__desc desc">
+            <div class="desc__text desc__text--small desc__text--border-top">
+              한여름을 밝게비출 시원한 밤
             </div>
-
-            <div class="slider-controls">
-              <button class="pause">
-                <img
-                  src="../../source/images/amusementpark/aquarium/pause-solid.svg"
-                  alt="멈춤버튼 이미지"
-                />
-              </button>
-              <button class="play">
-                <img
-                  src="../../source/images/amusementpark/aquarium/play-solid.svg"
-                  alt="시작버튼 이미지"
-                />
-              </button>
+            <div class="desc__text desc__text--big desc__text--border-bottom">
+              신나는 불꽃축제!
             </div>
           </div>
 
-          <div class="overlay-img">
-            <img src="#" alt="오버레이이미지" />
-            <div class="guide-txt">
-              창을 닫으려면 Esc키를 누르거나 화면의 아무곳이나 클릭해주세요
+          <a href="#" class="hidingThreshold" tabindex="-1"></a>
+          <div class="main__slider">
+            <div class="main__slider-inner">
+              <!-- overlay-slider -->
+              <div class="main__slider-ly overlay-slider">
+                <div
+                  class="main__slide overlay-slider__slide"
+                  tabindex="0"
+                  role="button"
+                >
+                  <img
+                    class="overlay-slider__img"
+                    src="../../source/images/amusementpark/nightshow/nightshow.PNG"
+                    alt="불꽃놀이사진"
+                  />
+                </div>
+                <div
+                  class="main__slide overlay-slider__slide"
+                  tabindex="0"
+                  role="button"
+                >
+                  <img
+                    class="overlay-slider__img"
+                    src="../../source/images/amusementpark/nightshow/nightshow_fireworks.PNG"
+                    alt="불꽃놀이사진"
+                  />
+                </div>
+                <div
+                  class="main__slide overlay-slider__slide"
+                  tabindex="0"
+                  role="button"
+                >
+                  <img
+                    class="overlay-slider__img"
+                    src="../../source/images/amusementpark/nightshow/nightshow_lights.JPG"
+                    alt="불빛사진"
+                  />
+                </div>
+                <div
+                  class="main__slide overlay-slider__slide"
+                  tabindex="0"
+                  role="button"
+                >
+                  <img
+                    class="overlay-slider__img"
+                    src="../../source/images/amusementpark/nightshow/nightshow4.JPG"
+                    alt="관람차사진"
+                  />
+                </div>
+                <div
+                  class="main__slide overlay-slider__slide"
+                  tabindex="0"
+                  role="button"
+                >
+                  <img
+                    class="overlay-slider__img"
+                    src="../../source/images/amusementpark/nightshow/nightshow_lights.JPG"
+                    alt="불빛사진"
+                  />
+                </div>
+              </div>
+              <!-- //overlay-slider -->
+
+              <!-- overlay-slider__controls -->
+              <div class="overlay-slider__controls">
+                <button class="overlay-slider__pause-btn">
+                  <img
+                    src="../../source/images/amusementpark/aquarium/pause-solid.svg"
+                    alt="멈춤버튼 이미지"
+                  />
+                </button>
+                <button class="overlay-slider__play-btn">
+                  <img
+                    src="../../source/images/amusementpark/aquarium/play-solid.svg"
+                    alt="시작버튼 이미지"
+                  />
+                </button>
+              </div>
+              <!-- //overlay-slider__controls -->
+
+              <!-- overlay-slider__overlay -->
+              <div class="overlay-slider__overlay">
+                <img
+                  class="overlay-slider__overlay-img"
+                  src="#"
+                  alt="오버레이이미지"
+                />
+                <div class="overlay-slider__overlay-guide-txt">
+                  창을 닫으려면 Esc키를 누르거나 화면의 아무곳이나 클릭해주세요
+                </div>
+              </div>
+              <!-- //overlay-slider__overlay -->
             </div>
           </div>
         </div>
@@ -138,92 +211,101 @@
       <!-- //info -->
 
       <!-- letter -->
-      <div class="letter-event-wrapper">
-        <div class="letter">
-          <a href="#" class="hidingThreshold" tabindex="-1"></a>
-          <div class="desc">여러분의 이야기를 들려주세요!</div>
 
-          <a href="#" class="hidingThreshold" tabindex="-1"></a>
-          <form action="#" method="post">
-            <label for="customer-name">이름</label>
-            <input
-              type="text"
-              name="c-name"
-              id="customer-name"
-              placeholder="이름을 입력해주세요"
-            />
-            <label for="customer-number">입장권번호</label>
-            <input
-              type="number"
-              name="c-number"
-              id="customer-number"
-              placeholder="입장권번호를 입력해주세요"
-            />
-            <label for="customer-address">주소</label>
-            <input
-              type="text"
-              name="c-address"
-              id="customer-address"
-              placeholder="주소를 입력해주세요"
-            />
-            <label for="customer-review">리뷰내용</label>
-            <textarea
-              name="c-review"
-              id="customer-review"
-              rows="10"
-              placeholder="리뷰를 입력해주세요"
-            ></textarea>
-            <div class="reward">
-              <h4>선물선택</h4>
-              <ul class="reward-ul">
-                <li class="reward-li">
-                  <img
-                    src="../../source/images/amusementpark/nightshow/present.PNG"
-                    alt="선물상자"
-                  />
-                  <label class="reward-label" for="reward-presents"
-                    >선물상자</label
-                  >
-                  <input
-                    type="radio"
-                    name="reward"
-                    id="reward-presents"
-                    value="presents"
-                    checked
-                  />
-                </li>
-                <li class="reward-li">
-                  <img
-                    src="../../source/images/amusementpark/nightshow/ramen.PNG"
-                    alt="라면"
-                  />
-                  <label class="reward-label" for="reward-ramen">라면</label>
-                  <input
-                    type="radio"
-                    name="reward"
-                    id="reward-ramen"
-                    value="ramen"
-                    tabindex="0"
-                  />
-                </li>
-                <li class="reward-li">
-                  <img
-                    src="../../source/images/amusementpark/nightshow/phone.PNG"
-                    alt="핸드폰"
-                  />
-                  <label class="reward-label" for="reward-iphone">아이폰</label>
-                  <input
-                    type="radio"
-                    name="reward"
-                    id="reward-iphone"
-                    value="iphone"
-                    tabindex="0"
-                  />
-                </li>
-              </ul>
+      <div class="main__inner">
+        <div class="main__letter background-img">
+          <div class="letter">
+            <a href="#" class="hidingThreshold" tabindex="-1"></a>
+            <div
+              class="main__desc desc desc__text--big desc__text--border-top desc__text--border-bottom desc__text--border-white"
+            >
+              여러분의 이야기를 들려주세요!
             </div>
-            <button type="submit">응모하기</button>
-          </form>
+
+            <a href="#" class="hidingThreshold" tabindex="-1"></a>
+            <form action="#" method="post">
+              <label for="customer-name">이름</label>
+              <input
+                type="text"
+                name="c-name"
+                id="customer-name"
+                placeholder="이름을 입력해주세요"
+              />
+              <label for="customer-number">입장권번호</label>
+              <input
+                type="number"
+                name="c-number"
+                id="customer-number"
+                placeholder="입장권번호를 입력해주세요"
+              />
+              <label for="customer-address">주소</label>
+              <input
+                type="text"
+                name="c-address"
+                id="customer-address"
+                placeholder="주소를 입력해주세요"
+              />
+              <label for="customer-review">리뷰내용</label>
+              <textarea
+                name="c-review"
+                id="customer-review"
+                rows="10"
+                placeholder="리뷰를 입력해주세요"
+              ></textarea>
+              <div class="reward">
+                <h4>선물선택</h4>
+                <ul class="reward-ul">
+                  <li class="reward-li">
+                    <img
+                      src="../../source/images/amusementpark/nightshow/present.PNG"
+                      alt="선물상자"
+                    />
+                    <label class="reward-label" for="reward-presents"
+                      >선물상자</label
+                    >
+                    <input
+                      type="radio"
+                      name="reward"
+                      id="reward-presents"
+                      value="presents"
+                      checked
+                    />
+                  </li>
+                  <li class="reward-li">
+                    <img
+                      src="../../source/images/amusementpark/nightshow/ramen.PNG"
+                      alt="라면"
+                    />
+                    <label class="reward-label" for="reward-ramen">라면</label>
+                    <input
+                      type="radio"
+                      name="reward"
+                      id="reward-ramen"
+                      value="ramen"
+                      tabindex="0"
+                    />
+                  </li>
+                  <li class="reward-li">
+                    <img
+                      src="../../source/images/amusementpark/nightshow/phone.PNG"
+                      alt="핸드폰"
+                    />
+                    <label class="reward-label" for="reward-iphone"
+                      >아이폰</label
+                    >
+                    <input
+                      type="radio"
+                      name="reward"
+                      id="reward-iphone"
+                      value="iphone"
+                      tabindex="0"
+                    />
+                  </li>
+                </ul>
+              </div>
+              <button type="submit">응모하기</button>
+            </form>
+          </div>
         </div>
       </div>
       <!-- //letter -->
@@ -269,41 +351,59 @@
     <!-- //main -->
 
     <!-- footer -->
-    <footer>
-      <div class="wrapper">
-        <ul class="list-ul">
-          <li><a href="#">소개</a></li>
-          <li><a href="#">문의</a></li>
-          <li><a href="#">이용약관</a></li>
-          <li><a href="#">개인정보관리</a></li>
-          <li><a href="#">이메일무단수집거부</a></li>
-          <li><a href="#">사이트맵</a></li>
-          <li><a href="#">직원채용</a></li>
-        </ul>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__ul info">
+          <ul class="info__ul">
+            <li class="info__li"><a class="info__link" href="#">소개</a></li>
+            <li class="info__li"><a class="info__link" href="#">문의</a></li>
+            <li class="info__li">
+              <a class="info__link" href="#">이용약관</a>
+            </li>
+            <li class="info__li">
+              <a class="info__link" href="#">개인정보관리</a>
+            </li>
+            <li class="info__li">
+              <a class="info__link" href="#">이메일무단수집거부</a>
+            </li>
+            <li class="info__li">
+              <a class="info__link" href="#">사이트맵</a>
+            </li>
+            <li class="info__li">
+              <a class="info__link" href="#">직원채용</a>
+            </li>
+          </ul>
+        </div>
 
-        <div class="sns-imgs-wrapper">
+        <div class="footer__sns-imgs imgs">
           <img
+            class="imgs__img"
             src="../../source/images/amusementpark/youtubeicon.png"
             alt="페이스북 로고 이미지"
             tabindex="0"
           />
           <img
+            class="imgs__img"
             src="../../source/images/amusementpark/instaicon.png"
             alt="인스타그램 로고 이미지"
             tabindex="0"
           />
           <img
+            class="imgs__img"
             src="../../source/images/amusementpark/facebookicon.png"
             alt="유튜브 로고 이미지"
             tabindex="0"
           />
         </div>
 
-        <div class="logo"><div class="name">Amusement Park</div></div>
+        <div class="footer__logo-img logo">
+          <div class="homepage-name">Amusement Park</div>
+        </div>
 
-        <div class="gotop">
-          <a href="#"
+        <div class="footer__gotop gotop">
+          <a class="gotop__link" href="#"
             ><img
+              class="gotop__img"
               src="../../source/images/amusementpark/nightshow/arrow-up-solid.svg"
               alt="위 화살표 이미지"
           /></a>

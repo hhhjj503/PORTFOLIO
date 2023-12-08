@@ -9,56 +9,86 @@
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="../../source/js/amusementpark/header.js"></script>
+    <script src="../../source/js/amusementpark/footer.js"></script>
     <script src="../../source/js/amusementpark/krustyland/product.js"></script>
     <title>제품정보 | Amusement Park</title>
   </head>
   <body>
     <!-- header -->
-    <header>
-      <nav class="h-nav">
-        <ul class="nav-ul">
-          <li>
-            <a href="./index.html" class="home-a">
-              <img
-                src="../../source/images/amusementpark/fort-awesome.svg"
-                alt="보라색 성 아이콘"
-              />
-            </a>
-          </li>
-          <li><a href="./nightshow.html">나이트쇼</a></li>
-          <li><a href="./attraction.html">어트랙션</a></li>
-          <li><a href="./krustyland.html">크러스티랜드</a></li>
-          <li><a href="./aquarium.html">아쿠아리움</a></li>
-        </ul>
-      </nav>
-
-      <!-- mobile menu -->
-      <div class="mobile-menu">
-        <button class="menu-btn">
-          <img
-            src="../../source/images/amusementpark/fort-awesome.svg"
-            alt="보라색 성 아이콘"
-          />
-        </button>
-        <nav class="downSliding-nav">
-          <ul>
-            <li>
-              <a href="./index.html">HOME</a>
+    <header class="header">
+      <div class="header__inner">
+        <nav class="header__nav">
+          <ul class="header__ul">
+            <li class="header__li">
+              <a href="./index.html" class="header__logo">
+                <img
+                  class="header__logo-img"
+                  src="../../source/images/amusementpark/fort-awesome.svg"
+                  alt="보라색 성 아이콘"
+                />
+              </a>
             </li>
-            <li>
-              <a href="./nightshow.html">나이트쇼</a>
+            <li class="header__li">
+              <a class="header__link" href="./nightshow.html">나이트쇼</a>
             </li>
-            <li><a href="./attraction.html">어트랙션</a></li>
-            <li><a href="./krustyland.html">크러스티랜드</a></li>
-            <li><a href="./aquarium.html">아쿠아리움</a></li>
+            <li class="header__li">
+              <a class="header__link" href="./attraction.html">어트랙션</a>
+            </li>
+            <li class="header__li">
+              <a class="header__link" href="./krustyland.html">크러스티랜드</a>
+            </li>
+            <li class="header__li">
+              <a class="header__link" href="./aquarium.html">아쿠아리움</a>
+            </li>
           </ul>
-          <div class="goup">
-            <img
-              src="../../source/images/amusementpark/nightshow/arrow-up-solid.svg"
-              alt="위 화살표 이미지"
-            />
-          </div>
         </nav>
+      </div>
+
+      <!-- mobile nav -->
+      <div class="downSliding-header">
+        <div class="downSliding-header__inner">
+          <button class="downSliding-header__logo-btn">
+            <img
+              class="downSliding-header__logo-img"
+              src="../../source/images/amusementpark/fort-awesome.svg"
+              alt="보라색 성 아이콘"
+            />
+          </button>
+          <nav class="downSliding-header__nav">
+            <ul class="downSliding-header__ul">
+              <li class="downSliding-header__li">
+                <a class="downSliding-header__link" href="./index.html">HOME</a>
+              </li>
+              <li class="downSliding-header__li">
+                <a class="downSliding-header__link" href="./nightshow.html"
+                  >나이트쇼</a
+                >
+              </li>
+              <li class="downSliding-header__li">
+                <a class="downSliding-header__link" href="./attraction.html"
+                  >어트랙션</a
+                >
+              </li>
+              <li class="downSliding-header__li">
+                <a class="downSliding-header__link" href="./krustyland.html"
+                  >크러스티랜드</a
+                >
+              </li>
+              <li class="downSliding-header__li">
+                <a class="downSliding-header__link" href="./aquarium.html"
+                  >아쿠아리움</a
+                >
+              </li>
+            </ul>
+            <div class="downSliding-header__up-btn">
+              <img
+                class="downSliding-header__up-btn-img"
+                src="../../source/images/amusementpark/nightshow/arrow-up-solid.svg"
+                alt="위 화살표 이미지"
+              />
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
     <!-- //header -->
@@ -412,40 +442,59 @@
     <!-- //main -->
 
     <!-- footer -->
-    <footer>
-      <div class="wrapper">
-        <div class="list-ul">
-          <ul>
-            <li><a href="#">소개</a></li>
-            <li><a href="#">문의</a></li>
-            <li><a href="#">이용약관</a></li>
-            <li><a href="#">개인정보관리</a></li>
-            <li><a href="#">이메일무단수집거부</a></li>
-            <li><a href="#">사이트맵</a></li>
-            <li><a href="#">직원채용</a></li>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__ul info">
+          <ul class="info__ul">
+            <li class="info__li"><a class="info__link" href="#">소개</a></li>
+            <li class="info__li"><a class="info__link" href="#">문의</a></li>
+            <li class="info__li">
+              <a class="info__link" href="#">이용약관</a>
+            </li>
+            <li class="info__li">
+              <a class="info__link" href="#">개인정보관리</a>
+            </li>
+            <li class="info__li">
+              <a class="info__link" href="#">이메일무단수집거부</a>
+            </li>
+            <li class="info__li">
+              <a class="info__link" href="#">사이트맵</a>
+            </li>
+            <li class="info__li">
+              <a class="info__link" href="#">직원채용</a>
+            </li>
           </ul>
         </div>
-        <div class="sns-imgs-wrapper">
+
+        <div class="footer__sns-imgs imgs">
           <img
+            class="imgs__img"
             src="../../source/images/amusementpark/youtubeicon.png"
             alt="페이스북 로고 이미지"
             tabindex="0"
           />
           <img
+            class="imgs__img"
             src="../../source/images/amusementpark/instaicon.png"
             alt="인스타그램 로고 이미지"
             tabindex="0"
           />
           <img
+            class="imgs__img"
             src="../../source/images/amusementpark/facebookicon.png"
             alt="유튜브 로고 이미지"
             tabindex="0"
           />
         </div>
-        <div class="logo"><div class="name">Amusement Park</div></div>
-        <div class="gotop">
-          <a href="#"
+
+        <div class="footer__logo-img logo">
+          <div class="homepage-name">Amusement Park</div>
+        </div>
+
+        <div class="footer__gotop gotop">
+          <a class="gotop__link" href="#"
             ><img
+              class="gotop__img"
               src="../../source/images/amusementpark/nightshow/arrow-up-solid.svg"
               alt="위 화살표 이미지"
           /></a>

@@ -1,0 +1,21 @@
+.background-img {
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+
+.background-img--height-500 {
+  height: 500px;
+}
+
+@media screen and (max-width: 1281px) {
+  .background-img--height-500 {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .background-img--height-500 {
+    height: 300px;
+  }
+}

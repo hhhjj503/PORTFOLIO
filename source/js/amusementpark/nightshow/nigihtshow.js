@@ -1,11 +1,15 @@
 window.addEventListener("load", () => {
   const html = document.querySelector("html");
 
-  const slider = document.querySelector(".slider-viewer .slider");
-  const pauseBtn = document.querySelector(".slider-controls .pause"); //controller > slider-controls
-  const playBtn = document.querySelector(".slider-controls .play");
-  const overlay = document.querySelector(".overlay-img");
-  const overlayImg = document.querySelector(".overlay-img img");
+  const overlaySlider = document.querySelector(".overlay-slider");
+  const overlaySliderPauseBtn = document.querySelector(
+    ".overlay-slider__pause-btn"
+  ); //controller > slider-controls
+  const overlaySliderPlayBtn = document.querySelector(
+    ".overlay-slider__play-btn"
+  );
+  const overlay = document.querySelector(".overlay-slider__overlay");
+  const overlayImg = document.querySelector(".overlay-slider__overlay-img");
 
   const hidingThresholds = document.querySelectorAll(".hidingThreshold"); //hiding > hidingThreshold
   const hiddenElements = document.querySelectorAll(".hidingThreshold + *"); //hidings > hiddenElements
@@ -13,28 +17,6 @@ window.addEventListener("load", () => {
   const gotop = document.querySelector(".gotop");
   const inputs = document.querySelectorAll("input");
   const textarea = document.querySelector("textarea");
-
-  //모바일 메뉴
-  const hMobileNav = document.querySelector("header .mobile-menu"); //top-nav-mobile > mobile-menu
-  const downSlidingMenu = document.querySelector(
-    ".mobile-menu .downSliding-nav"
-  ); //sub-menu > downSliding-nav
-  const goup = document.querySelector(".mobile-menu .goup");
-
-  hMobileNav.addEventListener("click", () => {
-    downSlidingMenu.classList.toggle("opened");
-  });
-
-  //gotop 버튼
-  gotop.addEventListener("click", (e) => {
-    e.preventDefault();
-    window.scrollTo(0, 0);
-  });
-
-  //click 이벤트 작동하지 않음
-  goup.addEventListener("mouseenter", () => {
-    downSlidingMenu.classList.toggle("opened");
-  });
 
   for (let i = 0; i < hiddenElements.length; i++) {
     hiddenElements[i].dataset.offtop =
@@ -70,11 +52,11 @@ window.addEventListener("load", () => {
 
   let sliderWorking = true;
 
-  pauseBtn.addEventListener("click", function () {
+  overlaySliderPauseBtn.addEventListener("click", function () {
     clearInterval(timer);
     sliderWorking = false;
   });
-  playBtn.addEventListener("click", function () {
+  overlaySliderPlayBtn.addEventListener("click", function () {
     if (!sliderWorking) {
       sliderWorking = true;
       timer = setInterval(infiniteSlider, 4000);
@@ -105,17 +87,17 @@ window.addEventListener("load", () => {
    * 슬라이더를 초기화하는 함수
    */
   function intializeSlides() {
-    const slides = document.querySelectorAll(".slider .slide");
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].addEventListener("click", function () {
-        const img = slides[i].querySelector("img");
-        overlayImg.src = img.getAttribute("src");
-        overlayImg.alt = img.getAttribute("alt");
+    const overlaySlides = document.querySelectorAll(".overlay-slider__slide");
+    for (let i = 0; i < overlaySlides.length; i++) {
+      overlaySlides[i].addEventListener("click", function () {
+        const overlaySlideImg = overlaySlides[i].querySelector("img");
+        overlayImg.src = overlaySlideImg.getAttribute("src");
+        overlayImg.alt = overlaySlideImg.getAttribute("alt");
         overlay.classList.add("visible");
       });
-      slides[i].addEventListener("keydown", function (e) {
+      overlaySlides[i].addEventListener("keydown", function (e) {
         if (e.key === "Enter") {
-          slides[i].dispatchEvent(new Event("click"));
+          overlaySlides[i].dispatchEvent(new Event("click"));
         }
       });
     }
@@ -158,21 +140,21 @@ window.addEventListener("load", () => {
    * 슬라이더에 left : -300px css 를 적용하는 함수
    */
   function addStyle() {
-    slider.style.transition = "1s ease-in-out";
-    slider.style.left = "-300px";
+    overlaySlider.style.transition = "1s ease-in-out";
+    overlaySlider.style.left = "-300px";
   }
 
   /**
    * 현재 슬라이더의 첫번쨰 항목을 복사한뒤 삭제해 마지막 항목으로 추가하는 함수
    */
   function cloneSlide() {
-    const slides = document.querySelectorAll(".slider .slide");
-    const firstslide = slides[0].cloneNode(true);
-    slides[0].remove();
+    const overlaySlides = document.querySelectorAll(".overlay-slider__slide");
+    const firstslide = overlaySlides[0].cloneNode(true);
+    overlaySlides[0].remove();
     overlayImage(firstslide);
-    slider.appendChild(firstslide);
-    slider.style.transition = "none";
-    slider.style.left = "0px";
+    overlaySlider.appendChild(firstslide);
+    overlaySlider.style.transition = "none";
+    overlaySlider.style.left = "0px";
   }
 
   function throttle(callback, limit = 1000 / 15) {

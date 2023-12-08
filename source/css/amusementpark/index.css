@@ -1,12 +1,11 @@
 @charset "UTF-8";
 @import url(../reset.css);
+/*==========================  base  =========================*/
 html {
   font-size: 62.5%; /*  setting rem  */
 }
 
 body {
-  width: 100%;
-  height: 100vh;
   font-family: "Nanum Gothic", "돋움", "Dotum", "Apple Gothic", sans-serif;
   overflow-x: hidden;
 }
@@ -16,22 +15,21 @@ body {
   --hoveredwidth: 27%;
 }
 
-main {
+/*===================================================*/
+.main__inner {
   width: 100%;
-  height: 100%;
-}
-
-main .wrapper {
-  /* -------------------------- main .wrapper ------------------------------ */
-  width: 100%;
-  height: 100%;
+  height: 100vh;
   font-size: 0;
   letter-spacing: 0;
   word-spacing: 0;
   white-space: nowrap;
 }
-main .wrapper div.w25p {
-  /* ------------------- div.w25p 공통속성 --------------- */
+@media screen and (max-width: 1281px) {
+  .main__inner {
+    white-space: initial;
+  }
+}
+.main__theme {
   display: inline-block;
   position: relative;
   width: 25%;
@@ -42,25 +40,37 @@ main .wrapper div.w25p {
   background-size: cover;
 }
 @media screen and (min-width: 1282px) {
-  main .wrapper div.w25p:hover {
+  .main__theme:hover {
     width: 27%;
   }
 }
 @media screen and (max-width: 1281px) {
-  main .wrapper div.w25p {
-    float: left;
+  .main__theme {
     width: 50%;
     height: 50vh;
   }
 }
 @media screen and (max-width: 600px) {
-  main .wrapper div.w25p {
+  .main__theme {
     display: block;
     width: 100%;
     height: 25vh;
   }
 }
-main .wrapper div.w25p a {
+.main__theme--background-nightshow {
+  background-image: url(../../images/amusementpark/nightshow/nightshow_fireworks.PNG);
+}
+.main__theme--background-rollercoaster {
+  background-image: url(../../images/amusementpark/attraction/rollercoaster.PNG);
+}
+.main__theme--background-krustyland {
+  background-image: url(../../images/amusementpark/krustyland.PNG);
+}
+.main__theme--background-aquarium {
+  background-image: url(../../images/amusementpark/aquarium.PNG);
+}
+
+.theme__link {
   position: absolute;
   top: 0;
   left: 0;
@@ -71,57 +81,48 @@ main .wrapper div.w25p a {
   font-size: 1.8rem;
   z-index: 2;
 }
-main .wrapper div.w25p a:focus-visible {
+.theme__link:focus-visible {
   border: 2px solid white;
   box-sizing: border-box;
 }
 @media screen and (max-width: 600px) {
-  main .wrapper div.w25p a {
+  .theme__link {
     z-index: 3;
   }
 }
-main .wrapper div.w25p .title {
+.theme__title_wrap {
   position: absolute;
-  width: 40%;
-  height: 15%;
   top: 60%;
   left: 50%;
+  right: 0;
+  bottom: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 10%;
   transform: translate(-50%, -50%);
-  box-sizing: border-box;
-  margin: 0 auto;
+  transition: 0.5s ease-in-out;
   border: 1px solid rgb(224, 224, 224);
-  border-bottom: 0px solid transparent;
-  transition: 0.7s ease-in-out;
-  z-index: 2;
+  border-bottom: none;
 }
 @media screen and (max-width: 1281px) {
-  main .wrapper div.w25p .title {
+  .theme__title_wrap {
     top: 50%;
-    height: 25%;
-    width: 30%;
-    position: absolute;
-  }
-}
-@media screen and (max-width: 1000px) {
-  main .wrapper div.w25p .title {
-    width: 60%;
-  }
-}
-@media screen and (max-width: 1279px) {
-  main .wrapper div.w25p .title {
-    height: 25%;
-    width: 40%;
+    font-size: 1.8rem;
+    line-height: 30px;
+    text-align: center;
   }
 }
 @media screen and (max-width: 600px) {
-  main .wrapper div.w25p .title {
-    height: 50%;
-    width: 30%;
+  .theme__title_wrap {
+    padding: 5%;
     z-index: 3;
-    position: absolute;
+    font-size: 1.4rem;
+    line-height: 25px;
   }
 }
-main .wrapper div.w25p .title:before {
+.theme__title_wrap:before {
   content: "";
   position: absolute;
   top: 0;
@@ -129,59 +130,31 @@ main .wrapper div.w25p .title:before {
   width: 100%;
   height: 100%;
   background: linear-gradient(to bottom, #333 70%, transparent 100%);
-  opacity: 0.5;
-  transition: 0.5s ease-in-out;
-  z-index: 0;
-}
-main .wrapper div.w25p .title h5 {
   position: absolute;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  right: 0;
-  bottom: 0;
-  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  z-index: 1;
+}
+.theme__title {
+  position: relative;
+  transition: 0.7s ease-in-out;
+  z-index: 2;
   line-height: 1.618;
   color: white;
-  font-size: 2rem;
+  font-size: 20px;
   letter-spacing: 1px;
   text-align: center;
   font-weight: bold;
 }
-@media screen and (max-width: 1000px) {
-  main .wrapper div.w25p .title h5 {
-    font-size: 1.6rem;
-    width: 90%;
-  }
-}
 @media screen and (max-width: 1281px) {
-  main .wrapper div.w25p .title h5 {
+  .theme__title {
     font-size: 1.8rem;
-    width: 100%;
     line-height: 30px;
-    text-align: center;
-    padding: 0 10px;
-    box-sizing: border-box;
   }
 }
 @media screen and (max-width: 600px) {
-  main .wrapper div.w25p .title h5 {
+  .theme__title {
+    z-index: 3;
     font-size: 1.4rem;
-    width: 100%;
     line-height: 25px;
-    padding: 0 10px;
-    box-sizing: border-box;
   }
-}
-main .wrapper .nightshow {
-  background: url(../../images/amusementpark/nightshow/nightshow_fireworks.PNG) no-repeat;
-}
-main .wrapper .rollercoaster {
-  background: url(../../images/amusementpark/attraction/rollercoaster.PNG) no-repeat;
-}
-main .wrapper .krustyland {
-  background: url(../../images/amusementpark/krustyland.PNG) no-repeat;
-}
-main .wrapper .aquarium {
-  background: url(../../images/amusementpark/aquarium.PNG) no-repeat;
 }/*# sourceMappingURL=index.css.map */
