@@ -11,6 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="../../source/js/amusementpark/header.js"></script>
     <script src="../../source/js/amusementpark/footer.js"></script>
+    <script src="../../source/js/amusementpark/footer.js"></script>
     <script src="../../source/js/amusementpark/nightshow/nigihtshow.js"></script>
     <title>나이트쇼 | Amusement Park</title>
   </head>
@@ -81,9 +82,9 @@
                 >
               </li>
             </ul>
-            <div class="downSliding-header__up-btn">
+            <div class="downSliding-header__close-btn">
               <img
-                class="downSliding-header__up-btn-img"
+                class="downSliding-header__close-btn-img"
                 src="../../source/images/amusementpark/nightshow/arrow-up-solid.svg"
                 alt="위 화살표 이미지"
               />
@@ -210,141 +211,191 @@
       </div>
       <!-- //info -->
 
-      <!-- letter -->
-
+      <!-- event-->
       <div class="main__inner">
-        <div class="main__letter background-img">
-          <div class="letter">
-            <a href="#" class="hidingThreshold" tabindex="-1"></a>
-            <div
-              class="main__desc desc desc__text--big desc__text--border-top desc__text--border-bottom desc__text--border-white"
-            >
-              여러분의 이야기를 들려주세요!
-            </div>
-
-            <a href="#" class="hidingThreshold" tabindex="-1"></a>
-            <form action="#" method="post">
-              <label for="customer-name">이름</label>
-              <input
-                type="text"
-                name="c-name"
-                id="customer-name"
-                placeholder="이름을 입력해주세요"
-              />
-              <label for="customer-number">입장권번호</label>
-              <input
-                type="number"
-                name="c-number"
-                id="customer-number"
-                placeholder="입장권번호를 입력해주세요"
-              />
-              <label for="customer-address">주소</label>
-              <input
-                type="text"
-                name="c-address"
-                id="customer-address"
-                placeholder="주소를 입력해주세요"
-              />
-              <label for="customer-review">리뷰내용</label>
-              <textarea
-                name="c-review"
-                id="customer-review"
-                rows="10"
-                placeholder="리뷰를 입력해주세요"
-              ></textarea>
-              <div class="reward">
-                <h4>선물선택</h4>
-                <ul class="reward-ul">
-                  <li class="reward-li">
-                    <img
-                      src="../../source/images/amusementpark/nightshow/present.PNG"
-                      alt="선물상자"
-                    />
-                    <label class="reward-label" for="reward-presents"
-                      >선물상자</label
-                    >
-                    <input
-                      type="radio"
-                      name="reward"
-                      id="reward-presents"
-                      value="presents"
-                      checked
-                    />
-                  </li>
-                  <li class="reward-li">
-                    <img
-                      src="../../source/images/amusementpark/nightshow/ramen.PNG"
-                      alt="라면"
-                    />
-                    <label class="reward-label" for="reward-ramen">라면</label>
-                    <input
-                      type="radio"
-                      name="reward"
-                      id="reward-ramen"
-                      value="ramen"
-                      tabindex="0"
-                    />
-                  </li>
-                  <li class="reward-li">
-                    <img
-                      src="../../source/images/amusementpark/nightshow/phone.PNG"
-                      alt="핸드폰"
-                    />
-                    <label class="reward-label" for="reward-iphone"
-                      >아이폰</label
-                    >
-                    <input
-                      type="radio"
-                      name="reward"
-                      id="reward-iphone"
-                      value="iphone"
-                      tabindex="0"
-                    />
-                  </li>
-                </ul>
-              </div>
-              <button type="submit">응모하기</button>
-            </form>
+        <div class="main__event background-img">
+          <a href="#" class="hidingThreshold" tabindex="-1"></a>
+          <div
+            class="main__desc desc desc__text--big desc__text--border-top desc__text--border-bottom desc__text--border-white"
+          >
+            여러분의 이야기를 들려주세요!
           </div>
+
+          <a href="#" class="hidingThreshold" tabindex="-1"></a>
+          <form class="main__event-form form" action="#" method="post">
+            <label
+              class="main__label label label--top-left-right-radius"
+              for="customer-name"
+              >이름</label
+            >
+            <input
+              class="main__input input"
+              type="text"
+              name="c-name"
+              id="customer-name"
+              placeholder="이름을 입력해주세요"
+            />
+            <label
+              class="main__label label label--top-left-right-radius"
+              for="customer-number"
+              >입장권번호</label
+            >
+            <input
+              class="main__input input"
+              type="number"
+              name="c-number"
+              id="customer-number"
+              placeholder="입장권번호를 입력해주세요"
+            />
+            <label
+              class="main__label label label--top-left-right-radius"
+              for="customer-address"
+              >주소</label
+            >
+            <input
+              class="main__input input"
+              type="text"
+              name="c-address"
+              id="customer-address"
+              placeholder="주소를 입력해주세요"
+            />
+            <label
+              class="main__label label label--top-left-right-radius"
+              for="customer-review"
+              >리뷰내용</label
+            >
+            <textarea
+              class="main__textarea textarea"
+              name="c-review"
+              id="customer-review"
+              rows="10"
+              placeholder="리뷰를 입력해주세요"
+            ></textarea>
+
+            <div class="main__reward">
+              <h4
+                class="main__title title title--h4 title--border-top-left-radius"
+              >
+                선물선택
+              </h4>
+              <ul class="main__reward-ul img-ul">
+                <li class="main__reward-li img-ul__li">
+                  <img
+                    class="main__reward-img img-ul__img"
+                    src="../../source/images/amusementpark/nightshow/present.PNG"
+                    alt="선물상자 이미지"
+                  />
+                  <label class="main__reward-label label" for="reward-presents"
+                    >랜덤선물</label
+                  >
+                  <input
+                    class="main__radio radio"
+                    type="radio"
+                    name="reward"
+                    id="reward-presents"
+                    value="presents"
+                    checked
+                  />
+                </li>
+                <li class="main__reward-li img-ul__li">
+                  <img
+                    class="main__reward-img img-ul__img"
+                    src="../../source/images/amusementpark/nightshow/ramen.PNG"
+                    alt="라면"
+                  />
+                  <label class="main__reward-label label" for="reward-ramen"
+                    >라면</label
+                  >
+                  <input
+                    class="main__radio radio"
+                    type="radio"
+                    name="reward"
+                    id="reward-ramen"
+                    value="ramen"
+                    tabindex="0"
+                  />
+                </li>
+                <li class="main__reward-li img-ul__li">
+                  <img
+                    class="main__reward-img img-ul__img"
+                    src="../../source/images/amusementpark/nightshow/phone.PNG"
+                    alt="핸드폰"
+                  />
+                  <label class="main__reward-label label" for="reward-iphone"
+                    >아이폰</label
+                  >
+                  <input
+                    class="main__radio radio"
+                    type="radio"
+                    name="reward"
+                    id="reward-iphone"
+                    value="iphone"
+                    tabindex="0"
+                  />
+                </li>
+              </ul>
+            </div>
+            <button class="main__button button" type="submit">응모하기</button>
+          </form>
         </div>
       </div>
-      <!-- //letter -->
+      <!-- event-->
 
       <!-- benefits -->
-      <div class="benefits-wrapper">
+      <div class="main__inner">
         <a href="#" class="hidingThreshold" tabindex="-1"></a>
-        <div class="sub-desc">놓치지 마세요!</div>
-        <div class="desc">잊지말아야 할 혜택 네가지!</div>
+        <div class="main__desc desc">
+          <div class="desc__text desc__text--small desc__text--border-top">
+            놓치지 마세요!
+          </div>
+          <div class="desc__text desc__text--big desc__text--border-bottom">
+            잊지말아야 할 혜택 네가지!
+          </div>
+        </div>
 
         <a href="#" class="hidingThreshold" tabindex="-1"></a>
-        <ul class="benefit-ul">
-          <li class="benefit-li">
-            <div>
-              <p>어플을 통해 이벤트를 받아보세요!</p>
-              <button>바로가기</button>
+        <ul class="main__benefit-ul main__benefit-ul-ly">
+          <li class="main__benefit-li main__benefit-li-ly">
+            <div class="main__benefit-inner">
+              <p class="main__benefit-p main__benefit-p-ly">
+                어플을 통해 이벤트를 받아보세요!
+              </p>
+              <button class="main__benefit-btn button button--white">
+                바로가기
+              </button>
             </div>
           </li>
-          <li class="benefit-li">
-            <div>
-              <p>다양한 행사를 통한 푸짐한 상품들!</p>
-              <button>바로가기</button>
+          <li class="main__benefit-li main__benefit-li-ly">
+            <div class="main__benefit-inner">
+              <p class="main__benefit-p main__benefit-p-ly">
+                다양한 행사를 통한 푸짐한 상품들!
+              </p>
+              <button class="main__benefit-btn button button--white">
+                바로가기
+              </button>
             </div>
           </li>
-          <li class="benefit-li">
-            <div>
-              <p>온가족이 함께하면 더욱 커지는 할인혜택!</p>
-              <button>바로가기</button>
+          <li class="main__benefit-li main__benefit-li-ly">
+            <div class="main__benefit-inner">
+              <p class="main__benefit-p main__benefit-p-ly">
+                온가족이 함께하면 더욱 커지는 할인혜택!
+              </p>
+              <button class="main__benefit-btn button button--white">
+                바로가기
+              </button>
             </div>
           </li>
-          <li class="benefit-li">
-            <div>
-              <p>언제인지 모르는 깜짝 이벤트까지!</p>
-              <button>바로가기</button>
+          <li class="main__benefit-li main__benefit-li-ly">
+            <div class="main__benefit-inner">
+              <p class="main__benefit-p main__benefit-p-ly">
+                언제인지 모르는 깜짝 이벤트까지!
+              </p>
+              <button class="main__benefit-btn button button--white">
+                바로가기
+              </button>
             </div>
           </li>
         </ul>
-
-        <a href="#" class="hidingThreshold" tabindex="-1"></a>
       </div>
       <!-- //benefits -->
     </main>
