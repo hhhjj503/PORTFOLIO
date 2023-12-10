@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .footer {
   border-top: 1px solid #e1e1e1;
   white-space: nowrap;
@@ -90,6 +92,7 @@
   overflow: hidden;
   border-radius: 50%;
   background-color: #1c3055;
+  cursor: pointer;
 }
 
 .gotop__link {

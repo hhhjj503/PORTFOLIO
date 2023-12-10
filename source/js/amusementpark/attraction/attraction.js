@@ -1,28 +1,30 @@
 window.addEventListener("load", () => {
   const html = document.querySelector("html");
 
-  const attractionWrapper = document.querySelector(".attraction-wrapper");
-  const absoluteNav = document.querySelector(".absolute-nav");
-  const attracionNavs = document.querySelectorAll(".attraction-nav-ul a");
-  const attractions = document.querySelectorAll(".attraction");
+  const scrollNavigatorInner = document.querySelector(
+    ".scroll-navigator__inner"
+  );
+  const jsScrollHeight = document.querySelector(".js-scroll-height");
+  const scrollNavigatorLink = document.querySelectorAll(
+    ".scroll-navigator__link"
+  );
+  let scrollNavigatorDestination = [];
+  scrollNavigatorDestination = getOffsetTop(".js-offsettop");
+  changeHeightValue(jsScrollHeight.offsetHeight, scrollNavigatorInner);
 
-  let attractionsOffsetTops = [];
-  attractionsOffsetTops = getOffsetTop();
-  changeHeightValue(attractionWrapper.offsetHeight, absoluteNav);
-
-  for (let i = 0; i < attracionNavs.length; i++) {
-    attracionNavs[i].addEventListener("click", function (e) {
+  for (let i = 0; i < scrollNavigatorLink.length; i++) {
+    scrollNavigatorLink[i].addEventListener("click", function (e) {
       e.preventDefault();
-      html.scrollTop = attractionsOffsetTops[i];
-      activeStyle(attracionNavs, i);
+      html.scrollTop = scrollNavigatorDestination[i];
+      activeStyle(scrollNavigatorLink, i);
     });
   }
 
   window.addEventListener("resize", function () {
     setTimeout(() => {
-      attractionsOffsetTops = [];
-      attractionsOffsetTops = getOffsetTop();
-      changeHeightValue(attractionWrapper.offsetHeight, absoluteNav);
+      scrollNavigatorDestination = [];
+      scrollNavigatorDestination = getOffsetTop(".js-offsettop");
+      changeHeightValue(jsScrollHeight.offsetHeight, scrollNavigatorInner);
     }, 300);
   });
 
@@ -30,9 +32,9 @@ window.addEventListener("load", () => {
     "scroll",
     throttle(() => {
       let currentTop = html.scrollTop;
-      for (let i = 0; i < attractionsOffsetTops.length; i++) {
-        if (currentTop >= attractionsOffsetTops[i] - 50) {
-          activeStyle(attracionNavs, i);
+      for (let i = 0; i < scrollNavigatorDestination.length; i++) {
+        if (currentTop >= scrollNavigatorDestination[i] - 50) {
+          activeStyle(scrollNavigatorLink, i);
         }
       }
     })
@@ -42,12 +44,12 @@ window.addEventListener("load", () => {
     elment.style.height = value + "px";
   }
 
-  function getOffsetTop() {
-    const attractionsTemp = document.querySelectorAll(".attraction");
+  function getOffsetTop(claaName) {
+    const tempOffsetTop = document.querySelectorAll(claaName);
     let newArray = [];
-    for (let i = 0; i < attractionsTemp.length; i++) {
+    for (let i = 0; i < tempOffsetTop.length; i++) {
       newArray.push(
-        window.scrollY + attractionsTemp[i].getBoundingClientRect().top
+        window.scrollY + tempOffsetTop[i].getBoundingClientRect().top
       );
     }
     return newArray;
@@ -55,9 +57,9 @@ window.addEventListener("load", () => {
 
   function activeStyle(array, styleIndex) {
     for (let i = 0; i < array.length; i++) {
-      attracionNavs[i].classList.remove("active");
+      scrollNavigatorLink[i].classList.remove("active");
     }
-    attracionNavs[styleIndex].classList.add("active");
+    scrollNavigatorLink[styleIndex].classList.add("active");
   }
 
   function throttle(callback, limit = 1000 / 15) {

@@ -2,6 +2,7 @@
 @import url(../../reset.css);
 @import url(../layout/header.css);
 @import url(../layout/footer.css);
+@import url(./module.css);
 html {
   font-size: 62.5%; /*  setting rem  */
   scroll-behavior: smooth;
@@ -12,54 +13,36 @@ body {
   overflow-x: hidden;
 }
 
-.h-nav {
-  transition: 0.5s ease-in-out;
-}
-.h-nav.scrolldown {
-  opacity: 0;
-  pointer-events: none;
-}
-.h-nav .nav-ul li:nth-child(3) a {
-  color: #e60000; /* nav 의 어트랙션 글자 빨갛게 변경 */
+.header__li:nth-child(3) > .header__link {
+  color: #e60000; /* nav 의 나이트쇼 글자 빨갛게 변경 */
 }
 
 /*=================================================================================*/
-main {
-  /* -------------------------------------------- main ------------------------------------------- */
-  width: 100%;
-}
-main .banner img {
-  display: block;
-  width: 100%;
-  height: 500px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: middle;
-     object-position: middle;
-}
-main .attraction-wrapper {
+.main__inner {
   max-width: 1600px;
+  width: 100%;
   margin: 0 auto;
 }
-main .attraction-wrapper .absolute-nav {
+.main__navigator-inner {
   position: absolute;
   right: 2%;
 }
-main .attraction-wrapper .absolute-nav .attraction-nav-ul {
+.main__navigator-nav {
   position: sticky;
   top: 50%;
   transform: translateY(-50%);
   z-index: 9;
 }
-main .attraction-wrapper .absolute-nav .attraction-nav-ul li a {
+.main__navigator-link {
   position: relative;
   display: block;
   width: 70px;
   height: 70px;
   border-radius: 50%;
   margin-bottom: 5px;
+  overflow: hidden;
 }
-main .attraction-wrapper .absolute-nav .attraction-nav-ul li a:after {
+.main__navigator-link:after {
   content: "";
   position: absolute;
   top: 0;
@@ -70,30 +53,30 @@ main .attraction-wrapper .absolute-nav .attraction-nav-ul li a:after {
   transition: 0.3s ease;
   border-radius: 50%;
 }
-main .attraction-wrapper .absolute-nav .attraction-nav-ul li a.active:after, main .attraction-wrapper .absolute-nav .attraction-nav-ul li a:hover:after {
+.main__navigator-link.active:after, .main__navigator-link:hover:after {
   background-color: transparent;
 }
 @media screen and (max-width: 600px) {
-  main .attraction-wrapper .absolute-nav .attraction-nav-ul li a {
+  .main__navigator-link {
     width: 50px;
     height: 50px;
   }
 }
-main .attraction-wrapper .absolute-nav .attraction-nav-ul li a img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 50%;
-}
-main .attraction-wrapper .attraction {
+.main__destination {
   position: relative;
   width: 100%;
   padding: 100px;
   box-sizing: border-box;
 }
-main .attraction-wrapper .attraction:before {
+.main__destination--right-direction {
+  text-align: right;
+}
+@media screen and (max-width: 1281px) {
+  .main__destination--right-direction {
+    text-align: center;
+  }
+}
+.main__destination:before {
   content: "";
   position: absolute;
   top: 20%;
@@ -103,7 +86,7 @@ main .attraction-wrapper .attraction:before {
   width: 100%;
   height: 1px;
 }
-main .attraction-wrapper .attraction:after {
+.main__destination:after {
   content: "";
   position: absolute;
   bottom: 20%;
@@ -114,44 +97,112 @@ main .attraction-wrapper .attraction:after {
   height: 1px;
 }
 @media screen and (max-width: 1281px) {
-  main .attraction-wrapper .attraction {
+  .main__destination {
     text-align: center;
     padding: 50px;
   }
-  main .attraction-wrapper .attraction:after {
+  .main__destination:after {
     width: 90%;
     margin: 0 auto;
   }
-  main .attraction-wrapper .attraction:before {
+  .main__destination:before {
     width: 90%;
     margin: 0 auto;
   }
 }
 @media screen and (max-width: 768px) {
-  main .attraction-wrapper .attraction:before {
+  .main__destination:before {
     display: none;
   }
-  main .attraction-wrapper .attraction:after {
+  .main__destination:after {
+    display: none;
+  }
+}
+.main__destination-img {
+  position: relative;
+  display: inline-block;
+  width: 700px;
+  height: 700px;
+  vertical-align: middle;
+  transition: 0.3s ease;
+  z-index: 1;
+}
+.main__destination-img:nth-child(even) {
+  margin-left: auto;
+}
+@media screen and (max-width: 1281px) {
+  .main__destination-img {
+    width: 400px;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main__destination-img {
+    display: block;
+    width: 70vw;
+    height: 70vw;
+    margin: 0 auto;
+  }
+}
+.main .ml5p {
+  margin-left: 5%;
+}
+.main .mr5p {
+  margin-right: 5%;
+}
+.main__desc {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: bold;
+  vertical-align: middle;
+  line-height: 1.618;
+}
+@media screen and (max-width: 1281px) {
+  .main__desc {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main__desc {
     display: none;
   }
 }
 @media screen and (max-width: 600px) {
-  main .attraction-wrapper .attraction:before {
-    display: none;
-  }
-  main .attraction-wrapper .attraction:after {
+  .main__desc {
     display: none;
   }
 }
-main .attraction-wrapper .attraction.right {
-  text-align: right;
+.main__desc.right {
+  margin-left: 0;
+  margin-right: 5%;
 }
 @media screen and (max-width: 1281px) {
-  main .attraction-wrapper .attraction.right {
-    text-align: center;
+  .main__desc.right {
+    text-align: right;
   }
 }
-main .attraction-wrapper .attraction .deco-text {
+@media screen and (max-width: 1281px) {
+  .main__desc__title {
+    font-size: 2rem;
+  }
+}
+.main .icon-ul li {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+@media screen and (max-width: 1281px) {
+  .main .icon-ul li {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media screen and (max-width: 1281px) {
+  .main .text-ul {
+    font-size: 2rem;
+  }
+}
+.main__deco-text {
   position: absolute;
   bottom: 100px;
   right: 0;
@@ -161,116 +212,34 @@ main .attraction-wrapper .attraction .deco-text {
   font-size: 6rem;
   font-weight: bold;
 }
-main .attraction-wrapper .attraction .deco-text.left {
+.main__deco-text.left {
   left: 0;
   right: initial;
 }
 @media screen and (max-width: 1281px) {
-  main .attraction-wrapper .attraction .deco-text {
+  .main__deco-text {
     bottom: 50px;
     font-size: 4rem;
     right: 10%;
   }
-  main .attraction-wrapper .attraction .deco-text.left {
+  .main__deco-text.left {
     left: 10%;
     right: initial;
   }
 }
 @media screen and (max-width: 768px) {
-  main .attraction-wrapper .attraction .deco-text {
+  .main__deco-text {
     font-size: 3rem;
     bottom: 10px;
   }
 }
 @media screen and (max-width: 600px) {
-  main .attraction-wrapper .attraction .deco-text {
+  .main__deco-text {
     font-size: 2rem;
     bottom: 20px;
   }
 }
-main .attraction-wrapper .attraction > img {
-  position: relative;
-  display: inline-block;
-  width: 700px;
-  height: 700px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 50%;
-  vertical-align: middle;
-  transition: 0.3s ease;
-  z-index: 1;
-}
-main .attraction-wrapper .attraction > img:nth-child(even) {
-  margin-left: auto;
-}
-@media screen and (max-width: 1281px) {
-  main .attraction-wrapper .attraction > img {
-    width: 400px;
-    height: 400px;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .attraction-wrapper .attraction > img {
-    display: block;
-    width: 70vw;
-    height: 70vw;
-    margin: 0 auto;
-  }
-}
-main .attraction-wrapper .attraction .desc {
-  display: inline-block;
-  font-size: 3rem;
-  font-weight: bold;
-  margin-left: 5%;
-  vertical-align: middle;
-  line-height: 1.618;
-}
-@media screen and (max-width: 1281px) {
-  main .attraction-wrapper .attraction .desc {
-    text-align: left;
-  }
-}
-@media screen and (max-width: 768px) {
-  main .attraction-wrapper .attraction .desc {
-    display: none;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .attraction-wrapper .attraction .desc {
-    display: none;
-  }
-}
-main .attraction-wrapper .attraction .desc.right {
-  margin-left: 0;
-  margin-right: 5%;
-}
-@media screen and (max-width: 1281px) {
-  main .attraction-wrapper .attraction .desc.right {
-    text-align: right;
-  }
-}
-@media screen and (max-width: 1281px) {
-  main .attraction-wrapper .attraction .desc h4 {
-    font-size: 2rem;
-  }
-}
-main .attraction-wrapper .attraction .desc .ban-icons-ul li {
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-}
-@media screen and (max-width: 1281px) {
-  main .attraction-wrapper .attraction .desc .ban-icons-ul li {
-    width: 60px;
-    height: 60px;
-  }
-}
-@media screen and (max-width: 1281px) {
-  main .attraction-wrapper .attraction .desc .ban-text-ul {
-    font-size: 2rem;
-  }
-}
-main .attraction-wrapper .attraction .mobile-desc {
+.main .mobile-desc {
   position: relative;
   display: none;
   margin-top: 25px;
@@ -278,10 +247,10 @@ main .attraction-wrapper .attraction .mobile-desc {
   line-height: 1.618;
 }
 @media screen and (max-width: 768px) {
-  main .attraction-wrapper .attraction .mobile-desc {
+  .main .mobile-desc {
     display: block;
   }
-  main .attraction-wrapper .attraction .mobile-desc:before {
+  .main .mobile-desc:before {
     content: "";
     position: absolute;
     top: 0;
@@ -292,7 +261,7 @@ main .attraction-wrapper .attraction .mobile-desc {
     height: 1px;
     margin: 0 auto;
   }
-  main .attraction-wrapper .attraction .mobile-desc:after {
+  .main .mobile-desc:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -305,10 +274,10 @@ main .attraction-wrapper .attraction .mobile-desc {
   }
 }
 @media screen and (max-width: 600px) {
-  main .attraction-wrapper .attraction .mobile-desc {
+  .main .mobile-desc {
     display: block;
   }
-  main .attraction-wrapper .attraction .mobile-desc:before {
+  .main .mobile-desc:before {
     content: "";
     position: absolute;
     top: 0;
@@ -318,7 +287,7 @@ main .attraction-wrapper .attraction .mobile-desc {
     width: 100%;
     height: 1px;
   }
-  main .attraction-wrapper .attraction .mobile-desc:after {
+  .main .mobile-desc:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -329,36 +298,36 @@ main .attraction-wrapper .attraction .mobile-desc {
     height: 1px;
   }
 }
-main .attraction-wrapper .attraction .mobile-desc h4 {
+.main .mobile-desc h4 {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 25px;
 }
 @media screen and (max-width: 768px) {
-  main .attraction-wrapper .attraction .mobile-desc h4 {
+  .main .mobile-desc h4 {
     font-size: 2.2rem;
   }
 }
-main .attraction-wrapper .attraction .mobile-desc .ban-icons-ul li {
+.main .mobile-desc .ban-icons-ul li {
   display: inline-block;
   width: 50px;
   height: 50px;
 }
 @media screen and (max-width: 768px) {
-  main .attraction-wrapper .attraction .mobile-desc .ban-icons-ul li {
+  .main .mobile-desc .ban-icons-ul li {
     width: 60px;
     height: 60px;
   }
 }
-main .attraction-wrapper .attraction .mobile-desc .ban-icons-ul li img {
+.main .mobile-desc .ban-icons-ul li img {
   width: 100%;
   height: 100%;
 }
-main .attraction-wrapper .attraction .mobile-desc .ban-text-ul li {
+.main .mobile-desc .ban-text-ul li {
   font-size: 1.6rem;
 }
 @media screen and (max-width: 768px) {
-  main .attraction-wrapper .attraction .mobile-desc .ban-text-ul li {
+  .main .mobile-desc .ban-text-ul li {
     font-size: 1.8rem;
   }
 }/*# sourceMappingURL=attraction.css.map */

@@ -1,6 +1,7 @@
 @import url(../../reset.css);
 @import url(../layout/header.css);
 @import url(../layout/footer.css);
+@import url(./module.css);
 
 html {
   font-size: 62.5%; /*  setting rem  */
@@ -12,108 +13,332 @@ body {
   overflow-x: hidden;
 }
 
-.h-nav {
-  transition: 0.5s ease-in-out;
-
-  &.scrolldown {
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  & .nav-ul {
-    li:nth-child(3) {
-      & a {
-        color: #e60000; /* nav 의 어트랙션 글자 빨갛게 변경 */
-      }
-    }
+.header__li:nth-child(3) {
+  > .header__link {
+    color: #e60000; /* nav 의 나이트쇼 글자 빨갛게 변경 */
   }
 }
 
 /*=================================================================================*/
 
-main {
-  /* -------------------------------------------- main ------------------------------------------- */
-  width: 100%;
+.main {
+  &__inner {
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+  }
 
-  & .banner {
-    & img {
+  &__navigator {
+    &-inner {
+      position: absolute;
+      right: 2%;
+    }
+
+    &-nav {
+      position: sticky;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 9;
+    }
+
+    &-link {
+      position: relative;
       display: block;
-      width: 100%;
-      height: 500px;
-      object-fit: cover;
-      object-position: middle;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      margin-bottom: 5px;
+      overflow: hidden;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.7);
+        transition: 0.3s ease;
+        border-radius: 50%;
+      }
+
+      &.active:after,
+      &:hover:after {
+        background-color: transparent;
+      }
+
+      @media screen and (max-width: 600px) {
+        & {
+          width: 50px;
+          height: 50px;
+        }
+      }
     }
   }
 
-  & .attraction-wrapper {
-    max-width: 1600px;
-    margin: 0 auto;
+  &__destination {
+    position: relative;
+    width: 100%;
+    padding: 100px;
+    box-sizing: border-box;
 
-    & .absolute-nav {
-      position: absolute;
-      right: 2%;
+    &--right-direction {
+      text-align: right;
 
-      & .attraction-nav-ul {
-        position: sticky;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 9;
-
-        & li {
-          & a {
-            position: relative;
-            display: block;
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            margin-bottom: 5px;
-
-            &:after {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              background-color: rgba($color: #000000, $alpha: 0.7);
-              transition: 0.3s ease;
-              border-radius: 50%;
-            }
-
-            &.active:after,
-            &:hover:after {
-              background-color: transparent;
-            }
-
-            @media screen and (max-width: 600px) {
-              & {
-                width: 50px;
-                height: 50px;
-              }
-            }
-
-            & img {
-              display: block;
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              border-radius: 50%;
-            }
-          }
+      @media screen and (max-width: 1281px) {
+        & {
+          text-align: center;
         }
       }
     }
 
-    & .attraction {
-      position: relative;
+    //직선줄 장식
+    &:before {
+      content: "";
+      position: absolute;
+      top: 20%;
+      background-color: #040247;
+      left: 0;
+      right: 0;
       width: 100%;
-      padding: 100px;
-      box-sizing: border-box;
+      height: 1px;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 20%;
+      background-color: #040247;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 1px;
+    }
+
+    @media screen and (max-width: 1281px) {
+      & {
+        text-align: center;
+        padding: 50px;
+      }
+
+      &:after {
+        width: 90%;
+        margin: 0 auto;
+      }
+      &:before {
+        width: 90%;
+        margin: 0 auto;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      &:before {
+        display: none;
+      }
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &__destination-img {
+    position: relative;
+    display: inline-block;
+    width: 700px;
+    height: 700px;
+    vertical-align: middle;
+    transition: 0.3s ease;
+    z-index: 1;
+
+    &:nth-child(even) {
+      margin-left: auto;
+    }
+
+    @media screen and (max-width: 1281px) {
+      & {
+        width: 400px;
+        height: 400px;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      & {
+        display: block;
+        width: 70vw;
+        height: 70vw;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .ml5p {
+    margin-left: 5%;
+  }
+
+  .mr5p {
+    margin-right: 5%;
+  }
+
+  &__desc {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: bold;
+    vertical-align: middle;
+    line-height: 1.618;
+
+    @media screen and (max-width: 1281px) {
+      & {
+        text-align: left;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      & {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      & {
+        display: none;
+      }
+    }
+
+    &.right {
+      margin-left: 0;
+      margin-right: 5%;
+
+      @media screen and (max-width: 1281px) {
+        & {
+          text-align: right;
+        }
+      }
+    }
+
+    &__title {
+      @media screen and (max-width: 1281px) {
+        & {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  .icon-ul {
+    & li {
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+
+      @media screen and (max-width: 1281px) {
+        & {
+          width: 60px;
+          height: 60px;
+        }
+      }
+    }
+  }
+
+  .text-ul {
+    @media screen and (max-width: 1281px) {
+      & {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__deco-text {
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+    //transform: translateX(-50%);
+    background-color: white;
+    text-align: center;
+    color: #040247;
+    font-size: 6rem;
+    font-weight: bold;
+
+    &.left {
+      left: 0;
+      right: initial;
+    }
+
+    @media screen and (max-width: 1281px) {
+      & {
+        bottom: 50px;
+        font-size: 4rem;
+        right: 10%;
+      }
+
+      &.left {
+        left: 10%;
+        right: initial;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      & {
+        font-size: 3rem;
+        bottom: 10px;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      & {
+        font-size: 2rem;
+        bottom: 20px;
+      }
+    }
+  }
+
+  //
+
+  & .mobile-desc {
+    position: relative;
+    display: none;
+    margin-top: 25px;
+    padding: 25px 0;
+    line-height: 1.618;
+
+    @media screen and (max-width: 768px) {
+      & {
+        display: block;
+      }
 
       &:before {
         content: "";
         position: absolute;
-        top: 20%;
+        top: 0;
+        background-color: #040247;
+        left: 0;
+        right: 0;
+        width: 85%;
+        height: 1px;
+        margin: 0 auto;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        background-color: #040247;
+        left: 0;
+        right: 0;
+        width: 85%;
+        height: 1px;
+        margin: 0 auto;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      & {
+        display: block;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
         background-color: #040247;
         left: 0;
         right: 0;
@@ -124,310 +349,54 @@ main {
       &:after {
         content: "";
         position: absolute;
-        bottom: 20%;
+        bottom: 0;
         background-color: #040247;
         left: 0;
         right: 0;
         width: 100%;
         height: 1px;
       }
+    }
 
-      @media screen and (max-width: 1281px) {
-        & {
-          text-align: center;
-          padding: 50px;
-        }
-
-        &:after {
-          width: 90%;
-          margin: 0 auto;
-        }
-        &:before {
-          width: 90%;
-          margin: 0 auto;
-        }
-      }
+    & h4 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 25px;
 
       @media screen and (max-width: 768px) {
-        &:before {
-          display: none;
-        }
-        &:after {
-          display: none;
+        & {
+          font-size: 2.2rem;
         }
       }
+    }
 
-      @media screen and (max-width: 600px) {
-        &:before {
-          display: none;
-        }
-        &:after {
-          display: none;
-        }
-      }
-
-      &.right {
-        text-align: right;
-
-        @media screen and (max-width: 1281px) {
-          & {
-            text-align: center;
-          }
-        }
-      }
-
-      & .deco-text {
-        position: absolute;
-        bottom: 100px;
-        right: 0;
-        //transform: translateX(-50%);
-        background-color: white;
-        text-align: center;
-        color: #040247;
-        font-size: 6rem;
-        font-weight: bold;
-
-        &.left {
-          left: 0;
-          right: initial;
-        }
-
-        @media screen and (max-width: 1281px) {
-          & {
-            bottom: 50px;
-            font-size: 4rem;
-            right: 10%;
-          }
-
-          &.left {
-            left: 10%;
-            right: initial;
-          }
-        }
-
-        @media screen and (max-width: 768px) {
-          & {
-            font-size: 3rem;
-            bottom: 10px;
-          }
-        }
-
-        @media screen and (max-width: 600px) {
-          & {
-            font-size: 2rem;
-            bottom: 20px;
-          }
-        }
-      }
-
-      & > img {
-        position: relative;
+    & .ban-icons-ul {
+      & li {
         display: inline-block;
-        width: 700px;
-        height: 700px;
-        object-fit: cover;
-        border-radius: 50%;
-        vertical-align: middle;
-        transition: 0.3s ease;
-        z-index: 1;
-
-        &:nth-child(even) {
-          margin-left: auto;
-        }
-
-        @media screen and (max-width: 1281px) {
-          & {
-            width: 400px;
-            height: 400px;
-          }
-        }
-
-        @media screen and (max-width: 600px) {
-          & {
-            display: block;
-            width: 70vw;
-            height: 70vw;
-            margin: 0 auto;
-          }
-        }
-      }
-
-      & .desc {
-        display: inline-block;
-        font-size: 3rem;
-        font-weight: bold;
-        margin-left: 5%;
-        vertical-align: middle;
-        line-height: 1.618;
-
-        @media screen and (max-width: 1281px) {
-          & {
-            text-align: left;
-          }
-        }
+        width: 50px;
+        height: 50px;
 
         @media screen and (max-width: 768px) {
           & {
-            display: none;
+            width: 60px;
+            height: 60px;
           }
         }
 
-        @media screen and (max-width: 600px) {
-          & {
-            display: none;
-          }
-        }
-
-        &.right {
-          margin-left: 0;
-          margin-right: 5%;
-
-          @media screen and (max-width: 1281px) {
-            & {
-              text-align: right;
-            }
-          }
-        }
-
-        & h4 {
-          @media screen and (max-width: 1281px) {
-            & {
-              font-size: 2rem;
-            }
-          }
-        }
-
-        & .ban-icons-ul {
-          & li {
-            display: inline-block;
-            width: 80px;
-            height: 80px;
-
-            @media screen and (max-width: 1281px) {
-              & {
-                width: 60px;
-                height: 60px;
-              }
-            }
-          }
-        }
-
-        & .ban-text-ul {
-          @media screen and (max-width: 1281px) {
-            & {
-              font-size: 2rem;
-            }
-          }
+        & img {
+          width: 100%;
+          height: 100%;
         }
       }
-      //
+    }
 
-      & .mobile-desc {
-        position: relative;
-        display: none;
-        margin-top: 25px;
-        padding: 25px 0;
-        line-height: 1.618;
+    & .ban-text-ul {
+      & li {
+        font-size: 1.6rem;
 
         @media screen and (max-width: 768px) {
           & {
-            display: block;
-          }
-
-          &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            background-color: #040247;
-            left: 0;
-            right: 0;
-            width: 85%;
-            height: 1px;
-            margin: 0 auto;
-          }
-
-          &:after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            background-color: #040247;
-            left: 0;
-            right: 0;
-            width: 85%;
-            height: 1px;
-            margin: 0 auto;
-          }
-        }
-
-        @media screen and (max-width: 600px) {
-          & {
-            display: block;
-          }
-
-          &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            background-color: #040247;
-            left: 0;
-            right: 0;
-            width: 100%;
-            height: 1px;
-          }
-
-          &:after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            background-color: #040247;
-            left: 0;
-            right: 0;
-            width: 100%;
-            height: 1px;
-          }
-        }
-
-        & h4 {
-          font-size: 2rem;
-          font-weight: bold;
-          margin-bottom: 25px;
-
-          @media screen and (max-width: 768px) {
-            & {
-              font-size: 2.2rem;
-            }
-          }
-        }
-
-        & .ban-icons-ul {
-          & li {
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-
-            @media screen and (max-width: 768px) {
-              & {
-                width: 60px;
-                height: 60px;
-              }
-            }
-
-            & img {
-              width: 100%;
-              height: 100%;
-            }
-          }
-        }
-
-        & .ban-text-ul {
-          & li {
-            font-size: 1.6rem;
-
-            @media screen and (max-width: 768px) {
-              & {
-                font-size: 1.8rem;
-              }
-            }
+            font-size: 1.8rem;
           }
         }
       }
