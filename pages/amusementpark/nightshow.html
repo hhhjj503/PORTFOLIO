@@ -115,7 +115,7 @@
 
           <a href="#" class="hidingThreshold" tabindex="-1"></a>
           <div class="main__slider">
-            <div class="main__slider-inner">
+            <div class="overlay-slider-wrapper">
               <!-- overlay-slider -->
               <div class="main__slider-ly overlay-slider">
                 <div
@@ -124,7 +124,7 @@
                   role="button"
                 >
                   <img
-                    class="overlay-slider__img"
+                    class="img"
                     src="../../source/images/amusementpark/nightshow/nightshow.PNG"
                     alt="불꽃놀이사진"
                   />
@@ -135,7 +135,7 @@
                   role="button"
                 >
                   <img
-                    class="overlay-slider__img"
+                    class="img"
                     src="../../source/images/amusementpark/nightshow/nightshow_fireworks.PNG"
                     alt="불꽃놀이사진"
                   />
@@ -146,7 +146,7 @@
                   role="button"
                 >
                   <img
-                    class="overlay-slider__img"
+                    class="img"
                     src="../../source/images/amusementpark/nightshow/nightshow_lights.JPG"
                     alt="불빛사진"
                   />
@@ -157,7 +157,7 @@
                   role="button"
                 >
                   <img
-                    class="overlay-slider__img"
+                    class="img"
                     src="../../source/images/amusementpark/nightshow/nightshow4.JPG"
                     alt="관람차사진"
                   />
@@ -168,7 +168,7 @@
                   role="button"
                 >
                   <img
-                    class="overlay-slider__img"
+                    class="img"
                     src="../../source/images/amusementpark/nightshow/nightshow_lights.JPG"
                     alt="불빛사진"
                   />
@@ -224,7 +224,7 @@
           <a href="#" class="hidingThreshold" tabindex="-1"></a>
           <form class="main__event-form form" action="#" method="post">
             <label
-              class="main__label label label--top-left-right-radius"
+              class="label label--top-left-right-radius"
               for="customer-name"
               >이름</label
             >
@@ -236,7 +236,7 @@
               placeholder="이름을 입력해주세요"
             />
             <label
-              class="main__label label label--top-left-right-radius"
+              class="label label--top-left-right-radius"
               for="customer-number"
               >입장권번호</label
             >
@@ -248,7 +248,7 @@
               placeholder="입장권번호를 입력해주세요"
             />
             <label
-              class="main__label label label--top-left-right-radius"
+              class="label label--top-left-right-radius"
               for="customer-address"
               >주소</label
             >
@@ -260,7 +260,7 @@
               placeholder="주소를 입력해주세요"
             />
             <label
-              class="main__label label label--top-left-right-radius"
+              class="label label--top-left-right-radius"
               for="customer-review"
               >리뷰내용</label
             >
@@ -278,14 +278,16 @@
               >
                 선물선택
               </h4>
-              <ul class="main__reward-ul img-ul">
-                <li class="main__reward-li img-ul__li">
+              <ul class="main__reward-ul">
+                <li class="main__reward-li">
                   <img
-                    class="main__reward-img img-ul__img"
+                    class="main__reward-img img img--border-radius-5 img--border-white"
                     src="../../source/images/amusementpark/nightshow/present.PNG"
                     alt="선물상자 이미지"
                   />
-                  <label class="main__reward-label label" for="reward-presents"
+                  <label
+                    class="label display-block text-center"
+                    for="reward-presents"
                     >랜덤선물</label
                   >
                   <input
@@ -297,13 +299,15 @@
                     checked
                   />
                 </li>
-                <li class="main__reward-li img-ul__li">
+                <li class="main__reward-li">
                   <img
-                    class="main__reward-img img-ul__img"
+                    class="main__reward-img img img--border-radius-5 img--border-white"
                     src="../../source/images/amusementpark/nightshow/ramen.PNG"
                     alt="라면"
                   />
-                  <label class="main__reward-label label" for="reward-ramen"
+                  <label
+                    class="label display-block text-center"
+                    for="reward-ramen"
                     >라면</label
                   >
                   <input
@@ -315,13 +319,15 @@
                     tabindex="0"
                   />
                 </li>
-                <li class="main__reward-li img-ul__li">
+                <li class="main__reward-li">
                   <img
-                    class="main__reward-img img-ul__img"
+                    class="main__reward-img img img--border-radius-5 img--border-white"
                     src="../../source/images/amusementpark/nightshow/phone.PNG"
                     alt="핸드폰"
                   />
-                  <label class="main__reward-label label" for="reward-iphone"
+                  <label
+                    class="label display-block text-center"
+                    for="reward-iphone"
                     >아이폰</label
                   >
                   <input

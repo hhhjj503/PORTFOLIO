@@ -7,8 +7,37 @@
   &--border-50 {
     border-radius: 50%;
   }
+
+  &--contain {
+    object-fit: contain;
+  }
 }
 
-.img--contain {
-  object-fit: contain;
+.display-block {
+  display: block;
+}
+
+.round-shape {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.mr5p {
+  margin-right: 5%;
+
+  @media screen and (max-width: 600px) {
+    & {
+      margin-right: 0;
+    }
+  }
+}
+
+.ml5p {
+  margin-left: 5%;
+
+  @media screen and (max-width: 600px) {
+    & {
+      margin-left: 0;
+    }
+  }
 }

@@ -91,8 +91,8 @@ window.addEventListener("load", () => {
   window.addEventListener(
     "scroll",
     throttle(() => {
-      const skillsTrigger = scrollElementsOffsetTops[1] * 0.6;
-      const portfolioTrigger = scrollElementsOffsetTops[2] * 0.8;
+      const skillsTrigger = scrollElementsOffsetTops[1] * 0.4;
+      const portfolioTrigger = scrollElementsOffsetTops[2] * 0.9;
 
       if (html.scrollTop > skillsTrigger) skills.classList.add("active");
       else skills.classList.remove("active");

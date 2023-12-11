@@ -158,5 +158,6 @@
 
   .downSliding-header__inner {
     display: block;
+    border-bottom: 1px solid #ccc;
   }
 }

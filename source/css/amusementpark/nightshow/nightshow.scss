@@ -122,18 +122,11 @@ a.hidingThreshold {
       }
     }
 
-    &-inner {
+    &-ly {
       width: 1600px;
       height: 300px;
       white-space: nowrap;
     }
-  }
-
-  &__slider-ly {
-    position: relative;
-    left: 0;
-    top: 0;
-    transition: 0.5s ease-in-out;
   }
 
   &__slide {
@@ -200,10 +193,8 @@ a.hidingThreshold {
   }
 
   &__radio {
-    display: block;
     width: 100%;
     margin: 5px 0;
-    text-align: center;
   }
 
   &__label {
