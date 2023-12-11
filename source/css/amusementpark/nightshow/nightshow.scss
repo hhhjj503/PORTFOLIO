@@ -96,6 +96,12 @@ a.hidingThreshold {
     overflow: hidden;
     margin: 0 auto;
 
+    &-ly {
+      width: 1600px;
+      height: 300px;
+      white-space: nowrap;
+    }
+
     //& = main__slider
     @media screen and (max-width: 1281px) {
       & {
@@ -120,12 +126,6 @@ a.hidingThreshold {
       & {
         width: 200px;
       }
-    }
-
-    &-ly {
-      width: 1600px;
-      height: 300px;
-      white-space: nowrap;
     }
   }
 

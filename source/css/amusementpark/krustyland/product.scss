@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 @import url(../../reset.css);
 @import url(../layout/header.css);
 @import url(../layout/footer.css);
@@ -12,18 +14,13 @@ body {
   overflow-x: hidden;
 }
 
-.h-nav {
-  transition: 0.5s ease-in-out;
-  z-index: 98; /* 상품구매창의 레이어를 위해 z-index  변경*/
-
-  & .nav-ul {
-    li:nth-child(4) {
-      & a {
-        color: #e60000; /* nav 의 크러스티랜드 글자 빨갛게 변경 */
-      }
-    }
+.header__li:nth-child(4) {
+  > .header__link {
+    color: #e60000; /* nav 의 나이트쇼 글자 빨갛게 변경 */
   }
 }
+
+/*=================================================================================*/
 
 .mobile-menu {
   transition: 0.5s ease-in-out;

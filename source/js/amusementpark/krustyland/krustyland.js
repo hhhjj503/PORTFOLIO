@@ -1,10 +1,10 @@
 window.addEventListener("load", () => {
   const html = document.querySelector("html");
-  const moreBtn = document.querySelector(".more");
-  const menu = document.querySelector("main .menu");
-  const background = document.querySelector(".banner-wrapper.bg-img");
+  const moreBtn = document.querySelector(".btn");
+  const mainBar = document.querySelector(".main__bar");
+  const mainBanner = document.querySelector(".main__banner");
 
-  document.querySelector(".banner-wrapper.bg-img").offsetHeight + "px";
+  document.querySelector(".main__banner").offsetHeight + "px";
 
   //제품리스트를 제이슨으로 받아와 담기위한 배열과 카운트 선언
   let addedItemCount = 5;
@@ -27,19 +27,19 @@ window.addEventListener("load", () => {
     img.src = imgSourceArray[i];
   }
 
-  const goodsUl = $(".goods-wrapper .goods-ul");
+  const mainGoodsUl = $(".main__goods-ul");
 
   window.addEventListener("scroll", () => {
     if (
-      html.scrollTop > background.offsetHeight
-      //- menu.offsetHeight && topNav.offsetHeight !== 0
+      html.scrollTop > mainBanner.offsetHeight
+      //- mainBar.offsetHeight && topNav.offsetHeight !== 0
     ) {
       //pc일때 fixed 위치조정
-      menu.style.position = "fixed";
-      menu.style.top = "0px";
+      mainBar.style.position = "fixed";
+      mainBar.style.top = "0px";
     } else {
-      menu.style.position = "relative";
-      menu.style.top = 0;
+      mainBar.style.position = "relative";
+      mainBar.style.top = 0;
     }
   });
 
@@ -66,15 +66,15 @@ window.addEventListener("load", () => {
 
     $.each(slicedData, function (i, item) {
       const elementText =
-        ' <li class="goods-li" >' +
-        '<a href="./product.html" ' +
-        '><img  src="' +
+        ' <li class="main__goods-li img-li" >' +
+        '<a class="main__goods-link" href="./product.html" ' +
+        '><img class="main__goods-img img"  src="' +
         item.imagePath +
         '" ' +
         ' alt="' +
         item.title +
         '"  />' +
-        '<h5 data-index="' +
+        '<h5 class="main__goods-title main__goods-title-ly" data-index="' +
         item.index +
         '" data-rating="' +
         item.rating +
@@ -93,13 +93,13 @@ window.addEventListener("load", () => {
 
     if (added > allData.length - 1) {
       added = allData.length - 1;
-      moreBtn.classList.add("nomore");
+      moreBtn.classList.add("main__btn-ly--is-end");
     }
 
-    goodsUl.append(elements);
+    mainGoodsUl.append(elements);
 
-    goodsUl.imagesLoaded(function () {
-      goodsUl.find("li").addClass("loaded");
+    mainGoodsUl.imagesLoaded(function () {
+      mainGoodsUl.find("li").addClass("main__goods-li--is-loaded");
     });
   } //addItem
 });

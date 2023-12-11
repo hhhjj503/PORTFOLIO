@@ -1,6 +1,12 @@
+@charset "utf-8";
+
 @import url(../../reset.css);
 @import url(../layout/header.css);
 @import url(../layout/footer.css);
+
+/* 자주사용되는 모듈 
+(블록주석 : shit alt all) */
+@import url(../module/background-img.css);
 
 html {
   font-size: 62.5%; /*  setting rem  */
@@ -12,49 +18,61 @@ body {
   overflow-x: hidden;
 }
 
-.h-nav {
-  transition: 0.5s ease-in-out;
-  z-index: 98; /* 상품구매창의 레이어를 위해 z-index  변경*/
-
-  & .nav-ul {
-    li:nth-child(4) {
-      & a {
-        color: #e60000; /* nav 의 크러스티랜드 글자 빨갛게 변경 */
-      }
-    }
+.header__li:nth-child(4) {
+  > .header__link {
+    color: #e60000; /* nav 의 나이트쇼 글자 빨갛게 변경 */
   }
 }
 
-.mobile-menu {
-  transition: 0.5s ease-in-out;
+/*=================================================================================*/
+.btn {
+  display: inline-block;
+
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  border: none;
+  background-color: #eb0000;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.detail-paragraph {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 1.4rem;
+  line-height: 200px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s ease;
+}
+
+.title {
+  word-break: keep-all;
+  font-weight: bold;
+  background-color: white;
+  transition: 0.3s ease-in-out;
+  padding: 5px 15px;
+  font-size: 1.5rem;
 }
 
 /*=================================================================================*/
 
-main {
-  /* ----------------------------------- main  --------------------------------------- */
-
-  & .banner-wrapper.bg-img {
-    width: 100%;
-    height: 500px;
-    background: url(../../../images/amusementpark/krustyland.PNG) no-repeat;
-    background-size: cover;
-    background-position: center 70%;
-    z-index: -1;
-
-    @media screen and (max-width: 1281px) {
-      & {
-        height: 400px;
-      }
-    }
-    @media screen and (max-width: 600px) {
-      & {
-        height: 300px;
-      }
-    }
+.main {
+  &__banner {
+    background-image: url(../../../images/amusementpark/krustyland.PNG);
+    background-position: center;
   }
 
-  & .menu {
+  &__bar {
     width: 100%;
     background-color: #fbc717;
     position: relative;
@@ -75,331 +93,289 @@ main {
       }
     }
 
-    & .container {
+    &-inner {
       max-width: 1200px;
+      width: 100%;
       margin: 0 auto;
       height: 50px;
+    }
 
-      & p {
-        font-size: 1.4rem;
-        font-weight: bold;
-        color: #333333;
-        line-height: 50px;
+    &-text {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #333333;
+      line-height: 50px;
 
-        @media screen and (max-width: 600px) {
-          & {
-            font-size: 1.3rem;
-          }
+      @media screen and (max-width: 600px) {
+        & {
+          font-size: 1.3rem;
         }
+      }
 
-        &:nth-child(1) {
-          float: left;
-        }
+      &:nth-child(1) {
+        float: left;
+      }
 
-        &:nth-child(2) {
-          float: right;
-        }
+      &:nth-child(2) {
+        float: right;
       }
     }
   }
 
-  & .goods-wrapper {
-    /*----------------------- main .goods-wrapper------------------------ */
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 100px 0;
+  &__goods {
     background-color: white;
 
-    @media screen and (max-width: 1281px) {
-      & {
-        padding: 70px 0;
-      }
-    }
-    @media screen and (max-width: 600px) {
-      & {
-        padding: 50px 0;
-      }
+    &--bg-f8f8f8 {
+      background-color: #f8f8f8;
     }
 
-    & .title {
-      width: 20%;
-      text-align: center;
-      font-size: 1.6rem;
-      font-weight: bold;
-      color: #333;
-      margin: 0 auto 50px auto;
-      border-top: 1px solid #bebebe;
-      border-bottom: 1px solid #bebebe;
-      padding: 8px 0;
+    &-inner {
+      max-width: 1200px;
+      margin: 100px auto 0 auto;
+
+      &:last-child {
+        margin-bottom: 100px;
+      }
 
       @media screen and (max-width: 1281px) {
         & {
-          width: 30%;
-          font-size: 1.5rem;
+          margin: 80px auto 0 auto;
+          width: 90%;
+        }
+        &:last-child {
+          margin-bottom: 80px;
         }
       }
+
       @media screen and (max-width: 600px) {
         & {
-          width: 40%;
-          font-size: 1.4rem;
+          margin: 60px auto 0 auto;
+        }
+        &:last-child {
+          margin-bottom: 60px;
         }
       }
     }
 
-    & .goods-container {
+    &-ul {
       width: 100%;
-      box-sizing: border-box;
-      margin: 0 auto;
-    }
-
-    & .goods-ul {
-      width: 100%;
-      padding-bottom: 50px;
-      position: relative;
-      box-sizing: border-box;
-      text-align: center;
       font-size: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
 
       @media screen and (max-width: 600px) {
         & {
           margin-bottom: 0;
-        }
-      }
-
-      & .goods-li {
-        width: 200px;
-        height: 350px;
-        box-sizing: border-box;
-        transition: 0.3s ease-in-out;
-        visibility: hidden;
-        display: inline-block;
-        margin: 10px;
-
-        &.loaded {
-          animation: showItems 0.8s forwards ease-in-out;
-        }
-
-        @keyframes showItems {
-          0% {
-            opacity: 0;
-          }
-          100% {
-            visibility: visible;
-            opacity: 1;
-          }
-        }
-
-        @media screen and (max-width: 1281px) {
-          & {
-            width: 19%;
-            margin: 10px 0.5%;
-          }
-        }
-        @media screen and (max-width: 600px) {
-          & {
-            width: 30%;
-            height: 150px;
-            margin: 5px;
-          }
-        }
-
-        &:hover {
-          box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
-            0.3em 0.3em 1em rgba(0, 0, 0, 0.1);
-        }
-
-        & a {
-          display: inline-block;
-          width: 100%;
-          height: 100%;
-          position: relative;
-          color: black;
-          overflow: hidden;
-
-          & img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: 0.3s ease;
-          }
-
-          //목록에 hover 시 img 크기 키우기
-          &:hover img {
-            transform: scale(1.1);
-            transform-origin: center center;
-          }
-
-          & h5 {
-            position: absolute;
-            display: inline;
-            left: 50%;
-            bottom: 10%;
-            transform: translateX(-50%);
-            padding: 0 10px;
-            word-break: keep-all;
-            border-radius: 15px;
-            font-size: 1.3rem;
-            line-height: 20px;
-            font-weight: bold;
-            background-color: white;
-            text-align: center;
-            transition: 0.3s ease-in-out;
-
-            @media screen and (max-width: 1281px) {
-              & {
-                font-size: 1.2rem;
-              }
-            }
-
-            @media screen and (max-width: 600px) {
-              & {
-                font-size: 1.1rem;
-                padding: 0 5px;
-                min-width: 55%;
-              }
-            }
-          }
+          justify-content: flex-start;
         }
       }
     }
 
-    & button {
-      position: relative;
-      z-index: 1;
-      display: block;
-      margin: 0 auto;
-      padding: 10px 20px;
-      font-size: 1.3rem;
-      border: none;
-      background-color: #eb0000;
-      border-radius: 5px;
-      font-weight: bold;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
+    &-li {
+      width: 200px;
+      height: 350px;
+      margin: 10px;
+      box-sizing: border-box;
       transition: 0.3s ease-in-out;
+      visibility: hidden;
+
+      &--is-loaded {
+        animation: showItems 0.8s forwards ease-in-out;
+      }
+
+      @keyframes showItems {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
 
       @media screen and (max-width: 1281px) {
         & {
-          margin: 0 auto 50px auto;
+          width: 19%;
+          height: 300px;
+          margin: 10px 0.5%;
         }
       }
       @media screen and (max-width: 600px) {
         & {
           width: 30%;
-          font-size: 1.4rem;
+          height: 150px;
+          margin: 8px;
         }
       }
 
-      &.nomore {
-        display: none;
+      &:hover {
+        box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+          0.3em 0.3em 1em rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    //목록에 hover 시 img 크기 키우기
+    &-img:hover {
+      transform: scale(1.1);
+      transform-origin: center center;
+    }
+
+    &-link {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      color: black;
+      overflow: hidden;
+    }
+
+    &-title {
+      padding: 5px 10px;
+      background-color: white;
+      font-size: 14px;
+      border-radius: 15px;
+      font-weight: bold;
+
+      &-ly {
+        position: absolute;
+        left: 50%;
+        bottom: 10%;
+        transform: translateX(-50%);
+        width: max-content;
       }
 
-      &:hover {
-        border: rgb(141, 0, 0);
+      @media screen and (max-width: 1281px) {
+        & {
+          font-size: 1.2rem;
+        }
       }
     }
   }
 
-  & .goods-wrapper2 {
-    /*----------------------- main .goods-wrapper2------------------------ */
-    width: 100%;
-    background-color: #f8f8f8;
-    padding: 20px 0;
+  &__btn-ly {
+    display: block;
+    margin: 50px auto 0 auto;
+
+    @media screen and (max-width: 600px) {
+      & {
+        font-size: 1.4rem;
+      }
+    }
+
+    &--is-end {
+      display: none;
+    }
+  }
+
+  &__title {
+    width: 20%;
+    margin: 0 auto 50px auto;
+    text-align: center;
+
+    border-radius: 15px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 8px 0;
+    color: #333;
+    border-top: 1px solid #bebebe;
+    border-bottom: 1px solid #bebebe;
 
     @media screen and (max-width: 1281px) {
       & {
-        overflow: scroll;
+        width: 30%;
+        font-size: 1.5rem;
       }
     }
     @media screen and (max-width: 600px) {
       & {
-        overflow: scroll;
+        width: 40%;
+        font-size: 1.4rem;
       }
     }
+  }
 
-    & .goods-ul {
+  &__goods-round-ul {
+    padding: 20px 0;
+    font-size: 0;
+    white-space: nowrap;
+
+    &-ly {
       max-width: 1200px;
       width: 100%;
       margin: 0 auto;
-      white-space: nowrap;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
 
-      & li {
-        text-align: center;
-        font-size: 0;
-
+      @media screen and (max-width: 600px) {
         & {
-          position: relative;
-          display: inline-block;
-          width: 200px;
-          height: 200px;
-          background-color: white;
-          border-radius: 50%;
-          overflow: hidden;
-
-          @media screen and (max-width: 1281px) {
-            & {
-              width: 150px;
-              height: 150px;
-            }
-          }
-          @media screen and (max-width: 600px) {
-            & {
-              width: 100px;
-              height: 100px;
-            }
-          }
-
-          &:hover p,
-          &:focus-visible p {
-            opacity: 1;
-          }
-
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-
-          p {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
-            font-size: 1.4rem;
-            line-height: 200px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-
-            @media screen and (max-width: 1281px) {
-              & {
-                width: 150px;
-                height: 150px;
-                font-size: 1.3rem;
-                line-height: 150px;
-              }
-            }
-            @media screen and (max-width: 600px) {
-              & {
-                width: 100px;
-                height: 100px;
-                font-size: 1.1rem;
-                line-height: 100px;
-              }
-            }
-          }
+          display: block;
+          height: 100px;
+          overflow-x: scroll;
+          overflow-y: hidden;
         }
       }
     }
   }
+
+  &__goods-round-li {
+    position: relative;
+    display: inline-block;
+    width: 190px;
+    height: 190px;
+    background-color: white;
+    border-radius: 50%;
+    overflow: hidden;
+
+    &-ly {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      text-align: center;
+
+      @media screen and (max-width: 1281px) {
+        & {
+          width: 150px;
+          height: 150px;
+          font-size: 1.3rem;
+          line-height: 150px;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        & {
+          width: 100px;
+          height: 100px;
+          font-size: 1.1rem;
+          line-height: 100px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1281px) {
+      & {
+        width: 150px;
+        height: 150px;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      & {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    &:hover p,
+    &:focus-visible p {
+      opacity: 1;
+    }
+  }
 }
 
-footer {
-  background-color: white;
-}
 /* ------------------------------- animation ------------------------------------- */
 
 @keyframes fadeOut {
@@ -418,4 +394,8 @@ footer {
   }
   100% {
   }
+}
+
+.bg-f8f8f8 {
+  background-color: #f8f8f8;
 }

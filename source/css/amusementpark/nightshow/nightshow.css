@@ -73,6 +73,11 @@ a.hidingThreshold + * {
   overflow: hidden;
   margin: 0 auto;
 }
+.main__slider-ly {
+  width: 1600px;
+  height: 300px;
+  white-space: nowrap;
+}
 @media screen and (max-width: 1281px) {
   .main__slider {
     width: 900px;
@@ -93,11 +98,6 @@ a.hidingThreshold + * {
   .main__slider {
     width: 200px;
   }
-}
-.main__slider-ly {
-  width: 1600px;
-  height: 300px;
-  white-space: nowrap;
 }
 .main__slide {
   width: 298px;

@@ -2,6 +2,9 @@
 @import url(../../reset.css);
 @import url(../layout/header.css);
 @import url(../layout/footer.css);
+/* 자주사용되는 모듈 
+(블록주석 : shit alt all) */
+@import url(../module/background-img.css);
 html {
   font-size: 62.5%; /*  setting rem  */
   scroll-behavior: smooth;
@@ -12,41 +15,56 @@ body {
   overflow-x: hidden;
 }
 
-.h-nav {
-  transition: 0.5s ease-in-out;
-  z-index: 98; /* 상품구매창의 레이어를 위해 z-index  변경*/
-}
-.h-nav .nav-ul li:nth-child(4) a {
-  color: #e60000; /* nav 의 크러스티랜드 글자 빨갛게 변경 */
-}
-
-.mobile-menu {
-  transition: 0.5s ease-in-out;
+.header__li:nth-child(4) > .header__link {
+  color: #e60000; /* nav 의 나이트쇼 글자 빨갛게 변경 */
 }
 
 /*=================================================================================*/
-main {
-  /* ----------------------------------- main  --------------------------------------- */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  border: none;
+  background-color: #eb0000;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
-main .banner-wrapper.bg-img {
+
+.detail-paragraph {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 1.4rem;
+  line-height: 200px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.img {
   width: 100%;
-  height: 500px;
-  background: url(../../../images/amusementpark/krustyland.PNG) no-repeat;
-  background-size: cover;
-  background-position: center 70%;
-  z-index: -1;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.3s ease;
 }
-@media screen and (max-width: 1281px) {
-  main .banner-wrapper.bg-img {
-    height: 400px;
-  }
+
+.title {
+  word-break: keep-all;
+  font-weight: bold;
+  background-color: white;
+  transition: 0.3s ease-in-out;
+  padding: 5px 15px;
+  font-size: 1.5rem;
 }
-@media screen and (max-width: 600px) {
-  main .banner-wrapper.bg-img {
-    height: 300px;
-  }
+
+/*=================================================================================*/
+.main__banner {
+  background-image: url(../../../images/amusementpark/krustyland.PNG);
+  background-position: center;
 }
-main .menu {
+.main__bar {
   width: 100%;
   background-color: #fbc717;
   position: relative;
@@ -56,106 +74,92 @@ main .menu {
   box-sizing: border-box;
 }
 @media screen and (max-width: 1281px) {
-  main .menu {
+  .main__bar {
     padding: 0 20px;
   }
 }
 @media screen and (max-width: 600px) {
-  main .menu {
+  .main__bar {
     position: relative;
     padding: 0 20px;
   }
 }
-main .menu .container {
+.main__bar-inner {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   height: 50px;
 }
-main .menu .container p {
+.main__bar-text {
   font-size: 1.4rem;
   font-weight: bold;
   color: #333333;
   line-height: 50px;
 }
 @media screen and (max-width: 600px) {
-  main .menu .container p {
+  .main__bar-text {
     font-size: 1.3rem;
   }
 }
-main .menu .container p:nth-child(1) {
+.main__bar-text:nth-child(1) {
   float: left;
 }
-main .menu .container p:nth-child(2) {
+.main__bar-text:nth-child(2) {
   float: right;
 }
-main .goods-wrapper {
-  /*----------------------- main .goods-wrapper------------------------ */
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 100px 0;
+.main__goods {
   background-color: white;
 }
+.main__goods--bg-f8f8f8 {
+  background-color: #f8f8f8;
+}
+.main__goods-inner {
+  max-width: 1200px;
+  margin: 100px auto 0 auto;
+}
+.main__goods-inner:last-child {
+  margin-bottom: 100px;
+}
 @media screen and (max-width: 1281px) {
-  main .goods-wrapper {
-    padding: 70px 0;
+  .main__goods-inner {
+    margin: 80px auto 0 auto;
+    width: 90%;
+  }
+  .main__goods-inner:last-child {
+    margin-bottom: 80px;
   }
 }
 @media screen and (max-width: 600px) {
-  main .goods-wrapper {
-    padding: 50px 0;
+  .main__goods-inner {
+    margin: 60px auto 0 auto;
+  }
+  .main__goods-inner:last-child {
+    margin-bottom: 60px;
   }
 }
-main .goods-wrapper .title {
-  width: 20%;
-  text-align: center;
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #333;
-  margin: 0 auto 50px auto;
-  border-top: 1px solid #bebebe;
-  border-bottom: 1px solid #bebebe;
-  padding: 8px 0;
-}
-@media screen and (max-width: 1281px) {
-  main .goods-wrapper .title {
-    width: 30%;
-    font-size: 1.5rem;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .goods-wrapper .title {
-    width: 40%;
-    font-size: 1.4rem;
-  }
-}
-main .goods-wrapper .goods-container {
+.main__goods-ul {
   width: 100%;
-  box-sizing: border-box;
-  margin: 0 auto;
-}
-main .goods-wrapper .goods-ul {
-  width: 100%;
-  padding-bottom: 50px;
-  position: relative;
-  box-sizing: border-box;
-  text-align: center;
   font-size: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 @media screen and (max-width: 600px) {
-  main .goods-wrapper .goods-ul {
+  .main__goods-ul {
     margin-bottom: 0;
+    justify-content: flex-start;
   }
 }
-main .goods-wrapper .goods-ul .goods-li {
+.main__goods-li {
   width: 200px;
   height: 350px;
+  margin: 10px;
   box-sizing: border-box;
   transition: 0.3s ease-in-out;
   visibility: hidden;
-  display: inline-block;
-  margin: 10px;
 }
-main .goods-wrapper .goods-ul .goods-li.loaded {
+.main__goods-li--is-loaded {
   animation: showItems 0.8s forwards ease-in-out;
 }
 @keyframes showItems {
@@ -168,172 +172,131 @@ main .goods-wrapper .goods-ul .goods-li.loaded {
   }
 }
 @media screen and (max-width: 1281px) {
-  main .goods-wrapper .goods-ul .goods-li {
+  .main__goods-li {
     width: 19%;
+    height: 300px;
     margin: 10px 0.5%;
   }
 }
 @media screen and (max-width: 600px) {
-  main .goods-wrapper .goods-ul .goods-li {
+  .main__goods-li {
     width: 30%;
     height: 150px;
-    margin: 5px;
+    margin: 8px;
   }
 }
-main .goods-wrapper .goods-ul .goods-li:hover {
+.main__goods-li:hover {
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0.3em 0.3em 1em rgba(0, 0, 0, 0.1);
 }
-main .goods-wrapper .goods-ul .goods-li a {
-  display: inline-block;
+.main__goods-img:hover {
+  transform: scale(1.1);
+  transform-origin: center center;
+}
+.main__goods-link {
+  display: block;
   width: 100%;
   height: 100%;
   position: relative;
   color: black;
   overflow: hidden;
 }
-main .goods-wrapper .goods-ul .goods-li a img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: 0.3s ease;
+.main__goods-title {
+  padding: 5px 10px;
+  background-color: white;
+  font-size: 14px;
+  border-radius: 15px;
+  font-weight: bold;
 }
-main .goods-wrapper .goods-ul .goods-li a:hover img {
-  transform: scale(1.1);
-  transform-origin: center center;
-}
-main .goods-wrapper .goods-ul .goods-li a h5 {
+.main__goods-title-ly {
   position: absolute;
-  display: inline;
   left: 50%;
   bottom: 10%;
   transform: translateX(-50%);
-  padding: 0 10px;
-  word-break: keep-all;
-  border-radius: 15px;
-  font-size: 1.3rem;
-  line-height: 20px;
-  font-weight: bold;
-  background-color: white;
-  text-align: center;
-  transition: 0.3s ease-in-out;
+  width: -moz-max-content;
+  width: max-content;
 }
 @media screen and (max-width: 1281px) {
-  main .goods-wrapper .goods-ul .goods-li a h5 {
+  .main__goods-title {
     font-size: 1.2rem;
   }
 }
-@media screen and (max-width: 600px) {
-  main .goods-wrapper .goods-ul .goods-li a h5 {
-    font-size: 1.1rem;
-    padding: 0 5px;
-    min-width: 55%;
-  }
-}
-main .goods-wrapper button {
-  position: relative;
-  z-index: 1;
+.main__btn-ly {
   display: block;
-  margin: 0 auto;
-  padding: 10px 20px;
-  font-size: 1.3rem;
-  border: none;
-  background-color: #eb0000;
-  border-radius: 5px;
-  font-weight: bold;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-}
-@media screen and (max-width: 1281px) {
-  main .goods-wrapper button {
-    margin: 0 auto 50px auto;
-  }
+  margin: 50px auto 0 auto;
 }
 @media screen and (max-width: 600px) {
-  main .goods-wrapper button {
-    width: 30%;
+  .main__btn-ly {
     font-size: 1.4rem;
   }
 }
-main .goods-wrapper button.nomore {
+.main__btn-ly--is-end {
   display: none;
 }
-main .goods-wrapper button:hover {
-  border: rgb(141, 0, 0);
-}
-main .goods-wrapper2 {
-  /*----------------------- main .goods-wrapper2------------------------ */
-  width: 100%;
-  background-color: #f8f8f8;
-  padding: 20px 0;
+.main__title {
+  width: 20%;
+  margin: 0 auto 50px auto;
+  text-align: center;
+  border-radius: 15px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 8px 0;
+  color: #333;
+  border-top: 1px solid #bebebe;
+  border-bottom: 1px solid #bebebe;
 }
 @media screen and (max-width: 1281px) {
-  main .goods-wrapper2 {
-    overflow: scroll;
+  .main__title {
+    width: 30%;
+    font-size: 1.5rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .goods-wrapper2 {
-    overflow: scroll;
+  .main__title {
+    width: 40%;
+    font-size: 1.4rem;
   }
 }
-main .goods-wrapper2 .goods-ul {
+.main__goods-round-ul {
+  padding: 20px 0;
+  font-size: 0;
+  white-space: nowrap;
+}
+.main__goods-round-ul-ly {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-main .goods-wrapper2 .goods-ul li {
-  text-align: center;
-  font-size: 0;
+@media screen and (max-width: 600px) {
+  .main__goods-round-ul-ly {
+    display: block;
+    height: 100px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
 }
-main .goods-wrapper2 .goods-ul li {
+.main__goods-round-li {
   position: relative;
   display: inline-block;
-  width: 200px;
-  height: 200px;
+  width: 190px;
+  height: 190px;
   background-color: white;
   border-radius: 50%;
   overflow: hidden;
 }
-@media screen and (max-width: 1281px) {
-  main .goods-wrapper2 .goods-ul li {
-    width: 150px;
-    height: 150px;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .goods-wrapper2 .goods-ul li {
-    width: 100px;
-    height: 100px;
-  }
-}
-main .goods-wrapper2 .goods-ul li:hover p, main .goods-wrapper2 .goods-ul li:focus-visible p {
-  opacity: 1;
-}
-main .goods-wrapper2 .goods-ul li img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-main .goods-wrapper2 .goods-ul li p {
+.main__goods-round-li-ly {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  font-size: 1.4rem;
-  line-height: 200px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  text-align: center;
 }
 @media screen and (max-width: 1281px) {
-  main .goods-wrapper2 .goods-ul li p {
+  .main__goods-round-li-ly {
     width: 150px;
     height: 150px;
     font-size: 1.3rem;
@@ -341,16 +304,27 @@ main .goods-wrapper2 .goods-ul li p {
   }
 }
 @media screen and (max-width: 600px) {
-  main .goods-wrapper2 .goods-ul li p {
+  .main__goods-round-li-ly {
     width: 100px;
     height: 100px;
     font-size: 1.1rem;
     line-height: 100px;
   }
 }
-
-footer {
-  background-color: white;
+@media screen and (max-width: 1281px) {
+  .main__goods-round-li {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main__goods-round-li {
+    width: 100px;
+    height: 100px;
+  }
+}
+.main__goods-round-li:hover p, .main__goods-round-li:focus-visible p {
+  opacity: 1;
 }
 
 /* ------------------------------- animation ------------------------------------- */
@@ -367,4 +341,7 @@ footer {
   0% {
     visibility: visible;
   }
+}
+.bg-f8f8f8 {
+  background-color: #f8f8f8;
 }/*# sourceMappingURL=krustyland.css.map */
