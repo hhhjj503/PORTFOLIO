@@ -182,7 +182,14 @@ body {
   .main__goods-li {
     width: 30%;
     height: 150px;
-    margin: 8px;
+    margin: 5px;
+  }
+}
+@media screen and (max-width: 280px) {
+  .main__goods-li {
+    width: 30%;
+    height: 150px;
+    margin: 3px;
   }
 }
 .main__goods-li:hover {
@@ -252,8 +259,11 @@ body {
 }
 @media screen and (max-width: 600px) {
   .main__title {
-    width: 40%;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 5px 20px;
     font-size: 1.4rem;
+    line-height: 1.4;
   }
 }
 .main__goods-round-ul {
@@ -270,12 +280,18 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media screen and (max-width: 1279px) {
+  .main__goods-round-ul-ly {
+    display: block;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+}
 @media screen and (max-width: 600px) {
   .main__goods-round-ul-ly {
     display: block;
     height: 100px;
-    overflow-x: scroll;
-    overflow-y: hidden;
   }
 }
 .main__goods-round-li {

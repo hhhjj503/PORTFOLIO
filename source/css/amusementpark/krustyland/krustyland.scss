@@ -206,7 +206,15 @@ body {
         & {
           width: 30%;
           height: 150px;
-          margin: 8px;
+          margin: 5px;
+        }
+      }
+
+      @media screen and (max-width: 280px) {
+        & {
+          width: 30%;
+          height: 150px;
+          margin: 3px;
         }
       }
 
@@ -290,8 +298,10 @@ body {
     }
     @media screen and (max-width: 600px) {
       & {
-        width: 40%;
+        width: fit-content;
+        padding: 5px 20px;
         font-size: 1.4rem;
+        line-height: 1.4;
       }
     }
   }
@@ -310,12 +320,19 @@ body {
       flex-wrap: wrap;
       justify-content: space-between;
 
+      @media screen and (max-width: 1279px) {
+        & {
+          display: block;
+          flex-wrap: nowrap;
+          overflow-x: scroll;
+          overflow-y: hidden;
+        }
+      }
+
       @media screen and (max-width: 600px) {
         & {
           display: block;
           height: 100px;
-          overflow-x: scroll;
-          overflow-y: hidden;
         }
       }
     }
