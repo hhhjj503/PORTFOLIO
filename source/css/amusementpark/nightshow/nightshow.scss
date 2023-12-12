@@ -3,11 +3,12 @@
 @import url(../../reset.css);
 @import url(../layout/header.css);
 @import url(../layout/footer.css);
-@import url(./module.css);
 
-/* 자주사용되는 모듈 
+/* 모듈 
 (블록주석 : shit alt all) */
 @import url(../module/background-img.css);
+@import url(./overlay-slider.css);
+@import url(./module.css);
 
 html {
   font-size: 62.5%; /*  setting rem  */
@@ -226,33 +227,34 @@ a.hidingThreshold {
     }
 
     &-li {
-      width: 30%;
       display: inline-block;
       margin-right: 5px;
+      box-sizing: border-box;
+
+      @media screen and (max-width: 600px) {
+        & {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    &-img {
+      box-sizing: border-box;
+      width: 200px;
+      height: 200px;
 
       @media screen and (max-width: 1281px) {
         & {
-          box-sizing: border-box;
+          width: 175px;
+          height: 175px;
           margin: 0 5px;
         }
       }
 
       @media screen and (max-width: 600px) {
         & {
-          width: 40%;
-        }
-      }
-    }
-
-    &-img {
-      display: block;
-      box-sizing: border-box;
-      width: 100%;
-      height: 200px;
-
-      @media screen and (max-width: 600px) {
-        & {
-          height: 160px;
+          width: 150px;
+          height: 150px;
         }
       }
     }

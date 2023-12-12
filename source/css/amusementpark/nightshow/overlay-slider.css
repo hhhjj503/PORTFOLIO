@@ -1,0 +1,102 @@
+/* ===================== overlay-slider ===================== */
+.overlay-slider {
+  position: relative;
+  left: 0;
+}
+.overlay-slider__slide {
+  float: left;
+  background-color: black;
+  transition: 0.5s ease;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: none;
+}
+.overlay-slider__slide:focus-visible {
+  border: 3px solid white;
+  box-sizing: border-box;
+}
+.overlay-slider:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.overlay-slider__controls {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+}
+.overlay-slider__controls button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.overlay-slider__controls button img {
+  width: 15px;
+  height: 15px;
+  display: block;
+  background-color: transparent;
+}
+.overlay-slider__overlay {
+  position: fixed;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: #000;
+  transition: 0.5s ease-in-out;
+  overflow: hidden;
+  z-index: 99;
+}
+.overlay-slider__overlay.visible {
+  opacity: 1;
+  pointer-events: all;
+  overflow: hidden;
+}
+.overlay-slider__overlay-img {
+  position: absolute;
+  width: 40%;
+  height: 50%;
+  border-radius: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  background-color: aliceblue;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 1281px) {
+  .overlay-slider__overlay-img {
+    width: 80%;
+    height: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .overlay-slider__overlay-img {
+    width: 80%;
+    height: 50%;
+  }
+}
+.overlay-slider__guide-txt {
+  position: absolute;
+  color: white;
+  left: 50%;
+  bottom: 15%;
+  padding: 5px 10px;
+  transform: translateX(-50%);
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+@media screen and (max-width: 1281px) {
+  .overlay-slider__guide-txt {
+    width: 80%;
+    text-align: center;
+    line-height: 1.618;
+  }
+}/*# sourceMappingURL=overlay-slider.css.map */

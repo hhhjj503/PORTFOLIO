@@ -2,6 +2,9 @@
 @import url(../../reset.css);
 @import url(../layout/header.css);
 @import url(../layout/footer.css);
+/* 모듈 
+(블록주석 : shit alt all) */
+@import url(../module/background-img.css);
 html {
   font-size: 62.5%; /*  setting rem  */
   scroll-behavior: smooth;
@@ -17,37 +20,14 @@ body {
 }
 
 /*=================================================================================*/
-.mobile-menu {
-  transition: 0.5s ease-in-out;
-}
-
-.text-indent {
-  text-indent: -9999em;
-}
-
-/*=================================================================================*/
-main {
+.main {
   /*----------------------------------- main  ---------------------------------------*/
 }
-main .banner-wrapper.bg-img {
-  width: 100%;
-  height: 500px;
-  background: url(../../../images/amusementpark/krustyland.PNG) no-repeat;
-  background-size: cover;
-  background-position: center 70%;
-  z-index: -1;
+.main__banner {
+  background: url(../../../images/amusementpark/krustyland.PNG);
+  background-position: center;
 }
-@media screen and (max-width: 1281px) {
-  main .banner-wrapper.bg-img {
-    height: 400px;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .banner-wrapper.bg-img {
-    height: 300px;
-  }
-}
-main .menu {
+.main__bar {
   width: 100%;
   background-color: #fbc717;
   position: relative;
@@ -57,264 +37,284 @@ main .menu {
   box-sizing: border-box;
 }
 @media screen and (max-width: 1281px) {
-  main .menu {
+  .main__bar {
     padding: 0 20px;
   }
 }
 @media screen and (max-width: 600px) {
-  main .menu {
+  .main__bar {
     position: relative;
     padding: 0 20px;
   }
 }
-main .menu .container {
+.main__bar-inner {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   height: 50px;
 }
-main .menu .container p {
+.main__bar-text {
   font-size: 1.4rem;
   font-weight: bold;
   color: #333333;
   line-height: 50px;
 }
 @media screen and (max-width: 600px) {
-  main .menu .container p {
+  .main__bar-text {
     font-size: 1.3rem;
   }
 }
-main .menu .container p:nth-child(1) {
+.main__bar-text:nth-child(1) {
   float: left;
 }
-main .menu .container p:nth-child(2) {
+.main__bar-text:nth-child(2) {
   float: right;
 }
-main .goods {
+.main__inner {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 40px 0;
   background-color: white;
   white-space: nowrap;
 }
-@media screen and (max-width: 600px) {
-  main .goods {
-    padding: 0;
+@media screen and (max-width: 1281px) {
+  .main__inner {
+    width: 90%;
+    padding: 20px 0;
   }
 }
-main .goods .slider-wrapper {
-  width: 65%;
-  display: inline-block;
-}
 @media screen and (max-width: 600px) {
-  main .goods .slider-wrapper {
-    display: block;
-    width: 100%;
+  .main__inner {
+    padding: 0px;
   }
 }
-main .goods .slider-wrapper .slider {
-  position: relative;
-  width: 100%;
-  height: 600px;
-}
-@media screen and (max-width: 600px) {
-  main .goods .slider-wrapper .slider {
-    height: 400px;
-  }
-}
-main .goods .slider-wrapper .slider img {
+.main .img {
   display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-main .goods .slider-wrapper .slider button {
+.main .img--cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main .text-indent {
+  text-indent: -9999em;
+}
+.main .inline-block {
+  display: inline-block;
+}
+.main .slider-wrapper {
+  width: 65%;
+  display: inline-block;
+}
+@media screen and (max-width: 600px) {
+  .main .slider-wrapper {
+    display: block;
+    width: 100%;
+  }
+}
+.main .slider-ly {
+  position: relative;
+  height: 600px;
+}
+@media screen and (max-width: 1281px) {
+  .main .slider-ly {
+    height: 500px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main .slider-ly {
+    height: auto;
+  }
+}
+.main .slider__slide {
+  position: relative;
+  max-width: 80%;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: inherit;
+  margin: 0 auto;
+}
+@media screen and (max-width: 600px) {
+  .main .slider__slide {
+    height: 400px;
+  }
+}
+.main .slider__controls {
   position: absolute;
+  width: 100%;
   top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 0 5%;
+}
+.main .slider__btn {
   width: 50px;
   height: 50px;
   background-color: transparent;
   border: none;
   cursor: pointer;
-  transform: translateY(-50%);
 }
-main .goods .slider-wrapper .slider button.before {
-  left: 5%;
+.main .slider__btn--before {
+  float: left;
 }
-main .goods .slider-wrapper .slider button.next {
-  right: 5%;
+.main .slider__btn--next {
+  float: right;
 }
-main .goods .option {
-  display: inline-block;
-  vertical-align: top;
-  width: 35%;
-  height: 600px;
-}
-@media screen and (max-width: 600px) {
-  main .goods .option {
-    display: block;
-    width: 100%;
-    height: 400px;
-  }
-}
-main .goods .option h5 {
-  font-size: 1.8rem;
+.main .pd20 {
   padding: 20px;
 }
-@media screen and (max-width: 1281px) {
-  main .goods .option h5 {
-    box-sizing: border-box;
-    width: 100%;
-    font-size: 1.6rem;
-  }
+.main .mb20 {
+  margin-bottom: 20px;
 }
-@media screen and (max-width: 600px) {
-  main .goods .option h5 {
-    font-size: 1.6rem;
-    padding: 20px;
-  }
-}
-main .goods .option .dib {
-  cursor: pointer;
-  padding: 20px;
-}
-main .goods .option .dib.clicked img {
-  content: url(../../../images/amusementpark/krustyland/heart-solid.svg);
-}
-@media screen and (max-width: 1281px) {
-  main .goods .option .dib {
-    width: 18px;
-    height: 18px;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .goods .option .dib {
-    padding: 10px 20px;
-  }
-}
-main .goods .option .dib img {
-  display: block;
-  width: 20px;
-  height: 20px;
-}
-main .goods .option .price {
-  border-bottom: 1px solid #dddfe1;
-  padding: 20px;
-}
-@media screen and (max-width: 600px) {
-  main .goods .option .price {
-    border-bottom: 1px solid #dddfe1;
-    padding: 10px 20px;
-  }
-}
-main .goods .option .price:after {
-  content: "";
-  clear: both;
-  display: block;
-}
-main .goods .option .price .per-price {
-  display: block;
-  font-size: 2.2rem;
-  font-weight: bold;
-}
-@media screen and (max-width: 1281px) {
-  main .goods .option .price .per-price {
-    font-size: 1.9rem;
-    font-weight: bold;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .goods .option .price .per-price {
-    font-size: 1.8rem;
-    font-weight: bold;
-  }
-}
-main .goods .option .color {
-  padding: 20px;
-  border-bottom: 1px solid #dddfe1;
+.main .title--h5 {
   font-size: 1.8rem;
 }
-main .goods .option .color .color-title {
-  display: block;
-  margin-bottom: 15px;
-}
 @media screen and (max-width: 1281px) {
-  main .goods .option .color .color-title {
+  .main .title--h5 {
     font-size: 1.6rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .goods .option .color .color-title {
+  .main .title--h5 {
+    font-size: 1.6rem;
+  }
+}
+.main .title--h6 {
+  display: block;
+  font-size: 1.8rem;
+}
+@media screen and (max-width: 1281px) {
+  .main .title--h6 {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main .title--h6 {
     font-size: 1.4rem;
   }
 }
-main .goods .option .color .palette-ul li {
+.main .round-btn {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: none;
+}
+.main .red {
+  background-color: red;
+}
+.main .orange {
+  background-color: orange;
+}
+.main .yellow {
+  background-color: yellow;
+}
+.main .green {
+  background-color: green;
+}
+.main .bold {
+  font-weight: bold;
+}
+.main .palette__li {
   display: inline-block;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   cursor: pointer;
 }
-main .goods .option .color .palette-ul li:nth-child(1) button.red.text-indent {
-  background-color: red;
-}
-main .goods .option .color .palette-ul li:nth-child(2) button.orange.text-indent {
-  background-color: orange;
-}
-main .goods .option .color .palette-ul li:nth-child(3) button.yellow.text-indent {
-  background-color: yellow;
-}
-main .goods .option .color .palette-ul li:nth-child(4) button.green.text-indent {
-  background-color: green;
-}
-main .goods .option .color .palette-ul li button {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: none;
-}
-main .goods .option .quantity {
-  padding: 20px;
-  border-bottom: 1px solid #dddfe1;
-  font-size: 1.8rem;
+.main .product-ly {
+  display: inline-block;
+  width: 35%;
+  vertical-align: top;
 }
 @media screen and (max-width: 600px) {
-  main .goods .option .quantity {
+  .main .product {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+.main .product__dib {
+  cursor: pointer;
+  vertical-align: top;
+  margin-left: 10px;
+}
+.main .product__dib-img {
+  width: 20px;
+  height: auto;
+  content: url(../../../images/amusementpark/krustyland/heart-solid.svg);
+}
+@media screen and (max-width: 1281px) {
+  .main .product__dib {
+    width: 18px;
+    height: 18px;
+  }
+}
+.main .product__price {
+  border-bottom: 1px solid #dddfe1;
+}
+@media screen and (max-width: 600px) {
+  .main .product__price {
+    border-bottom: 1px solid #dddfe1;
     padding: 10px 20px;
   }
 }
-main .goods .option .quantity:after {
+.main .product__price:after {
   content: "";
   clear: both;
   display: block;
 }
-main .goods .option .quantity .number-title {
+.main .product__per-price {
   display: block;
-  font-size: 1.8rem;
-  margin-bottom: 15px;
+  font-size: 2.2rem;
+  font-weight: bold;
 }
 @media screen and (max-width: 1281px) {
-  main .goods .option .quantity .number-title {
-    font-size: 1.6rem;
+  .main .product__per-price {
+    font-size: 1.9rem;
+    font-weight: bold;
   }
 }
 @media screen and (max-width: 600px) {
-  main .goods .option .quantity .number-title {
-    font-size: 1.4rem;
+  .main .product__per-price {
+    font-size: 1.8rem;
+    font-weight: bold;
   }
 }
+.main .product__color {
+  border-bottom: 1px solid #dddfe1;
+  font-size: 1.8rem;
+}
+.main .product__quantity {
+  border-bottom: 1px solid #dddfe1;
+  font-size: 1.8rem;
+}
+@media screen and (max-width: 600px) {
+  .main .product__quantity {
+    padding: 10px 20px;
+  }
+}
+.main .product__quantity:after {
+  content: "";
+  clear: both;
+  display: block;
+}
 @media screen and (max-width: 1281px) {
-  main .goods .option .quantity .value {
+  .main .product .quantity__count {
     font-size: 1.8rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .goods .option .quantity .value {
+  .main .product .quantity__count {
     font-size: 1.6rem;
     margin: 0 5px;
   }
 }
-main .goods .option .quantity button {
+.main .product .quantity__control-btn {
   border-radius: 50%;
   border: none;
   width: 25px;
@@ -327,7 +327,7 @@ main .goods .option .quantity button {
   background-color: white;
 }
 @media screen and (max-width: 1281px) {
-  main .goods .option .quantity button {
+  .main .product .quantity__control-btn {
     width: 20px;
     height: 20px;
     font-size: 1.9rem;
@@ -335,58 +335,40 @@ main .goods .option .quantity button {
   }
 }
 @media screen and (max-width: 600px) {
-  main .goods .option .quantity button {
+  .main .product .quantity__control-btn {
     width: 20px;
     height: 20px;
     font-size: 1.9rem;
     line-height: 20px;
   }
 }
-main .goods .option .total {
-  padding: 20px;
-}
 @media screen and (max-width: 600px) {
-  main .goods .option .total {
+  .main .product__total {
     padding: 10px 20px;
   }
 }
-main .goods .option .total:after {
+.main .product__total:after {
   content: "";
   clear: both;
   display: block;
 }
-main .goods .option .total .total-title {
-  display: block;
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-}
-@media screen and (max-width: 1281px) {
-  main .goods .option .total .total-title {
-    font-size: 1.6rem;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .goods .option .total .total-title {
-    font-size: 1.4rem;
-  }
-}
-main .goods .option .total .total-price {
+.main .product__total-price {
   color: red;
   font-weight: bold;
   font-size: 2.3rem;
-  float: right;
+  text-align: right;
 }
 @media screen and (max-width: 1281px) {
-  main .goods .option .total .total-price {
+  .main .product__total-price {
     font-size: 1.9rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .goods .option .total .total-price {
+  .main .product__total-price {
     font-size: 1.9rem;
   }
 }
-main .goods .option .purchase-btn {
+.main .product__purchase-btn {
   /*----------------------------------- .goods .purchase-btn ------------------------ */
   width: 100%;
   display: block;
@@ -402,7 +384,7 @@ main .goods .option .purchase-btn {
   border-bottom: 1px solid #dddfe1;
 }
 @media screen and (max-width: 1281px) {
-  main .goods .option .purchase-btn {
+  .main .product__purchase-btn {
     width: 60%;
     padding: 10px 10px;
     margin: 30px auto 30px auto;
@@ -410,86 +392,73 @@ main .goods .option .purchase-btn {
   }
 }
 @media screen and (max-width: 600px) {
-  main .goods .option .purchase-btn {
+  .main .product__purchase-btn {
     width: 80%;
     padding: 10px 10px;
     margin: 30px auto 30px auto;
     font-size: 1.7rem;
   }
 }
-main .goods .review {
+.main__review {
   width: 100%;
   padding: 15px 0;
 }
-main .goods .review h5 {
-  box-sizing: border-box;
-  width: 100%;
-  font-size: 1.8rem;
-  padding: 20px;
-  margin-top: 100px;
-  font-weight: bold;
-  border-bottom: 1px solid #333333;
-}
 @media screen and (max-width: 1281px) {
-  main .goods .review {
+  .main__review {
     padding: 0;
   }
 }
 @media screen and (max-width: 600px) {
-  main .goods .review {
+  .main__review {
     padding: 0;
   }
 }
-main .goods .review .review-table {
+.main .row-table {
   width: 100%;
 }
-main .goods .review .review-table tr {
+.main .row-table tr {
   border-bottom: 1px solid #ddd;
 }
-main .goods .review .review-table tr.active {
-  display: block;
-}
-main .goods .review .review-table td {
+.main .row-table td,
+.main .row-table th {
   padding: 10px;
   box-sizing: border-box;
   text-align: center;
   font-size: 1.5rem;
 }
 @media screen and (max-width: 1281px) {
-  main .goods .review .review-table td {
+  .main .row-table td,
+  .main .row-table th {
     padding: 5px 10px;
     font-size: 1.4rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .goods .review .review-table td {
+  .main .row-table td,
+  .main .row-table th {
     padding: 10px 5px;
     font-size: 1.4rem;
   }
 }
-main .goods .review .review-table td.customer-id {
-  width: 20%;
+.main .row-table th {
+  background-color: #fbc717;
 }
-main .goods .review .review-table td.rate img {
+.main .star-img {
   width: 20px;
   height: 20px;
 }
-main .goods .review .review-table .register-date {
-  width: 20%;
-}
-main .goods .review-wrapper {
+.main__review-pager {
   /*----------------------------------- .goods .review-pager ------------------------ */
   width: 100%;
-}
-main .goods .review-wrapper .review-pager {
-  width: 100%;
   text-align: center;
+}
+.main .pager {
   padding: 20px 0;
 }
-main .goods .review-wrapper .review-pager .num {
+.main .pager__li {
   display: inline-block;
 }
-main .goods .review-wrapper .review-pager .num a {
+.main .pager__link {
   width: 100%;
   text-decoration: none;
   font-size: 1.4rem;
@@ -497,24 +466,25 @@ main .goods .review-wrapper .review-pager .num a {
   padding: 3px 8px;
   color: black;
 }
+.main .pager__link--is-active {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
 @media screen and (max-width: 1281px) {
-  main .goods .review-wrapper .review-pager .num a {
+  .main .pager__link {
     padding: 3px 8px;
     font-size: 1.6rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .goods .review-wrapper .review-pager .num a {
+  .main .pager__link {
     padding: 2px 6px;
     font-size: 1.4rem;
   }
 }
-main .goods .review-wrapper .review-pager .num.active a {
-  background-color: black;
-  color: white;
-  font-weight: bold;
-}
-main .shopping-bag {
+
+.shopping-bag {
   position: fixed;
   width: 50px;
   height: 50px;
@@ -530,18 +500,18 @@ main .shopping-bag {
   z-index: 11;
   cursor: pointer;
 }
-main .shopping-bag.rotate {
+.shopping-bag.rotate {
   animation: rotating 0.3s forwards ease;
 }
-main .shopping-bag:hover .bag-desc, main .shopping-bag:focus-visible .bag-desc {
+.shopping-bag:hover .bag-desc, .shopping-bag:focus-visible .bag-desc {
   opacity: 1;
 }
 @media screen and (max-width: 1281px) {
-  main .shopping-bag {
+  .shopping-bag {
     display: none;
   }
 }
-main .shopping-bag .bag-desc {
+.shopping-bag .bag-desc {
   position: absolute;
   background-color: white;
   bottom: 70px;
@@ -554,7 +524,7 @@ main .shopping-bag .bag-desc {
   opacity: 0;
   transition: 0.3s ease;
 }
-main .shopping-bag img {
+.shopping-bag img {
   position: absolute;
   left: 5%;
   bottom: 70px;
@@ -567,10 +537,10 @@ main .shopping-bag img {
   transition: 0.3s ease-in-out;
   visibility: hidden;
 }
-main .shopping-bag img.shown {
+.shopping-bag img.shown {
   visibility: visible;
 }
-main .shopping-bag img.hidden {
+.shopping-bag img.hidden {
   width: 0px;
   height: 0px;
   left: 10%;

@@ -12,7 +12,14 @@
     <script src="../../source/js/amusementpark/header.js"></script>
     <script src="../../source/js/amusementpark/footer.js"></script>
     <script src="../../source/js/amusementpark/footer.js"></script>
-    <script src="../../source/js/amusementpark/nightshow/nigihtshow.js"></script>
+    <script
+      type="module"
+      src="../../source/js/amusementpark/nightshow/overlay-slider.js"
+    ></script>
+    <script
+      type="module"
+      src="../../source/js/amusementpark/nightshow/nigihtshow.js"
+    ></script>
     <title>나이트쇼 | Amusement Park</title>
   </head>
   <body>
@@ -200,7 +207,7 @@
                   src="#"
                   alt="오버레이이미지"
                 />
-                <div class="overlay-slider__overlay-guide-txt">
+                <div class="overlay-slider__guide-txt">
                   창을 닫으려면 Esc키를 누르거나 화면의 아무곳이나 클릭해주세요
                 </div>
               </div>
@@ -316,7 +323,6 @@
                     name="reward"
                     id="reward-ramen"
                     value="ramen"
-                    tabindex="0"
                   />
                 </li>
                 <li class="main__reward-li">
@@ -336,7 +342,6 @@
                     name="reward"
                     id="reward-iphone"
                     value="iphone"
-                    tabindex="0"
                   />
                 </li>
               </ul>

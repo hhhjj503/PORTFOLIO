@@ -345,8 +345,14 @@ body {
   height: 100%;
   text-align: center;
   line-height: 200px;
+  border-radius: 50%;
 }
-.main__detail-ly:hover, .main__detail-ly:focus-visible {
+.main__detail-ly:hover {
+  opacity: 1;
+}
+.main__detail-ly:focus-visible {
+  box-sizing: border-box;
+  border: 1px solid black;
   opacity: 1;
 }
 @media screen and (max-width: 1281px) {

@@ -8,6 +8,10 @@
   height: 500px;
 }
 
+.background-img--position-center {
+  background-position: center;
+}
+
 @media screen and (max-width: 1281px) {
   .background-img--height-500 {
     height: 400px;

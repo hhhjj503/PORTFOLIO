@@ -94,119 +94,149 @@
     <!-- //header -->
 
     <!-- main -->
-    <main>
-      <!-- banner-wrapper -->
-      <div class="banner-wrapper bg-img"></div>
+    <main class="main">
+      <!-- banner -->
+      <div class="main__banner background-img background-img--height-500"></div>
 
-      <!-- menu -->
-      <div class="menu">
-        <div class="container">
-          <p>KRUSTY</p>
-          <p>ISLAND</p>
+      <!-- main__bar -->
+      <div class="main__bar">
+        <div class="main__bar-inner">
+          <p class="main__bar-text">KRUSTY</p>
+          <p class="main__bar-text">ISLAND</p>
         </div>
       </div>
+      <!--// main__bar -->
 
       <!-- purchase -->
-      <div class="goods">
+      <div class="main__inner">
         <div class="slider-wrapper">
-          <div class="slider">
-            <img
-              src="../../source/images/amusementpark/krustyland/alpaca.JPG"
-              alt="알파카이미지"
-            />
-            <button class="before">
+          <div class="slider slider-ly">
+            <div class="slider__slide">
               <img
-                src="../../source/images/amusementpark/krustyland/chevron-left-solid.svg"
-                alt="왼쪽버튼이미지"
+                class="img img--cover"
+                src="../../source/images/amusementpark/krustyland/batman_duck.JPG"
+                alt="배트맨덕 이미지"
               />
-            </button>
-            <button class="next">
-              <img
-                src="../../source/images/amusementpark/krustyland/chevron-right-solid.svg"
-                alt="오른쪽버튼이미지"
-              />
-            </button>
+            </div>
+            <div class="slider__controls">
+              <button class="slider__btn slider__btn--before">
+                <img
+                  class="img"
+                  src="../../source/images/amusementpark/krustyland/chevron-left-solid.svg"
+                  alt="왼쪽버튼이미지"
+                />
+              </button>
+              <button class="slider__btn slider__btn--next">
+                <img
+                  class="img"
+                  src="../../source/images/amusementpark/krustyland/chevron-right-solid.svg"
+                  alt="오른쪽버튼이미지"
+                />
+              </button>
+            </div>
           </div>
         </div>
 
-        <!-- product-info -->
-        <div class="option">
-          <h5>알파카 인형</h5>
-          <!-- goods price -->
-          <div class="dib">
-            <img
-              tabindex="0"
-              src="../../source/images/amusementpark/krustyland/heart-regular.svg"
-              alt="하트이미지"
-            />
+        <!-- product -->
+        <div class="product product-ly">
+          <div class="product__title pd20">
+            <h5 class="title title--h5 inline-block">배트맨덕</h5>
+            <div class="product__dib inline-block">
+              <img
+                class="product__dib-img img"
+                tabindex="0"
+                src="../../source/images/amusementpark/krustyland/heart-regular.svg"
+                alt="하트이미지"
+              />
+            </div>
           </div>
-          <div class="price">
-            <span class="per-price">15,000</span>
+          <!-- product__dib -->
+          <div class="product__price pd20">
+            <span class="product__per-price">15,000</span>
           </div>
-          <!-- color -->
-          <div class="color">
-            <span class="color-title">컬러 </span>
-            <ul class="palette-ul">
-              <li>
-                <button type="button" class="red text-indent">
+          <!-- product__color -->
+          <div class="product__color pd20">
+            <h6 class="title title--h6 mb20">컬러</h6>
+            <ul class="palette">
+              <li class="palette__li">
+                <button type="button" class="round-btn red text-indent">
                   빨간색버튼
                 </button>
               </li>
-              <li>
-                <button type="button" class="orange text-indent">
+              <li class="palette__li">
+                <button type="button" class="round-btn orange text-indent">
                   오랜지색버튼
                 </button>
               </li>
-              <li>
-                <button type="button" class="yellow text-indent">
+              <li class="palette__li">
+                <button type="button" class="round-btn yellow text-indent">
                   노란버튼
                 </button>
               </li>
-              <li>
-                <button type="button" class="green text-indent">
+              <li class="palette__li">
+                <button type="button" class="round-btn green text-indent">
                   초록버튼
                 </button>
               </li>
             </ul>
           </div>
-          <!-- quantity -->
-          <div class="quantity">
-            <span class="number-title">수량 </span>
-            <span class="quantity-control">
-              <button class="minus">-</button>
-              <span class="value">1</span>
-              <button class="plus">+</button>
+          <!-- product__quantity -->
+          <div class="product__quantity pd20">
+            <h6 class="title title--h6 mb20">수량</h6>
+            <span class="quantity">
+              <button
+                class="round-btn quantity__control-btn quantity__control-btn--minus"
+              >
+                -
+              </button>
+              <span class="quantity__count">1</span>
+              <button
+                class="round-btn quantity__control-btn quantity__control-btn--plus"
+              >
+                +
+              </button>
             </span>
           </div>
-          <!-- total -->
-          <div class="total">
-            <span class="total-title">총합계</span>
-            <span class="total-price">15,000</span>
+          <!-- product__total -->
+          <div class="product__total pd20">
+            <h6 class="title title--h6 mb20">총합계</h6>
+            <div class="product__total-price">15,000</div>
           </div>
-          <!-- purchase -->
-          <button class="purchase-btn tab-control">구매하기</button>
+          <!-- product__purchase__btn -->
+          <button class="product__purchase-btn btn black">구매하기</button>
         </div>
+
         <!-- review -->
-        <div class="review">
-          <h5>상품평</h5>
-          <table class="review-table">
+        <div class="main__review">
+          <h5 class="title title--h5 pd20 bold">상품평</h5>
+          <table class="row-table">
+            <thead>
+              <th>번호</th>
+              <th>평점</th>
+              <th>날짜</th>
+              <th>댓글</th>
+            </thead>
             <tbody>
               <tr>
                 <td class="customer-id">1</td>
                 <td class="rate">
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-half-stroke-solid.svg"
                     alt="별사진"
                   />
@@ -218,18 +248,22 @@
                 <td class="customer-id">2</td>
                 <td class="rate">
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-half-stroke-solid.svg"
                     alt="별사진"
                   />
@@ -241,18 +275,22 @@
                 <td class="customer-id">3</td>
                 <td class="rate">
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-half-stroke-solid.svg"
                     alt="별사진"
                   />
@@ -264,18 +302,22 @@
                 <td class="customeromer-id">4</td>
                 <td class="rate">
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-half-stroke-solid.svg"
                     alt="별사진"
                   />
@@ -287,18 +329,22 @@
                 <td class="customer-id">5</td>
                 <td class="rate">
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-half-stroke-solid.svg"
                     alt="별사진"
                   />
@@ -310,18 +356,22 @@
                 <td class="customer-id">6</td>
                 <td class="rate">
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-half-stroke-solid.svg"
                     alt="별사진"
                   />
@@ -333,18 +383,22 @@
                 <td class="customer-id">7</td>
                 <td class="rate">
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-half-stroke-solid.svg"
                     alt="별사진"
                   />
@@ -356,18 +410,22 @@
                 <td class="customer-id">8</td>
                 <td class="rate">
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-half-stroke-solid.svg"
                     alt="별사진"
                   />
@@ -379,18 +437,22 @@
                 <td class="customer-id">9</td>
                 <td class="rate">
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-half-stroke-solid.svg"
                     alt="별사진"
                   />
@@ -402,18 +464,22 @@
                 <td class="customer-id">10</td>
                 <td class="rate">
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-solid.svg"
                     alt="별사진"
                   />
                   <img
+                    class="star-img"
                     src="../../source/images/amusementpark/krustyland/star-half-stroke-solid.svg"
                     alt="별사진"
                   />
@@ -423,9 +489,11 @@
               </tr>
             </tbody>
           </table>
-          <div class="review-wrapper">
-            <ul class="review-pager">
-              <li class="num active"><a href="#">1</a></li>
+          <div class="main__review-pager pager">
+            <ul class="pager__ul">
+              <li class="pager__li">
+                <a class="pager__link pager__link--is-active" href="#">1</a>
+              </li>
             </ul>
           </div>
         </div>
