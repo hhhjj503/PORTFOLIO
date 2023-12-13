@@ -16,7 +16,7 @@ body {
 }
 
 .header__li:nth-child(4) > .header__link {
-  color: #e60000; /* nav 의 나이트쇼 글자 빨갛게 변경 */
+  color: #e60000;
 }
 
 /*=================================================================================*/
@@ -24,7 +24,7 @@ body {
   /*----------------------------------- main  ---------------------------------------*/
 }
 .main__banner {
-  background: url(../../../images/amusementpark/krustyland.PNG);
+  background-image: url(../../../images/amusementpark/krustyland.PNG);
   background-position: center;
 }
 .main__bar {
@@ -89,23 +89,6 @@ body {
     padding: 0px;
   }
 }
-.main .img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-.main .img--cover {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.main .text-indent {
-  text-indent: -9999em;
-}
-.main .inline-block {
-  display: inline-block;
-}
 .main .slider-wrapper {
   width: 65%;
   display: inline-block;
@@ -165,12 +148,6 @@ body {
 .main .slider__btn--next {
   float: right;
 }
-.main .pd20 {
-  padding: 20px;
-}
-.main .mb20 {
-  margin-bottom: 20px;
-}
 .main .title--h5 {
   font-size: 1.8rem;
 }
@@ -198,27 +175,6 @@ body {
     font-size: 1.4rem;
   }
 }
-.main .round-btn {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: none;
-}
-.main .red {
-  background-color: red;
-}
-.main .orange {
-  background-color: orange;
-}
-.main .yellow {
-  background-color: yellow;
-}
-.main .green {
-  background-color: green;
-}
-.main .bold {
-  font-weight: bold;
-}
 .main .palette__li {
   display: inline-block;
   width: 30px;
@@ -238,18 +194,20 @@ body {
     height: auto;
   }
 }
-.main .product__dib {
+.main .product__heart-btn {
   cursor: pointer;
   vertical-align: top;
-  margin-left: 10px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  height: 100%;
 }
-.main .product__dib-img {
+.main .product__heart-img {
   width: 20px;
   height: auto;
-  content: url(../../../images/amusementpark/krustyland/heart-solid.svg);
 }
 @media screen and (max-width: 1281px) {
-  .main .product__dib {
+  .main .product__heart-img {
     width: 18px;
     height: 18px;
   }
@@ -319,6 +277,7 @@ body {
   border: none;
   width: 25px;
   height: 25px;
+  padding: 0;
   line-height: 25px;
   font-size: 1.8rem;
   line-height: 25px;
@@ -369,7 +328,6 @@ body {
   }
 }
 .main .product__purchase-btn {
-  /*----------------------------------- .goods .purchase-btn ------------------------ */
   width: 100%;
   display: block;
   margin-top: 50px;
@@ -398,6 +356,69 @@ body {
     margin: 30px auto 30px auto;
     font-size: 1.7rem;
   }
+}
+.main .product__bag {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  left: 5%;
+  bottom: 5%;
+  background-color: white;
+  border-radius: 50%;
+  background-image: url(../../../images/amusementpark/krustyland/heart-solid.svg);
+  background-size: 60% 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0.5px 0.5px 3px #999;
+  z-index: 11;
+  cursor: pointer;
+}
+.main .product__bag.rotate {
+  animation: rotating 0.3s forwards ease;
+}
+@media screen and (max-width: 1281px) {
+  .main .product__bag {
+    display: none;
+  }
+}
+.main .product__bag:hover .product__bag-text, .main .product__bag:focus-visible .product__bag-text {
+  opacity: 1;
+}
+.main .product__bag-text {
+  position: absolute;
+  background-color: white;
+  bottom: 70px;
+  font-size: 1.5rem;
+  line-height: 20px;
+  word-break: keep-all;
+  padding: 10px;
+  border-radius: 10px;
+  width: 200%;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.main .product__bag-img {
+  position: absolute;
+  left: 5%;
+  bottom: 70px;
+  width: 150px;
+  height: 200px;
+  background-color: white;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.3s ease-in-out;
+  visibility: hidden;
+}
+.main .product__bag-img.shown {
+  visibility: visible;
+}
+.main .product__bag-img.hidden {
+  width: 0px;
+  height: 0px;
+  left: 10%;
+  bottom: 0px;
+  border-radius: 50%;
 }
 .main__review {
   width: 100%;
@@ -443,109 +464,9 @@ body {
 .main .row-table th {
   background-color: #fbc717;
 }
-.main .star-img {
-  width: 20px;
-  height: 20px;
-}
 .main__review-pager {
-  /*----------------------------------- .goods .review-pager ------------------------ */
   width: 100%;
   text-align: center;
-}
-.main .pager {
-  padding: 20px 0;
-}
-.main .pager__li {
-  display: inline-block;
-}
-.main .pager__link {
-  width: 100%;
-  text-decoration: none;
-  font-size: 1.4rem;
-  margin: 0 5px;
-  padding: 3px 8px;
-  color: black;
-}
-.main .pager__link--is-active {
-  background-color: black;
-  color: white;
-  font-weight: bold;
-}
-@media screen and (max-width: 1281px) {
-  .main .pager__link {
-    padding: 3px 8px;
-    font-size: 1.6rem;
-  }
-}
-@media screen and (max-width: 600px) {
-  .main .pager__link {
-    padding: 2px 6px;
-    font-size: 1.4rem;
-  }
-}
-
-.shopping-bag {
-  position: fixed;
-  width: 50px;
-  height: 50px;
-  left: 5%;
-  bottom: 5%;
-  background-color: white;
-  border-radius: 50%;
-  background-image: url(../../../images/amusementpark/krustyland/heart-solid.svg);
-  background-size: 60% 60%;
-  background-position: center;
-  background-repeat: no-repeat;
-  box-shadow: 0.5px 0.5px 3px #999;
-  z-index: 11;
-  cursor: pointer;
-}
-.shopping-bag.rotate {
-  animation: rotating 0.3s forwards ease;
-}
-.shopping-bag:hover .bag-desc, .shopping-bag:focus-visible .bag-desc {
-  opacity: 1;
-}
-@media screen and (max-width: 1281px) {
-  .shopping-bag {
-    display: none;
-  }
-}
-.shopping-bag .bag-desc {
-  position: absolute;
-  background-color: white;
-  bottom: 70px;
-  font-size: 1.5rem;
-  line-height: 20px;
-  word-break: keep-all;
-  padding: 10px;
-  border-radius: 10px;
-  width: 200%;
-  opacity: 0;
-  transition: 0.3s ease;
-}
-.shopping-bag img {
-  position: absolute;
-  left: 5%;
-  bottom: 70px;
-  width: 150px;
-  height: 200px;
-  background-color: white;
-  border-radius: 10px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: 0.3s ease-in-out;
-  visibility: hidden;
-}
-.shopping-bag img.shown {
-  visibility: visible;
-}
-.shopping-bag img.hidden {
-  width: 0px;
-  height: 0px;
-  left: 10%;
-  bottom: 0px;
-  border-radius: 50%;
 }
 
 @keyframes rotating {
@@ -564,4 +485,101 @@ body {
   100% {
     transform: rotate(0deg);
   }
+}
+/*=============================== 모듈 ======================================*/
+.img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.img--cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.star-img {
+  width: 20px;
+  height: 20px;
+}
+
+.round-btn {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: none;
+}
+
+.pager {
+  padding: 20px 0;
+}
+.pager__li {
+  display: inline-block;
+}
+.pager__link {
+  width: 100%;
+  text-decoration: none;
+  font-size: 1.4rem;
+  margin: 0 5px;
+  padding: 3px 8px;
+  color: black;
+}
+.pager__link--is-active {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+@media screen and (max-width: 1281px) {
+  .pager__link {
+    padding: 3px 8px;
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .pager__link {
+    padding: 2px 6px;
+    font-size: 1.4rem;
+  }
+}
+
+/*=============================== helper class ======================================*/
+.pd20 {
+  padding: 20px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.text-indent {
+  text-indent: -9999em;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.border {
+  border: 3px solid black;
+}
+
+.red {
+  background-color: red;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+.bold {
+  font-weight: bold;
 }/*# sourceMappingURL=product.css.map */

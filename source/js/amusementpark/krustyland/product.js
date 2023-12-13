@@ -1,19 +1,19 @@
 window.addEventListener("load", function () {
   const html = document.querySelector("html");
-  const menu = document.querySelector(".menu");
-  const background = document.querySelector(".banner-wrapper"); //background > banner-wrapper
+  const mainBar = document.querySelector(".main__bar");
+  const mainBanner = document.querySelector(".main__banner");
 
   window.addEventListener("scroll", () => {
     if (
-      html.scrollTop > background.offsetHeight
-      //- menu.offsetHeight && topNav.offsetHeight !== 0
+      html.scrollTop > mainBanner.offsetHeight
+      //- mainBar.offsetHeight && topNav.offsetHeight !== 0
     ) {
       //pc일때 fixed 위치조정
-      menu.style.position = "fixed";
-      menu.style.top = "0px";
+      mainBar.style.position = "fixed";
+      mainBar.style.top = "0px";
     } else {
-      menu.style.position = "relative";
-      menu.style.top = 0;
+      mainBar.style.position = "relative";
+      mainBar.style.top = 0;
     }
   });
 
@@ -53,90 +53,125 @@ window.addEventListener("load", function () {
   perPrice.innerText = Number(perPrice.innerText).toLocaleString("en");
 
   quantity.innerText = 1;
-  totalPrice.innerText = Number(selectedGoods.dataset.price).toLocaleString(
+  productTotalPrice.innerText = Number(selectedGoods.dataset.price).toLocaleString(
     "en"
   );*/
 
-  //하트클릭시 이미지변경
-  const dibImg = document.querySelector(".dib img");
-  const shoppingBag = document.querySelector(".shopping-bag");
-  const bagImg = document.querySelector(".shopping-bag img");
-  const productImg = document.querySelector(".slider img");
+  //하트이미지 클릭시 이미지변경후 애니메이션 효과작동
+  const productHeartBtn = document.querySelector(".product__heart-btn");
+  const productHeartImg = document.querySelector(".product__heart-img");
+  const productBag = document.querySelector(".product__bag");
+  const productBagImg = document.querySelector(".product__bag-img");
+  const sliderSlideImg = document.querySelector(".slider__slide .img");
 
-  const heartImg =
+  const heartImgSource =
     "../../source/images/amusementpark/krustyland/heart-regular.svg";
-  const FillHeartImg =
+  const FilledHeartImgSource =
     "../../source/images/amusementpark/krustyland/heart-solid.svg";
-  dibImg.addEventListener("click", function () {
-    if (!dibImg.classList.contains("clicked")) {
-      dibImg.classList.add("clicked");
-      bagImg.src = productImg.src;
-      bagImg.alt = productImg.alt;
-      shoppingBag.classList.add("rotate");
-      bagImg.classList.add("shown");
-      setTimeout(() => {
-        bagImg.classList.remove("shown");
-        bagImg.classList.add("hidden");
-        shoppingBag.classList.remove("rotate");
-      }, 300);
-      dibImg.src = FillHeartImg;
-    } else {
-      dibImg.src = heartImg;
-      dibImg.classList.remove("clicked");
-    }
 
-    bagImg.classList.remove("hidden");
+  let productHeartImgWorking = false;
+  productHeartImg.addEventListener("click", function () {
+    if (
+      !productHeartImg.classList.contains("clicked") &&
+      productHeartImgWorking == false
+    ) {
+      bagImgAnimation();
+      productHeartImg.src = FilledHeartImgSource;
+    } else {
+      //하트이미지로 변경
+      productHeartImg.src = heartImgSource;
+      removeClass(productHeartImg, "clicked");
+    }
+    removeClass(productBagImg, "hidden");
   });
 
-  dibImg.addEventListener("keydown", function (e) {
-    if (e.key === "Enter") {
-      if (!dibImg.classList.contains("clicked")) {
-        dibImg.classList.add("clicked");
-        bagImg.src = productImg.src;
-        bagImg.alt = productImg.alt;
-        shoppingBag.classList.add("rotate");
-        bagImg.classList.add("shown");
-        setTimeout(() => {
-          bagImg.classList.remove("shown");
-          bagImg.classList.add("hidden");
-          shoppingBag.classList.remove("rotate");
-        }, 300);
-        dibImg.src = FillHeartImg;
-      } else {
-        dibImg.src = heartImg;
-        dibImg.classList.remove("clicked");
-      }
+  productHeartBtn.addEventListener("keydown", function (e) {
+    if (e.key != "Enter") return;
+    if (
+      !productHeartImg.classList.contains("clicked") &&
+      productHeartImgWorking == false
+    ) {
+      bagImgAnimation();
+      productHeartImg.src = FilledHeartImgSource;
+    } else {
+      //하트이미지로 변경
+      productHeartImg.src = heartImgSource;
+      removeClass(productHeartImg, "clicked");
     }
-
-    bagImg.classList.remove("hidden");
+    removeClass(productBagImg, "hidden");
   });
 
   //제품수량 + 버튼
-  const quantityPlusBtn = this.document.querySelector(".plus");
-  const quantityMinusBtn = this.document.querySelector(".minus");
-  const value = document.querySelector(".value");
-  const totalPrice = document.querySelector(".total-price");
-  const intedPerPrice = totalPrice.innerText.replace(",", "");
-  let updatedTotalPrice = 0;
+  const quantityControlBtnPlus = this.document.querySelector(
+    ".quantity__control-btn--plus"
+  );
+  const quantityControlBtnMinus = this.document.querySelector(
+    ".quantity__control-btn--minus"
+  );
+  const quantityCount = document.querySelector(".quantity__count");
+  const productTotalPrice = document.querySelector(".product__total-price");
+  const intedPerPrice = productTotalPrice.innerText.replace(",", "");
+  let updatedproductTotalPrice = 0;
 
-  quantityPlusBtn.addEventListener("click", () => {
-    let quantity = parseInt(value.innerText);
+  quantityControlBtnPlus.addEventListener("click", () => {
+    let quantity = parseInt(quantityCount.innerText);
 
     quantity += 1;
-    value.innerText = quantity;
-    updatedTotalPrice = quantity * parseInt(intedPerPrice);
-    totalPrice.innerText = Number(updatedTotalPrice).toLocaleString("en");
+    quantityCount.innerText = quantity;
+    updatedproductTotalPrice = quantity * parseInt(intedPerPrice);
+    productTotalPrice.innerText = Number(
+      updatedproductTotalPrice
+    ).toLocaleString("en");
   });
 
   //제품수량 - 버튼
-  quantityMinusBtn.addEventListener("click", () => {
-    let quantity = parseInt(value.innerText);
+  quantityControlBtnMinus.addEventListener("click", () => {
+    let quantity = parseInt(quantityCount.innerText);
     quantity -= 1;
     if (quantity <= 0) quantity = 1;
-    value.innerText = quantity;
-    updatedTotalPrice = quantity * parseInt(intedPerPrice);
-    totalPrice.innerText = Number(updatedTotalPrice).toLocaleString("en");
+    quantityCount.innerText = quantity;
+    updatedproductTotalPrice = quantity * parseInt(intedPerPrice);
+    productTotalPrice.innerText = Number(
+      updatedproductTotalPrice
+    ).toLocaleString("en");
   });
+
+  function getImgSource(sourceImg, unSourcedImg) {
+    unSourcedImg.src = sourceImg.src;
+  }
+  function getImgAlt(altImg, unAltedimg) {
+    unAltedimg.alt = altImg.alt;
+  }
+
+  function addClass(element, className) {
+    element.classList.add(className);
+  }
+
+  function removeClass(element, className) {
+    element.classList.remove(className);
+  }
+
+  function bagImgAnimation() {
+    productHeartImgWorking = true;
+
+    //애니메이션 효과를 위한 클래스추가
+    addClass(productHeartImg, "clicked");
+    getImgSource(sliderSlideImg, productBagImg);
+    getImgAlt(sliderSlideImg, productBagImg);
+    addClass(productBagImg, "shown");
+    addClass(productBag, "rotate");
+
+    //애니메이션 시간이 지난뒤 다시 숨김
+    setTimeout(() => {
+      removeClass(productBag, "rotate");
+      removeClass(productBagImg, "shown");
+      addClass(productBagImg, "hidden");
+    }, 300);
+
+    setTimeout(() => {
+      productHeartImgWorking = false;
+    }, 700);
+  }
 
   /**
    * 상품이미지 클릭시 a태그의 의 innerText 와 전체리뷰수를 파라미터로 받아

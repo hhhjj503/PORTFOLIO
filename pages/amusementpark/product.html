@@ -141,16 +141,15 @@
         <div class="product product-ly">
           <div class="product__title pd20">
             <h5 class="title title--h5 inline-block">배트맨덕</h5>
-            <div class="product__dib inline-block">
+            <button type="button" class="product__heart-btn">
               <img
-                class="product__dib-img img"
-                tabindex="0"
+                class="product__heart-img img"
                 src="../../source/images/amusementpark/krustyland/heart-regular.svg"
                 alt="하트이미지"
               />
-            </div>
+            </button>
           </div>
-          <!-- product__dib -->
+          <!-- product__price -->
           <div class="product__price pd20">
             <span class="product__per-price">15,000</span>
           </div>
@@ -164,7 +163,10 @@
                 </button>
               </li>
               <li class="palette__li">
-                <button type="button" class="round-btn orange text-indent">
+                <button
+                  type="button"
+                  class="round-btn orange text-indent border"
+                >
                   오랜지색버튼
                 </button>
               </li>
@@ -499,12 +501,9 @@
         </div>
       </div>
 
-      <div class="shopping-bag" tabindex="0">
-        <span class="bag-desc">제품의 하트를 클릭해보세요!</span>
-        <img
-          src="../../source/images/amusementpark/krustyland/alpaca.JPG"
-          alt="img"
-        />
+      <div class="product__bag" tabindex="0">
+        <span class="product__bag-text">제품의 하트를 클릭해보세요!</span>
+        <img class="product__bag-img img" alt="img" />
       </div>
     </main>
     <!-- //main -->

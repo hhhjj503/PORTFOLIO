@@ -20,7 +20,7 @@ body {
 
 .header__li:nth-child(4) {
   > .header__link {
-    color: #e60000; /* nav 의 나이트쇼 글자 빨갛게 변경 */
+    color: #e60000;
   }
 }
 
@@ -28,7 +28,7 @@ body {
 .main {
   /*----------------------------------- main  ---------------------------------------*/
   &__banner {
-    background: url(../../../images/amusementpark/krustyland.PNG);
+    background-image: url(../../../images/amusementpark/krustyland.PNG);
     background-position: center;
   }
 
@@ -104,25 +104,6 @@ body {
     }
   }
 
-  .img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-
-    &--cover {
-      object-fit: cover;
-    }
-  }
-
-  .text-indent {
-    text-indent: -9999em;
-  }
-
-  .inline-block {
-    display: inline-block;
-  }
-
   .slider-wrapper {
     width: 65%;
     display: inline-block;
@@ -193,14 +174,6 @@ body {
     }
   }
 
-  .pd20 {
-    padding: 20px;
-  }
-
-  .mb20 {
-    margin-bottom: 20px;
-  }
-
   .title {
     &--h5 {
       font-size: 1.8rem;
@@ -234,30 +207,6 @@ body {
     }
   }
 
-  .round-btn {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: none;
-  }
-
-  .red {
-    background-color: red;
-  }
-  .orange {
-    background-color: orange;
-  }
-  .yellow {
-    background-color: yellow;
-  }
-  .green {
-    background-color: green;
-  }
-
-  .bold {
-    font-weight: bold;
-  }
-
   .palette {
     &__li {
       display: inline-block;
@@ -283,16 +232,17 @@ body {
       }
     }
 
-    &__dib {
+    &__heart-btn {
       cursor: pointer;
       vertical-align: top;
-      margin-left: 10px;
-
-      &-img {
-        width: 20px;
-        height: auto;
-        content: url(../../../images/amusementpark/krustyland/heart-solid.svg);
-      }
+      border: none;
+      background-color: transparent;
+      padding: 0;
+      height: 100%;
+    }
+    &__heart-img {
+      width: 20px;
+      height: auto;
 
       @media screen and (max-width: 1281px) {
         & {
@@ -305,10 +255,6 @@ body {
     &__price {
       border-bottom: 1px solid #dddfe1;
 
-      @media screen and (max-width: 1281px) {
-        & {
-        }
-      }
       @media screen and (max-width: 600px) {
         & {
           border-bottom: 1px solid #dddfe1;
@@ -351,10 +297,6 @@ body {
       border-bottom: 1px solid #dddfe1;
       font-size: 1.8rem;
 
-      @media screen and (max-width: 1281px) {
-        & {
-        }
-      }
       @media screen and (max-width: 600px) {
         & {
           padding: 10px 20px;
@@ -388,6 +330,7 @@ body {
         border: none;
         width: 25px;
         height: 25px;
+        padding: 0;
         line-height: 25px;
         font-size: 1.8rem;
         line-height: 25px;
@@ -415,10 +358,6 @@ body {
     }
 
     &__total {
-      @media screen and (max-width: 1281px) {
-        & {
-        }
-      }
       @media screen and (max-width: 600px) {
         & {
           padding: 10px 20px;
@@ -450,7 +389,6 @@ body {
     }
 
     &__purchase-btn {
-      /*----------------------------------- .goods .purchase-btn ------------------------ */
       width: 100%;
       display: block;
       margin-top: 50px;
@@ -479,6 +417,76 @@ body {
           padding: 10px 10px;
           margin: 30px auto 30px auto;
           font-size: 1.7rem;
+        }
+      }
+    }
+
+    &__bag {
+      position: fixed;
+      width: 50px;
+      height: 50px;
+      left: 5%;
+      bottom: 5%;
+      background-color: white;
+      border-radius: 50%;
+      background-image: url(../../../images/amusementpark/krustyland/heart-solid.svg);
+      background-size: 60% 60%;
+      background-position: center;
+      background-repeat: no-repeat;
+      box-shadow: 0.5px 0.5px 3px #999;
+      z-index: 11;
+      cursor: pointer;
+
+      &.rotate {
+        animation: rotating 0.3s forwards ease;
+      }
+
+      @media screen and (max-width: 1281px) {
+        & {
+          display: none;
+        }
+      }
+
+      &:hover .product__bag-text,
+      &:focus-visible .product__bag-text {
+        opacity: 1;
+      }
+
+      &-text {
+        position: absolute;
+        background-color: white;
+        bottom: 70px;
+        font-size: 1.5rem;
+        line-height: 20px;
+        word-break: keep-all;
+        padding: 10px;
+        border-radius: 10px;
+        width: 200%;
+        opacity: 0;
+        transition: 0.3s ease;
+      }
+      &-img {
+        position: absolute;
+        left: 5%;
+        bottom: 70px;
+        width: 150px;
+        height: 200px;
+        background-color: white;
+        border-radius: 10px;
+        object-fit: cover;
+        transition: 0.3s ease-in-out;
+        visibility: hidden;
+
+        &.shown {
+          visibility: visible;
+        }
+
+        &.hidden {
+          width: 0px;
+          height: 0px;
+          left: 10%;
+          bottom: 0px;
+          border-radius: 50%;
         }
       }
     }
@@ -533,125 +541,9 @@ body {
     }
   }
 
-  .star-img {
-    width: 20px;
-    height: 20px;
-  }
-
   &__review-pager {
-    /*----------------------------------- .goods .review-pager ------------------------ */
     width: 100%;
     text-align: center;
-  }
-
-  .pager {
-    padding: 20px 0;
-
-    &__li {
-      display: inline-block;
-    }
-
-    &__link {
-      width: 100%;
-      text-decoration: none;
-      font-size: 1.4rem;
-      margin: 0 5px;
-      padding: 3px 8px;
-      color: black;
-
-      &--is-active {
-        background-color: black;
-        color: white;
-        font-weight: bold;
-      }
-
-      @media screen and (max-width: 1281px) {
-        & {
-          padding: 3px 8px;
-          font-size: 1.6rem;
-        }
-      }
-      @media screen and (max-width: 600px) {
-        & {
-          padding: 2px 6px;
-          font-size: 1.4rem;
-        }
-      }
-    }
-  }
-}
-
-//here
-.shopping-bag {
-  position: fixed;
-  width: 50px;
-  height: 50px;
-  left: 5%;
-  bottom: 5%;
-  background-color: white;
-  border-radius: 50%;
-  background-image: url(../../../images/amusementpark/krustyland/heart-solid.svg);
-  background-size: 60% 60%;
-  background-position: center;
-  background-repeat: no-repeat;
-  box-shadow: 0.5px 0.5px 3px #999;
-  z-index: 11;
-  cursor: pointer;
-
-  &.rotate {
-    animation: rotating 0.3s forwards ease;
-  }
-
-  &:hover,
-  &:focus-visible {
-    .bag-desc {
-      opacity: 1;
-    }
-  }
-
-  @media screen and (max-width: 1281px) {
-    & {
-      display: none;
-    }
-  }
-
-  .bag-desc {
-    position: absolute;
-    background-color: white;
-    bottom: 70px;
-    font-size: 1.5rem;
-    line-height: 20px;
-    word-break: keep-all;
-    padding: 10px;
-    border-radius: 10px;
-    width: 200%;
-    opacity: 0;
-    transition: 0.3s ease;
-  }
-
-  img {
-    position: absolute;
-    left: 5%;
-    bottom: 70px;
-    width: 150px;
-    height: 200px;
-    background-color: white;
-    border-radius: 10px;
-    object-fit: cover;
-    transition: 0.3s ease-in-out;
-    visibility: hidden;
-
-    &.shown {
-      visibility: visible;
-    }
-
-    &.hidden {
-      width: 0px;
-      height: 0px;
-      left: 10%;
-      bottom: 0px;
-      border-radius: 50%;
-    }
   }
 }
 
@@ -674,4 +566,103 @@ body {
   100% {
     transform: rotate(0deg);
   }
+}
+
+/*=============================== 모듈 ======================================*/
+
+.img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  &--cover {
+    object-fit: cover;
+  }
+}
+
+.star-img {
+  width: 20px;
+  height: 20px;
+}
+
+.round-btn {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: none;
+}
+
+.pager {
+  padding: 20px 0;
+
+  &__li {
+    display: inline-block;
+  }
+
+  &__link {
+    width: 100%;
+    text-decoration: none;
+    font-size: 1.4rem;
+    margin: 0 5px;
+    padding: 3px 8px;
+    color: black;
+
+    &--is-active {
+      background-color: black;
+      color: white;
+      font-weight: bold;
+    }
+
+    @media screen and (max-width: 1281px) {
+      & {
+        padding: 3px 8px;
+        font-size: 1.6rem;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      & {
+        padding: 2px 6px;
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+/*=============================== helper class ======================================*/
+.pd20 {
+  padding: 20px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.text-indent {
+  text-indent: -9999em;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.border {
+  border: 3px solid black;
+}
+
+.red {
+  background-color: red;
+}
+.orange {
+  background-color: orange;
+}
+.yellow {
+  background-color: yellow;
+}
+.green {
+  background-color: green;
+}
+
+.bold {
+  font-weight: bold;
 }
