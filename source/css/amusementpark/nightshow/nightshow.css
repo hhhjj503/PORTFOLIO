@@ -21,7 +21,7 @@ body {
 }
 
 .header__li:nth-child(2) > .header__link {
-  color: #e60000; /* nav 의 나이트쇼 글자 빨갛게 변경 */
+  color: #e60000;
 }
 
 a.hidingThreshold + * {

@@ -2,6 +2,9 @@
 @import url(../../reset.css);
 @import url(../layout/header.css);
 @import url(../layout/footer.css);
+/* 모듈 
+(블록주석 : shit alt all) */
+@import url(../module/background-img.css);
 html {
   font-size: 62.5%; /*  setting rem  */
   scroll-behavior: smooth;
@@ -12,74 +15,58 @@ body {
   overflow-x: hidden;
 }
 
-.h-nav {
-  position: fixed; /* position : fixed */
-  transition: 0.5s ease-in-out;
-}
-.h-nav.scrolldown {
-  opacity: 0;
-  pointer-events: none;
-}
-.h-nav .nav-ul li:nth-child(5) a {
-  color: #e60000; /* nav 의 아쿠아리움 글자 빨갛게 변경 */
-}
-
-.mobile-menu {
-  position: fixed; /* position : fixed */
-  transition: 0.5s ease-in-out;
-}
-.mobile-menu.scrolldown {
-  opacity: 0;
-  pointer-events: none;
-}
-
-html:not(.js) h2,
-html:not(.js) h3 {
-  color: black;
+.header__li:nth-child(5) > .header__link {
+  color: #e60000;
 }
 
 /*=================================================================================*/
-main .banner-wrapper.bg-img {
-  /* -----------------------------------  main .banner-bgdiv  --------------------------------------- */
-  width: 100vw;
-  height: 90vh;
-  background-image: url(../../../images/amusementpark/aquarium/dmitry-bukhantsov-IBrZ-TXYWY8.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-main .banner-wrapper.bg-img.loaded {
-  background-color: blue;
-}
-main .banner-wrapper.bg-img .title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: 0 auto;
-  transform: translate(-50%, -50%);
-  font-size: 4rem;
-  color: white;
+.title {
+  color: black;
   font-weight: bold;
   text-shadow: 1px 1px 5px #558abb, -1px -1px 5px #558abb;
 }
+.title--h2 {
+  font-size: 40px;
+}
+.title--color-white {
+  color: white;
+}
 @media screen and (max-width: 1281px) {
-  main .banner-wrapper.bg-img .title {
-    font-size: 3rem;
+  .title {
+    font-size: 30px;
   }
 }
 @media screen and (max-width: 600px) {
-  main .banner-wrapper.bg-img .title {
-    font-size: 2.5rem;
+  .title {
+    font-size: 25px;
   }
 }
-main .banner-wrapper.bg-img .waves-wrapper {
-  /* ------------------main .banner-bg .waves-wrapper  -------------------- */
+
+.img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.img--cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main__banner {
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+  background-image: url(../../../images/amusementpark/aquarium/dmitry-bukhantsov-IBrZ-TXYWY8.png);
+  background-color: black;
+}
+.main__waves-wrapper {
   position: absolute;
   width: 100%;
   bottom: 0;
 }
-main .banner-wrapper.bg-img .waves-wrapper .waves {
+.main__waves {
   position: relative;
   width: 100%;
   height: 15vh;
@@ -87,14 +74,14 @@ main .banner-wrapper.bg-img .waves-wrapper .waves {
   min-height: 100px;
   max-height: 120px;
 }
-main .banner-wrapper.bg-img .waves-wrapper .waves .parallax > use {
+.main__waves .parallax > use {
   animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }
-main .banner-wrapper.bg-img .waves-wrapper .waves .parallax > use:nth-child(1) {
+.main__waves .parallax > use:nth-child(1) {
   animation-delay: -2s;
   animation-duration: 7s;
 }
-main .banner-wrapper.bg-img .waves-wrapper .waves .parallax > use:nth-child(2) {
+.main__waves .parallax > use:nth-child(2) {
   animation-delay: -3s;
   animation-duration: 10s;
 }
@@ -107,172 +94,204 @@ main .banner-wrapper.bg-img .waves-wrapper .waves .parallax > use:nth-child(2) {
   }
 }
 @media screen and (max-width: 1281px) {
-  main .banner-wrapper.bg-img .waves-wrapper .waves {
+  .main__waves {
     height: 80px;
     min-height: 80px;
   }
-  main .banner-wrapper.bg-img .waves-wrapper .content {
-    height: 30vh;
-  }
 }
 @media screen and (max-width: 600px) {
-  main .banner-wrapper.bg-img .waves-wrapper .waves {
+  .main__waves {
     height: 60px;
     min-height: 60px;
   }
-  main .banner-wrapper.bg-img .waves-wrapper .content {
-    height: 30vh;
-  }
 }
-main .time-wrapper {
+.main__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
+  transform: translate(-50%, -50%);
+}
+.main__timer-wrapper {
   /*-- ------------------------------  main .time-wrapper -------------------------------- */
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 100px 0;
+  margin: 100px auto;
   text-align: center;
 }
 @media screen and (max-width: 1281px) {
-  main .time-wrapper {
-    padding: 80px 0;
+  .main__timer-wrapper {
+    margin: 80px 0;
   }
 }
 @media screen and (max-width: 600px) {
-  main .time-wrapper {
-    padding: 60px 0;
+  .main__timer-wrapper {
+    margin: 60px 0;
   }
 }
-main .time-wrapper .time {
-  width: 100%;
-  height: 100%;
-}
-main .time-wrapper .time img {
+.main__clock-img {
   width: 80px;
   height: 80px;
   display: block;
   margin: 0 auto;
 }
-main .time-wrapper .time .open-time {
+@media screen and (max-width: 1281px) {
+  .main__clock-img__img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main__clock-img__img {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 10px;
+  }
+}
+.main__timer {
+  width: 100%;
+  height: 100%;
+}
+.main .timer__oppeningHours {
   font-size: 3rem;
   font-weight: bold;
   letter-spacing: 5px;
-  display: block;
   margin-top: 50px;
 }
 @media screen and (max-width: 1281px) {
-  main .time-wrapper .time img {
-    width: 70px;
-    height: 70px;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 15px;
-  }
-  main .time-wrapper .time .open-time {
-    display: block;
-    margin-left: 0px;
+  .main .timer__oppeningHours {
     margin-top: 15px;
     font-size: 2.4rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .time-wrapper .time img {
-    width: 55px;
-    height: 55px;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 10px;
-  }
-  main .time-wrapper .time .open-time {
-    display: block;
+  .main .timer__oppeningHours {
     font-size: 2rem;
     margin-top: 10px;
     letter-spacing: 5.5px;
   }
 }
-main .time-wrapper .countdown {
-  width: 100%;
-  height: 100%;
+.main .timer__countdown {
   margin-top: 50px;
 }
 @media screen and (max-width: 1281px) {
-  main .time-wrapper .countdown {
+  .main .timer__countdown {
     margin-top: 30px;
   }
 }
 @media screen and (max-width: 600px) {
-  main .time-wrapper .countdown {
+  .main .timer__countdown {
     margin-top: 20px;
   }
 }
-main .time-wrapper .countdown .part {
+.main .timer__time-ly {
   display: inline-block;
   width: 80px;
   height: 80px;
-  box-sizing: border-box;
+  line-height: 80px;
   text-align: center;
   margin: 0 3px;
-  line-height: 80px;
-  background-color: rgb(71, 71, 71);
-  color: white;
-  border-radius: 15px;
-  font-size: 3rem;
 }
 @media screen and (max-width: 1281px) {
-  main .time-wrapper .countdown .part {
+  .main .timer__time-ly {
     width: 67px;
     height: 67px;
     line-height: 67px;
-    font-size: 2.5rem;
   }
 }
 @media screen and (max-width: 600px) {
-  main .time-wrapper .countdown .part {
+  .main .timer__time-ly {
     width: 60px;
     height: 60px;
     line-height: 60px;
-    font-size: 2rem;
   }
 }
-main .time-wrapper .countdown .countdown-title {
-  font-size: 2rem;
+.main .timer__time {
+  box-sizing: border-box;
+  background-color: rgb(71, 71, 71);
+  color: white;
+  border-radius: 15px;
+  font-size: 30px;
+}
+@media screen and (max-width: 1281px) {
+  .main .timer__time {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main .timer__time {
+    font-size: 20px;
+  }
+}
+.main .timer__business-status-ly {
+  width: 255px;
   margin: 50px auto 0 auto;
+}
+@media screen and (max-width: 1281px) {
+  .main .timer__business-status-ly {
+    width: 220px;
+    font-size: 1.8px;
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main .timer__business-status-ly {
+    width: 205px;
+    font-size: 1.6px;
+    margin-top: 20px;
+  }
+}
+.main .timer__business-status {
+  font-size: 20px;
   color: rgb(71, 71, 71);
   background-color: rgb(219, 219, 219);
-  width: 255px;
   padding: 10px 0;
   border-radius: 10px;
 }
 @media screen and (max-width: 1281px) {
-  main .time-wrapper .countdown .countdown-title {
-    width: 220px;
-    font-size: 1.8rem;
-    margin-top: 30px;
+  .main .timer__business-status {
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 600px) {
-  main .time-wrapper .countdown .countdown-title {
-    width: 205px;
-    font-size: 1.6rem;
-    margin-top: 20px;
+  .main .timer__business-status {
+    font-size: 16px;
   }
 }
-main .event-wrapper {
+.main__event {
   /*-- ---------------------  main .event-wrapper ---------------------- */
+  position: relative;
   width: 100%;
   height: 800px;
   overflow: hidden;
-  position: relative;
 }
 @media screen and (max-width: 1281px) {
-  main .event-wrapper {
+  .main__event {
     height: 500px;
   }
 }
 @media screen and (max-width: 600px) {
-  main .event-wrapper {
+  .main__event {
     height: 300px;
   }
 }
-main .event-wrapper .title {
+.main__event-slider {
+  width: 100%;
+}
+.main__event-slide {
+  height: 800px;
+}
+@media screen and (max-width: 1281px) {
+  .main__event-slide {
+    height: 500px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main__event-slide {
+    height: 300px;
+  }
+}
+.main__event-title {
   position: relative;
   top: 55%;
   left: 50%;
@@ -286,64 +305,41 @@ main .event-wrapper .title {
   text-shadow: 1px 1px 10px #123758, -1px -1px 10px #123758;
   transition: 0.3s ease-in-out;
 }
-main .event-wrapper .title.active {
+.main__event-title.active {
   top: 50%;
   opacity: 1;
   transition-delay: 1s;
 }
 @media screen and (max-width: 1281px) {
-  main .event-wrapper .title {
+  .main__event-title {
     font-size: 2.3rem;
     text-align: center;
     word-break: keep-all;
   }
 }
 @media screen and (max-width: 600px) {
-  main .event-wrapper .title {
+  .main__event-title {
     font-size: 1.8rem;
     text-align: center;
     word-break: keep-all;
   }
 }
-main .event-wrapper .event-slider {
+.main .slider {
   /*----------  main .event-wrapper .event-slider (siema.js사용) ----------*/
-  width: 100%;
-  height: 100%;
 }
-main .event-wrapper .event-slider > div:after {
+.main .slider > div:after {
   content: "";
   display: block;
   clear: both;
 }
-main .event-wrapper .event-slider div.item {
-  width: 100%;
-  height: 800px;
+.main .slider__slide {
   background-color: blue;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-@media screen and (max-width: 1281px) {
-  main .event-wrapper .event-slider div.item {
-    height: 500px;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .event-wrapper .event-slider div.item {
-    height: 300px;
-  }
-}
-main .event-wrapper .event-slider .item.one {
-  background-image: url(../../../images/amusementpark/aquarium.PNG);
-}
-main .event-wrapper .event-slider .item.two {
-  background-image: url(../../../images/amusementpark/aquarium/aquarium3.JPG);
-}
-main .event-wrapper .event-slider .item.three {
-  background-image: url(../../../images/amusementpark/aquarium/aquarium4.JPG);
-}
-main .event-wrapper .btn-wrapper {
-  /*------- ..event-wrapper .btn-wrapper -----------*/
+.main .slider__controller-wrapper {
+  position: absolute;
   max-width: 1200px;
   height: 100%;
   margin: 0 auto;
@@ -351,9 +347,8 @@ main .event-wrapper .btn-wrapper {
   left: 0;
   right: 0;
   bottom: 0;
-  position: absolute;
 }
-main .event-wrapper .btn-wrapper button {
+.main .slider__btn {
   transform: translateY(-50%);
   padding: 10px;
   border: 0;
@@ -365,12 +360,12 @@ main .event-wrapper .btn-wrapper button {
   vertical-align: sub;
 }
 @media screen and (max-width: 600px) {
-  main .event-wrapper .btn-wrapper button {
+  .main .slider__btn {
     width: 30px;
     height: 30px;
   }
 }
-main .event-wrapper .btn-wrapper .prev {
+.main .slider__btn--prev {
   position: absolute;
   top: 50%;
   left: 5%;
@@ -379,16 +374,16 @@ main .event-wrapper .btn-wrapper .prev {
   transform: rotate(45deg) translateY(-50%);
 }
 @media screen and (max-width: 1281px) {
-  main .event-wrapper .btn-wrapper .prev {
+  .main .slider__btn--prev {
     left: 5%;
   }
 }
 @media screen and (max-width: 600px) {
-  main .event-wrapper .btn-wrapper .prev {
+  .main .slider__btn--prev {
     left: 5%;
   }
 }
-main .event-wrapper .btn-wrapper .next {
+.main .slider__btn--next {
   position: absolute;
   top: 50%;
   right: 5%;
@@ -397,35 +392,16 @@ main .event-wrapper .btn-wrapper .next {
   transform: rotate(45deg) translateY(-50%);
 }
 @media screen and (max-width: 1281px) {
-  main .event-wrapper .btn-wrapper .next {
+  .main .slider__btn--next {
     right: 10%;
   }
 }
 @media screen and (max-width: 600px) {
-  main .event-wrapper .btn-wrapper .next {
+  .main .slider__btn--next {
     right: 10%;
   }
 }
-main .event-wrapper .btn-wrapper .index-button-wrapper {
-  /*-------  .btn-wrapper .index-button-wrapper -----------*/
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 10%;
-}
-main .event-wrapper .btn-wrapper .index-button-wrapper .index-button {
-  width: 10px;
-  height: 10px;
-  padding: 0;
-  background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 50%;
-  margin: 0 10px;
-  text-indent: -9999em;
-}
-main .event-wrapper .btn-wrapper .index-button-wrapper .index-button.selected {
-  background-color: white;
-}
-main .event-wrapper .btn-wrapper .index-button-wrapper .controller {
+.main .slider__btn--pause {
   width: 17px;
   height: 17px;
   padding: 0;
@@ -433,10 +409,37 @@ main .event-wrapper .btn-wrapper .index-button-wrapper .controller {
   color: white;
   vertical-align: middle;
 }
-main .event-wrapper .btn-wrapper .index-button-wrapper .controller img {
-  display: block;
-  width: 100%;
-  height: 100%;
+.main .slider__btn--play {
+  width: 17px;
+  height: 17px;
+  padding: 0;
+  margin: 0 10px;
+  color: white;
+  vertical-align: middle;
+}
+.main .slider__index-button-wrapper {
+  /*-------  .btn-wrapper .index-button-wrapper -----------*/
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10%;
+}
+.main .slider__index {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  border: none;
+  margin: 0 10px;
+  text-indent: -9999em;
+  cursor: pointer;
+}
+.main .slider__index.selected {
+  background-color: white;
 }
 
-/* --------------------------------------------------------------------------- *//*# sourceMappingURL=aquarium.css.map */
+/* --------------------------------------------------------------------------- */
+.display-block {
+  display: block;
+}/*# sourceMappingURL=aquarium.css.map */

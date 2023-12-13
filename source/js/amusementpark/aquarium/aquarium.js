@@ -1,27 +1,17 @@
 window.addEventListener("load", function () {
   //아쿠아리움 페이지 슬라이더 사용을 위한 변수
-  const as = document.querySelectorAll(".event-slider a");
-  const prev = document.querySelector(".btn-wrapper .prev");
-  const next = document.querySelector(".btn-wrapper .next");
-  const indexBtns = document.querySelectorAll(
-    ".index-button-wrapper .index-button"
-  );
-  let index = 0;
+  const sliderBtnPrev = document.querySelector(".slider__btn--prev");
+  const sliderBtnNext = document.querySelector(".slider__btn--next");
+  const sliderIndexs = document.querySelectorAll(".slider__index");
+  let SliderIndexNum = 0;
 
-  const indexBtn1 = document.querySelector(
-    ".index-button-wrapper .index-button1"
-  );
-  const indexBtn2 = document.querySelector(
-    ".index-button-wrapper .index-button2"
-  );
-  const indexBtn3 = document.querySelector(
-    ".index-button-wrapper .index-button3"
-  );
-  const pauseBtn = document.querySelector(".index-button-wrapper .pause");
-  const playBtn = document.querySelector(".index-button-wrapper .play");
+  const sliderIndex1 = document.querySelector(".slider__index--1");
+  const sliderIndex2 = document.querySelector(".slider__index--2");
+  const sliderIndex3 = document.querySelector(".slider__index--3");
+  const sliderBtnPause = document.querySelector(".slider__btn--pause");
+  const sliderBtnPlay = document.querySelector(".slider__btn--play");
   let sliderWorking = true;
 
-  const bannerWrapper = document.querySelector("main .banner-wrapper.bg-img");
   //이미지미리로드
   const imgSourceArray = [];
   imgSourceArray.push(
@@ -33,19 +23,13 @@ window.addEventListener("load", function () {
     img.src = imgSourceArray[i];
   }
 
-  const sliderItems = $(".event-slider .item");
+  const sliderSlides = $(".slider__slide");
 
   // ---------------------------------------------------------------------------------//
 
-  for (let i = 0; i < as.length; i++) {
-    as[i].addEventListener("click", function (e) {
-      e.preventDefault();
-    });
-  }
-
   //시에마 슬라이드 생성
   const siemaSlider = new Siema({
-    selector: ".event-slider",
+    selector: ".slider",
     duration: 1000,
     easing: "ease-out",
     perPage: 1,
@@ -53,40 +37,40 @@ window.addEventListener("load", function () {
     threshold: 216,
     loop: true,
     onChange: function () {
-      sliderItems.find("h3").removeClass("active");
-      sliderItems.eq(this.currentSlide).find("h3").addClass("active");
+      sliderSlides.find("h3").removeClass("active");
+      sliderSlides.eq(this.currentSlide).find("h3").addClass("active");
     },
   });
 
-  prev.addEventListener("click", () => {
+  sliderBtnPrev.addEventListener("click", () => {
     siemaSlider.prev();
     changeIndex(index - 2);
   });
 
-  next.addEventListener("click", () => {
+  sliderBtnNext.addEventListener("click", () => {
     siemaSlider.next();
     changeIndex();
   });
 
-  indexBtn1.addEventListener("click", () => {
+  sliderIndex1.addEventListener("click", () => {
     siemaSlider.goTo(0);
     changeIndex(0);
   });
 
-  indexBtn2.addEventListener("click", () => {
+  sliderIndex2.addEventListener("click", () => {
     siemaSlider.goTo(1);
     changeIndex(1);
   });
 
-  indexBtn3.addEventListener("click", () => {
+  sliderIndex3.addEventListener("click", () => {
     siemaSlider.goTo(2);
     changeIndex(2);
   });
-  pauseBtn.addEventListener("click", () => {
+  sliderBtnPause.addEventListener("click", () => {
     clearInterval(timer);
     sliderWorking = false;
   });
-  playBtn.addEventListener("click", () => {
+  sliderBtnPlay.addEventListener("click", () => {
     if (!sliderWorking) {
       sliderWorking = true;
       timer = setInterval(autoslider, 4000);
@@ -99,19 +83,17 @@ window.addEventListener("load", function () {
 
   //moment js 시간 타이머
   let currentTime = moment();
-  let hours = document.querySelector(".hours");
-  let minutes = document.querySelector(".minutes");
-  let seconds = document.querySelector(".seconds");
-  let countdownTitle = document.querySelector(".countdown-title");
+  let timerHours = document.querySelector(".timer__time--hours");
+  let timerMinutes = document.querySelector(".timer__time--minutes");
+  let timerSeconds = document.querySelector(".timer__time--seconds");
+  let timerBusinessStatus = document.querySelector(".timer__business-status");
 
   if (currentTime.hours() >= 10 && currentTime.hours() <= 20) {
     const countdown = setInterval(function () {
-      countdownTitle.innerText = "OPEN";
+      timerBusinessStatus.innerText = "OPEN";
       timeCountdown();
     }, 1000);
   }
-
-  bannerWrapper.classList.add("loaded");
 
   /**
    * 마감 closed 시간까지 남은 시간을 계산하는 함수
@@ -124,39 +106,38 @@ window.addEventListener("load", function () {
     const leftMinutes = leftTime.minutes();
     const leftSeconds = leftTime.seconds();
     if (leftHours < 10) {
-      hours.innerText = "0" + leftHours;
+      timerHours.innerText = "0" + leftHours;
     } else {
-      hours.innerText = leftHours;
+      timerHours.innerText = leftHours;
     }
     if (leftMinutes < 10) {
-      minutes.innerText = "0" + leftMinutes;
+      timerMinutes.innerText = "0" + leftMinutes;
     } else {
-      minutes.innerText = leftMinutes;
+      timerMinutes.innerText = leftMinutes;
     }
     if (leftSeconds < 10) {
-      seconds.innerText = "0" + leftSeconds;
+      timerSeconds.innerText = "0" + leftSeconds;
     } else {
-      seconds.innerText = leftSeconds;
+      timerSeconds.innerText = leftSeconds;
     }
   }
 
   /**
    *슬라이드 인덱스를 다음 슬라이드로 증가시키고 슬라이더 내부의 타이틀 엘리먼트를 표시해주는 함수
-   *(실행시 전역 index 변수의 값이 1씩 증가)
+   *(실행시 전역 SliderIndexNum 변수의 값이 1씩 증가)
    * @param {number} num 숫자타입의 인덱스번호
-   * (입력이 안될경우 전역 변수인 index 변수 자동사용)
+   * (입력이 안될경우 전역 변수인 SliderIndexNum 변수 자동사용)
    */
   function changeIndex(num) {
-    if (!(num === undefined)) index = num;
-    if (index > indexBtns.length - 1) index = 0;
-    if (index < 0) index = indexBtns.length - 1;
+    if (!(num === undefined)) SliderIndexNum = num;
+    if (SliderIndexNum > sliderIndexs.length - 1) SliderIndexNum = 0;
+    if (SliderIndexNum < 0) SliderIndexNum = sliderIndexs.length - 1;
 
-    for (let i = 0; i < indexBtns.length; i++) {
-      indexBtns[i].classList.remove("selected");
+    for (let i = 0; i < sliderIndexs.length; i++) {
+      sliderIndexs[i].classList.remove("selected");
     }
-    indexBtns[index].classList.add("selected");
-
-    index++;
+    sliderIndexs[SliderIndexNum].classList.add("selected");
+    SliderIndexNum++;
   }
 
   /**

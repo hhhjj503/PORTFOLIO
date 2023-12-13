@@ -13,9 +13,10 @@ body {
   overflow-x: hidden;
 }
 
+//헤더의 해당페이지 글자 빨간색으로 변경
 .header__li:nth-child(3) {
   > .header__link {
-    color: #e60000; /* nav 의 나이트쇼 글자 빨갛게 변경 */
+    color: #e60000;
   }
 }
 

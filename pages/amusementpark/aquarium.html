@@ -101,15 +101,17 @@
     <!-- //header -->
 
     <!-- main -->
-    <main>
+    <main class="main">
       <!-- banner bgdiv -->
-      <div class="banner-wrapper bg-img">
-        <h2 class="title">AMUSEMENT PARK AQUARIUM <br /></h2>
+      <div class="main__banner background-img">
+        <h2 class="main__title title title--h2 title--color-white">
+          AMUSEMENT PARK AQUARIUM <br />
+        </h2>
 
         <!-- wave effect -->
-        <div class="waves-wrapper">
+        <div class="main__waves-wrapper waves-wrapper">
           <svg
-            class="waves"
+            class="main__waves waves"
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
             viewBox="0 24 150 28"
@@ -141,58 +143,81 @@
       </div>
 
       <!-- time wrapper -->
-      <div class="time-wrapper" tabindex="0">
-        <div class="time">
+      <div class="main__timer-wrapper timer-wrapper" tabindex="0">
+        <div class="main__timer timer">
           <img
+            class="main__clock-img"
             src="../../source/images/amusementpark/aquarium/clock-solid.svg"
             alt="시계 이미지"
-          /><span class="open-time">10:00 ~ 21:00</span>
-        </div>
-        <div class="countdown">
-          <div class="lefttime">
-            <div class="part">
-              <div class="hours">00</div>
+          />
+          <div class="timer__oppeningHours">10:00 ~ 21:00</div>
+          <div class="timer__countdown">
+            <div class="timer__time timer__time--hours timer__time-ly">00</div>
+            <div class="timer__time timer__time--minutes timer__time-ly">
+              00
             </div>
-            <div class="part">
-              <div class="minutes">00</div>
-            </div>
-            <div class="part">
-              <div class="seconds">00</div>
+            <div class="timer__time timer__time--seconds timer__time-ly">
+              00
             </div>
           </div>
-          <h5 class="countdown-title">CLOSED</h5>
+          <h5 class="timer__business-status timer__business-status-ly">
+            CLOSED
+          </h5>
         </div>
       </div>
 
       <!-- slider (siema.js) -->
-      <div class="event-wrapper">
-        <div class="event-slider">
-          <div class="item one">
-            <h3 class="title active">즐겁고</h3>
+      <div class="main__event">
+        <div class="main__event-slider slider">
+          <div
+            class="main__event-slide slider__slide"
+            style="
+              background-image: url(../../source/images/amusementpark/aquarium.PNG);
+            "
+          >
+            <h3 class="main__event-title title title--h3 active">즐겁고</h3>
           </div>
-          <div class="item two">
-            <h3 class="title">신나는</h3>
+          <div
+            class="main__event-slide slider__slide"
+            style="
+              background-image: url(../../source/images/amusementpark/aquarium/aquarium3.JPG);
+            "
+          >
+            <h3 class="main__event-title title title--h3">신나는</h3>
           </div>
-          <div class="item three">
-            <h3 class="title">바다속 세계로</h3>
+          <div
+            class="main__event-slide slider__slide"
+            style="
+              background-image: url(../../source/images/amusementpark/aquarium/aquarium4.JPG);
+            "
+          >
+            <h3 class="main__event-title title title--h3">바다속 세계로</h3>
           </div>
         </div>
-        <div class="btn-wrapper">
-          <button class="prev">이전버튼</button>
-          <button class="next">다음버튼</button>
+        <div class="slider__controller-wrapper">
+          <button class="slider__btn slider__btn--prev">이전버튼</button>
+          <button class="slider__btn slider__btn--next">다음버튼</button>
 
-          <span class="index-button-wrapper">
-            <button class="index-button index-button1">슬라이더인덱스1</button>
-            <button class="index-button index-button2">슬라이더인덱스2</button>
-            <button class="index-button index-button3">슬라이더인덱스3</button>
-            <button class="controller pause">
+          <span class="slider__index-button-wrapper">
+            <button class="slider__index slider__index--1">
+              슬라이더인덱스1
+            </button>
+            <button class="slider__index slider__index--2">
+              슬라이더인덱스2
+            </button>
+            <button class="slider__index slider__index--3">
+              슬라이더인덱스3
+            </button>
+            <button class="slider__btn slider__btn--pause">
               <img
+                class="img display-block"
                 src="../../source/images/amusementpark/aquarium/pause-solid.svg"
                 alt="멈춤이미지"
               />
             </button>
-            <button class="controller play">
+            <button class="slider__btn slider__btn--play">
               <img
+                class="img display-block"
                 src="../../source/images/amusementpark/aquarium/play-solid.svg"
                 alt="실행이미지"
               />

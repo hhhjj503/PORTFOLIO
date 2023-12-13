@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url(../../reset.css);
 @import url(../layout/header.css);
 @import url(../layout/footer.css);
@@ -14,7 +13,7 @@ body {
 }
 
 .header__li:nth-child(3) > .header__link {
-  color: #e60000; /* nav 의 나이트쇼 글자 빨갛게 변경 */
+  color: #e60000;
 }
 
 /*=================================================================================*/

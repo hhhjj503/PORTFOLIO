@@ -1,6 +1,12 @@
+@charset "utf-8";
+
 @import url(../../reset.css);
 @import url(../layout/header.css);
 @import url(../layout/footer.css);
+
+/* 모듈 
+(블록주석 : shit alt all) */
+@import url(../module/background-img.css);
 
 html {
   font-size: 62.5%; /*  setting rem  */
@@ -12,31 +18,10 @@ body {
   overflow-x: hidden;
 }
 
-.h-nav {
-  position: fixed; /* position : fixed */
-  transition: 0.5s ease-in-out;
-
-  &.scrolldown {
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  & .nav-ul {
-    li:nth-child(5) {
-      & a {
-        color: #e60000; /* nav 의 아쿠아리움 글자 빨갛게 변경 */
-      }
-    }
-  }
-}
-
-.mobile-menu {
-  position: fixed; /* position : fixed */
-  transition: 0.5s ease-in-out;
-
-  &.scrolldown {
-    opacity: 0;
-    pointer-events: none;
+//헤더의 해당페이지 글자 빨간색으로 변경
+.header__li:nth-child(5) {
+  > .header__link {
+    color: #e60000;
   }
 }
 
@@ -45,171 +30,173 @@ $color: rgba(
   $alpha: 0.7,
 );
 
-html:not(.js) h2,
-html:not(.js) h3 {
-  color: black;
-}
-
 /*=================================================================================*/
+.title {
+  color: black;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px #558abb, -1px -1px 5px #558abb;
 
-main {
-  & .banner-wrapper.bg-img {
-    /* -----------------------------------  main .banner-bgdiv  --------------------------------------- */
-    width: 100vw;
-    height: 90vh;
-    background-image: url(../../../images/amusementpark/aquarium/dmitry-bukhantsov-IBrZ-TXYWY8.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
+  &--h2 {
+    font-size: 40px;
+  }
 
-    &.loaded {
-      background-color: blue;
-    }
+  &--color-white {
+    color: white;
+  }
 
-    & .title {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin: 0 auto;
-      transform: translate(-50%, -50%);
-      font-size: 4rem;
-      color: white;
-      font-weight: bold;
-      text-shadow: 1px 1px 5px #558abb, -1px -1px 5px #558abb;
-
-      @media screen and (max-width: 1281px) {
-        & {
-          font-size: 3rem;
-        }
-      }
-
-      @media screen and (max-width: 600px) {
-        & {
-          font-size: 2.5rem;
-        }
-      }
-    }
-
-    & .waves-wrapper {
-      /* ------------------main .banner-bg .waves-wrapper  -------------------- */
-      position: absolute;
-      width: 100%;
-      bottom: 0;
-
-      & .waves {
-        position: relative;
-        width: 100%;
-        height: 15vh;
-        margin-bottom: -7px; /*Fix for safari gap*/
-        min-height: 100px;
-        max-height: 120px;
-
-        & .parallax > use {
-          animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5)
-            infinite;
-        }
-        & .parallax > use:nth-child(1) {
-          animation-delay: -2s;
-          animation-duration: 7s;
-        }
-        & .parallax > use:nth-child(2) {
-          animation-delay: -3s;
-          animation-duration: 10s;
-        }
-
-        @keyframes move-forever {
-          0% {
-            transform: translate3d(-90px, 0, 0);
-          }
-          100% {
-            transform: translate3d(85px, 0, 0);
-          }
-        }
-      }
-      @media screen and (max-width: 1281px) {
-        .waves {
-          height: 80px;
-          min-height: 80px;
-        }
-        .content {
-          height: 30vh;
-        }
-      }
-
-      @media screen and (max-width: 600px) {
-        .waves {
-          height: 60px;
-          min-height: 60px;
-        }
-        .content {
-          height: 30vh;
-        }
-      }
+  @media screen and (max-width: 1281px) {
+    & {
+      font-size: 30px;
     }
   }
-  & .time-wrapper {
-    /*-- ------------------------------  main .time-wrapper -------------------------------- */
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 100px 0;
-    text-align: center;
+
+  @media screen and (max-width: 600px) {
+    & {
+      font-size: 25px;
+    }
+  }
+}
+
+.img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  &--cover {
+    object-fit: cover;
+  }
+}
+
+.main {
+  &__banner {
+    position: relative;
+    width: 100vw;
+    height: 90vh;
+
+    background-image: url(../../../images/amusementpark/aquarium/dmitry-bukhantsov-IBrZ-TXYWY8.png);
+    background-color: black;
+  }
+
+  &__waves-wrapper {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+
+  &__waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px; /*Fix for safari gap*/
+    min-height: 100px;
+    max-height: 120px;
+
+    //wave 파도에 animation 적용
+    & .parallax > use {
+      animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+    }
+
+    //wave 파도 2개 생성
+    & .parallax > use:nth-child(1) {
+      animation-delay: -2s;
+      animation-duration: 7s;
+    }
+    & .parallax > use:nth-child(2) {
+      animation-delay: -3s;
+      animation-duration: 10s;
+    }
+
+    @keyframes move-forever {
+      0% {
+        transform: translate3d(-90px, 0, 0);
+      }
+      100% {
+        transform: translate3d(85px, 0, 0);
+      }
+    }
 
     @media screen and (max-width: 1281px) {
-      padding: 80px 0;
+      & {
+        height: 80px;
+        min-height: 80px;
+      }
     }
 
     @media screen and (max-width: 600px) {
-      padding: 60px 0;
+      & {
+        height: 60px;
+        min-height: 60px;
+      }
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 auto;
+    transform: translate(-50%, -50%);
+  }
+
+  &__timer-wrapper {
+    /*-- ------------------------------  main .time-wrapper -------------------------------- */
+    max-width: 1200px;
+    margin: 100px auto;
+    text-align: center;
+
+    @media screen and (max-width: 1281px) {
+      margin: 80px 0;
     }
 
-    & .time {
-      width: 100%;
-      height: 100%;
+    @media screen and (max-width: 600px) {
+      margin: 60px 0;
+    }
+  }
 
-      & img {
-        width: 80px;
-        height: 80px;
-        display: block;
-        margin: 0 auto;
-      }
+  &__clock-img {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 0 auto;
 
-      & .open-time {
-        font-size: 3rem;
-        font-weight: bold;
-        letter-spacing: 5px;
-        display: block;
-        margin-top: 50px;
+    @media screen and (max-width: 1281px) {
+      &__img {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 15px;
       }
+    }
+    @media screen and (max-width: 600px) {
+      &__img {
+        width: 55px;
+        height: 55px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__timer {
+    width: 100%;
+    height: 100%;
+  }
+
+  .timer {
+    &__oppeningHours {
+      font-size: 3rem;
+      font-weight: bold;
+      letter-spacing: 5px;
+      margin-top: 50px;
 
       @media screen and (max-width: 1281px) {
-        & img {
-          width: 70px;
-          height: 70px;
-          display: block;
-          margin: 0 auto;
-          margin-bottom: 15px;
-        }
-
-        & .open-time {
-          display: block;
-          margin-left: 0px;
+        & {
           margin-top: 15px;
           font-size: 2.4rem;
         }
       }
 
       @media screen and (max-width: 600px) {
-        & img {
-          width: 55px;
-          height: 55px;
-          display: block;
-          margin: 0 auto;
-          margin-bottom: 10px;
-        }
-
-        & .open-time {
-          display: block;
+        & {
           font-size: 2rem;
           margin-top: 10px;
           letter-spacing: 5.5px;
@@ -217,86 +204,133 @@ main {
       }
     }
 
-    & .countdown {
-      width: 100%;
-      height: 100%;
+    &__countdown {
       margin-top: 50px;
+
       @media screen and (max-width: 1281px) {
-        margin-top: 30px;
+        & {
+          margin-top: 30px;
+        }
       }
 
       @media screen and (max-width: 600px) {
-        margin-top: 20px;
-      }
-
-      & .part {
-        display: inline-block;
-        width: 80px;
-        height: 80px;
-        box-sizing: border-box;
-        text-align: center;
-        margin: 0 3px;
-        line-height: 80px;
-        background-color: rgb(71, 71, 71);
-        color: white;
-        border-radius: 15px;
-        font-size: 3rem;
-
-        @media screen and (max-width: 1281px) {
-          width: 67px;
-          height: 67px;
-          line-height: 67px;
-          font-size: 2.5rem;
-        }
-
-        @media screen and (max-width: 600px) {
-          width: 60px;
-          height: 60px;
-          line-height: 60px;
-          font-size: 2rem;
-        }
-      }
-
-      & .countdown-title {
-        font-size: 2rem;
-        margin: 50px auto 0 auto;
-        color: rgb(71, 71, 71);
-        background-color: rgb(219, 219, 219);
-        width: 255px;
-        padding: 10px 0;
-        border-radius: 10px;
-
-        @media screen and (max-width: 1281px) {
-          width: 220px;
-          font-size: 1.8rem;
-          margin-top: 30px;
-        }
-
-        @media screen and (max-width: 600px) {
-          width: 205px;
-          font-size: 1.6rem;
+        & {
           margin-top: 20px;
         }
       }
     }
+
+    &__time-ly {
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+      text-align: center;
+      margin: 0 3px;
+
+      @media screen and (max-width: 1281px) {
+        width: 67px;
+        height: 67px;
+        line-height: 67px;
+      }
+
+      @media screen and (max-width: 600px) {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+      }
+    }
+
+    &__time {
+      box-sizing: border-box;
+      background-color: rgb(71, 71, 71);
+      color: white;
+      border-radius: 15px;
+      font-size: 30px;
+
+      @media screen and (max-width: 1281px) {
+        font-size: 25px;
+      }
+
+      @media screen and (max-width: 600px) {
+        font-size: 20px;
+      }
+    }
+
+    &__business-status-ly {
+      width: 255px;
+      margin: 50px auto 0 auto;
+
+      @media screen and (max-width: 1281px) {
+        width: 220px;
+        font-size: 1.8px;
+        margin-top: 30px;
+      }
+
+      @media screen and (max-width: 600px) {
+        width: 205px;
+        font-size: 1.6px;
+        margin-top: 20px;
+      }
+    }
+
+    &__business-status {
+      font-size: 20px;
+      color: rgb(71, 71, 71);
+      background-color: rgb(219, 219, 219);
+      padding: 10px 0;
+      border-radius: 10px;
+
+      @media screen and (max-width: 1281px) {
+        font-size: 18px;
+      }
+
+      @media screen and (max-width: 600px) {
+        font-size: 16px;
+      }
+    }
   }
 
-  & .event-wrapper {
+  &__event {
     /*-- ---------------------  main .event-wrapper ---------------------- */
+    position: relative;
     width: 100%;
     height: 800px;
     overflow: hidden;
-    position: relative;
 
     @media screen and (max-width: 1281px) {
-      height: 500px;
+      & {
+        height: 500px;
+      }
     }
 
     @media screen and (max-width: 600px) {
-      height: 300px;
+      & {
+        height: 300px;
+      }
     }
 
-    & .title {
+    &-slider {
+      width: 100%;
+    }
+
+    &-slide {
+      height: 800px;
+
+      @media screen and (max-width: 1281px) {
+        & {
+          height: 500px;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        & {
+          height: 300px;
+        }
+      }
+    }
+
+    &-title {
       position: relative;
       top: 55%;
       left: 50%;
@@ -309,6 +343,7 @@ main {
       z-index: 10;
       text-shadow: 1px 1px 10px #123758, -1px -1px 10px #123758;
       transition: 0.3s ease-in-out;
+
       &.active {
         top: 50%;
         opacity: 1;
@@ -329,48 +364,26 @@ main {
         }
       }
     }
+  }
 
-    & .event-slider {
-      /*----------  main .event-wrapper .event-slider (siema.js사용) ----------*/
-      width: 100%;
-      height: 100%;
+  .slider {
+    /*----------  main .event-wrapper .event-slider (siema.js사용) ----------*/
 
-      & > div:after {
-        content: "";
-        display: block;
-        clear: both;
-      }
-
-      & div.item {
-        width: 100%;
-        height: 800px;
-        background-color: blue;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-
-        @media screen and (max-width: 1281px) {
-          height: 500px;
-        }
-
-        @media screen and (max-width: 600px) {
-          height: 300px;
-        }
-      }
-
-      & .item.one {
-        background-image: url(../../../images/amusementpark/aquarium.PNG);
-      }
-      & .item.two {
-        background-image: url(../../../images/amusementpark/aquarium/aquarium3.JPG);
-      }
-      & .item.three {
-        background-image: url(../../../images/amusementpark/aquarium/aquarium4.JPG);
-      }
+    & > div:after {
+      content: "";
+      display: block;
+      clear: both;
     }
 
-    & .btn-wrapper {
-      /*------- ..event-wrapper .btn-wrapper -----------*/
+    &__slide {
+      background-color: blue;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    &__controller-wrapper {
+      position: absolute;
       max-width: 1200px;
       height: 100%;
       margin: 0 auto;
@@ -378,31 +391,27 @@ main {
       left: 0;
       right: 0;
       bottom: 0;
-      position: absolute;
+    }
 
-      & button {
-        transform: translateY(-50%);
-        padding: 10px;
-        border: 0;
-        width: 50px;
-        height: 50px;
-        background-color: transparent;
-        cursor: pointer;
-        text-indent: -9999em;
-        vertical-align: sub;
+    &__btn {
+      transform: translateY(-50%);
+      padding: 10px;
+      border: 0;
+      width: 50px;
+      height: 50px;
+      background-color: transparent;
+      cursor: pointer;
+      text-indent: -9999em;
+      vertical-align: sub;
 
-        @media screen and (max-width: 1281px) {
-        }
-
-        @media screen and (max-width: 600px) {
-          & {
-            width: 30px;
-            height: 30px;
-          }
+      @media screen and (max-width: 600px) {
+        & {
+          width: 30px;
+          height: 30px;
         }
       }
 
-      & .prev {
+      &--prev {
         position: absolute;
         top: 50%;
         left: 5%;
@@ -423,7 +432,7 @@ main {
         }
       }
 
-      & .next {
+      &--next {
         position: absolute;
         top: 50%;
         right: 5%;
@@ -444,44 +453,52 @@ main {
         }
       }
 
-      & .index-button-wrapper {
-        /*-------  .btn-wrapper .index-button-wrapper -----------*/
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 10%;
+      &--pause {
+        width: 17px;
+        height: 17px;
+        padding: 0;
+        margin: 0 10px;
+        color: white;
+        vertical-align: middle;
+      }
 
-        & .index-button {
-          width: 10px;
-          height: 10px;
-          padding: 0;
-          background-color: $color;
-          border-radius: 50%;
-          margin: 0 10px;
-          text-indent: -9999em;
+      &--play {
+        width: 17px;
+        height: 17px;
+        padding: 0;
+        margin: 0 10px;
+        color: white;
+        vertical-align: middle;
+      }
+    }
 
-          &.selected {
-            background-color: white;
-          }
-        }
+    &__index-button-wrapper {
+      /*-------  .btn-wrapper .index-button-wrapper -----------*/
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 10%;
+    }
+    &__index {
+      width: 10px;
+      height: 10px;
+      padding: 0;
+      background-color: $color;
+      border-radius: 50%;
+      border: none;
+      margin: 0 10px;
+      text-indent: -9999em;
+      cursor: pointer;
 
-        & .controller {
-          width: 17px;
-          height: 17px;
-          padding: 0;
-          margin: 0 10px;
-          color: white;
-          vertical-align: middle;
-
-          & img {
-            display: block;
-            width: 100%;
-            height: 100%;
-          }
-        }
+      &.selected {
+        background-color: white;
       }
     }
   }
 }
 
 /* --------------------------------------------------------------------------- */
+
+.display-block {
+  display: block;
+}
