@@ -1286,6 +1286,7 @@ button.text-indent {
 }
 
 .game__unit-img {
+  top: 0;
   width: 9rem;
   height: 9rem;
 }
