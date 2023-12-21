@@ -24,16 +24,16 @@ button.text-indent {
 }
 
 .border-top {
-  border-top: 0.1rem solid white;
+  border-top: 1px solid white;
 }
 
 .title-h2 {
   color: #000000;
-  font-size: 8rem;
+  font-size: 80px;
   font-family: "Exo", "NanumSquare", "Margun Gothic", sans-serif;
   font-weight: bold;
   box-sizing: border-box;
-  letter-spacing: 0.1rem;
+  letter-spacing: 1px;
 }
 
 .title-h2--pink {
@@ -54,11 +54,11 @@ button.text-indent {
 /* ================================= skip ================================= */
 
 .main-link {
-  font-size: 2rem;
+  font-size: 20px;
   font-weight: bold;
   color: #000000;
   background-color: #f4a5b7;
-  border-bottom: 0.1rem solid #fff;
+  border-bottom: 1px solid #fff;
   text-align: center;
 }
 
@@ -67,7 +67,7 @@ button.text-indent {
   top: -100%;
   left: 0;
   width: 100%;
-  padding: 1rem 0;
+  padding: 10px 0;
   z-index: 99;
 }
 
@@ -79,31 +79,28 @@ button.text-indent {
 /* ================================= .header ================================= */
 .header {
   background-color: #000000;
-  border-bottom: 0.05rem solid #f4a5b7;
+  border-bottom: 0.5px solid #f4a5b7;
 }
 
 .header__inner {
-  position: sticky;
-  padding: 1rem 0;
-  max-width: 146rem;
+  padding: 10px 0;
+  max-width: 1460px;
   width: 100%;
-  top: 0;
-  left: 0;
   margin: 0 auto;
   z-index: 10;
 }
 
 .header__link {
-  font-size: 5rem;
+  font-size: 50px;
   font-weight: bolder;
-  text-shadow: 0.05rem 0.05rem #f4a5b7, -0.05rem -0.05rem #f4a5b7;
+  text-shadow: 0.5px 0.5px #f4a5b7, -0.5px -0.5px #f4a5b7;
   font-family: Arial, Helvetica, sans-serif;
   color: #f4a5b7;
 }
 
 .header__char--rotate {
   display: inline-block;
-  font-size: 5.2rem;
+  font-size: 52px;
   transition: 0.5s ease-in-out;
   transform: rotate(180deg);
 }
@@ -114,21 +111,21 @@ button.text-indent {
   }
 
   .header__link {
-    font-size: 4rem;
+    font-size: 40px;
   }
 
   .header__char--rotate {
-    font-size: 4.2rem;
+    font-size: 42px;
   }
 }
 
 @media screen and (max-width: 600px) {
   .header__link {
-    font-size: 3rem;
+    font-size: 30px;
   }
 
   .header__char--rotate {
-    font-size: 3.2rem;
+    font-size: 32px;
   }
 }
 
@@ -180,7 +177,7 @@ button.text-indent {
 }
 
 .slider__controls {
-  max-width: 146rem;
+  max-width: 1460px;
   width: 100%;
   position: absolute;
   left: 50%;
@@ -199,13 +196,13 @@ button.text-indent {
   border-radius: 50%;
   background-color: white;
   position: absolute;
-  top: 2rem;
+  top: 20px;
   left: 0;
   transition: 0.3s ease;
 }
 
 .slider__btn--index:nth-child(2) {
-  left: 3rem;
+  left: 30px;
 }
 
 .slider__btn--index.active {
@@ -216,7 +213,7 @@ button.text-indent {
   width: 20px;
   height: 20px;
   position: absolute;
-  top: 2rem;
+  top: 20px;
   right: 0;
   background-image: url(../../images/blackpink/pause-solid.svg);
   background-repeat: no-repeat;
@@ -227,8 +224,8 @@ button.text-indent {
   width: 20px;
   height: 20px;
   position: absolute;
-  top: 2rem;
-  right: 4rem;
+  top: 20px;
+  right: 40px;
   background-image: url(../../images/blackpink/play-solid.svg);
   background-repeat: no-repeat;
   background-color: transparent;
@@ -251,7 +248,7 @@ button.text-indent {
   }
 
   .banner__inner {
-    height: 20rem;
+    height: 200px;
   }
 
   .slider__controls {
@@ -273,13 +270,13 @@ button.text-indent {
 
 .intro__inner {
   position: relative;
-  max-width: 146rem;
-  margin: 20rem auto;
+  max-width: 1460px;
+  margin: 200px auto;
   width: 100%;
 }
 
 .intro__thumbnail {
-  height: 70rem;
+  height: 700px;
   width: 19.2%;
 }
 
@@ -295,7 +292,7 @@ button.text-indent {
   width: 100%;
   height: 20%;
   box-sizing: border-box;
-  border: 0.3rem solid #000000;
+  border: 3px solid #000000;
   background-color: transparent;
   transition: 0.5s ease;
   z-index: 2;
@@ -325,7 +322,7 @@ button.text-indent {
   border: none;
   background-color: inherit;
   padding: 0;
-  outline-width: 0.5rem;
+  outline-width: 5px;
 }
 
 .btn-slider__btn-img {
@@ -358,7 +355,7 @@ button.text-indent {
 .intro__slider {
   position: relative;
   display: inline-block;
-  height: 70rem;
+  height: 700px;
   width: 80.5%;
   overflow: hidden;
 }
@@ -373,12 +370,12 @@ button.text-indent {
 }
 
 .btn-slider__size-btn {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   background-color: #f4a5b7;
   border: none;
-  margin: 0 0.5rem;
+  margin: 0 5px;
   cursor: pointer;
 }
 
@@ -445,7 +442,7 @@ button.text-indent {
 .intro__thumbnail-mobile {
   display: none;
   width: 100%;
-  height: 20rem;
+  height: 200px;
   white-space: nowrap;
   font-size: 0;
   margin: 0.3% auto 0 auto;
@@ -462,7 +459,7 @@ button.text-indent {
   width: 20%;
   height: 100%;
   box-sizing: border-box;
-  border: 0.3rem solid #000000;
+  border: 3px solid #000000;
   background-color: transparent;
   position: absolute;
   top: 0;
@@ -492,7 +489,7 @@ button.text-indent {
   border: none;
   background-color: inherit;
   padding: 0;
-  outline-width: 0.5rem;
+  outline-width: 5px;
 }
 
 .btn-slider__mobile-btn-img {
@@ -523,8 +520,8 @@ button.text-indent {
 
 .intro__line {
   width: 100%;
-  height: 0.1rem;
-  margin: 2rem 0;
+  height: 1px;
+  margin: 20px 0;
   background-color: #000000;
 }
 
@@ -534,7 +531,7 @@ button.text-indent {
 }
 
 .intro__title {
-  font-size: 3rem;
+  font-size: 30px;
   font-weight: bolder;
   text-align: center;
 }
@@ -547,19 +544,19 @@ button.text-indent {
 .lang-selector__btn {
   background-color: #000000;
   color: #f4a5b7;
-  font-size: 2rem;
+  font-size: 20px;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 5px 10px;
   cursor: pointer;
 }
 
 .intro__lang-btn {
   display: inline-block;
-  margin: 2rem 0;
+  margin: 20px 0;
 }
 
 .lang-selector__p {
-  font-size: 2rem;
+  font-size: 20px;
   font-weight: bold;
   font-family: "Exo", "NanumSquare", "Margun Gothic", sans-serif;
   line-height: 1.618;
@@ -580,7 +577,7 @@ button.text-indent {
 /* intro 반응형 */
 @media screen and (max-width: 1281px) {
   .intro__inner {
-    margin: 16rem 0;
+    margin: 160px 0;
   }
 
   .intro__thumbnail {
@@ -590,7 +587,7 @@ button.text-indent {
   .intro__slider {
     display: block;
     width: 95%;
-    height: 50rem;
+    height: 500px;
     margin: 0 auto;
   }
 
@@ -600,69 +597,69 @@ button.text-indent {
   }
 
   .btn-slider__mobile-inner {
-    height: 20rem;
+    height: 200px;
   }
 
   .intro__desc {
     width: 95%;
-    font-size: 2.5rem;
-    margin: 1.8rem auto;
+    font-size: 25px;
+    margin: 18px auto;
     margin-bottom: 0;
   }
 
   .intro__lang-p {
     width: 90%;
-    font-size: 1.7rem;
+    font-size: 17px;
   }
 }
 
 /* intro 반응형 600px */
 @media screen and (max-width: 600px) {
   .intro__inner {
-    margin: 8rem 0;
+    margin: 80px 0;
   }
 
   .intro__slider {
-    height: 30rem;
+    height: 300px;
   }
 
   .btn-slider__size-btn {
-    width: 2rem;
-    height: 2rem;
+    width: 20px;
+    height: 20px;
   }
 
   .intro__thumbnail-mobile {
-    height: 10rem;
+    height: 100px;
   }
 
   .intro__desc {
-    font-size: 2.2rem;
+    font-size: 22px;
   }
 
   .lang-selector__btn {
-    font-size: 1.6rem;
-    padding: 0.5rem 0.8rem;
+    font-size: 16px;
+    padding: 5px 8px;
   }
 
   .intro__lang-p {
     width: 95%;
-    font-size: 1.3rem;
+    font-size: 13px;
   }
 }
 
 /*================================= members =================================*/
 .members__inner {
   position: relative;
-  max-width: 146rem;
+  max-width: 1460px;
   width: 100%;
-  margin: 20rem auto;
+  margin: 200px auto;
   white-space: nowrap;
   font-size: 0;
   letter-spacing: 0;
 }
 
 .members__title {
-  padding: 2rem 2rem 2rem 0;
+  padding: 20px 20px 20px 0;
   padding-left: 0;
   text-align: left;
 }
@@ -681,32 +678,32 @@ button.text-indent {
 
 .vertical-media__title {
   color: #f4a5b7;
-  font-size: 2.2rem;
+  font-size: 22px;
   font-weight: bold;
   font-family: "Exo", "NanumSquare", "Margun Gothic", sans-serif;
   font-weight: bold;
-  letter-spacing: 0.1rem;
+  letter-spacing: 1px;
 }
 
 .members__member-title {
   text-align: center;
-  padding: 2rem;
+  padding: 20px;
   box-sizing: border-box;
 }
 
 .members__member:nth-child(2) {
-  top: -8rem;
+  top: -80px;
 }
 .members__member:nth-child(3) {
-  top: -8rem;
+  top: -80px;
   transition-delay: 0.2s;
 }
 .members__member:nth-child(4) {
-  top: -8rem;
+  top: -80px;
   transition-delay: 0.4s;
 }
 .members__member:nth-child(5) {
-  top: -8rem;
+  top: -80px;
   transition-delay: 0.6s;
 }
 
@@ -727,7 +724,7 @@ button.text-indent {
 }
 
 .members__img {
-  height: 60rem;
+  height: 600px;
 }
 
 .vertical-media__link {
@@ -736,7 +733,7 @@ button.text-indent {
 }
 
 .members__link {
-  height: 31.5rem;
+  height: 315px;
 }
 
 /* members div 반응형 */
@@ -748,7 +745,7 @@ button.text-indent {
   }
 
   .title-h2 {
-    font-size: 6rem;
+    font-size: 60px;
   }
 
   .members__member {
@@ -761,11 +758,11 @@ button.text-indent {
   }
 
   .vertical-media__title {
-    font-size: 2rem;
+    font-size: 20px;
   }
 
   .members__member-title {
-    padding: 1.5rem;
+    padding: 15px;
   }
 
   .members__img {
@@ -779,11 +776,11 @@ button.text-indent {
 
 @media screen and (max-width: 600px) {
   .members__inner {
-    margin: 8rem auto;
+    margin: 80px auto;
   }
 
   .title-h2 {
-    font-size: 3rem;
+    font-size: 30px;
   }
 
   .members__member:nth-child(1),
@@ -792,15 +789,15 @@ button.text-indent {
   }
 
   .vertical-media__title {
-    font-size: 1.4rem;
+    font-size: 14px;
   }
 
   .members__img {
-    height: 30rem;
+    height: 300px;
   }
 
   .members__link {
-    height: 15rem;
+    height: 150px;
   }
 
   .vertical-media__img {
@@ -815,19 +812,19 @@ button.text-indent {
 
 .news__inner {
   position: relative;
-  max-width: 146rem;
+  max-width: 1460px;
   width: 100%;
   margin: 0 auto;
 }
 
 .news__title {
-  padding: 2rem 2rem 2rem 0;
+  padding: 20px 20px 20px 0;
   padding-left: 0;
   text-align: left;
 }
 
 .news__controls {
-  margin: 5rem 0;
+  margin: 50px 0;
 }
 
 .arrow-slider__btn {
@@ -845,16 +842,16 @@ button.text-indent {
 }
 
 .news__slider-btn--before {
-  margin-right: 2rem;
+  margin-right: 20px;
 }
 
 .news__slider-btn--next {
-  margin-left: 2rem;
+  margin-left: 20px;
 }
 
 .arrow-slider__num {
   display: inline-block;
-  font-size: 2rem;
+  font-size: 20px;
   color: white;
 }
 
@@ -862,14 +859,14 @@ button.text-indent {
   position: relative;
   display: inline-block;
   background: white;
-  border-radius: 1rem;
+  border-radius: 10px;
   overflow: hidden;
 }
 
 .news__percentage {
   width: 20%;
-  height: 0.5rem;
-  margin: 0 0.5rem;
+  height: 5px;
+  margin: 0 5px;
   vertical-align: text-top;
 }
 
@@ -885,8 +882,8 @@ button.text-indent {
 
 .arrow-slider__slider {
   position: relative;
-  left: -8rem;
-  width: 216rem;
+  left: -80px;
+  width: 2160px;
   height: 100%;
   overflow: hidden;
   opacity: 0;
@@ -913,9 +910,9 @@ button.text-indent {
 }
 
 .news__li {
-  width: 32rem;
-  height: 35rem;
-  margin: 10rem 2rem;
+  width: 320px;
+  height: 350px;
+  margin: 100px 20px;
 }
 
 .arrow-slider__img {
@@ -943,40 +940,40 @@ button.text-indent {
 
 @media screen and (max-width: 600px) {
   .news__controls {
-    margin: 2rem 0;
+    margin: 20px 0;
   }
 
   .news__slider-btn--before,
   .news__slider-btn--next {
-    width: 2rem;
-    height: 2rem;
+    width: 20px;
+    height: 20px;
     vertical-align: inherit;
   }
 
   .news__slider-btn--before {
-    margin-right: 1rem;
+    margin-right: 10px;
   }
 
   .news__slider-btn--next {
-    margin-left: 1rem;
+    margin-left: 10px;
   }
 
   .arrow-slider__num {
-    font-size: 1.6rem;
+    font-size: 16px;
   }
 }
 
 /*================================= albums =================================*/
 .pink-btn {
-  padding: 0.5rem 1rem;
-  font-size: 1.8rem;
+  padding: 5px 10px;
+  font-size: 18px;
   font-weight: bold;
   font-family: "Exo", "NanumSquare", "Margun Gothic", sans-serif;
-  text-shadow: -0.05rem -0.05rem white, 0.05rem 0.05rem #000000;
-  text-shadow: -0.1rem -0.1rem white, 0.1rem 0.1rem #000000;
+  text-shadow: -0.5px -0.5px white, 0.5px 0.5px #000000;
+  text-shadow: -1px -1px white, 1px 1px #000000;
   color: #f4a5b7;
-  border-radius: 1rem;
-  border: 0.3rem outset #f4a5b7;
+  border-radius: 10px;
+  border: 3px outset #f4a5b7;
   background-color: #000000;
   cursor: pointer;
   transition: 0.3s ease;
@@ -984,8 +981,8 @@ button.text-indent {
 
 .pink-btn:focus {
   border-style: inset;
-  text-shadow: 0.05rem 0.05rem white, -0.05rem -0.05rem #000000;
-  text-shadow: 0.1rem 0.1rem white, -0.1rem -0.1rem #000000;
+  text-shadow: 0.5px 0.5px white, -0.5px -0.5px #000000;
+  text-shadow: 1px 1px white, -1px -1px #000000;
 }
 
 @media screen and (max-width: 600px) {
@@ -997,13 +994,13 @@ button.text-indent {
 .albums {
   position: relative;
   width: 100%;
-  min-height: 80rem;
+  min-height: 800px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
   background-attachment: fixed;
   margin: 0;
-  padding-bottom: 10rem;
+  padding-bottom: 100px;
   background-image: url(../../images/blackpink/crown.jpg);
   background-color: #000000;
 }
@@ -1015,12 +1012,12 @@ button.text-indent {
 }
 
 .albums__inner {
-  max-width: 146rem;
+  max-width: 1460px;
   margin: 0 auto;
 }
 
 .albums__title {
-  padding: 2rem 2rem 2rem 0;
+  padding: 20px 20px 20px 0;
 }
 
 .albums__bg-controls {
@@ -1029,30 +1026,30 @@ button.text-indent {
   left: 0;
   right: 0;
   bottom: 0;
-  max-width: 146rem;
+  max-width: 1460px;
   width: 100%;
   height: fit-content;
   margin: 0 auto;
   box-sizing: border-box;
   text-align: right;
-  padding-top: 5rem;
+  padding-top: 50px;
 }
 
 .albums__btn--stop {
-  width: 2rem;
-  height: 2rem;
+  width: 20px;
+  height: 20px;
   background-image: url(../../images/blackpink/pause-solid.svg);
   background-repeat: no-repeat;
   background-color: transparent;
   border: none;
-  margin-left: 2rem;
+  margin-left: 20px;
   color: #fff;
   cursor: pointer;
 }
 
 .albums__btn--play {
-  width: 2rem;
-  height: 2rem;
+  width: 20px;
+  height: 20px;
   background-image: url(../../images/blackpink/play-solid.svg);
   background-repeat: no-repeat;
   background-color: transparent;
@@ -1063,7 +1060,7 @@ button.text-indent {
 
 .albums__ul {
   width: 100%;
-  margin: 8rem auto 0 auto;
+  margin: 80px auto 0 auto;
   text-align: center;
 }
 
@@ -1079,7 +1076,7 @@ button.text-indent {
 }
 
 .albums__li {
-  margin-right: 5rem;
+  margin-right: 50px;
 }
 
 .switching-li__li {
@@ -1105,14 +1102,14 @@ button.text-indent {
 
 .albums__control-btn {
   display: block;
-  margin: 5rem auto 3rem auto;
+  margin: 50px auto 30px auto;
 }
 
 .switching-li__btn.active,
 .switching-li__btn:focus {
   border-style: inset;
-  text-shadow: 0.05rem 0.05rem white, -0.05rem -0.05rem #000000;
-  text-shadow: 0.1rem 0.1rem white, -0.1rem -0.1rem #000000;
+  text-shadow: 0.5px 0.5px white, -0.5px -0.5px #000000;
+  text-shadow: 1px 1px white, -1px -1px #000000;
 }
 
 .nonactive {
@@ -1123,8 +1120,8 @@ button.text-indent {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  width: 20rem;
-  height: 20rem;
+  width: 200px;
+  height: 200px;
   display: inline-block;
   vertical-align: text-top;
   white-space: nowrap;
@@ -1160,7 +1157,7 @@ button.text-indent {
   }
 
   .albums__li {
-    margin-right: 2rem;
+    margin-right: 20px;
     line-height: 1.618;
   }
 
@@ -1169,31 +1166,31 @@ button.text-indent {
   }
 
   .albums__controls {
-    margin-top: 6rem;
+    margin-top: 60px;
   }
 
   .albums__control-btn {
-    margin-bottom: 2rem;
+    margin-bottom: 20px;
   }
 
   .albums__img-btn {
-    margin-bottom: 2rem;
+    margin-bottom: 20px;
   }
 }
 
 @media screen and (max-width: 600px) {
   .albums__bg-controls {
-    padding-top: 3.5rem;
+    padding-top: 35px;
   }
 
   .albums__btn--stop,
   .albums__btn--play {
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 16px;
+    height: 16px;
   }
 
   .albums__ul {
-    margin-top: 2rem;
+    margin-top: 20px;
   }
 
   .switching-li__li {
@@ -1201,16 +1198,16 @@ button.text-indent {
   }
 
   .albums__li {
-    margin-right: 1rem;
+    margin-right: 10px;
   }
 
   .albums__controls {
-    margin-top: 4rem;
+    margin-top: 40px;
   }
 
   .albums__img-btn {
-    width: 12rem;
-    height: 12rem;
+    width: 120px;
+    height: 120px;
   }
 
   .switching-li__img {
@@ -1233,14 +1230,14 @@ button.text-indent {
 
 .game__inner {
   position: relative;
-  max-width: 146rem;
+  max-width: 1460px;
   width: 100%;
   margin: 0 auto;
-  height: 80rem;
+  height: 800px;
 }
 
 .game__title {
-  padding: 2rem 2rem 2rem 0;
+  padding: 20px 20px 20px 0;
 }
 
 .game__rank-game {
@@ -1271,9 +1268,9 @@ button.text-indent {
 }
 
 .game__unit {
-  width: 10rem;
+  width: 100px;
   height: 100%;
-  margin: 0 1rem;
+  margin: 0 10px;
 }
 
 .rank-game__unit-img {
@@ -1287,8 +1284,8 @@ button.text-indent {
 
 .game__unit-img {
   top: 0;
-  width: 9rem;
-  height: 9rem;
+  width: 90px;
+  height: 90px;
 }
 
 .jennie {
@@ -1309,7 +1306,7 @@ button.text-indent {
   left: 50%;
   bottom: 10%;
   transform: translateX(-50%);
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 
 .rank-game__btn--start {
@@ -1375,21 +1372,21 @@ button.text-indent {
 
 @media screen and (max-width: 600px) {
   .game__inner {
-    height: 60rem;
+    height: 600px;
   }
 
   .game__unit {
-    width: 6rem;
+    width: 60px;
   }
 
   .game__unit-img {
-    width: 7rem;
-    height: 7rem;
+    width: 70px;
+    height: 70px;
     background-position: top;
   }
 
   .game__units:after {
-    height: 0.3rem;
+    height: 3px;
   }
   .game__result {
     width: 60%;
@@ -1403,8 +1400,8 @@ button.text-indent {
 /* 스크롤 이동버튼 */
 .scroll-up {
   position: fixed;
-  width: 5rem;
-  height: 5rem;
+  width: 50px;
+  height: 50px;
   right: 2%;
   bottom: 2%;
 
@@ -1432,8 +1429,8 @@ button.text-indent {
 
 @media screen and (max-width: 600px) {
   .scroll-up {
-    width: 3rem;
-    height: 3rem;
+    width: 30px;
+    height: 30px;
   }
 }
 

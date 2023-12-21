@@ -2,7 +2,7 @@ window.addEventListener("load", () => {
   const html = document.querySelector("html");
   const header = document.querySelector(".header");
   const headerLink = document.querySelectorAll(".header-link"); //헤더클릭시 스크롤이동
-  const scrollElements = document.querySelectorAll(".offtop-element"); //스크롤이동할 엘리먼트 쿼리용 클래스
+  const jsOfftopElement = document.querySelectorAll(".js-offtop-element"); //스크롤이동할 엘리먼트 쿼리용 클래스
   const graph = document.querySelector(".graph"); //그래프클래스제어
   const graphColorLine = document.querySelector(".graph-color-line"); // deco-line > color-line
   const vertexLis = document.querySelectorAll(".graph-vertex-li");
@@ -10,7 +10,7 @@ window.addEventListener("load", () => {
   const portfolio = document.querySelector("#portfolio");
   const gotop = document.querySelector(".gotop");
 
-  let scrollElementsOffsetTops = [];
+  let jsOfftopElementOffsetTops = [];
   let vertexLisOffsetLefts = [];
   let vertexLisIndex = 0;
   //배열에 스크롤 이벤트 트리거가 되는 엘리먼트의 top 값을 저장
@@ -22,7 +22,7 @@ window.addEventListener("load", () => {
     headerLink[i].addEventListener("click", () => {
       //e.preventDefault();
       window.scrollTo({
-        top: scrollElementsOffsetTops[i],
+        top: jsOfftopElementOffsetTops[i],
         left: 0,
       });
     });
@@ -31,7 +31,7 @@ window.addEventListener("load", () => {
       if (e.key === "Enter") {
         e.preventDefault();
         window.scrollTo({
-          top: scrollElementsOffsetTops[i],
+          top: jsOfftopElementOffsetTops[i],
           left: 0,
           behavior: "smooth",
         });
@@ -91,8 +91,8 @@ window.addEventListener("load", () => {
   window.addEventListener(
     "scroll",
     throttle(() => {
-      const skillsTrigger = scrollElementsOffsetTops[1] * 0.4;
-      const portfolioTrigger = scrollElementsOffsetTops[2] * 0.9;
+      const skillsTrigger = jsOfftopElementOffsetTops[1] * 0.4;
+      const portfolioTrigger = jsOfftopElementOffsetTops[2] * 0.9;
 
       if (html.scrollTop > skillsTrigger) skills.classList.add("active");
       else skills.classList.remove("active");
@@ -138,15 +138,15 @@ window.addEventListener("load", () => {
   } //throttle
 
   function saveOffsetTop() {
-    scrollElementsOffsetTops = [];
+    jsOfftopElementOffsetTops = [];
     for (let i = 0; i < headerLink.length; i++) {
-      scrollElementsOffsetTops.push(
-        scrollElements[i].getBoundingClientRect().top +
+      jsOfftopElementOffsetTops.push(
+        jsOfftopElement[i].getBoundingClientRect().top +
           window.pageYOffset -
           header.offsetHeight
       );
     }
-    scrollElementsOffsetTops[headerLink.length - 1] = html.scrollHeight;
+    jsOfftopElementOffsetTops[headerLink.length - 1] = html.scrollHeight;
   } //창 사이즈 변경시 top값 다시저장
 
   function saveOffsetLeft() {
