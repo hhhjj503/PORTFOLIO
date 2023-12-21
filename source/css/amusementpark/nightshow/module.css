@@ -66,16 +66,16 @@
   border-top-right-radius: 10px;
 }
 .title--h4 {
-  font-size: 1.6rem;
+  font-size: 16px;
 }
 @media screen and (max-width: 1281px) {
   .title--h4 {
-    font-size: 1.5rem;
+    font-size: 15px;
   }
 }
 @media screen and (max-width: 600px) {
   .title--h4 {
-    font-size: 1.3rem;
+    font-size: 13px;
     padding: 10px;
     font-weight: normal;
   }
@@ -88,7 +88,7 @@
   color: white;
   box-sizing: border-box;
   padding: 10px 15px;
-  font-size: 1.6rem;
+  font-size: 16px;
   font-weight: bold;
 }
 .label--top-left-right-radius {
@@ -100,12 +100,12 @@
 }
 @media screen and (max-width: 1281px) {
   .label {
-    font-size: 1.5rem;
+    font-size: 15px;
   }
 }
 @media screen and (max-width: 600px) {
   .label {
-    font-size: 1.3rem;
+    font-size: 13px;
     padding: 10px;
     font-weight: normal;
   }
@@ -115,20 +115,20 @@
 .input {
   box-sizing: border-box;
   padding: 15px;
-  font-size: 1.7rem;
+  font-size: 17px;
   border: none;
   box-shadow: 1px 1px 10px rgb(166, 166, 166);
 }
 @media screen and (max-width: 1281px) {
   .input {
     padding: 15px;
-    font-size: 1.7rem;
+    font-size: 17px;
   }
 }
 @media screen and (max-width: 600px) {
   .input {
     padding: 10px;
-    font-size: 1.5rem;
+    font-size: 15px;
   }
 }
 
@@ -142,20 +142,20 @@
 /* ===================== textarea ===================== */
 .textarea {
   resize: none;
-  font-size: 1.8rem;
+  font-size: 18px;
   box-sizing: border-box;
   padding: 10px;
 }
 @media screen and (max-width: 600px) {
   .textarea {
-    font-size: 1.5rem;
+    font-size: 15px;
   }
 }
 
 /* ===================== button ===================== */
 .button {
   padding: 10px 20px;
-  font-size: 1.7rem;
+  font-size: 17px;
   border-radius: 15px;
   border: transparent;
   background-color: #e1e1e1;
@@ -167,7 +167,7 @@
 @media screen and (max-width: 600px) {
   .button {
     padding: 5px 20px;
-    font-size: 1.4rem;
+    font-size: 14px;
   }
 }
 

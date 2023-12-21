@@ -90,7 +90,7 @@
   bottom: 15%;
   padding: 5px 10px;
   transform: translateX(-50%);
-  font-size: 1.4rem;
+  font-size: 14px;
   cursor: pointer;
 }
 @media screen and (max-width: 1281px) {

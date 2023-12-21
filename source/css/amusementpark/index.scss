@@ -93,7 +93,7 @@ body {
     height: 100%;
     color: white;
     text-indent: -9999em;
-    font-size: 1.8rem;
+    font-size: 18px;
     z-index: 2;
 
     &:focus-visible {
@@ -125,7 +125,7 @@ body {
     @media screen and (max-width: 1281px) {
       & {
         top: 50%;
-        font-size: 1.8rem;
+        font-size: 18px;
         line-height: 30px;
         text-align: center;
       }
@@ -135,7 +135,7 @@ body {
       & {
         padding: 5%;
         z-index: 3;
-        font-size: 1.4rem;
+        font-size: 14px;
         line-height: 25px;
       }
     }
@@ -167,7 +167,7 @@ body {
 
     @media screen and (max-width: 1281px) {
       & {
-        font-size: 1.8rem;
+        font-size: 18px;
         line-height: 30px;
       }
     }
@@ -175,7 +175,7 @@ body {
     @media screen and (max-width: 600px) {
       & {
         z-index: 3;
-        font-size: 1.4rem;
+        font-size: 14px;
         line-height: 25px;
       }
     }

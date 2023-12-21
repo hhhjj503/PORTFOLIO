@@ -54,14 +54,14 @@ body {
   height: 50px;
 }
 .main__bar-text {
-  font-size: 1.4rem;
+  font-size: 14px;
   font-weight: bold;
   color: #333333;
   line-height: 50px;
 }
 @media screen and (max-width: 600px) {
   .main__bar-text {
-    font-size: 1.3rem;
+    font-size: 13px;
   }
 }
 .main__bar-text:nth-child(1) {
@@ -149,30 +149,30 @@ body {
   float: right;
 }
 .main .title--h5 {
-  font-size: 1.8rem;
+  font-size: 18px;
 }
 @media screen and (max-width: 1281px) {
   .main .title--h5 {
-    font-size: 1.6rem;
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 600px) {
   .main .title--h5 {
-    font-size: 1.6rem;
+    font-size: 16px;
   }
 }
 .main .title--h6 {
   display: block;
-  font-size: 1.8rem;
+  font-size: 18px;
 }
 @media screen and (max-width: 1281px) {
   .main .title--h6 {
-    font-size: 1.6rem;
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 600px) {
   .main .title--h6 {
-    font-size: 1.4rem;
+    font-size: 14px;
   }
 }
 .main .palette__li {
@@ -228,28 +228,28 @@ body {
 }
 .main .product__per-price {
   display: block;
-  font-size: 2.2rem;
+  font-size: 22px;
   font-weight: bold;
 }
 @media screen and (max-width: 1281px) {
   .main .product__per-price {
-    font-size: 1.9rem;
+    font-size: 19px;
     font-weight: bold;
   }
 }
 @media screen and (max-width: 600px) {
   .main .product__per-price {
-    font-size: 1.8rem;
+    font-size: 18px;
     font-weight: bold;
   }
 }
 .main .product__color {
   border-bottom: 1px solid #dddfe1;
-  font-size: 1.8rem;
+  font-size: 18px;
 }
 .main .product__quantity {
   border-bottom: 1px solid #dddfe1;
-  font-size: 1.8rem;
+  font-size: 18px;
 }
 @media screen and (max-width: 600px) {
   .main .product__quantity {
@@ -263,12 +263,12 @@ body {
 }
 @media screen and (max-width: 1281px) {
   .main .product .quantity__count {
-    font-size: 1.8rem;
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 600px) {
   .main .product .quantity__count {
-    font-size: 1.6rem;
+    font-size: 16px;
     margin: 0 5px;
   }
 }
@@ -279,7 +279,7 @@ body {
   height: 25px;
   padding: 0;
   line-height: 25px;
-  font-size: 1.8rem;
+  font-size: 18px;
   line-height: 25px;
   cursor: pointer;
   border: 1px solid #6b6b6b;
@@ -289,7 +289,7 @@ body {
   .main .product .quantity__control-btn {
     width: 20px;
     height: 20px;
-    font-size: 1.9rem;
+    font-size: 19px;
     line-height: 20px;
   }
 }
@@ -297,7 +297,7 @@ body {
   .main .product .quantity__control-btn {
     width: 20px;
     height: 20px;
-    font-size: 1.9rem;
+    font-size: 19px;
     line-height: 20px;
   }
 }
@@ -314,17 +314,17 @@ body {
 .main .product__total-price {
   color: red;
   font-weight: bold;
-  font-size: 2.3rem;
+  font-size: 23px;
   text-align: right;
 }
 @media screen and (max-width: 1281px) {
   .main .product__total-price {
-    font-size: 1.9rem;
+    font-size: 19px;
   }
 }
 @media screen and (max-width: 600px) {
   .main .product__total-price {
-    font-size: 1.9rem;
+    font-size: 19px;
   }
 }
 .main .product__purchase-btn {
@@ -335,7 +335,7 @@ body {
   margin: 50px auto 0 auto;
   box-sizing: border-box;
   cursor: pointer;
-  font-size: 1.8rem;
+  font-size: 18px;
   border: none;
   color: white;
   background-color: #000;
@@ -346,7 +346,7 @@ body {
     width: 60%;
     padding: 10px 10px;
     margin: 30px auto 30px auto;
-    font-size: 1.7rem;
+    font-size: 17px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -354,7 +354,7 @@ body {
     width: 80%;
     padding: 10px 10px;
     margin: 30px auto 30px auto;
-    font-size: 1.7rem;
+    font-size: 17px;
   }
 }
 .main .product__bag {
@@ -388,7 +388,7 @@ body {
   position: absolute;
   background-color: white;
   bottom: 70px;
-  font-size: 1.5rem;
+  font-size: 15px;
   line-height: 20px;
   word-break: keep-all;
   padding: 10px;
@@ -445,20 +445,20 @@ body {
   padding: 10px;
   box-sizing: border-box;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 15px;
 }
 @media screen and (max-width: 1281px) {
   .main .row-table td,
   .main .row-table th {
     padding: 5px 10px;
-    font-size: 1.4rem;
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 600px) {
   .main .row-table td,
   .main .row-table th {
     padding: 10px 5px;
-    font-size: 1.4rem;
+    font-size: 14px;
   }
 }
 .main .row-table th {
@@ -520,7 +520,7 @@ body {
 .pager__link {
   width: 100%;
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 14px;
   margin: 0 5px;
   padding: 3px 8px;
   color: black;
@@ -533,13 +533,13 @@ body {
 @media screen and (max-width: 1281px) {
   .pager__link {
     padding: 3px 8px;
-    font-size: 1.6rem;
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 600px) {
   .pager__link {
     padding: 2px 6px;
-    font-size: 1.4rem;
+    font-size: 14px;
   }
 }
 

@@ -164,18 +164,18 @@ body {
   }
 }
 .main__title {
-  font-size: 3rem;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 20px;
 }
 @media screen and (max-width: 1281px) {
   .main__title {
-    font-size: 2.5rem;
+    font-size: 25px;
   }
 }
 @media screen and (max-width: 600px) {
   .main__title {
-    font-size: 2rem;
+    font-size: 20px;
   }
 }
 .main__deco-text {
@@ -185,7 +185,7 @@ body {
   background-color: white;
   text-align: center;
   color: #040247;
-  font-size: 6rem;
+  font-size: 60px;
   font-weight: bold;
 }
 .main__deco-text.left {
@@ -195,7 +195,7 @@ body {
 @media screen and (max-width: 1281px) {
   .main__deco-text {
     bottom: 50px;
-    font-size: 4rem;
+    font-size: 40px;
     right: 10%;
   }
   .main__deco-text.left {
@@ -205,13 +205,13 @@ body {
 }
 @media screen and (max-width: 768px) {
   .main__deco-text {
-    font-size: 3rem;
+    font-size: 30px;
     bottom: 10px;
   }
 }
 @media screen and (max-width: 600px) {
   .main__deco-text {
-    font-size: 2rem;
+    font-size: 20px;
     bottom: 20px;
   }
 }
