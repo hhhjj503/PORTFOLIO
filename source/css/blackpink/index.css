@@ -1,12 +1,15 @@
 @charset "UTF-8";
 @import url(../reset.css);
+
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
 html {
   font-size: 62.5%; /*  setting rem (1rem = 10px)  */
 }
 
 body {
   font-family: "Nanum Gothic", "돋움", "Dotum", "Apple Gothic", sans-serif;
-  font-family: "Open Sans", "Pretendard", sans-serif;
   overflow-x: hidden;
   background-color: #f4a5b7;
 }
@@ -531,8 +534,10 @@ button.text-indent {
 }
 
 .intro__title {
+  font-family: "Roboto", sans-serif;
   font-size: 30px;
-  font-weight: bolder;
+  font-weight: 900;
+  letter-spacing: 1.5px;
   text-align: center;
 }
 
@@ -607,6 +612,14 @@ button.text-indent {
     margin-bottom: 0;
   }
 
+  .intro__title {
+    font-size: 26px;
+  }
+
+  .lang-selector__btn {
+    font-size: 16px;
+  }
+
   .intro__lang-p {
     width: 90%;
     font-size: 17px;
@@ -636,8 +649,12 @@ button.text-indent {
     font-size: 22px;
   }
 
+  .intro__title {
+    font-size: 22px;
+  }
+
   .lang-selector__btn {
-    font-size: 16px;
+    font-size: 14px;
     padding: 5px 8px;
   }
 

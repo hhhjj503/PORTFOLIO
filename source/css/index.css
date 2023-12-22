@@ -1,13 +1,21 @@
 @charset "UTF-8";
 @import url(./reset.css);
 
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200;300;400;500&family=Roboto:wght@400;500&display=swap");
+
 /*================================ base ================================*/
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  font-family: sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 a {
@@ -525,6 +533,7 @@ a {
 
 .inline-radius-li {
   display: inline;
+  font-family: "Roboto", sans-serif;
   padding: 3px 10px;
   box-sizing: border-box;
   text-align: center;
