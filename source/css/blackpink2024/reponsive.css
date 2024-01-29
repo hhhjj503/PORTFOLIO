@@ -1,0 +1,325 @@
+@media screen and (max-width: 768px) {
+  .banner-imgs-slider li {
+    height: 350px;
+  }
+
+  .banner-imgs-slider li .desktop-banner {
+    display: none;
+  }
+
+  .banner-imgs-slider li .mobile-banner {
+    display: block;
+    height: 100%;
+  }
+  .banner-controller .previous-btn {
+    left: 20px;
+  }
+
+  .banner-controller .next-btn {
+    right: 20px;
+  }
+
+  .member-slider-wrap {
+    padding: 0 60px;
+  }
+
+  .member-info-controller .btn {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+  }
+
+  .member-info-controller img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .member-info-controller .previous-btn {
+    left: 20px;
+  }
+  .member-info-controller .next-btn {
+    right: 20px;
+  }
+
+  .info {
+    width: 100%;
+    padding: 0 60px;
+    box-sizing: border-box;
+    word-break: break-all;
+  }
+
+  .gallery ul {
+    padding: 0 60px;
+    box-sizing: border-box;
+  }
+
+  .gallery-controller .previous-btn {
+    left: 20px;
+  }
+
+  .gallery-controller .next-btn {
+    right: 20px;
+  }
+
+  .event {
+    padding: 50px 20px;
+  }
+
+  .event-title {
+    font-size: 34px;
+  }
+
+  .mv .mv-slider-wrap {
+    padding: 0 60px;
+    box-sizing: border-box;
+  }
+
+  .mv .mv-slider-wrap li {
+    text-align: -webkit-center;
+  }
+
+  .mv-link {
+    width: 380px;
+  }
+
+  .mv-img {
+    height: 100%;
+  }
+
+  .mv-slider-controller .previous-btn {
+    display: block;
+    left: 20px;
+  }
+  .mv-slider-controller .next-btn {
+    display: block;
+    right: 20px;
+  }
+
+  .album {
+    padding: 50px 80px;
+  }
+
+  .album .container {
+    display: initial;
+  }
+
+  .album-list {
+    margin: 0 auto;
+  }
+
+  .album-list li {
+    width: 170px;
+    height: 170px;
+  }
+
+  .album-list li:nth-child(-n + 6) {
+    margin-bottom: 35px;
+  }
+
+  .album-list img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .wrapper {
+    width: 45%;
+    height: 350px;
+    display: inline-block;
+    margin-right: 12px;
+  }
+
+  .texts {
+    display: inline-block;
+    width: 45%;
+    height: 390px;
+    vertical-align: top;
+    margin-left: 12px;
+  }
+
+  .media {
+    padding: 50px 0;
+  }
+
+  .media .container {
+    height: 500px;
+  }
+
+  .footer-title {
+    font-size: 34px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .banner {
+    height: 200px;
+  }
+
+  .banner-controller .previous-btn {
+    width: 30px;
+    height: 30px;
+    left: 15px;
+  }
+
+  .banner-controller .next-btn {
+    width: 30px;
+    height: 30px;
+    right: 15px;
+  }
+
+  .banner-imgs-slider li {
+    height: 200px;
+  }
+  .banner-imgs-slider li .mobile-banner {
+    width: 100%;
+  }
+
+  .banner-imgs-slider-pagenation {
+    padding: 5px;
+  }
+
+  .banner-imgs-slider-pagenation span {
+    width: 10px;
+    height: 10px;
+    border-width: 2px;
+    vertical-align: middle;
+  }
+
+  .member-slider-wrap {
+    padding: 0 70px;
+  }
+
+  .member-info-controller .btn {
+    width: 20px;
+    height: 20px;
+  }
+
+  .member-info-controller .previous-btn {
+    left: 15px;
+  }
+  .member-info-controller .next-btn {
+    right: 15px;
+  }
+
+  .member-name {
+    font-size: 18px;
+  }
+
+  .info {
+    padding: 0 15px;
+  }
+
+  .info p {
+    font-size: 14px;
+  }
+
+  .gallery-controller .previous-btn {
+    width: 25px;
+    height: 25px;
+    left: 15px;
+  }
+
+  .gallery-controller .next-btn {
+    width: 25px;
+    height: 25px;
+    right: 15px;
+  }
+
+  .gallery {
+    padding: 50px 15px;
+  }
+
+  .gallery ul {
+    padding: 0;
+  }
+
+  .gallery-slider-wrap li {
+    width: 100% !important;
+  }
+
+  .controller .btn img {
+    width: 60%;
+    height: 60%;
+  }
+
+  .event {
+    padding: 50px 0;
+  }
+
+  .event-title {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .mv .mv-slider-wrap {
+    padding: 0 15px;
+  }
+
+  .mv-link {
+    width: 280px;
+    height: 200px;
+  }
+
+  .mv-slider-controller .previous-btn {
+    width: 25px;
+    height: 25px;
+    left: 15px;
+  }
+
+  .mv-slider-controller .next-btn {
+    width: 25px;
+    height: 25px;
+    right: 15px;
+  }
+
+  .album {
+    padding: 50px 15px;
+    text-align: center;
+  }
+
+  .album-list {
+    width: 100%;
+  }
+
+  .album-list li {
+    width: 100px;
+    height: 100px;
+  }
+
+  .album-list li:nth-child(-n + 6) {
+    margin-bottom: 15px;
+  }
+
+  .wrapper {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+
+  .wrapper img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .texts {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .texts p {
+    font-size: 12px;
+  }
+
+  .media {
+    padding: 50px 0 30px 0;
+  }
+
+  .media .container {
+    height: 200px;
+  }
+
+  .footer-title {
+    font-size: 14px;
+  }
+}
