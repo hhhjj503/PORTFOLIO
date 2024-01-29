@@ -191,8 +191,8 @@
   }
 
   .member-info-controller .btn {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
   }
 
   .member-info-controller .previous-btn {
@@ -215,14 +215,14 @@
   }
 
   .gallery-controller .previous-btn {
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     left: 15px;
   }
 
   .gallery-controller .next-btn {
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     right: 15px;
   }
 
@@ -262,14 +262,14 @@
   }
 
   .mv-slider-controller .previous-btn {
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     left: 15px;
   }
 
   .mv-slider-controller .next-btn {
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     right: 15px;
   }
 
@@ -316,7 +316,7 @@
   }
 
   .media .container {
-    height: 200px;
+    height: 300px;
   }
 
   .footer-title {
