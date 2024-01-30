@@ -30,82 +30,88 @@
     <title>BLACKPINK</title>
   </head>
   <body>
+    <div class="skip">
+      <a class="skip-link" href="#main"> 메인 바로가기 </a>
+    </div>
+
     <header class="header">
       <div class="container">
-        <h1 class="title">
-          <span class="float-left">BLACKPINK</span
-          ><span class="float-right">IN YOUR AREA</span>
-        </h1>
+        <a href="#">
+          <h1 class="title">
+            <span class="float-left">BLACKPINK</span
+            ><span class="float-right">IN YOUR AREA</span>
+          </h1>
+        </a>
       </div>
     </header>
 
     <main>
       <div class="banner">
-        <div class="">
-          <div class="banner-imgs-slider swiper">
-            <ul class="swiper-wrapper">
-              <li class="swiper-slide">
-                <img
-                  class="desktop-banner"
-                  src="../../../source/images/blackpink2024/Banner Slide_temp01.jpg"
-                  alt="BLACKPINK LIVESTREAM CONCERT:THE SHOW 2021.1.31 SUN 2PM(KST)"
-                />
-                <img
-                  class="mobile-banner"
-                  src="../../../source/images/blackpink2024/banner_image01.jpg"
-                  alt="BLACKPINK LIVESTREAM CONCERT:THE SHOW 2021.1.31 SUN 2PM(KST)"
-                />
-              </li>
-              <li class="swiper-slide">
-                <img
-                  class="desktop-banner"
-                  src="../../../source/images/blackpink2024/Banner Slide_temp02.jpg"
-                  alt="BLACKPINK LIVESTREAM CONCERT:THE SHOW 2021.1.31 SUN 2PM(KST)"
-                />
-                <img
-                  class="mobile-banner"
-                  src="../../../source/images/blackpink2024/banner_image02.jpg"
-                  alt="BLACKPINK LIVESTREAM CONCERT:THE SHOW 2021.1.31 SUN 2PM(KST)"
-                />
-              </li>
-              <li class="swiper-slide">
-                <img
-                  class="desktop-banner"
-                  src="../../../source/images/blackpink2024/Banner Slide_temp03.jpg"
-                  alt="BLACKPINK LIVESTREAM CONCERT:THE SHOW 2021.1.31 SUN 2PM(KST)"
-                />
-                <img
-                  class="mobile-banner"
-                  src="../../../source/images/blackpink2024/banner_img03.jpg"
-                  alt="BLACKPINK LIVESTREAM CONCERT:THE SHOW 2021.1.31 SUN 2PM(KST)"
-                />
-              </li>
-            </ul>
-          </div>
-          <div class="banner-imgs-slider-pagenation swiper-pagination">
-            <span class="banner-index active">1</span>
-            <span class="banner-index">2</span>
-            <span class="banner-index">3</span>
-          </div>
-          <div class="banner-controller controller">
-            <button class="previous-btn btn">
+        <div class="banner-imgs-slider swiper">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
               <img
-                src="../../../source/images/blackpink2024/chevron-left-solid.svg"
-                alt="왼쪽 화살표"
+                class="desktop-banner"
+                src="../../../source/images/blackpink2024/Banner Slide_temp01.jpg"
+                alt="BLACKPINK LIVESTREAM CONCERT:THE SHOW 2021.1.31 SUN 2PM(KST)"
               />
-            </button>
-            <button class="next-btn btn">
               <img
-                src="../../../source/images/blackpink2024/chevron-right-solid.svg"
-                alt="오른족 화살표"
+                class="mobile-banner"
+                src="../../../source/images/blackpink2024/banner_image01.jpg"
+                alt="BLACKPINK LIVESTREAM CONCERT:THE SHOW 2021.1.31 SUN 2PM(KST)"
               />
-            </button>
-          </div>
+            </li>
+            <li class="swiper-slide">
+              <img
+                class="desktop-banner"
+                src="../../../source/images/blackpink2024/Banner Slide_temp02.jpg"
+                alt="BLACKPINK LIVESTREAM CONCERT:THE SHOW 2021.1.31 SUN 2PM(KST)"
+              />
+              <img
+                class="mobile-banner"
+                src="../../../source/images/blackpink2024/banner_image02.jpg"
+                alt="BLACKPINK LIVESTREAM CONCERT:THE SHOW 2021.1.31 SUN 2PM(KST)"
+              />
+            </li>
+            <li class="swiper-slide">
+              <img
+                class="desktop-banner"
+                src="../../../source/images/blackpink2024/Banner Slide_temp03.jpg"
+                alt="BLACKPINK LIVESTREAM CONCERT:THE SHOW 2021.1.31 SUN 2PM(KST)"
+              />
+              <img
+                class="mobile-banner"
+                src="../../../source/images/blackpink2024/banner_img03.jpg"
+                alt="BLACKPINK LIVESTREAM CONCERT:THE SHOW 2021.1.31 SUN 2PM(KST)"
+              />
+            </li>
+          </ul>
+        </div>
+
+        <div id="mainContents" class="banner-controller controller">
+          <button class="previous-btn btn">
+            <img
+              src="../../../source/images/blackpink2024/chevron-left-solid.svg"
+              alt="왼쪽 화살표"
+            />
+          </button>
+          <button class="next-btn btn">
+            <img
+              src="../../../source/images/blackpink2024/chevron-right-solid.svg"
+              alt="오른족 화살표"
+            />
+          </button>
+        </div>
+
+        <div class="banner-imgs-slider-pagenation swiper-pagination">
+          <span class="banner-index active">1</span>
+          <span class="banner-index">2</span>
+          <span class="banner-index">3</span>
         </div>
       </div>
       <!-- //banner -->
 
-      <div class="member">
+      <div id="main" class="member">
         <div class="container">
           <div class="member-slider-wrap">
             <div class="swiper">
@@ -193,14 +199,14 @@
           </div>
 
           <div class="info">
-            <p>
+            <p tabindex="0">
               <span class="color-pink font-bold">BLACKPINK</span>(블랙핑크)는
               2016년 8월 8일에 데뷔한 대한민국의 YG 엔터테인먼트 소속 4인조
               다국적 걸 그룹이다. YG 엔터테인먼트 소속 아티스트들 중 처음으로
               리더가 없는 그룹으로, 구성원 네 명이 친구처럼 지낸다. 팬 클럽
               이름은 블링크이다.
             </p>
-            <p>
+            <p tabindex="0">
               8월 8일 오후 3시, 블랙핑크는 강남구 도산대로 모스 스튜디오에서
               데뷔 기념 쇼케이스를 열고 싱글 앨범 'SQUARE ONE'과 수록곡인
               '붐바야'와 '휘파람'의 뮤직비디오를 대중에 공개하여 대중의 인기를
@@ -208,7 +214,7 @@
               신곡 '휘파람'이 대한민국 내 전 음원 순위에서 1위를 하는 저력을
               발휘하였으며, 8월 14일 SBS 인기가요를 통하여 방송에 데뷔했다.
             </p>
-            <p>
+            <p tabindex="0">
               타이틀 곡 '휘파람'으로 8월 21일 SBS 인기가요에서 데뷔 2주 만에
               1위를 차지해 미쓰에이의 "Bad Girl, Good Girl"이 기록한 걸그룹 역대
               데뷔 최단기간 1위 기록을 갈아 치웠다.[3] 이후 '휘파람'은 2016년
@@ -224,45 +230,53 @@
 
       <div class="gallery">
         <div class="container">
-          <div class="gallery-slider-wrap swiper">
-            <ul class="swiper-wrapper">
-              <li class="swiper-slide">
-                <img
-                  src="../../../source/images/blackpink2024/slide_image01.jpg"
-                  alt="블랙핑크 단체사진"
-                />
-              </li>
-              <li class="swiper-slide">
-                <img
-                  src="../../../source/images/blackpink2024/slide_image02.jpg"
-                  alt="블랙핑크 단체사진"
-                />
-              </li>
-              <li class="swiper-slide">
-                <img
-                  src="../../../source/images/blackpink2024/slide_image03.jpg"
-                  alt="블랙핑크 단체사진"
-                />
-              </li>
-              <li class="swiper-slide">
-                <img
-                  src="../../../source/images/blackpink2024/slide_image01.jpg"
-                  alt="블랙핑크 단체사진"
-                />
-              </li>
-              <li class="swiper-slide">
-                <img
-                  src="../../../source/images/blackpink2024/slide_image02.jpg"
-                  alt="블랙핑크 단체사진"
-                />
-              </li>
-              <li class="swiper-slide">
-                <img
-                  src="../../../source/images/blackpink2024/slide_image03.jpg"
-                  alt="블랙핑크 단체사진"
-                />
-              </li>
-            </ul>
+          <div class="gallery-slider-wrap">
+            <div class="swiper">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <img
+                    class="gallery-img"
+                    src="../../../source/images/blackpink2024/slide_image01.jpg"
+                    alt="블랙핑크 단체사진"
+                  />
+                </li>
+                <li class="swiper-slide">
+                  <img
+                    class="gallery-img"
+                    src="../../../source/images/blackpink2024/slide_image02.jpg"
+                    alt="블랙핑크 단체사진"
+                  />
+                </li>
+                <li class="swiper-slide">
+                  <img
+                    class="gallery-img"
+                    src="../../../source/images/blackpink2024/slide_image03.jpg"
+                    alt="블랙핑크 단체사진"
+                  />
+                </li>
+                <li class="swiper-slide">
+                  <img
+                    class="gallery-img"
+                    src="../../../source/images/blackpink2024/slide_image01.jpg"
+                    alt="블랙핑크 단체사진"
+                  />
+                </li>
+                <li class="swiper-slide">
+                  <img
+                    class="gallery-img"
+                    src="../../../source/images/blackpink2024/slide_image02.jpg"
+                    alt="블랙핑크 단체사진"
+                  />
+                </li>
+                <li class="swiper-slide">
+                  <img
+                    class="gallery-img"
+                    src="../../../source/images/blackpink2024/slide_image03.jpg"
+                    alt="블랙핑크 단체사진"
+                  />
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="gallery-controller controller">
@@ -445,6 +459,16 @@
             muted
           ></video>
         </div>
+      </div>
+
+      <div class="up">
+        <a href="#" class="up-link">
+          <img
+            class="up-link-img"
+            src="../../../source/images/blackpink2024/chevron-up.svg"
+            alt="위쪽 화살표"
+          />
+        </a>
       </div>
     </main>
     <footer class="footer">

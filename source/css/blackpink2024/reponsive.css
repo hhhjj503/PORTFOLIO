@@ -1,3 +1,19 @@
+@media screen and (max-width: 1200px) {
+  .mv-slider-controller .previous-btn {
+    display: block;
+    left: 20px;
+  }
+  .mv-slider-controller .next-btn {
+    display: block;
+    right: 20px;
+  }
+
+  .mv .mv-slider-wrap {
+    padding: 0 80px;
+    box-sizing: border-box;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .banner-imgs-slider li .desktop-banner {
     display: none;
@@ -45,7 +61,7 @@
     word-break: break-all;
   }
 
-  .gallery ul {
+  .gallery-slider-wrap {
     padding: 0 60px;
     box-sizing: border-box;
   }
@@ -64,32 +80,6 @@
 
   .event-title {
     font-size: 34px;
-  }
-
-  .mv .mv-slider-wrap {
-    padding: 0 60px;
-    box-sizing: border-box;
-  }
-
-  .mv .mv-slider-wrap li {
-    text-align: -webkit-center;
-  }
-
-  .mv-link {
-    width: 380px;
-  }
-
-  .mv-img {
-    height: 100%;
-  }
-
-  .mv-slider-controller .previous-btn {
-    display: block;
-    left: 20px;
-  }
-  .mv-slider-controller .next-btn {
-    display: block;
-    right: 20px;
   }
 
   .album {
@@ -145,6 +135,13 @@
 
   .media .container {
     height: 500px;
+  }
+
+  .up-link {
+    right: 12px;
+    bottom: 12px;
+    width: 40px;
+    height: 40px;
   }
 
   .footer-title {
@@ -224,9 +221,6 @@
     padding: 0;
   }
 
-  .gallery-slider-wrap li {
-  }
-
   .controller .btn img {
     width: 60%;
     height: 60%;
@@ -242,12 +236,7 @@
   }
 
   .mv .mv-slider-wrap {
-    padding: 0 15px;
-  }
-
-  .mv-link {
-    width: 280px;
-    height: 200px;
+    padding: 0 65px;
   }
 
   .mv-slider-controller .previous-btn {
@@ -313,6 +302,14 @@
 
   .media .container {
     height: 300px;
+  }
+
+  .up-link {
+    right: 8px;
+    bottom: 8px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
   }
 
   .footer-title {

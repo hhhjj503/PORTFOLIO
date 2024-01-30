@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
 
       551: {
-        slidesPerView: 1,
+        slidesPerView: 2,
         spaceBetween: 20,
       },
 
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-  const gallerySlider = new Swiper(".gallery-slider-wrap", {
+  const gallerySlider = new Swiper(".gallery-slider-wrap .swiper", {
     // Optional parameters
     direction: "horizontal",
     loop: true,
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
 
       481: {
-        slidesPerView: 1.77,
+        slidesPerView: 2,
         spaceBetween: 30,
       },
 
@@ -101,12 +101,30 @@ document.addEventListener("DOMContentLoaded", () => {
       },
 
       480: {
-        slidesPerView: 1,
+        slidesPerView: 2,
+        spaceBetween: 20,
       },
 
       769: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1201: {
         slidesPerView: 4,
+        spaceBetween: 30,
       },
     },
+  });
+
+  //scroll-up
+  const scrollUpLink = document.querySelector(".up-link");
+  const html = document.querySelector("html");
+
+  scrollUpLink.addEventListener("click", function () {
+    html.scrollTop = 0;
+  });
+  window.addEventListener("scroll", () => {
+    if (html.scrollTop > 1) scrollUpLink.classList.add("active");
+    else scrollUpLink.classList.remove("active");
   });
 });
