@@ -93,7 +93,7 @@
   }
 
   .album {
-    padding: 50px 80px;
+    padding: 50px 20px;
   }
 
   .album .container {
@@ -101,12 +101,13 @@
   }
 
   .album-list {
+    width: initial;
     margin: 0 auto;
   }
 
   .album-list li {
-    width: 170px;
-    height: 170px;
+    width: 30%;
+    height: fit-content;
   }
 
   .album-list li:nth-child(-n + 6) {
@@ -148,7 +149,7 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 550px) {
   .banner-controller .previous-btn {
     width: 30px;
     height: 30px;
@@ -203,13 +204,11 @@
   .gallery-controller .previous-btn {
     width: 35px;
     height: 35px;
-    left: 0;
   }
 
   .gallery-controller .next-btn {
     width: 35px;
     height: 35px;
-    right: 0;
   }
 
   .gallery {
@@ -221,7 +220,6 @@
   }
 
   .gallery-slider-wrap li {
-    width: 100% !important;
   }
 
   .controller .btn img {
@@ -269,8 +267,8 @@
   }
 
   .album-list li {
-    width: 100px;
-    height: 100px;
+    width: 30%;
+    height: fit-content;
   }
 
   .album-list li:nth-child(-n + 6) {
@@ -278,7 +276,8 @@
   }
 
   .wrapper {
-    width: 80%;
+    width: 60%;
+    height: fit-content;
     margin: 0 auto;
     margin-bottom: 15px;
   }
@@ -289,7 +288,7 @@
   }
 
   .texts {
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
   }
 
