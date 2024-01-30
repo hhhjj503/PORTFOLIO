@@ -116,6 +116,18 @@ html {
   background-color: #f4a5ba !important;
 }
 
+.banner-controller {
+  position: absolute;
+  max-width: 1460px;
+  box-sizing: border-box;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  right: 0;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+}
+
 .banner-controller .btn {
   width: 60px;
   height: 60px;
@@ -134,14 +146,16 @@ html {
 .banner-controller .previous-btn {
   position: absolute;
   top: 50%;
-  left: calc(50% - 690px);
+  left: 20px;
+
   transform: translateY(-50%);
 }
 
 .banner-controller .next-btn {
   position: absolute;
   top: 50%;
-  right: calc(50% - 690px);
+  right: 20px;
+
   transform: translateY(-50%);
 }
 
@@ -213,6 +227,7 @@ html {
 
 /*----------------------- gallery -----------------------*/
 .gallery {
+  position: relative;
   padding: 50px 0;
   background-color: #f4a5ba;
 }
@@ -225,10 +240,22 @@ html {
   position: relative;
 }
 
+.gallery-controller {
+  position: absolute;
+  max-width: 1380px;
+  box-sizing: border-box;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  right: 0;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+}
+
 .gallery-controller .previous-btn {
   position: absolute;
   top: 50%;
-  left: -60px;
+  left: 20px;
   transform: translateY(-50%);
 }
 
@@ -236,7 +263,7 @@ html {
   display: block !important;
   position: absolute;
   top: 50%;
-  right: -60px;
+  right: 20px;
   transform: translateY(-50%);
 }
 
