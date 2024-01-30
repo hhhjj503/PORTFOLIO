@@ -129,9 +129,14 @@
   .texts {
     display: inline-block;
     width: 45%;
-    height: 390px;
+    height: fit-content;
+    border-width: 15px;
     vertical-align: top;
     margin-left: 12px;
+  }
+
+  .texts .inner {
+    padding: 15px;
   }
 
   .media {
@@ -290,10 +295,16 @@
   .texts {
     width: 60%;
     margin: 0 auto;
+    border-width: 10px;
+  }
+
+  .texts .inner {
+    padding: 10px;
   }
 
   .texts p {
     font-size: 12px;
+    overflow-wrap: anywhere;
   }
 
   .media {
