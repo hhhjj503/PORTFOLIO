@@ -77,13 +77,26 @@ html {
 .banner {
   position: relative;
   background-color: #000;
-  text-align: center;
+  text-align: -webkit-center;
+}
+
+.banner-imgs-slider {
+  max-width: 1920px;
+  width: 100%;
 }
 
 .banner-imgs-slider li {
   width: 100%;
-  margin: 0 auto;
-  height: 550px;
+  max-height: fit-content;
+}
+
+.banner-imgs-slider img {
+  width: 100%;
+}
+
+.banner-imgs-slider .desktop-banner {
+  display: block;
+  height: 100%;
 }
 
 .mobile-banner {
