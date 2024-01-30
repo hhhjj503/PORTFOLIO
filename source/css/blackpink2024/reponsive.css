@@ -217,13 +217,13 @@
   .gallery-controller .previous-btn {
     width: 35px;
     height: 35px;
-    left: 15px;
+    left: 0;
   }
 
   .gallery-controller .next-btn {
     width: 35px;
     height: 35px;
-    right: 15px;
+    right: 0;
   }
 
   .gallery {
