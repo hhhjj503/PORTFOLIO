@@ -1,0 +1,479 @@
+@charset "UTF-8";
+@import url(../../reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.skip-link {
+  position: absolute;
+  display: block;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  background-color: #fff;
+  box-sizing: border-box;
+  z-index: 12;
+}
+
+.skip-link:focus {
+  top: 0;
+  border: 2px solid #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+label {
+  display: none;
+}
+
+.red {
+  color: red;
+}
+
+.upper-round {
+  position: relative;
+}
+
+.upper-round:after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: orange;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.orange {
+  color: orange;
+}
+
+/* ------------------- header  -------------------*/
+.header {
+  width: 100%;
+  position: absolute;
+  background-color: transparent;
+  height: 60px;
+  line-height: 60px;
+  z-index: 10;
+}
+
+.header-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-link {
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.chevron-left-img,
+.chevron-right-img {
+  display: block;
+  width: 70%;
+  height: 70%;
+  margin: 0 auto;
+}
+
+/* ------------------- banner  -------------------*/
+.banner {
+  position: relative;
+}
+
+.banner-list {
+  display: flex;
+}
+
+.banner-img {
+  width: 100%;
+}
+
+.banner-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 52px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.banner-indexes {
+  position: absolute;
+  width: fit-content !important;
+  left: 50%;
+  right: 0;
+  bottom: 20px !important;
+  margin: 0 auto;
+  transform: translateY(-50%);
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  z-index: 10;
+}
+
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  box-sizing: border-box;
+  border: 6px solid #fff;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+
+.banner-controls-btn-left {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #fff;
+  transition: 0.3s ease-in-out;
+  opacity: 0.5;
+  z-index: 10;
+}
+
+.banner-controls-btn-right {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #fff;
+  transition: 0.3s ease-in-out;
+  opacity: 0.5;
+  z-index: 10;
+}
+
+.banner-controls-btn-left:hover,
+.banner-controls-btn-right:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.banner-controls-btn-left:focus,
+.banner-controls-btn-right:focus {
+  border: 5px solid #fff;
+  opacity: 1;
+}
+
+/* ------------------- gallery  -------------------*/
+
+.gallery {
+  position: relative;
+  padding: 140px 0;
+  overflow: hidden;
+}
+
+.gallery-swiper-container {
+  width: 1500px;
+}
+
+.gallery-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.gallery-controls {
+  max-width: 1400px;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  right: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.gallery-controls-btn-left {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.gallery-controls-btn-right {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* ------------------- festival-gallery  -------------------*/
+.festival-gallery {
+  position: relative;
+  padding: 340px 0;
+  background: url(../../../images/amusementpark/nightshow/2024_gallery_bg.jpg)
+    no-repeat;
+  background-size: cover;
+  z-index: 4;
+}
+
+.festival-gallery-title {
+  width: 100%;
+  font-size: 50px;
+  line-height: 1.618;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 140px;
+}
+
+.festival-img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #000;
+}
+
+.festival-swiper-container {
+  position: relative;
+}
+
+.festival-gallery-controls {
+  max-width: 1400px;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  right: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.festival-gallery-controls-btn-left {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.festival-gallery-controls-btn-right {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* ------------------- wish  -------------------*/
+.wish {
+  position: relative;
+  background: url(../../../images/amusementpark/nightshow/20204_wish_bg.jpg)
+    no-repeat;
+  background-size: cover;
+  padding: 370px 0 180px 0;
+  z-index: 3;
+  margin-top: -200px;
+}
+
+.wish-img-list {
+  padding: 0 102.5px;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.wish-img-li {
+  flex: 1;
+}
+
+.wish-img-li:nth-child(even) {
+  margin-top: 50px;
+}
+
+.wish-img-li:not(:last-child) {
+  margin-right: 25px;
+}
+
+.wish-img {
+  width: 100%;
+}
+
+.wish-title {
+  margin-top: 70px;
+  font-size: 45px;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+
+.wish-form {
+  margin-top: 50px;
+  width: 65%;
+  margin: 0 auto;
+}
+
+.wish-input {
+  margin-top: 45px;
+  display: block;
+  width: 100%;
+  height: 70px;
+  border-radius: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 0 50px;
+  box-sizing: border-box;
+  font-size: 20px;
+  color: #fff;
+}
+
+.wish-btn {
+  display: block;
+  width: 14.5%;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 60px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 35px;
+  border: none;
+  margin: 45px auto 0 auto;
+  cursor: pointer;
+}
+
+.wish-desc {
+  margin-top: 45px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* ------------------- announcement  -------------------*/
+.announcement {
+  position: relative;
+  background: url(../../../images/amusementpark/nightshow/announcement_bg.png)
+    no-repeat;
+  background-size: cover;
+  padding: 150px 0;
+  z-index: 2;
+}
+
+.announcement-title {
+  font-size: 28px;
+  color: #000;
+  text-align: center;
+  margin-bottom: 100px;
+  font-weight: bold;
+}
+
+.announcement-desc {
+  font-size: 28px;
+  color: #000;
+  margin-bottom: 70px;
+  font-weight: bold;
+}
+.announcement-welcome {
+  margin-top: 130px;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.announcement-welcome-img {
+  width: 31.6%;
+}
+
+/* ------------------- footer  -------------------*/
+.footer {
+  position: relative;
+  background: url(../../../images/amusementpark/nightshow/2024_footer_bg.jpg)
+    no-repeat;
+  background-size: cover;
+  padding: 120px 0;
+  z-index: 1;
+  margin-top: -200px;
+}
+
+/* ------------------- up-link  -------------------*/
+.up-link {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: #000;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease-in-out;
+  box-sizing: border-box;
+}
+
+.up-link.active {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: initial;
+  cursor: pointer;
+}
+
+.up-link:focus {
+  border: 3px solid #fff;
+}
+
+.up-link-img {
+  width: 100%;
+  height: 100%;
+}
