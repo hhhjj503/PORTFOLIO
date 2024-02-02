@@ -89,6 +89,18 @@ label {
   font-weight: bold;
 }
 
+.mobile-header-list {
+  display: none;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+
+.mobile-header-img {
+  width: 20px;
+  height: 20px;
+}
+
 .chevron-left-img,
 .chevron-right-img {
   display: block;
@@ -121,14 +133,55 @@ label {
   text-align: center;
 }
 
+.banner-stop-btn {
+  display: none;
+  position: absolute;
+  left: calc(50% - 50px);
+  transform: translateX(-50%);
+  bottom: 35px;
+  z-index: 10;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.banner-sotp-btn-img {
+  display: block;
+  width: 100%;
+}
+
+.banner-play-btn {
+  display: none;
+  position: absolute;
+  left: calc(50% - 50px);
+  transform: translateX(-50%);
+  bottom: 35px;
+  z-index: 10;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.banner-play-btn-img {
+  display: block;
+  width: 100%;
+}
+
+.banner-stop-btn.active,
+.banner-play-btn.active {
+  display: block;
+}
+
 .banner-indexes {
   position: absolute;
   width: fit-content !important;
-  left: 50%;
   right: 0;
   bottom: 20px !important;
   margin: 0 auto;
-  transform: translateY(-50%);
   text-align: center;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -253,6 +306,7 @@ label {
   background: url(../../../images/amusementpark/nightshow/2024_gallery_bg.jpg)
     no-repeat;
   background-size: cover;
+  background-position: center;
   z-index: 4;
 }
 
@@ -476,4 +530,280 @@ label {
 .up-link-img {
   width: 100%;
   height: 100%;
+}
+
+/* ------------------- responsive max-width-1200px  -------------------*/
+@media screen and (max-width: 1200px) {
+  .header-list {
+    box-sizing: border-box;
+    padding: 0 20px;
+  }
+
+  .gallery {
+    box-sizing: border-box;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .gallery-swiper-container {
+    max-width: 1200px;
+    width: 1200px;
+  }
+
+  .festival-gallery {
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .announcement {
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-list {
+    box-sizing: border-box;
+    padding: 0 20px;
+  }
+
+  .header-link {
+    font-size: 16px;
+  }
+
+  .banner-title {
+    font-size: 32px;
+    line-height: 40px;
+    word-break: keep-all;
+  }
+
+  .banner-controls-btn-left {
+    width: 50px;
+    height: 50px;
+  }
+
+  .banner-controls-btn-right {
+    width: 50px;
+    height: 50px;
+  }
+
+  .gallery {
+    padding: 110px 60px;
+  }
+
+  .gallery-swiper-container {
+    width: 768px;
+  }
+
+  .gallery-controls-btn-left {
+    width: 40px;
+    height: 40px;
+  }
+
+  .gallery-controls-btn-right {
+    width: 40px;
+    height: 40px;
+  }
+
+  .chevron-left-img,
+  .chevron-right-img {
+    width: 60%;
+    height: 60%;
+  }
+
+  .festival-gallery-title {
+    font-size: 32px;
+    margin-bottom: 100px;
+  }
+
+  .festival-gallery {
+    padding: 220px 60px;
+  }
+
+  .festival-gallery-controls-btn-left {
+    width: 40px;
+    height: 40px;
+    left: -40px;
+  }
+
+  .festival-gallery-controls-btn-right {
+    width: 40px;
+    height: 40px;
+    right: -40px;
+  }
+
+  .wish {
+    margin-top: -230px;
+  }
+
+  .wish-img-list {
+    padding: 0 80px;
+  }
+
+  .wish-title {
+    font-size: 32px;
+  }
+
+  .wish-form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .wish-input {
+    width: 100%;
+    height: 50px;
+    padding: 15px 30px;
+    font-size: 18px;
+  }
+
+  .wish-btn {
+    width: 90px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .wish-desc {
+    font-size: 20px;
+  }
+
+  .announcement {
+    padding: 100px;
+  }
+
+  .announcement-title {
+    font-size: 20px;
+    margin-bottom: 60px;
+  }
+
+  .upper-round:after {
+    width: 6px;
+    height: 6px;
+  }
+
+  .announcement-desc {
+    font-size: 20px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    line-height: 1.618;
+  }
+
+  .announcement-welcome {
+    margin-top: 100px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .announcement-welcome-img {
+    width: 250px;
+  }
+
+  .footer {
+    padding: 110px 0;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .header-list {
+    display: none;
+  }
+
+  .mobile-header-list {
+    display: flex;
+  }
+
+  .banner-title {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .banner-controls-btn-left {
+    width: 40px;
+    height: 40px;
+    left: 15px;
+  }
+  .banner-controls-btn-right {
+    width: 40px;
+    height: 40px;
+    right: 15px;
+  }
+
+  .banner-indexes {
+    padding: 5px;
+  }
+
+  .banner-stop-btn {
+    width: 10px;
+    height: 10px;
+  }
+  .banner-play-btn {
+    width: 10px;
+    height: 10px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 5px;
+    height: 5px;
+  }
+
+  .gallery {
+    padding: 80px 80px;
+  }
+
+  .gallery-swiper-container {
+    width: 140%;
+  }
+
+  .festival-gallery {
+    padding: 150px 60px;
+  }
+
+  .festival-gallery-title {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+
+  .wish {
+    margin-top: -250px;
+    padding-bottom: 160px;
+  }
+
+  .wish-title {
+    font-size: 25px;
+  }
+
+  .wish-img-list {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .wish-img-li:not(:last-child) {
+    margin-right: 5px;
+  }
+
+  .wish-btn {
+    height: 35px;
+    font-size: 16px;
+  }
+  .wish-desc {
+    font-size: 18px;
+  }
+
+  .announcement {
+    padding-left: 15px;
+    padding-right: 15px;
+    background-position: right;
+  }
+  .announcement-title {
+    text-align: center;
+    word-break: keep-all;
+    line-height: 30px;
+  }
+
+  .announcement-welcome-img {
+    width: 200px;
+  }
 }

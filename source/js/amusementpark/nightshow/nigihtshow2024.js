@@ -42,11 +42,17 @@ window.addEventListener("DOMContentLoaded", () => {
 
     breakpoints: {
       320: {
-        slidesPerView: 1,
+        slidesPerView: 1.5,
+        spaceBetween: 15,
       },
 
-      551: {
-        slidesPerView: 2,
+      481: {
+        slidesPerView: 3.5,
+        spaceBetween: 20,
+      },
+
+      769: {
+        slidesPerView: 3.5,
         spaceBetween: 20,
       },
 
@@ -74,7 +80,11 @@ window.addEventListener("DOMContentLoaded", () => {
         slidesPerView: 1,
       },
 
-      551: {
+      481: {
+        slidesPerView: 1,
+      },
+
+      550: {
         slidesPerView: 2,
         spaceBetween: 20,
       },
@@ -89,6 +99,8 @@ window.addEventListener("DOMContentLoaded", () => {
   //scroll-up
   const scrollUpLink = document.querySelector(".up-link");
   const html = document.querySelector("html");
+  const bannerStopBtn = document.querySelector(".banner-stop-btn");
+  const bannerPlayBtn = document.querySelector(".banner-play-btn");
 
   scrollUpLink.addEventListener("click", function () {
     html.scrollTop = 0;
@@ -96,5 +108,17 @@ window.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", () => {
     if (html.scrollTop > 1) scrollUpLink.classList.add("active");
     else scrollUpLink.classList.remove("active");
+  });
+
+  bannerStopBtn.addEventListener("click", () => {
+    bannerSwiper.autoplay.stop();
+    bannerStopBtn.classList.remove("active");
+    bannerPlayBtn.classList.add("active");
+  });
+
+  bannerPlayBtn.addEventListener("click", () => {
+    bannerSwiper.autoplay.start();
+    bannerPlayBtn.classList.remove("active");
+    bannerStopBtn.classList.add("active");
   });
 });
