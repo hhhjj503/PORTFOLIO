@@ -102,6 +102,13 @@ window.addEventListener("DOMContentLoaded", () => {
   const bannerStopBtn = document.querySelector(".banner-stop-btn");
   const bannerPlayBtn = document.querySelector(".banner-play-btn");
 
+  //모바일 사이드용 메뉴 open close
+  const mobileHeaderMenuBtn = document.querySelector(".mobile-side-menu-btn");
+  const mobileHeaderMenuCloseBtn = document.querySelector(
+    ".mobile-side-menu-close-btn"
+  );
+  const mobileSideMenu = document.querySelector(".mobile-side-menu");
+
   scrollUpLink.addEventListener("click", function () {
     html.scrollTop = 0;
   });
@@ -120,5 +127,12 @@ window.addEventListener("DOMContentLoaded", () => {
     bannerSwiper.autoplay.start();
     bannerPlayBtn.classList.remove("active");
     bannerStopBtn.classList.add("active");
+  });
+
+  mobileHeaderMenuBtn.addEventListener("click", function () {
+    mobileSideMenu.classList.add("active");
+  });
+  mobileHeaderMenuCloseBtn.addEventListener("click", function () {
+    mobileSideMenu.classList.remove("active");
   });
 });

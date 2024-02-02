@@ -96,9 +96,57 @@ label {
   padding: 0 15px;
 }
 
-.mobile-header-img {
+.mobile-side-menu-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.mobile-header-menu-img {
   width: 20px;
   height: 20px;
+}
+
+.mobile-header-home-img {
+  width: 20px;
+  height: 20px;
+}
+
+.mobile-side-menu {
+  position: absolute;
+  top: 0;
+  left: -9999em;
+  width: 70%;
+  height: 100vh;
+  background-color: rgb(125, 0, 137);
+  z-index: 20;
+  box-sizing: border-box;
+  padding: 50px;
+  transition: 0.3s ease-in-out;
+}
+
+.mobile-side-menu.active {
+  left: 0;
+}
+
+.mobile-side-menu-link {
+  display: block;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.mobile-side-menu-close-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.mobile-side-menu-close-img {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
 }
 
 .chevron-left-img,
