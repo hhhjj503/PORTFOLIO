@@ -427,6 +427,7 @@ label {
   padding: 370px 0 180px 0;
   z-index: 3;
   margin-top: -200px;
+  background-position: center;
 }
 
 .wish-img-list {
