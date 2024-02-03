@@ -787,10 +787,14 @@ label {
   .banner-stop-btn {
     width: 10px;
     height: 10px;
+    bottom: 30px;
+    left: calc(50% - 40px);
   }
   .banner-play-btn {
     width: 10px;
     height: 10px;
+    bottom: 30px;
+    left: calc(50% - 40px);
   }
 
   .swiper-pagination-bullet {
@@ -850,9 +854,18 @@ label {
     text-align: center;
     word-break: keep-all;
     line-height: 30px;
+    font-size: 18px;
+  }
+
+  .announcement-desc {
+    font-size: 18px;
   }
 
   .announcement-welcome-img {
     width: 200px;
+  }
+
+  .footer {
+    background-position: center;
   }
 }
