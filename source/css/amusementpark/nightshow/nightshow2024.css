@@ -817,6 +817,7 @@ label {
   .festival-gallery-title {
     font-size: 25px;
     margin-bottom: 30px;
+    word-break: keep-all;
   }
 
   .wish {
