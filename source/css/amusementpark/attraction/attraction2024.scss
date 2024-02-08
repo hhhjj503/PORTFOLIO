@@ -68,7 +68,6 @@ a {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  transition: 0.3s ease-in-out;
   box-sizing: border-box;
 }
 
@@ -145,7 +144,8 @@ a {
       transition: 0.3s ease-in-out;
     }
 
-    &:hover .attraction-title {
+    &:hover .attraction-title,
+    &:focus .attraction-title {
       opacity: 1;
     }
 
