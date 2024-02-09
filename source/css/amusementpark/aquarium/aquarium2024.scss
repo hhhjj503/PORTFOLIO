@@ -1,0 +1,198 @@
+@charset "UTF-8";
+@import url(../../reset.css);
+@import url(../layout/header2024.css);
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.skip-link {
+  position: absolute;
+  display: block;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  background-color: #fff;
+  box-sizing: border-box;
+  z-index: 12;
+}
+
+.skip-link:focus {
+  top: 0;
+  border: 2px solid #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.chevron-left-img,
+.chevron-right-img {
+  display: block;
+  width: 70%;
+  height: 70%;
+  margin: 0 auto;
+}
+
+.align-right {
+  text-align: right;
+}
+
+/* ------------------- up-link  -------------------*/
+.up-link {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: #000;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.up-link.active {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: initial;
+  cursor: pointer;
+}
+
+.up-link:focus-visible {
+  border: 3px solid #fff;
+}
+
+.up-link-img {
+  width: 100%;
+  height: 100%;
+}
+
+.banner {
+  position: relative;
+
+  &-title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 35px;
+    line-height: 1.618;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &-img {
+    display: block;
+    width: 100%;
+  }
+
+  &-wave-img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  &__waves-wrapper {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+  }
+
+  &__waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px; /*Fix for safari gap*/
+    min-height: 100px;
+    max-height: 120px;
+
+    //wave 파도에 animation 적용
+    & .parallax > use {
+      animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+    }
+
+    //wave 파도 2개 생성
+    & .parallax > use:nth-child(1) {
+      animation-delay: -2s;
+      animation-duration: 7s;
+    }
+    & .parallax > use:nth-child(2) {
+      animation-delay: -3s;
+      animation-duration: 10s;
+    }
+
+    @keyframes move-forever {
+      0% {
+        transform: translate3d(-90px, 0, 0);
+      }
+      100% {
+        transform: translate3d(85px, 0, 0);
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      & {
+        height: 80px;
+        min-height: 80px;
+      }
+    }
+
+    @media screen and (max-width: 550px) {
+      & {
+        height: 60px;
+        min-height: 60px;
+      }
+    }
+  }
+}
+
+.creatures {
+  &-title {
+  }
+}
+
+.creature {
+  &-desc {
+  }
+
+  &-name {
+  }
+
+  &-info {
+  }
+
+  &-media {
+  }
+
+  &-img {
+  }
+}
+
+@media screen and (max-width: 1200px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 550px) {
+}
