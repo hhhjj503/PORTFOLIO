@@ -154,7 +154,7 @@ a {
   color: #fff;
   font-weight: bold;
   text-align: center;
-  opacity: 0;
+  opacity: 1;
   transition: 0.3s ease-in-out;
 }
 
@@ -212,7 +212,7 @@ a {
   .attraction-title {
     height: 40px;
     line-height: 40px;
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 @media screen and (max-width: 550px) {
@@ -236,9 +236,9 @@ a {
     margin-bottom: 10px;
   }
   .attraction-title {
-    height: 30px;
-    line-height: 30px;
-    font-size: 13px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
   }
   .attraction-gallery:not(:last-child) {
     margin-bottom: 10px;
