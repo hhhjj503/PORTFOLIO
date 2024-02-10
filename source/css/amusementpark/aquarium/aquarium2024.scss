@@ -962,8 +962,14 @@ a {
     }
   }
   .banner .swiper-pagination-bullet {
-    width: 9px;
-    height: 9px;
+    width: 10px;
+    height: 10px;
+  }
+
+  .swiper {
+    &-pagination-bullets {
+      display: flex;
+    }
   }
 
   .creatures {
