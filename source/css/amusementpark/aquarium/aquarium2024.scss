@@ -53,6 +53,10 @@ a {
   text-align: right;
 }
 
+.header-link {
+  text-shadow: 0 0 5px rgba($color: #000000, $alpha: 1);
+}
+
 /* ------------------- up-link  -------------------*/
 .up-link {
   position: fixed;
@@ -88,6 +92,7 @@ a {
 
 .banner {
   position: relative;
+  background-color: #000;
 
   &-title {
     position: absolute;
@@ -99,6 +104,7 @@ a {
     line-height: 1.618;
     font-weight: bold;
     text-align: center;
+    text-shadow: 0px 0px 10px rgba($color: #000, $alpha: 1);
   }
 
   &-img {
@@ -106,11 +112,139 @@ a {
     width: 100%;
   }
 
+  &-index-controls {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    z-index: 11;
+    display: flex;
+    align-items: self-end;
+    background-color: rgba($color: #000, $alpha: 0.5);
+    padding: 15px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    transform: translateX(-50%);
+
+    &-stop-btn {
+      width: 20px;
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      margin-right: 10px;
+      display: none;
+      cursor: pointer;
+
+      &.active {
+        display: initial;
+      }
+
+      &-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &-play-btn {
+      width: 20px;
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      margin-right: 10px;
+      display: none;
+      cursor: pointer;
+
+      &.active {
+        display: initial;
+      }
+
+      &-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .swiper {
+    &-pagination-bullet {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+  }
+
+  &-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 10;
+
+    &-prev-btn {
+      position: absolute;
+      left: 20px;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: none;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: transparent;
+      border: 1px solid rgba($color: #fff, $alpha: 0.5);
+      opacity: 0.8;
+      transition: 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+        border: 1px solid rgba($color: #fff, $alpha: 0.8);
+      }
+
+      &-img {
+        display: block;
+        width: 70%;
+        height: 70%;
+        margin: 0 auto;
+      }
+    }
+
+    &-next-btn {
+      position: absolute;
+      right: 20px;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: none;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: transparent;
+      border: 1px solid rgba($color: #fff, $alpha: 0.5);
+      opacity: 0.8;
+      transition: 0.3s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        opacity: 1;
+        border: 1px solid rgba($color: #fff, $alpha: 0.8);
+      }
+
+      &-img {
+        display: block;
+        width: 70%;
+        height: 70%;
+        margin: 0 auto;
+      }
+    }
+  }
+
   &-wave-img {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
+    z-index: 10;
+    opacity: 0.2;
   }
 
   &__waves-wrapper {
@@ -118,6 +252,8 @@ a {
     width: 100%;
     left: 0;
     bottom: 0;
+    overflow: hidden;
+    z-index: 10;
   }
 
   &__waves {
@@ -161,98 +297,816 @@ a {
 
     @media screen and (max-width: 550px) {
       & {
-        height: 60px;
-        min-height: 60px;
+        height: 40px;
+        min-height: 40px;
       }
     }
   }
 }
 
 .creatures {
+  background-image: url(../../../images/amusementpark/aquarium/background_img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 150px 0;
+  background-color: #000;
+
   &-title {
+    max-width: 1200px;
+    width: 100%;
+    padding: 35px 0;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #0f0e85;
+    margin: 0 auto 150px auto;
   }
 }
 
 .creature {
+  display: flex;
+
+  &:not(:last-child) {
+    margin-bottom: 150px;
+  }
+
+  &:nth-child(2n) {
+    flex-direction: row-reverse;
+  }
+
   &-desc {
+    width: 51.25%;
+    background-color: rgba($color: #1f155c, $alpha: 0.6);
   }
 
   &-name {
+    width: 277.5px;
+    font-size: 30px;
+    padding: 35px 0;
+    background-color: #0f0e85;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
   }
 
   &-info {
+    max-width: 482.5px;
+    width: 100%;
+    margin: 50px auto;
+    color: #fff;
+    font-size: 25px;
+    line-height: 1.618;
+    max-height: 310px;
+    overflow: auto;
+    box-sizing: border-box;
+    padding-right: 20px;
+
+    &::-webkit-scrollbar {
+      width: 8px; /* 스크롤바의 너비 */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #175ab7; /* 스크롤바의 색상 */
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba($color: #fff, $alpha: 0.2); /*스크롤바 뒷 배경 색상*/
+    }
   }
 
   &-media {
+    width: 48.75%;
   }
 
   &-img {
+    width: 100%;
+    display: block;
   }
+}
+
+.photos {
+  background-color: #11106b;
+  padding: 150px 0;
+
+  &-title {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+
+.photo-slider {
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 145px;
 }
 
 .photo {
   &-img {
+    display: block;
+    width: 100%;
   }
 
   &-info {
+    background-color: rgba($color: #fff, $alpha: 1);
+    box-sizing: border-box;
+    height: 100px;
+    padding: 40px 0;
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
   }
 }
 
+.photo-controls {
+  width: 100%;
+  height: fit-content;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  transform: translateY(-50%);
+  margin: 0 auto;
+
+  &-prev-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #fff;
+    cursor: pointer;
+    &:hover {
+      transition: 0.1s ease-in-out;
+      background-color: rgba($color: #fff, $alpha: 0.2);
+    }
+
+    &-img {
+      display: block;
+      width: 70%;
+      height: 70%;
+      margin: 0 auto;
+    }
+  }
+  &-next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #fff;
+    cursor: pointer;
+    &:hover {
+      transition: 0.1s ease-in-out;
+      background-color: rgba($color: #fff, $alpha: 0.2);
+    }
+
+    &-img {
+      display: block;
+      width: 70%;
+      height: 70%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.etc {
+  background-image: url(../../../images/amusementpark/aquarium/background_img02.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 150px 0;
+  background-color: #000;
+}
+.etc-wrapper {
+  display: flex;
+}
+
 .ticket {
+  box-sizing: border-box;
+  background-color: #ae4848;
+  padding: 35px;
+  flex: 1;
+
   &-title {
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 35px;
   }
 
   &-form {
-  }
+    width: 100%;
 
-  &-buy-btn {
+    &-select {
+      width: 100%;
+      font-size: 20px;
+      padding: 8px 0;
+      margin-bottom: 35px;
+    }
+
+    &-btn {
+      width: 175px;
+      font-size: 20px;
+      padding: 10px 0;
+      display: block;
+      margin: 0 auto;
+      border-radius: 50px;
+      background-color: #fff;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        transition: 0.1s ease-in-out;
+        background-color: #1f155c;
+        color: #fff;
+      }
+    }
   }
 }
 
 .opening-hours {
+  box-sizing: border-box;
+  background-color: #1f155c;
+  padding: 35px;
+  flex: 1;
   &-title {
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 35px;
   }
 
   &-info {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 35px;
   }
 
-  &-timer {
+  &-desc {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+
+    &-detail {
+      display: inline-block;
+      color: red;
+      background-color: #fff;
+      padding: 4px;
+      margin: 0 2px;
+    }
   }
 }
 
 .notice {
+  box-sizing: border-box;
+  background-color: #1a671d;
+  padding: 35px;
+  flex: 1;
+
   &-title {
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 35px;
   }
 
   &-desc {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.618;
   }
 
   &-date {
+    font-size: 14px;
   }
 }
 
 .community {
-  &-dec0 {
+  max-width: 800px;
+  width: 100%;
+
+  display: flex;
+  box-sizing: border-box;
+  background-color: #0d8090;
+
+  &-media {
+    flex: 1;
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: block;
+      object-fit: cover;
+    }
   }
 
-  &-title {
-  }
+  &-desc {
+    flex: 2;
 
-  &-link {
+    box-sizing: border-box;
+    padding: 50px;
+
+    &-title {
+      font-size: 25px;
+      text-align: center;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 35px;
+    }
+
+    &-link {
+      display: block;
+      box-sizing: border-box;
+      width: 277.5px;
+      font-size: 20px;
+      padding: 15px;
+      text-align: center;
+      border-radius: 30px;
+      background-color: #fff;
+      color: #000;
+      font-weight: bold;
+      margin: 0 auto;
+
+      &:hover {
+        transition: 0.1s ease-in-out;
+        background-color: #1f155c;
+        color: #fff;
+      }
+    }
   }
 }
 
 .helper {
+  box-sizing: border-box;
+  background-color: #990d94;
+  padding: 50px;
+
+  max-width: 400px;
+  width: 100%;
+
   &-title {
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 25px;
   }
 
   &-tel {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
 }
 
 @media screen and (max-width: 1200px) {
+  .creatures {
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .creature {
+    box-sizing: border-box;
+
+    &-info {
+      max-height: 230px;
+    }
+  }
+
+  .photos {
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .etc {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
+@media screen and (max-width: 1050px) {
+  .creature {
+    &-info-wrap {
+      box-sizing: border-box;
+      padding: 0 20px;
+    }
+
+    &-info {
+      max-height: 150px;
+      font-size: 23px;
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .creature {
+    &-name {
+      width: 40%;
+      padding: 20px;
+      font-size: 28px;
+    }
+
+    &-info {
+      font-size: 20px;
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
+  .banner {
+    &-title {
+      font-size: 25px;
+    }
+
+    &-controls-prev-btn {
+      width: 50px;
+      height: 50px;
+    }
+    &-controls-next-btn {
+      width: 50px;
+      height: 50px;
+    }
+
+    &-index-controls {
+      padding: 10px;
+
+      &-stop-btn {
+        width: 15px;
+        margin: 0 5px;
+      }
+      &-play-btn {
+        width: 15px;
+        margin: 0 5px;
+      }
+    }
+
+    & .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  .creatures {
+    padding: 100px 20px;
+
+    &-title {
+      font-size: 23px;
+      margin-bottom: 100px;
+    }
+  }
+
+  .creature {
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: 100px;
+    }
+
+    &-name {
+      font-size: 20px;
+    }
+
+    &-desc {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    &-info-wrap {
+      padding: 50px;
+    }
+
+    &-info {
+      margin: 0 auto;
+      max-height: initial;
+      padding-right: 0;
+      font-size: 18px;
+    }
+
+    &-media {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+
+  .photos {
+    padding: 100px 20px;
+
+    &-title {
+      font-size: 23px;
+    }
+  }
+
+  .photo {
+    &-slider {
+      padding: 0 80px;
+    }
+
+    &-info {
+      padding: 0;
+      height: 80px;
+      line-height: 80px;
+      font-size: 18px;
+    }
+  }
+
+  .etc-wrapper {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .etc {
+    padding: 100px 20px;
+  }
+
+  .ticket {
+    padding: 35px 10%;
+
+    &-title {
+      font-size: 20px;
+    }
+
+    &-form-select {
+      font-size: 18px;
+    }
+
+    &-form-btn {
+      width: 150px;
+      font-size: 17px;
+      padding: 7px 0;
+    }
+  }
+
+  .opening-hours {
+    padding: 35px 10%;
+    &-title {
+      font-size: 20px;
+    }
+
+    &-info {
+      font-size: 20px;
+    }
+
+    &-desc {
+      font-size: 17px;
+    }
+  }
+
+  .notice {
+    padding: 35px 10%;
+    &-title {
+      font-size: 20px;
+    }
+  }
+
+  .community {
+    &-desc-title {
+      font-size: 20px;
+    }
+
+    &-desc-link {
+      width: 202px;
+      padding: 10px;
+      font-size: 17px;
+    }
+  }
+
+  .helper {
+    max-width: initial;
+    padding: 35px 10%;
+
+    &-title {
+      font-size: 20px;
+    }
+  }
 }
-@media screen and (max-width: 550px) {
+
+@media screen and (max-width: 480px) {
+  .banner {
+    &-title {
+      font-size: 15px;
+    }
+
+    &-controls-prev-btn {
+      width: 30px;
+      height: 30px;
+    }
+    &-controls-next-btn {
+      width: 30px;
+      height: 30px;
+    }
+
+    &-index-controls {
+      bottom: 5%;
+      align-items: baseline;
+      padding: 5px;
+
+      &-stop-btn {
+        width: 10px;
+      }
+      &-play-btn {
+        width: 10px;
+      }
+    }
+  }
+  .banner .swiper-pagination-bullet {
+    width: 9px;
+    height: 9px;
+  }
+
+  .creatures {
+    padding: 50px 0;
+
+    &-title {
+      width: calc(100% - 40px);
+      font-size: 15px;
+      line-height: 1.618;
+      box-sizing: border-box;
+      padding: 20px;
+      margin-bottom: 50px;
+      word-break: break-all;
+    }
+  }
+
+  .creature {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+
+    &-name {
+      font-size: 16px;
+    }
+
+    &-desc {
+      width: calc(100% - 40px);
+    }
+
+    &-info-wrap {
+      padding: 20px;
+    }
+
+    &-info {
+      font-size: 14px;
+    }
+
+    &-media {
+      width: 100%;
+    }
+  }
+
+  .photos {
+    padding: 50px 20px;
+
+    &-title {
+      font-size: 16px;
+      word-break: break-all;
+      line-height: 1.618;
+    }
+  }
+
+  .photo {
+    &-controls {
+      &-prev-btn {
+        width: 30px;
+        height: 30px;
+      }
+      &-next-btn {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    &-slider {
+      padding: 0 40px;
+    }
+
+    &-info {
+      box-sizing: border-box;
+      padding: 0 20px;
+      font-size: 15px;
+      word-break: break-all;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .etc {
+    padding: 50px 20px;
+  }
+
+  .etc-wrapper {
+    width: 100%;
+  }
+
+  .ticket {
+    &-title {
+      font-size: 18px;
+    }
+
+    &-form-select {
+      font-size: 16px;
+    }
+
+    &-form-btn {
+      width: 40%;
+      font-size: 15px;
+      padding: 5px 0;
+    }
+  }
+
+  .opening-hours {
+    &-title {
+      font-size: 18px;
+    }
+
+    &-info {
+      font-size: 16px;
+    }
+
+    &-desc {
+      font-size: 15px;
+    }
+  }
+
+  .notice {
+    &-title {
+      font-size: 18px;
+    }
+
+    &-desc {
+      font-size: 14px;
+    }
+
+    &-date {
+      margin-left: 10px;
+    }
+  }
+
+  .community {
+    &-media {
+      display: none;
+    }
+
+    &-desc-title {
+      font-size: 18px;
+      line-height: 1.618;
+      word-break: break-all;
+    }
+
+    &-desc-link {
+      width: 60%;
+      font-size: 15px;
+    }
+  }
+
+  .helper {
+    max-width: initial;
+    padding: 35px 10%;
+
+    &-title {
+      font-size: 18px;
+    }
+
+    &-tel {
+      font-size: 16px;
+    }
+  }
 }

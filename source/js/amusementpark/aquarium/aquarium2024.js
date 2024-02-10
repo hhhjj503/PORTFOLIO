@@ -10,6 +10,74 @@ window.addEventListener("DOMContentLoaded", function () {
   );
   const mobileSideMenu = document.querySelector(".mobile-side-menu");
 
+  //배너 멈춤 플레이 컨트롤 버튼
+  const bannerStopBtn = document.querySelector(
+    ".banner-index-controls-stop-btn"
+  );
+  const bannerPlayBtn = document.querySelector(
+    ".banner-index-controls-play-btn"
+  );
+
+  bannerStopBtn.addEventListener("click", () => {
+    bannerSwiper.autoplay.stop();
+    bannerStopBtn.classList.remove("active");
+    bannerPlayBtn.classList.add("active");
+  });
+
+  bannerPlayBtn.addEventListener("click", () => {
+    bannerSwiper.autoplay.start();
+    bannerPlayBtn.classList.remove("active");
+    bannerStopBtn.classList.add("active");
+  });
+
+  const bannerSwiper = new Swiper(".banner .swiper", {
+    // Optional parameters
+    direction: "horizontal",
+    loop: true,
+    touchRatio: false,
+    autoplay: {
+      delay: "2000",
+      disableOnInteraction: false,
+    },
+    speed: 800,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: ".banner-controls .banner-controls-next-btn",
+      prevEl: ".banner-controls .banner-controls-prev-btn",
+    },
+
+    pagination: {
+      el: ".banner-indexes",
+      clickable: "true",
+    },
+  });
+  const photoSlider = new Swiper(".photos .swiper", {
+    // Optional parameters
+    direction: "horizontal",
+    loop: true,
+    touchRatio: false,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: ".photo-controls-next-btn",
+      prevEl: ".photo-controls-prev-btn",
+    },
+
+    breakpoints: {
+      320: { slidesPerView: 1, spaceBetween: 20 },
+
+      550: { slidesPerView: 2, spaceBetween: 20 },
+
+      821: { slidesPerView: 3, spaceBetween: 30 },
+
+      1201: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+  });
+
   scrollUpLink.addEventListener("click", function () {
     html.scrollTop = 0;
   });

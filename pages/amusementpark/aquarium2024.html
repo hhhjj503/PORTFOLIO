@@ -43,7 +43,9 @@
           >
         </li>
         <li>
-          <a class="mobile-side-menu-link" href="./aquarium.html">아쿠아리움</a>
+          <a class="mobile-side-menu-link" href="./aquarium2024.html"
+            >아쿠아리움</a
+          >
         </li>
       </ul>
       <button class="mobile-side-menu-close-btn">
@@ -69,7 +71,7 @@
               <a href="./krustyland.html" class="header-link">크러스티랜드</a>
             </li>
             <li>
-              <a href="./aquarium.html" class="header-link">아쿠아리움</a>
+              <a href="./aquarium2024.html" class="header-link">아쿠아리움</a>
             </li>
           </ul>
         </nav>
@@ -100,62 +102,64 @@
     </header>
 
     <div class="banner">
-      <ul>
-        <li>
-          <h2 class="banner-title">
-            신비한 바다속 나라 <br />
-            아쿠아리움
-          </h2>
-          <img
-            src="../../source/images/amusementpark/aquarium/banner_01.jpg"
-            alt="아쿠아리움 사진"
-            class="banner-img"
-          />
-        </li>
-        <li>
-          <h2 class="banner-title">
-            신비한 바다속 나라 <br />
-            아쿠아리움
-          </h2>
-          <img
-            src="../../source/images/amusementpark/aquarium/banner_02.jpg"
-            alt="아쿠아리움 사진"
-            class="banner-img"
-          />
-        </li>
-      </ul>
+      <div class="swiper">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide">
+            <h2 class="banner-title">
+              신비한 바다속 나라 <br />
+              아쿠아리움
+            </h2>
+            <img
+              src="../../source/images/amusementpark/aquarium/banner_01.jpg"
+              alt="아쿠아리움 사진"
+              class="banner-img"
+            />
+          </li>
+          <li class="swiper-slide">
+            <h2 class="banner-title">
+              신비한 바다속 나라 <br />
+              아쿠아리움
+            </h2>
+            <img
+              src="../../source/images/amusementpark/aquarium/banner_02.jpg"
+              alt="아쿠아리움 사진"
+              class="banner-img"
+            />
+          </li>
+        </ul>
+      </div>
 
       <div class="banner-index-controls">
-        <button class="banner-stop-btn">
-          <img
-            src="../../source/images/amusementpark/aquarium/play-solid.svg"
-            alt="배너 재생 버튼 이미지"
-            class="banner-stop-btn-img"
-          />
-        </button>
-        <button class="banner-play-btn">
+        <button class="banner-index-controls-stop-btn active">
           <img
             src="../../source/images/amusementpark/aquarium/pause-solid.svg"
+            alt="배너 재생 버튼 이미지"
+            class="banner-index-controls-stop-btn-img"
+          />
+        </button>
+        <button class="banner-index-controls-play-btn">
+          <img
+            src="../../source/images/amusementpark/aquarium/play-solid.svg "
             alt="배너 멈춤 버튼 이미지"
-            class="banner-play-btn-img"
+            class="banner-index-controls-play-btn-img"
           />
         </button>
         <div class="banner-indexes"></div>
       </div>
 
       <div class="banner-controls">
-        <button class="banner-prev-btn">
+        <button class="banner-controls-prev-btn">
           <img
             src="../../source/images/amusementpark/aquarium/chevron-left-solid.svg"
             alt="왼쪽 화살표 이미지"
-            class="banner-prev-btn-img"
+            class="banner-controls-prev-btn-img"
           />
         </button>
-        <button class="banner-next-btn">
+        <button class="banner-controls-next-btn">
           <img
             src="../../source/images/amusementpark/aquarium/chevron-right-solid.svg"
             alt="오른쪽 화살표 이미지"
-            class="banner-next-btn-img"
+            class="banner-controls-next-btn-img"
           />
         </button>
       </div>
@@ -186,13 +190,13 @@
               xlink:href="#gentle-wave"
               x="48"
               y="0"
-              fill="rgba(255,255,255,0.6)"
+              fill="rgba(255,255,255,0.4)"
             />
             <use
               xlink:href="#gentle-wave"
               x="48"
               y="3"
-              fill="rgba(255,255,255,0.4)"
+              fill="rgba(255,255,255,0.2)"
             />
           </g>
         </svg>
@@ -208,7 +212,18 @@
           <div class="creature">
             <div class="creature-desc">
               <h3 class="creature-name">바다거북</h3>
-              <p class="creature-info">ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</p>
+              <div class="creature-info-wrap">
+                <blockquote>
+                  <p class="creature-info">
+                    바다거북의 몸통은 가로로 납작하며, 눈물 모양의 커다란
+                    갑각으로 덮여 있다. 등딱지는 보통 옅은 색이지만, 동태평양의
+                    개체군에서는 등딱지의 일부가 거의 검은색일 수 있다.
+                    대모거북과 같은 다른 종들과는 달리, 바다거북은 대부분
+                    초식성이다.
+                    <cite>(출처: 위키백과)</cite>
+                  </p>
+                </blockquote>
+              </div>
             </div>
             <div class="creature-media">
               <img
@@ -221,7 +236,18 @@
           <div class="creature">
             <div class="creature-desc">
               <h3 class="creature-name">대왕가오리</h3>
-              <p class="creature-info">ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</p>
+              <div class="creature-info-wrap">
+                <blockquote>
+                  <p class="creature-info">
+                    대왕쥐가오리는 가오리류 중에서도 가장 거대한 종이다. 평균
+                    날개 너비는 3~4.5미터, 평균 몸무게는 약 1톤 정도 나가며,
+                    최대 크기의 개체는 날개 너비가 7미터, 몸무게가 2톤 씩
+                    나간다.[5] 입은 뻥 뚫려 있는 형태로, 매우 작은 이빨이 달려
+                    있다.
+                    <cite>(출처: 위키백과)</cite>
+                  </p>
+                </blockquote>
+              </div>
             </div>
             <div class="creature-media">
               <img
@@ -234,7 +260,16 @@
           <div class="creature">
             <div class="creature-desc">
               <h3 class="creature-name">상어</h3>
-              <p class="creature-info">ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</p>
+              <div class="creature-info-wrap">
+                <blockquote>
+                  <p class="creature-info">
+                    전세계의 열대에서 한대까지의 해양에 널리 분포하는데,
+                    대부분은 열대에서 온대에 걸친 따뜻한 바다에 산다. 생활의
+                    범위는 한정되어 있지 않고 담수역에도 서식하는 것이 있다.
+                    <cite>(출처: 위키백과)</cite>
+                  </p>
+                </blockquote>
+              </div>
             </div>
             <div class="creature-media">
               <img
@@ -247,7 +282,17 @@
           <div class="creature">
             <div class="creature-desc">
               <h3 class="creature-name">바다물개</h3>
-              <p class="creature-info">ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</p>
+              <div class="creature-info-wrap">
+                <blockquote>
+                  <p class="creature-info">
+                    물개(학명: Callorhinus ursinus)는 북태평양과 베링해,
+                    오호츠크해 연안에 서식하는 물개과 동물이다. 물개아과의 종
+                    중에서 가장 몸집이 큰 동물로, 물개속(Callorhinus)에 속하는
+                    유일한 동물이다.
+                    <cite>(출처: 위키백과)</cite>
+                  </p>
+                </blockquote>
+              </div>
             </div>
             <div class="creature-media">
               <img
@@ -261,112 +306,137 @@
       </div>
 
       <div class="photos">
+        <h2 class="photos-title">아쿠아리움의 즐거움을 나눠보세요!</h2>
+
         <div class="container">
           <div class="photo-slider">
-            <div class="photo">
-              <img
-                src="../../source/images/amusementpark/aquarium/share_memory_01.jpg"
-                alt="아쿠아리움배경의 인물사진"
-                class="photo-img"
-              />
-              <p class="photo-info">너무너무 즐거웠습니다!</p>
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="photo swiper-slide">
+                  <img
+                    src="../../source/images/amusementpark/aquarium/share_memory_01.jpg"
+                    alt="아쿠아리움배경의 인물사진"
+                    class="photo-img"
+                  />
+                  <p class="photo-info">너무너무 즐거웠습니다!</p>
+                </div>
+                <div class="photo swiper-slide">
+                  <img
+                    src="../../source/images/amusementpark/aquarium/share_memory_02.jpg"
+                    alt="아쿠아리움 사진"
+                    class="photo-img"
+                  />
+                  <p class="photo-info">*^^*</p>
+                </div>
+                <div class="photo swiper-slide">
+                  <img
+                    src="../../source/images/amusementpark/aquarium/share_memory_03.jpg"
+                    alt="범고래 사진"
+                    class="photo-img"
+                  />
+                  <p class="photo-info">고래쇼</p>
+                </div>
+                <div class="photo swiper-slide">
+                  <img
+                    src="../../source/images/amusementpark/aquarium/share_memory_04.jpg"
+                    alt="아이가 물고기를 보고있는 사진"
+                    class="photo-img"
+                  />
+                  <p class="photo-info">너무너무 즐거웠습니다!</p>
+                </div>
+              </div>
             </div>
-            <div class="photo">
-              <img
-                src="../../source/images/amusementpark/aquarium/share_memory_02.jpg"
-                alt="아쿠아리움 사진"
-                class="photo-img"
-              />
-              <p class="photo-info">너무너무 즐거웠습니다!</p>
-            </div>
-            <div class="photo">
-              <img
-                src="../../source/images/amusementpark/aquarium/share_memory_03.jpg"
-                alt="범고래 사진"
-                class="photo-img"
-              />
-              <p class="photo-info">너무너무 즐거웠습니다!</p>
-            </div>
-            <div class="photo">
-              <img
-                src="../../source/images/amusementpark/aquarium/share_memory_04.jpg"
-                alt="아이가 물고기를 보고있는 사진"
-                class="photo-img"
-              />
-              <p class="photo-info">너무너무 즐거웠습니다!</p>
-            </div>
-          </div>
 
-          <div class="photo-controls">
-            <button class="photo-prev-btn">
-              <img
-                src="../../source/images/amusementpark/aquarium/chevron-left-solid.svg"
-                alt="왼쪽 화살표 이미지"
-                class="photo-prev-btn-img"
-              />
-            </button>
-            <button class="photo-next-btn">
-              <img
-                src="../../source/images/amusementpark/aquarium/chevron-right-solid.svg"
-                alt="오른쪽 화살표 이미지"
-                class="photo-next-btn-img"
-              />
-            </button>
+            <div class="photo-controls">
+              <button class="photo-controls-prev-btn">
+                <img
+                  src="../../source/images/amusementpark/aquarium/chevron-left-solid.svg"
+                  alt="왼쪽 화살표 이미지"
+                  class="photo-controls-prev-btn-img"
+                />
+              </button>
+              <button class="photo-controls-next-btn">
+                <img
+                  src="../../source/images/amusementpark/aquarium/chevron-right-solid.svg"
+                  alt="오른쪽 화살표 이미지"
+                  class="photo-controls-next-btn-img"
+                />
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="etc">
         <div class="container">
-          <div class="ticket">
-            <h5 class="ticket-title">입장권 안내</h5>
-            <form action="#" class="ticket-form">
-              <select name="" id=""></select>
-              <button class="ticket-buy-btn">구매하기</button>
-            </form>
-          </div>
+          <div class="etc-wrapper">
+            <div class="ticket">
+              <h5 class="ticket-title">입장권 안내</h5>
+              <form action="#" class="ticket-form">
+                <select name="payment" id="payment" class="ticket-form-select">
+                  <option value="day1">1인 당일 입장권 / 30000원</option>
+                  <option value="month">1인 한달 입장권 / 200000원</option>
+                  <option value="year">1인 연간 입장권 / 500000원</option>
 
-          <div class="opening-hours">
-            <h5 class="opening-hours-title">영업시간</h5>
-            <div class="opening-hours-info">&lt; 09:00 ~ 22:00 &gt;</div>
-            <div class="opening-timer">moment.js 사용</div>
-          </div>
-
-          <div class="notice">
-            <h6 class="notice-title">공지사항</h6>
-            <p class="notice-desc">
-              입장에 관한 사항 안내
-              <span class="notice-date">2024-01-01</span>
-            </p>
-            <p class="notice-desc">
-              아쿠아리움 안전 안내사항
-              <span class="notice-date">2024-01-01</span>
-            </p>
-            <p class="notice-desc">
-              설연휴 정상영업안내
-              <span class="notice-date">2024-01-01</span>
-            </p>
-            <p class="notice-desc">
-              분실물 관한 사항 안내
-              <span class="notice-date">2024-01-01</span>
-            </p>
-          </div>
-
-          <div class="community">
-            <div class="community-deco">
-              <img
-                src="../../source/images/amusementpark/aquarium/fish.jpg"
-                alt="물고기 사진"
-              />
+                  <option value="family3">3인가족 당일 입장권 / 50000원</option>
+                  <option value="family4">4인가족 당일 입장권 / 60000원</option>
+                </select>
+                <button class="ticket-form-btn">구매하기</button>
+              </form>
             </div>
-            <h6 class="community-title">아쿠아리움 전용 커뮤니티</h6>
-            <a href="#" class="community-link">바로가기</a>
+
+            <div class="opening-hours">
+              <h5 class="opening-hours-title">영업시간</h5>
+              <div class="opening-hours-info">&lt; 09:00 ~ 22:00 &gt;</div>
+              <div class="opening-hours-desc">
+                <span class="opening-hours-desc-detail color-red">공휴일</span
+                >은
+                <span class="opening-hours-desc-detail color-red">휴무</span
+                >입니다
+              </div>
+            </div>
+
+            <div class="notice">
+              <h6 class="notice-title">공지사항</h6>
+              <p class="notice-desc">
+                입장에 관한 사항 안내
+                <span class="notice-date">2024-01-01</span>
+              </p>
+              <p class="notice-desc">
+                아쿠아리움 안전 안내사항
+                <span class="notice-date">2024-01-01</span>
+              </p>
+              <p class="notice-desc">
+                설연휴당일 휴무안내
+                <span class="notice-date">2024-01-01</span>
+              </p>
+              <p class="notice-desc">
+                분실물 관한 사항 안내
+                <span class="notice-date">2024-01-01</span>
+              </p>
+            </div>
           </div>
 
-          <div class="helper">
-            <h6 class="helper-title">고객센터</h6>
-            <a href="tel:+" class="helper-tel"> 02-000-0000 </a>
-            <a href="tel:+" class="helper-tel"> 02-000-0000 </a>
+          <div class="etc-wrapper">
+            <div class="community">
+              <div class="community-media">
+                <img
+                  src="../../source/images/amusementpark/aquarium/fish.jpg"
+                  alt="물고기 사진"
+                  class="community-media-img"
+                />
+              </div>
+              <div class="community-desc">
+                <h6 class="community-desc-title">아쿠아리움 전용 커뮤니티</h6>
+                <a href="#" class="community-desc-link">바로가기</a>
+              </div>
+            </div>
+
+            <div class="helper">
+              <h6 class="helper-title">고객센터</h6>
+              <a href="tel:+" class="helper-tel"> 02-000-0000 </a>
+              <a href="tel:+" class="helper-tel"> 02-000-0000 </a>
+            </div>
           </div>
         </div>
       </div>

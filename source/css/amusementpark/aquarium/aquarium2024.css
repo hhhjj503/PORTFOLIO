@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(../../reset.css);
 @import url(../layout/header2024.css);
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
@@ -51,6 +52,10 @@ a {
   text-align: right;
 }
 
+.header-link {
+  text-shadow: 0 0 5px black;
+}
+
 /* ------------------- up-link  -------------------*/
 .up-link {
   position: fixed;
@@ -86,6 +91,7 @@ a {
 
 .banner {
   position: relative;
+  background-color: #000;
 }
 .banner-title {
   position: absolute;
@@ -97,22 +103,137 @@ a {
   line-height: 1.618;
   font-weight: bold;
   text-align: center;
+  text-shadow: 0px 0px 10px black;
 }
 .banner-img {
   display: block;
   width: 100%;
+}
+.banner-index-controls {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  z-index: 11;
+  display: flex;
+  align-items: self-end;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 50px;
+  box-sizing: border-box;
+  transform: translateX(-50%);
+}
+.banner-index-controls-stop-btn {
+  width: 20px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin-right: 10px;
+  display: none;
+  cursor: pointer;
+}
+.banner-index-controls-stop-btn.active {
+  display: initial;
+}
+.banner-index-controls-stop-btn-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.banner-index-controls-play-btn {
+  width: 20px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin-right: 10px;
+  display: none;
+  cursor: pointer;
+}
+.banner-index-controls-play-btn.active {
+  display: initial;
+}
+.banner-index-controls-play-btn-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.banner .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.banner-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 10;
+}
+.banner-controls-prev-btn {
+  position: absolute;
+  left: 20px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  opacity: 0.8;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.banner-controls-prev-btn:hover {
+  opacity: 1;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+.banner-controls-prev-btn-img {
+  display: block;
+  width: 70%;
+  height: 70%;
+  margin: 0 auto;
+}
+.banner-controls-next-btn {
+  position: absolute;
+  right: 20px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  opacity: 0.8;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.banner-controls-next-btn:hover {
+  opacity: 1;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+.banner-controls-next-btn-img {
+  display: block;
+  width: 70%;
+  height: 70%;
+  margin: 0 auto;
 }
 .banner-wave-img {
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
+  z-index: 10;
+  opacity: 0.2;
 }
 .banner__waves-wrapper {
   position: absolute;
   width: 100%;
   left: 0;
   bottom: 0;
+  overflow: hidden;
+  z-index: 10;
 }
 .banner__waves {
   position: relative;
@@ -149,7 +270,680 @@ a {
 }
 @media screen and (max-width: 550px) {
   .banner__waves {
-    height: 60px;
-    min-height: 60px;
+    height: 40px;
+    min-height: 40px;
+  }
+}
+
+.creatures {
+  background-image: url(../../../images/amusementpark/aquarium/background_img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 150px 0;
+  background-color: #000;
+}
+.creatures-title {
+  max-width: 1200px;
+  width: 100%;
+  padding: 35px 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0f0e85;
+  margin: 0 auto 150px auto;
+}
+
+.creature {
+  display: flex;
+}
+.creature:not(:last-child) {
+  margin-bottom: 150px;
+}
+.creature:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+.creature-desc {
+  width: 51.25%;
+  background-color: rgba(31, 21, 92, 0.6);
+}
+.creature-name {
+  width: 277.5px;
+  font-size: 30px;
+  padding: 35px 0;
+  background-color: #0f0e85;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+}
+.creature-info {
+  max-width: 482.5px;
+  width: 100%;
+  margin: 50px auto;
+  color: #fff;
+  font-size: 25px;
+  line-height: 1.618;
+  max-height: 310px;
+  overflow: auto;
+  box-sizing: border-box;
+  padding-right: 20px;
+}
+.creature-info::-webkit-scrollbar {
+  width: 8px; /* 스크롤바의 너비 */
+}
+.creature-info::-webkit-scrollbar-thumb {
+  background: #175ab7; /* 스크롤바의 색상 */
+  border-radius: 10px;
+}
+.creature-info::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.2); /*스크롤바 뒷 배경 색상*/
+}
+.creature-media {
+  width: 48.75%;
+}
+.creature-img {
+  width: 100%;
+  display: block;
+}
+
+.photos {
+  background-color: #11106b;
+  padding: 150px 0;
+}
+.photos-title {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 30px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.photo-slider {
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 145px;
+}
+
+.photo-img {
+  display: block;
+  width: 100%;
+}
+.photo-info {
+  background-color: white;
+  box-sizing: border-box;
+  height: 100px;
+  padding: 40px 0;
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+}
+
+.photo-controls {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  transform: translateY(-50%);
+  margin: 0 auto;
+}
+.photo-controls-prev-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.photo-controls-prev-btn:hover {
+  transition: 0.1s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.photo-controls-prev-btn-img {
+  display: block;
+  width: 70%;
+  height: 70%;
+  margin: 0 auto;
+}
+.photo-controls-next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.photo-controls-next-btn:hover {
+  transition: 0.1s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.photo-controls-next-btn-img {
+  display: block;
+  width: 70%;
+  height: 70%;
+  margin: 0 auto;
+}
+
+.etc {
+  background-image: url(../../../images/amusementpark/aquarium/background_img02.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 150px 0;
+  background-color: #000;
+}
+
+.etc-wrapper {
+  display: flex;
+}
+
+.ticket {
+  box-sizing: border-box;
+  background-color: #ae4848;
+  padding: 35px;
+  flex: 1;
+}
+.ticket-title {
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 35px;
+}
+.ticket-form {
+  width: 100%;
+}
+.ticket-form-select {
+  width: 100%;
+  font-size: 20px;
+  padding: 8px 0;
+  margin-bottom: 35px;
+}
+.ticket-form-btn {
+  width: 175px;
+  font-size: 20px;
+  padding: 10px 0;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50px;
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.ticket-form-btn:hover {
+  transition: 0.1s ease-in-out;
+  background-color: #1f155c;
+  color: #fff;
+}
+
+.opening-hours {
+  box-sizing: border-box;
+  background-color: #1f155c;
+  padding: 35px;
+  flex: 1;
+}
+.opening-hours-title {
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 35px;
+}
+.opening-hours-info {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 35px;
+}
+.opening-hours-desc {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+.opening-hours-desc-detail {
+  display: inline-block;
+  color: red;
+  background-color: #fff;
+  padding: 4px;
+  margin: 0 2px;
+}
+
+.notice {
+  box-sizing: border-box;
+  background-color: #1a671d;
+  padding: 35px;
+  flex: 1;
+}
+.notice-title {
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 35px;
+}
+.notice-desc {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.618;
+}
+.notice-date {
+  font-size: 14px;
+}
+
+.community {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  background-color: #0d8090;
+}
+.community-media {
+  flex: 1;
+}
+.community-media-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.community-desc {
+  flex: 2;
+  box-sizing: border-box;
+  padding: 50px;
+}
+.community-desc-title {
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 35px;
+}
+.community-desc-link {
+  display: block;
+  box-sizing: border-box;
+  width: 277.5px;
+  font-size: 20px;
+  padding: 15px;
+  text-align: center;
+  border-radius: 30px;
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  margin: 0 auto;
+}
+.community-desc-link:hover {
+  transition: 0.1s ease-in-out;
+  background-color: #1f155c;
+  color: #fff;
+}
+
+.helper {
+  box-sizing: border-box;
+  background-color: #990d94;
+  padding: 50px;
+  max-width: 400px;
+  width: 100%;
+}
+.helper-title {
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 25px;
+}
+.helper-tel {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+}
+.helper-tel:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .creatures {
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .creature {
+    box-sizing: border-box;
+  }
+  .creature-info {
+    max-height: 230px;
+  }
+  .photos {
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .etc {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .creature-info-wrap {
+    box-sizing: border-box;
+    padding: 0 20px;
+  }
+  .creature-info {
+    max-height: 150px;
+    font-size: 23px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .creature-name {
+    width: 40%;
+    padding: 20px;
+    font-size: 28px;
+  }
+  .creature-info {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .banner-title {
+    font-size: 25px;
+  }
+  .banner-controls-prev-btn {
+    width: 50px;
+    height: 50px;
+  }
+  .banner-controls-next-btn {
+    width: 50px;
+    height: 50px;
+  }
+  .banner-index-controls {
+    padding: 10px;
+  }
+  .banner-index-controls-stop-btn {
+    width: 15px;
+    margin: 0 5px;
+  }
+  .banner-index-controls-play-btn {
+    width: 15px;
+    margin: 0 5px;
+  }
+  .banner .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+  }
+  .creatures {
+    padding: 100px 20px;
+  }
+  .creatures-title {
+    font-size: 23px;
+    margin-bottom: 100px;
+  }
+  .creature {
+    display: block;
+  }
+  .creature:not(:last-child) {
+    margin-bottom: 100px;
+  }
+  .creature-name {
+    font-size: 20px;
+  }
+  .creature-desc {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .creature-info-wrap {
+    padding: 50px;
+  }
+  .creature-info {
+    margin: 0 auto;
+    max-height: initial;
+    padding-right: 0;
+    font-size: 18px;
+  }
+  .creature-media {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .photos {
+    padding: 100px 20px;
+  }
+  .photos-title {
+    font-size: 23px;
+  }
+  .photo-slider {
+    padding: 0 80px;
+  }
+  .photo-info {
+    padding: 0;
+    height: 80px;
+    line-height: 80px;
+    font-size: 18px;
+  }
+  .etc-wrapper {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .etc {
+    padding: 100px 20px;
+  }
+  .ticket {
+    padding: 35px 10%;
+  }
+  .ticket-title {
+    font-size: 20px;
+  }
+  .ticket-form-select {
+    font-size: 18px;
+  }
+  .ticket-form-btn {
+    width: 150px;
+    font-size: 17px;
+    padding: 7px 0;
+  }
+  .opening-hours {
+    padding: 35px 10%;
+  }
+  .opening-hours-title {
+    font-size: 20px;
+  }
+  .opening-hours-info {
+    font-size: 20px;
+  }
+  .opening-hours-desc {
+    font-size: 17px;
+  }
+  .notice {
+    padding: 35px 10%;
+  }
+  .notice-title {
+    font-size: 20px;
+  }
+  .community-desc-title {
+    font-size: 20px;
+  }
+  .community-desc-link {
+    width: 202px;
+    padding: 10px;
+    font-size: 17px;
+  }
+  .helper {
+    max-width: initial;
+    padding: 35px 10%;
+  }
+  .helper-title {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .banner-title {
+    font-size: 15px;
+  }
+  .banner-controls-prev-btn {
+    width: 30px;
+    height: 30px;
+  }
+  .banner-controls-next-btn {
+    width: 30px;
+    height: 30px;
+  }
+  .banner-index-controls {
+    bottom: 5%;
+    align-items: baseline;
+    padding: 5px;
+  }
+  .banner-index-controls-stop-btn {
+    width: 10px;
+  }
+  .banner-index-controls-play-btn {
+    width: 10px;
+  }
+  .banner .swiper-pagination-bullet {
+    width: 9px;
+    height: 9px;
+  }
+  .creatures {
+    padding: 50px 0;
+  }
+  .creatures-title {
+    width: calc(100% - 40px);
+    font-size: 15px;
+    line-height: 1.618;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 50px;
+    word-break: break-all;
+  }
+  .creature {
+    position: relative;
+  }
+  .creature:not(:last-child) {
+    margin-bottom: 50px;
+  }
+  .creature-name {
+    font-size: 16px;
+  }
+  .creature-desc {
+    width: calc(100% - 40px);
+  }
+  .creature-info-wrap {
+    padding: 20px;
+  }
+  .creature-info {
+    font-size: 14px;
+  }
+  .creature-media {
+    width: 100%;
+  }
+  .photos {
+    padding: 50px 20px;
+  }
+  .photos-title {
+    font-size: 16px;
+    word-break: break-all;
+    line-height: 1.618;
+  }
+  .photo-controls-prev-btn {
+    width: 30px;
+    height: 30px;
+  }
+  .photo-controls-next-btn {
+    width: 30px;
+    height: 30px;
+  }
+  .photo-slider {
+    padding: 0 40px;
+  }
+  .photo-info {
+    box-sizing: border-box;
+    padding: 0 20px;
+    font-size: 15px;
+    word-break: break-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .etc {
+    padding: 50px 20px;
+  }
+  .etc-wrapper {
+    width: 100%;
+  }
+  .ticket-title {
+    font-size: 18px;
+  }
+  .ticket-form-select {
+    font-size: 16px;
+  }
+  .ticket-form-btn {
+    width: 40%;
+    font-size: 15px;
+    padding: 5px 0;
+  }
+  .opening-hours-title {
+    font-size: 18px;
+  }
+  .opening-hours-info {
+    font-size: 16px;
+  }
+  .opening-hours-desc {
+    font-size: 15px;
+  }
+  .notice-title {
+    font-size: 18px;
+  }
+  .notice-desc {
+    font-size: 14px;
+  }
+  .notice-date {
+    margin-left: 10px;
+  }
+  .community-media {
+    display: none;
+  }
+  .community-desc-title {
+    font-size: 18px;
+    line-height: 1.618;
+    word-break: break-all;
+  }
+  .community-desc-link {
+    width: 60%;
+    font-size: 15px;
+  }
+  .helper {
+    max-width: initial;
+    padding: 35px 10%;
+  }
+  .helper-title {
+    font-size: 18px;
+  }
+  .helper-tel {
+    font-size: 16px;
   }
 }/*# sourceMappingURL=aquarium2024.css.map */
