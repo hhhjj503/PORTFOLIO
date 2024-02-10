@@ -202,6 +202,10 @@ a {
         border: 1px solid rgba($color: #fff, $alpha: 0.8);
       }
 
+      &:focus-visible {
+        border: 3px solid #fff;
+      }
+
       &-img {
         display: block;
         width: 70%;
@@ -227,6 +231,10 @@ a {
       &:hover {
         opacity: 1;
         border: 1px solid rgba($color: #fff, $alpha: 0.8);
+      }
+
+      &:focus-visible {
+        border: 3px solid #fff;
       }
 
       &-img {
@@ -449,9 +457,13 @@ a {
     background-color: transparent;
     border: 1px solid #fff;
     cursor: pointer;
+
     &:hover {
       transition: 0.1s ease-in-out;
       background-color: rgba($color: #fff, $alpha: 0.2);
+    }
+    &:focus-visible {
+      border: 3px solid #fff;
     }
 
     &-img {
@@ -472,9 +484,13 @@ a {
     background-color: transparent;
     border: 1px solid #fff;
     cursor: pointer;
+
     &:hover {
       transition: 0.1s ease-in-out;
       background-color: rgba($color: #fff, $alpha: 0.2);
+    }
+    &:focus-visible {
+      border: 3px solid #fff;
     }
 
     &-img {
