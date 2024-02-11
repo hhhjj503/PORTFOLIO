@@ -57,6 +57,7 @@ window.addEventListener("DOMContentLoaded", function () {
     direction: "horizontal",
     loop: true,
     touchRatio: false,
+    centeredSlides: true,
 
     // Navigation arrows
     navigation: {
@@ -65,11 +66,11 @@ window.addEventListener("DOMContentLoaded", function () {
     },
 
     breakpoints: {
-      320: { slidesPerView: 1, spaceBetween: 20 },
+      321: { slidesPerView: 2.5, spaceBetween: 20 },
 
-      550: { slidesPerView: 2, spaceBetween: 20 },
+      551: { slidesPerView: 2.5, spaceBetween: 20 },
 
-      821: { slidesPerView: 3, spaceBetween: 30 },
+      821: { slidesPerView: 2.5, spaceBetween: 20 },
 
       1201: {
         slidesPerView: 3,

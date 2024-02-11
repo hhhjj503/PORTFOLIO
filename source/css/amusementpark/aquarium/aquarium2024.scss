@@ -414,7 +414,7 @@ a {
 .photo-slider {
   position: relative;
   box-sizing: border-box;
-  padding: 0 145px;
+  padding: 0 100px;
 }
 
 .photo {
@@ -445,6 +445,7 @@ a {
   bottom: 0;
   transform: translateY(-50%);
   margin: 0 auto;
+  z-index: 10;
 
   &-prev-btn {
     position: absolute;
@@ -841,7 +842,7 @@ a {
   }
 
   .photos {
-    padding: 100px 20px;
+    padding: 100px 0;
 
     &-title {
       font-size: 23px;
@@ -850,7 +851,16 @@ a {
 
   .photo {
     &-slider {
-      padding: 0 80px;
+      padding: 0;
+    }
+
+    &-controls {
+      &-prev-btn {
+        left: 20px;
+      }
+      &-next-btn {
+        right: 20px;
+      }
     }
 
     &-info {
@@ -873,6 +883,8 @@ a {
 
   .ticket {
     padding: 35px 10%;
+    border-radius: 20px;
+    margin-bottom: 20px;
 
     &-title {
       font-size: 20px;
@@ -891,6 +903,9 @@ a {
 
   .opening-hours {
     padding: 35px 10%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+
     &-title {
       font-size: 20px;
     }
@@ -906,12 +921,19 @@ a {
 
   .notice {
     padding: 35px 10%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+
     &-title {
       font-size: 20px;
     }
   }
 
   .community {
+    border-radius: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+
     &-desc-title {
       font-size: 20px;
     }
@@ -926,6 +948,7 @@ a {
   .helper {
     max-width: initial;
     padding: 35px 10%;
+    border-radius: 20px;
 
     &-title {
       font-size: 20px;
@@ -933,7 +956,7 @@ a {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 550px) {
   .banner {
     &-title {
       font-size: 15px;
@@ -1015,7 +1038,7 @@ a {
   }
 
   .photos {
-    padding: 50px 20px;
+    padding: 50px 0;
 
     &-title {
       font-size: 16px;
@@ -1036,7 +1059,7 @@ a {
       }
     }
     &-slider {
-      padding: 0 40px;
+      padding: 0;
     }
 
     &-info {

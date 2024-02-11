@@ -371,7 +371,7 @@ a {
 .photo-slider {
   position: relative;
   box-sizing: border-box;
-  padding: 0 145px;
+  padding: 0 100px;
 }
 
 .photo-img {
@@ -400,6 +400,7 @@ a {
   bottom: 0;
   transform: translateY(-50%);
   margin: 0 auto;
+  z-index: 10;
 }
 .photo-controls-prev-btn {
   position: absolute;
@@ -743,13 +744,19 @@ a {
     margin: 0 auto;
   }
   .photos {
-    padding: 100px 20px;
+    padding: 100px 0;
   }
   .photos-title {
     font-size: 23px;
   }
   .photo-slider {
-    padding: 0 80px;
+    padding: 0;
+  }
+  .photo-controls-prev-btn {
+    left: 20px;
+  }
+  .photo-controls-next-btn {
+    right: 20px;
   }
   .photo-info {
     padding: 0;
@@ -767,6 +774,8 @@ a {
   }
   .ticket {
     padding: 35px 10%;
+    border-radius: 20px;
+    margin-bottom: 20px;
   }
   .ticket-title {
     font-size: 20px;
@@ -781,6 +790,8 @@ a {
   }
   .opening-hours {
     padding: 35px 10%;
+    border-radius: 20px;
+    margin-bottom: 20px;
   }
   .opening-hours-title {
     font-size: 20px;
@@ -793,9 +804,16 @@ a {
   }
   .notice {
     padding: 35px 10%;
+    border-radius: 20px;
+    margin-bottom: 20px;
   }
   .notice-title {
     font-size: 20px;
+  }
+  .community {
+    border-radius: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
   }
   .community-desc-title {
     font-size: 20px;
@@ -808,12 +826,13 @@ a {
   .helper {
     max-width: initial;
     padding: 35px 10%;
+    border-radius: 20px;
   }
   .helper-title {
     font-size: 20px;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 550px) {
   .banner-title {
     font-size: 15px;
   }
@@ -877,7 +896,7 @@ a {
     width: 100%;
   }
   .photos {
-    padding: 50px 20px;
+    padding: 50px 0;
   }
   .photos-title {
     font-size: 16px;
@@ -893,7 +912,7 @@ a {
     height: 30px;
   }
   .photo-slider {
-    padding: 0 40px;
+    padding: 0;
   }
   .photo-info {
     box-sizing: border-box;

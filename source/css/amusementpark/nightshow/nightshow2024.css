@@ -288,6 +288,9 @@ label {
   margin-bottom: 140px;
 }
 
+.festival-gallery .swiper-slide-active {
+}
+
 .festival-img {
   width: 100%;
   border-radius: 20px;
@@ -414,6 +417,11 @@ label {
   cursor: pointer;
 }
 
+.wish-btn:hover {
+  transition: 0.2s ease-in-out;
+  background-color: #a600a0;
+}
+
 .wish-desc {
   margin-top: 45px;
   text-align: center;
@@ -515,8 +523,6 @@ label {
 
   .festival-gallery {
     box-sizing: border-box;
-    padding-left: 20px;
-    padding-right: 20px;
   }
 
   .announcement {
@@ -570,22 +576,22 @@ label {
   .festival-gallery-title {
     font-size: 32px;
     margin-bottom: 100px;
+    box-sizing: border-box;
+    padding: 0 20px;
   }
 
   .festival-gallery {
-    padding: 220px 60px;
+    padding: 220px 0;
   }
 
   .festival-gallery-controls-btn-left {
     width: 40px;
     height: 40px;
-    left: -40px;
   }
 
   .festival-gallery-controls-btn-right {
     width: 40px;
     height: 40px;
-    right: -40px;
   }
 
   .wish {
@@ -708,7 +714,7 @@ label {
   }
 
   .festival-gallery {
-    padding: 150px 60px;
+    padding: 150px 0;
   }
 
   .festival-gallery-title {

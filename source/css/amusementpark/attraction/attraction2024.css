@@ -223,7 +223,7 @@ a {
     font-size: 18px;
   }
   .container {
-    padding: 20px 20px 10px 20px;
+    padding: 20px 20px 0 20px;
   }
   .attraction-gallery {
     display: flex;
@@ -231,14 +231,17 @@ a {
     justify-content: space-between;
   }
   .attraction-link {
-    width: 48%;
+    width: calc((100% - 20px) / 2);
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   .attraction-title {
     height: 40px;
     line-height: 40px;
     font-size: 15px;
+    box-sizing: border-box;
+    text-align: left;
+    padding-left: 20px;
   }
   .attraction-gallery:not(:last-child) {
     margin-bottom: 10px;
