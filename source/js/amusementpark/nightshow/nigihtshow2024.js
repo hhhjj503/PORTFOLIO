@@ -1,4 +1,28 @@
 window.addEventListener("DOMContentLoaded", () => {
+  //scroll-up
+  const scrollUpLink = document.querySelector(".up-link");
+  const html = document.querySelector("html");
+  const bannerStopBtn = document.querySelector(".banner-stop-btn");
+  const bannerPlayBtn = document.querySelector(".banner-play-btn");
+
+  //모바일 사이드용 메뉴 open close
+  const mobileHeaderMenuBtn = document.querySelector(".mobile-side-menu-btn");
+  const mobileHeaderMenuCloseBtn = document.querySelector(
+    ".mobile-side-menu-close-btn"
+  );
+  const mobileSideMenu = document.querySelector(".mobile-side-menu");
+
+  //스와이퍼 오류방지를 위한 변수선언
+  let festivalSwiper = undefined;
+
+  scrollUpLink.addEventListener("click", function () {
+    html.scrollTop = 0;
+  });
+  window.addEventListener("scroll", () => {
+    if (html.scrollTop > 1) scrollUpLink.classList.add("active");
+    else scrollUpLink.classList.remove("active");
+  });
+
   const bannerSwiper = new Swiper(".banner .swiper", {
     // Optional parameters
     direction: "horizontal",
@@ -62,55 +86,12 @@ window.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-  const festivalSwiper = new Swiper(".festival-gallery .swiper", {
-    // Optional parameters
-    direction: "horizontal",
-    loop: true,
-    centeredSlides: true,
-    //touchRatio: false,
+  initializeSwipers();
 
-    // Navigation arrows
-    navigation: {
-      nextEl: ".festival-gallery-controls .festival-gallery-controls-btn-right",
-      prevEl: ".festival-gallery-controls .festival-gallery-controls-btn-left",
-    },
+  window.addEventListener("resize", () => {
+    festivalSwiper.destroy();
 
-    breakpoints: {
-      0: { slidesPerView: 1.5, spaceBetween: 20 },
-
-      487: { slidesPerView: 1.5, spaceBetween: 20 },
-
-      551: {
-        slidesPerView: 2.5,
-        spaceBetween: 20,
-      },
-
-      1201: {
-        slidesPerView: 4.5,
-        spaceBetween: 30,
-      },
-    },
-  });
-
-  //scroll-up
-  const scrollUpLink = document.querySelector(".up-link");
-  const html = document.querySelector("html");
-  const bannerStopBtn = document.querySelector(".banner-stop-btn");
-  const bannerPlayBtn = document.querySelector(".banner-play-btn");
-
-  //모바일 사이드용 메뉴 open close
-  const mobileHeaderMenuBtn = document.querySelector(".mobile-side-menu-btn");
-  const mobileHeaderMenuCloseBtn = document.querySelector(
-    ".mobile-side-menu-close-btn"
-  );
-  const mobileSideMenu = document.querySelector(".mobile-side-menu");
-
-  scrollUpLink.addEventListener("click", function () {
-    html.scrollTop = 0;
-  });
-  window.addEventListener("scroll", () => {
-    if (html.scrollTop > 1) scrollUpLink.classList.add("active");
-    else scrollUpLink.classList.remove("active");
+    initializeSwipers();
   });
 
   bannerStopBtn.addEventListener("click", () => {
@@ -131,4 +112,39 @@ window.addEventListener("DOMContentLoaded", () => {
   mobileHeaderMenuCloseBtn.addEventListener("click", function () {
     mobileSideMenu.classList.remove("active");
   });
+
+  //오류작동방지를 위한 siwper 재배치
+  function initializeSwipers() {
+    festivalSwiper = new Swiper(".festival-gallery .swiper", {
+      // Optional parameters
+      direction: "horizontal",
+      loop: true,
+      centeredSlides: true,
+      //touchRatio: false,
+
+      // Navigation arrows
+      navigation: {
+        nextEl:
+          ".festival-gallery-controls .festival-gallery-controls-btn-right",
+        prevEl:
+          ".festival-gallery-controls .festival-gallery-controls-btn-left",
+      },
+
+      breakpoints: {
+        0: { slidesPerView: 1.5, spaceBetween: 20 },
+
+        487: { slidesPerView: 1.5, spaceBetween: 20 },
+
+        551: {
+          slidesPerView: 2.5,
+          spaceBetween: 20,
+        },
+
+        1201: {
+          slidesPerView: 4.5,
+          spaceBetween: 30,
+        },
+      },
+    });
+  }
 });

@@ -17,6 +17,10 @@ window.addEventListener("DOMContentLoaded", function () {
   const bannerPlayBtn = document.querySelector(
     ".banner-index-controls-play-btn"
   );
+  let bannerSwiper = undefined;
+  let photoSlider = undefined;
+
+  initializeSwipers();
 
   bannerStopBtn.addEventListener("click", () => {
     bannerSwiper.autoplay.stop();
@@ -30,7 +34,14 @@ window.addEventListener("DOMContentLoaded", function () {
     bannerStopBtn.classList.add("active");
   });
 
-  const bannerSwiper = new Swiper(".banner .swiper", {
+  window.addEventListener("resize", () => {
+    photoSlider.destroy();
+
+    initializeSwipers();
+  });
+
+  //배너슬라이드는 destroy 사용하지않음
+  bannerSwiper = new Swiper(".banner .swiper", {
     // Optional parameters
     direction: "horizontal",
     loop: true,
@@ -52,32 +63,35 @@ window.addEventListener("DOMContentLoaded", function () {
       clickable: "true",
     },
   });
-  const photoSlider = new Swiper(".photos .swiper", {
-    // Optional parameters
-    direction: "horizontal",
-    loop: true,
-    touchRatio: false,
-    centeredSlides: true,
 
-    // Navigation arrows
-    navigation: {
-      nextEl: ".photo-controls-next-btn",
-      prevEl: ".photo-controls-prev-btn",
-    },
+  function initializeSwipers() {
+    photoSlider = new Swiper(".photos .swiper", {
+      // Optional parameters
+      direction: "horizontal",
+      loop: true,
+      touchRatio: false,
+      centeredSlides: true,
 
-    breakpoints: {
-      321: { slidesPerView: 2.5, spaceBetween: 20 },
-
-      551: { slidesPerView: 2.5, spaceBetween: 20 },
-
-      821: { slidesPerView: 2.5, spaceBetween: 20 },
-
-      1201: {
-        slidesPerView: 3,
-        spaceBetween: 30,
+      // Navigation arrows
+      navigation: {
+        nextEl: ".photo-controls-next-btn",
+        prevEl: ".photo-controls-prev-btn",
       },
-    },
-  });
+
+      breakpoints: {
+        321: { slidesPerView: 2.5, spaceBetween: 20 },
+
+        551: { slidesPerView: 2.5, spaceBetween: 20 },
+
+        821: { slidesPerView: 2.5, spaceBetween: 20 },
+
+        1201: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
+    });
+  }
 
   scrollUpLink.addEventListener("click", function () {
     html.scrollTop = 0;
