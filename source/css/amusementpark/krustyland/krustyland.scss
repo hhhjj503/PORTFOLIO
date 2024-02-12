@@ -8,6 +8,10 @@
 (블록주석 : shit alt all) */
 @import url(../module/background-img.css);
 
+:root {
+  color-scheme: light only;
+}
+
 html {
   font-size: 62.5%; /*  setting rem  */
   scroll-behavior: smooth;

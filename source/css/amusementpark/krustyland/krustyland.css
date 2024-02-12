@@ -5,6 +5,10 @@
 /* 자주사용되는 모듈 
 (블록주석 : shit alt all) */
 @import url(../module/background-img.css);
+:root {
+  color-scheme: light only;
+}
+
 html {
   font-size: 62.5%; /*  setting rem  */
   scroll-behavior: smooth;

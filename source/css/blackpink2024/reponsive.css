@@ -61,11 +61,6 @@
     word-break: break-all;
   }
 
-  .gallery-slider-wrap {
-    padding: 0 60px;
-    box-sizing: border-box;
-  }
-
   .gallery-controller .previous-btn {
     left: 20px;
   }
@@ -214,7 +209,7 @@
   }
 
   .gallery {
-    padding: 50px 15px;
+    padding: 50px 0;
   }
 
   .gallery ul {
