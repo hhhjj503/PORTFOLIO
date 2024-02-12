@@ -79,7 +79,7 @@ window.addEventListener("DOMContentLoaded", function () {
       },
 
       breakpoints: {
-        321: { slidesPerView: 2.5, spaceBetween: 20 },
+        319: { slidesPerView: 2.5, spaceBetween: 20, touchRatio: true },
 
         551: { slidesPerView: 2.5, spaceBetween: 20 },
 

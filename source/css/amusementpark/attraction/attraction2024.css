@@ -130,6 +130,11 @@ a {
   margin-right: 30px;
   margin-bottom: 30px;
   overflow: hidden;
+  top: 0;
+}
+.attraction-link:hover {
+  transition: 0.2s ease-in-out;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 .attraction-link-size-large {
   width: 380px;
@@ -141,7 +146,7 @@ a {
   transition: 0.3s ease-in-out;
 }
 .attraction-link:hover .attraction-title, .attraction-link:focus .attraction-title {
-  opacity: 1;
+  background-color: rgba(132, 34, 159, 0.8);
 }
 .attraction-link:hover .attraction-link-img {
   transform: scale(1.15);
