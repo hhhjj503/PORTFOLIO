@@ -20,8 +20,33 @@ window.addEventListener("DOMContentLoaded", function () {
   let bannerSwiper = undefined;
   let photoSlider = undefined;
 
-  initializeSwipers();
+  const creatureNames = document.querySelectorAll(".creature-name");
+  const creatureInfo = document.querySelector(".creature-info");
 
+  //js를 이용한 미디어 쿼리
+  const jsMediaQuery = window.matchMedia("screen and (min-width : 1051px)");
+
+  initializeSwipers();
+  setPaddingLeftValue();
+
+  //스크롤시 위로가기 기능
+  scrollUpLink.addEventListener("click", function () {
+    html.scrollTop = 0;
+  });
+  window.addEventListener("scroll", () => {
+    if (html.scrollTop > 1) scrollUpLink.classList.add("active");
+    else scrollUpLink.classList.remove("active");
+  });
+
+  //모바일 헤더메뉴펼치기
+  mobileHeaderMenuBtn.addEventListener("click", function () {
+    mobileSideMenu.classList.add("active");
+  });
+  mobileHeaderMenuCloseBtn.addEventListener("click", function () {
+    mobileSideMenu.classList.remove("active");
+  });
+
+  //swiper 버튼
   bannerStopBtn.addEventListener("click", () => {
     bannerSwiper.autoplay.stop();
     bannerStopBtn.classList.remove("active");
@@ -38,7 +63,20 @@ window.addEventListener("DOMContentLoaded", function () {
     photoSlider.destroy();
 
     initializeSwipers();
+    if (jsMediaQuery.matches) {
+      setPaddingLeftValue();
+    }
   });
+
+  //creature name 요소의 padding 값을 동적으로 변경
+  function setPaddingLeftValue() {
+    creatureNames.forEach((creature) => {
+      const marginValue = getComputedStyle(creatureInfo).marginLeft;
+      creature.style.paddingLeft = marginValue;
+      creature.style.paddingRight = marginValue;
+      console.log(creature.style.paddingLeft, creature.style.paddingRight);
+    });
+  }
 
   //배너슬라이드는 destroy 사용하지않음
   bannerSwiper = new Swiper(".banner .swiper", {
@@ -92,19 +130,4 @@ window.addEventListener("DOMContentLoaded", function () {
       },
     });
   }
-
-  scrollUpLink.addEventListener("click", function () {
-    html.scrollTop = 0;
-  });
-  window.addEventListener("scroll", () => {
-    if (html.scrollTop > 1) scrollUpLink.classList.add("active");
-    else scrollUpLink.classList.remove("active");
-  });
-
-  mobileHeaderMenuBtn.addEventListener("click", function () {
-    mobileSideMenu.classList.add("active");
-  });
-  mobileHeaderMenuCloseBtn.addEventListener("click", function () {
-    mobileSideMenu.classList.remove("active");
-  });
 });

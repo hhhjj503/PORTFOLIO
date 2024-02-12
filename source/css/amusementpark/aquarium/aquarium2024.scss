@@ -327,10 +327,12 @@ a {
   &-title {
     max-width: 1200px;
     width: 100%;
-    padding: 35px 0;
+    padding: 35px 20px;
+    box-sizing: border-box;
     text-align: center;
     font-size: 30px;
     font-weight: bold;
+    line-height: 1.618;
     color: #fff;
     background-color: #0f0e85;
     margin: 0 auto 150px auto;
@@ -354,11 +356,12 @@ a {
   }
 
   &-name {
-    width: 277.5px;
+    max-width: 277.5px;
+    width: fit-content;
     font-size: 30px;
-    padding: 35px 0;
+    padding: 35px 66.25px; /* creature info 와의 left값 일치 */
     background-color: #0f0e85;
-    text-align: center;
+    text-align: left;
     font-weight: bold;
     color: #fff;
     border-radius: 0 30px 30px 0;
@@ -754,14 +757,16 @@ a {
       max-height: 150px;
       font-size: 23px;
     }
+
+    &-name {
+      font-size: 28px;
+      padding: 20px 30px 20px 20px !important;
+    }
   }
 }
 @media screen and (max-width: 900px) {
   .creature {
     &-name {
-      width: 40%;
-      padding: 20px;
-      font-size: 28px;
     }
 
     &-info {
@@ -821,7 +826,10 @@ a {
     }
 
     &-name {
+      width: fit-content;
       font-size: 20px;
+      padding: 20px 60px 20px 50px !important;
+      text-align: left;
     }
 
     &-desc {
@@ -1023,6 +1031,7 @@ a {
 
     &-name {
       font-size: 16px;
+      padding: 20px 30px 20px 20px !important;
     }
 
     &-desc {
