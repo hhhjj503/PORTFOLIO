@@ -5,6 +5,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200;300;400;500&family=Roboto:wght@400;500&display=swap");
 
 /*================================ base ================================*/
+:root {
+  color-scheme: light only;
+}
+
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background-color: #fff !important;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
