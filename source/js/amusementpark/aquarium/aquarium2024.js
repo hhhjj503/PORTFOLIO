@@ -74,7 +74,6 @@ window.addEventListener("DOMContentLoaded", function () {
       const marginValue = getComputedStyle(creatureInfo).marginLeft;
       creature.style.paddingLeft = marginValue;
       creature.style.paddingRight = marginValue;
-      console.log(creature.style.paddingLeft, creature.style.paddingRight);
     });
   }
 
