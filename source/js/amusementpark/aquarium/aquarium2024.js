@@ -33,6 +33,7 @@ window.addEventListener("DOMContentLoaded", function () {
     origin: "bottom",
     duration: 500,
     easing: "ease-in-out",
+    delay: 150,
   };
 
   ScrollReveal().reveal(scrollReveals, slideUp);
