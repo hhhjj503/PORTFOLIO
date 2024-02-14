@@ -20,7 +20,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const slideUp = {
     distance: "150px",
     origin: "bottom",
-    duration: 1000,
+    duration: 1200,
     easing: "ease-in-out",
     delay: 150,
     interval: 300,

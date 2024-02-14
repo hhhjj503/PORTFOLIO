@@ -15,10 +15,22 @@ window.addEventListener("DOMContentLoaded", () => {
   const slideUp = {
     distance: "150px",
     origin: "bottom",
-    duration: 1000,
+    duration: 1200,
     easing: "ease-in-out",
     delay: 100,
   };
+
+  //이미지 미리로드
+  const preloadImgs = document.querySelectorAll("img");
+
+  function preload(array) {
+    for (let i = 0; i < array.lenght; i++) {
+      const img = new Image();
+      img.src = array[i].src;
+    }
+  }
+
+  preload(preloadImgs);
 
   ScrollReveal().reveal(scrollReveals, slideUp);
 
