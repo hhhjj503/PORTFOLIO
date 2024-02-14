@@ -18,9 +18,9 @@ window.addEventListener("DOMContentLoaded", () => {
   //scrollreveal 라이브러리
   const scrollReveals = document.querySelectorAll(".scroll-reveal");
   const slideUp = {
-    distance: "120px",
+    distance: "150px",
     origin: "bottom",
-    duration: 700,
+    duration: 1000,
     easing: "ease-in-out",
     delay: 150,
     interval: 300,

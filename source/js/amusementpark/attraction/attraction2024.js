@@ -10,6 +10,18 @@ window.addEventListener("DOMContentLoaded", () => {
   );
   const mobileSideMenu = document.querySelector(".mobile-side-menu");
 
+  //scrollreveal 라이브러리
+  const scrollReveals = document.querySelectorAll(".scroll-reveal");
+  const slideUp = {
+    distance: "150px",
+    origin: "bottom",
+    duration: 1000,
+    easing: "ease-in-out",
+    delay: 100,
+  };
+
+  ScrollReveal().reveal(scrollReveals, slideUp);
+
   scrollUpLink.addEventListener("click", function () {
     html.scrollTop = 0;
   });
