@@ -209,8 +209,8 @@ label {
   cursor: pointer;
 }
 
-.banner-controls-btn-left:focus,
-.banner-controls-btn-right:focus {
+.banner-controls-btn-left:focus-visible,
+.banner-controls-btn-right:focus-visible {
   border: 5px solid #fff;
   opacity: 1;
 }
