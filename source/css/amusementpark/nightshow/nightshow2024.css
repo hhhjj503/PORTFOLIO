@@ -19,7 +19,9 @@ body::after {
   z-index: -1;
 
   /* load images */
-  content: url(../../../images/amusementpark/nightshow/2024_gallery_bg.jpg)
+  content: url(../../../images/amusementpark/nightshow/2024_banner01.jpg)
+    url(../../../images/amusementpark/nightshow/2024_banner02.jpg)
+    url(../../../images/amusementpark/nightshow/2024_gallery_bg.jpg)
     url(../../../images/amusementpark/nightshow/20204_wish_bg.jpg)
     url(../../../images/amusementpark/nightshow/announcement_bg.png)
     url(../../../images/amusementpark/nightshow/2024_footer_bg.jpg);

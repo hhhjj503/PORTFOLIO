@@ -9,6 +9,14 @@
 body {
   font-family: "Open Sans", sans-serif;
 }
+body::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  content: url(../../../images/amusementpark/aquarium/banner_01.jpg) url(../../../images/amusementpark/aquarium/banner_02.jpg);
+}
 
 .skip-link {
   position: absolute;

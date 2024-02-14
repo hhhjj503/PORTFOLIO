@@ -15,12 +15,7 @@ body::after {
   height: 0;
   overflow: hidden;
   z-index: -1;
-
-  /* load images */
-  content: url(../../images/amusementpark/nightshow/nightshow_fireworks.PNG)
-    url(../../images/amusementpark/attraction/rollercoaster.PNG)
-    url(../../images/amusementpark/krustyland.PNG)
-    url(../../images/amusementpark/aquarium.PNG);
+  content: url(../../images/amusementpark/nightshow/nightshow_fireworks.PNG) url(../../images/amusementpark/attraction/rollercoaster.PNG) url(../../images/amusementpark/krustyland.PNG) url(../../images/amusementpark/aquarium.PNG);
 }
 
 :root {
@@ -170,4 +165,4 @@ body::after {
     font-size: 14px;
     line-height: 25px;
   }
-} /*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

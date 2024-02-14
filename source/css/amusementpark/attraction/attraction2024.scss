@@ -9,6 +9,16 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+
+  &::after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+
+    content: url(../../../images/amusementpark/attraction/banner_img.jpg);
+  }
 }
 
 .skip-link {
