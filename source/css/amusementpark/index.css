@@ -9,6 +9,19 @@ body {
   font-family: "Nanum Gothic", "돋움", "Dotum", "Apple Gothic", sans-serif;
   overflow-x: hidden;
 }
+body::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+
+  /* load images */
+  content: url(../../images/amusementpark/nightshow/nightshow_fireworks.PNG)
+    url(../../images/amusementpark/attraction/rollercoaster.PNG)
+    url(../../images/amusementpark/krustyland.PNG)
+    url(../../images/amusementpark/aquarium.PNG);
+}
 
 :root {
   --blockwidth: 25%;
@@ -157,4 +170,4 @@ body {
     font-size: 14px;
     line-height: 25px;
   }
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */
