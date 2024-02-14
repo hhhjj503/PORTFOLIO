@@ -15,17 +15,6 @@ window.addEventListener("load", () => {
   //스와이퍼 오류방지를 위한 변수선언
   let festivalSwiper = undefined;
 
-  //scrollreveal 라이브러리
-  const scrollReveals = document.querySelectorAll(".scroll-reveal");
-  const slideUp = {
-    distance: "150px",
-    origin: "bottom",
-    duration: 1200,
-    easing: "ease-in-out",
-    delay: 150,
-    interval: 300,
-  };
-
   //이미지 미리로드
   const preloadImgs = document.querySelectorAll("img");
 
@@ -37,8 +26,6 @@ window.addEventListener("load", () => {
   }
 
   preload(preloadImgs);
-
-  ScrollReveal().reveal(scrollReveals, slideUp);
 
   scrollUpLink.addEventListener("click", function () {
     html.scrollTop = 0;
@@ -172,4 +159,13 @@ window.addEventListener("load", () => {
       },
     });
   }
+
+  AOS.init({
+    offset: 150, // Global settings:
+    delay: 100, // values from 0 to 3000, with step 50ms
+    duration: 1000, // values from 0 to 3000, with step 50ms
+    easing: "ease-in-out", // default easing for AOS animations
+    once: true, // whether animation should happen only once - while scrolling down
+  });
+  AOS.refresh();
 });

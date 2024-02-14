@@ -231,8 +231,8 @@ label {
   opacity: 1;
 }
 
-.scroll-reveal {
-  visibility: hidden;
+.aos-custom {
+  opacity: 0;
 }
 /* ------------------- gallery  -------------------*/
 

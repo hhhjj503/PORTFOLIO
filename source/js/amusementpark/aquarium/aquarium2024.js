@@ -26,16 +26,6 @@ window.addEventListener("load", function () {
   //js를 이용한 미디어 쿼리
   const jsMediaQuery = window.matchMedia("screen and (min-width : 1051px)");
 
-  //scrollreveal 라이브러리
-  const scrollReveals = document.querySelectorAll(".scroll-reveal");
-  const slideUp = {
-    distance: "150px",
-    origin: "bottom",
-    duration: 1200,
-    easing: "ease-in-out",
-    delay: 100,
-  };
-
   //이미지 미리로드
   const preloadImgs = document.querySelectorAll("img");
 
@@ -47,8 +37,6 @@ window.addEventListener("load", function () {
   }
 
   preload(preloadImgs);
-
-  ScrollReveal().reveal(scrollReveals, slideUp);
 
   initializeSwipers();
   setPaddingLeftValue();
@@ -153,4 +141,13 @@ window.addEventListener("load", function () {
       },
     });
   }
+
+  AOS.init({
+    offset: 150, // Global settings:
+    delay: 100, // values from 0 to 3000, with step 50ms
+    duration: 1000, // values from 0 to 3000, with step 50ms
+    easing: "ease-in-out", // default easing for AOS animations
+    once: true, // whether animation should happen only once - while scrolling down
+  });
+  AOS.refresh();
 });
