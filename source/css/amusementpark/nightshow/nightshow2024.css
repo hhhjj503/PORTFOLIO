@@ -103,6 +103,7 @@ label {
   font-size: 52px;
   font-weight: bold;
   text-align: center;
+  white-space: nowrap;
 }
 
 .banner-stop-btn {
@@ -541,6 +542,7 @@ label {
     font-size: 32px;
     line-height: 40px;
     word-break: keep-all;
+    white-space: wrap;
   }
 
   .banner-controls-btn-left {

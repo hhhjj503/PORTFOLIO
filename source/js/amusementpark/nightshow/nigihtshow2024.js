@@ -15,6 +15,19 @@ window.addEventListener("DOMContentLoaded", () => {
   //스와이퍼 오류방지를 위한 변수선언
   let festivalSwiper = undefined;
 
+  //scrollreveal 라이브러리
+  const scrollReveals = document.querySelectorAll(".scroll-reveal");
+  const slideUp = {
+    distance: "120px",
+    origin: "bottom",
+    duration: 700,
+    easing: "ease-in-out",
+    delay: 150,
+    interval: 300,
+  };
+
+  ScrollReveal().reveal(scrollReveals, slideUp);
+
   scrollUpLink.addEventListener("click", function () {
     html.scrollTop = 0;
   });

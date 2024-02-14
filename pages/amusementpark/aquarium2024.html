@@ -11,6 +11,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 
     <link
       rel="stylesheet"
@@ -21,6 +22,15 @@
       type="module"
       src="../../source/js/amusementpark/aquarium/aquarium2024.js"
     ></script>
+
+    <script>
+      let loading = true;
+
+      function loadingImages() {
+        loading = false;
+      }
+    </script>
+
     <title>아쿠아리움 | Amusement Park</title>
   </head>
   <body>
@@ -104,7 +114,7 @@
       </div>
     </header>
 
-    <div class="banner">
+    <div class="banner" onload="loadingImages()">
       <div class="swiper">
         <ul class="swiper-wrapper">
           <li class="swiper-slide">
@@ -313,7 +323,7 @@
 
         <div class="container">
           <div class="photo-slider">
-            <div class="swiper">
+            <div class="swiper scroll-reveal">
               <div class="swiper-wrapper">
                 <div class="photo swiper-slide">
                   <img

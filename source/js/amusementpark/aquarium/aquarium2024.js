@@ -26,6 +26,17 @@ window.addEventListener("DOMContentLoaded", function () {
   //js를 이용한 미디어 쿼리
   const jsMediaQuery = window.matchMedia("screen and (min-width : 1051px)");
 
+  //scrollreveal 라이브러리
+  const scrollReveals = document.querySelectorAll(".scroll-reveal");
+  const slideUp = {
+    distance: "100px",
+    origin: "bottom",
+    duration: 500,
+    easing: "ease-in-out",
+  };
+
+  ScrollReveal().reveal(scrollReveals, slideUp);
+
   initializeSwipers();
   setPaddingLeftValue();
 
