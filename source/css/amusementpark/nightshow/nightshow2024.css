@@ -556,7 +556,7 @@ label {
     font-size: 32px;
     line-height: 40px;
     word-break: keep-all;
-    white-space: wrap;
+    white-space: normal;
   }
 
   .banner-controls-btn-left {
