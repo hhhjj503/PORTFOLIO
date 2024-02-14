@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
   //scroll-up
   const scrollUpLink = document.querySelector(".up-link");
   const html = document.querySelector("html");

@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
   //scroll-up
   const scrollUpLink = document.querySelector(".up-link");
   const html = document.querySelector("html");
@@ -25,6 +25,18 @@ window.addEventListener("DOMContentLoaded", () => {
     delay: 150,
     interval: 300,
   };
+
+  //이미지 미리로드
+  const preloadImgs = document.querySelectorAll("img");
+
+  function preload(array) {
+    for (let i = 0; i < array.lenght; i++) {
+      const img = new Image();
+      img.src = array[i].src;
+    }
+  }
+
+  preload(preloadImgs);
 
   ScrollReveal().reveal(scrollReveals, slideUp);
 
