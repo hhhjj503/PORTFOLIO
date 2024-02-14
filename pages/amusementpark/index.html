@@ -11,12 +11,20 @@
     <link rel="stylesheet" href="../../source/css/amusementpark/index.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="../../source/js/amusementpark/index.js"></script>
+
+    <script>
+      let loading = true;
+
+      function loadingImages() {
+        loading = false;
+      }
+    </script>
   </head>
   <body>
     <!-- main -->
     <main class="main">
       <!-- wrapper -->
-      <div class="main__inner">
+      <div class="main__inner" onload="loadingImages()">
         <div class="main__theme theme main__theme--background-nightshow">
           <div class="theme__title_wrap">
             <h5 class="theme__title">밤하늘의<br />나이트쇼</h5>
