@@ -64,6 +64,10 @@ a {
   text-align: right;
 }
 
+.scroll-reveal {
+  visibility: hidden;
+}
+
 /* ------------------- up-link  -------------------*/
 .up-link {
   position: fixed;

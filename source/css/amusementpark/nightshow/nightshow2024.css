@@ -231,6 +231,9 @@ label {
   opacity: 1;
 }
 
+.scroll-reveal {
+  visibility: hidden;
+}
 /* ------------------- gallery  -------------------*/
 
 .gallery {
