@@ -669,6 +669,11 @@ a {
   .design-img {
     max-height: 500px;
   }
+
+  .design-slider-btn {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -706,6 +711,10 @@ a {
 
   .design-img {
     max-height: 400px;
+  }
+  .design-slider-btn {
+    width: 30px;
+    height: 30px;
   }
 }
 
