@@ -8,6 +8,7 @@ window.addEventListener("load", () => {
   const vertexLis = document.querySelectorAll(".graph-vertex-li");
   const skills = document.querySelector("#skills");
   const portfolio = document.querySelector("#portfolio");
+  const designSlider = document.querySelector(".design-slider");
   const gotop = document.querySelector(".gotop");
 
   let jsOfftopElementOffsetTops = [];
@@ -93,6 +94,10 @@ window.addEventListener("load", () => {
     throttle(() => {
       const skillsTrigger = jsOfftopElementOffsetTops[1] * 0.4;
       const portfolioTrigger = jsOfftopElementOffsetTops[2] * 0.9;
+      const designTrigger = jsOfftopElementOffsetTops[3] * 0.9;
+
+      if (html.scrollTop > designTrigger) designSlider.classList.add("active");
+      else designSlider.classList.remove("active");
 
       if (html.scrollTop > skillsTrigger) skills.classList.add("active");
       else skills.classList.remove("active");
@@ -122,6 +127,31 @@ window.addEventListener("load", () => {
         vertexLis[i].classList.remove("active");
       });
     }
+  });
+
+  //배너슬라이드는 destroy 사용하지않음
+  const designSliderSwiper = new Swiper(".ly-design .swiper", {
+    // Optional parameters
+    direction: "horizontal",
+    loop: true,
+    touchRatio: true,
+    // autoplay: {
+    //   delay: "2000",
+    //   disableOnInteraction: false,
+    // },
+    speed: 800,
+    slidesPerView: 1,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: ".design-slider-btn-next",
+      prevEl: ".design-slider-btn-prev",
+    },
+
+    pagination: {
+      el: ".banner-indexes",
+      clickable: "true",
+    },
   });
 
   function throttle(callback, limit = 1000 / 15) {

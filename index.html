@@ -7,6 +7,12 @@
     <meta name="color-scheme" content="light only" />
     <meta name="supported-color-schemes" content="light" />
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <link href="./source/css/index.css" rel="stylesheet" type="text/css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="./source/js/index.js"></script>
@@ -28,6 +34,9 @@
             </li>
             <li class="header-li">
               <a class="header-link" href="#portfolio">portfolio</a>
+            </li>
+            <li class="header-li">
+              <a class="header-link" href="#design">design</a>
             </li>
             <li class="header-li">
               <a class="header-link" href="#contact">contact</a>
@@ -320,6 +329,79 @@
         </div>
         <!-- //portfolio -->
       </div>
+
+      <div class="bg-white">
+        <div id="design" class="ly-design js-offtop-element">
+          <h2 class="title mb-70 align-center">design</h2>
+
+          <div class="design-slider">
+            <div class="swiper">
+              <ul class="design-ul swiper-wrapper">
+                <li class="design-li swiper-slide">
+                  <a
+                    class="design-li-link"
+                    href="./pages/starbucks/index.html"
+                    target="_blank"
+                    ><img
+                      class="design-img width100p"
+                      src="./source/images/starbucks/starbucks_main600.png"
+                      alt="스타벅스 리뉴얼 홈페이지 이미지"
+                  /></a>
+                  <h6 class="design-li-title">홈페이지 리뉴얼</h6>
+                </li>
+                <li class="design-li swiper-slide">
+                  <img
+                    class="design-img"
+                    src="./source/images/halloween_blue.png"
+                    alt="파란색 할로윈 일러스트 작업 이미지"
+                  />
+                  <h6 class="design-li-title">엠블럼 디자인</h6>
+                </li>
+                <li class="design-li swiper-slide">
+                  <img
+                    class="design-img"
+                    src="./source/images/halloween.png"
+                    alt="빨간색 할로윈 일러스트 작업 이미지"
+                  />
+                </li>
+                <li class="design-li swiper-slide">
+                  <img
+                    class="design-img"
+                    src="./source/images/banner02.png"
+                    alt="배너 이미지"
+                  />
+                  <h6 class="design-li-title">배너 디자인</h6>
+                </li>
+                <li class="design-li swiper-slide">
+                  <img
+                    class="design-img"
+                    src="./source/images/blossom.jpg"
+                    alt="벛꽃놀이 이미지"
+                  />
+                  <h6 class="design-li-title">포스터</h6>
+                </li>
+              </ul>
+            </div>
+
+            <div class="design-slider-controls">
+              <button class="design-slider-btn design-slider-btn-prev">
+                <img
+                  class="design-slider-btn-img"
+                  src="./source/images/chevron-left.svg"
+                  alt="왼쪽 화살표 이미지"
+                />
+              </button>
+              <button class="design-slider-btn design-slider-btn-next">
+                <img
+                  class="design-slider-btn-img"
+                  src="./source/images/chevron-right.svg"
+                  alt="오른쪽 화살표 이미지"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <!-- //main -->
 
@@ -335,16 +417,6 @@
           </li>
           <li class="info-li"><a href="tel:010-3793-7843">010 3793 7843</a></li>
         </ul>
-        <img
-          class="portrait-img"
-          src="./source/images/halloween_blue.png"
-          alt="파란색 할로윈 일러스트 작업 이미지"
-        />
-        <img
-          class="portrait-img"
-          src="./source/images/halloween.png"
-          alt="빨간색 할로윈 일러스트 작업 이미지"
-        />
       </div>
       <!-- //contact -->
     </footer>
