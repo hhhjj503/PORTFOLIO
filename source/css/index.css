@@ -666,6 +666,10 @@ a {
     padding: 110px 0;
   }
 
+  .design-slider-controls {
+    padding: 0 20px;
+  }
+
   .design-img {
     max-height: 500px;
   }

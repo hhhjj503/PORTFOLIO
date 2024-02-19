@@ -335,6 +335,23 @@
           <h2 class="title mb-70 align-center">design</h2>
 
           <div class="design-slider">
+            <div class="design-slider-controls">
+              <button class="design-slider-btn design-slider-btn-prev">
+                <img
+                  class="design-slider-btn-img"
+                  src="./source/images/chevron-left.svg"
+                  alt="왼쪽 화살표 이미지"
+                />
+              </button>
+              <button class="design-slider-btn design-slider-btn-next">
+                <img
+                  class="design-slider-btn-img"
+                  src="./source/images/chevron-right.svg"
+                  alt="오른쪽 화살표 이미지"
+                />
+              </button>
+            </div>
+
             <div class="swiper">
               <ul class="design-ul swiper-wrapper">
                 <li class="design-li swiper-slide">
@@ -382,23 +399,6 @@
                 </li>
               </ul>
             </div>
-
-            <div class="design-slider-controls">
-              <button class="design-slider-btn design-slider-btn-prev">
-                <img
-                  class="design-slider-btn-img"
-                  src="./source/images/chevron-left.svg"
-                  alt="왼쪽 화살표 이미지"
-                />
-              </button>
-              <button class="design-slider-btn design-slider-btn-next">
-                <img
-                  class="design-slider-btn-img"
-                  src="./source/images/chevron-right.svg"
-                  alt="오른쪽 화살표 이미지"
-                />
-              </button>
-            </div>
           </div>
         </div>
       </div>
@@ -413,9 +413,13 @@
         <ul class="info-ul">
           <li class="info-li">방문해 주셔서 감사합니다</li>
           <li class="info-li">
-            <a href="mailto:kil3120@naver.com">kil3120 @ naver.com</a>
+            <a class="email" href="mailto:kil3120@naver.com"
+              >kil3120 @ naver.com</a
+            >
           </li>
-          <li class="info-li"><a href="tel:010-3793-7843">010 3793 7843</a></li>
+          <li class="info-li">
+            <a class="tel" href="tel:010-3793-7843">010 3793 7843</a>
+          </li>
         </ul>
       </div>
       <!-- //contact -->
