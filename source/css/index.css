@@ -713,6 +713,10 @@ a {
     padding: 80px 0;
   }
 
+  .design-slider-controls {
+    padding: 0 40px;
+  }
+
   .design-img {
     max-height: 400px;
   }
