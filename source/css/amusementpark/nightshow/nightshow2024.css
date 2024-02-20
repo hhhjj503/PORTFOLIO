@@ -442,7 +442,7 @@ label {
 }
 
 .wish-btn:hover {
-  transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out !important;
   background-color: #a600a0;
 }
 
@@ -771,6 +771,13 @@ label {
     margin-right: 5px;
   }
 
+  .wish-form {
+    padding: 0 20px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: initial;
+  }
+
   .wish-input {
     font-size: 16px;
   }
@@ -779,8 +786,8 @@ label {
     height: 35px;
     font-size: 14px;
   }
-  .wish-desc {
-    font-size: 12px;
+  .wish-input {
+    width: 100%;
   }
 
   .announcement {
@@ -789,8 +796,6 @@ label {
     background-position: right;
   }
   .announcement-title {
-    text-align: center;
-    word-break: keep-all;
     line-height: 30px;
     font-size: 18px;
   }
