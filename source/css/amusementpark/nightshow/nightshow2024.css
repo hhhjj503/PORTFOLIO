@@ -437,7 +437,7 @@ label {
   color: #fff;
   border-radius: 35px;
   border: none;
-  margin: 45px auto 0 auto;
+  margin: 30px auto 0 auto;
   cursor: pointer;
 }
 
@@ -449,7 +449,7 @@ label {
 .wish-desc {
   margin-top: 45px;
   text-align: center;
-  font-size: 26px;
+  font-size: 20px;
   font-weight: bold;
   color: #fff;
 }
@@ -460,23 +460,25 @@ label {
   background: url(../../../images/amusementpark/nightshow/announcement_bg.png)
     no-repeat;
   background-size: cover;
-  padding: 150px 0;
+  padding: 200px 0;
   z-index: 2;
 }
 
 .announcement-title {
   font-size: 28px;
   color: #000;
-  text-align: center;
+  text-align: left;
   margin-bottom: 100px;
   font-weight: bold;
 }
 
 .announcement-desc {
-  font-size: 28px;
+  font-size: 24px;
   color: #000;
-  margin-bottom: 70px;
-  font-weight: bold;
+  margin-bottom: 40px;
+  font-weight: 400;
+  text-align: left;
+  letter-spacing: 1px;
 }
 .announcement-welcome {
   margin-top: 130px;
@@ -558,7 +560,7 @@ label {
 
 @media screen and (max-width: 768px) {
   .banner-title {
-    font-size: 32px;
+    font-size: 30px;
     line-height: 40px;
     word-break: keep-all;
     white-space: normal;
@@ -641,16 +643,19 @@ label {
     height: 50px;
     padding: 15px 30px;
     font-size: 18px;
+    margin-top: 40px;
   }
 
   .wish-btn {
     width: 90px;
     height: 40px;
-    font-size: 18px;
+    font-size: 16px;
+    margin-top: 25px;
   }
 
   .wish-desc {
-    font-size: 20px;
+    font-size: 14px;
+    margin-top: 40px;
   }
 
   .announcement {
@@ -668,8 +673,8 @@ label {
   }
 
   .announcement-desc {
-    font-size: 20px;
-    margin-bottom: 50px;
+    font-size: 18px;
+    margin-bottom: 20px;
     box-sizing: border-box;
     line-height: 1.618;
   }
@@ -766,12 +771,16 @@ label {
     margin-right: 5px;
   }
 
-  .wish-btn {
-    height: 35px;
+  .wish-input {
     font-size: 16px;
   }
+
+  .wish-btn {
+    height: 35px;
+    font-size: 14px;
+  }
   .wish-desc {
-    font-size: 18px;
+    font-size: 12px;
   }
 
   .announcement {
@@ -787,7 +796,8 @@ label {
   }
 
   .announcement-desc {
-    font-size: 18px;
+    font-size: 16px;
+    word-break: break-all;
   }
 
   .announcement-welcome-img {
