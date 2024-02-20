@@ -714,12 +714,17 @@ a {
   }
 
   .design-slider-controls {
-    padding: 0 25px;
+    padding: 0 20px;
   }
 
   .design-img {
-    max-height: 400px;
+    max-height: 300px;
   }
+
+  .design-img.width100p {
+    width: 90%;
+  }
+
   .design-slider-btn {
     width: 30px;
     height: 30px;
