@@ -472,7 +472,6 @@ a {
 .portfolio-li {
   position: relative;
   display: flex;
-  justify-content: space-between;
   height: 450px;
   margin-bottom: 50px;
   opacity: 0;
@@ -507,19 +506,25 @@ a {
   width: auto;
   height: 100%;
   box-sizing: border-box;
-  line-height: 50px;
+  margin-left: 50px;
 }
 
 .portfolio-title {
   font-size: 24px;
   font-weight: 400;
   letter-spacing: -1px;
+  margin-bottom: 35px;
 }
 
 .portfolio-p {
   font-size: 16px;
   font-weight: 400;
   letter-spacing: -1px;
+  margin-bottom: 18px;
+}
+
+.usedlanguages-ul {
+  margin-bottom: 35px;
 }
 
 .portfolio-link {
@@ -530,6 +535,7 @@ a {
   color: white;
   font-size: 14px;
   background-color: #333;
+  line-height: 50px;
 }
 
 .portfolio-link:focus {
@@ -656,9 +662,21 @@ a {
   }
 
   .portfolio-desc {
+    margin-left: 0;
     display: block;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px;
+  }
+
+  .portfolio-title {
+    margin-bottom: 30px;
+  }
+  .portfolio-p {
+    margin-bottom: 13px;
+  }
+
+  .usedlanguages-ul {
+    margin-bottom: 30px;
   }
 
   .ly-design {
@@ -691,12 +709,20 @@ a {
   }
 
   .portfolio-desc {
-    line-height: 50px;
+    margin-left: 0;
+    box-sizing: border-box;
+    padding: 0 20px;
+    margin-top: 25px;
+  }
+
+  .portfolio-title {
+    margin-bottom: 20px;
   }
 
   .portfolio-p {
     word-break: keep-all;
     line-height: 1.618;
+    margin-bottom: 8px;
   }
 
   .portfolio-title {
@@ -706,6 +732,10 @@ a {
   .inline-radius-li {
     padding: 3px 5px;
     font-size: 12px;
+  }
+
+  .usedlanguages-ul {
+    margin-bottom: 20px;
   }
 
   .ly-design {
@@ -762,7 +792,6 @@ a {
 
 .info-li {
   font-size: 19px;
-  line-height: 30px;
 }
 
 .portrait-img {
