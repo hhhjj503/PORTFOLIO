@@ -97,6 +97,10 @@ label {
   margin: 0 auto;
 }
 
+.bolder {
+  font-weight: bold;
+}
+
 /* ------------------- banner  -------------------*/
 .banner {
   position: relative;
