@@ -111,6 +111,12 @@ window.addEventListener("load", function () {
       el: ".banner-indexes",
       clickable: "true",
     },
+
+    breakpoints: {
+      319: { touchRatio: true },
+
+      551: { touchRatio: false },
+    },
   });
 
   function initializeSwipers() {

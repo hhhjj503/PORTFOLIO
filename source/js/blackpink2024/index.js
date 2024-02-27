@@ -35,9 +35,9 @@ document.addEventListener("DOMContentLoaded", () => {
       slidesPerView: 1,
       touchRatio: true,
       autoplay: {
-        delay: "1500",
+        delay: "1000",
       },
-      speed: 700,
+      speed: 1000,
       effect: "fade",
 
       // If we need pagination
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
 
       breakpoints: {
-        319: { touchRatio: true, slidesPerView: 1.3, spaceBetween: 20 },
+        319: { touchRatio: true, slidesPerView: 1.5, spaceBetween: 20 },
 
         551: { touchRatio: true, slidesPerView: 2 },
 

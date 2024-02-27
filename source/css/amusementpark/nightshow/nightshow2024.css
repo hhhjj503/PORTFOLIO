@@ -108,18 +108,28 @@ label {
 
 .banner-img {
   width: 100%;
+  transform: scaleX(-1);
 }
 
 .banner-title {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  font-size: 52px;
-  font-weight: bold;
-  text-align: center;
+  max-width: 1200px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
+  top: 52%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 1);
+  line-height: 1.618;
+  font-size: 42px;
+  font-weight: 500;
+  text-align: left;
   white-space: nowrap;
+  z-index: 5;
+  letter-spacing: 2px;
 }
 
 .banner-stop-btn {
@@ -307,22 +317,39 @@ label {
 }
 
 .festival-gallery-title {
+  max-width: 1200px;
   width: 100%;
-  font-size: 50px;
+  margin: 0 auto;
+
+  font-size: 42px;
   line-height: 1.618;
   font-weight: bold;
   color: #fff;
-  text-align: center;
+  text-align: left;
   margin-bottom: 140px;
 }
 
+.festival-gallery .swiper-wrapper {
+  align-items: center;
+}
+
+.festival-gallery .swiper-slide {
+  opacity: 0.5 !important;
+  border-radius: 20px;
+  overflow: hidden;
+  filter: grayscale(100%);
+}
+
 .festival-gallery .swiper-slide-active {
+  transition: 0.5s ease-in-out;
+  opacity: 1 !important;
+  flex-basis: 25vw !important;
+  filter: grayscale(0%);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
 .festival-img {
   width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 0 15px #000;
 }
 
 .festival-swiper-container {
@@ -405,7 +432,7 @@ label {
 
 .wish-title {
   margin-top: 70px;
-  font-size: 45px;
+  font-size: 42px;
   color: #fff;
   text-align: center;
   font-weight: bold;
@@ -555,6 +582,10 @@ label {
     box-sizing: border-box;
   }
 
+  .festival-gallery .swiper-slide-active {
+    flex-basis: 40vw !important;
+  }
+
   .announcement {
     box-sizing: border-box;
     padding-left: 20px;
@@ -564,10 +595,8 @@ label {
 
 @media screen and (max-width: 768px) {
   .banner-title {
-    font-size: 30px;
-    line-height: 40px;
-    word-break: keep-all;
-    white-space: normal;
+    font-size: 25px;
+    left: 10%;
   }
 
   .banner-controls-btn-left {
@@ -616,13 +645,11 @@ label {
   }
 
   .festival-gallery-controls-btn-left {
-    width: 40px;
-    height: 40px;
+    display: none;
   }
 
   .festival-gallery-controls-btn-right {
-    width: 40px;
-    height: 40px;
+    display: none;
   }
 
   .wish {
@@ -707,14 +734,10 @@ label {
   }
 
   .banner-controls-btn-left {
-    width: 40px;
-    height: 40px;
-    left: 15px;
+    display: none;
   }
   .banner-controls-btn-right {
-    width: 40px;
-    height: 40px;
-    right: 15px;
+    display: none;
   }
 
   .banner-index-controls {
@@ -754,6 +777,10 @@ label {
     font-size: 25px;
     margin-bottom: 30px;
     word-break: keep-all;
+  }
+
+  .festival-gallery .swiper-slide-active {
+    flex-basis: initial !important;
   }
 
   .wish {

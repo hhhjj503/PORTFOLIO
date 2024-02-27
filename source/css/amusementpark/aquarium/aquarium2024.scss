@@ -117,14 +117,24 @@ a {
   &-title {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 55%;
+    max-width: 1200px;
+    width: fit-content;
+    box-sizing: border-box;
+    padding: 0 20px;
     transform: translate(-50%, -50%);
     color: #fff;
     font-size: 35px;
     line-height: 1.618;
-    font-weight: bold;
+    font-weight: 500;
     text-align: center;
+    letter-spacing: -1px;
     text-shadow: 0px 0px 10px rgba($color: #000, $alpha: 1);
+
+    &-span-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &-img {
@@ -389,7 +399,7 @@ a {
     width: 100%;
     margin: 50px auto;
     color: #fff;
-    font-size: 25px;
+    font-size: 23px;
     line-height: 1.618;
     max-height: 310px;
     overflow: auto;
@@ -993,12 +1003,10 @@ a {
     }
 
     &-controls-prev-btn {
-      width: 30px;
-      height: 30px;
+      display: none;
     }
     &-controls-next-btn {
-      width: 30px;
-      height: 30px;
+      display: none;
     }
 
     &-index-controls {
@@ -1034,8 +1042,9 @@ a {
       line-height: 1.618;
       box-sizing: border-box;
       padding: 20px;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
       word-break: break-all;
+      text-align: left;
     }
   }
 
@@ -1043,7 +1052,7 @@ a {
     position: relative;
 
     &:not(:last-child) {
-      margin-bottom: 50px;
+      margin-bottom: 30px;
     }
 
     &-name {
@@ -1066,6 +1075,11 @@ a {
     &-media {
       width: 100%;
     }
+
+    &-img {
+      box-sizing: border-box;
+      padding: 0 20px;
+    }
   }
 
   .photos {
@@ -1075,18 +1089,20 @@ a {
       font-size: 16px;
       word-break: break-all;
       line-height: 1.618;
+      box-sizing: border-box;
+      padding: 0 20px;
+      text-align: center;
+      margin-bottom: 30px;
     }
   }
 
   .photo {
     &-controls {
       &-prev-btn {
-        width: 30px;
-        height: 30px;
+        display: none;
       }
       &-next-btn {
-        width: 30px;
-        height: 30px;
+        display: none;
       }
     }
     &-slider {

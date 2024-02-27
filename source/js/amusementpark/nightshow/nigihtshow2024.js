@@ -44,7 +44,7 @@ window.addEventListener("load", () => {
       delay: "2000",
       disableOnInteraction: false,
     },
-    speed: 600,
+    speed: 1000,
 
     //myswiper.autoplay.stop()
     //swiper.pause() .resume() .stop()
@@ -59,6 +59,16 @@ window.addEventListener("load", () => {
     navigation: {
       nextEl: ".banner-controls .banner-controls-btn-right",
       prevEl: ".banner-controls .banner-controls-btn-left",
+    },
+
+    breakpoints: {
+      319: {
+        touchRatio: true,
+      },
+
+      551: {
+        touchRatio: false,
+      },
     },
   });
 
