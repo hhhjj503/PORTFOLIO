@@ -12,6 +12,9 @@ window.addEventListener("load", () => {
   );
   const mobileSideMenu = document.querySelector(".mobile-side-menu");
 
+  //js를 이용한 미디어 쿼리
+  const jsMediaQuery = window.matchMedia("screen and (max-width : 550px)");
+
   //스와이퍼 오류방지를 위한 변수선언
   let festivalSwiper = undefined;
 
@@ -111,9 +114,10 @@ window.addEventListener("load", () => {
   initializeSwipers();
 
   window.addEventListener("resize", () => {
-    festivalSwiper.destroy();
-
-    initializeSwipers();
+    if (!jsMediaQuery.matches) {
+      festivalSwiper.destroy();
+      initializeSwipers();
+    }
   });
 
   bannerStopBtn.addEventListener("click", () => {
@@ -143,6 +147,7 @@ window.addEventListener("load", () => {
       loop: true,
       centeredSlides: true,
       //touchRatio: false,
+      centeredSlidesBounds: true,
 
       // Navigation arrows
       navigation: {
