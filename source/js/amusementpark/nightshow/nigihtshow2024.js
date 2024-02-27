@@ -13,7 +13,7 @@ window.addEventListener("load", () => {
   const mobileSideMenu = document.querySelector(".mobile-side-menu");
 
   //js를 이용한 미디어 쿼리
-  const jsMediaQuery = window.matchMedia("screen and (max-width : 550px)");
+  const jsMediaQuery = window.matchMedia("screen and (min-width : 550px)");
 
   //스와이퍼 오류방지를 위한 변수선언
   let festivalSwiper = undefined;
@@ -114,7 +114,7 @@ window.addEventListener("load", () => {
   initializeSwipers();
 
   window.addEventListener("resize", () => {
-    if (!jsMediaQuery.matches) {
+    if (jsMediaQuery.matches) {
       festivalSwiper.destroy();
       initializeSwipers();
     }

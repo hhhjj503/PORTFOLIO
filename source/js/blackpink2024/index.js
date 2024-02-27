@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
   let gallerySlider = undefined;
   let mvSliderWrap = undefined;
 
+  //js를 이용한 미디어 쿼리
+  const jsMediaQuery = window.matchMedia("screen and (min-width : 550px)");
+
   initializeSwipers();
 
   //scroll-up
@@ -17,13 +20,16 @@ document.addEventListener("DOMContentLoaded", () => {
     if (html.scrollTop > 1) scrollUpLink.classList.add("active");
     else scrollUpLink.classList.remove("active");
   });
-  window.addEventListener("resize", () => {
-    bannerImgsSlider.destroy();
-    memberInfoSlider.destroy();
-    gallerySlider.destroy();
-    mvSliderWrap.destroy();
 
-    initializeSwipers();
+  window.addEventListener("resize", () => {
+    if (jsMediaQuery) {
+      bannerImgsSlider.destroy();
+      memberInfoSlider.destroy();
+      gallerySlider.destroy();
+      mvSliderWrap.destroy();
+
+      initializeSwipers();
+    }
   });
 
   //swiper 오작동 예방을 위한 재할당 함수
