@@ -23,9 +23,28 @@
 }
 
 .header-link {
+  position: relative;
   font-size: 18px;
   color: #fff;
   font-weight: bold;
+}
+
+.header-link:after {
+  position: absolute;
+  content: "";
+  display: block;
+  left: 0;
+  width: 0%;
+  bottom: -10px;
+  height: 3px;
+  z-index: 10;
+  background-color: #fff;
+  border: 50px;
+}
+
+.header-list li:hover .header-link:after {
+  transition: 0.5s ease;
+  width: 100%;
 }
 
 .mobile-header-list {

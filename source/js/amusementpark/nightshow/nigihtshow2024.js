@@ -44,10 +44,10 @@ window.addEventListener("load", () => {
     loop: true,
     touchRatio: false,
     autoplay: {
-      delay: "2000",
+      delay: "2500",
       disableOnInteraction: false,
     },
-    speed: 1000,
+    speed: 1500,
 
     //myswiper.autoplay.stop()
     //swiper.pause() .resume() .stop()

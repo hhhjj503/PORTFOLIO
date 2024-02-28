@@ -99,7 +99,7 @@ window.addEventListener("load", function () {
       delay: "2000",
       disableOnInteraction: false,
     },
-    speed: 800,
+    speed: 1500,
 
     // Navigation arrows
     navigation: {
