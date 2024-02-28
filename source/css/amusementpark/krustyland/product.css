@@ -466,7 +466,7 @@ body {
   }
 }
 .main .row-table th {
-  background-color: #fbc717;
+  font-weight: bold;
 }
 .main__review-pager {
   width: 100%;
