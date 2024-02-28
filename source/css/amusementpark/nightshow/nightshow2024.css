@@ -496,17 +496,23 @@ label {
   color: #000;
   text-align: left;
   margin-bottom: 100px;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .announcement-desc {
   font-size: 24px;
-  color: #000;
+  color: #272727;
   margin-bottom: 40px;
   font-weight: 400;
   text-align: left;
-  letter-spacing: 1px;
+  letter-spacing: -1px;
+  word-spacing: 2px;
 }
+
+.bold {
+  font-weight: bold;
+}
+
 .announcement-welcome {
   margin-top: 130px;
   text-align: right;
