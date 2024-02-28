@@ -717,13 +717,14 @@ a {
   }
 
   .portfolio-title {
-    margin-bottom: 25px;
+    margin-bottom: 22px;
   }
 
   .portfolio-p {
     word-break: keep-all;
     line-height: 1.618;
     margin-bottom: 8px;
+    font-size: 15px;
   }
 
   .portfolio-title {
@@ -736,7 +737,7 @@ a {
   }
 
   .usedlanguages-ul {
-    margin-bottom: 25px;
+    margin-bottom: 22px;
   }
 
   .ly-design {
