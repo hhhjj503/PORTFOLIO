@@ -411,8 +411,8 @@ label {
 }
 
 .wish-img-list {
+  display: none;
   padding: 0 102.5px;
-  display: flex;
   box-sizing: border-box;
 }
 
