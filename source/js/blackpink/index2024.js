@@ -112,4 +112,10 @@ window.addEventListener("load", function () {
   setTimeout(function () {
     AOS.refresh();
   }, 1500);
+  setTimeout(function () {
+    AOS.refresh();
+  }, 2000);
+  setTimeout(function () {
+    AOS.refresh();
+  }, 2500);
 });
