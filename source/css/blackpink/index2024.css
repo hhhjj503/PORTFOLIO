@@ -466,6 +466,10 @@ header {
     padding: 0 20px;
   }
 
+  .albumCards {
+    overflow: hidden;
+  }
+
   .theshow-title {
     box-sizing: border-box;
     padding: 0 20px;
@@ -493,7 +497,7 @@ header {
     width: 90%;
   }
   .pink-smoke-img {
-    width: 110%;
+    width: 100%;
     object-position: center;
   }
 
@@ -611,7 +615,6 @@ header {
     display: block;
     box-sizing: border-box;
     padding: 0 20px;
-    width: 120%;
   }
 
   .info {
