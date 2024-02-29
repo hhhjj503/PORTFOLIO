@@ -451,7 +451,7 @@ header {
 }
 
 /*------------------------- media query -------------------------*/
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1280px) {
   .container {
     box-sizing: border-box;
     padding: 0 20px;
