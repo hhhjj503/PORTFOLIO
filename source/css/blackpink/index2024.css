@@ -438,7 +438,7 @@ header {
   position: absolute;
   top: 51.5%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) !important;
 
   font-size: 70px;
   font-family: "Joti One", serif;
@@ -713,7 +713,6 @@ header {
   }
 
   .theshow-img {
-    transform: rotate(-90deg);
     width: 90%;
     display: block;
     margin: 0 auto;
@@ -738,6 +737,7 @@ header {
   .pink-bar-img {
     height: 50px;
     margin: 0;
+    margin-top: 5px;
   }
 
   .last {

@@ -12,9 +12,9 @@ window.addEventListener("load", function () {
       loop: true,
       slidesPerView: 1,
       touchRatio: true,
-      // autoplay: {
-      //   delay: "1000",
-      // },
+      autoplay: {
+        delay: "1000",
+      },
       speed: 1000,
       effect: "fade",
 
@@ -37,10 +37,8 @@ window.addEventListener("load", function () {
       loop: true,
       slidesPerView: 1,
       touchRatio: true,
-      // autoplay: {
-      //   delay: "1000",
-      // },
-      speed: 1500,
+
+      speed: 1000,
       effect: "slide",
 
       // If we need pagination
@@ -62,9 +60,7 @@ window.addEventListener("load", function () {
       loopedSlides: 1,
       loop: true,
       slidesPerView: 5.5,
-      autoplay: {
-        delay: "1000",
-      },
+
       speed: 1500,
       spaceBetween: 30,
       slidesPerGroup: 1,
