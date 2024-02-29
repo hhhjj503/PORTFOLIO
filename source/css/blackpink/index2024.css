@@ -640,26 +640,26 @@ header {
   }
 
   .member-img {
-    height: 250px;
+    height: 280px;
   }
 
   .member-solo-img {
-    height: 250px;
+    height: 280px;
     position: relative;
     right: 30px;
   }
 
   .member-title {
-    font-size: 30px;
-    padding-left: 40px;
+    font-size: 25px;
+    padding-left: 60px;
   }
 
   .newtour-img {
-    height: 250px;
+    height: 280px;
   }
 
   .pink-line {
-    height: 80px;
+    height: 60px;
   }
 
   .inner {
