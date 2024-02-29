@@ -1,0 +1,750 @@
+@charset "UTF-8";
+@import url(../reset.css);
+
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Joti+One&family=Mada:wght@200..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*------------------------- header -------------------------*/
+header {
+  width: 100%;
+  background-color: #000;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  line-height: 60px;
+  font-size: 24px;
+  color: #f4a5ba;
+  font-weight: bold;
+  font-family: "Mada", "Open Sans", sans-serif;
+}
+
+/*------------------------- banner -------------------------*/
+.banner {
+  position: relative;
+  background-color: #000;
+}
+
+.banner-img {
+  width: 100%;
+}
+
+.banner-controller {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.banner-btn {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  opacity: 0.5;
+  padding: 0;
+  transition: 0.5s ease;
+}
+
+.banner-btn:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+}
+
+.banner-btn-img {
+  display: block;
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.banner-btn-img:hover {
+  cursor: pointer;
+}
+
+.banner-slider-pagenation {
+  bottom: 30px !important;
+}
+
+.banner .swiper-pagination-bullet {
+  width: 2.083333%;
+  height: 5px;
+  border-radius: 0px;
+  background-color: #fff;
+}
+
+/*------------------------- intro -------------------------*/
+.intro {
+  margin-top: 100px;
+}
+
+.group-main-img {
+  display: block;
+  margin: 0 auto;
+  width: 63.157894%;
+}
+
+.desc {
+  position: relative;
+  padding-top: 50px;
+}
+
+.pink-smoke-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: block;
+  margin: 0 auto;
+  width: 74.53125%;
+  z-index: -1;
+}
+
+.info {
+  width: 33.333333%;
+  padding: 30px;
+  background-color: #000;
+  margin: 0 auto;
+  box-sizing: border-box;
+  color: #fff;
+  line-height: 1.618;
+}
+
+.info-highlight {
+  color: #f4a5ba;
+  font-weight: bold;
+}
+
+.info p {
+  font-size: 16px;
+  word-spacing: 1px;
+}
+
+/*------------------------- member -------------------------*/
+.member {
+  margin-top: 400px;
+  position: relative;
+}
+
+.member-img {
+  display: block;
+  width: 100%;
+  height: 690px;
+  object-fit: contain;
+}
+
+.member-solo-img {
+  display: block;
+  width: fit-content;
+  height: 690px;
+  object-fit: contain;
+}
+
+.member-li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 72.5px;
+}
+
+.member-title {
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.member-controller {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.member-btn {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  opacity: 0.5;
+  padding: 0;
+  transition: 0.5s ease;
+}
+
+.member-btn:hover {
+  background-color: rgba(255, 255, 255, 0);
+  opacity: 1;
+}
+
+.member-btn-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.pink-line {
+  width: 100%;
+  background-color: #f4a5ba;
+  height: 100px;
+  position: absolute;
+  /* top: 45.7971%; */
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+/*------------------------- newtour -------------------------*/
+.newtour {
+  position: relative;
+  margin-top: 150px;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 72.5px;
+}
+
+.newtour-title {
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.newtour-img {
+  height: 680px;
+}
+
+/*------------------------- albumCards -------------------------*/
+.albumCards {
+  margin-top: 300px;
+  position: relative;
+}
+
+.albumCards-title {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  font-size: 60px;
+  font-weight: 600;
+  text-align: center;
+  color: #2c1c26;
+}
+
+.wing-statue-img {
+  display: block;
+  width: 54.94719%;
+  margin: 0 auto;
+}
+
+.card-slider {
+  position: relative;
+  top: -200px;
+  overflow: visible !important;
+  transition: 1s ease-in-out;
+  cursor: pointer;
+}
+
+.card-li {
+  position: relative;
+  border-radius: 20px;
+  transition: 0.4s ease-in-out;
+
+  perspective: 1100px;
+}
+
+.card-wrap {
+  width: inherit;
+  height: 100%;
+  position: relative;
+  transition: 0.4s;
+  transform-style: preserve-3d;
+}
+
+.card-img {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.backface {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ec9fbf;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+.backface-title {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Mada", "Open Sans", sans-serif;
+
+  letter-spacing: 5px;
+  padding: 6px;
+  color: #000;
+  color: #ec9fbf;
+  text-shadow: -1px -1px #ffffff, 1px 1px #000;
+  box-shadow: -1px -1px #000, 1px 1px #fff;
+}
+
+.card-li:hover .card-wrap {
+  transform: rotateY(180deg);
+}
+
+.card-slider .swiper-slide-active {
+  position: relative;
+  top: -100px !important;
+  animation: move;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move {
+  0% {
+    top: -100px;
+  }
+
+  100% {
+    top: -50px;
+  }
+}
+
+/*------------------------- the show -------------------------*/
+.theshow {
+  margin-top: 400px;
+}
+
+.theshow-title {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 70px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: -1px -1px #fff, 1px 1px #000, -2px -2px #000, 2px 2px #fff;
+  letter-spacing: 5px;
+}
+
+.theshow-img {
+  display: block;
+  width: 45%;
+  margin-left: 90px;
+}
+
+.theshow-desc {
+  position: relative;
+  top: -100px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-size: 70px;
+  font-weight: bold;
+  color: #fff;
+
+  text-shadow: -1px -1px #ec9fbf, 1px 1px #e44788, -2px -2px #e44788,
+    2px 2px #ec9fbf;
+
+  letter-spacing: 5px;
+}
+
+.theshow-desc p {
+  width: 50%;
+  margin-left: auto;
+}
+
+.pink-bar-img {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/*------------------------- last -------------------------*/
+
+.last {
+  position: relative;
+  margin-top: 500px;
+}
+
+.last-title {
+  position: absolute;
+  top: 51.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 70px;
+  font-family: "Joti One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.door-img {
+  width: 100%;
+}
+
+/*------------------------- media query -------------------------*/
+@media screen and (max-width: 1200px) {
+  .container {
+    box-sizing: border-box;
+    padding: 0 20px;
+  }
+
+  .info {
+    width: 60%;
+  }
+
+  .member-controller {
+    box-sizing: border-box;
+    padding: 0 20px;
+  }
+
+  .theshow-title {
+    box-sizing: border-box;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner {
+    padding: 20px 0;
+  }
+
+  .banner-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .banner .swiper-pagination-bullet {
+    width: 5%;
+    height: 5px;
+    border-radius: 0px;
+    background-color: #fff;
+  }
+
+  .group-main-img {
+    width: 90%;
+  }
+  .pink-smoke-img {
+    width: 110%;
+    object-position: center;
+  }
+
+  .info p {
+    font-size: 15px;
+  }
+
+  .member {
+    margin-top: 200px;
+    position: relative;
+  }
+  .member-img {
+    height: 400px;
+  }
+
+  .member-solo-img {
+    height: 400px;
+  }
+
+  .member-title {
+    font-size: 50px;
+  }
+
+  .newtour-img {
+    height: 400px;
+  }
+
+  .inner {
+    padding: 0 20px;
+  }
+
+  .newtour-title {
+    font-size: 50px;
+  }
+
+  .albumCards {
+    margin-top: 200px;
+  }
+
+  .albumCards-title {
+    font-size: 35px;
+    white-space: nowrap;
+  }
+
+  .wing-statue-img {
+    width: 90%;
+  }
+  .card-slider {
+    top: -100px;
+  }
+
+  .card-slider .swiper-slide-active {
+    top: -50px !important;
+  }
+
+  .backface-title {
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 500;
+  }
+
+  .theshow {
+    margin-top: 200px;
+  }
+
+  .theshow-title {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .theshow-img {
+    margin-left: 20px;
+    width: 60%;
+    height: 400px;
+    object-fit: contain;
+  }
+
+  .theshow-desc {
+    top: 0;
+    font-size: 40px;
+  }
+
+  .pink-bar-img {
+    height: 80px;
+  }
+
+  .last {
+    margin-top: 200px;
+  }
+
+  .last-title {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .banner-img {
+    transform: scale(1.4);
+  }
+
+  .banner-btn {
+    display: none;
+  }
+  .banner-slider-pagenation {
+    bottom: 10% !important;
+  }
+
+  .group-main-img {
+    display: block;
+    box-sizing: border-box;
+    padding: 0 20px;
+    width: 100%;
+  }
+  .pink-smoke-img {
+    display: block;
+    box-sizing: border-box;
+    padding: 0 20px;
+    width: 120%;
+  }
+
+  .info {
+    width: calc(100% - 40px);
+  }
+
+  .info p {
+    font-size: 13px;
+  }
+
+  .member {
+    margin-top: 100px;
+    position: relative;
+  }
+
+  .member-li {
+    padding: 0;
+  }
+
+  .member-btn {
+    width: 30px;
+    height: 30px;
+  }
+
+  .member-img {
+    height: 250px;
+  }
+
+  .member-solo-img {
+    height: 250px;
+    position: relative;
+    right: 30px;
+  }
+
+  .member-title {
+    font-size: 30px;
+    padding-left: 40px;
+  }
+
+  .newtour-img {
+    height: 250px;
+  }
+
+  .pink-line {
+    height: 80px;
+  }
+
+  .inner {
+    padding: 0 20px;
+  }
+
+  .newtour-title {
+    font-size: 30px;
+  }
+
+  .albumCards {
+    margin-top: 100px;
+  }
+
+  .albumCards-title {
+    font-size: 18px;
+    white-space: nowrap;
+    letter-spacing: 1px;
+  }
+
+  .wing-statue-img {
+    width: calc(100% - 40px);
+  }
+  .card-slider {
+    top: -50px;
+  }
+
+  .card-slider .swiper-slide-active {
+    top: -25px !important;
+  }
+
+  .card-img {
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .backface {
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .backface-title {
+    font-size: 10px;
+    font-weight: 400;
+  }
+
+  .theshow {
+    margin-top: 100px;
+  }
+
+  .theshow-title {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .theshow-img {
+    transform: rotate(-90deg);
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .theshow-desc {
+    top: 0;
+    font-size: 30px;
+    text-align: left;
+    text-shadow: -1px -1px #fff, 1px 1px #000;
+  }
+
+  .theshow-desc p {
+    margin: 0;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.3;
+    text-shadow: -1px -1px #ec9fbf, 1px 1px #e44788;
+  }
+
+  .pink-bar-img {
+    height: 50px;
+    margin: 0;
+  }
+
+  .last {
+    margin-top: 100px;
+  }
+
+  .last-title {
+    font-size: 20px;
+  }
+}
