@@ -62,9 +62,9 @@ window.addEventListener("load", function () {
       loopedSlides: 1,
       loop: true,
       slidesPerView: 5.5,
-      // autoplay: {
-      //   delay: "1000",
-      // },
+      autoplay: {
+        delay: "1000",
+      },
       speed: 1500,
       spaceBetween: 30,
       slidesPerGroup: 1,
