@@ -239,7 +239,7 @@ header {
   z-index: 10;
 
   font-size: 60px;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
   color: #2c1c26;
 }
@@ -353,7 +353,7 @@ header {
 
 .solo-title {
   font-size: 50px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 2px;
   margin-left: calc(72.5px + 30px);
   margin-bottom: 30px;
@@ -384,26 +384,27 @@ header {
 .newsingle {
   position: relative;
   margin-top: 400px;
-  height: 300px;
   width: 100%;
 
-  background-image: url(../../images/blackpink/pinkvenom.png);
+  /* background-image: url(../../images/blackpink/pinkvenom.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  background-color: #000;
+  background-color: #000; */
 }
 
 .newsingle-title {
   font-size: 60px;
   font-weight: 600;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 .newsingle-img {
   display: block;
   width: 23.125%;
+  margin: 0 auto;
 }
 
 /*------------------------- the show -------------------------*/
@@ -605,7 +606,7 @@ header {
   }
 
   .solo-cover {
-    width: 48%;
+    width: calc((100% - 20px) / 2);
     margin: 0 0 20px 0;
   }
 
@@ -618,6 +619,7 @@ header {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    object-position: top;
   }
 
   .newsingle {
@@ -701,12 +703,13 @@ header {
   }
 
   .member {
-    margin-top: 100px;
+    margin-top: 200px;
     position: relative;
   }
 
   .member-li {
     padding: 0;
+    justify-content: space-around;
   }
 
   .member-btn {
@@ -714,18 +717,15 @@ header {
     height: 30px;
   }
 
-  .member-img {
-    height: 280px;
-  }
-
   .member-solo-img {
     height: 280px;
     position: relative;
-    right: 30px;
+    right: -15px;
   }
 
   .member-title {
     font-size: 25px;
+    transform: translateX(-30px);
   }
 
   .newsingle-img {
@@ -745,7 +745,7 @@ header {
   }
 
   .albumCards {
-    margin-top: 100px;
+    margin-top: 200px;
   }
 
   .albumCards-title {
@@ -758,7 +758,7 @@ header {
     width: calc(100% - 40px);
   }
   .card-slider {
-    top: -50px !important;
+    top: initial !important;
   }
 
   .card-slider .swiper-slide-active {
@@ -783,7 +783,7 @@ header {
   }
 
   .solo {
-    margin-top: 100px;
+    margin-top: 200px;
   }
 
   .solo-title {
@@ -794,11 +794,11 @@ header {
 
   .solo-wrap {
     margin: 0;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 
   .solo-cover {
-    width: 45%;
+    width: calc((100% - 20px) / 2);
     margin: 0 0 20px 0;
   }
 
@@ -814,11 +814,11 @@ header {
   }
 
   .newsingle {
-    margin-top: 100px;
+    margin-top: 200px;
   }
 
   .theshow {
-    margin-top: 100px;
+    margin-top: 200px;
   }
 
   .theshow-title {
@@ -858,7 +858,7 @@ header {
   }
 
   .last {
-    margin-top: 100px;
+    margin-top: 200px;
   }
 
   .last-title {
