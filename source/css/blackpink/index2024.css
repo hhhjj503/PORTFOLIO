@@ -28,7 +28,7 @@ header {
   line-height: 60px;
   font-size: 24px;
   color: #f4a5ba;
-  font-weight: bold;
+  font-weight: 600;
   font-family: "Mada", "Open Sans", sans-serif;
 }
 
@@ -61,21 +61,28 @@ header {
   height: 50px;
   background-color: transparent;
   border: none;
-  background-color: rgba(255, 255, 255, 0);
+
   opacity: 0.5;
   padding: 0;
   transition: 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .banner-btn:hover {
-  background-color: rgba(255, 255, 255, 0.5);
   opacity: 1;
+}
+
+.banner-btn:hover .banner-btn-img {
+  transform: scale(1.3);
+  transition: 0.3s ease-out;
 }
 
 .banner-btn-img {
   display: block;
   width: 90%;
-  height: 90%;
+  height: 70%;
   object-fit: contain;
   margin: 0 auto;
   cursor: pointer;
@@ -166,16 +173,15 @@ header {
 
 .member-li {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   box-sizing: border-box;
   padding: 0 72.5px;
 }
 
 .member-title {
-  font-size: 60px;
-  font-weight: 600;
-  letter-spacing: 2px;
+  font-size: 40px;
+  font-weight: 400;
 }
 
 .member-controller {
@@ -199,67 +205,29 @@ header {
   background-color: transparent;
   border: none;
   background-color: rgba(255, 255, 255, 0);
-  opacity: 0.5;
-  padding: 0;
+
+  padding: 10px;
   transition: 0.5s ease;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2), -1px -1px 5px rgba(0, 0, 0, 0.2);
 }
 
 .member-btn:hover {
+  transition: 0.3s ease-out;
   background-color: rgba(255, 255, 255, 0);
   opacity: 1;
 }
 
 .member-btn-img {
   display: block;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.pink-line {
-  width: 100%;
-  background-color: #f4a5ba;
-  height: 100px;
-  position: absolute;
-  /* top: 45.7971%; */
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-}
-
-/*------------------------- newtour -------------------------*/
-.newtour {
-  position: relative;
-  margin-top: 150px;
-}
-
-.inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 0 72.5px;
-}
-
-.newtour-title {
-  font-size: 60px;
-  font-weight: 600;
-  letter-spacing: 2px;
-}
-
-.newtour-img {
-  height: 680px;
+  width: 90%;
+  height: 90%;
 }
 
 /*------------------------- albumCards -------------------------*/
 .albumCards {
-  margin-top: 300px;
+  margin-top: 400px;
   position: relative;
 }
 
@@ -271,7 +239,7 @@ header {
   z-index: 10;
 
   font-size: 60px;
-  font-weight: 600;
+  font-weight: 500;
   text-align: center;
   color: #2c1c26;
 }
@@ -375,6 +343,67 @@ header {
   100% {
     top: -50px;
   }
+}
+
+/*------------------------- solo -------------------------*/
+
+.solo {
+  margin-top: 400px;
+}
+
+.solo-title {
+  font-size: 50px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-left: calc(72.5px + 30px);
+  margin-bottom: 30px;
+}
+
+.solo-wrap {
+  margin-left: calc(72.5px + 30px);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.solo-cover {
+  width: fit-content;
+  margin-right: 30px;
+}
+
+.solo-cover:last-child {
+  margin-top: 30px;
+}
+
+.solo-img {
+  display: block;
+  width: 277.5px;
+  height: 277.5px;
+}
+
+/*------------------------- newsingle -------------------------*/
+.newsingle {
+  position: relative;
+  margin-top: 400px;
+  height: 300px;
+  width: 100%;
+
+  background-image: url(../../images/blackpink/pinkvenom.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: #000;
+}
+
+.newsingle-title {
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.newsingle-img {
+  display: block;
+  width: 23.125%;
 }
 
 /*------------------------- the show -------------------------*/
@@ -522,7 +551,7 @@ header {
     font-size: 50px;
   }
 
-  .newtour-img {
+  .newsingle-img {
     height: 400px;
   }
 
@@ -530,7 +559,7 @@ header {
     padding: 0 20px;
   }
 
-  .newtour-title {
+  .newsingle-title {
     font-size: 50px;
   }
 
@@ -558,6 +587,41 @@ header {
     font-size: 12px;
     letter-spacing: 3px;
     font-weight: 500;
+  }
+
+  .solo {
+    margin-top: 200px;
+  }
+
+  .solo-title {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 50px;
+  }
+
+  .solo-wrap {
+    margin: 0;
+    justify-content: space-between;
+  }
+
+  .solo-cover {
+    width: 48%;
+    margin: 0 0 20px 0;
+  }
+
+  .solo-cover:last-child {
+    margin: 0;
+  }
+
+  .solo-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .newsingle {
+    margin-top: 200px;
   }
 
   .theshow {
@@ -595,6 +659,12 @@ header {
 }
 
 @media screen and (max-width: 550px) {
+  .title {
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+  }
+
   .banner-img {
     transform: scale(1.4);
   }
@@ -616,6 +686,10 @@ header {
     display: block;
     box-sizing: border-box;
     padding: 0 20px;
+  }
+
+  .desc {
+    padding-top: 20px;
   }
 
   .info {
@@ -652,10 +726,9 @@ header {
 
   .member-title {
     font-size: 25px;
-    padding-left: 60px;
   }
 
-  .newtour-img {
+  .newsingle-img {
     height: 280px;
   }
 
@@ -667,7 +740,7 @@ header {
     padding: 0 20px;
   }
 
-  .newtour-title {
+  .newsingle-title {
     font-size: 30px;
   }
 
@@ -703,8 +776,45 @@ header {
   }
 
   .backface-title {
-    font-size: 10px;
+    font-size: 8px;
     font-weight: 400;
+    text-shadow: -0.5px -0.5px #ffffff, 0.5px 0.5px #000;
+    box-shadow: -0.5px -0.5px #000, 0.5px 0.5px #fff;
+  }
+
+  .solo {
+    margin-top: 100px;
+  }
+
+  .solo-title {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+
+  .solo-wrap {
+    margin: 0;
+    justify-content: space-evenly;
+  }
+
+  .solo-cover {
+    width: 45%;
+    margin: 0 0 20px 0;
+  }
+
+  .solo-cover:last-child {
+    margin: 0 0 20px 0;
+  }
+
+  .solo-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .newsingle {
+    margin-top: 100px;
   }
 
   .theshow {
@@ -713,7 +823,7 @@ header {
 
   .theshow-title {
     font-size: 30px;
-    text-align: center;
+    text-align: left;
   }
 
   .theshow-img {
@@ -733,15 +843,18 @@ header {
     margin: 0;
     width: calc(100% - 40px);
     margin: 0 auto;
-    text-align: center;
+    text-align: right;
     line-height: 1.3;
     text-shadow: -1px -1px #ec9fbf, 1px 1px #e44788;
   }
 
   .pink-bar-img {
+    display: block;
+    width: 55%;
     height: 50px;
     margin: 0;
     margin-top: 5px;
+    margin-left: auto;
   }
 
   .last {

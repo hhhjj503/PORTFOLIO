@@ -60,6 +60,7 @@ window.addEventListener("load", function () {
       loopedSlides: 1,
       loop: true,
       slidesPerView: 5.5,
+      slideToClickedSlide: true,
 
       speed: 1500,
       spaceBetween: 30,
