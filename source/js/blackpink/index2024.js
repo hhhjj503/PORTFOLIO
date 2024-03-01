@@ -82,7 +82,7 @@ window.addEventListener("load", function () {
       breakpoints: {
         319: {
           touchRatio: true,
-          slidesPerView: 1.8,
+          slidesPerView: 2.5,
           spaceBetween: 20,
           centeredSlides: true,
         },

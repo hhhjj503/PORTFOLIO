@@ -758,7 +758,7 @@ header {
     width: calc(100% - 40px);
   }
   .card-slider {
-    top: initial !important;
+    top: -50px !important;
   }
 
   .card-slider .swiper-slide-active {
