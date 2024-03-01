@@ -447,6 +447,7 @@ header {
 }
 
 .door-img {
+  display: block;
   width: 100%;
 }
 
