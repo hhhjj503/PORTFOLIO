@@ -284,7 +284,7 @@ header {
 
 .card-slider {
   position: relative;
-  top: -200px;
+  top: -200px !important;
   overflow: visible !important;
   transition: 1s ease-in-out;
   cursor: pointer;
@@ -546,7 +546,7 @@ header {
     width: 90%;
   }
   .card-slider {
-    top: -100px;
+    top: -100px !important;
   }
 
   .card-slider .swiper-slide-active {
@@ -684,7 +684,7 @@ header {
     width: calc(100% - 40px);
   }
   .card-slider {
-    top: -50px;
+    top: -50px !important;
   }
 
   .card-slider .swiper-slide-active {
