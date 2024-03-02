@@ -149,6 +149,11 @@ header {
 .info p {
   font-size: 16px;
   word-spacing: 1px;
+  line-height: 1.618;
+}
+
+.info p:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 /*------------------------- member -------------------------*/
@@ -234,7 +239,7 @@ header {
 .albumCards-title {
   position: absolute;
   top: 5%;
-  left: 50%;
+  left: 49.5%;
   transform: translateX(-50%);
   z-index: 10;
 
@@ -335,28 +340,10 @@ header {
   animation-iteration-count: infinite;
 }
 
-@keyframes move {
-  0% {
-    top: -100px;
-  }
-
-  100% {
-    top: -50px;
-  }
-}
-
 /*------------------------- solo -------------------------*/
 
 .solo {
   margin-top: 400px;
-}
-
-.solo-title {
-  font-size: 50px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  margin-left: calc(72.5px + 30px);
-  margin-bottom: 30px;
 }
 
 .solo-wrap {
@@ -372,6 +359,29 @@ header {
 
 .solo-cover:last-child {
   margin-top: 30px;
+}
+
+.solo-title {
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-left: calc(72.5px + 30px);
+  margin-bottom: 30px;
+}
+
+.solo-sub-title {
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: 500;
+  color: #000;
+  letter-spacing: 1px;
+}
+
+.solo-singer {
+  font-size: 15px;
+  margin-top: 10px;
+  font-weight: 500;
+  color: #aeaeae;
 }
 
 .solo-img {
@@ -438,11 +448,10 @@ header {
   margin: 0 auto;
   box-sizing: border-box;
   font-size: 70px;
-  font-weight: bold;
-  color: #fff;
+  font-weight: 500;
+  color: #ec9fbf;
 
-  text-shadow: -1px -1px #ec9fbf, 1px 1px #e44788, -2px -2px #e44788,
-    2px 2px #ec9fbf;
+  text-shadow: 1px 1px #94184b;
 
   letter-spacing: 5px;
 }
@@ -481,6 +490,15 @@ header {
   width: 100%;
 }
 
+@keyframes move {
+  0% {
+    top: -100px;
+  }
+
+  100% {
+    top: -50px;
+  }
+}
 /*------------------------- media query -------------------------*/
 @media screen and (max-width: 1280px) {
   .container {
@@ -617,9 +635,15 @@ header {
   .solo-img {
     display: block;
     width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: top;
+    height: fit-content;
+  }
+
+  .solo-sub-title {
+    font-size: 19px;
+  }
+
+  .solo-singer {
+    font-size: 14px;
   }
 
   .newsingle {
@@ -696,15 +720,25 @@ header {
 
   .info {
     width: calc(100% - 40px);
+    padding: 20px;
   }
 
   .info p {
-    font-size: 13px;
+    font-size: 14px;
+    letter-spacing: -1px;
+  }
+
+  .info p:not(:last-child) {
+    margin-bottom: 20px;
   }
 
   .member {
     margin-top: 200px;
     position: relative;
+  }
+
+  .member .swiper-wrapper {
+    align-items: center;
   }
 
   .member-li {
@@ -728,6 +762,11 @@ header {
     transform: translateX(-30px);
   }
 
+  .member-solo-img.mobile-smaller {
+    right: 0;
+    height: 240px;
+  }
+
   .newsingle-img {
     height: 280px;
   }
@@ -749,7 +788,8 @@ header {
   }
 
   .albumCards-title {
-    font-size: 18px;
+    top: 5%;
+    font-size: 20px;
     white-space: nowrap;
     letter-spacing: 1px;
   }
@@ -806,11 +846,13 @@ header {
     margin: 0 0 20px 0;
   }
 
-  .solo-img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  .solo-sub-title {
+    font-size: 18px;
+    letter-spacing: 0.5px;
+  }
+
+  .solo-singer {
+    font-size: 13px;
   }
 
   .newsingle {
@@ -824,10 +866,12 @@ header {
   .theshow-title {
     font-size: 30px;
     text-align: left;
+    text-shadow: -0.5px -0.5px #000000, 0.5px 0.5px #000000;
   }
 
   .theshow-img {
     width: 90%;
+    height: fit-content;
     display: block;
     margin: 0 auto;
   }
@@ -836,7 +880,6 @@ header {
     top: 0;
     font-size: 30px;
     text-align: left;
-    text-shadow: -1px -1px #fff, 1px 1px #000;
   }
 
   .theshow-desc p {
@@ -845,7 +888,7 @@ header {
     margin: 0 auto;
     text-align: right;
     line-height: 1.3;
-    text-shadow: -1px -1px #ec9fbf, 1px 1px #e44788;
+    text-shadow: -0.5px -0.5px #ec9fbf, 0.5px 0.5px #e44788;
   }
 
   .pink-bar-img {
