@@ -382,6 +382,8 @@ header {
   margin-top: 10px;
   font-weight: 500;
   color: #aeaeae;
+  box-sizing: border-box;
+  padding-left: 2px;
 }
 
 .solo-img {
