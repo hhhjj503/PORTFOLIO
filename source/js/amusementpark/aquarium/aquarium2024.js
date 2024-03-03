@@ -91,10 +91,10 @@ window.addEventListener("load", function () {
     direction: "horizontal",
     loop: true,
     touchRatio: false,
-    // autoplay: {
-    //  delay: "2000",
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: "2000",
+      disableOnInteraction: false,
+    },
     speed: 1500,
 
     // Navigation arrows
