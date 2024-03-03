@@ -804,7 +804,7 @@ a {
   .creature-info {
     font-size: 14px;
     margin-top: 10px;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
   }
   .photos {
     padding: 70px 0;
