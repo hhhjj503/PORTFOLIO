@@ -899,7 +899,7 @@ a {
     padding: 70px 0;
 
     &-title {
-      font-size: 15px;
+      font-size: 18px;
       box-sizing: border-box;
       padding-left: 20px;
       margin-bottom: 30px;
@@ -920,13 +920,14 @@ a {
     }
 
     &-name {
-      font-size: 16px;
+      font-size: 17px;
       margin-top: 20px;
     }
 
     &-info {
       font-size: 14px;
       margin-top: 10px;
+      letter-spacing: -1px;
     }
   }
 
@@ -934,7 +935,7 @@ a {
     padding: 70px 0;
 
     &-title {
-      font-size: 16px;
+      font-size: 18px;
       box-sizing: border-box;
       padding: 0 20px;
       margin-bottom: 30px;
@@ -957,7 +958,7 @@ a {
     &-info {
       box-sizing: border-box;
       padding: 0 20px;
-      font-size: 13px;
+      font-size: 14px;
       word-break: break-all;
       white-space: nowrap;
       overflow: hidden;
@@ -979,39 +980,36 @@ a {
 
   .ticket {
     &-btn {
-      font-size: 13px;
+      font-size: 14px;
     }
   }
 
   .opening-hours {
-    &-info {
-      font-size: 16px;
-    }
-
     &-desc {
-      font-size: 13px;
+      font-size: 14px;
     }
   }
 
   .notice {
     &-desc {
-      font-size: 13px;
+      font-size: 14px;
     }
 
     &-date {
+      font-size: 12px;
       margin-left: 10px;
     }
   }
 
   .community {
     &-desc-link {
-      font-size: 13px;
+      font-size: 14px;
     }
   }
 
   .helper {
     &-tel {
-      font-size: 13px;
+      font-size: 14px;
     }
   }
 }
