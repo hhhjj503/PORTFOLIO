@@ -39,7 +39,6 @@ window.addEventListener("load", function () {
   preload(preloadImgs);
 
   initializeSwipers();
-  setPaddingLeftValue();
 
   //스크롤시 위로가기 기능
   scrollUpLink.addEventListener("click", function () {
@@ -75,9 +74,6 @@ window.addEventListener("load", function () {
     photoSlider.destroy();
 
     initializeSwipers();
-    if (jsMediaQuery.matches) {
-      setPaddingLeftValue();
-    }
   });
 
   //creature name 요소의 padding 값을 동적으로 변경
@@ -95,10 +91,10 @@ window.addEventListener("load", function () {
     direction: "horizontal",
     loop: true,
     touchRatio: false,
-    autoplay: {
-      delay: "2000",
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //  delay: "2000",
+    //   disableOnInteraction: false,
+    // },
     speed: 1500,
 
     // Navigation arrows
@@ -125,7 +121,6 @@ window.addEventListener("load", function () {
       direction: "horizontal",
       loop: true,
       touchRatio: false,
-      centeredSlides: true,
 
       // Navigation arrows
       navigation: {
@@ -134,16 +129,18 @@ window.addEventListener("load", function () {
       },
 
       breakpoints: {
-        319: { slidesPerView: 2.5, spaceBetween: 20, touchRatio: true },
+        319: {
+          slidesPerView: 2.5,
+          spaceBetween: 20,
+          touchRatio: true,
+          centeredSlides: true,
+        },
 
         551: { slidesPerView: 2.5, spaceBetween: 20 },
 
         821: { slidesPerView: 2.5, spaceBetween: 20 },
 
-        1201: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-        },
+        1201: { centeredSlides: false, slidesPerView: 4, spaceBetween: 30 },
       },
     });
   }

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url(../../reset.css);
 @import url(../layout/header2024.css);
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
@@ -66,10 +65,6 @@ a {
 
 .header-link {
   text-shadow: 0 0 5px black;
-}
-
-.aos-custom {
-  opacity: 0;
 }
 
 /* ------------------- up-link  -------------------*/
@@ -313,73 +308,56 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 150px 0;
+  padding: 350px 0;
   background-color: #000;
 }
 .creatures-title {
   max-width: 1200px;
   width: 100%;
-  padding: 35px 20px;
+  padding-left: 102.5px;
   box-sizing: border-box;
-  text-align: center;
   font-size: 30px;
   font-weight: bold;
-  line-height: 1.618;
   color: #fff;
-  background-color: #0f0e85;
+  line-height: 1.618;
   margin: 0 auto 150px auto;
 }
+.creatures-inner {
+  width: 100%;
+}
 
-.creature {
-  display: flex;
-}
 .creature:not(:last-child) {
-  margin-bottom: 150px;
-}
-.creature:nth-child(2n) {
-  flex-direction: row-reverse;
+  margin-bottom: 285px;
 }
 .creature-desc {
-  width: 51.25%;
-  background-color: rgba(31, 21, 92, 0.6);
+  margin-left: 102.5px;
+  width: 57.291667%;
 }
 .creature-name {
-  max-width: 277.5px;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 30px;
-  padding: 35px 66.25px; /* creature info 와의 left값 일치 */
-  background-color: #0f0e85;
+  font-size: 25px;
+  box-sizing: border-box;
+  padding-left: 2px;
   text-align: left;
   font-weight: bold;
   color: #fff;
-  border-radius: 0 30px 30px 0;
-  white-space: nowrap;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 30px;
+  letter-spacing: -1px;
 }
 .creature-info {
-  max-width: 482.5px;
-  width: 100%;
-  margin: 50px auto;
+  margin-top: 15px;
   color: #fff;
-  font-size: 23px;
+  font-size: 19px;
   line-height: 1.618;
-  max-height: 310px;
-  overflow: auto;
   box-sizing: border-box;
-  padding-right: 20px;
-}
-.creature-info::-webkit-scrollbar {
-  width: 8px; /* 스크롤바의 너비 */
-}
-.creature-info::-webkit-scrollbar-thumb {
-  background: #175ab7; /* 스크롤바의 색상 */
-  border-radius: 10px;
-}
-.creature-info::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.2); /*스크롤바 뒷 배경 색상*/
+  padding-left: 2px;
+  letter-spacing: -2px;
+  word-spacing: 1px;
 }
 .creature-media {
-  width: 48.75%;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
 }
 .creature-img {
   width: 100%;
@@ -387,8 +365,8 @@ a {
 }
 
 .photos {
-  background-color: #11106b;
-  padding: 150px 0;
+  background-color: #03025c;
+  padding: 250px 0;
 }
 .photos-title {
   max-width: 1200px;
@@ -397,14 +375,12 @@ a {
   font-size: 30px;
   color: #fff;
   font-weight: bold;
-  text-align: center;
   margin-bottom: 50px;
 }
 
 .photo-slider {
   position: relative;
   box-sizing: border-box;
-  padding: 0 100px;
 }
 
 .photo-img {
@@ -416,7 +392,7 @@ a {
   box-sizing: border-box;
   height: 100px;
   padding: 40px 0;
-  font-size: 20px;
+  font-size: 18px;
   color: #000;
   font-weight: bold;
   text-align: center;
@@ -439,7 +415,7 @@ a {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 0;
+  left: -25px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -463,8 +439,8 @@ a {
 .photo-controls-next-btn {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  right: 0;
+  transform: translateY(-50%) !important;
+  right: -25px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -487,161 +463,109 @@ a {
 }
 
 .etc {
-  background-image: url(../../../images/amusementpark/aquarium/background_img02.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding: 150px 0;
-  background-color: #000;
+  padding: 250px 0;
+  background-color: #020140;
+}
+.etc-title {
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
 }
 
 .etc-wrapper {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .ticket {
   box-sizing: border-box;
-  background-color: #ae4848;
-  padding: 35px;
-  flex: 1;
+  padding: 30px;
+  flex-grow: 1;
+  margin-right: 30px;
+  flex-basis: calc((100% - 60px) / 3);
 }
-.ticket-title {
-  font-size: 25px;
-  text-align: center;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 35px;
-}
-.ticket-form {
-  width: 100%;
-}
-.ticket-form-select {
-  width: 100%;
-  font-size: 20px;
-  padding: 8px 0;
-  margin-bottom: 35px;
-}
-.ticket-form-btn {
-  width: 175px;
-  font-size: 20px;
-  padding: 10px 0;
-  display: block;
+.ticket-btn {
+  width: 125px;
+  height: 40px;
   margin: 0 auto;
-  border-radius: 50px;
-  background-color: #fff;
-  color: #000;
+  font-size: 15px;
   font-weight: bold;
-  border: none;
+  line-height: 40px;
+  border-radius: 14px;
+  background-color: transparent;
+  color: #ff6b00;
+  border: 1px solid #ff6b00;
   cursor: pointer;
 }
-.ticket-form-btn:hover {
+.ticket-btn:hover, .ticket-btn:focus-visible {
   transition: 0.1s ease-in-out;
-  background-color: #1f155c;
+  background-color: #ff6b00;
   color: #fff;
 }
 
 .opening-hours {
   box-sizing: border-box;
-  background-color: #1f155c;
-  padding: 35px;
-  flex: 1;
-}
-.opening-hours-title {
-  font-size: 25px;
-  text-align: center;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 35px;
-}
-.opening-hours-info {
-  text-align: center;
-  font-size: 25px;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 35px;
+  padding: 30px;
+  flex-basis: calc((100% - 60px) / 3);
+  margin-right: 30px;
 }
 .opening-hours-desc {
-  text-align: center;
   font-size: 18px;
-  font-weight: bold;
+  letter-spacing: -0.5px;
+  word-spacing: 1px;
+  font-weight: 400;
   color: #fff;
-}
-.opening-hours-desc-detail {
-  display: inline-block;
-  color: red;
-  background-color: #fff;
-  padding: 4px;
-  margin: 0 2px;
+  margin-bottom: 10px;
 }
 
 .notice {
   box-sizing: border-box;
-  background-color: #1a671d;
-  padding: 35px;
-  flex: 1;
-}
-.notice-title {
-  font-size: 25px;
-  text-align: center;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 35px;
+  flex-grow: 1;
+  padding: 30px;
+  flex-basis: calc((100% - 60px) / 3);
 }
 .notice-desc {
   display: flex;
   justify-content: space-between;
-  font-size: 16px;
+  align-items: center;
+  font-size: 17px;
+  letter-spacing: -0.5px;
+  word-spacing: 1px;
   color: #fff;
   line-height: 1.618;
 }
+.notice-desc:hover, .notice-desc:focus-visible {
+  text-decoration: underline;
+  cursor: pointer;
+}
 .notice-date {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .community {
-  max-width: 800px;
-  width: 100%;
-  display: flex;
   box-sizing: border-box;
-  background-color: #0d8090;
-}
-.community-media {
-  flex: 1;
-}
-.community-media-img {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.community-desc {
-  flex: 2;
-  box-sizing: border-box;
-  padding: 50px;
-}
-.community-desc-title {
-  font-size: 25px;
-  text-align: center;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 35px;
+  padding: 30px;
+  flex-basis: calc((100% - 60px) / 3);
+  margin-right: 30px;
 }
 .community-desc-link {
-  display: block;
-  box-sizing: border-box;
-  width: 277.5px;
-  font-size: 20px;
-  padding: 15px;
-  text-align: center;
-  border-radius: 30px;
-  background-color: #fff;
-  color: #000;
-  font-weight: bold;
+  display: inline-block;
+  width: 125px;
+  height: 40px;
   margin: 0 auto;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 14px;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
 }
-.community-desc-link:hover {
+.community-desc-link:hover, .community-desc-link:focus-visible {
   transition: 0.1s ease-in-out;
   background-color: #1f155c;
   color: #fff;
@@ -649,26 +573,18 @@ a {
 
 .helper {
   box-sizing: border-box;
-  background-color: #990d94;
-  padding: 50px;
-  max-width: 400px;
-  width: 100%;
-}
-.helper-title {
-  font-size: 25px;
-  text-align: center;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 25px;
+  padding: 30px;
+  flex-basis: calc((100% - 60px) / 3);
 }
 .helper-tel {
   display: block;
   box-sizing: border-box;
   width: 100%;
-  font-size: 20px;
-  text-align: center;
+  font-size: 18px;
+  letter-spacing: -0.5px;
+  word-spacing: 1px;
   color: #fff;
-  font-weight: bold;
+  font-weight: 400;
 }
 .helper-tel:not(:last-child) {
   margin-bottom: 10px;
@@ -700,14 +616,6 @@ a {
   .creature-info-wrap {
     box-sizing: border-box;
     padding: 0 20px;
-  }
-  .creature-info {
-    max-height: 150px;
-    font-size: 23px;
-  }
-  .creature-name {
-    font-size: 28px;
-    padding: 20px 30px 20px 20px !important;
   }
 }
 @media screen and (max-width: 900px) {
@@ -743,28 +651,23 @@ a {
     height: 12px;
   }
   .creatures {
-    padding: 100px 20px;
+    padding: 200px 40px;
   }
   .creatures-title {
-    font-size: 23px;
+    font-size: 25px;
     margin-bottom: 100px;
-  }
-  .creature {
-    display: block;
+    padding-left: 0;
   }
   .creature:not(:last-child) {
     margin-bottom: 100px;
   }
   .creature-name {
-    width: -moz-fit-content;
-    width: fit-content;
-    font-size: 20px;
-    padding: 20px 60px 20px 50px !important;
-    text-align: left;
+    font-size: 21px;
   }
   .creature-desc {
-    width: 80%;
-    margin: 0 auto;
+    width: 90%;
+    margin: 0 auto 0 0;
+    padding: 0;
   }
   .creature-info-wrap {
     padding: 50px;
@@ -773,17 +676,16 @@ a {
     margin: 0 auto;
     max-height: initial;
     padding-right: 0;
-    font-size: 18px;
-  }
-  .creature-media {
-    width: 80%;
-    margin: 0 auto;
+    font-size: 17px;
+    margin-top: 15px;
   }
   .photos {
     padding: 100px 0;
   }
   .photos-title {
-    font-size: 23px;
+    font-size: 25px;
+    box-sizing: border-box;
+    padding: 0 40px;
   }
   .photo-slider {
     padding: 0;
@@ -800,72 +702,42 @@ a {
     line-height: 80px;
     font-size: 18px;
   }
+  .etc {
+    padding: 100px 40px;
+  }
+  .etc-title {
+    font-size: 21px;
+    margin-bottom: 20px;
+  }
+  .etc-item {
+    margin-right: 0;
+    box-sizing: content-box;
+    padding: 0 0 30px 0;
+    margin-bottom: 40px;
+  }
+  .etc-item:last-child {
+    margin-bottom: 0;
+    padding: 0;
+  }
   .etc-wrapper {
     display: block;
     width: 80%;
-    margin: 0 auto;
+    margin-right: 0;
   }
-  .etc {
-    padding: 100px 20px;
-  }
-  .ticket {
-    padding: 35px 10%;
-    border-radius: 20px;
-    margin-bottom: 20px;
-  }
-  .ticket-title {
-    font-size: 20px;
-  }
-  .ticket-form-select {
-    font-size: 18px;
-  }
-  .ticket-form-btn {
-    width: 150px;
-    font-size: 17px;
-    padding: 7px 0;
-  }
-  .opening-hours {
-    padding: 35px 10%;
-    border-radius: 20px;
-    margin-bottom: 20px;
-  }
-  .opening-hours-title {
-    font-size: 20px;
-  }
-  .opening-hours-info {
-    font-size: 20px;
+  .ticket-btn {
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 15px;
   }
   .opening-hours-desc {
-    font-size: 17px;
-  }
-  .notice {
-    padding: 35px 10%;
-    border-radius: 20px;
-    margin-bottom: 20px;
-  }
-  .notice-title {
-    font-size: 20px;
-  }
-  .community {
-    border-radius: 20px;
-    margin-bottom: 20px;
-    overflow: hidden;
-  }
-  .community-desc-title {
-    font-size: 20px;
+    font-size: 15px;
   }
   .community-desc-link {
-    width: 202px;
-    padding: 10px;
-    font-size: 17px;
-  }
-  .helper {
-    max-width: initial;
-    padding: 35px 10%;
-    border-radius: 20px;
-  }
-  .helper-title {
-    font-size: 20px;
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 15px;
   }
 }
 @media screen and (max-width: 550px) {
@@ -897,54 +769,40 @@ a {
     display: flex;
   }
   .creatures {
-    padding: 50px 0;
+    padding: 70px 0;
   }
   .creatures-title {
-    width: calc(100% - 40px);
     font-size: 15px;
-    line-height: 1.618;
     box-sizing: border-box;
-    padding: 20px;
+    padding-left: 20px;
     margin-bottom: 30px;
-    word-break: break-all;
-    text-align: left;
   }
   .creature {
     position: relative;
   }
   .creature:not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+  }
+  .creature-desc {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
   }
   .creature-name {
     font-size: 16px;
-    padding: 20px 30px 20px 20px !important;
-  }
-  .creature-desc {
-    width: calc(100% - 40px);
-  }
-  .creature-info-wrap {
-    padding: 20px;
+    margin-top: 20px;
   }
   .creature-info {
     font-size: 14px;
-  }
-  .creature-media {
-    width: 100%;
-  }
-  .creature-img {
-    box-sizing: border-box;
-    padding: 0 20px;
+    margin-top: 10px;
   }
   .photos {
-    padding: 50px 0;
+    padding: 70px 0;
   }
   .photos-title {
     font-size: 16px;
-    word-break: break-all;
-    line-height: 1.618;
     box-sizing: border-box;
     padding: 0 20px;
-    text-align: center;
     margin-bottom: 30px;
   }
   .photo-controls-prev-btn {
@@ -959,67 +817,40 @@ a {
   .photo-info {
     box-sizing: border-box;
     padding: 0 20px;
-    font-size: 15px;
+    font-size: 13px;
     word-break: break-all;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
   .etc {
-    padding: 50px 20px;
+    padding: 70px 20px;
+  }
+  .etc-title {
+    font-size: 17px;
   }
   .etc-wrapper {
     width: 100%;
   }
-  .ticket-title {
-    font-size: 18px;
-  }
-  .ticket-form-select {
-    font-size: 16px;
-  }
-  .ticket-form-btn {
-    width: 40%;
-    font-size: 15px;
-    padding: 5px 0;
-  }
-  .opening-hours-title {
-    font-size: 18px;
+  .ticket-btn {
+    font-size: 13px;
   }
   .opening-hours-info {
     font-size: 16px;
   }
   .opening-hours-desc {
-    font-size: 15px;
-  }
-  .notice-title {
-    font-size: 18px;
+    font-size: 13px;
   }
   .notice-desc {
-    font-size: 14px;
+    font-size: 13px;
   }
   .notice-date {
     margin-left: 10px;
   }
-  .community-media {
-    display: none;
-  }
-  .community-desc-title {
-    font-size: 18px;
-    line-height: 1.618;
-    word-break: break-all;
-  }
   .community-desc-link {
-    width: 60%;
-    font-size: 15px;
-  }
-  .helper {
-    max-width: initial;
-    padding: 35px 10%;
-  }
-  .helper-title {
-    font-size: 18px;
+    font-size: 13px;
   }
   .helper-tel {
-    font-size: 16px;
+    font-size: 13px;
   }
 }/*# sourceMappingURL=aquarium2024.css.map */

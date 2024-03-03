@@ -74,9 +74,6 @@ a {
   text-shadow: 0 0 5px rgba($color: #000000, $alpha: 1);
 }
 
-.aos-custom {
-  opacity: 0;
-}
 /* ------------------- up-link  -------------------*/
 .up-link {
   position: fixed;
@@ -348,81 +345,63 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 150px 0;
+  padding: 350px 0;
   background-color: #000;
 
   &-title {
     max-width: 1200px;
     width: 100%;
-    padding: 35px 20px;
+    padding-left: 102.5px;
     box-sizing: border-box;
-    text-align: center;
     font-size: 30px;
     font-weight: bold;
-    line-height: 1.618;
     color: #fff;
-    background-color: #0f0e85;
+    line-height: 1.618;
     margin: 0 auto 150px auto;
+  }
+
+  &-inner {
+    width: 100%;
   }
 }
 
 .creature {
-  display: flex;
-
   &:not(:last-child) {
-    margin-bottom: 150px;
-  }
-
-  &:nth-child(2n) {
-    flex-direction: row-reverse;
+    margin-bottom: 285px;
   }
 
   &-desc {
-    width: 51.25%;
-    background-color: rgba($color: #1f155c, $alpha: 0.6);
+    margin-left: 102.5px;
+    width: 57.291667%;
   }
 
   &-name {
-    max-width: 277.5px;
-    width: fit-content;
-    font-size: 30px;
-    padding: 35px 66.25px; /* creature info 와의 left값 일치 */
-    background-color: #0f0e85;
+    font-size: 25px;
+    box-sizing: border-box;
+    padding-left: 2px;
     text-align: left;
     font-weight: bold;
     color: #fff;
-    border-radius: 0 30px 30px 0;
-    white-space: nowrap;
+    font-family: "Open Sans", sans-serif;
+    margin-top: 30px;
+    letter-spacing: -1px;
   }
 
   &-info {
-    max-width: 482.5px;
-    width: 100%;
-    margin: 50px auto;
+    margin-top: 15px;
     color: #fff;
-    font-size: 23px;
+    font-size: 19px;
     line-height: 1.618;
-    max-height: 310px;
-    overflow: auto;
     box-sizing: border-box;
-    padding-right: 20px;
-
-    &::-webkit-scrollbar {
-      width: 8px; /* 스크롤바의 너비 */
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background: #175ab7; /* 스크롤바의 색상 */
-      border-radius: 10px;
-    }
-
-    &::-webkit-scrollbar-track {
-      background: rgba($color: #fff, $alpha: 0.2); /*스크롤바 뒷 배경 색상*/
-    }
+    padding-left: 2px;
+    letter-spacing: -2px;
+    word-spacing: 1px;
   }
 
   &-media {
-    width: 48.75%;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
   }
 
   &-img {
@@ -432,8 +411,8 @@ a {
 }
 
 .photos {
-  background-color: #11106b;
-  padding: 150px 0;
+  background-color: #03025c;
+  padding: 250px 0;
 
   &-title {
     max-width: 1200px;
@@ -442,7 +421,6 @@ a {
     font-size: 30px;
     color: #fff;
     font-weight: bold;
-    text-align: center;
     margin-bottom: 50px;
   }
 }
@@ -450,7 +428,6 @@ a {
 .photo-slider {
   position: relative;
   box-sizing: border-box;
-  padding: 0 100px;
 }
 
 .photo {
@@ -464,7 +441,7 @@ a {
     box-sizing: border-box;
     height: 100px;
     padding: 40px 0;
-    font-size: 20px;
+    font-size: 18px;
     color: #000;
     font-weight: bold;
     text-align: center;
@@ -487,7 +464,7 @@ a {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 0;
+    left: -25px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -513,8 +490,8 @@ a {
   &-next-btn {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    right: 0;
+    transform: translateY(-50%) !important;
+    right: -25px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -540,175 +517,119 @@ a {
 }
 
 .etc {
-  background-image: url(../../../images/amusementpark/aquarium/background_img02.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding: 150px 0;
-  background-color: #000;
+  padding: 250px 0;
+  background-color: #020140;
+
+  &-title {
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+  }
 }
 .etc-wrapper {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .ticket {
   box-sizing: border-box;
-  background-color: #ae4848;
-  padding: 35px;
-  flex: 1;
+  padding: 30px;
+  flex-grow: 1;
+  margin-right: 30px;
+  flex-basis: calc((100% - 60px) / 3);
 
-  &-title {
-    font-size: 25px;
-    text-align: center;
+  &-btn {
+    width: 125px;
+    height: 40px;
+    margin: 0 auto;
+    font-size: 15px;
     font-weight: bold;
-    color: #fff;
-    margin-bottom: 35px;
-  }
+    line-height: 40px;
+    border-radius: 14px;
+    background-color: transparent;
+    color: #ff6b00;
+    border: 1px solid #ff6b00;
+    cursor: pointer;
 
-  &-form {
-    width: 100%;
-
-    &-select {
-      width: 100%;
-      font-size: 20px;
-      padding: 8px 0;
-      margin-bottom: 35px;
-    }
-
-    &-btn {
-      width: 175px;
-      font-size: 20px;
-      padding: 10px 0;
-      display: block;
-      margin: 0 auto;
-      border-radius: 50px;
-      background-color: #fff;
-      color: #000;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-
-      &:hover {
-        transition: 0.1s ease-in-out;
-        background-color: #1f155c;
-        color: #fff;
-      }
+    &:hover,
+    &:focus-visible {
+      transition: 0.1s ease-in-out;
+      background-color: #ff6b00;
+      color: #fff;
     }
   }
 }
 
 .opening-hours {
   box-sizing: border-box;
-  background-color: #1f155c;
-  padding: 35px;
-  flex: 1;
-  &-title {
-    font-size: 25px;
-    text-align: center;
-    font-weight: bold;
-    color: #fff;
-    margin-bottom: 35px;
-  }
-
-  &-info {
-    text-align: center;
-    font-size: 25px;
-    font-weight: bold;
-    color: #fff;
-    margin-bottom: 35px;
-  }
+  padding: 30px;
+  flex-basis: calc((100% - 60px) / 3);
+  margin-right: 30px;
 
   &-desc {
-    text-align: center;
     font-size: 18px;
-    font-weight: bold;
+    letter-spacing: -0.5px;
+    word-spacing: 1px;
+    font-weight: 400;
     color: #fff;
-
-    &-detail {
-      display: inline-block;
-      color: red;
-      background-color: #fff;
-      padding: 4px;
-      margin: 0 2px;
-    }
+    margin-bottom: 10px;
   }
 }
 
 .notice {
   box-sizing: border-box;
-  background-color: #1a671d;
-  padding: 35px;
-  flex: 1;
-
-  &-title {
-    font-size: 25px;
-    text-align: center;
-    font-weight: bold;
-    color: #fff;
-    margin-bottom: 35px;
-  }
+  flex-grow: 1;
+  padding: 30px;
+  flex-basis: calc((100% - 60px) / 3);
 
   &-desc {
     display: flex;
     justify-content: space-between;
-    font-size: 16px;
+    align-items: center;
+    font-size: 17px;
+    letter-spacing: -0.5px;
+    word-spacing: 1px;
     color: #fff;
     line-height: 1.618;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+      cursor: pointer;
+    }
   }
 
   &-date {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 
 .community {
-  max-width: 800px;
-  width: 100%;
-
-  display: flex;
   box-sizing: border-box;
-  background-color: #0d8090;
-
-  &-media {
-    flex: 1;
-
-    &-img {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      display: block;
-      object-fit: cover;
-    }
-  }
+  padding: 30px;
+  flex-basis: calc((100% - 60px) / 3);
+  margin-right: 30px;
 
   &-desc {
-    flex: 2;
-
-    box-sizing: border-box;
-    padding: 50px;
-
-    &-title {
-      font-size: 25px;
-      text-align: center;
-      font-weight: bold;
-      color: #fff;
-      margin-bottom: 35px;
-    }
-
     &-link {
-      display: block;
-      box-sizing: border-box;
-      width: 277.5px;
-      font-size: 20px;
-      padding: 15px;
-      text-align: center;
-      border-radius: 30px;
-      background-color: #fff;
-      color: #000;
-      font-weight: bold;
+      display: inline-block;
+      width: 125px;
+      height: 40px;
       margin: 0 auto;
+      font-size: 15px;
+      font-weight: bold;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 14px;
+      background-color: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+      cursor: pointer;
 
-      &:hover {
+      &:hover,
+      &:focus-visible {
         transition: 0.1s ease-in-out;
         background-color: #1f155c;
         color: #fff;
@@ -719,28 +640,18 @@ a {
 
 .helper {
   box-sizing: border-box;
-  background-color: #990d94;
-  padding: 50px;
-
-  max-width: 400px;
-  width: 100%;
-
-  &-title {
-    font-size: 25px;
-    text-align: center;
-    font-weight: bold;
-    color: #fff;
-    margin-bottom: 25px;
-  }
+  padding: 30px;
+  flex-basis: calc((100% - 60px) / 3);
 
   &-tel {
     display: block;
     box-sizing: border-box;
     width: 100%;
-    font-size: 20px;
-    text-align: center;
+    font-size: 18px;
+    letter-spacing: -0.5px;
+    word-spacing: 1px;
     color: #fff;
-    font-weight: bold;
+    font-weight: 400;
 
     &:not(:last-child) {
       margin-bottom: 10px;
@@ -779,16 +690,6 @@ a {
     &-info-wrap {
       box-sizing: border-box;
       padding: 0 20px;
-    }
-
-    &-info {
-      max-height: 150px;
-      font-size: 23px;
-    }
-
-    &-name {
-      font-size: 28px;
-      padding: 20px 30px 20px 20px !important;
     }
   }
 }
@@ -838,31 +739,28 @@ a {
   }
 
   .creatures {
-    padding: 100px 20px;
+    padding: 200px 40px;
 
     &-title {
-      font-size: 23px;
+      font-size: 25px;
       margin-bottom: 100px;
+      padding-left: 0;
     }
   }
 
   .creature {
-    display: block;
-
     &:not(:last-child) {
       margin-bottom: 100px;
     }
 
     &-name {
-      width: fit-content;
-      font-size: 20px;
-      padding: 20px 60px 20px 50px !important;
-      text-align: left;
+      font-size: 21px;
     }
 
     &-desc {
-      width: 80%;
-      margin: 0 auto;
+      width: 90%;
+      margin: 0 auto 0 0;
+      padding: 0;
     }
 
     &-info-wrap {
@@ -873,12 +771,8 @@ a {
       margin: 0 auto;
       max-height: initial;
       padding-right: 0;
-      font-size: 18px;
-    }
-
-    &-media {
-      width: 80%;
-      margin: 0 auto;
+      font-size: 17px;
+      margin-top: 15px;
     }
   }
 
@@ -886,7 +780,9 @@ a {
     padding: 100px 0;
 
     &-title {
-      font-size: 23px;
+      font-size: 25px;
+      box-sizing: border-box;
+      padding: 0 40px;
     }
   }
 
@@ -912,88 +808,53 @@ a {
     }
   }
 
+  .etc {
+    padding: 100px 40px;
+
+    &-title {
+      font-size: 21px;
+      margin-bottom: 20px;
+    }
+
+    &-item {
+      margin-right: 0;
+      box-sizing: content-box;
+      padding: 0 0 30px 0;
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+        padding: 0;
+      }
+    }
+  }
+
   .etc-wrapper {
     display: block;
     width: 80%;
-    margin: 0 auto;
-  }
-
-  .etc {
-    padding: 100px 20px;
+    margin-right: 0;
   }
 
   .ticket {
-    padding: 35px 10%;
-    border-radius: 20px;
-    margin-bottom: 20px;
-
-    &-title {
-      font-size: 20px;
-    }
-
-    &-form-select {
-      font-size: 18px;
-    }
-
-    &-form-btn {
-      width: 150px;
-      font-size: 17px;
-      padding: 7px 0;
+    &-btn {
+      width: 100px;
+      height: 35px;
+      line-height: 35px;
+      font-size: 15px;
     }
   }
 
   .opening-hours {
-    padding: 35px 10%;
-    border-radius: 20px;
-    margin-bottom: 20px;
-
-    &-title {
-      font-size: 20px;
-    }
-
-    &-info {
-      font-size: 20px;
-    }
-
     &-desc {
-      font-size: 17px;
+      font-size: 15px;
     }
   }
 
-  .notice {
-    padding: 35px 10%;
-    border-radius: 20px;
-    margin-bottom: 20px;
-
-    &-title {
-      font-size: 20px;
-    }
-  }
-
-  .community {
-    border-radius: 20px;
-    margin-bottom: 20px;
-    overflow: hidden;
-
-    &-desc-title {
-      font-size: 20px;
-    }
-
-    &-desc-link {
-      width: 202px;
-      padding: 10px;
-      font-size: 17px;
-    }
-  }
-
-  .helper {
-    max-width: initial;
-    padding: 35px 10%;
-    border-radius: 20px;
-
-    &-title {
-      font-size: 20px;
-    }
+  .community-desc-link {
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 15px;
   }
 }
 
@@ -1035,17 +896,13 @@ a {
   }
 
   .creatures {
-    padding: 50px 0;
+    padding: 70px 0;
 
     &-title {
-      width: calc(100% - 40px);
       font-size: 15px;
-      line-height: 1.618;
       box-sizing: border-box;
-      padding: 20px;
+      padding-left: 20px;
       margin-bottom: 30px;
-      word-break: break-all;
-      text-align: left;
     }
   }
 
@@ -1053,46 +910,33 @@ a {
     position: relative;
 
     &:not(:last-child) {
-      margin-bottom: 30px;
+      margin-bottom: 50px;
+    }
+
+    &-desc {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 20px;
     }
 
     &-name {
       font-size: 16px;
-      padding: 20px 30px 20px 20px !important;
-    }
-
-    &-desc {
-      width: calc(100% - 40px);
-    }
-
-    &-info-wrap {
-      padding: 20px;
+      margin-top: 20px;
     }
 
     &-info {
       font-size: 14px;
-    }
-
-    &-media {
-      width: 100%;
-    }
-
-    &-img {
-      box-sizing: border-box;
-      padding: 0 20px;
+      margin-top: 10px;
     }
   }
 
   .photos {
-    padding: 50px 0;
+    padding: 70px 0;
 
     &-title {
       font-size: 16px;
-      word-break: break-all;
-      line-height: 1.618;
       box-sizing: border-box;
       padding: 0 20px;
-      text-align: center;
       margin-bottom: 30px;
     }
   }
@@ -1113,7 +957,7 @@ a {
     &-info {
       box-sizing: border-box;
       padding: 0 20px;
-      font-size: 15px;
+      font-size: 13px;
       word-break: break-all;
       white-space: nowrap;
       overflow: hidden;
@@ -1122,7 +966,11 @@ a {
   }
 
   .etc {
-    padding: 50px 20px;
+    padding: 70px 20px;
+
+    &-title {
+      font-size: 17px;
+    }
   }
 
   .etc-wrapper {
@@ -1130,42 +978,24 @@ a {
   }
 
   .ticket {
-    &-title {
-      font-size: 18px;
-    }
-
-    &-form-select {
-      font-size: 16px;
-    }
-
-    &-form-btn {
-      width: 40%;
-      font-size: 15px;
-      padding: 5px 0;
+    &-btn {
+      font-size: 13px;
     }
   }
 
   .opening-hours {
-    &-title {
-      font-size: 18px;
-    }
-
     &-info {
       font-size: 16px;
     }
 
     &-desc {
-      font-size: 15px;
+      font-size: 13px;
     }
   }
 
   .notice {
-    &-title {
-      font-size: 18px;
-    }
-
     &-desc {
-      font-size: 14px;
+      font-size: 13px;
     }
 
     &-date {
@@ -1174,32 +1004,14 @@ a {
   }
 
   .community {
-    &-media {
-      display: none;
-    }
-
-    &-desc-title {
-      font-size: 18px;
-      line-height: 1.618;
-      word-break: break-all;
-    }
-
     &-desc-link {
-      width: 60%;
-      font-size: 15px;
+      font-size: 13px;
     }
   }
 
   .helper {
-    max-width: initial;
-    padding: 35px 10%;
-
-    &-title {
-      font-size: 18px;
-    }
-
     &-tel {
-      font-size: 16px;
+      font-size: 13px;
     }
   }
 }
