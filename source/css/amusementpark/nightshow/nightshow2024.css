@@ -969,7 +969,7 @@ label {
     padding: 50px 20px;
   }
   .announcement-title {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 20px;
   }
 
@@ -978,6 +978,7 @@ label {
     justify-content: space-between;
     align-items: baseline;
     font-size: 14px;
+    letter-spacing: -0.5px;
   }
   .announcement-number {
     width: 18px;
