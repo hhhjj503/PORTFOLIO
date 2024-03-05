@@ -137,9 +137,9 @@ a {
   bottom: 10%;
   z-index: 11;
   display: flex;
-  align-items: self-end;
+  align-items: end;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 15px;
+  padding: 10px 10px 10px 20px;
   border-radius: 50px;
   box-sizing: border-box;
   transform: translateX(-50%);
@@ -753,6 +753,8 @@ a {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+    -o-object-position: right;
+       object-position: right;
   }
   .banner-controls-prev-btn {
     display: none;
