@@ -114,9 +114,10 @@ a {
   &-title {
     position: absolute;
     left: 50%;
-    top: 55%;
+    top: 50%;
+    right: 0;
     max-width: 1200px;
-    width: fit-content;
+    width: 100%;
     box-sizing: border-box;
     padding: 0 20px;
     transform: translate(-50%, -50%);
@@ -124,7 +125,7 @@ a {
     font-size: 35px;
     line-height: 1.618;
     font-weight: 500;
-    text-align: center;
+    text-align: left;
     letter-spacing: -1px;
     text-shadow: 0px 0px 10px rgba($color: #000, $alpha: 1);
 
@@ -358,6 +359,7 @@ a {
     color: #fff;
     line-height: 1.618;
     margin: 0 auto 150px auto;
+    letter-spacing: -1px;
   }
 
   &-inner {
@@ -389,7 +391,7 @@ a {
 
   &-info {
     margin-top: 15px;
-    color: #fff;
+    color: #f9f9f9;
     font-size: 19px;
     line-height: 1.618;
     box-sizing: border-box;
@@ -422,6 +424,7 @@ a {
     color: #fff;
     font-weight: bold;
     margin-bottom: 50px;
+    letter-spacing: -1px;
   }
 }
 
@@ -527,6 +530,10 @@ a {
     margin-bottom: 30px;
     letter-spacing: -1px;
   }
+
+  &-item {
+    padding: 30px 0;
+  }
 }
 .etc-wrapper {
   display: flex;
@@ -535,7 +542,7 @@ a {
 
 .ticket {
   box-sizing: border-box;
-  padding: 30px;
+
   flex-grow: 1;
   margin-right: 30px;
   flex-basis: calc((100% - 60px) / 3);
@@ -557,14 +564,14 @@ a {
     &:focus-visible {
       transition: 0.1s ease-in-out;
       background-color: #ff6b00;
-      color: #fff;
+      color: black;
     }
   }
 }
 
 .opening-hours {
   box-sizing: border-box;
-  padding: 30px;
+
   flex-basis: calc((100% - 60px) / 3);
   margin-right: 30px;
 
@@ -581,7 +588,7 @@ a {
 .notice {
   box-sizing: border-box;
   flex-grow: 1;
-  padding: 30px;
+
   flex-basis: calc((100% - 60px) / 3);
 
   &-desc {
@@ -608,7 +615,7 @@ a {
 
 .community {
   box-sizing: border-box;
-  padding: 30px;
+
   flex-basis: calc((100% - 60px) / 3);
   margin-right: 30px;
 
@@ -640,7 +647,7 @@ a {
 
 .helper {
   box-sizing: border-box;
-  padding: 30px;
+
   flex-basis: calc((100% - 60px) / 3);
 
   &-tel {
@@ -695,9 +702,6 @@ a {
 }
 @media screen and (max-width: 900px) {
   .creature {
-    &-name {
-    }
-
     &-info {
       font-size: 20px;
     }
@@ -865,7 +869,8 @@ a {
     }
 
     &-title {
-      font-size: 15px;
+      top: 60%;
+      font-size: 18px;
     }
 
     &-img {
@@ -912,7 +917,8 @@ a {
       font-size: 18px;
       box-sizing: border-box;
       padding-left: 20px;
-      margin-bottom: 30px;
+      margin-bottom: 50px;
+      letter-spacing: -0.5px;
     }
   }
 
@@ -949,6 +955,7 @@ a {
       box-sizing: border-box;
       padding: 0 20px;
       margin-bottom: 30px;
+      letter-spacing: -0.5px;
     }
   }
 

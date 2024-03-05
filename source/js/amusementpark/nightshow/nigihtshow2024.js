@@ -45,7 +45,7 @@ window.addEventListener("load", () => {
     touchRatio: false,
     autoplay: {
       delay: "2500",
-      disableOnInteraction: false,
+      disableOnInteraction: true,
     },
     speed: 1500,
 
@@ -111,6 +111,24 @@ window.addEventListener("load", () => {
     },
   });
 
+  const eventSwiper = new Swiper(".event .swiper", {
+    // Optional parameters
+    direction: "horizontal",
+    loop: true,
+    effect: "fade",
+    autoplay: {
+      delay: "2500",
+      disableOnInteraction: false,
+    },
+    speed: 1500,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: ".gallery-controls .gallery-controls-btn-right",
+      prevEl: ".gallery-controls .gallery-controls-btn-left",
+    },
+  });
+
   initializeSwipers();
 
   window.addEventListener("resize", () => {
@@ -155,22 +173,6 @@ window.addEventListener("load", () => {
           ".festival-gallery-controls .festival-gallery-controls-btn-right",
         prevEl:
           ".festival-gallery-controls .festival-gallery-controls-btn-left",
-      },
-
-      breakpoints: {
-        0: { slidesPerView: 1.5, spaceBetween: 20 },
-
-        487: { slidesPerView: 1.5, spaceBetween: 20 },
-
-        551: {
-          slidesPerView: 2.5,
-          spaceBetween: 20,
-        },
-
-        1201: {
-          slidesPerView: 4.5,
-          spaceBetween: 30,
-        },
       },
     });
   }
