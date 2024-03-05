@@ -848,8 +848,9 @@ label {
   }
 
   .banner-title {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 30px;
+    letter-spacing: -0.5px;
   }
 
   .banner-controls-btn-left {
@@ -886,9 +887,9 @@ label {
   }
 
   .festival-gallery-title {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 20px;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
   }
 
   .fireworks-img-li {
@@ -906,13 +907,15 @@ label {
   }
 
   .festival-visitor {
+    font-size: 14px;
     margin-top: 20px;
   }
 
   .event-title {
-    font-size: 18px;
+    font-size: 20px;
     left: 20px;
     bottom: 50px;
+    letter-spacing: -0.5px;
   }
 
   .event .swiper {
@@ -932,8 +935,9 @@ label {
   }
 
   .wish-title {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 30px;
+    letter-spacing: -0.5px;
   }
 
   .wish-form {
