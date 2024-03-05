@@ -899,6 +899,7 @@ label {
   .festival-name {
     font-size: 15px;
     margin-top: 20px;
+    letter-spacing: -0.5px;
   }
 
   .festival-date {
@@ -910,6 +911,7 @@ label {
   .festival-visitor {
     font-size: 14px;
     margin-top: 20px;
+    letter-spacing: -0.5px;
   }
 
   .event-title {
