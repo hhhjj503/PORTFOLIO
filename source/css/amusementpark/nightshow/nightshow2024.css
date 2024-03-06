@@ -132,6 +132,7 @@ label {
   white-space: nowrap;
   z-index: 5;
   letter-spacing: -2px;
+  line-height: 58px;
 }
 
 .banner-stop-btn {
@@ -680,6 +681,7 @@ label {
   .banner-title {
     font-size: 25px;
     left: 10%;
+    line-height: 33px;
   }
 
   .banner-controls-btn-left {
@@ -743,7 +745,7 @@ label {
   }
 
   .fireworks-img-li:nth-child(-n + 2) {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 
   .festival-name {
@@ -865,6 +867,7 @@ label {
     line-height: 30px;
     letter-spacing: -0.5px;
     padding-left: 20px;
+    line-height: 26.5px;
   }
 
   .banner-controls-btn-left {
