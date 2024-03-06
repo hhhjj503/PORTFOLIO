@@ -59,6 +59,7 @@ a {
   text-transform: uppercase;
   font-size: 32px;
   font-weight: bold;
+  text-align: center;
 }
 
 .color-41bfcf {
@@ -211,6 +212,7 @@ a {
 .intro {
   font-size: 21px;
   color: #444;
+  text-align: center;
 }
 
 .break {
@@ -326,14 +328,9 @@ a {
 
 .radius-li {
   box-sizing: border-box;
-  background-color: whitesmoke;
-  padding: 5px 0;
-  margin: 10px auto;
+  margin-bottom: 13px;
   font-size: 14px;
-  text-align: center;
   border-radius: 30px;
-  word-break: keep-all;
-  line-height: 30px;
 }
 
 @media screen and (max-width: 1281px) {
@@ -344,6 +341,7 @@ a {
 
   .intro {
     font-size: 20px;
+    text-align: left;
   }
 
   .graph-base-line,
@@ -461,6 +459,8 @@ a {
   .square-li {
     margin: 3px auto;
     font-size: 16px;
+    text-align: left;
+    padding-left: 30px;
   }
 }
 
@@ -531,6 +531,10 @@ a {
   margin-bottom: 35px;
 }
 
+.portfolio-link-wrapper {
+  text-align: center;
+}
+
 .portfolio-link {
   padding: 7px 20px;
   margin: 0 auto;
@@ -540,6 +544,7 @@ a {
   font-size: 14px;
   background-color: #333;
   line-height: 50px;
+  text-align: center;
 }
 
 .portfolio-link:focus {
@@ -564,6 +569,9 @@ a {
   width: 100%;
   margin: 0 auto;
   padding: 150px 0;
+}
+
+.design-title {
 }
 
 .design-slider {
@@ -795,12 +803,12 @@ a {
 }
 
 .info-ul {
-  text-align: center;
   line-height: 1.618;
 }
 
 .info-li {
   font-size: 19px;
+  text-align: center;
 }
 
 .portrait-img {
@@ -816,12 +824,28 @@ a {
   .info-li {
     font-size: 18px;
     line-height: 30px;
+    text-align: left;
   }
 }
 
 @media screen and (max-width: 600px) {
+  .ly-hj {
+    padding: 100px 0 80px 0;
+  }
+
   .title {
     margin-bottom: 40px;
+    text-align: left;
+  }
+
+  .title-hj {
+    margin-bottom: 15px;
+  }
+
+  .custom {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .ly-contact {
