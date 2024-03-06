@@ -758,6 +758,7 @@ a {
     top: 50%;
     font-size: 18px;
     line-height: 26px;
+    line-height: 29.124px;
   }
   .banner-img {
     width: 100%;
@@ -801,6 +802,7 @@ a {
     margin-bottom: 50px;
     letter-spacing: -0.5px;
     line-height: 26px;
+    line-height: 29.124px;
   }
   .creature {
     position: relative;
@@ -822,6 +824,7 @@ a {
     margin-top: 5px;
     letter-spacing: -0.5px;
     line-height: 21px;
+    line-height: 22.652px;
   }
   .photos {
     padding: 70px 0;
