@@ -859,9 +859,12 @@ label {
   }
 
   .banner-title {
+    width: 100%;
+    left: 0;
     font-size: 20px;
     line-height: 30px;
     letter-spacing: -0.5px;
+    padding-left: 20px;
   }
 
   .banner-controls-btn-left {
@@ -1011,6 +1014,9 @@ label {
   .announcement-text {
     flex-grow: 1;
     line-height: 1.618;
+  }
+
+  .announcement-welcome {
   }
 
   .announcement-welcome-img {

@@ -80,7 +80,7 @@
   background-color: rgb(125, 0, 137);
   z-index: 20;
   box-sizing: border-box;
-  padding: 50px;
+  padding: 100px 50px 50px 50px;
   transition: 0.3s ease-in-out;
 }
 
@@ -92,7 +92,7 @@
   display: block;
   color: #fff;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 30px;
 }
 
