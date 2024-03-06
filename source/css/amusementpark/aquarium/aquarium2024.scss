@@ -889,7 +889,6 @@ a {
       top: 50%;
       font-size: 18px;
       line-height: 26px;
-      line-height: calc(18px * 1.618);
     }
 
     &-img {
@@ -939,8 +938,6 @@ a {
       padding-left: 20px;
       margin-bottom: 50px;
       letter-spacing: -0.5px;
-      line-height: 26px;
-      line-height: calc(18px * 1.618);
     }
   }
 
@@ -948,7 +945,7 @@ a {
     position: relative;
 
     &:not(:last-child) {
-      margin-bottom: 50px;
+      margin-bottom: 55px;
     }
 
     &-desc {
@@ -966,8 +963,6 @@ a {
       font-size: 14px;
       margin-top: 5px;
       letter-spacing: -0.5px;
-      line-height: 21px;
-      line-height: calc(14px * 1.618);
     }
   }
 

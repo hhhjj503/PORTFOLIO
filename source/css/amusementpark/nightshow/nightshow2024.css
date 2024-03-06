@@ -868,6 +868,7 @@ label {
     letter-spacing: -0.5px;
     padding-left: 20px;
     line-height: 26.5px;
+    line-height: calc(20px * 1.618);
   }
 
   .banner-controls-btn-left {
