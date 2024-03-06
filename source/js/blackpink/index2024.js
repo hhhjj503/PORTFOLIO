@@ -37,9 +37,9 @@ window.addEventListener("load", function () {
       loop: true,
       slidesPerView: 1,
       touchRatio: true,
+      effect: "cube",
 
       speed: 1000,
-      effect: "slide",
 
       // If we need pagination
       pagination: {

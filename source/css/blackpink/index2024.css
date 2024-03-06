@@ -103,59 +103,6 @@ header {
   background-color: #fff;
 }
 
-/*------------------------- intro -------------------------*/
-.intro {
-  margin-top: 100px;
-}
-
-.group-main-img {
-  display: block;
-  margin: 0 auto;
-  width: 63.157894%;
-}
-
-.desc {
-  position: relative;
-  padding-top: 50px;
-}
-
-.pink-smoke-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  display: block;
-  margin: 0 auto;
-  width: 74.53125%;
-  z-index: -1;
-}
-
-.info {
-  width: 33.333333%;
-  padding: 30px;
-  background-color: #000;
-  margin: 0 auto;
-  box-sizing: border-box;
-  color: #fff;
-  line-height: 1.618;
-}
-
-.info-highlight {
-  color: #f4a5ba;
-  font-weight: bold;
-}
-
-.info p {
-  font-size: 16px;
-  word-spacing: 1px;
-  line-height: 1.618;
-}
-
-.info p:not(:last-child) {
-  margin-bottom: 30px;
-}
-
 /*------------------------- member -------------------------*/
 .member {
   margin-top: 400px;
@@ -171,6 +118,7 @@ header {
 
 .member-solo-img {
   display: block;
+  max-width: 100%;
   width: fit-content;
   height: 690px;
   object-fit: contain;
@@ -182,11 +130,48 @@ header {
   align-items: center;
   box-sizing: border-box;
   padding: 0 72.5px;
+  background-color: #fff;
+}
+
+.member-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
 }
 
 .member-title {
+  flex-basis: 100%;
+
   font-size: 40px;
   font-weight: 400;
+  letter-spacing: -1px;
+  margin-bottom: 15px;
+}
+
+.member-info-li {
+  font-size: 18px;
+  color: #8f8f8f;
+  margin-bottom: 5px;
+}
+
+.lisa-setting {
+  position: relative;
+  left: 2px;
+}
+
+.jisoo-setting {
+  position: relative;
+  left: -5px;
+}
+
+.jennie-setting {
+  position: relative;
+  left: -5px;
+}
+
+.rose-setting {
+  position: relative;
+  left: 4px;
 }
 
 .member-controller {
@@ -228,6 +213,57 @@ header {
   display: block;
   width: 90%;
   height: 90%;
+}
+
+/*------------------------- intro -------------------------*/
+.intro {
+  margin-top: 50px;
+}
+
+.group-main-img {
+  display: block;
+  margin: 0 auto;
+  width: 63.157894%;
+}
+
+.desc {
+  position: relative;
+}
+
+.pink-smoke-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: block;
+  margin: 0 auto;
+  width: 74.53125%;
+  z-index: -1;
+}
+
+.team-info {
+  width: 33.333333%;
+  padding: 30px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  color: #000;
+  line-height: 1.618;
+}
+
+.team-info-highlight {
+  color: #f4a5ba;
+  font-weight: bold;
+}
+
+.team-info p {
+  font-size: 16px;
+  word-spacing: 1px;
+  line-height: 1.618;
+}
+
+.team-info p:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 /*------------------------- albumCards -------------------------*/
@@ -508,7 +544,7 @@ header {
     padding: 0 20px;
   }
 
-  .info {
+  .team-info {
     width: 60%;
   }
 
@@ -552,7 +588,7 @@ header {
     object-position: center;
   }
 
-  .info p {
+  .team-info p {
     font-size: 15px;
   }
 
@@ -568,8 +604,35 @@ header {
     height: 400px;
   }
 
+  .member-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+
   .member-title {
-    font-size: 50px;
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .member-info-li {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .jisoo-setting {
+    position: relative;
+    left: -3px;
+  }
+
+  .jennie-setting {
+    position: relative;
+    left: -4px;
+  }
+
+  .rose-setting {
+    position: relative;
+    left: 1px;
   }
 
   .newsingle-img {
@@ -704,38 +767,8 @@ header {
     bottom: 10% !important;
   }
 
-  .group-main-img {
-    display: block;
-    box-sizing: border-box;
-    padding: 0 20px;
-    width: 100%;
-  }
-  .pink-smoke-img {
-    display: block;
-    box-sizing: border-box;
-    padding: 0 20px;
-  }
-
-  .desc {
-    padding-top: 20px;
-  }
-
-  .info {
-    width: calc(100% - 40px);
-    padding: 20px;
-  }
-
-  .info p {
-    font-size: 14px;
-    letter-spacing: -1px;
-  }
-
-  .info p:not(:last-child) {
-    margin-bottom: 20px;
-  }
-
   .member {
-    margin-top: 200px;
+    margin-top: 150px;
     position: relative;
   }
 
@@ -755,26 +788,58 @@ header {
 
   .member-solo-img {
     height: 280px;
-    position: relative;
-    right: -15px;
+    flex-grow: 1;
+  }
+
+  .member-info {
+    flex-grow: 1;
   }
 
   .member-title {
-    font-size: 25px;
-    transform: translateX(-30px);
+    font-size: 16px;
+    margin-bottom: 5px;
   }
 
-  .member-solo-img.mobile-smaller {
-    right: 0;
-    height: 240px;
+  .member-info-li {
+    font-size: 12px;
+    margin-bottom: 3px;
+  }
+
+  .jisoo-setting {
+    position: relative;
+    left: -3px;
+  }
+
+  .jennie-setting {
+    position: relative;
+    left: -4px;
+  }
+
+  .rose-setting {
+    position: relative;
+    left: 1px;
+  }
+
+  .desc {
+    padding-top: 20px;
+  }
+
+  .team-info {
+    width: calc(100% - 40px);
+    padding: 0;
+  }
+
+  .team-info p {
+    font-size: 14px;
+    letter-spacing: -1px;
+  }
+
+  .team-info p:not(:last-child) {
+    margin-bottom: 20px;
   }
 
   .newsingle-img {
     height: 280px;
-  }
-
-  .pink-line {
-    height: 60px;
   }
 
   .inner {

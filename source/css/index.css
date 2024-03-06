@@ -360,7 +360,7 @@ a {
 
 @media screen and (max-width: 600px) {
   .ly-hj {
-    padding: 80px 0;
+    padding: 100px 0 80px 0;
   }
 
   .wrapper-graph {
