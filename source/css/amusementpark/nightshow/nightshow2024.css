@@ -920,13 +920,15 @@ label {
   .festival-date {
     font-size: 12px;
     letter-spacing: -0.5px;
-    margin-top: 6px;
+    margin-top: 4px;
+    color: #969696;
   }
 
   .festival-visitor {
     font-size: 14px;
-    margin-top: 10px;
+    margin-top: 8px;
     letter-spacing: -0.5px;
+    color: #606060;
   }
 
   .event-title {

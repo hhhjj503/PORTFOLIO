@@ -352,7 +352,6 @@ a {
   padding-left: 2px;
   letter-spacing: -2px;
   word-spacing: 1px;
-  color: #c4c4c4;
 }
 .creature-media {
   width: 100%;
@@ -688,6 +687,7 @@ a {
     padding-right: 0;
     font-size: 17px;
     margin-top: 15px;
+    color: #c4c4c4;
   }
   .photos {
     padding: 100px 0;
