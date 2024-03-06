@@ -19,7 +19,7 @@ body {
   overflow-x: hidden;
 }
 
-.header__li:nth-child(4) > .header__link {
+.header__li:nth-child(5) > .header__link {
   color: #e60000;
 }
 
