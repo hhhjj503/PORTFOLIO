@@ -907,6 +907,10 @@ label {
     flex-basis: calc((100% - 20px) / 2);
   }
 
+  .fireworks-img-li:nth-child(-n + 2) {
+    margin-bottom: 35px;
+  }
+
   .festival-name {
     font-size: 15px;
     margin-top: 10px;

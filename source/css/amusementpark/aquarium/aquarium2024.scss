@@ -396,6 +396,7 @@ a {
     padding-left: 2px;
     letter-spacing: -2px;
     word-spacing: 1px;
+    color: #c4c4c4;
   }
 
   &-media {
@@ -529,6 +530,11 @@ a {
 
   &-item {
     padding: 30px 0;
+
+    &:hover > *,
+    &:focus-visible > * {
+      color: #fff !important;
+    }
   }
 }
 .etc-wrapper {
@@ -560,7 +566,7 @@ a {
     &:focus-visible {
       transition: 0.1s ease-in-out;
       background-color: #ff6b00;
-      color: black;
+      color: #000 !important;
     }
   }
 }
@@ -576,8 +582,8 @@ a {
     letter-spacing: -0.5px;
     word-spacing: 1px;
     font-weight: 400;
-    color: #fff;
     margin-bottom: 10px;
+    color: #c4c4c4;
   }
 }
 
@@ -594,18 +600,27 @@ a {
     font-size: 17px;
     letter-spacing: -0.5px;
     word-spacing: 1px;
-    color: #fff;
     line-height: 1.618;
+    color: #c4c4c4;
 
     &:hover,
     &:focus-visible {
       text-decoration: underline;
       cursor: pointer;
+      color: #fff;
+    }
+
+    &:hover .notice-date,
+    &:focus-visible .notice-date {
+      text-decoration: underline;
+      cursor: pointer;
+      color: #fff;
     }
   }
 
   &-date {
     font-size: 15px;
+    color: #c4c4c4;
   }
 }
 
@@ -627,9 +642,9 @@ a {
       text-align: center;
       border-radius: 14px;
       background-color: transparent;
-      color: #fff;
       border: 1px solid #fff;
       cursor: pointer;
+      color: #c4c4c4;
 
       &:hover,
       &:focus-visible {
@@ -653,8 +668,13 @@ a {
     font-size: 18px;
     letter-spacing: -0.5px;
     word-spacing: 1px;
-    color: #fff;
     font-weight: 400;
+    color: #c4c4c4;
+
+    &:hover,
+    &:focus-visible {
+      color: #fff;
+    }
 
     &:not(:last-child) {
       margin-bottom: 10px;
@@ -1001,7 +1021,6 @@ a {
 
   .opening-hours {
     &-desc {
-      color: #c4c4c4;
       font-size: 14px;
     }
   }
@@ -1009,11 +1028,9 @@ a {
   .notice {
     &-desc {
       font-size: 14px;
-      color: #c4c4c4;
     }
 
     &-date {
-      color: #c4c4c4;
       font-size: 12px;
       margin-left: 10px;
     }
@@ -1022,14 +1039,12 @@ a {
   .community {
     &-desc-link {
       font-size: 14px;
-      color: #c4c4c4;
     }
   }
 
   .helper {
     &-tel {
       font-size: 14px;
-      color: #c4c4c4;
     }
   }
 }
