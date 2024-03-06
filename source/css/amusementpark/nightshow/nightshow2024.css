@@ -1002,6 +1002,7 @@ label {
     align-items: baseline;
     font-size: 14px;
     letter-spacing: -0.5px;
+    margin-bottom: 5px;
   }
   .announcement-number {
     width: 18px;

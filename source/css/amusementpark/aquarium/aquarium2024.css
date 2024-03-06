@@ -757,6 +757,7 @@ a {
   .banner-title {
     top: 50%;
     font-size: 18px;
+    line-height: 26px;
   }
   .banner-img {
     width: 100%;
@@ -799,6 +800,7 @@ a {
     padding-left: 20px;
     margin-bottom: 50px;
     letter-spacing: -0.5px;
+    line-height: 26px;
   }
   .creature {
     position: relative;
@@ -819,6 +821,7 @@ a {
     font-size: 14px;
     margin-top: 5px;
     letter-spacing: -0.5px;
+    line-height: 21px;
   }
   .photos {
     padding: 70px 0;
