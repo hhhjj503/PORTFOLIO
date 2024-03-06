@@ -738,6 +738,7 @@ label {
 
   .fireworks-img-li {
     flex-basis: calc((100% - 30px) / 2);
+    margin-bottom: 35px;
   }
 
   .fireworks-img-li:nth-child(-n + 2) {
@@ -745,15 +746,15 @@ label {
   }
 
   .festival-name {
-    margin-top: 15px;
+    margin-top: 10px;
   }
 
   .festival-date {
-    margin-top: 7.5px;
+    margin-top: 5px;
   }
 
   .festival-visitor {
-    margin-top: 15px;
+    margin-top: 10px;
   }
 
   .event-title {
@@ -786,20 +787,25 @@ label {
     height: 50px;
     padding: 15px 30px;
     font-size: 17px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+  }
+
+  .wish-input:not(:last-child) {
+    margin-bottom: 10px;
   }
 
   .wish-input.file-input {
     font-size: 14px;
     padding: 0;
     padding: 10px 30px;
+    margin-bottom: 10px;
   }
 
   .wish-btn {
     height: 40px;
     line-height: 40px;
     font-size: 16px;
-    margin-bottom: 30px;
+    margin: 0;
   }
 
   .wish-desc {
@@ -818,7 +824,7 @@ label {
 
   .announcement-desc {
     font-size: 17px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     letter-spacing: -0.5px;
   }
 
@@ -1004,5 +1010,6 @@ label {
 
   .announcement-welcome-img {
     width: 150px;
+    margin-top: 0;
   }
 }

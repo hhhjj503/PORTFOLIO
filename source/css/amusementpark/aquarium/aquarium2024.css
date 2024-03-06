@@ -393,7 +393,6 @@ a {
   padding: 40px 0;
   font-size: 18px;
   color: #000;
-  font-weight: bold;
   text-align: center;
 }
 
@@ -800,11 +799,11 @@ a {
   }
   .creature-name {
     font-size: 17px;
-    margin-top: 20px;
+    margin-top: 15px;
   }
   .creature-info {
     font-size: 14px;
-    margin-top: 10px;
+    margin-top: 5px;
     letter-spacing: -0.5px;
   }
   .photos {
@@ -849,19 +848,24 @@ a {
     font-size: 14px;
   }
   .opening-hours-desc {
+    color: #c4c4c4;
     font-size: 14px;
   }
   .notice-desc {
     font-size: 14px;
+    color: #c4c4c4;
   }
   .notice-date {
+    color: #c4c4c4;
     font-size: 12px;
     margin-left: 10px;
   }
   .community-desc-link {
     font-size: 14px;
+    color: #c4c4c4;
   }
   .helper-tel {
     font-size: 14px;
+    color: #c4c4c4;
   }
 }/*# sourceMappingURL=aquarium2024.css.map */

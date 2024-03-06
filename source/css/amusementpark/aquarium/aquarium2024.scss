@@ -443,7 +443,6 @@ a {
     padding: 40px 0;
     font-size: 18px;
     color: #000;
-    font-weight: bold;
     text-align: center;
   }
 }
@@ -935,12 +934,12 @@ a {
 
     &-name {
       font-size: 17px;
-      margin-top: 20px;
+      margin-top: 15px;
     }
 
     &-info {
       font-size: 14px;
-      margin-top: 10px;
+      margin-top: 5px;
       letter-spacing: -0.5px;
     }
   }
@@ -1002,6 +1001,7 @@ a {
 
   .opening-hours {
     &-desc {
+      color: #c4c4c4;
       font-size: 14px;
     }
   }
@@ -1009,9 +1009,11 @@ a {
   .notice {
     &-desc {
       font-size: 14px;
+      color: #c4c4c4;
     }
 
     &-date {
+      color: #c4c4c4;
       font-size: 12px;
       margin-left: 10px;
     }
@@ -1020,12 +1022,14 @@ a {
   .community {
     &-desc-link {
       font-size: 14px;
+      color: #c4c4c4;
     }
   }
 
   .helper {
     &-tel {
       font-size: 14px;
+      color: #c4c4c4;
     }
   }
 }

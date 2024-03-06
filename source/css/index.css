@@ -170,7 +170,11 @@ a {
 
   .header-link {
     line-height: 60px;
-    font-size: 15px;
+    font-size: 14px;
+  }
+
+  .radius-li {
+    color: #696969;
   }
 }
 /* 
@@ -712,7 +716,7 @@ a {
     margin-left: 0;
     box-sizing: border-box;
     padding: 0 20px;
-    margin-top: 25px;
+    margin-top: 20px;
     text-align: left;
   }
 
@@ -723,21 +727,24 @@ a {
   .portfolio-p {
     word-break: keep-all;
     line-height: 1.618;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     font-size: 15px;
+    color: #696969;
   }
 
   .portfolio-title {
     font-size: 20px;
+    margin-bottom: 10px;
   }
 
   .inline-radius-li {
-    padding: 3px 5px;
+    padding: 3px 7px;
     font-size: 12px;
+    color: #696969;
   }
 
   .usedlanguages-ul {
-    margin-bottom: 22px;
+    margin-bottom: 15px;
   }
 
   .ly-design {
@@ -820,6 +827,7 @@ a {
   .info-li {
     font-size: 16px;
     line-height: 30px;
+    color: #696969;
   }
 
   .portrait-img {
