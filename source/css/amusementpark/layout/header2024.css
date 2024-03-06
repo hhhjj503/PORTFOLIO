@@ -33,17 +33,18 @@
   position: absolute;
   content: "";
   display: block;
-  left: 0;
+  left: 50%;
   width: 0%;
   bottom: -10px;
-  height: 3px;
+  transform: translateX(-50%);
+  height: 1.5px;
   z-index: 10;
   background-color: #fff;
   border: 50px;
 }
 
 .header-list li:hover .header-link:after {
-  transition: 0.5s ease;
+  transition: 0.3s ease;
   width: 100%;
 }
 
@@ -91,8 +92,8 @@
   display: block;
   color: #fff;
   font-weight: bold;
-  font-size: 17px;
-  margin-bottom: 40px;
+  font-size: 20px;
+  margin-bottom: 30px;
 }
 
 .mobile-side-menu-close-btn {
