@@ -766,6 +766,10 @@ header {
     position: relative;
   }
 
+  .member .container {
+    padding: 0;
+  }
+
   .member-slider {
     height: 250px;
   }
