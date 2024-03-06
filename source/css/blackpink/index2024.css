@@ -109,18 +109,19 @@ header {
   position: relative;
 }
 
-.member-img {
-  display: block;
-  width: 100%;
-  height: 690px;
-  object-fit: contain;
+.swiper-cube-shadow {
+  display: none;
+}
+
+.member-slider {
+  height: 580px;
 }
 
 .member-solo-img {
   display: block;
   max-width: 100%;
   width: fit-content;
-  height: 690px;
+  height: 100%;
   object-fit: contain;
 }
 
@@ -216,9 +217,6 @@ header {
 }
 
 /*------------------------- intro -------------------------*/
-.intro {
-  margin-top: 50px;
-}
 
 .group-main-img {
   display: block;
@@ -244,7 +242,7 @@ header {
 
 .team-info {
   width: 33.333333%;
-  padding: 30px;
+  padding: 50px 0 0 0;
   margin: 0 auto;
   box-sizing: border-box;
   color: #000;
@@ -509,23 +507,21 @@ header {
 .last {
   position: relative;
   margin-top: 500px;
+  padding: 100px 0 400px 0;
 }
 
 .last-title {
-  position: absolute;
-  top: 51.5%;
-  left: 50%;
-  transform: translate(-50%, -50%) !important;
-
   font-size: 70px;
   font-family: "Joti One", serif;
   font-weight: 400;
   font-style: normal;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .door-img {
-  display: block;
   width: 100%;
+  display: none;
 }
 
 @keyframes move {
@@ -596,11 +592,8 @@ header {
     margin-top: 200px;
     position: relative;
   }
-  .member-img {
-    height: 400px;
-  }
 
-  .member-solo-img {
+  .member-slider {
     height: 400px;
   }
 
@@ -742,6 +735,7 @@ header {
 
   .last {
     margin-top: 200px;
+    padding: 200px;
   }
 
   .last-title {
@@ -772,6 +766,10 @@ header {
     position: relative;
   }
 
+  .member-slider {
+    height: 250px;
+  }
+
   .member .swiper-wrapper {
     align-items: center;
   }
@@ -787,7 +785,6 @@ header {
   }
 
   .member-solo-img {
-    height: 280px;
     flex-grow: 1;
   }
 
@@ -801,18 +798,23 @@ header {
   }
 
   .member-info-li {
-    font-size: 12px;
+    font-size: 13px;
     margin-bottom: 3px;
+  }
+
+  .lisa-setting {
+    position: relative;
+    left: -1px;
   }
 
   .jisoo-setting {
     position: relative;
-    left: -3px;
+    left: -2px;
   }
 
   .jennie-setting {
     position: relative;
-    left: -4px;
+    left: -2px;
   }
 
   .rose-setting {
@@ -970,6 +972,7 @@ header {
 
   .last {
     margin-top: 200px;
+    padding: 0 0 150px 0;
   }
 
   .last-title {
