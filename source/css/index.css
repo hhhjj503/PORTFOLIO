@@ -175,7 +175,7 @@ a {
   }
 
   .radius-li {
-    color: #696969;
+    color: #444;
   }
 }
 /* 
@@ -332,10 +332,10 @@ a {
   padding: 5px 0;
   margin: 10px auto;
   font-size: 14px;
-  text-align: center;
   border-radius: 30px;
   word-break: keep-all;
   line-height: 30px;
+  padding-left: 10%;
 }
 
 @media screen and (max-width: 1281px) {
@@ -722,7 +722,7 @@ a {
     margin-left: 0;
     box-sizing: border-box;
     padding: 0 20px;
-    margin-top: 20px;
+    margin-top: 18px;
     text-align: left;
   }
 
@@ -733,8 +733,8 @@ a {
   .portfolio-p {
     word-break: keep-all;
     line-height: 1.618;
-    margin-bottom: 5px;
-    font-size: 15px;
+    margin-bottom: 4.5px;
+    font-size: 14px;
     color: #696969;
   }
 
@@ -750,7 +750,7 @@ a {
   }
 
   .usedlanguages-ul {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
   }
 
   .ly-design {
