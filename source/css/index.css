@@ -346,7 +346,6 @@ a {
   .intro {
     font-size: 20px;
     box-sizing: border-box;
-    padding-left: 10%;
   }
 
   .graph-base-line,
@@ -359,6 +358,13 @@ a {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .intro {
+    text-align: left;
+    line-height: 1.618;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .ly-hj {
     padding: 100px 0 80px 0;
@@ -367,7 +373,7 @@ a {
   .title.title-hj {
     box-sizing: border-box;
     padding-left: 10%;
-    text-align: left;
+    text-align: center;
   }
 
   .wrapper-graph {
@@ -378,6 +384,7 @@ a {
     word-break: keep-all;
     font-size: 16px;
     line-height: 1.618;
+    text-align: center;
   }
 
   .break {
@@ -712,6 +719,12 @@ a {
   .design-slider-btn {
     width: 40px;
     height: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio-desc {
+    text-align: left;
   }
 }
 
