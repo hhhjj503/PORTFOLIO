@@ -368,7 +368,7 @@ a {
 
 @media screen and (max-width: 768px) {
   .intro {
-    text-align: left;
+    text-align: center;
     line-height: 1.618;
   }
 }
@@ -733,6 +733,19 @@ a {
 @media screen and (max-width: 768px) {
   .portfolio-desc {
     text-align: left;
+    margin-top: 20px;
+  }
+
+  .portfolio-title {
+    margin-bottom: 15px;
+  }
+
+  .portfolio-p {
+    margin-bottom: 10px;
+  }
+
+  .usedlanguages-ul {
+    margin-bottom: 15px;
   }
 }
 
