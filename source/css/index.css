@@ -345,6 +345,8 @@ a {
 
   .intro {
     font-size: 20px;
+    box-sizing: border-box;
+    padding-left: 10%;
   }
 
   .graph-base-line,
@@ -363,8 +365,9 @@ a {
   }
 
   .title.title-hj {
+    box-sizing: border-box;
+    padding-left: 10%;
     text-align: left;
-    margin-bottom: 15px;
   }
 
   .wrapper-graph {
@@ -373,7 +376,7 @@ a {
 
   .intro {
     word-break: keep-all;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.618;
   }
 
@@ -737,14 +740,15 @@ a {
   .portfolio-p {
     word-break: keep-all;
     line-height: 1.618;
-    margin-bottom: 4.5px;
-    font-size: 14px;
+    margin-bottom: 5px;
+    font-size: 15px;
     color: #696969;
   }
 
   .portfolio-title {
     font-size: 20px;
     margin-bottom: 10px;
+    letter-spacing: -0.5px;
   }
 
   .inline-radius-li {
