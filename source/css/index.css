@@ -484,9 +484,6 @@ a {
   .square-li {
     margin: 3px auto;
     font-size: 16px;
-    box-sizing: border-box;
-    text-align: left;
-    padding-left: 10%;
   }
 }
 
