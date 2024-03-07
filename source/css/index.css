@@ -63,6 +63,10 @@ a {
   margin-bottom: 70px;
 }
 
+.title-contact {
+  margin-bottom: 50px;
+}
+
 .color-41bfcf {
   color: #41bfcf;
 }
@@ -220,6 +224,7 @@ a {
 .intro {
   font-size: 21px;
   color: #444;
+  text-align: center;
 }
 
 .break {
@@ -376,12 +381,6 @@ a {
 @media screen and (max-width: 600px) {
   .ly-hj {
     padding: 100px 0 80px 0;
-  }
-
-  .title.title-hj {
-    box-sizing: border-box;
-    padding-left: 10%;
-    text-align: center;
   }
 
   .wrapper-graph {
@@ -847,11 +846,11 @@ a {
 }
 
 .info-ul {
-  line-height: 1.618;
 }
 
 .info-li {
   font-size: 19px;
+  line-height: 1.618;
 }
 
 .portrait-img {
@@ -866,7 +865,6 @@ a {
 
   .info-li {
     font-size: 18px;
-    line-height: 30px;
   }
 }
 
@@ -877,7 +875,6 @@ a {
 
   .info-li {
     font-size: 16px;
-    line-height: 30px;
     color: #696969;
   }
 
