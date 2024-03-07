@@ -538,10 +538,6 @@ label {
   padding: 18px 30px;
 }
 
-input[type="file"] {
-  display: none;
-}
-
 .wish-input:not(:last-child) {
   margin-bottom: 15px;
 }
