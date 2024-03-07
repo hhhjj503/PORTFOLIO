@@ -212,7 +212,6 @@ a {
 .intro {
   font-size: 21px;
   color: #444;
-  text-align: center;
 }
 
 .break {
@@ -323,7 +322,7 @@ a {
 
 .ly-mobile {
   display: none;
-  margin: 30px auto 0 auto;
+  margin: 25px auto 0 auto;
 }
 
 .radius-li {
@@ -363,14 +362,19 @@ a {
     padding: 100px 0 80px 0;
   }
 
+  .title.title-hj {
+    text-align: left;
+    margin-bottom: 15px;
+  }
+
   .wrapper-graph {
     display: none;
   }
 
   .intro {
     word-break: keep-all;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 15px;
+    line-height: 1.618;
   }
 
   .break {
