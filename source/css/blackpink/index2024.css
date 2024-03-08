@@ -245,7 +245,7 @@ header {
   padding: 50px 0 0 0;
   margin: 0 auto;
   box-sizing: border-box;
-  color: #000;
+  color: #333;
   line-height: 1.618;
 }
 
@@ -762,7 +762,7 @@ header {
   }
 
   .member {
-    margin-top: 150px;
+    margin-top: 0;
     position: relative;
   }
 
@@ -771,7 +771,7 @@ header {
   }
 
   .member-slider {
-    height: 250px;
+    height: 310px;
   }
 
   .member .swiper-wrapper {
@@ -779,8 +779,8 @@ header {
   }
 
   .member-li {
-    padding: 0;
     justify-content: space-around;
+    padding: 30px 0;
   }
 
   .member-btn {
