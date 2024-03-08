@@ -541,6 +541,7 @@ a {
   font-weight: 400;
   letter-spacing: -1px;
   margin-bottom: 35px;
+  color: #333;
 }
 
 .portfolio-p {
@@ -548,10 +549,12 @@ a {
   font-weight: 400;
   letter-spacing: -1px;
   margin-bottom: 18px;
+  color: #595959;
 }
 
 .usedlanguages-ul {
   margin-bottom: 35px;
+  color: #595959;
 }
 
 .portfolio-link-wrapper {
@@ -582,7 +585,7 @@ a {
   margin-bottom: 0;
   font-size: 14px;
   background-color: whitesmoke;
-  color: #333;
+  color: #595959;
   border-radius: 20px;
 }
 
@@ -695,7 +698,7 @@ a {
   .portfolio-desc {
     margin-left: 0;
     display: block;
-    text-align: center;
+    text-align: left;
     margin-top: 30px;
   }
 
@@ -851,6 +854,7 @@ a {
 .info-li {
   font-size: 19px;
   line-height: 1.618;
+  color: #333;
 }
 
 .portrait-img {
