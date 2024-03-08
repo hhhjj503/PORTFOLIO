@@ -225,6 +225,7 @@ a {
   font-size: 21px;
   color: #444;
   text-align: center;
+  line-height: 1.618;
 }
 
 .break {
@@ -372,13 +373,26 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+  .title {
+    font-size: 25px;
+  }
+
   .intro {
     text-align: center;
     line-height: 1.618;
+    font-size: 18px;
+  }
+
+  .break {
+    display: block;
   }
 
   .wrapper-graph {
     height: 300px;
+  }
+
+  .square-li {
+    font-size: 18px;
   }
 }
 
@@ -397,10 +411,6 @@ a {
     line-height: 1.618;
     text-align: left;
     padding-left: 10%;
-  }
-
-  .break {
-    display: block;
   }
 
   .graph-wrapper {
@@ -478,6 +488,12 @@ a {
 
   .square-li {
     margin: 5px auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ly-skills {
+    width: 80%;
   }
 }
 
@@ -739,21 +755,32 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+  .ly-portfolio {
+    width: 80%;
+  }
+
   .portfolio-desc {
     text-align: left;
-    margin-top: 20px;
+    margin-top: 13px;
   }
 
   .portfolio-title {
-    margin-bottom: 15px;
+    margin-bottom: 13px;
+    font-size: 21px;
   }
 
   .portfolio-p {
     margin-bottom: 10px;
+    font-size: 15px;
   }
 
   .usedlanguages-ul {
     margin-bottom: 15px;
+    font-size: 13px;
+  }
+
+  .inline-radius-li {
+    padding: 2px 9px;
   }
 }
 
