@@ -496,6 +496,10 @@ label {
   width: 100%;
 }
 
+.wish-bg-img-mobile {
+  display: none;
+}
+
 .wish-container {
   position: absolute;
   z-index: 10;
@@ -949,12 +953,16 @@ label {
   }
 
   .wish-container {
-    padding: 50px 20px;
+    padding: 0 20px;
   }
 
   .wish-bg-img {
-    height: 460px;
-    object-position: -430px;
+    display: none;
+  }
+
+  .wish-bg-img-mobile {
+    display: block;
+    width: 100%;
   }
 
   .wish-title {
